@@ -27,10 +27,15 @@ games/tetris/bot.js              heuristic player, skills: novice | casual | goo
 games/tetris/sim/run-sim.js      headless sim -> logs/sim/*.json
 games/tetris/sim/tune.js         logs -> proposed tuning.json
 games/tetris/droptarget.js       drop-target formula (words in a Pairwise set -> dropsTarget)
+games/runner/index.html, runner.js  Lynx Dash: endless runner, 30 s active segments alternating with one tone question
+games/runner/engine.js           pure runner logic (UMD; page + sim). params in DEFAULTS / tuning.json
+games/runner/bot.js              SIM runner bot (novice | casual | good)
+games/runner/session.js          runner+pairwise log builder, toneMini teaser, pickPairs (unseen first)
+games/runner/sim/run-sim.js      headless runner sim -> logs/sim/runner-*.json
 games/pairwise/index.html        Pairwise Pit standalone test round (?set=<id>)
 games/pairwise/pairwise.js       Pairwise core (round state, undo, ext.pairwise) + mobile UI
 games/pairwise/sim-chooser.js    SIM chooser: random | length (sim-only data)
-games/pairwise/sets/*.json       pair sets (test-001 = demo data)
+games/pairwise/sets/*.json       pair sets (test-001 = demo selling copy; tone-001 = TONE-DISCOVERY, fictional texts)
 games/pairwise/tools/aggregate.js  logs -> data/scores.human.json | data/scores.sim.json (win rate, Bradley-Terry, Elo)
 games/combo/index.html, combo.js Combo: Tetris drop-target round -> Pairwise round -> summary (?set=<id>)
 games/combo/session.js           combo log builder (shared by browser + run-sim.js --mode drops)
@@ -113,6 +118,51 @@ unless `--include-demo`). `--sim` → `scores.sim.json` (sim logs only). Output 
 3. Play it: `/games/combo/?set=<setId>` or `/games/pairwise/?set=<setId>`; the combo shows words and the drop target.
 4. Sim check: `node games/tetris/sim/run-sim.js --mode drops --set games/pairwise/sets/<setId>.json`.
 5. Bump `setVersion` whenever any text changes; aggregate with `--set <setId>`.
+
+## Combo human log #1 (2026-10-31, iPhone) and wordsPerDrop
+`logs/human/combo-20261031150121-d0ze1.json`: Tetris 35 drops in 131.7 s (3.76 s/drop, 9 lines, 0 holes), Pairwise 5 pairs
+in 252.0 s (decisions 22–89 s, median 45.8 s; ≈151 wpm effective incl. deciding). Reading took 1.9× the Tetris segment.
+`tune.js --drop-target-only` → wordsPerDrop 18 → **9** (633 × 3763 / 252036 = 9.45). test-001 now hits maxDrops 60
+(~3.8 min Tetris). One log only: treat as provisional; the long test-001 texts (40–120 words) inflate reading time.
+
+## Direction change (Markus): tone, not selling copy
+Markus's judgement on what *sells* is weak signal; he would rather build tech/UX good enough that content sells itself.
+So pairwise now looks for **his personal writing voice**: `sets/tone-001.json` (`kind: 'tone-discovery'`, `demo: false`,
+`fictional: true`). Each pair = the SAME fictional message in two tones; criterion "Which sounds more like how you'd want
+to write?". Content types: README intro, PR description, LinkedIn shipping post, recruiter reply, commit message, changelog,
+tweet about a new skill, onboarding microcopy. Each item has `tone {formality, warmth, brevity, humor, confidence,
+technicality, directness, emoji, personal}` in -1..1 (+1 = formal / warm / terse / playful / assertive / technical /
+direct / emoji / first person). New choice **'neither'** (both rejected) – excluded from scores, counted in the profile.
+Rules for tone sets: no personal data, no real people/companies of Markus's, no theology or nursing content; keep items
+short (8–60 words; microcopy is naturally short) so a pick fits a pause. Bump setVersion when texts or tone tags change.
+
+**Tone profile:** `node games/pairwise/tools/aggregate.js` also writes `data/tone-profile.human.json` + `.md` (human logs
+only; `--sim` → `tone-profile.sim.*`, labelled SIMULATED). Per dimension: weighted mean of signed wins over comparisons
+where the two items differ by ≥0.2 (strength weights 1/1.5/2) with se and n, plus a joint L2 logistic regression beta
+(separates confounded dims, but with few logs it can disagree in sign with the mean – trust the mean + confidence).
+The `.md` is a style guide a writing model can use directly. Sim persona `persona-terse` (sim-chooser.js) plants a known
+taste (brevity + directness, anti emoji/humour) to check the pipeline recovers it.
+
+## Lynx Dash (games/runner/) – runner + tone questions
+Original pixel art (Lo the lynx, crows, cacti, coins) drawn in canvas code. Loop: 3-2-1 → **30 s ACTIVE running** (timer
+runs only in phase `run`; pause/tab-hide stops it) → one tone question (PairwisePit.mount `single: true`, `round.markShown()`
+so decisionTimeMs starts when the question appears) → 3-2-1 → … × `questions` (default 6) → summary (distance, best run,
+score, coins, best clean streak, questions, "your tone so far" via RunnerSession.toneMini). Forgiving: 3 lives, shrunk
+hitboxes, 1.5 s invulnerability; losing all lives resets run distance and refills lives (round continues). Feel: coyote
+100 ms, jump buffer 130 ms, variable jump height, fast-fall when ducking in air. Speed ramps baseSpeed→maxSpeed by
+accelPerSec; after each question speed time ×0.8 (`speedKeepAfterQuestion`). Clean segment (0 crashes) → streak, bonus
+100 × streak. Inputs: tap/hold canvas or Jump button, swipe down or Duck button, Space/↑/W, ↓/S, P/Esc pause.
+Log (`game.id runner`, session kind `runner+pairwise`): levels alternate `segment: runner` (ext.runner: activeMs, jumps,
+ducks, crashes, knockouts, nearMisses, coins, distance, maxSpeed, avgSpeed, airMs, clean, streak, cleanBonus, scoreTotal,
+lives, speedEnd; events jump/duck/coin/near_miss/crash/knockout/clean_segment/pause) and `segment: pairwise` (ext.pairwise
+with one decision). `summary.runner` holds round totals + tone teaser. localStorage `runner.logs.v1` + download button.
+Pairs are drawn unseen-first (`runner.seenPairs.v1`). Tuning: `games/runner/tuning.json` (`?q=N` overrides questions).
+Sims: `node games/runner/sim/run-sim.js --skill novice,casual,good --chooser random,persona-terse --runs 2` (virtual clock)
+and in-page `games/runner/?sim=1&skill=good&chooser=random&fast=16` (bot + chooser, `run.type sim`, SIM badges, localStorage
+`runner.simlogs.v1`, exposes `window.__runnerLog`). Headless check: Chrome 390×844, wait for `window.__runnerLog`, expect
+12 levels `rprprprprprp`, 6 decisions, no JS errors.
+Next: once Markus sends runner logs, tune segment length/speed from crashes per segment and decision times, and add tone-002
+pairs targeting the dims with low confidence.
 
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.

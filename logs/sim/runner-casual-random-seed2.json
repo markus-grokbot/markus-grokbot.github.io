@@ -1,0 +1,3985 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.1.0",
+ "game": {
+  "id": "runner",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "runner"
+ },
+ "run": {
+  "id": "20261031151955-j2zny",
+  "type": "sim",
+  "startedAt": "2026-10-31T12:33:20.000Z",
+  "endedAt": "2026-10-31T12:38:33.466Z",
+  "device": {
+   "sim": true
+  },
+  "player": {
+   "kind": "bot",
+   "skill": "casual",
+   "chooser": "random"
+  },
+  "seed": 2,
+  "tuningSource": "tuning.json@2026-10-31T16:30:00+01:00"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:33:20.000Z",
+   "endedAt": "2026-10-31T12:33:50.000Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 1153,
+    "actions": 26,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 1666.6748046875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3016.681396484375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3116.681884765625,
+     "type": "coin"
+    },
+    {
+     "t": 3866.685546875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4816.690185546875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 6133.36328125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7250.035400390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8050.039306640625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8900.04345703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9950.048583984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11450.055908203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11583.389892578125,
+     "type": "near_miss",
+     "kind": "cactus",
+     "lvl": "small",
+     "clearPx": 8.7
+    },
+    {
+     "t": 12200.0595703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13233.39794921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13350.065185546875,
+     "type": "coin"
+    },
+    {
+     "t": 14166.73583984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 14300.06982421875,
+     "type": "coin"
+    },
+    {
+     "t": 15466.7421875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16733.4150390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17666.7529296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18566.75732421875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 19716.762939453125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 20466.7666015625,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 20800.1015625,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 21900.10693359375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23083.446044921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23900.11669921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24650.120361328125,
+     "type": "crash",
+     "kind": "cactus",
+     "lvl": "small",
+     "speed": 0.411,
+     "livesLeft": 2,
+     "runDist": 8770
+    },
+    {
+     "t": 25533.4580078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 26800.130859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27883.469482421875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 28933.474609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 29000.1416015625,
+     "type": "coin"
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 1,
+     "activeMs": 30000,
+     "jumps": 25,
+     "ducks": 1,
+     "crashes": 1,
+     "knockouts": 0,
+     "nearMisses": 2,
+     "coins": 4,
+     "distance": 11026,
+     "maxSpeed": 0.435,
+     "avgSpeed": 0.368,
+     "airMs": 13333,
+     "clean": false,
+     "streak": 0,
+     "cleanBonus": 0,
+     "scoreTotal": 1153,
+     "lives": 2,
+     "speedEnd": 0.435
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 2,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:33:50.000Z",
+   "endedAt": "2026-10-31T12:34:12.270Z",
+   "durationMs": 22270,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 22270,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 22270,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p12",
+     "choice": "B",
+     "seq": 0
+    },
+    {
+     "t": 22270,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 0,
+       "pairId": "tone1-p12",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-recruiter2-a",
+       "itemB": "tone1-recruiter2-b",
+       "choice": "B",
+       "winner": "tone1-recruiter2-b",
+       "strength": 1,
+       "decisionTimeMs": 22270,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 3,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:34:15.270Z",
+   "endedAt": "2026-10-31T12:34:45.270Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 2644,
+    "actions": 28,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2083.343505859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 2133.34375,
+     "type": "coin"
+    },
+    {
+     "t": 3416.683349609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3466.68359375,
+     "type": "coin"
+    },
+    {
+     "t": 3550.017333984375,
+     "type": "near_miss",
+     "kind": "cactus",
+     "lvl": "tall",
+     "clearPx": 7.4
+    },
+    {
+     "t": 4366.68798828125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 5233.35888671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 6683.365966796875,
+     "type": "crash",
+     "kind": "cactus",
+     "lvl": "double",
+     "speed": 0.438,
+     "livesLeft": 1,
+     "runDist": 13861
+    },
+    {
+     "t": 7116.701416015625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7766.70458984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8616.708740234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9883.381591796875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 10483.384521484375,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 10800.052734375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 11550.056396484375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 12550.061279296875,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 12883.396240234375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 13716.733642578125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 14333.4033203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15066.740234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15850.077392578125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16966.74951171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17950.087646484375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 19250.093994140625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 19300.09423828125,
+     "type": "coin"
+    },
+    {
+     "t": 19950.097412109375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 20000.09765625,
+     "type": "coin"
+    },
+    {
+     "t": 21066.76953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 22300.10888671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23383.447509765625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24533.453125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 25300.12353515625,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 25616.791748046875,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 26666.796875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27566.80126953125,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 27883.469482421875,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 28666.806640625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 29850.145751953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 2,
+     "activeMs": 30000,
+     "jumps": 24,
+     "ducks": 4,
+     "crashes": 1,
+     "knockouts": 0,
+     "nearMisses": 5,
+     "coins": 4,
+     "distance": 14266,
+     "maxSpeed": 0.543,
+     "avgSpeed": 0.476,
+     "airMs": 12417,
+     "clean": false,
+     "streak": 0,
+     "cleanBonus": 0,
+     "scoreTotal": 2644,
+     "lives": 1,
+     "speedEnd": 0.543
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 4,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:34:45.270Z",
+   "endedAt": "2026-10-31T12:35:07.238Z",
+   "durationMs": 21968,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 21968,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 21968,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p1",
+     "choice": "A",
+     "seq": 1
+    },
+    {
+     "t": 21968,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 1,
+       "pairId": "tone1-p1",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-readme-a",
+       "itemB": "tone1-readme-b",
+       "choice": "A",
+       "winner": "tone1-readme-a",
+       "strength": 2,
+       "decisionTimeMs": 21968,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 5,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:35:10.238Z",
+   "endedAt": "2026-10-31T12:35:40.238Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 4099,
+    "actions": 26,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2950.014404296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3033.34814453125,
+     "type": "coin"
+    },
+    {
+     "t": 3833.35205078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4800.0234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 5700.02783203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 6533.365234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7266.7021484375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7950.038818359375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8033.37255859375,
+     "type": "coin"
+    },
+    {
+     "t": 8800.04296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9666.7138671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 10616.718505859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11266.7216796875,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 11566.72314453125,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 13266.7314453125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13400.0654296875,
+     "type": "coin"
+    },
+    {
+     "t": 14116.735595703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15250.074462890625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16266.74609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17383.418212890625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18033.42138671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18866.7587890625,
+     "type": "crash",
+     "kind": "bird",
+     "lvl": "low",
+     "speed": 0.579,
+     "livesLeft": 0,
+     "runDist": 35431
+    },
+    {
+     "t": 18866.7587890625,
+     "type": "knockout",
+     "runDist": 35431
+    },
+    {
+     "t": 20583.433837890625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 21850.106689453125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 21933.4404296875,
+     "type": "coin"
+    },
+    {
+     "t": 22650.110595703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24150.117919921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24233.45166015625,
+     "type": "coin"
+    },
+    {
+     "t": 24933.455078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 25016.788818359375,
+     "type": "coin"
+    },
+    {
+     "t": 25550.124755859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 26983.465087890625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27850.135986328125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27883.469482421875,
+     "type": "coin"
+    },
+    {
+     "t": 27983.469970703125,
+     "type": "near_miss",
+     "kind": "cactus",
+     "lvl": "small",
+     "clearPx": 8.7
+    },
+    {
+     "t": 29100.14208984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 3,
+     "activeMs": 30000,
+     "jumps": 25,
+     "ducks": 1,
+     "crashes": 1,
+     "knockouts": 1,
+     "nearMisses": 2,
+     "coins": 7,
+     "distance": 13752,
+     "maxSpeed": 0.579,
+     "avgSpeed": 0.458,
+     "airMs": 13717,
+     "clean": false,
+     "streak": 0,
+     "cleanBonus": 0,
+     "scoreTotal": 4099,
+     "lives": 3,
+     "speedEnd": 0.35
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 6,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:35:40.238Z",
+   "endedAt": "2026-10-31T12:36:00.252Z",
+   "durationMs": 20014,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 20014,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 20014,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p7",
+     "choice": "A",
+     "seq": 2
+    },
+    {
+     "t": 20014,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 2,
+       "pairId": "tone1-p7",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-tweet-a",
+       "itemB": "tone1-tweet-b",
+       "choice": "A",
+       "winner": "tone1-tweet-a",
+       "strength": 2,
+       "decisionTimeMs": 20014,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 7,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:36:03.252Z",
+   "endedAt": "2026-10-31T12:36:33.252Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 5537,
+    "actions": 27,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2216.677490234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3350.016357421875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4616.689208984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 5683.361083984375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 5750.028076171875,
+     "type": "coin"
+    },
+    {
+     "t": 6266.697265625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7216.701904296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8233.37353515625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9333.37890625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9433.37939453125,
+     "type": "coin"
+    },
+    {
+     "t": 10566.71826171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11066.720703125,
+     "type": "duck",
+     "air": true
+    },
+    {
+     "t": 11400.0556640625,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 12583.394775390625,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 12916.729736328125,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 13933.4013671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15983.411376953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16083.411865234375,
+     "type": "coin"
+    },
+    {
+     "t": 16950.082763671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17700.08642578125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17750.086669921875,
+     "type": "coin"
+    },
+    {
+     "t": 18233.42236328125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18366.75634765625,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "low",
+     "clearPx": 5.2
+    },
+    {
+     "t": 18916.759033203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18966.75927734375,
+     "type": "coin"
+    },
+    {
+     "t": 20266.765625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 20383.432861328125,
+     "type": "coin"
+    },
+    {
+     "t": 21000.1025390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 21133.4365234375,
+     "type": "coin"
+    },
+    {
+     "t": 22350.109130859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23350.114013671875,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 23683.448974609375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 25000.1220703125,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 25316.790283203125,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 26250.128173828125,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 26583.463134765625,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 26833.46435546875,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 27150.132568359375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 27600.134765625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 28516.805908203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 28666.806640625,
+     "type": "near_miss",
+     "kind": "cactus",
+     "lvl": "tall",
+     "clearPx": 7.4
+    },
+    {
+     "t": 28966.80810546875,
+     "type": "duck",
+     "air": true
+    },
+    {
+     "t": 29283.476318359375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 30000.146484375,
+     "type": "clean_segment",
+     "streak": 1,
+     "bonus": 100
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 4,
+     "activeMs": 30000,
+     "jumps": 20,
+     "ducks": 7,
+     "crashes": 0,
+     "knockouts": 0,
+     "nearMisses": 9,
+     "coins": 7,
+     "distance": 12227,
+     "maxSpeed": 0.475,
+     "avgSpeed": 0.408,
+     "airMs": 10650,
+     "clean": true,
+     "streak": 1,
+     "cleanBonus": 100,
+     "scoreTotal": 5537,
+     "lives": 3,
+     "speedEnd": 0.475
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 8,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:36:33.252Z",
+   "endedAt": "2026-10-31T12:36:45.272Z",
+   "durationMs": 12020,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 12020,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 12020,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p8",
+     "choice": "A",
+     "seq": 3
+    },
+    {
+     "t": 12020,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 3,
+       "pairId": "tone1-p8",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-onboarding-a",
+       "itemB": "tone1-onboarding-b",
+       "choice": "A",
+       "winner": "tone1-onboarding-a",
+       "strength": 2,
+       "decisionTimeMs": 12020,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 9,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:36:48.272Z",
+   "endedAt": "2026-10-31T12:37:18.272Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 7135,
+    "actions": 27,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 1883.342529296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 2766.68017578125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3483.350341796875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4633.35595703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 5950.029052734375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7083.367919921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8400.041015625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9383.379150390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11383.388916015625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 12516.727783203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 12583.394775390625,
+     "type": "coin"
+    },
+    {
+     "t": 13233.39794921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13316.731689453125,
+     "type": "coin"
+    },
+    {
+     "t": 14083.402099609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15183.407470703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16000.078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16800.08203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17616.752685546875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 19583.428955078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 20350.099365234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 21216.770263671875,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 21516.771728515625,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 22266.775390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 22350.109130859375,
+     "type": "coin"
+    },
+    {
+     "t": 23300.11376953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23383.447509765625,
+     "type": "coin"
+    },
+    {
+     "t": 24216.784912109375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24316.785400390625,
+     "type": "coin"
+    },
+    {
+     "t": 25166.78955078125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 26166.79443359375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27933.4697265625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 28000.13671875,
+     "type": "coin"
+    },
+    {
+     "t": 28516.805908203125,
+     "type": "crash",
+     "kind": "cactus",
+     "lvl": "small",
+     "speed": 0.568,
+     "livesLeft": 2,
+     "runDist": 30228
+    },
+    {
+     "t": 28933.474609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 29850.145751953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 29983.479736328125,
+     "type": "coin"
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 5,
+     "activeMs": 30000,
+     "jumps": 26,
+     "ducks": 1,
+     "crashes": 1,
+     "knockouts": 0,
+     "nearMisses": 1,
+     "coins": 7,
+     "distance": 15227,
+     "maxSpeed": 0.575,
+     "avgSpeed": 0.508,
+     "airMs": 13483,
+     "clean": false,
+     "streak": 0,
+     "cleanBonus": 0,
+     "scoreTotal": 7135,
+     "lives": 2,
+     "speedEnd": 0.575
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 10,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:37:18.272Z",
+   "endedAt": "2026-10-31T12:37:36.189Z",
+   "durationMs": 17917,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 17917,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 17917,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p14",
+     "choice": "tie",
+     "seq": 4
+    },
+    {
+     "t": 17917,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 4,
+       "pairId": "tone1-p14",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-changelog2-a",
+       "itemB": "tone1-changelog2-b",
+       "choice": "tie",
+       "winner": null,
+       "strength": null,
+       "decisionTimeMs": 17917,
+       "reasonTags": [],
+       "swapped": false,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 11,
+   "params": {
+    "questions": 6,
+    "segmentMs": 30000,
+    "countdownMs": 3000,
+    "lives": 3,
+    "baseSpeed": 0.3,
+    "maxSpeed": 0.62,
+    "accelPerSec": 0.0045,
+    "speedKeepAfterQuestion": 0.8,
+    "gravity": 0.0026,
+    "jumpVel": 0.7,
+    "jumpCut": 0.45,
+    "fastFall": 0.006,
+    "coyoteMs": 100,
+    "bufferMs": 130,
+    "minGapMs": 650,
+    "gapRandMs": 900,
+    "birdFromSpeed": 0.36,
+    "birdChance": 0.28,
+    "coinChance": 0.5,
+    "hitboxShrink": 4,
+    "invulnMs": 1500,
+    "nearMissPx": 14,
+    "cleanBonus": 100,
+    "coinPoints": 10,
+    "nearMissPoints": 5
+   },
+   "startedAt": "2026-10-31T12:37:39.189Z",
+   "endedAt": "2026-10-31T12:38:09.189Z",
+   "durationMs": 30000.146484375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30000.146484375,
+    "score": 8989,
+    "actions": 33,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 1816.675537109375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 2500.01220703125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 3133.3486328125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4050.019775390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 4716.689697265625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 6300.03076171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 6933.3671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 7966.70556640625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 8950.043701171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 9033.37744140625,
+     "type": "coin"
+    },
+    {
+     "t": 9866.71484375,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 10166.71630859375,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 10700.05224609375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11350.055419921875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 11450.055908203125,
+     "type": "coin"
+    },
+    {
+     "t": 12150.059326171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 12233.39306640625,
+     "type": "coin"
+    },
+    {
+     "t": 13283.398193359375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13816.734130859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 13900.06787109375,
+     "type": "coin"
+    },
+    {
+     "t": 14650.071533203125,
+     "type": "crash",
+     "kind": "cactus",
+     "lvl": "small",
+     "speed": 0.586,
+     "livesLeft": 1,
+     "runDist": 39178
+    },
+    {
+     "t": 15600.076171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 15700.07666015625,
+     "type": "coin"
+    },
+    {
+     "t": 16133.412109375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 16200.0791015625,
+     "type": "coin"
+    },
+    {
+     "t": 16700.08154296875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 17716.753173828125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18300.08935546875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 18933.42578125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 21000.1025390625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 22233.44189453125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 22300.10888671875,
+     "type": "coin"
+    },
+    {
+     "t": 22766.77783203125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23300.11376953125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23883.449951171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 23933.4501953125,
+     "type": "coin"
+    },
+    {
+     "t": 24416.785888671875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 24500.11962890625,
+     "type": "near_miss",
+     "kind": "cactus",
+     "lvl": "small",
+     "clearPx": 8.7
+    },
+    {
+     "t": 24950.121826171875,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 25033.45556640625,
+     "type": "coin"
+    },
+    {
+     "t": 25783.459228515625,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 26800.130859375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 27816.802490234375,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 28916.807861328125,
+     "type": "jump",
+     "coyote": false
+    },
+    {
+     "t": 29666.8115234375,
+     "type": "duck",
+     "air": false
+    },
+    {
+     "t": 29966.81298828125,
+     "type": "near_miss",
+     "kind": "bird",
+     "lvl": "mid",
+     "clearPx": 3
+    },
+    {
+     "t": 30000.146484375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "runner": {
+     "segmentNo": 6,
+     "activeMs": 30000,
+     "jumps": 31,
+     "ducks": 2,
+     "crashes": 1,
+     "knockouts": 0,
+     "nearMisses": 3,
+     "coins": 9,
+     "distance": 17490,
+     "maxSpeed": 0.62,
+     "avgSpeed": 0.583,
+     "airMs": 16917,
+     "clean": false,
+     "streak": 0,
+     "cleanBonus": 0,
+     "scoreTotal": 8989,
+     "lives": 1,
+     "speedEnd": 0.62
+    }
+   },
+   "segment": "runner"
+  },
+  {
+   "level": 12,
+   "params": {
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairs": 1,
+    "demo": false,
+    "kind": "tone-discovery"
+   },
+   "startedAt": "2026-10-31T12:38:09.189Z",
+   "endedAt": "2026-10-31T12:38:30.466Z",
+   "durationMs": 21277,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 21277,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 21277,
+     "type": "pairwise_decision",
+     "pairId": "tone1-p6",
+     "choice": "A",
+     "seq": 5
+    },
+    {
+     "t": 21277,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "tone-001",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "tone-discovery",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs measured from the question appearing",
+     "decisions": [
+      {
+       "seq": 5,
+       "pairId": "tone1-p6",
+       "criterion": "Which sounds more like how you’d want to write?",
+       "itemA": "tone1-changelog-a",
+       "itemB": "tone1-changelog-b",
+       "choice": "A",
+       "winner": "tone1-changelog-a",
+       "strength": 3,
+       "decisionTimeMs": 21277,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:33:50.000Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:34:15.270Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "tone-001",
+     "to": null
+    },
+    {
+     "param": "setVersion",
+     "from": "1.0.0",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "demo",
+     "from": false,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "tone-discovery",
+     "to": null
+    },
+    {
+     "param": "questions",
+     "from": null,
+     "to": 6
+    },
+    {
+     "param": "segmentMs",
+     "from": null,
+     "to": 30000
+    },
+    {
+     "param": "countdownMs",
+     "from": null,
+     "to": 3000
+    },
+    {
+     "param": "lives",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "baseSpeed",
+     "from": null,
+     "to": 0.3
+    },
+    {
+     "param": "maxSpeed",
+     "from": null,
+     "to": 0.62
+    },
+    {
+     "param": "accelPerSec",
+     "from": null,
+     "to": 0.0045
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": null,
+     "to": 0.8
+    },
+    {
+     "param": "gravity",
+     "from": null,
+     "to": 0.0026
+    },
+    {
+     "param": "jumpVel",
+     "from": null,
+     "to": 0.7
+    },
+    {
+     "param": "jumpCut",
+     "from": null,
+     "to": 0.45
+    },
+    {
+     "param": "fastFall",
+     "from": null,
+     "to": 0.006
+    },
+    {
+     "param": "coyoteMs",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "bufferMs",
+     "from": null,
+     "to": 130
+    },
+    {
+     "param": "minGapMs",
+     "from": null,
+     "to": 650
+    },
+    {
+     "param": "gapRandMs",
+     "from": null,
+     "to": 900
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": null,
+     "to": 0.36
+    },
+    {
+     "param": "birdChance",
+     "from": null,
+     "to": 0.28
+    },
+    {
+     "param": "coinChance",
+     "from": null,
+     "to": 0.5
+    },
+    {
+     "param": "hitboxShrink",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "invulnMs",
+     "from": null,
+     "to": 1500
+    },
+    {
+     "param": "nearMissPx",
+     "from": null,
+     "to": 14
+    },
+    {
+     "param": "cleanBonus",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "coinPoints",
+     "from": null,
+     "to": 10
+    },
+    {
+     "param": "nearMissPoints",
+     "from": null,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:34:45.270Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:35:10.238Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "tone-001",
+     "to": null
+    },
+    {
+     "param": "setVersion",
+     "from": "1.0.0",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "demo",
+     "from": false,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "tone-discovery",
+     "to": null
+    },
+    {
+     "param": "questions",
+     "from": null,
+     "to": 6
+    },
+    {
+     "param": "segmentMs",
+     "from": null,
+     "to": 30000
+    },
+    {
+     "param": "countdownMs",
+     "from": null,
+     "to": 3000
+    },
+    {
+     "param": "lives",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "baseSpeed",
+     "from": null,
+     "to": 0.3
+    },
+    {
+     "param": "maxSpeed",
+     "from": null,
+     "to": 0.62
+    },
+    {
+     "param": "accelPerSec",
+     "from": null,
+     "to": 0.0045
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": null,
+     "to": 0.8
+    },
+    {
+     "param": "gravity",
+     "from": null,
+     "to": 0.0026
+    },
+    {
+     "param": "jumpVel",
+     "from": null,
+     "to": 0.7
+    },
+    {
+     "param": "jumpCut",
+     "from": null,
+     "to": 0.45
+    },
+    {
+     "param": "fastFall",
+     "from": null,
+     "to": 0.006
+    },
+    {
+     "param": "coyoteMs",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "bufferMs",
+     "from": null,
+     "to": 130
+    },
+    {
+     "param": "minGapMs",
+     "from": null,
+     "to": 650
+    },
+    {
+     "param": "gapRandMs",
+     "from": null,
+     "to": 900
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": null,
+     "to": 0.36
+    },
+    {
+     "param": "birdChance",
+     "from": null,
+     "to": 0.28
+    },
+    {
+     "param": "coinChance",
+     "from": null,
+     "to": 0.5
+    },
+    {
+     "param": "hitboxShrink",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "invulnMs",
+     "from": null,
+     "to": 1500
+    },
+    {
+     "param": "nearMissPx",
+     "from": null,
+     "to": 14
+    },
+    {
+     "param": "cleanBonus",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "coinPoints",
+     "from": null,
+     "to": 10
+    },
+    {
+     "param": "nearMissPoints",
+     "from": null,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 5,
+   "to": 6,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:35:40.238Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:36:03.252Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "tone-001",
+     "to": null
+    },
+    {
+     "param": "setVersion",
+     "from": "1.0.0",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "demo",
+     "from": false,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "tone-discovery",
+     "to": null
+    },
+    {
+     "param": "questions",
+     "from": null,
+     "to": 6
+    },
+    {
+     "param": "segmentMs",
+     "from": null,
+     "to": 30000
+    },
+    {
+     "param": "countdownMs",
+     "from": null,
+     "to": 3000
+    },
+    {
+     "param": "lives",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "baseSpeed",
+     "from": null,
+     "to": 0.3
+    },
+    {
+     "param": "maxSpeed",
+     "from": null,
+     "to": 0.62
+    },
+    {
+     "param": "accelPerSec",
+     "from": null,
+     "to": 0.0045
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": null,
+     "to": 0.8
+    },
+    {
+     "param": "gravity",
+     "from": null,
+     "to": 0.0026
+    },
+    {
+     "param": "jumpVel",
+     "from": null,
+     "to": 0.7
+    },
+    {
+     "param": "jumpCut",
+     "from": null,
+     "to": 0.45
+    },
+    {
+     "param": "fastFall",
+     "from": null,
+     "to": 0.006
+    },
+    {
+     "param": "coyoteMs",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "bufferMs",
+     "from": null,
+     "to": 130
+    },
+    {
+     "param": "minGapMs",
+     "from": null,
+     "to": 650
+    },
+    {
+     "param": "gapRandMs",
+     "from": null,
+     "to": 900
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": null,
+     "to": 0.36
+    },
+    {
+     "param": "birdChance",
+     "from": null,
+     "to": 0.28
+    },
+    {
+     "param": "coinChance",
+     "from": null,
+     "to": 0.5
+    },
+    {
+     "param": "hitboxShrink",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "invulnMs",
+     "from": null,
+     "to": 1500
+    },
+    {
+     "param": "nearMissPx",
+     "from": null,
+     "to": 14
+    },
+    {
+     "param": "cleanBonus",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "coinPoints",
+     "from": null,
+     "to": 10
+    },
+    {
+     "param": "nearMissPoints",
+     "from": null,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:36:33.252Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:36:48.272Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "tone-001",
+     "to": null
+    },
+    {
+     "param": "setVersion",
+     "from": "1.0.0",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "demo",
+     "from": false,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "tone-discovery",
+     "to": null
+    },
+    {
+     "param": "questions",
+     "from": null,
+     "to": 6
+    },
+    {
+     "param": "segmentMs",
+     "from": null,
+     "to": 30000
+    },
+    {
+     "param": "countdownMs",
+     "from": null,
+     "to": 3000
+    },
+    {
+     "param": "lives",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "baseSpeed",
+     "from": null,
+     "to": 0.3
+    },
+    {
+     "param": "maxSpeed",
+     "from": null,
+     "to": 0.62
+    },
+    {
+     "param": "accelPerSec",
+     "from": null,
+     "to": 0.0045
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": null,
+     "to": 0.8
+    },
+    {
+     "param": "gravity",
+     "from": null,
+     "to": 0.0026
+    },
+    {
+     "param": "jumpVel",
+     "from": null,
+     "to": 0.7
+    },
+    {
+     "param": "jumpCut",
+     "from": null,
+     "to": 0.45
+    },
+    {
+     "param": "fastFall",
+     "from": null,
+     "to": 0.006
+    },
+    {
+     "param": "coyoteMs",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "bufferMs",
+     "from": null,
+     "to": 130
+    },
+    {
+     "param": "minGapMs",
+     "from": null,
+     "to": 650
+    },
+    {
+     "param": "gapRandMs",
+     "from": null,
+     "to": 900
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": null,
+     "to": 0.36
+    },
+    {
+     "param": "birdChance",
+     "from": null,
+     "to": 0.28
+    },
+    {
+     "param": "coinChance",
+     "from": null,
+     "to": 0.5
+    },
+    {
+     "param": "hitboxShrink",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "invulnMs",
+     "from": null,
+     "to": 1500
+    },
+    {
+     "param": "nearMissPx",
+     "from": null,
+     "to": 14
+    },
+    {
+     "param": "cleanBonus",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "coinPoints",
+     "from": null,
+     "to": 10
+    },
+    {
+     "param": "nearMissPoints",
+     "from": null,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:37:18.272Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 10,
+   "to": 11,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:37:39.189Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "tone-001",
+     "to": null
+    },
+    {
+     "param": "setVersion",
+     "from": "1.0.0",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "demo",
+     "from": false,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "tone-discovery",
+     "to": null
+    },
+    {
+     "param": "questions",
+     "from": null,
+     "to": 6
+    },
+    {
+     "param": "segmentMs",
+     "from": null,
+     "to": 30000
+    },
+    {
+     "param": "countdownMs",
+     "from": null,
+     "to": 3000
+    },
+    {
+     "param": "lives",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "baseSpeed",
+     "from": null,
+     "to": 0.3
+    },
+    {
+     "param": "maxSpeed",
+     "from": null,
+     "to": 0.62
+    },
+    {
+     "param": "accelPerSec",
+     "from": null,
+     "to": 0.0045
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": null,
+     "to": 0.8
+    },
+    {
+     "param": "gravity",
+     "from": null,
+     "to": 0.0026
+    },
+    {
+     "param": "jumpVel",
+     "from": null,
+     "to": 0.7
+    },
+    {
+     "param": "jumpCut",
+     "from": null,
+     "to": 0.45
+    },
+    {
+     "param": "fastFall",
+     "from": null,
+     "to": 0.006
+    },
+    {
+     "param": "coyoteMs",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "bufferMs",
+     "from": null,
+     "to": 130
+    },
+    {
+     "param": "minGapMs",
+     "from": null,
+     "to": 650
+    },
+    {
+     "param": "gapRandMs",
+     "from": null,
+     "to": 900
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": null,
+     "to": 0.36
+    },
+    {
+     "param": "birdChance",
+     "from": null,
+     "to": 0.28
+    },
+    {
+     "param": "coinChance",
+     "from": null,
+     "to": 0.5
+    },
+    {
+     "param": "hitboxShrink",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "invulnMs",
+     "from": null,
+     "to": 1500
+    },
+    {
+     "param": "nearMissPx",
+     "from": null,
+     "to": 14
+    },
+    {
+     "param": "cleanBonus",
+     "from": null,
+     "to": 100
+    },
+    {
+     "param": "coinPoints",
+     "from": null,
+     "to": 10
+    },
+    {
+     "param": "nearMissPoints",
+     "from": null,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 11,
+   "to": 12,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:38:09.189Z",
+   "changes": [
+    {
+     "param": "questions",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "segmentMs",
+     "from": 30000,
+     "to": null
+    },
+    {
+     "param": "countdownMs",
+     "from": 3000,
+     "to": null
+    },
+    {
+     "param": "lives",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "baseSpeed",
+     "from": 0.3,
+     "to": null
+    },
+    {
+     "param": "maxSpeed",
+     "from": 0.62,
+     "to": null
+    },
+    {
+     "param": "accelPerSec",
+     "from": 0.0045,
+     "to": null
+    },
+    {
+     "param": "speedKeepAfterQuestion",
+     "from": 0.8,
+     "to": null
+    },
+    {
+     "param": "gravity",
+     "from": 0.0026,
+     "to": null
+    },
+    {
+     "param": "jumpVel",
+     "from": 0.7,
+     "to": null
+    },
+    {
+     "param": "jumpCut",
+     "from": 0.45,
+     "to": null
+    },
+    {
+     "param": "fastFall",
+     "from": 0.006,
+     "to": null
+    },
+    {
+     "param": "coyoteMs",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "bufferMs",
+     "from": 130,
+     "to": null
+    },
+    {
+     "param": "minGapMs",
+     "from": 650,
+     "to": null
+    },
+    {
+     "param": "gapRandMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "birdFromSpeed",
+     "from": 0.36,
+     "to": null
+    },
+    {
+     "param": "birdChance",
+     "from": 0.28,
+     "to": null
+    },
+    {
+     "param": "coinChance",
+     "from": 0.5,
+     "to": null
+    },
+    {
+     "param": "hitboxShrink",
+     "from": 4,
+     "to": null
+    },
+    {
+     "param": "invulnMs",
+     "from": 1500,
+     "to": null
+    },
+    {
+     "param": "nearMissPx",
+     "from": 14,
+     "to": null
+    },
+    {
+     "param": "cleanBonus",
+     "from": 100,
+     "to": null
+    },
+    {
+     "param": "coinPoints",
+     "from": 10,
+     "to": null
+    },
+    {
+     "param": "nearMissPoints",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "tone-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": false
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "tone-discovery"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 12,
+  "highestLevel": 12,
+  "totalDurationMs": 295466.87890625,
+  "runner": {
+   "distance": 83988,
+   "bestRunDistance": 48557,
+   "score": 8989,
+   "coins": 38,
+   "knockouts": 1,
+   "bestStreak": 1,
+   "cleanBonusTotal": 100,
+   "questionsAnswered": 6,
+   "tone": [
+    {
+     "dim": "technicality",
+     "lean": 1,
+     "word": "technical"
+    },
+    {
+     "dim": "emoji",
+     "lean": 1,
+     "word": "emoji"
+    },
+    {
+     "dim": "confidence",
+     "lean": 1,
+     "word": "confident"
+    }
+   ]
+  }
+ },
+ "session": {
+  "id": "20261031151955-j2zny",
+  "kind": "runner+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "runner",
+    "segmentNo": 1,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p12",
+    "questionNo": 1,
+    "outcome": "complete",
+    "durationMs": 22270
+   },
+   {
+    "index": 2,
+    "levelIndex": 2,
+    "kind": "runner",
+    "segmentNo": 2,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 3,
+    "levelIndex": 3,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p1",
+    "questionNo": 2,
+    "outcome": "complete",
+    "durationMs": 21968
+   },
+   {
+    "index": 4,
+    "levelIndex": 4,
+    "kind": "runner",
+    "segmentNo": 3,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 5,
+    "levelIndex": 5,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p7",
+    "questionNo": 3,
+    "outcome": "complete",
+    "durationMs": 20014
+   },
+   {
+    "index": 6,
+    "levelIndex": 6,
+    "kind": "runner",
+    "segmentNo": 4,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 7,
+    "levelIndex": 7,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p8",
+    "questionNo": 4,
+    "outcome": "complete",
+    "durationMs": 12020
+   },
+   {
+    "index": 8,
+    "levelIndex": 8,
+    "kind": "runner",
+    "segmentNo": 5,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 9,
+    "levelIndex": 9,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p14",
+    "questionNo": 5,
+    "outcome": "complete",
+    "durationMs": 17917
+   },
+   {
+    "index": 10,
+    "levelIndex": 10,
+    "kind": "runner",
+    "segmentNo": 6,
+    "outcome": "complete",
+    "durationMs": 30000.146484375
+   },
+   {
+    "index": 11,
+    "levelIndex": 11,
+    "kind": "pairwise",
+    "setId": "tone-001",
+    "setVersion": "1.0.0",
+    "pairId": "tone1-p6",
+    "questionNo": 6,
+    "outcome": "complete",
+    "durationMs": 21277
+   }
+  ]
+ }
+}
