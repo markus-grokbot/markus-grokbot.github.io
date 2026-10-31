@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-006",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:04:44.322Z",
+ "ms": 6819,
+ "promptSha256": "f1a109ad841d327bf878b94ca895c9e67365bdda5a8cbb1a1c95e086c4e25543",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question mark, sort into 'reply' if the senderType is 'collaborator' or 'recruiter', otherwise sort into 'archive'.\n* If the subject contains the word 'invoice', sort into 'archive' if the senderType is 'invoice', otherwise sort into 'info'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\nr002-llama323b-03 | Service · TechCorp | System Downtime Notification | Our system is currently experiencing downtime.\nr002-qwen2515b-05 | Newsletter · TechNews | Tech News Update | Check out the latest tech news in the newsletter.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nr002-qwen2515b-04 | Invoice · TechCorp | Membership Invoice | Please pay the membership invoice by the end of the week.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p010\",\"bin\":\"reply\",\"summary\":\"Collaborator question, reply needed\"},{\"id\":\"r002-llama323b-03\",\"bin\":\"archive\",\"summary\":\"System downtime, FYI\"},{\"id\":\"r002-qwen2515b-05\",\"bin\":\"spam\",\"summary\":\"Newsletter spam\"},{\"id\":\"p028\",\"bin\":\"info\",\"summary\":\"PR review info needed\"},{\"id\":\"r002-qwen2515b-04\",\"bin\":\"archive\",\"summary\":\"Membership invoice, archive\"}]}",
+ "parseError": null,
+ "evalCount": 108,
+ "promptEvalCount": 445
+}

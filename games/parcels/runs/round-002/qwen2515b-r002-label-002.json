@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:05:14.480Z",
+ "ms": 10605,
+ "promptSha256": "caec4d32870b29144d704423ae08a4bc2bb4ab4d65d5672a59b0cb6e1f8db350",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize actions that require immediate attention or follow-up.\n* Classify items based on their urgency and importance.\n* Use the sender's role and company to determine the appropriate bin.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\nr002-llama323b-04 | Marketing · TechHub | New Product Launch: Get Ready for the Future | Our new product is launching soon.\np027 | Team · Promptly AI | Meet your new AI co-pilot for email | Sign up today and get 3 months free. Cancel anytime.\nr002-llama323b-06 | Invoice · TechHub | Invoice #1234: Payment Overdue | Your payment is overdue.\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\np030 | Recruiter · Northlake Talent | Interview confirmed: Thu 13:00 | Calendar invite sent. The panel is two engineers and a product lead.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r002-llama323b-04\",\"bin\":\"later\",\"summary\":\"New Product Launch, read later\"},\n  {\"id\":\"p027\",\"bin\":\"info\",\"summary\":\"AI Assistant, read later\"},\n  {\"id\":\"r002-llama323b-06\",\"bin\":\"archive\",\"summary\":\"Payment Overdue, FYI\"},\n  {\"id\":\"p039\",\"bin\":\"info\",\"summary\":\"Coffee Request, read later\"},\n  {\"id\":\"p030\",\"bin\":\"info\",\"summary\":\"Interview Confirmation, read later\"}\n]}",
+ "parseError": null,
+ "evalCount": 133,
+ "promptEvalCount": 437
+}

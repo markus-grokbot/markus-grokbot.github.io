@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-006",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:05:38.346Z",
+ "ms": 4244,
+ "promptSha256": "e5d5c15a17e09616b597d899139e8e3bf8642caa45334243cf0182e8968bca96",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize actions that require immediate attention or follow-up.\n* Classify items based on their urgency and importance.\n* Use the sender's role and company to determine the appropriate bin.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\nr002-llama323b-03 | Service · TechCorp | System Downtime Notification | Our system is currently experiencing downtime.\nr002-qwen2515b-05 | Newsletter · TechNews | Tech News Update | Check out the latest tech news in the newsletter.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nr002-qwen2515b-04 | Invoice · TechCorp | Membership Invoice | Please pay the membership invoice by the end of the week.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"p010\",\"bin\":\"reply\",\"summary\":\"Reply to design partner\"},\n  {\"id\":\"r002-llama323b-03\",\"bin\":\"archive\",\"summary\":\"System downtime, FYI\"},\n  {\"id\":\"r002-qwen2515b-05\",\"bin\":\"info\",\"summary\":\"Tech news update, read later\"},\n  {\"id\":\"p028\",\"bin\":\"later\",\"summary\":\"PR review, later\"},\n  {\"id\":\"r002-qwen2515b-04\",\"bin\":\"archive\",\"summary\":\"Membership invoice, FYI\"}\n]}",
+ "parseError": null,
+ "evalCount": 140,
+ "promptEvalCount": 445
+}

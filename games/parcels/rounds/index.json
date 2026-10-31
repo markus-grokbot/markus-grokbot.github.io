@@ -1,7 +1,8 @@
 {
- "current": "round-001",
+ "current": "round-002",
  "rounds": [
-  "round-001"
+  "round-001",
+  "round-002"
  ],
  "sim": [
   "round-002-sim"

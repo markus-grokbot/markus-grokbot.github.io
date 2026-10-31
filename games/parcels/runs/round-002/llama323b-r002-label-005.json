@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-005",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:04:38.358Z",
+ "ms": 5964,
+ "promptSha256": "f0f6afb556ccdc2b73430fa3ef78883761e417364fa8db1fdf8b3e49208fad8c",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question mark, sort into 'reply' if the senderType is 'collaborator' or 'recruiter', otherwise sort into 'archive'.\n* If the subject contains the word 'invoice', sort into 'archive' if the senderType is 'invoice', otherwise sort into 'info'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\np023 | Calendar | Invitation: Sprint review (Tue 10:00) | Organizer asks you to accept or decline. Agenda not attached yet.\nr002-llama323b-05 | Collaborator · TechCorp | Question about Project Scope | Can you clarify the project scope?\nr002-llama323b-09 | Job-Board · TechHub | Job Opening: Senior DevOps Engineer | We are looking for a senior DevOps engineer to join our team.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p011\",\"bin\":\"reply\",\"summary\":\"Recruiter viewed application\"},{\"id\":\"p013\",\"bin\":\"info\",\"summary\":\"Browser version support needed\"},{\"id\":\"p023\",\"bin\":\"later\",\"summary\":\"Sprint review invitation\"},{\"id\":\"r002-llama323b-05\",\"bin\":\"reply\",\"summary\":\"Clarify project scope\"},{\"id\":\"r002-llama323b-09\",\"bin\":\"spam\",\"summary\":\"Job posting, ignore\"}]}",
+ "parseError": null,
+ "evalCount": 100,
+ "promptEvalCount": 448
+}

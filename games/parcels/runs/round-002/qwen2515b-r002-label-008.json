@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-008",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:05:47.592Z",
+ "ms": 3329,
+ "promptSha256": "4d76148ac7f59ab7e027c445dd6018c090bf534b77c48cd2b758cea029a74498",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize actions that require immediate attention or follow-up.\n* Classify items based on their urgency and importance.\n* Use the sender's role and company to determine the appropriate bin.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np040 | Digest · Hacker roundup | Top 10 links this week | A new terminal, a Rust web framework and a long read on burnout.\nr002-llama323b-10 | Code host notifications | CI/PR/Issue Notification: Pull Request #456 | Your pull request has been merged.\np015 | Talent partner · Kestrel Labs | Salary range for the staff role | Before we book the panel: what range are you targeting, and what notice period do you have?\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 3 objects, same ids ]}",
+ "raw": "{\"items\":[\n    {\"id\":\"p040\",\"bin\":\"reply\",\"summary\":\"Weekly digest, reply\"},\n    {\"id\":\"r002-llama323b-10\",\"bin\":\"archive\",\"summary\":\"CI/PR/Issue Notification, FYI\"},\n    {\"id\":\"p015\",\"bin\":\"info\",\"summary\":\"Salary range, need clarification\"},\n    {\"id\":\"digest\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\n]}",
+ "parseError": null,
+ "evalCount": 100,
+ "promptEvalCount": 373
+}

@@ -1,0 +1,473 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": false,
+ "fromRound": "round-001",
+ "toRound": "round-002",
+ "log": "games/parcels/logs/human/human-parcels-round-001-20261031162724-d7vwu.json",
+ "startedAt": "2026-10-31T17:02:30.322Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 37,
+   "medianSortMs": 4467,
+   "roundFocus": 64,
+   "ab": 3,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 30,
+     "rawAgreement": 0.3,
+     "weightedAgreement": 0.28,
+     "abShown": 3,
+     "abWins": 2,
+     "abWinRate": 0.667,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.366,
+     "confusion": {
+      "info>reply": 7,
+      "later>archive": 2,
+      "spam>spam": 2,
+      "info>info": 1,
+      "archive>archive": 5,
+      "info>archive": 2,
+      "spam>reply": 1,
+      "reply>reply": 1,
+      "spam>archive": 4,
+      "later>reply": 4,
+      "archive>reply": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.294
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.265
+      },
+      {
+       "parcelId": "p025",
+       "subject": "Job closing soon: Senior SRE (Stockholm)",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.263
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.259
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "archive",
+       "his": "reply",
+       "weight": 0.257
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.255
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.253
+      },
+      {
+       "parcelId": "p015",
+       "subject": "Salary range for the staff role",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.252
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p040",
+       "subject": "Top 10 links this week",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p038",
+       "subject": "Your domain renews in 30 days",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p001",
+       "subject": "Re: Platform engineer role – next step?",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.185
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.181
+      },
+      {
+       "parcelId": "p002",
+       "subject": "14 new jobs matching 'backend, remote'",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.163
+      }
+     ]
+    },
+    "qwen2.5:1.5b": {
+     "graded": 30,
+     "rawAgreement": 0.267,
+     "weightedAgreement": 0.262,
+     "abShown": 3,
+     "abWins": 1,
+     "abWinRate": 0.333,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.278,
+     "confusion": {
+      "reply>reply": 4,
+      "archive>archive": 4,
+      "info>spam": 1,
+      "later>info": 1,
+      "later>reply": 5,
+      "later>archive": 2,
+      "reply>archive": 1,
+      "info>reply": 4,
+      "info>archive": 6,
+      "archive>spam": 1,
+      "spam>reply": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "reply",
+       "his": "archive",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.294
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.279
+      },
+      {
+       "parcelId": "p019",
+       "subject": "[site] dependabot: bump undici to 6.21",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "archive",
+       "his": "spam",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.265
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.259
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.257
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.255
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.253
+      },
+      {
+       "parcelId": "p015",
+       "subject": "Salary range for the staff role",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.252
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p040",
+       "subject": "Top 10 links this week",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p038",
+       "subject": "Your domain renews in 30 days",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.226
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.181
+      },
+      {
+       "parcelId": "p009",
+       "subject": "New sign-in from Chrome on Linux",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.176
+      },
+      {
+       "parcelId": "p004",
+       "subject": "48h only: 30% off everything 🔥",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.168
+      },
+      {
+       "parcelId": "p005",
+       "subject": "Quick question about the log schema",
+       "yours": "later",
+       "his": "info",
+       "weight": 0.166
+      }
+     ]
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 1,
+    "valid": 10,
+    "rejected": 1,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "question",
+       "bin": "reply"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     }
+    ],
+    "rubric": [
+     "If the subject contains a question mark, sort into 'reply' if the senderType is 'collaborator' or 'recruiter', otherwise sort into 'archive'.",
+     "If the subject contains the word 'invoice', sort into 'archive' if the senderType is 'invoice', otherwise sort into 'info'."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 1,
+    "valid": 8,
+    "rejected": 2,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "question",
+       "bin": "reply"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · MyProject",
+       "subject": "CI/CD Issue: Build Failed",
+       "snippet": "The build failed with error 404. Please check the logs for more details.",
+       "badge": "info",
+       "bin": "info"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize actions that require immediate attention or follow-up.",
+     "Classify items based on their urgency and importance.",
+     "Use the sender's role and company to determine the appropriate bin."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 8,
+    "ms": 55239,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 55243
+   },
+   "qwen2.5:1.5b": {
+    "calls": 8,
+    "ms": 49724,
+    "invalid": 1,
+    "retries": 0,
+    "wallMs": 49726
+   }
+  }
+ },
+ "roundWeight": 0.5,
+ "note": "Down-weighted x0.5: Markus said the v1 pace was too fast to perceive his input as strongly accurate (21/58 missed).",
+ "endedAt": "2026-10-31T17:05:50.923Z",
+ "wallMs": 200601,
+ "output": {
+  "round": "rounds/round-002.json",
+  "parcels": 38,
+  "carried": 20,
+  "ab": 3
+ }
+}

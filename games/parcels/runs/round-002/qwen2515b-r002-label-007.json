@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-007",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:05:42.590Z",
+ "ms": 5002,
+ "promptSha256": "092c0566114ddc0016a76d6b4a2b75ac9251b6e6ef7ed968d7cbb6e7fae1d455",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize actions that require immediate attention or follow-up.\n* Classify items based on their urgency and importance.\n* Use the sender's role and company to determine the appropriate bin.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\nr002-qwen2515b-01 | Job Board · TechJobs | New Job Posting: Senior Software Engineer | We are seeking a Senior Software Engineer with experience in React and Node.js.\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\nr002-qwen2515b-03 | Collaborator · MyProject | Meeting Request: AI Workshop | Please join the AI Workshop on Monday at 10 AM.\nr002-llama323b-02 | Code host notifications | CI/PR/Issue Notification: Pull Request #123 | Your pull request has been merged.\np038 | Domain registrar | Your domain renews in 30 days | Auto-renew is on. Card ending in **** will be charged 149 kr.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r002-qwen2515b-01\",\"bin\":\"reply\",\"summary\":\"Job Posting\"},\n  {\"id\":\"p014\",\"bin\":\"archive\",\"summary\":\"Webinar Registration\"},\n  {\"id\":\"r002-qwen2515b-03\",\"bin\":\"info\",\"summary\":\"Project Meeting Request\"},\n  {\"id\":\"r002-llama323b-02\",\"bin\":\"reply\",\"summary\":\"Pull Request Merged\"},\n  {\"id\":\"p038\",\"bin\":\"info\",\"summary\":\"Domain Renewal Notice\"}\n]}",
+ "parseError": null,
+ "evalCount": 132,
+ "promptEvalCount": 459
+}

@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:04:32.503Z",
+ "ms": 5854,
+ "promptSha256": "c311fb4983838408ff68cffe959926ba5d1d3a51de8409ff70ef8fec3a5ff30f",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question mark, sort into 'reply' if the senderType is 'collaborator' or 'recruiter', otherwise sort into 'archive'.\n* If the subject contains the word 'invoice', sort into 'archive' if the senderType is 'invoice', otherwise sort into 'info'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np024 | Newsletter · Small Models Monthly | Gemma, Qwen and Llama compared on CPU | We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.\np026 | Collaborator · bot tester | Found a bug in the tone pit | Undo after 'neither' skips a pair. Repro steps below. Want me to file it?\nr002-llama323b-07 | Newsletter · TechCorp | News Update: Latest Developments | We have some exciting news.\nr002-qwen2515b-02 | Marketing · TechWorld | New Product Launch: AI Assistant | Join our community to get the latest updates on the AI Assistant.\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p024\",\"bin\":\"archive\",\"summary\":\"Model comparison, FYI\"},{\"id\":\"p026\",\"bin\":\"reply\",\"summary\":\"Bug report, reply needed\"},{\"id\":\"r002-llama323b-07\",\"bin\":\"archive\",\"summary\":\"Newsletter, archive\"},{\"id\":\"r002-qwen2515b-02\",\"bin\":\"spam\",\"summary\":\"Marketing, spam\"},{\"id\":\"p034\",\"bin\":\"info\",\"summary\":\"Guest slot, info needed\"}]}",
+ "parseError": null,
+ "evalCount": 100,
+ "promptEvalCount": 466
+}

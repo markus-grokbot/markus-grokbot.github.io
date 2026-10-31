@@ -1,0 +1,245 @@
+{
+ "schema": "parcels-model-scores",
+ "version": "1.0.0",
+ "kind": "human",
+ "note": "Graded only by Markus's human logs. score = 0.7 weighted bin agreement + 0.2 A/B summary win rate + 0.1 clarity of parcels the model wrote (renormalised over the parts present).",
+ "models": {
+  "llama3.2:3b": {
+   "history": [
+    {
+     "round": "round-001",
+     "roundWeight": 0.5,
+     "note": "Down-weighted x0.5: Markus said the v1 pace was too fast to perceive his input as strongly accurate (21/58 missed).",
+     "graded": 30,
+     "rawAgreement": 0.3,
+     "weightedAgreement": 0.28,
+     "abShown": 3,
+     "abWins": 2,
+     "abWinRate": 0.667,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.366,
+     "confusion": {
+      "info>reply": 7,
+      "later>archive": 2,
+      "spam>spam": 2,
+      "info>info": 1,
+      "archive>archive": 5,
+      "info>archive": 2,
+      "spam>reply": 1,
+      "reply>reply": 1,
+      "spam>archive": 4,
+      "later>reply": 4,
+      "archive>reply": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.294
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.265
+      },
+      {
+       "parcelId": "p025",
+       "subject": "Job closing soon: Senior SRE (Stockholm)",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.263
+      }
+     ]
+    }
+   ],
+   "latest": {
+    "round": "round-001",
+    "score": 0.366,
+    "weightedAgreement": 0.28
+   },
+   "cumulative": 0.366,
+   "trend": null
+  },
+  "qwen2.5:1.5b": {
+   "history": [
+    {
+     "round": "round-001",
+     "roundWeight": 0.5,
+     "note": "Down-weighted x0.5: Markus said the v1 pace was too fast to perceive his input as strongly accurate (21/58 missed).",
+     "graded": 30,
+     "rawAgreement": 0.267,
+     "weightedAgreement": 0.262,
+     "abShown": 3,
+     "abWins": 1,
+     "abWinRate": 0.333,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.278,
+     "confusion": {
+      "reply>reply": 4,
+      "archive>archive": 4,
+      "info>spam": 1,
+      "later>info": 1,
+      "later>reply": 5,
+      "later>archive": 2,
+      "reply>archive": 1,
+      "info>reply": 4,
+      "info>archive": 6,
+      "archive>spam": 1,
+      "spam>reply": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "reply",
+       "his": "archive",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.307
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.294
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.279
+      },
+      {
+       "parcelId": "p019",
+       "subject": "[site] dependabot: bump undici to 6.21",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "archive",
+       "his": "spam",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.266
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.265
+      }
+     ]
+    }
+   ],
+   "latest": {
+    "round": "round-001",
+    "score": 0.278,
+    "weightedAgreement": 0.262
+   },
+   "cumulative": 0.278,
+   "trend": null
+  }
+ },
+ "rounds": [
+  {
+   "round": "round-001",
+   "log": "games/parcels/logs/human/human-parcels-round-001-20261031162724-d7vwu.json",
+   "roundWeight": 0.5,
+   "note": "Down-weighted x0.5: Markus said the v1 pace was too fast to perceive his input as strongly accurate (21/58 missed).",
+   "gradedAt": "2026-10-31T17:02:30.344Z",
+   "decisions": 37,
+   "ab": 3,
+   "next": "round-002"
+  }
+ ],
+ "updatedAt": "2026-10-31T17:02:30.344Z",
+ "ranking": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ]
+}

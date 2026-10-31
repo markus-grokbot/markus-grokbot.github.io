@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:04:24.772Z",
+ "ms": 7730,
+ "promptSha256": "436703b014535603addb2e122c3fb55a7cb50b7050afc50fe50218392a05f049",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question mark, sort into 'reply' if the senderType is 'collaborator' or 'recruiter', otherwise sort into 'archive'.\n* If the subject contains the word 'invoice', sort into 'archive' if the senderType is 'invoice', otherwise sort into 'info'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np029 | Finance · co-working space | Membership invoice – missing VAT number | To issue the invoice to your company we need your VAT number and billing address.\np037 | Recruiter · Halvsjö Partners | Role in Oslo or Copenhagen? | I have two similar roles. Before I introduce you: which city, and is relocation an option?\nr002-qwen2515b-06 | Service · MyProject | Service Request: Network Issue | We noticed a network issue with your project. Please check the logs.\nr002-llama323b-01 | Job-Board · TechHub | New Job Opening: Junior DevOps Engineer | We are looking for a talented Junior DevOps Engineer to join our team.\nr002-qwen2515b-08 | Job Board · TechJobs | New Job Posting: Full Stack Developer | We are seeking a Full Stack Developer with experience in both frontend and backend.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p029\",\"bin\":\"info\",\"summary\":\"Missing VAT number, clarify details\"},{\"id\":\"p037\",\"bin\":\"reply\",\"summary\":\"City and relocation option, respond now\"},{\"id\":\"r002-qwen2515b-06\",\"bin\":\"archive\",\"summary\":\"Network issue, FYI\"},{\"id\":\"r002-llama323b-01\",\"bin\":\"spam\",\"summary\":\"Job posting, marketing\"},{\"id\":\"r002-qwen2515b-08\",\"bin\":\"later\",\"summary\":\"Job posting, read later\"}]}",
+ "parseError": null,
+ "evalCount": 113,
+ "promptEvalCount": 468
+}
