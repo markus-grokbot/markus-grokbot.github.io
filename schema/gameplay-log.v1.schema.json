@@ -319,9 +319,71 @@
      "type": "number"
     }
    }
+  },
+  "qualities": {
+   "type": "object",
+   "description": "1.2.0 optional: shared player-qualities block from games/shared/qualities.js",
+   "required": [
+    "modelVersion",
+    "items"
+   ],
+   "properties": {
+    "modelVersion": {
+     "type": "string"
+    },
+    "computedAt": {
+     "type": "string"
+    },
+    "adapters": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "items": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "object",
+      "required": [
+       "score",
+       "confidence"
+      ],
+      "properties": {
+       "score": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+       },
+       "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       },
+       "label": {
+        "enum": [
+         "rough",
+         "estimate"
+        ]
+       },
+       "evidence": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    },
+    "runnerFocus": {
+     "type": "object"
+    },
+    "note": {
+     "type": "string"
+    }
+   }
   }
  },
- "description": "1.1.0 (additive, backward compatible with 1.0.0): optional top-level session {id,kind,segments[]}, optional levels[].segment, ext.pairwise, lock events {how}.",
+ "description": "1.1.0 (additive, backward compatible with 1.0.0): optional top-level session {id,kind,segments[]}, optional levels[].segment, ext.pairwise, lock events {how}. 1.2.0 (additive): optional top-level qualities {modelVersion, items{<quality>{score 0-100, confidence 0-1, label, evidence[]}}, runnerFocus}; ext.runner exposure counters.",
  "$defs": {
   "pairwiseExt": {
    "type": "object",

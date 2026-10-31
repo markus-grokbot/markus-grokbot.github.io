@@ -1,10 +1,22 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Games · markus-grokbot</title>
 <style>body{font-family:system-ui,sans-serif;max-width:32rem;margin:2rem auto;padding:0 1rem;background:#111;color:#eee;line-height:1.5}a{color:#7cf}.g{display:block;padding:1rem;border:1px solid #444;border-radius:12px;margin:1rem 0;font-size:1.2rem;text-decoration:none}</style></head><body>
 <h1>Games</h1><p>Self-made mobile browser games. Each completed level emits a gameplay log that seeds the next iteration.</p>
+<div id="rec" style="border:1px solid #5bd;border-radius:12px;padding:.8rem 1rem;margin:1rem 0"><b>Which game now?</b>
+<div style="display:flex;gap:.5rem;margin:.5rem 0;flex-wrap:wrap"><select id="task" style="flex:2;padding:.5rem;background:#222;color:#eee;border-radius:8px"></select><select id="mins" style="flex:1;padding:.5rem;background:#222;color:#eee;border-radius:8px"><option value="3">3 min</option><option value="5" selected>5 min</option><option value="10">10 min</option><option value="30">30 min</option></select></div>
+<div id="recout" style="font-size:.95rem"></div><div id="recstate" style="font-size:.75rem;color:#999;margin-top:.4rem"></div></div>
 <a class="g" href="runner/">🐾 Lynx Dash — runner + tone questions (6 × 30 s, ~4 min)</a>
 <a class="g" href="pairwise/?set=tone-001">🗣️ Tone Pit — which voice is yours? (15 pairs)</a>
 <a class="g" href="tetris/">🧱 Tetris — iteration 1 (10 levels)</a>
 <a class="g" href="combo/">🧱➜⚖️ Combo — Tetris drops, then Pairwise Pit (3–6 min)</a>
 <a class="g" href="pairwise/">⚖️ Pairwise Pit — test round (demo set, selling copy)</a>
 <p style="font-size:.85rem;color:#999">For agents: <a href="ITERATING.md">ITERATING.md</a> · log schema <a href="../schema/gameplay-log.v1.schema.json">gameplay-log v1</a></p>
-</body></html>
+<script src="shared/qualities.js"></script><script src="shared/recommend.js"></script><script>
+(function () { var logs = []; ['runner.logs.v1', 'tetris.logs.v1', 'combo.logs.v1', 'pairwise.logs.v1'].forEach(function (k) { try { var o = JSON.parse(localStorage.getItem(k) || '{}'); Object.keys(o).forEach(function (id) { logs.push(o[id]); }); } catch (e) { } });
+  var T = document.getElementById('task'), M = document.getElementById('mins'); Object.keys(Recommend.TASKS).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = Recommend.TASKS[k]; T.appendChild(o); });
+  try { T.value = localStorage.getItem('games.lastTask') || 'tone-data'; } catch (e) { }
+  var st = Recommend.stateFromLogs(logs);
+  function run() { try { localStorage.setItem('games.lastTask', T.value); } catch (e) { } var r = Recommend.recommend(T.value, +M.value, st), top = r[0], alt = r[1];
+    document.getElementById('recout').innerHTML = (top.path ? '<a href="' + top.path + '">' : '') + '<b>' + top.name + '</b>' + (top.path ? '</a>' : '') + ' (~' + top.minutes + ' min): ' + top.why + (alt ? '<br><span style="color:#aaa">Or ' + (alt.path ? '<a href="' + alt.path + '">' + alt.name + '</a>' : alt.name) + ': ' + alt.why + '</span>' : ''); }
+  document.getElementById('recstate').textContent = st.rounds ? 'From ' + st.rounds + ' round(s) in this browser, last 6 h: focus ' + (st.focus == null ? 'n/a' : st.focus) + (st.focusConf < 0.5 ? ' (rough)' : '') + ', ' + st.minutesLastHour + ' min played this hour.' : 'No rounds in this browser yet; suggestions use defaults.';
+  T.onchange = M.onchange = run; run(); })();
+</script></body></html>

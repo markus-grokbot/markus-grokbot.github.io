@@ -1,0 +1,190 @@
+{
+ "schema": "player-profile",
+ "version": "1.0.0",
+ "player": "markus",
+ "source": "human logs only",
+ "generatedAt": "2026-10-31T15:51:10.139Z",
+ "modelVersion": "1.0.0",
+ "note": "Rolling gameplay estimates (EWMA, half-life 5 logs). Rough until each quality has >= 5 logs and confidence >= 0.5. For choosing games only; not an assessment of the person.",
+ "items": {
+  "focus": {
+   "score": 88,
+   "confidence": 0.77,
+   "label": "rough",
+   "nLogs": 3,
+   "byGame": {
+    "tetris": 75,
+    "combo": 100,
+    "runner": 88
+   },
+   "description": "Sustained attention: few avoidable mistakes per opportunity"
+  },
+  "reaction": {
+   "score": 96,
+   "confidence": 0.45,
+   "label": "rough",
+   "nLogs": 1,
+   "byGame": {
+    "runner": 96
+   },
+   "description": "Responding in time to sudden threats"
+  },
+  "pace": {
+   "score": 46,
+   "confidence": 0.7,
+   "label": "rough",
+   "nLogs": 2,
+   "byGame": {
+    "tetris": 38,
+    "combo": 52
+   },
+   "description": "Speed of play (e.g. seconds per Tetris piece)"
+  },
+  "consistency": {
+   "score": 76,
+   "confidence": 0.77,
+   "label": "rough",
+   "nLogs": 3,
+   "byGame": {
+    "tetris": 60,
+    "combo": 76,
+    "runner": 84
+   },
+   "description": "Low variance between segments / repeat choices agree"
+  },
+  "accuracy": {
+   "score": 76,
+   "confidence": 0.77,
+   "label": "rough",
+   "nLogs": 3,
+   "byGame": {
+    "tetris": 63,
+    "combo": 100,
+    "runner": 66
+   },
+   "description": "Hitting what you aim for (coins, clean placements)"
+  },
+  "planning": {
+   "score": 75,
+   "confidence": 0.44,
+   "label": "rough",
+   "nLogs": 2,
+   "byGame": {
+    "tetris": 74,
+    "combo": 76
+   },
+   "description": "Keeping a clean board / thinking ahead"
+  },
+  "riskTaking": {
+   "score": 25,
+   "confidence": 0.69,
+   "label": "rough",
+   "nLogs": 3,
+   "byGame": {
+    "tetris": 45,
+    "combo": 40,
+    "runner": 9
+   },
+   "description": "Playing close to the edge (tall stacks, near misses)"
+  },
+  "endurance": {
+   "score": 54,
+   "confidence": 0.71,
+   "label": "rough",
+   "nLogs": 3,
+   "byGame": {
+    "tetris": 64,
+    "combo": 49,
+    "runner": 52
+   },
+   "description": "Holding performance over a session (50 = steady, >50 warming up, <50 tiring)"
+  },
+  "decisionSpeed": {
+   "score": 40,
+   "confidence": 0.65,
+   "label": "rough",
+   "nLogs": 2,
+   "byGame": {
+    "combo": 23,
+    "runner": 53
+   },
+   "description": "How fast preference questions are answered"
+  },
+  "decisiveness": {
+   "score": 65,
+   "confidence": 0.65,
+   "label": "rough",
+   "nLogs": 2,
+   "byGame": {
+    "combo": 58,
+    "runner": 70
+   },
+   "description": "Strong picks, few ties / neither"
+  }
+ },
+ "logs": [
+  {
+   "file": "games/tetris/logs/human/20261031143245-3ydvb.json",
+   "game": "tetris",
+   "startedAt": "2026-10-31T14:32:45.889Z",
+   "scores": {
+    "focus": 75,
+    "pace": 38,
+    "consistency": 60,
+    "accuracy": 63,
+    "planning": 74,
+    "riskTaking": 45,
+    "endurance": 64
+   }
+  },
+  {
+   "file": "logs/human/combo-20261031150121-d0ze1.json",
+   "game": "combo",
+   "startedAt": "2026-10-31T15:01:21.898Z",
+   "scores": {
+    "focus": 100,
+    "pace": 52,
+    "consistency": 76,
+    "accuracy": 100,
+    "planning": 76,
+    "riskTaking": 40,
+    "endurance": 49,
+    "decisionSpeed": 23,
+    "decisiveness": 58
+   }
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "game": "runner",
+   "startedAt": "2026-10-31T15:27:45.358Z",
+   "scores": {
+    "focus": 88,
+    "reaction": 96,
+    "consistency": 84,
+    "accuracy": 66,
+    "riskTaking": 9,
+    "endurance": 52,
+    "decisionSpeed": 53,
+    "decisiveness": 70
+   },
+   "runnerFocus": {
+    "round": 88,
+    "segments": [
+     85,
+     94,
+     89,
+     83,
+     89,
+     91
+    ],
+    "trend": {
+     "pointsPerSegment": 0.26,
+     "label": "steady",
+     "firstHalf": 89,
+     "secondHalf": 88
+    },
+    "estimatedExposure": true
+   }
+  }
+ ]
+}

@@ -72,10 +72,11 @@
   function summary() {
     phase = 'summary'; $('game').classList.add('hide'); $('pw').classList.add('hide'); var s = g.state(), dec = round.decisions().filter(function (d) { return !d.undone; }), tone = RunnerSession.toneMini(qset, dec);
     var sum = { distance: Math.round(s.dist), bestRunDistance: Math.round(s.bestRunDist), score: Math.round(s.score), coins: s.coins, knockouts: s.knockouts, bestStreak: bestStreak, cleanBonusTotal: bonusTotal, questionsAnswered: dec.length, tone: tone };
-    var d = S.finish(sum); dlData = d; try { var all = JSON.parse(localStorage.getItem(LS) || '{}'); all[d.run.id] = d; localStorage.setItem(LS, JSON.stringify(all)); } catch (e) { }
+    var d = S.finish(sum); d.qualities = Qualities.compute(d, FOC); dlData = d; var F = d.qualities.runnerFocus; try { var all = JSON.parse(localStorage.getItem(LS) || '{}'); all[d.run.id] = d; localStorage.setItem(LS, JSON.stringify(all)); } catch (e) { }
     window.__runnerLog = d;
     var teaser = tone.length ? 'You lean <span class="k">' + tone.map(function (t) { return t.word; }).join(', ') + '</span> (' + dec.length + ' picks, early signal only).' : 'No clear lean yet; play more rounds.';
-    show('<h2>' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Round done</h2><table><tr><td>Distance</td><td class="k">' + Math.round(sum.distance / 10) + ' m</td></tr><tr><td>Best run (no reset)</td><td>' + Math.round(sum.bestRunDistance / 10) + ' m</td></tr><tr><td>Score</td><td>' + sum.score + '</td></tr><tr><td>Coins</td><td>' + sum.coins + '</td></tr><tr><td>Best clean streak</td><td>' + bestStreak + '</td></tr><tr><td>Questions answered</td><td>' + dec.length + '</td></tr></table>' +
+    show('<h2>' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Round done</h2><table><tr><td>Distance</td><td class="k">' + Math.round(sum.distance / 10) + ' m</td></tr><tr><td>Best run (no reset)</td><td>' + Math.round(sum.bestRunDistance / 10) + ' m</td></tr><tr><td>Score</td><td>' + sum.score + '</td></tr><tr><td>Coins</td><td>' + sum.coins + '</td></tr><tr><td>Best clean streak</td><td>' + bestStreak + '</td></tr><tr><td>Questions answered</td><td>' + dec.length + '</td></tr><tr><td><b>Focus score</b></td><td class="k">' + (F && F.round.focus != null ? F.round.focus + ' / 100' : 'n/a') + '</td></tr><tr><td>Focus per run</td><td>' + (F ? F.segments.map(function (x) { return x.focus; }).join(' · ') : '') + '</td></tr><tr><td>Trend</td><td>' + (F ? F.trend.label : '') + '</td></tr></table>' +
+      '<p style="font-size:11px;color:#999">Focus = penalties per chance: cactus ×' + FOC.weights.obstacle + ', crow ×' + FOC.weights.projectile + ', missed coin ×' + FOC.weights.coin + '. Rough until more rounds.</p>' + Qualities.html(d.qualities) +
       '<p><b>Your tone so far:</b> ' + teaser + '</p><p style="font-size:12px;color:#aaa">' + (SIM ? 'SIMULATED run (bot + sim chooser); not preference data. ' : '') + 'Saved in this browser. Download and drop into <code>logs/human/</code>, then run <code>node games/pairwise/tools/aggregate.js</code> for the full tone profile.</p>' +
       '<button id="dl">⬇ Download log</button><button id="again">↻ Play again</button>');
     $('dl').onclick = function () { var b = new Blob([JSON.stringify(dlData, null, 1)], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = (SIM ? 'sim' : 'human') + '-runner-' + dlData.run.id + '.json'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); };
@@ -104,11 +105,11 @@
   function j(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
   Promise.all([j('../pairwise/sets/' + setId + '.json'), j('tuning.json')]).then(function (r) {
     set = r[0]; var tn = r[1]; if (!set) { show('<h2>Set not found</h2><p>' + esc(setId) + '</p>'); return; }
-    P = E.merge(tn); SRC = tn ? 'tuning.json@' + tn.generatedAt : 'defaults'; if (Q.get('q')) P.questions = Math.max(1, Math.min(set.pairs.length, +Q.get('q')));
+    P = E.merge(tn); FOC = Object.assign({ weights: Qualities.DEFAULT_WEIGHTS }, (tn && tn.focus) || {}); SRC = tn ? 'tuning.json@' + tn.generatedAt : 'defaults'; if (Q.get('q')) P.questions = Math.max(1, Math.min(set.pairs.length, +Q.get('q')));
     requestAnimationFrame(function (t) { last = t; loop(t); });
     show('<h2>🐾 Lynx Dash</h2><p>Run with Lo the lynx. Every <span class="k">' + P.segmentMs / 1000 + ' s</span> of running, the game pauses for one quick <span class="k">tone question</span>: which version sounds more like how <i>you</i> would write? ' + P.questions + ' questions per round (~' + Math.round(P.questions * (P.segmentMs + 15000) / 60000) + ' min).</p>' +
       '<p style="font-size:12px;color:#aaa">' + P.lives + ' lives; losing them all just resets your distance. Clean 30 s = streak bonus. Texts are fictional; only your taste in voice is recorded.' + (SIM ? ' <span class="sim">SIM MODE</span>' : '') + '</p><button id="go">▶ Run</button>');
     $('go').onclick = start; if (SIM) setTimeout(start, 50);
   });
-  var SRC = 'defaults';
+  var SRC = 'defaults', FOC = { weights: Qualities.DEFAULT_WEIGHTS };
 })();

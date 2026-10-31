@@ -25,7 +25,7 @@ function runOne(skill, chooser, seed) {
     g.afterQuestion(); clockT += P.countdownMs;
   }
   var s = g.state(), sum = { distance: Math.round(s.dist), bestRunDistance: Math.round(s.bestRunDist), score: Math.round(s.score), coins: s.coins, knockouts: s.knockouts, bestStreak: best, cleanBonusTotal: bonus, questionsAnswered: round.decisions().length, tone: RS.toneMini(qset, round.decisions()) };
-  var log = S.finish(sum), f = path.join(out, 'runner-' + skill + '-' + chooser + '-seed' + seed + '.json'); fs.writeFileSync(f, JSON.stringify(log, null, 1));
+  var log = S.finish(sum); log.qualities = require('../../shared/qualities.js').compute(log, tuning.focus); sum.focus = log.qualities.runnerFocus.round.focus; var f = path.join(out, 'runner-' + skill + '-' + chooser + '-seed' + seed + '.json'); fs.writeFileSync(f, JSON.stringify(log, null, 1));
   console.log(path.relative(root, f), JSON.stringify(sum)); return log;
 }
 skills.forEach(function (k) { choosers.forEach(function (c) { for (var r = 0; r < runs; r++) runOne(k, c, seed0 + r); }); });

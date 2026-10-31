@@ -1,6 +1,6 @@
 {
  "schema": "gameplay-log",
- "schemaVersion": "1.1.0",
+ "schemaVersion": "1.2.0",
  "game": {
   "id": "tetris",
   "version": "0.1.0",
@@ -8,7 +8,7 @@
   "namespace": "tetris"
  },
  "run": {
-  "id": "20261031145427-96kec",
+  "id": "20261031154950-d5t8c",
   "type": "sim",
   "startedAt": "1970-01-01T00:00:00.000Z",
   "endedAt": "2026-10-31T00:04:20.571Z",

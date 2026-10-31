@@ -17,3 +17,10 @@ Bump `schemaVersion` minor for additive fields, major for breaking changes.
   where `hard_drop` events < pieces because gravity/soft-drop locks were never logged.
 - `ext.pairwise`: {setId, setVersion, demo, pairsShown, decisionsMade, undos, decisions[{seq, pairId, criterion, itemA,
   itemB, choice A|B|tie|not_enough_info, winner, strength 1-3|null, decisionTimeMs, reasonTags[], swapped, undone, source}]}.
+
+## 1.2.0 (additive, 2026-10-31)
+- Optional top-level `qualities` {modelVersion, computedAt, adapters[], items{<quality>: {score 0–100, confidence 0–1,
+  label rough|estimate, evidence[]}}, runnerFocus?, note}, written by `games/shared/qualities.js` at the end of a run.
+  Readers of 1.0/1.1 ignore it; logs without it are scored on read. Registry: `games/shared/qualities.registry.json`.
+- `ext.runner` (runner 0.2.0): obstaclesFaced, projectilesFaced, crashesObstacle, crashesProjectile, coinsOffered, coinsMissed;
+  `crash` events carry `cls` (obstacle | projectile); new `coin_missed` event.

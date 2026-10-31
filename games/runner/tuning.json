@@ -2,5 +2,24 @@
  "game": "runner",
  "note": "Lynx Dash tuning. questions = pairwise questions per round (each after segmentMs of ACTIVE running). Hand-set for iteration 1; recalibrate from logs/human runner logs.",
  "generatedAt": "2026-10-31T16:30:00+01:00",
- "params": { "questions": 6, "segmentMs": 30000, "lives": 3, "baseSpeed": 0.30, "maxSpeed": 0.62, "speedKeepAfterQuestion": 0.8, "coyoteMs": 100, "bufferMs": 130 }
+ "params": {
+  "questions": 6,
+  "segmentMs": 30000,
+  "lives": 3,
+  "baseSpeed": 0.3,
+  "maxSpeed": 0.62,
+  "speedKeepAfterQuestion": 0.8,
+  "coyoteMs": 100,
+  "bufferMs": 130
+ },
+ "focus": {
+  "note": "Focus assessment weights (penalty per opportunity). obstacle = running into a cactus (largest); projectile = hit by a crow (crows are the projectile class: they fly in 8% faster than the ground); coin = missed coin (smallest). focus = 100*(1 - sum(w*rate)/sum(w)).",
+  "weights": {
+   "obstacle": 3,
+   "projectile": 2,
+   "coin": 1
+  },
+  "trendMinSegments": 3,
+  "legacyCoinChance": 0.5
+ }
 }

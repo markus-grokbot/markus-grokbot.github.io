@@ -164,6 +164,19 @@ and in-page `games/runner/?sim=1&skill=good&chooser=random&fast=16` (bot + choos
 Next: once Markus sends runner logs, tune segment length/speed from crashes per segment and decision times, and add tone-002
 pairs targeting the dims with low confidence.
 
+## Lynx Dash human log #1 (2026-10-31) + focus assessment (runner 0.2.0, schema 1.2.0)
+`logs/human/runner-20261031152745-jo2un.json`: 6 × 30 s, 7 crashes (all cacti), 2 knockouts, 59 coins, 0 clean segments,
+tone picks 12–31 s (median 19.4 s), all strength 2. Focus (estimated exposure, legacy log) 88/100, segments 85·94·89·83·89·91, steady.
+**Focus assessment:** cactus hit ×3 > crow hit ×2 > missed coin ×1, per opportunity (crows = projectile class), per segment,
+per round and trend; weights in `runner/tuning.json` `focus`. Engine now logs exposure counters. Details: `games/shared/RECOMMENDER.md`.
+Caveat: zero clean segments in 6 suggests the obstacle density is high for a human; consider minGapMs 650 → 800 after 2–3 more logs.
+
+## Shared qualities, profile, recommender (games/shared/)
+`qualities.js` (adapters runner | tetris | pairwise, `compute(log)` → `log.qualities`), `qualities.registry.json` (what each game
+measures and how), `recommend.js` (+ `RECOMMENDER.md`), `tools/profile.js` → `games/data/player-profile.human.json` (human logs
+only). Every game page attaches `qualities` at the end of a run and shows it on its summary; `games/index.html` has
+"Which game now?" from localStorage. New game = write an adapter + a registry entry. No clinical language; label rough estimates.
+
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.
 - **Iteration 2:** ≥2 levels truly tuned from Markus's human logs (run tune.js once logs/human has files);

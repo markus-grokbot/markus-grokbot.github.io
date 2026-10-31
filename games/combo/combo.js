@@ -35,14 +35,14 @@
     hide(); phase = 'pairwise'; $('tet').classList.add('hide'); $('pw').classList.remove('hide'); S.startPairwise(set);
     PairwisePit.mount($('pw'), set, { onEvent: S.event, onDone: function (round) { pwLevel = S.endPairwise(round); summary(round); } });
   }
-  function save() { var d = S.finish(); d = S.log.toJSON(); try { var all = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); all[d.run.id] = d; localStorage.setItem(LS_KEY, JSON.stringify(all)); } catch (e) { } return d; }
+  function save() { var d = S.finish(); d = S.log.toJSON(); try { d.qualities = Qualities.compute(d); } catch (e) { } try { var all = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); all[d.run.id] = d; localStorage.setItem(LS_KEY, JSON.stringify(all)); } catch (e) { } return d; }
   function download(d) { var b = new Blob([JSON.stringify(d, null, 1)], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'human-combo-' + d.run.id + '.json'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); }
   function summary(round) {
     phase = 'summary'; $('pw').classList.add('hide'); var d = save(), x = round.ext(), live = x.decisions.filter(function (q) { return !q.undone; });
     var rows = live.map(function (q) { return '<tr><td>' + q.pairId + '</td><td>' + q.choice + (q.strength ? ' ×' + q.strength : '') + '</td><td>' + (q.decisionTimeMs / 1000).toFixed(1) + 's</td></tr>'; }).join('');
     var tl = tetrisLevel, readMs = pwLevel.durationMs;
     show('<h2>Session done</h2><p>Tetris ' + fmt(tl.durationMs) + ' (' + tl.ext.tetris.pieces + ' drops) · Pairwise ' + fmt(readMs) + ' · total ' + fmt(tl.durationMs + readMs) + '</p>' +
-      '<table>' + rows + '</table><p style="font-size:12px;color:#aaa">' + (set.demo ? 'Demo set — test data only. ' : '') + 'Formula: ' + dt.formula + '. Log saved in this browser; download it and drop it into <code>logs/human/</code> so tune.js can recalibrate wordsPerDrop.</p>' +
+      '<table>' + rows + '</table>' + (d.qualities ? Qualities.html(d.qualities) : '') + '<p style="font-size:12px;color:#aaa">' + (set.demo ? 'Demo set — test data only. ' : '') + 'Formula: ' + dt.formula + '. Log saved in this browser; download it and drop it into <code>logs/human/</code> so tune.js can recalibrate wordsPerDrop.</p>' +
       '<button id="dl">⬇ Download log</button><button id="again">↻ Play again</button>');
     $('dl').onclick = function () { download(d); }; $('again').onclick = function () { location.reload(); };
   }

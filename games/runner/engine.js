@@ -2,7 +2,7 @@
    Units: px (logical 600x200 world, ground at y=170) and ms. Forgiving by design: shrunk hitboxes, coyote time,
    jump buffering, variable jump height, 3 lives; losing all lives resets run distance but never ends the round. */
 (function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(); else root.RunnerEngine = f(); })(typeof self !== 'undefined' ? self : this, function () {
-  var GAME_ID = 'runner', GAME_VERSION = '0.1.0', ITERATION = 1, W = 600, GROUND = 170;
+  var GAME_ID = 'runner', GAME_VERSION = '0.2.0', ITERATION = 2, W = 600, GROUND = 170;
   var DEFAULTS = { questions: 6, segmentMs: 30000, countdownMs: 3000, lives: 3, baseSpeed: 0.30, maxSpeed: 0.62, accelPerSec: 0.0045,
     speedKeepAfterQuestion: 0.8, gravity: 0.0026, jumpVel: 0.70, jumpCut: 0.45, fastFall: 0.006, coyoteMs: 100, bufferMs: 130,
     minGapMs: 650, gapRandMs: 900, birdFromSpeed: 0.36, birdChance: 0.28, coinChance: 0.5, hitboxShrink: 4, invulnMs: 1500,
@@ -14,7 +14,8 @@
     var s = { t: 0, speedT: 0, speed: P.baseSpeed, dist: 0, runDist: 0, bestRunDist: 0, score: 0, coins: 0, lives: P.lives, knockouts: 0,
       y: GROUND, vy: 0, onGround: true, ducking: false, lastGround: 0, bufferUntil: -1, invulnUntil: -1, obstacles: [], items: [], nextSpawn: 0, frame: 0 };
     var seg = null;
-    function newSeg() { seg = { activeMs: 0, jumps: 0, ducks: 0, crashes: 0, nearMisses: 0, coins: 0, distance: 0, maxSpeed: 0, speedSum: 0, steps: 0, knockouts: 0, airMs: 0 }; }
+    function newSeg() { seg = { activeMs: 0, jumps: 0, ducks: 0, crashes: 0, nearMisses: 0, coins: 0, distance: 0, maxSpeed: 0, speedSum: 0, steps: 0, knockouts: 0, airMs: 0, obstaclesFaced: 0, projectilesFaced: 0, crashesObstacle: 0, crashesProjectile: 0, coinsOffered: 0, coinsMissed: 0 }; }
+    function cls(ob) { return ob.kind === 'bird' ? 'projectile' : 'obstacle'; } // crows fly in faster than the ground: the projectile class
     newSeg();
     var px = 60, pw = 22;
     function ph() { return s.ducking && s.onGround ? 14 : 24; }
@@ -50,7 +51,7 @@
       var me = { x: px, y: s.y - ph(), w: pw, h: ph() };
       s.obstacles.forEach(function (ob) {
         ob.x -= dx * (ob.kind === 'bird' ? 1.08 : 1);
-        if (!ob.passed && ob.x + ob.w < px) { ob.passed = true; if (!ob.hitMe && !ob.ghost && ob.minClear != null && ob.minClear < P.nearMissPx) { seg.nearMisses++; s.score += P.nearMissPoints; on('near_miss', { kind: ob.kind, lvl: ob.lvl, clearPx: +ob.minClear.toFixed(1) }); } }
+        if (!ob.passed && ob.x + ob.w < px) { ob.passed = true; if (!ob.hitMe && !ob.ghost) { if (cls(ob) === 'projectile') seg.projectilesFaced++; else seg.obstaclesFaced++; } if (!ob.hitMe && !ob.ghost && ob.minClear != null && ob.minClear < P.nearMissPx) { seg.nearMisses++; s.score += P.nearMissPoints; on('near_miss', { kind: ob.kind, lvl: ob.lvl, clearPx: +ob.minClear.toFixed(1) }); } }
         if (ob.x < px + pw && ob.x + ob.w > px && !ob.hitMe) { // overlapping horizontally: track vertical clearance (gap between boxes)
           if (s.t < s.invulnUntil) ob.ghost = true;
           var cl = ob.y >= me.y + me.h ? ob.y - (me.y + me.h) : me.y >= ob.y + ob.h ? me.y - (ob.y + ob.h) : 0; ob.minClear = ob.minClear == null ? cl : Math.min(ob.minClear, cl);
@@ -59,19 +60,21 @@
       });
       s.obstacles = s.obstacles.filter(function (ob) { return ob.x + ob.w > -20; });
       s.items.forEach(function (it) { it.x -= dx; if (!it.got && hit(me, it, -2)) { it.got = true; s.coins++; seg.coins++; s.score += P.coinPoints; on('coin', {}); } });
+      s.items.forEach(function (it) { if (it.got) seg.coinsOffered++; else if (it.x <= -20) { seg.coinsOffered++; seg.coinsMissed++; on('coin_missed', {}); } });
       s.items = s.items.filter(function (it) { return !it.got && it.x > -20; });
       s.score += dx / 10;
     }
     function crash(ob) {
-      s.lives--; seg.crashes++; s.invulnUntil = s.t + P.invulnMs;
-      on('crash', { kind: ob.kind, lvl: ob.lvl, speed: +s.speed.toFixed(3), livesLeft: s.lives, runDist: Math.round(s.runDist) });
+      s.lives--; seg.crashes++; if (cls(ob) === 'projectile') { seg.projectilesFaced++; seg.crashesProjectile++; } else { seg.obstaclesFaced++; seg.crashesObstacle++; } s.invulnUntil = s.t + P.invulnMs;
+      on('crash', { kind: ob.kind, cls: cls(ob), lvl: ob.lvl, speed: +s.speed.toFixed(3), livesLeft: s.lives, runDist: Math.round(s.runDist) });
       if (s.lives <= 0) { s.knockouts++; seg.knockouts++; on('knockout', { runDist: Math.round(s.runDist) }); s.runDist = 0; s.lives = P.lives; s.speedT = 0; }
     }
     return {
       P: P, state: function () { return s; }, step: step, player: function () { return { x: px, y: s.y - ph(), w: pw, h: ph(), duck: s.ducking && s.onGround, air: !s.onGround }; },
       // close the current active segment; returns its stats and starts a fresh one
       endSegment: function () { var g = seg, out = { activeMs: Math.round(g.activeMs), jumps: g.jumps, ducks: g.ducks, crashes: g.crashes, knockouts: g.knockouts, nearMisses: g.nearMisses, coins: g.coins,
-          distance: Math.round(g.distance), maxSpeed: +g.maxSpeed.toFixed(3), avgSpeed: g.steps ? +(g.speedSum / g.steps).toFixed(3) : 0, airMs: Math.round(g.airMs), clean: g.crashes === 0 }; newSeg(); return out; },
+          distance: Math.round(g.distance), maxSpeed: +g.maxSpeed.toFixed(3), avgSpeed: g.steps ? +(g.speedSum / g.steps).toFixed(3) : 0, airMs: Math.round(g.airMs), clean: g.crashes === 0,
+          obstaclesFaced: g.obstaclesFaced, projectilesFaced: g.projectilesFaced, crashesObstacle: g.crashesObstacle, crashesProjectile: g.crashesProjectile, coinsOffered: g.coinsOffered, coinsMissed: g.coinsMissed }; newSeg(); return out; },
       afterQuestion: function () { s.speedT *= P.speedKeepAfterQuestion; s.obstacles = []; s.items = []; s.nextSpawn = s.t + 900; prevJump = false; },
       addBonus: function (n) { s.score += n; }
     };

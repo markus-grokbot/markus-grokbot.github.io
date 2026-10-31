@@ -23,7 +23,7 @@
     show((done ? '<h2>Level ' + lvl + ' complete!</h2>' : '<h2>Game over on level ' + lvl + '</h2>') +
       '<p>' + s.lines + ' lines · ' + s.pieces + ' pieces · ' + s.score + ' pts · ' + Math.floor(t / 60) + ':' + ('0' + t % 60).slice(-2) + '</p>' +
       '<p style="font-size:12px;color:#aaa">Log saved in this browser. Download it and drop the file into <code>logs/human/</code> in the repo so the next iteration is tuned to you.</p>' +
-      '<button id="dl">⬇ Download log</button>' + (done && lvl < 10 ? '<button id="nx">Next level ▶</button>' : '') + '<button id="rs">Restart run</button>' + (done && lvl === 10 ? '<p>🏆 All 10 levels done!</p>' : ''));
+      (data.qualities ? Qualities.html(data.qualities, 7) : '') + '<button id="dl">⬇ Download log</button>' + (done && lvl < 10 ? '<button id="nx">Next level ▶</button>' : '') + '<button id="rs">Restart run</button>' + (done && lvl === 10 ? '<p>🏆 All 10 levels done!</p>' : ''));
     $('dl').onclick = function () { download(data); };
     if ($('nx')) $('nx').onclick = function () { startLevel(lvl + 1); };
     $('rs').onclick = function () { newLog(); startLevel(1); };
@@ -32,6 +32,7 @@
     var d = log.toJSON(); d.run.endedAt = new Date().toISOString();
     var done = d.levels.filter(function (l) { return l.outcome === 'complete'; });
     d.summary = { levelsCompleted: done.length, highestLevel: done.length ? done[done.length - 1].level : 0, totalDurationMs: d.levels.reduce(function (a, l) { return a + (l.durationMs || 0); }, 0) };
+    try { d.qualities = Qualities.compute(d); } catch (e) { }
     try { var all = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); all[d.run.id] = d; localStorage.setItem(LS_KEY, JSON.stringify(all)); } catch (e) { }
     return d;
   }

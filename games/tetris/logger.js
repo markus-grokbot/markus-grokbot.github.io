@@ -7,7 +7,7 @@
   function createLog(o) {
     var t0 = o.clock ? o.clock() : now(), clock = o.clock || now;
     var log = {
-      schema: 'gameplay-log', schemaVersion: '1.1.0',
+      schema: 'gameplay-log', schemaVersion: '1.2.0',
       game: { id: o.gameId, version: o.gameVersion, iteration: o.iteration, namespace: o.gameId },
       run: { id: rid(), type: o.runType, startedAt: iso(t0), endedAt: null, device: o.device || {}, player: o.player || {}, seed: o.seed == null ? null : o.seed, tuningSource: o.tuningSource || 'defaults' },
       levels: [], transitions: [], summary: null

@@ -1,0 +1,19 @@
+{
+ "schema": "qualities-registry", "version": "1.0.0", "model": "games/shared/qualities.js",
+ "note": "Which qualities each game measures and how. Scores 0-100, confidence 0-1 (n/(n+k)), 'rough' below 0.5. Gameplay estimates for picking a game, not assessments of a person.",
+ "qualities": ["focus", "reaction", "pace", "consistency", "accuracy", "planning", "riskTaking", "endurance", "decisionSpeed", "decisiveness"],
+ "games": {
+  "runner": { "path": "/games/runner/", "adapters": ["runner", "pairwise"], "minutes": [4, 6], "measures": {
+    "focus": "100*(1 - sum(w*rate)/sum(w)); rates = obstacle hits/obstacles faced, crow hits/crows faced, coins missed/coins offered; weights in runner/tuning.json focus.weights (3/2/1)",
+    "reaction": "crows avoided / crows faced (obstacle clear rate if < 3 crows)", "accuracy": "coins caught / offered",
+    "consistency": "100 - 4*sd(segment focus)", "endurance": "50 + 8*slope(segment focus) per segment", "riskTaking": "near misses per obstacle",
+    "decisionSpeed": "tone questions (pairwise adapter)", "decisiveness": "tone questions (pairwise adapter)" }, "yields": ["tone-001 preferences"] },
+  "tetris": { "path": "/games/tetris/", "adapters": ["tetris"], "minutes": [2, 30], "measures": {
+    "focus": "misdrops/piece and hesitations (lock gap > 2.5x median)", "planning": "avg holes and end bumpiness", "pace": "s/piece, log scale 1.5 s=100 .. 10 s=0",
+    "consistency": "CV of piece times", "endurance": "median piece time 1st vs 2nd half", "accuracy": "clean placements / pieces", "riskTaking": "max stack height" }, "yields": [] },
+  "combo": { "path": "/games/combo/", "adapters": ["tetris", "pairwise"], "minutes": [3, 8], "measures": { "*": "tetris + pairwise adapters on one log" }, "yields": ["pairwise set preferences"] },
+  "pairwise": { "path": "/games/pairwise/?set=tone-001", "adapters": ["pairwise"], "minutes": [3, 10], "measures": {
+    "decisionSpeed": "median decision time, log scale 5 s=100 .. 90 s=0", "decisiveness": "0.6*(mean strength-1)/2 + 0.4*(1 - tie/neither rate)",
+    "consistency": "repeat pairs agreeing (only when a pair was answered twice; transitivity check: TODO when sets have triangles)" }, "yields": ["tone-001 preferences"] }
+ }
+}

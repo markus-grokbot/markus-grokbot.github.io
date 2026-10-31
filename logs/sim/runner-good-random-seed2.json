@@ -1,14 +1,14 @@
 {
  "schema": "gameplay-log",
- "schemaVersion": "1.1.0",
+ "schemaVersion": "1.2.0",
  "game": {
   "id": "runner",
-  "version": "0.1.0",
-  "iteration": 1,
+  "version": "0.2.0",
+  "iteration": 2,
   "namespace": "runner"
  },
  "run": {
-  "id": "20261031151955-dj9m6",
+  "id": "20261031154950-2orcd",
   "type": "sim",
   "startedAt": "2026-10-31T12:33:20.000Z",
   "endedAt": "2026-10-31T12:38:34.047Z",
@@ -104,6 +104,10 @@
      "coyote": false
     },
     {
+     "t": 7666.7041015625,
+     "type": "coin_missed"
+    },
+    {
      "t": 8050.039306640625,
      "type": "jump",
      "coyote": false
@@ -162,6 +166,10 @@
      "coyote": false
     },
     {
+     "t": 18100.08837890625,
+     "type": "coin_missed"
+    },
+    {
      "t": 18566.75732421875,
      "type": "jump",
      "coyote": false
@@ -184,6 +192,10 @@
      "clearPx": 3
     },
     {
+     "t": 21066.76953125,
+     "type": "coin_missed"
+    },
+    {
      "t": 21933.4404296875,
      "type": "jump",
      "coyote": false
@@ -202,6 +214,10 @@
      "t": 24516.786376953125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 24883.454833984375,
+     "type": "coin_missed"
     },
     {
      "t": 25516.791259765625,
@@ -253,6 +269,12 @@
      "avgSpeed": 0.368,
      "airMs": 13867,
      "clean": true,
+     "obstaclesFaced": 26,
+     "projectilesFaced": 1,
+     "crashesObstacle": 0,
+     "crashesProjectile": 0,
+     "coinsOffered": 8,
+     "coinsMissed": 4,
      "streak": 1,
      "cleanBonus": 100,
      "scoreTotal": 1248,
@@ -427,6 +449,10 @@
      "coyote": false
     },
     {
+     "t": 8983.377197265625,
+     "type": "coin_missed"
+    },
+    {
      "t": 9883.381591796875,
      "type": "jump",
      "coyote": false
@@ -444,9 +470,17 @@
      "clearPx": 3
     },
     {
+     "t": 11033.38720703125,
+     "type": "coin_missed"
+    },
+    {
      "t": 11583.389892578125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 11933.3916015625,
+     "type": "coin_missed"
     },
     {
      "t": 12550.061279296875,
@@ -461,6 +495,10 @@
      "clearPx": 3
     },
     {
+     "t": 13100.06396484375,
+     "type": "coin_missed"
+    },
+    {
      "t": 13700.06689453125,
      "type": "jump",
      "coyote": false
@@ -469,6 +507,10 @@
      "t": 14333.4033203125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 14683.405029296875,
+     "type": "coin_missed"
     },
     {
      "t": 15083.406982421875,
@@ -484,6 +526,10 @@
      "t": 17000.0830078125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 17350.084716796875,
+     "type": "coin_missed"
     },
     {
      "t": 17966.75439453125,
@@ -514,14 +560,26 @@
      "coyote": false
     },
     {
+     "t": 21450.104736328125,
+     "type": "coin_missed"
+    },
+    {
      "t": 22300.10888671875,
      "type": "jump",
      "coyote": false
     },
     {
+     "t": 22600.1103515625,
+     "type": "coin_missed"
+    },
+    {
      "t": 23400.1142578125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 23716.782470703125,
+     "type": "coin_missed"
     },
     {
      "t": 24516.786376953125,
@@ -544,6 +602,10 @@
      "t": 26683.463623046875,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 27016.798583984375,
+     "type": "coin_missed"
     },
     {
      "t": 27566.80126953125,
@@ -593,6 +655,12 @@
      "avgSpeed": 0.476,
      "airMs": 12983,
      "clean": true,
+     "obstaclesFaced": 20,
+     "projectilesFaced": 8,
+     "crashesObstacle": 0,
+     "crashesProjectile": 0,
+     "coinsOffered": 15,
+     "coinsMissed": 10,
      "streak": 2,
      "cleanBonus": 200,
      "scoreTotal": 2944,
@@ -734,6 +802,10 @@
      "coyote": false
     },
     {
+     "t": 5166.69189453125,
+     "type": "coin_missed"
+    },
+    {
      "t": 5733.361328125,
      "type": "jump",
      "coyote": false
@@ -768,9 +840,17 @@
      "coyote": false
     },
     {
+     "t": 10116.716064453125,
+     "type": "coin_missed"
+    },
+    {
      "t": 10616.718505859375,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 10950.053466796875,
+     "type": "coin_missed"
     },
     {
      "t": 11266.7216796875,
@@ -783,6 +863,10 @@
      "kind": "bird",
      "lvl": "mid",
      "clearPx": 3
+    },
+    {
+     "t": 12633.39501953125,
+     "type": "coin_missed"
     },
     {
      "t": 13283.398193359375,
@@ -799,9 +883,17 @@
      "coyote": false
     },
     {
+     "t": 14450.070556640625,
+     "type": "coin_missed"
+    },
+    {
      "t": 15283.407958984375,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 15616.742919921875,
+     "type": "coin_missed"
     },
     {
      "t": 16283.412841796875,
@@ -823,9 +915,17 @@
      "coyote": false
     },
     {
+     "t": 18366.75634765625,
+     "type": "coin_missed"
+    },
+    {
      "t": 18750.091552734375,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 19116.760009765625,
+     "type": "coin_missed"
     },
     {
      "t": 20600.1005859375,
@@ -844,6 +944,10 @@
     {
      "t": 21300.10400390625,
      "type": "coin"
+    },
+    {
+     "t": 22250.108642578125,
+     "type": "coin_missed"
     },
     {
      "t": 22500.10986328125,
@@ -869,6 +973,10 @@
      "coyote": false
     },
     {
+     "t": 24766.78759765625,
+     "type": "coin_missed"
+    },
+    {
      "t": 25266.7900390625,
      "type": "jump",
      "coyote": false
@@ -877,6 +985,10 @@
      "t": 26050.127197265625,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 26416.795654296875,
+     "type": "coin_missed"
     },
     {
      "t": 26716.797119140625,
@@ -928,6 +1040,12 @@
      "avgSpeed": 0.562,
      "airMs": 15283,
      "clean": true,
+     "obstaclesFaced": 21,
+     "projectilesFaced": 12,
+     "crashesObstacle": 0,
+     "crashesProjectile": 0,
+     "coinsOffered": 20,
+     "coinsMissed": 11,
      "streak": 3,
      "cleanBonus": 300,
      "scoreTotal": 5024,
@@ -1144,6 +1262,10 @@
      "clearPx": 3
     },
     {
+     "t": 11566.72314453125,
+     "type": "coin_missed"
+    },
+    {
      "t": 11966.72509765625,
      "type": "jump",
      "coyote": false
@@ -1194,6 +1316,10 @@
      "clearPx": 3
     },
     {
+     "t": 17116.750244140625,
+     "type": "coin_missed"
+    },
+    {
      "t": 18116.755126953125,
      "type": "duck",
      "air": false
@@ -1216,6 +1342,10 @@
      "kind": "bird",
      "lvl": "mid",
      "clearPx": 3
+    },
+    {
+     "t": 19700.09619140625,
+     "type": "coin_missed"
     },
     {
      "t": 19750.096435546875,
@@ -1256,6 +1386,10 @@
      "clearPx": 3
     },
     {
+     "t": 22016.774169921875,
+     "type": "coin_missed"
+    },
+    {
      "t": 24000.1171875,
      "type": "jump",
      "coyote": false
@@ -1264,6 +1398,7 @@
      "t": 24833.45458984375,
      "type": "crash",
      "kind": "cactus",
+     "cls": "obstacle",
      "lvl": "tall",
      "speed": 0.62,
      "livesLeft": 2,
@@ -1307,6 +1442,10 @@
      "clearPx": 3
     },
     {
+     "t": 29550.144287109375,
+     "type": "coin_missed"
+    },
+    {
      "t": 30000.146484375,
      "type": "level_complete"
     }
@@ -1326,6 +1465,12 @@
      "avgSpeed": 0.608,
      "airMs": 12117,
      "clean": false,
+     "obstaclesFaced": 19,
+     "projectilesFaced": 15,
+     "crashesObstacle": 1,
+     "crashesProjectile": 0,
+     "coinsOffered": 13,
+     "coinsMissed": 5,
      "streak": 0,
      "cleanBonus": 0,
      "scoreTotal": 6969,
@@ -1497,6 +1642,10 @@
      "coyote": false
     },
     {
+     "t": 6300.03076171875,
+     "type": "coin_missed"
+    },
+    {
      "t": 6750.032958984375,
      "type": "jump",
      "coyote": false
@@ -1505,6 +1654,10 @@
      "t": 7566.70361328125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 7933.3720703125,
+     "type": "coin_missed"
     },
     {
      "t": 9433.37939453125,
@@ -1552,6 +1705,10 @@
      "coyote": false
     },
     {
+     "t": 14266.736328125,
+     "type": "coin_missed"
+    },
+    {
      "t": 14950.072998046875,
      "type": "jump",
      "coyote": false
@@ -1560,6 +1717,10 @@
      "t": 15966.74462890625,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 17100.08349609375,
+     "type": "coin_missed"
     },
     {
      "t": 17733.419921875,
@@ -1619,14 +1780,26 @@
      "coyote": false
     },
     {
+     "t": 23966.78369140625,
+     "type": "coin_missed"
+    },
+    {
      "t": 24250.118408203125,
      "type": "jump",
      "coyote": false
     },
     {
+     "t": 25616.791748046875,
+     "type": "coin_missed"
+    },
+    {
      "t": 25833.45947265625,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 26133.4609375,
+     "type": "coin_missed"
     },
     {
      "t": 26450.129150390625,
@@ -1664,6 +1837,10 @@
      "clearPx": 3
     },
     {
+     "t": 29883.479248046875,
+     "type": "coin_missed"
+    },
+    {
      "t": 30000.146484375,
      "type": "clean_segment",
      "streak": 1,
@@ -1689,6 +1866,12 @@
      "avgSpeed": 0.62,
      "airMs": 14933,
      "clean": true,
+     "obstaclesFaced": 24,
+     "projectilesFaced": 10,
+     "crashesObstacle": 0,
+     "crashesProjectile": 0,
+     "coinsOffered": 18,
+     "coinsMissed": 8,
      "streak": 1,
      "cleanBonus": 100,
      "scoreTotal": 9044,
@@ -1816,6 +1999,10 @@
      "coyote": false
     },
     {
+     "t": 1916.676025390625,
+     "type": "coin_missed"
+    },
+    {
      "t": 2483.345458984375,
      "type": "near_miss",
      "kind": "bird",
@@ -1847,6 +2034,10 @@
      "coyote": false
     },
     {
+     "t": 6250.030517578125,
+     "type": "coin_missed"
+    },
+    {
      "t": 6766.69970703125,
      "type": "jump",
      "coyote": false
@@ -1862,6 +2053,10 @@
      "coyote": false
     },
     {
+     "t": 8750.042724609375,
+     "type": "coin_missed"
+    },
+    {
      "t": 9033.37744140625,
      "type": "jump",
      "coyote": false
@@ -1870,6 +2065,14 @@
      "t": 9700.04736328125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 10066.7158203125,
+     "type": "coin_missed"
+    },
+    {
+     "t": 11050.053955078125,
+     "type": "coin_missed"
     },
     {
      "t": 11783.390869140625,
@@ -1889,6 +2092,10 @@
      "t": 13483.399169921875,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 13783.400634765625,
+     "type": "coin_missed"
     },
     {
      "t": 14033.40185546875,
@@ -1932,6 +2139,10 @@
      "t": 18600.0908203125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 18916.759033203125,
+     "type": "coin_missed"
     },
     {
      "t": 19683.429443359375,
@@ -1993,6 +2204,10 @@
      "coyote": false
     },
     {
+     "t": 25966.79345703125,
+     "type": "coin_missed"
+    },
+    {
      "t": 26600.1298828125,
      "type": "jump",
      "coyote": false
@@ -2019,6 +2234,10 @@
      "t": 28916.807861328125,
      "type": "jump",
      "coyote": false
+    },
+    {
+     "t": 29183.475830078125,
+     "type": "coin_missed"
     },
     {
      "t": 29850.145751953125,
@@ -2051,6 +2270,12 @@
      "avgSpeed": 0.62,
      "airMs": 16683,
      "clean": true,
+     "obstaclesFaced": 22,
+     "projectilesFaced": 12,
+     "crashesObstacle": 0,
+     "crashesProjectile": 0,
+     "coinsOffered": 18,
+     "coinsMissed": 9,
      "streak": 2,
      "cleanBonus": 200,
      "scoreTotal": 11204,
@@ -3923,7 +4148,7 @@
   }
  },
  "session": {
-  "id": "20261031151955-dj9m6",
+  "id": "20261031154950-2orcd",
   "kind": "runner+pairwise",
   "segments": [
    {
@@ -4041,5 +4266,227 @@
     "durationMs": 22396
    }
   ]
+ },
+ "qualities": {
+  "modelVersion": "1.0.0",
+  "computedAt": "2026-10-31T15:49:50.425Z",
+  "runType": "sim",
+  "adapters": [
+   "runner",
+   "pairwise"
+  ],
+  "items": {
+   "focus": {
+    "score": 91,
+    "confidence": 0.6,
+    "label": "estimate",
+    "evidence": [
+     "runner: runner weighted penalties per opportunity: obstacle hit rate 0.008, crow hit rate 0, coin miss rate 0.511"
+    ]
+   },
+   "reaction": {
+    "score": 100,
+    "confidence": 0.79,
+    "label": "estimate",
+    "evidence": [
+     "runner: crows avoided 58/58"
+    ]
+   },
+   "consistency": {
+    "score": 95,
+    "confidence": 0.5,
+    "label": "estimate",
+    "evidence": [
+     "runner: segment focus sd 1.4 over 6 segments"
+    ]
+   },
+   "accuracy": {
+    "score": 49,
+    "confidence": 0.75,
+    "label": "estimate",
+    "evidence": [
+     "runner: coins caught 45/92"
+    ]
+   },
+   "riskTaking": {
+    "score": 30,
+    "confidence": 0.83,
+    "label": "estimate",
+    "evidence": [
+     "runner: near misses 19/190 obstacles"
+    ]
+   },
+   "endurance": {
+    "score": 53,
+    "confidence": 0.43,
+    "label": "rough",
+    "evidence": [
+     "runner: focus trend 0.34 pts/segment (steady)"
+    ]
+   },
+   "decisionSpeed": {
+    "score": 52,
+    "confidence": 0.43,
+    "label": "rough",
+    "evidence": [
+     "pairwise: median 20.3 s per pick (n=6)"
+    ]
+   },
+   "decisiveness": {
+    "score": 65,
+    "confidence": 0.43,
+    "label": "rough",
+    "evidence": [
+     "pairwise: mean strength 1.83 of 3; tie/neither 0/6"
+    ]
+   }
+  },
+  "note": "Rough gameplay estimates for choosing a game; not an assessment of the person. \"rough\" = confidence < 0.5.",
+  "runnerFocus": {
+   "weights": {
+    "obstacle": 3,
+    "projectile": 2,
+    "coin": 1
+   },
+   "estimatedExposure": false,
+   "segments": [
+    {
+     "segmentNo": 1,
+     "focus": 92,
+     "rates": {
+      "obstacle": 0,
+      "projectile": 0,
+      "coin": 0.5
+     },
+     "exposure": {
+      "obstacles": 26,
+      "projectiles": 1,
+      "coins": 8,
+      "hitObstacle": 0,
+      "hitProjectile": 0,
+      "coinsMissed": 4,
+      "estimated": false
+     },
+     "avgSpeed": 0.368
+    },
+    {
+     "segmentNo": 2,
+     "focus": 89,
+     "rates": {
+      "obstacle": 0,
+      "projectile": 0,
+      "coin": 0.667
+     },
+     "exposure": {
+      "obstacles": 20,
+      "projectiles": 8,
+      "coins": 15,
+      "hitObstacle": 0,
+      "hitProjectile": 0,
+      "coinsMissed": 10,
+      "estimated": false
+     },
+     "avgSpeed": 0.476
+    },
+    {
+     "segmentNo": 3,
+     "focus": 91,
+     "rates": {
+      "obstacle": 0,
+      "projectile": 0,
+      "coin": 0.55
+     },
+     "exposure": {
+      "obstacles": 21,
+      "projectiles": 12,
+      "coins": 20,
+      "hitObstacle": 0,
+      "hitProjectile": 0,
+      "coinsMissed": 11,
+      "estimated": false
+     },
+     "avgSpeed": 0.562
+    },
+    {
+     "segmentNo": 4,
+     "focus": 91,
+     "rates": {
+      "obstacle": 0.053,
+      "projectile": 0,
+      "coin": 0.385
+     },
+     "exposure": {
+      "obstacles": 19,
+      "projectiles": 15,
+      "coins": 13,
+      "hitObstacle": 1,
+      "hitProjectile": 0,
+      "coinsMissed": 5,
+      "estimated": false
+     },
+     "avgSpeed": 0.608
+    },
+    {
+     "segmentNo": 5,
+     "focus": 93,
+     "rates": {
+      "obstacle": 0,
+      "projectile": 0,
+      "coin": 0.444
+     },
+     "exposure": {
+      "obstacles": 24,
+      "projectiles": 10,
+      "coins": 18,
+      "hitObstacle": 0,
+      "hitProjectile": 0,
+      "coinsMissed": 8,
+      "estimated": false
+     },
+     "avgSpeed": 0.62
+    },
+    {
+     "segmentNo": 6,
+     "focus": 92,
+     "rates": {
+      "obstacle": 0,
+      "projectile": 0,
+      "coin": 0.5
+     },
+     "exposure": {
+      "obstacles": 22,
+      "projectiles": 12,
+      "coins": 18,
+      "hitObstacle": 0,
+      "hitProjectile": 0,
+      "coinsMissed": 9,
+      "estimated": false
+     },
+     "avgSpeed": 0.62
+    }
+   ],
+   "round": {
+    "focus": 91,
+    "rates": {
+     "obstacle": 0.008,
+     "projectile": 0,
+     "coin": 0.511
+    },
+    "exposure": {
+     "obstacles": 132,
+     "projectiles": 58,
+     "coins": 92,
+     "hitObstacle": 1,
+     "hitProjectile": 0,
+     "coinsMissed": 47
+    }
+   },
+   "trend": {
+    "pointsPerSegment": 0.34,
+    "label": "steady",
+    "firstHalf": 91,
+    "secondHalf": 92
+   }
+  }
  }
 }
