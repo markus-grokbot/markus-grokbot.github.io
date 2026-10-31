@@ -1,0 +1,79 @@
+{
+ "schema": "parcels-output",
+ "kind": "phrasing",
+ "version": "1.0.0",
+ "sim": true,
+ "seededUnlock": true,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-005-c001",
+  "label": "Project Updates",
+  "rationale": "This cluster includes items related to project updates, deadlines, and changes in project scope.",
+  "work": "reply",
+  "members": [
+   "r004-llama323b-04",
+   "r004-qwen2515b-01",
+   "r002-llama323b-04",
+   "r005-llama323b-01",
+   "r005-llama323b-02",
+   "r005-llama323b-03",
+   "r005-llama323b-04",
+   "r005-llama323b-05",
+   "r005-llama323b-06"
+  ],
+  "proposedBy": [
+   "qwen2.5:1.5b"
+  ]
+ },
+ "round": "round-005-sim",
+ "fromLog": "logs/sim/parcels5s-round-005-sim-session-good-seed1.json",
+ "picks": [
+  {
+   "pairId": "round-005-c001-ph1",
+   "a": "round-005-c001:llama323b:guided",
+   "b": "round-005-c001:llama323b:terse",
+   "choice": "B",
+   "winner": "round-005-c001:llama323b:terse",
+   "winnerModel": "llama3.2:3b",
+   "ms": 501
+  }
+ ],
+ "preferred": {
+  "id": "round-005-c001:llama323b:terse",
+  "model": "llama3.2:3b",
+  "variant": "terse",
+  "text": "Project Updates:\n* r004-qwen2515b-01: Project timeline and scope update.\n* r002-llama323b-04: New product launch.\n* r005-llama323b-01: Frontend developer position still open.\n* r005-llama323b-02: Project scope information coming.\n* r005-llama323b-03: Collaboration request.\n* r005-llama323b-04: Senior software engineer position available.\n* r005-llama323b-05: Interview invitation.\n* r005-llama323b-06: Upcoming events.\nBest, Engineer",
+  "dims": {
+   "brevity": 1,
+   "directness": 1
+  }
+ },
+ "candidates": [
+  {
+   "id": "round-005-c001:llama323b:guided",
+   "model": "llama3.2:3b",
+   "variant": "guided",
+   "text": "Dear Team,\n\nI am writing to provide updates on the following projects:\n\n* r004-qwen2515b-01: We are updating the project timeline and scope. Please review the changes.\n* r002-llama323b-04: Our new product is launching soon.\n* r005-llama323b-01: We are still looking for a frontend developer to join our team.\n* r005-llama323b-02: I will provide more information on the project scope.\n* r005-llama323b-03: I need your help with the upcoming project.\n* r005-llama323b-04: We are looking for a senior software engineer to join our team.\n* r005-llama323b-05: You have been invited for an interview on Mon",
+   "dims": {
+    "brevity": 0,
+    "directness": 0
+   }
+  },
+  {
+   "id": "round-005-c001:llama323b:terse",
+   "model": "llama3.2:3b",
+   "variant": "terse",
+   "text": "Project Updates:\n* r004-qwen2515b-01: Project timeline and scope update.\n* r002-llama323b-04: New product launch.\n* r005-llama323b-01: Frontend developer position still open.\n* r005-llama323b-02: Project scope information coming.\n* r005-llama323b-03: Collaboration request.\n* r005-llama323b-04: Senior software engineer position available.\n* r005-llama323b-05: Interview invitation.\n* r005-llama323b-06: Upcoming events.\nBest, Engineer",
+   "dims": {
+    "brevity": 1,
+    "directness": 1
+   }
+  }
+ ],
+ "toneSignal": [
+  {
+   "brevity": 1,
+   "directness": 1
+  }
+ ]
+}

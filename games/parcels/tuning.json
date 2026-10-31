@@ -1,0 +1,22 @@
+{
+ "schema": "parcels-tuning",
+ "version": "1.0.0",
+ "note": "Session-mode tuning (?mode=session). Read by the page (fetch) and by tools/next-round.js + sim. Change here, not in code.",
+ "session": {
+  "chain": ["priority", "handling", "cluster"],
+  "cycles": 2,
+  "stopWhenSettled": true,
+  "warmup": { "durationMs": 45000, "limitMs": 7000, "speed": 0.8, "mode": "priority", "use": "settled-first" },
+  "stageWave": { "durationMs": 40000, "limitMs": 5600, "speed": 1 },
+  "cycleSpeedUp": 0.1,
+  "clustersPerCycle": 3,
+  "batch": {
+   "minMembers": 2,
+   "minSettledHighShare": 0.5,
+   "highQuadrants": ["first", "schedule"],
+   "combinedPriorityThreshold": 140,
+   "clusterSettleAfter": 3
+  },
+  "outputs": { "phrasingPairs": 2, "codepassPairs": 1, "maxBatchesPerSession": 2 }
+ }
+}

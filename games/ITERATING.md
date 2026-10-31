@@ -211,3 +211,5 @@ engine `ParcelEngine2.make(ParcelPriority, ...)`. Old bins map to approximate po
 
 ### Parcel Panic: consistency before action (round 4)
 A parcel's placement is only trusted after **3 consistent human evaluations in a row** (same quadrant, ≤25 pts apart, not undecided). Doubtful parcels are re-queued first in the next round. After 5 tries without settling they go to manual review. The ledger is `games/parcels/data/parcel-ledger.json`, and the rule is in `games/parcels/ledger.js`. Within a round, repeats are spaced out, and they count as separate evaluations.
+
+- 2026-10-31 · Parcel Panic 0.5.0: chained `?mode=session` (warm-up, priority → handling → cluster cycles, threshold-gated phrasing/code-plan A/B). See games/parcels/SESSION.md.

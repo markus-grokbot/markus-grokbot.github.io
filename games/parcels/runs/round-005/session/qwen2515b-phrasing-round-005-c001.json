@@ -1,0 +1,16 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "phrasing-round-005-c001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:08:26.250Z",
+ "ms": 29632,
+ "promptSha256": "8f76876ebfe6ce08b9a45df0393e95872cc322f44d92a46fac163982afe48ac2",
+ "prompt": "Write a short fictional reply email that answers ALL of these related inbox items in one message (they form the batch \"Project Updates\"). Write it as the engineer. Write two variants: \"guided\" follows this style guide, \"terse\" is deliberately shorter and more direct.\n## Style guide for a writing model\n\n- Strongly prefer **serious, dry** (humor -1 ± 1.111, n=2, low confidence)\n- Prefer **assertive, confident** (confidence 0.52 ± 0.559, n=3, low confidence)\n- Prefer **plain-language, explanatory** (technicality -0.462 ± 0.508, n=4, low confidence)\n- Prefer **expansive, explanatory** (brevity -0.417 ± 0.439, n=5, low confidence)\n- Prefer **formal** (formality 0.294 ± 0.488, n=6, low confidence)\n- No clear lean on **directness** (directness 0.067 ± 0.547, n=4, low confidence)\n- No clear lean on **warmth** (warmth -0.048 ± 0.48, n=6, low confidence)\n- No clear lean on **personal** (personal -0.033 ± 0.449, n=6, low confidence)\n\nTreat low-confidence lines as hints only. Content is fictional; only the voice is signal.\n\n| dim | pref | se | n | beta | conf |\n|---|---|---|---|---|---|\n| formality | 0.294 | 0.488 | 6 | 0.376 | low |\n| warmth | -0.048 | 0.48 | 6 | -0.019 | low |\n| brevity | -0.417 | 0.439 | 5 | -0.774 | low |\n| humor | -1 | 1.111 | 2 | -0.418 | low |\n| confidence | 0.52 | 0.559 | 3 | 0.505 | low |\n| technicality | -0.462 | 0.508 | 4 | -0.428 | low |\n| directness | 0.067 | 0.547 | 4 | 0.164 | low |\n| emoji | 0 |  | 0 | 0 | none |\n| personal | -0.033 | 0.449 | 6 | -0.241 | low |\nItems:\nr004-llama323b-04 | marketing | Marketing · TechPromotions | Special Offer | Get 10% off your next purchase.\nr004-qwen2515b-01 | newsletter | Newsletter · MyCompany | Project Update | We are updating the project timeline and scope. Please review the changes.\nr002-llama323b-04 | marketing | Marketing · TechHub | New Product Launch: Get Ready for the Future | Our new product is launching soon.\nr005-llama323b-01 | job-board | Job-Board · TechHub | Frontend role, follow-up | We are still looking for a frontend developer to join our team.\nr005-llama323b-02 | collaborator | Collaborator · TechCorp | Collaborator Question | Can you provide more information on the project scope?\nr005-llama323b-03 | collaborator | Collaborator · CodeCo | Collaboration Request | Can you help with the upcoming project?\nr005-llama323b-04 | job-board | Job-Board · TechHub | New Job Posting: Senior Software Engineer | We are looking for a senior software engineer to join our team.\nr005-llama323b-05 | recruiter | Recruiter · Pinewood Talent | Interview Invitation | You have been invited for an interview on Monday.\nr005-llama323b-06 | marketing | Marketing · TechPromo | Newsletter: Upcoming Events | We have upcoming events scheduled for the next month.\nMax 70 words each. No real names, emails or addresses; use the fictional senders above. Return JSON only: {\"guided\":\"...\",\"terse\":\"...\"}",
+ "parseError": "json: \"undefined\" is not valid JSON"
+}

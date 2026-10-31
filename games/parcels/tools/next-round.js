@@ -18,6 +18,7 @@ const h = s => parseInt(crypto.createHash('md5').update(s).digest('hex').slice(0
   if (!logPath) throw new Error('no ' + (SIM ? 'sim' : 'human') + ' parcels log for ' + rid + ' in logs/' + (SIM ? 'sim' : 'human') + '/');
   // --log a.json[,b.json]: priority/bins log and optionally the handling-mode log of the same round
   const logPaths = String(logPath).split(',').map(f => path.resolve(L.REPO, f)), logsAll = logPaths.map(f => L.readJ(f)), hIdx = logsAll.findIndex(l => L.logMode(l) === 'handling');
+  if (logsAll.some(l => l.summary && l.summary.parcels && l.summary.parcels.mode === 'session')) { console.error('session log: run tools/session-process.js --log <file> first (ledger, clusters, outputs, per-stage columns), then next-round with --log <file> for priority/handling grading.'); if (!process.argv.includes('--session-ok')) process.exit(2); }
   const hLog = hIdx >= 0 ? logsAll[hIdx] : null, pIdx = logsAll.findIndex(l => L.logMode(l) !== 'handling'); if (pIdx < 0) throw new Error('need a priority (or bins) log');
   logPath = logPaths[pIdx]; const log = logsAll[pIdx], relLog = path.relative(L.REPO, logPath), relLogs = logPaths.map(f => path.relative(L.REPO, f));
   if (hLog && hLog.summary.parcels.roundId !== rid) throw new Error('handling log is for ' + hLog.summary.parcels.roundId);

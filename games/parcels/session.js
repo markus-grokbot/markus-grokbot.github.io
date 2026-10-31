@@ -16,7 +16,9 @@
       startQuestion: function (q, qi) { log.startLevel(++lvl, { setId: round.roundId + '-ab', pairs: 1, kind: 'summary-style' }, { kind: 'pairwise', pairId: q.id, questionNo: qi + 1, roundId: round.roundId }); },
       endQuestion: function (q, d) { return log.endLevel('complete', { actions: 1, misplays: 0, progress: 1 }, { setId: round.roundId + '-ab', setVersion: round.version, demo: false, setKind: 'summary-style', pairsShown: 1, decisionsMade: 1, undos: 0, timing: 'decisionTimeMs from question shown', roundId: round.roundId, decisions: [d] }, 'pairwise'); },
       finish: function (sum) { log.finish(); var d = log.toJSON(); d.summary.parcels = Object.assign(meta, sum); return d; },
-      waves: waves
+      waves: waves, meta: meta,
+      startStage: function (kind, params, seg) { log.startLevel(++lvl, params, Object.assign({ kind: kind, roundId: round.roundId }, seg || {})); },
+      endStage: function (kind, ext, actions) { return log.endLevel('complete', { actions: actions || 0, misplays: 0, progress: 1 }, ext, kind); },
     };
   }
   // A/B decision in SET terms (a = q.a regardless of on-screen side)

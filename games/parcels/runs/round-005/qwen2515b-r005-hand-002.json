@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r005-hand-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:55:46.877Z",
+ "ms": 3423,
+ "promptSha256": "c2733ea0cc48b25310b9f718480508536ebb58f63ca9fbcd6967bd0b21b2490c",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\nr002-llama323b-08 | Recruiter · Pinewood Talent | Follow-up on Application | We would like to schedule a call to discuss your application.\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\np026 | Collaborator · bot tester | Found a bug in the tone pit | Undo after 'neither' skips a pair. Repro steps below. Want me to file it?\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\nr003-qwen2515b-02 | Collaborator · MyCompany | Meeting Request | We have a meeting scheduled for 10:00 AM on Tuesday. Please confirm your availability.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"r002\",\"manual\":10,\"spend\":50},\n    {\"id\":\"p010\",\"manual\":50,\"spend\":70},\n    {\"id\":\"p026\",\"manual\":80,\"spend\":90},\n    {\"id\":\"p039\",\"manual\":60,\"spend\":80},\n    {\"id\":\"r003\",\"manual\":90,\"spend\":100}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 111,
+ "promptEvalCount": 424
+}

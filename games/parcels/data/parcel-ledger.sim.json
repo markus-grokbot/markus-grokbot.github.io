@@ -2,13 +2,14 @@
  "schema": "parcels-ledger",
  "version": "1.0.0",
  "kind": "sim",
- "note": "SIM copy of the human ledger plus sim evaluations. Never used for real settling.",
+ "note": "Per-parcel evaluations across rounds and modes. Only human evaluations count toward settling; model evaluations are for comparison. SYNTHETIC fictional parcels only.",
  "logs": [
   "games/parcels/logs/human/human-parcels-round-001-20261031162724-d7vwu.json",
   "games/parcels/logs/human/human-parcels-round-002-20261031173324-2y01c.json",
   "games/parcels/logs/human/human-parcels-round-003-20261031180247-73vwk.json",
-  "logs/sim/parcels3-round-004-good-seed1.json",
-  "logs/sim/parcels4h-round-004-good-seed1.json"
+  "games/parcels/logs/human/human-parcels-round-004-priority-20261031183918-6j9dj.json",
+  "games/parcels/logs/human/human-parcels-round-004-handling-20261031183555-qpxuu.json",
+  "logs/sim/parcels5s-round-005-sim-session-good-seed1.json"
  ],
  "parcels": {
   "p001": {
@@ -276,32 +277,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.82,
-     "y": 0.052,
-     "quadrant": "autoPremium",
-     "conf": 0.82,
-     "manual": 9,
-     "spend": 52.6,
-     "tier": "codex",
+     "x": -0.656,
+     "y": -0.062,
+     "quadrant": "autoCheap",
+     "conf": 0.656,
+     "manual": 17.2,
+     "spend": 46.9,
+     "tier": "opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.766,
-     "y": -1,
+     "x": -0.871,
+     "y": -0.203,
      "quadrant": "autoCheap",
-     "conf": 1,
-     "manual": 11.7,
-     "spend": 0,
-     "tier": "ollama",
+     "conf": 0.871,
+     "manual": 6.5,
+     "spend": 39.8,
+     "tier": "opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -329,6 +329,36 @@
      "manual": 70,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.959,
+     "y": -0.986,
+     "quadrant": "autoCheap",
+     "conf": 0.986,
+     "manual": 2.1,
+     "spend": 0.7,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.273,
+     "y": 0.117,
+     "quadrant": "autoPremium",
+     "conf": 0.273,
+     "manual": 36.4,
+     "spend": 55.9,
+     "tier": "codex",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
@@ -346,14 +376,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
+     "tries": 4,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoCheap",
-      "x": -0.766,
-      "y": -1
+      "round": "round-005-sim",
+      "quadrant": "autoPremium",
+      "x": -0.273,
+      "y": 0.117
      }
     }
    }
@@ -449,47 +479,16 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.224,
-     "y": -0.265,
-     "quadrant": "reviewLight",
-     "conf": 0.265,
-     "manual": 61.2,
-     "spend": 36.8,
-     "tier": "manual",
+     "x": -0.281,
+     "y": 0.365,
+     "quadrant": "autoPremium",
+     "conf": 0.365,
+     "manual": 35.9,
+     "spend": 68.3,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.028,
-     "y": -0.289,
-     "quadrant": "reviewLight",
-     "conf": 0.289,
-     "manual": 51.4,
-     "spend": 35.6,
-     "tier": "hybrid-opencode",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.037,
-     "y": -0.096,
-     "quadrant": "reviewLight",
-     "conf": 0.096,
-     "manual": 51.9,
-     "spend": 45.2,
-     "tier": "hybrid-opencode",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -517,19 +516,79 @@
      "manual": 70,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.446,
+     "y": 0.14,
+     "quadrant": "first",
+     "conf": 0.446,
+     "urgency": 72.3,
+     "importance": 57,
+     "priority": 63.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.205,
+     "y": -0.359,
+     "quadrant": "reviewLight",
+     "conf": 0.359,
+     "manual": 60.3,
+     "spend": 32.1,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.444,
+     "y": 0.094,
+     "quadrant": "first",
+     "conf": 0.444,
+     "urgency": 72.2,
+     "importance": 54.7,
+     "priority": 61.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0,
+     "y": 0.027,
+     "quadrant": "autoPremium",
+     "conf": 0.027,
+     "manual": 50,
+     "spend": 51.4,
+     "tier": "hybrid-codex",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-002",
+      "round": "round-005-sim",
       "quadrant": "first",
-      "x": -0.408,
-      "y": 0.456
+      "x": -0.444,
+      "y": 0.094
      }
     },
     "handling": {
@@ -538,10 +597,10 @@
      "streak": 0,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "reviewLight",
-      "x": 0.037,
-      "y": -0.096
+      "round": "round-005-sim",
+      "quadrant": "autoPremium",
+      "x": 0,
+      "y": 0.027
      }
     }
    }
@@ -632,78 +691,62 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.094,
-     "y": -0.182,
-     "quadrant": "deprio",
-     "conf": 0.182,
-     "urgency": 45.3,
-     "importance": 40.9,
-     "priority": 42.7,
+     "x": 0.706,
+     "y": 0.294,
+     "quadrant": "schedule",
+     "conf": 0.706,
+     "urgency": 14.7,
+     "importance": 64.7,
+     "priority": 44.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.616,
-     "y": -0.316,
-     "quadrant": "deprio",
-     "conf": 0.616,
-     "urgency": 19.2,
-     "importance": 34.2,
-     "priority": 28.2,
+     "x": -0.596,
+     "y": 0.524,
+     "quadrant": "first",
+     "conf": 0.596,
+     "urgency": 79.8,
+     "importance": 76.2,
+     "priority": 77.6,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.607,
-     "y": -0.849,
+     "x": -0.298,
+     "y": -0.154,
      "quadrant": "autoCheap",
-     "conf": 0.849,
-     "manual": 19.7,
-     "spend": 7.6,
-     "tier": "ollama",
+     "conf": 0.298,
+     "manual": 35.1,
+     "spend": 42.3,
+     "tier": "opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.59,
-     "y": -0.637,
-     "quadrant": "autoCheap",
-     "conf": 0.637,
-     "manual": 20.5,
-     "spend": 18.2,
-     "tier": "ollama",
+     "x": 0.452,
+     "y": -0.066,
+     "quadrant": "reviewLight",
+     "conf": 0.452,
+     "manual": 72.6,
+     "spend": 46.7,
+     "tier": "manual",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": -0.666,
-     "y": -0.761,
-     "quadrant": "autoCheap",
-     "conf": 0.761,
-     "manual": 16.7,
-     "spend": 12,
-     "tier": "ollama",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -757,6 +800,36 @@
      "manual": 70,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.652,
+     "y": -0.704,
+     "quadrant": "autoCheap",
+     "conf": 0.704,
+     "manual": 17.4,
+     "spend": 14.8,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.729,
+     "y": -0.894,
+     "quadrant": "autoCheap",
+     "conf": 0.894,
+     "manual": 13.6,
+     "spend": 5.3,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
@@ -767,21 +840,21 @@
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.616,
-      "y": -0.316
+      "quadrant": "first",
+      "x": -0.596,
+      "y": 0.524
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
-     "streak": 3,
-     "state": "settled",
+     "tries": 4,
+     "streak": 2,
+     "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "autoCheap",
-      "x": -0.666,
-      "y": -0.761
+      "x": -0.729,
+      "y": -0.894
      }
     }
    }
@@ -843,19 +916,34 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.686,
+     "y": 0.788,
+     "quadrant": "first",
+     "conf": 0.788,
+     "urgency": 84.3,
+     "importance": 89.4,
+     "priority": 87.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "skim",
-      "x": -0.397,
-      "y": -0.133
+      "round": "round-005-sim",
+      "quadrant": "first",
+      "x": -0.686,
+      "y": 0.788
      }
     },
     "handling": {
@@ -912,31 +1000,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.104,
-     "y": -0.151,
-     "quadrant": "autoCheap",
-     "conf": 0.151,
-     "manual": 44.8,
-     "spend": 42.4,
-     "tier": "hybrid-opencode",
+     "x": 0.375,
+     "y": -0.095,
+     "quadrant": "reviewLight",
+     "conf": 0.375,
+     "manual": 68.8,
+     "spend": 45.3,
+     "tier": "manual",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.322,
-     "y": -0.183,
-     "quadrant": "reviewLight",
-     "conf": 0.322,
-     "manual": 66.1,
-     "spend": 40.8,
-     "tier": "manual",
+     "x": -0.342,
+     "y": 0.32,
+     "quadrant": "autoPremium",
+     "conf": 0.342,
+     "manual": 32.9,
+     "spend": 66,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -986,9 +1074,9 @@
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "reviewLight",
-      "x": 0.322,
-      "y": -0.183
+      "quadrant": "autoPremium",
+      "x": -0.342,
+      "y": 0.32
      }
     }
    }
@@ -1079,32 +1167,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.824,
-     "y": -0.964,
-     "quadrant": "deprio",
-     "conf": 0.964,
-     "urgency": 8.8,
-     "importance": 1.8,
-     "priority": 4.6,
+     "x": 0.776,
+     "y": 0.23,
+     "quadrant": "schedule",
+     "conf": 0.776,
+     "urgency": 11.2,
+     "importance": 61.5,
+     "priority": 41.4,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.914,
-     "y": -0.932,
-     "quadrant": "deprio",
-     "conf": 0.932,
-     "urgency": 4.3,
-     "importance": 3.4,
-     "priority": 3.8,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -1136,14 +1208,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 2,
+     "tries": 3,
+     "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.914,
-      "y": -0.932
+      "quadrant": "schedule",
+      "x": 0.776,
+      "y": 0.23
      }
     },
     "handling": {
@@ -1361,19 +1433,34 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.068,
+     "y": -0.956,
+     "quadrant": "deprio",
+     "conf": 0.956,
+     "urgency": 46.6,
+     "importance": 2.2,
+     "priority": 20,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "skim",
-      "x": -0.485,
-      "y": -0.552
+      "round": "round-005-sim",
+      "quadrant": "deprio",
+      "x": 0.068,
+      "y": -0.956
      }
     },
     "handling": {
@@ -1621,78 +1708,46 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.658,
-     "y": 0.438,
-     "quadrant": "schedule",
-     "conf": 0.658,
-     "urgency": 17.1,
-     "importance": 71.9,
-     "priority": 50,
+     "x": 0.87,
+     "y": -0.376,
+     "quadrant": "deprio",
+     "conf": 0.87,
+     "urgency": 6.5,
+     "importance": 31.2,
+     "priority": 21.3,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.552,
-     "y": 0.6,
-     "quadrant": "schedule",
-     "conf": 0.6,
-     "urgency": 22.4,
-     "importance": 80,
-     "priority": 57,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.094,
-     "y": 0.118,
-     "quadrant": "reviewReserve",
-     "conf": 0.118,
-     "manual": 54.7,
-     "spend": 55.9,
-     "tier": "hybrid-codex",
+     "x": 0.617,
+     "y": -0.324,
+     "quadrant": "reviewLight",
+     "conf": 0.617,
+     "manual": 80.9,
+     "spend": 33.8,
+     "tier": "manual",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.323,
-     "y": -0.1,
-     "quadrant": "autoCheap",
-     "conf": 0.323,
-     "manual": 33.9,
-     "spend": 45,
-     "tier": "opencode",
+     "x": 0.777,
+     "y": -0.232,
+     "quadrant": "reviewLight",
+     "conf": 0.777,
+     "manual": 88.9,
+     "spend": 38.4,
+     "tier": "manual",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": -0.492,
-     "y": -0.162,
-     "quadrant": "autoCheap",
-     "conf": 0.492,
-     "manual": 25.4,
-     "spend": 41.9,
-     "tier": "opencode",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -1751,26 +1806,26 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 2,
+     "tries": 3,
+     "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "schedule",
-      "x": 0.552,
-      "y": 0.6
+      "quadrant": "deprio",
+      "x": 0.87,
+      "y": -0.376
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
+     "tries": 2,
      "streak": 2,
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "autoCheap",
-      "x": -0.492,
-      "y": -0.162
+      "quadrant": "reviewLight",
+      "x": 0.777,
+      "y": -0.232
      }
     }
    }
@@ -1881,31 +1936,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.428,
-     "y": 0.326,
-     "quadrant": "reviewReserve",
-     "conf": 0.428,
-     "manual": 71.4,
-     "spend": 66.3,
-     "tier": "manual",
+     "x": -0.303,
+     "y": 0.324,
+     "quadrant": "autoPremium",
+     "conf": 0.324,
+     "manual": 34.9,
+     "spend": 66.2,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.586,
-     "y": 0.609,
-     "quadrant": "reviewReserve",
-     "conf": 0.609,
-     "manual": 79.3,
-     "spend": 80.5,
-     "tier": "manual",
+     "x": -0.468,
+     "y": 0.423,
+     "quadrant": "autoPremium",
+     "conf": 0.468,
+     "manual": 26.6,
+     "spend": 71.2,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -1933,31 +1988,76 @@
      "manual": 10,
      "spend": 50,
      "tier": "codex"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.466,
+     "y": 0.368,
+     "quadrant": "reviewReserve",
+     "conf": 0.466,
+     "manual": 73.3,
+     "spend": 68.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.512,
+     "y": 0.618,
+     "quadrant": "first",
+     "conf": 0.618,
+     "urgency": 75.6,
+     "importance": 80.9,
+     "priority": 78.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.534,
+     "y": -0.07,
+     "quadrant": "reviewLight",
+     "conf": 0.534,
+     "manual": 76.7,
+     "spend": 46.5,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
-     "state": "open",
-     "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.446,
-      "y": 0.407
-     }
-    },
-    "handling": {
-     "mode": "handling",
      "tries": 2,
      "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "reviewReserve",
-      "x": 0.586,
-      "y": 0.609
+      "round": "round-005-sim",
+      "quadrant": "first",
+      "x": -0.512,
+      "y": 0.618
+     }
+    },
+    "handling": {
+     "mode": "handling",
+     "tries": 4,
+     "streak": 1,
+     "state": "open",
+     "last": {
+      "round": "round-005-sim",
+      "quadrant": "reviewLight",
+      "x": 0.534,
+      "y": -0.07
      }
     }
    }
@@ -2064,32 +2164,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.002,
-     "y": -0.894,
-     "quadrant": "skim",
-     "conf": 0.894,
-     "urgency": 50.1,
-     "importance": 5.3,
-     "priority": 23.2,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.762,
-     "y": -0.934,
+     "x": 0.892,
+     "y": -0.614,
      "quadrant": "deprio",
-     "conf": 0.934,
-     "urgency": 11.9,
-     "importance": 3.3,
-     "priority": 6.7,
+     "conf": 0.892,
+     "urgency": 5.4,
+     "importance": 19.3,
+     "priority": 13.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -2121,14 +2205,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
       "quadrant": "deprio",
-      "x": 0.762,
-      "y": -0.934
+      "x": 0.892,
+      "y": -0.614
      }
     },
     "handling": {
@@ -2227,78 +2311,62 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.574,
-     "y": -0.476,
-     "quadrant": "deprio",
-     "conf": 0.574,
-     "urgency": 21.3,
-     "importance": 26.2,
-     "priority": 24.2,
+     "x": -0.32,
+     "y": 0.366,
+     "quadrant": "first",
+     "conf": 0.366,
+     "urgency": 66,
+     "importance": 68.3,
+     "priority": 67.4,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.294,
-     "y": 0.358,
+     "x": -0.292,
+     "y": 0.328,
      "quadrant": "first",
-     "conf": 0.358,
-     "urgency": 64.7,
-     "importance": 67.9,
-     "priority": 66.6,
+     "conf": 0.328,
+     "urgency": 64.6,
+     "importance": 66.4,
+     "priority": 65.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -1,
-     "y": -0.842,
-     "quadrant": "autoCheap",
-     "conf": 1,
-     "manual": 0,
-     "spend": 7.9,
-     "tier": "ollama",
+     "x": -0.507,
+     "y": 0.415,
+     "quadrant": "autoPremium",
+     "conf": 0.507,
+     "manual": 24.7,
+     "spend": 70.8,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.451,
-     "y": 0.458,
-     "quadrant": "reviewReserve",
-     "conf": 0.458,
-     "manual": 72.6,
-     "spend": 72.9,
-     "tier": "manual",
+     "x": -0.204,
+     "y": 0.158,
+     "quadrant": "autoPremium",
+     "conf": 0.204,
+     "manual": 39.8,
+     "spend": 57.9,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.471,
-     "y": 0.445,
-     "quadrant": "reviewReserve",
-     "conf": 0.471,
-     "manual": 73.6,
-     "spend": 72.3,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -2352,31 +2420,61 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.503,
+     "y": 0.447,
+     "quadrant": "reviewReserve",
+     "conf": 0.503,
+     "manual": 75.2,
+     "spend": 72.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.432,
+     "y": 0.502,
+     "quadrant": "reviewReserve",
+     "conf": 0.502,
+     "manual": 71.6,
+     "spend": 75.1,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
      "tries": 4,
-     "streak": 1,
-     "state": "open",
+     "streak": 4,
+     "state": "settled",
      "last": {
       "round": "round-004",
       "quadrant": "first",
-      "x": -0.294,
-      "y": 0.358
+      "x": -0.292,
+      "y": 0.328
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
+     "tries": 4,
      "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewReserve",
-      "x": 0.471,
-      "y": 0.445
+      "x": 0.432,
+      "y": 0.502
      }
     }
    }
@@ -2443,47 +2541,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.283,
-     "y": 0.043,
-     "quadrant": "reviewReserve",
-     "conf": 0.283,
-     "manual": 64.1,
-     "spend": 52.2,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf"
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.286,
-     "y": -0.104,
-     "quadrant": "reviewLight",
-     "conf": 0.286,
-     "manual": 64.3,
-     "spend": 44.8,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.094,
-     "y": -0.112,
-     "quadrant": "reviewLight",
-     "conf": 0.112,
-     "manual": 54.7,
-     "spend": 44.4,
+     "x": -0.182,
+     "y": -0.137,
+     "quadrant": "autoCheap",
+     "conf": 0.182,
+     "manual": 40.9,
+     "spend": 43.2,
      "tier": "hybrid-opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu"
+    },
+    {
+     "round": "round-004",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.264,
+     "y": 0.17,
+     "quadrant": "reviewReserve",
+     "conf": 0.264,
+     "manual": 63.2,
+     "spend": 58.5,
+     "tier": "manual",
+     "src": "handling",
+     "counts": true,
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -2511,31 +2593,61 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.558,
+     "y": 0.222,
+     "quadrant": "first",
+     "conf": 0.558,
+     "urgency": 77.9,
+     "importance": 61.1,
+     "priority": 67.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.53,
+     "y": -0.082,
+     "quadrant": "skim",
+     "conf": 0.53,
+     "urgency": 76.5,
+     "importance": 45.9,
+     "priority": 58.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.468,
-      "y": 0.104
+      "round": "round-005-sim",
+      "quadrant": "skim",
+      "x": -0.53,
+      "y": -0.082
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
-     "streak": 0,
+     "tries": 2,
+     "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "reviewLight",
-      "x": 0.094,
-      "y": -0.112
+      "quadrant": "reviewReserve",
+      "x": 0.264,
+      "y": 0.17
      }
     }
    }
@@ -2626,94 +2738,46 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.698,
-     "y": 0.666,
+     "x": -0.75,
+     "y": 0.886,
      "quadrant": "first",
-     "conf": 0.698,
-     "urgency": 84.9,
-     "importance": 83.3,
-     "priority": 83.9,
+     "conf": 0.886,
+     "urgency": 87.5,
+     "importance": 94.3,
+     "priority": 91.6,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": -0.024,
-     "y": 0.464,
-     "quadrant": "first",
-     "conf": 0.464,
-     "urgency": 51.2,
-     "importance": 73.2,
-     "priority": 64.4,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.502,
-     "y": 0.467,
-     "quadrant": "reviewReserve",
-     "conf": 0.502,
-     "manual": 75.1,
-     "spend": 73.4,
-     "tier": "manual",
+     "x": -0.441,
+     "y": 0.44,
+     "quadrant": "autoPremium",
+     "conf": 0.441,
+     "manual": 27.9,
+     "spend": 72,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.328,
-     "y": 0.322,
-     "quadrant": "reviewReserve",
-     "conf": 0.328,
-     "manual": 66.4,
-     "spend": 66.1,
-     "tier": "manual",
+     "x": -0.777,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 11.1,
+     "spend": 100,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.609,
-     "y": 0.529,
-     "quadrant": "reviewReserve",
-     "conf": 0.609,
-     "manual": 80.5,
-     "spend": 76.4,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.551,
-     "y": 0.483,
-     "quadrant": "reviewReserve",
-     "conf": 0.551,
-     "manual": 77.6,
-     "spend": 74.2,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -2767,31 +2831,61 @@
      "manual": 10,
      "spend": 50,
      "tier": "codex"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.492,
+     "y": 0.468,
+     "quadrant": "reviewReserve",
+     "conf": 0.492,
+     "manual": 74.6,
+     "spend": 73.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.485,
+     "y": 0.288,
+     "quadrant": "reviewReserve",
+     "conf": 0.485,
+     "manual": 74.3,
+     "spend": 64.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
       "quadrant": "first",
-      "x": -0.024,
-      "y": 0.464
+      "x": -0.75,
+      "y": 0.886
      }
     },
     "handling": {
      "mode": "handling",
      "tries": 4,
-     "streak": 4,
-     "state": "settled",
+     "streak": 2,
+     "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewReserve",
-      "x": 0.551,
-      "y": 0.483
+      "x": 0.485,
+      "y": 0.288
      }
     }
    }
@@ -2882,78 +2976,46 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.608,
-     "y": 0.55,
+     "x": -0.32,
+     "y": 0.294,
      "quadrant": "first",
-     "conf": 0.608,
-     "urgency": 80.4,
-     "importance": 77.5,
-     "priority": 78.7,
+     "conf": 0.32,
+     "urgency": 66,
+     "importance": 64.7,
+     "priority": 65.2,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.136,
-     "y": 0.678,
-     "quadrant": "schedule",
-     "conf": 0.678,
-     "urgency": 43.2,
-     "importance": 83.9,
-     "priority": 67.6,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.725,
-     "y": -0.876,
-     "quadrant": "autoCheap",
-     "conf": 0.876,
-     "manual": 13.8,
-     "spend": 6.2,
-     "tier": "ollama",
+     "x": -0.452,
+     "y": 0.523,
+     "quadrant": "autoPremium",
+     "conf": 0.523,
+     "manual": 27.4,
+     "spend": 76.2,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.415,
-     "y": -0.064,
-     "quadrant": "reviewLight",
-     "conf": 0.415,
-     "manual": 70.8,
-     "spend": 46.8,
-     "tier": "manual",
+     "x": -0.193,
+     "y": 0.232,
+     "quadrant": "autoPremium",
+     "conf": 0.232,
+     "manual": 40.3,
+     "spend": 61.6,
+     "tier": "hybrid-codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.652,
-     "y": 0.392,
-     "quadrant": "reviewReserve",
-     "conf": 0.652,
-     "manual": 82.6,
-     "spend": 69.6,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -3007,31 +3069,61 @@
      "manual": 80,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.087,
+     "y": 0.56,
+     "quadrant": "autoPremium",
+     "conf": 0.56,
+     "manual": 45.7,
+     "spend": 78,
+     "tier": "hybrid-grokbuild",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.567,
+     "y": 0.396,
+     "quadrant": "reviewReserve",
+     "conf": 0.567,
+     "manual": 78.4,
+     "spend": 69.8,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
-      "quadrant": "schedule",
-      "x": 0.136,
-      "y": 0.678
+      "quadrant": "first",
+      "x": -0.32,
+      "y": 0.294
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
+     "tries": 4,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewReserve",
-      "x": 0.652,
-      "y": 0.392
+      "x": 0.567,
+      "y": 0.396
      }
     }
    }
@@ -3082,47 +3174,47 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.005,
-     "y": -0.158,
-     "quadrant": "reviewLight",
-     "conf": 0.158,
-     "manual": 50.2,
-     "spend": 42.1,
-     "tier": "hybrid-opencode",
+     "x": -0.32,
+     "y": 0.336,
+     "quadrant": "autoPremium",
+     "conf": 0.336,
+     "manual": 34,
+     "spend": 66.8,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.062,
-     "y": -0.289,
-     "quadrant": "reviewLight",
-     "conf": 0.289,
-     "manual": 53.1,
-     "spend": 35.6,
-     "tier": "hybrid-opencode",
+     "x": -0.303,
+     "y": -0.124,
+     "quadrant": "autoCheap",
+     "conf": 0.303,
+     "manual": 34.9,
+     "spend": 43.8,
+     "tier": "opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.333,
-     "y": -0.198,
-     "quadrant": "reviewLight",
-     "conf": 0.333,
-     "manual": 66.6,
-     "spend": 40.1,
-     "tier": "manual",
+     "x": -0.793,
+     "y": -0.203,
+     "quadrant": "autoCheap",
+     "conf": 0.793,
+     "manual": 10.3,
+     "spend": 39.8,
+     "tier": "opencode",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -3150,31 +3242,91 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.4,
+     "y": 0.14,
+     "quadrant": "first",
+     "conf": 0.4,
+     "urgency": 70,
+     "importance": 57,
+     "priority": 62.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.316,
+     "y": -0.305,
+     "quadrant": "reviewLight",
+     "conf": 0.316,
+     "manual": 65.8,
+     "spend": 34.8,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.114,
+     "y": 0.202,
+     "quadrant": "first",
+     "conf": 0.202,
+     "urgency": 55.7,
+     "importance": 60.1,
+     "priority": 58.3,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.154,
+     "y": -0.116,
+     "quadrant": "reviewLight",
+     "conf": 0.154,
+     "manual": 57.7,
+     "spend": 44.2,
+     "tier": "hybrid-opencode",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 0,
      "state": "open",
      "last": {
-      "round": "round-002",
+      "round": "round-005-sim",
       "quadrant": "first",
-      "x": -0.793,
-      "y": 0.324
+      "x": -0.114,
+      "y": 0.202
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 0,
+     "state": "manual-review",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewLight",
-      "x": 0.333,
-      "y": -0.198
+      "x": 0.154,
+      "y": -0.116
      }
     }
    }
@@ -3240,31 +3392,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.161,
-     "y": -0.333,
-     "quadrant": "reviewLight",
-     "conf": 0.333,
-     "manual": 58.1,
-     "spend": 33.4,
-     "tier": "hybrid-opencode",
+     "x": -0.154,
+     "y": 0.116,
+     "quadrant": "autoPremium",
+     "conf": 0.154,
+     "manual": 42.3,
+     "spend": 55.8,
+     "tier": "hybrid-codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.824,
-     "y": -0.937,
-     "quadrant": "autoCheap",
-     "conf": 0.937,
-     "manual": 8.8,
-     "spend": 3.1,
-     "tier": "ollama",
+     "x": -0.298,
+     "y": 0.261,
+     "quadrant": "autoPremium",
+     "conf": 0.298,
+     "manual": 35.1,
+     "spend": 63.1,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -3292,31 +3444,76 @@
      "manual": 50,
      "spend": 50,
      "tier": "hybrid-codex"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.245,
+     "y": -0.298,
+     "quadrant": "autoCheap",
+     "conf": 0.298,
+     "manual": 37.8,
+     "spend": 35.1,
+     "tier": "opencode",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.824,
+     "y": -0.824,
+     "quadrant": "deprio",
+     "conf": 0.824,
+     "urgency": 8.8,
+     "importance": 8.8,
+     "priority": 8.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.8,
+     "y": -0.809,
+     "quadrant": "autoCheap",
+     "conf": 0.809,
+     "manual": 10,
+     "spend": 9.5,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
-     "state": "open",
-     "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.402,
-      "y": 0.402
-     }
-    },
-    "handling": {
-     "mode": "handling",
      "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
+      "quadrant": "deprio",
+      "x": 0.824,
+      "y": -0.824
+     }
+    },
+    "handling": {
+     "mode": "handling",
+     "tries": 4,
+     "streak": 1,
+     "state": "open",
+     "last": {
+      "round": "round-005-sim",
       "quadrant": "autoCheap",
-      "x": -0.824,
-      "y": -0.937
+      "x": -0.8,
+      "y": -0.809
      }
     }
    }
@@ -3488,63 +3685,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.002,
-     "y": -0.795,
-     "quadrant": "autoCheap",
-     "conf": 0.795,
-     "manual": 49.9,
-     "spend": 10.2,
-     "tier": "hybrid-ollama",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf"
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": -0.585,
-     "y": -0.831,
-     "quadrant": "autoCheap",
-     "conf": 0.831,
-     "manual": 20.8,
-     "spend": 8.5,
-     "tier": "ollama",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0,
-     "y": 0.173,
+     "x": -0.964,
+     "y": 1,
      "quadrant": "autoPremium",
-     "conf": 0.173,
-     "manual": 50,
-     "spend": 58.7,
-     "tier": "hybrid-codex",
+     "conf": 1,
+     "manual": 1.8,
+     "spend": 100,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": -0.664,
-     "y": -0.868,
-     "quadrant": "autoCheap",
-     "conf": 0.868,
-     "manual": 16.8,
-     "spend": 6.6,
-     "tier": "ollama",
+     "x": -0.661,
+     "y": 0.884,
+     "quadrant": "autoPremium",
+     "conf": 0.884,
+     "manual": 17,
+     "spend": 94.2,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -3572,31 +3737,91 @@
      "manual": 50,
      "spend": 40,
      "tier": "hybrid-opencode"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.5,
+     "y": 0.062,
+     "quadrant": "first",
+     "conf": 0.5,
+     "urgency": 75,
+     "importance": 53.1,
+     "priority": 61.9,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.805,
+     "y": -0.916,
+     "quadrant": "autoCheap",
+     "conf": 0.916,
+     "manual": 9.7,
+     "spend": 4.2,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.626,
+     "y": -0.524,
+     "quadrant": "deprio",
+     "conf": 0.626,
+     "urgency": 18.7,
+     "importance": 23.8,
+     "priority": 21.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.666,
+     "y": -0.759,
+     "quadrant": "autoCheap",
+     "conf": 0.759,
+     "manual": 16.7,
+     "spend": 12,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.441,
-      "y": 0.506
+      "round": "round-005-sim",
+      "quadrant": "deprio",
+      "x": 0.626,
+      "y": -0.524
      }
     },
     "handling": {
      "mode": "handling",
      "tries": 4,
-     "streak": 1,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "autoCheap",
-      "x": -0.664,
-      "y": -0.868
+      "x": -0.666,
+      "y": -0.759
      }
     }
    }
@@ -3673,94 +3898,46 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.83,
-     "y": 0.454,
+     "x": -0.904,
+     "y": 1,
      "quadrant": "first",
-     "conf": 0.83,
-     "urgency": 91.5,
-     "importance": 72.7,
-     "priority": 80.2,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": -0.724,
-     "y": 0.588,
-     "quadrant": "first",
-     "conf": 0.724,
-     "urgency": 86.2,
-     "importance": 79.4,
-     "priority": 82.1,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.558,
-     "y": 0.337,
-     "quadrant": "reviewReserve",
-     "conf": 0.558,
-     "manual": 77.9,
-     "spend": 66.9,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf"
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.451,
-     "y": 0.453,
-     "quadrant": "reviewReserve",
-     "conf": 0.453,
-     "manual": 72.6,
-     "spend": 72.7,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": -0.876,
-     "y": -1,
-     "quadrant": "autoCheap",
      "conf": 1,
-     "manual": 6.2,
-     "spend": 0,
-     "tier": "ollama",
-     "src": "handling",
+     "urgency": 95.2,
+     "importance": 100,
+     "priority": 98.1,
+     "src": "priority",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.541,
-     "y": 0.311,
-     "quadrant": "reviewReserve",
-     "conf": 0.541,
-     "manual": 77.1,
-     "spend": 65.6,
-     "tier": "manual",
+     "x": -0.931,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 3.4,
+     "spend": 100,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu"
+    },
+    {
+     "round": "round-004",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.854,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 7.3,
+     "spend": 100,
+     "tier": "grokbuild",
+     "src": "handling",
+     "counts": true,
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -3814,31 +3991,61 @@
      "manual": 80,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.426,
+     "y": 0.233,
+     "quadrant": "reviewReserve",
+     "conf": 0.426,
+     "manual": 71.3,
+     "spend": 61.7,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.426,
+     "y": 0.305,
+     "quadrant": "reviewReserve",
+     "conf": 0.426,
+     "manual": 71.3,
+     "spend": 65.3,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 4,
+     "tries": 3,
+     "streak": 3,
      "state": "settled",
      "last": {
       "round": "round-004",
       "quadrant": "first",
-      "x": -0.724,
-      "y": 0.588
+      "x": -0.904,
+      "y": 1
      }
     },
     "handling": {
      "mode": "handling",
      "tries": 4,
-     "streak": 1,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewReserve",
-      "x": 0.541,
-      "y": 0.311
+      "x": 0.426,
+      "y": 0.305
      }
     }
    }
@@ -3888,31 +4095,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.564,
-     "y": -0.802,
+     "x": 0.976,
+     "y": -0.46,
      "quadrant": "deprio",
-     "conf": 0.802,
-     "urgency": 21.8,
-     "importance": 9.9,
-     "priority": 14.7,
+     "conf": 0.976,
+     "urgency": 1.2,
+     "importance": 27,
+     "priority": 16.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.308,
-     "y": 0.046,
-     "quadrant": "schedule",
-     "conf": 0.308,
-     "urgency": 34.6,
-     "importance": 52.3,
-     "priority": 45.2,
+     "x": 0.98,
+     "y": -0.464,
+     "quadrant": "deprio",
+     "conf": 0.98,
+     "urgency": 1,
+     "importance": 26.8,
+     "priority": 16.5,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -3940,19 +4147,34 @@
      "urgency": 60,
      "importance": 50,
      "priority": 54
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.094,
+     "y": -0.682,
+     "quadrant": "deprio",
+     "conf": 0.682,
+     "urgency": 45.3,
+     "importance": 15.9,
+     "priority": 27.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
+     "tries": 5,
      "streak": 1,
-     "state": "open",
+     "state": "manual-review",
      "last": {
-      "round": "round-004",
-      "quadrant": "schedule",
-      "x": 0.308,
-      "y": 0.046
+      "round": "round-005-sim",
+      "quadrant": "deprio",
+      "x": 0.094,
+      "y": -0.682
      }
     },
     "handling": {
@@ -4044,47 +4266,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.642,
-     "y": -0.286,
-     "quadrant": "deprio",
-     "conf": 0.642,
-     "urgency": 17.9,
-     "importance": 35.7,
-     "priority": 28.6,
+     "x": -0.546,
+     "y": -0.2,
+     "quadrant": "skim",
+     "conf": 0.546,
+     "urgency": 77.3,
+     "importance": 40,
+     "priority": 54.9,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.912,
-     "y": -0.894,
-     "quadrant": "deprio",
-     "conf": 0.912,
-     "urgency": 4.4,
-     "importance": 5.3,
-     "priority": 4.9,
+     "x": -0.418,
+     "y": 0.26,
+     "quadrant": "first",
+     "conf": 0.418,
+     "urgency": 70.9,
+     "importance": 63,
+     "priority": 66.2,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.584,
-     "y": -0.512,
-     "quadrant": "deprio",
-     "conf": 0.584,
-     "urgency": 20.8,
-     "importance": 24.4,
-     "priority": 23,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -4112,27 +4318,62 @@
      "urgency": 50,
      "importance": 50,
      "priority": 50
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.615,
+     "y": -0.837,
+     "quadrant": "autoCheap",
+     "conf": 0.837,
+     "manual": 19.3,
+     "spend": 8.2,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.676,
+     "y": -0.953,
+     "quadrant": "autoCheap",
+     "conf": 0.953,
+     "manual": 16.2,
+     "spend": 2.4,
+     "tier": "ollama",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.584,
-      "y": -0.512
+      "quadrant": "first",
+      "x": -0.418,
+      "y": 0.26
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 0,
-     "streak": 0,
-     "state": "new",
-     "last": null
+     "tries": 2,
+     "streak": 2,
+     "state": "open",
+     "last": {
+      "round": "round-005-sim",
+      "quadrant": "autoCheap",
+      "x": -0.676,
+      "y": -0.953
+     }
     }
    }
   },
@@ -4347,31 +4588,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.68,
-     "y": 0.328,
-     "quadrant": "schedule",
-     "conf": 0.68,
-     "urgency": 16,
-     "importance": 66.4,
-     "priority": 46.2,
+     "x": 0.804,
+     "y": -0.456,
+     "quadrant": "deprio",
+     "conf": 0.804,
+     "urgency": 9.8,
+     "importance": 27.2,
+     "priority": 20.2,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.482,
-     "y": 0.49,
-     "quadrant": "schedule",
-     "conf": 0.49,
-     "urgency": 25.9,
-     "importance": 74.5,
-     "priority": 55.1,
+     "x": 0.86,
+     "y": -0.376,
+     "quadrant": "deprio",
+     "conf": 0.86,
+     "urgency": 7,
+     "importance": 31.2,
+     "priority": 21.5,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -4405,13 +4646,13 @@
     "priority": {
      "mode": "priority",
      "tries": 3,
-     "streak": 2,
-     "state": "open",
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
-      "quadrant": "schedule",
-      "x": 0.482,
-      "y": 0.49
+      "quadrant": "deprio",
+      "x": 0.86,
+      "y": -0.376
      }
     },
     "handling": {
@@ -4495,32 +4736,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.728,
-     "y": -0.974,
+     "x": 1,
+     "y": -0.302,
      "quadrant": "deprio",
-     "conf": 0.974,
-     "urgency": 13.6,
-     "importance": 1.3,
-     "priority": 6.2,
+     "conf": 1,
+     "urgency": 0,
+     "importance": 34.9,
+     "priority": 20.9,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.876,
-     "y": -0.896,
-     "quadrant": "deprio",
-     "conf": 0.896,
-     "urgency": 6.2,
-     "importance": 5.2,
-     "priority": 5.6,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|qwen2.5:1.5b",
@@ -4539,14 +4764,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 2,
+     "tries": 3,
+     "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
       "quadrant": "deprio",
-      "x": 0.876,
-      "y": -0.896
+      "x": 1,
+      "y": -0.302
      }
     },
     "handling": {
@@ -4630,31 +4855,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.894,
-     "y": 0.642,
-     "quadrant": "first",
-     "conf": 0.894,
-     "urgency": 94.7,
-     "importance": 82.1,
-     "priority": 87.1,
+     "x": -1,
+     "y": -0.396,
+     "quadrant": "skim",
+     "conf": 1,
+     "urgency": 100,
+     "importance": 30.2,
+     "priority": 58.1,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.782,
-     "y": 0.482,
+     "x": -0.352,
+     "y": 0.312,
      "quadrant": "first",
-     "conf": 0.782,
-     "urgency": 89.1,
-     "importance": 74.1,
-     "priority": 80.1,
+     "conf": 0.352,
+     "urgency": 67.6,
+     "importance": 65.6,
+     "priority": 66.4,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -4682,27 +4907,62 @@
      "urgency": 40,
      "importance": 60,
      "priority": 52
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.551,
+     "y": 0.451,
+     "quadrant": "reviewReserve",
+     "conf": 0.551,
+     "manual": 77.6,
+     "spend": 72.6,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.477,
+     "y": 0.511,
+     "quadrant": "reviewReserve",
+     "conf": 0.511,
+     "manual": 73.9,
+     "spend": 75.6,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
      "tries": 4,
-     "streak": 2,
+     "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
       "quadrant": "first",
-      "x": -0.782,
-      "y": 0.482
+      "x": -0.352,
+      "y": 0.312
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 0,
-     "streak": 0,
-     "state": "new",
-     "last": null
+     "tries": 2,
+     "streak": 2,
+     "state": "open",
+     "last": {
+      "round": "round-005-sim",
+      "quadrant": "reviewReserve",
+      "x": 0.477,
+      "y": 0.511
+     }
     }
    }
   },
@@ -4821,19 +5081,49 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.646,
+     "y": -0.506,
+     "quadrant": "deprio",
+     "conf": 0.646,
+     "urgency": 17.7,
+     "importance": 24.7,
+     "priority": 21.9,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.684,
+     "y": -0.414,
+     "quadrant": "deprio",
+     "conf": 0.684,
+     "urgency": 15.8,
+     "importance": 29.3,
+     "priority": 23.9,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "schedule",
-      "x": 0.523,
-      "y": 0.166
+      "round": "round-005-sim",
+      "quadrant": "deprio",
+      "x": 0.684,
+      "y": -0.414
      }
     },
     "handling": {
@@ -5302,32 +5592,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.104,
-     "y": -0.352,
+     "x": -0.848,
+     "y": -0.082,
      "quadrant": "skim",
-     "conf": 0.352,
-     "urgency": 55.2,
-     "importance": 32.4,
-     "priority": 41.5,
+     "conf": 0.848,
+     "urgency": 92.4,
+     "importance": 45.9,
+     "priority": 64.5,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.702,
-     "y": -0.558,
-     "quadrant": "deprio",
-     "conf": 0.702,
-     "urgency": 14.9,
-     "importance": 22.1,
-     "priority": 19.2,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -5354,19 +5628,65 @@
      "urgency": 100,
      "importance": 100,
      "priority": 100
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.406,
+     "y": -0.358,
+     "quadrant": "deprio",
+     "conf": 0.406,
+     "urgency": 29.7,
+     "importance": 32.1,
+     "priority": 31.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.722,
+     "y": -0.124,
+     "quadrant": "deprio",
+     "conf": 0.722,
+     "urgency": 13.9,
+     "importance": 43.8,
+     "priority": 31.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.668,
+     "y": -0.538,
+     "quadrant": "deprio",
+     "conf": 0.668,
+     "urgency": 16.6,
+     "importance": 23.1,
+     "priority": 20.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 3,
-     "streak": 1,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.702,
-      "y": -0.558
+      "x": 0.668,
+      "y": -0.538
      }
     },
     "handling": {
@@ -5439,47 +5759,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.682,
-     "y": 0.044,
-     "quadrant": "schedule",
-     "conf": 0.682,
-     "urgency": 15.9,
-     "importance": 52.2,
-     "priority": 37.7,
+     "x": -0.892,
+     "y": -0.238,
+     "quadrant": "skim",
+     "conf": 0.892,
+     "urgency": 94.6,
+     "importance": 38.1,
+     "priority": 60.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.666,
-     "y": -0.276,
-     "quadrant": "deprio",
-     "conf": 0.666,
-     "urgency": 16.7,
-     "importance": 36.2,
-     "priority": 28.4,
+     "x": -0.65,
+     "y": -0.222,
+     "quadrant": "skim",
+     "conf": 0.65,
+     "urgency": 82.5,
+     "importance": 38.9,
+     "priority": 56.3,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.526,
-     "y": -0.334,
-     "quadrant": "deprio",
-     "conf": 0.526,
-     "urgency": 23.7,
-     "importance": 33.3,
-     "priority": 29.5,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -5499,14 +5803,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.526,
-      "y": -0.334
+      "quadrant": "skim",
+      "x": -0.65,
+      "y": -0.222
      }
     },
     "handling": {
@@ -5579,32 +5883,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.702,
-     "y": -0.494,
-     "quadrant": "deprio",
-     "conf": 0.702,
-     "urgency": 14.9,
-     "importance": 25.3,
-     "priority": 21.1,
+     "x": -0.926,
+     "y": -0.192,
+     "quadrant": "skim",
+     "conf": 0.926,
+     "urgency": 96.3,
+     "importance": 40.4,
+     "priority": 62.8,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.452,
-     "y": -0.374,
-     "quadrant": "deprio",
-     "conf": 0.452,
-     "urgency": 27.4,
-     "importance": 31.3,
-     "priority": 29.7,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -5631,19 +5919,65 @@
      "urgency": 100,
      "importance": 100,
      "priority": 100
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.658,
+     "y": -0.462,
+     "quadrant": "deprio",
+     "conf": 0.658,
+     "urgency": 17.1,
+     "importance": 26.9,
+     "priority": 23,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.546,
+     "y": -0.224,
+     "quadrant": "deprio",
+     "conf": 0.546,
+     "urgency": 22.7,
+     "importance": 38.8,
+     "priority": 32.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.69,
+     "y": -0.424,
+     "quadrant": "deprio",
+     "conf": 0.69,
+     "urgency": 15.5,
+     "importance": 28.8,
+     "priority": 23.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 3,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.452,
-      "y": -0.374
+      "x": 0.69,
+      "y": -0.424
      }
     },
     "handling": {
@@ -5716,32 +6050,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.372,
-     "y": 0.118,
-     "quadrant": "first",
-     "conf": 0.372,
-     "urgency": 68.6,
-     "importance": 55.9,
-     "priority": 61,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.718,
-     "y": -0.016,
+     "x": 1,
+     "y": -0.336,
      "quadrant": "deprio",
-     "conf": 0.718,
-     "urgency": 14.1,
-     "importance": 49.2,
-     "priority": 35.2,
+     "conf": 1,
+     "urgency": 0,
+     "importance": 33.2,
+     "priority": 19.9,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -5760,14 +6078,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 3,
+     "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
       "round": "round-004",
       "quadrant": "deprio",
-      "x": 0.718,
-      "y": -0.016
+      "x": 1,
+      "y": -0.336
      }
     },
     "handling": {
@@ -5840,94 +6158,46 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.754,
-     "y": 0.548,
+     "x": -0.898,
+     "y": 1,
      "quadrant": "first",
-     "conf": 0.754,
-     "urgency": 87.7,
-     "importance": 77.4,
-     "priority": 81.5,
+     "conf": 1,
+     "urgency": 94.9,
+     "importance": 100,
+     "priority": 98,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": -0.784,
-     "y": -0.064,
-     "quadrant": "skim",
-     "conf": 0.784,
-     "urgency": 89.2,
-     "importance": 46.8,
-     "priority": 63.8,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.369,
-     "y": 0.255,
-     "quadrant": "reviewReserve",
-     "conf": 0.369,
-     "manual": 68.5,
-     "spend": 62.7,
-     "tier": "manual",
+     "x": -0.518,
+     "y": 0.523,
+     "quadrant": "autoPremium",
+     "conf": 0.523,
+     "manual": 24.1,
+     "spend": 76.2,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.614,
-     "y": 0.464,
-     "quadrant": "reviewReserve",
-     "conf": 0.614,
-     "manual": 80.7,
-     "spend": 73.2,
-     "tier": "manual",
+     "x": -0.226,
+     "y": 0.095,
+     "quadrant": "autoPremium",
+     "conf": 0.226,
+     "manual": 38.7,
+     "spend": 54.8,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.636,
-     "y": 0.405,
-     "quadrant": "reviewReserve",
-     "conf": 0.636,
-     "manual": 81.8,
-     "spend": 70.3,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "handling",
-     "by": "human",
-     "x": 0.367,
-     "y": -0.108,
-     "quadrant": "reviewLight",
-     "conf": 0.367,
-     "manual": 68.4,
-     "spend": 44.6,
-     "tier": "manual",
-     "src": "handling",
-     "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -5968,31 +6238,107 @@
      "manual": 50,
      "spend": 40,
      "tier": "hybrid-opencode"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.83,
+     "y": 0.454,
+     "quadrant": "first",
+     "conf": 0.83,
+     "urgency": 91.5,
+     "importance": 72.7,
+     "priority": 80.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.708,
+     "y": 0.608,
+     "quadrant": "first",
+     "conf": 0.708,
+     "urgency": 85.4,
+     "importance": 80.4,
+     "priority": 82.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.772,
+     "y": 0.49,
+     "quadrant": "first",
+     "conf": 0.772,
+     "urgency": 88.6,
+     "importance": 74.5,
+     "priority": 80.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.611,
+     "y": 0.304,
+     "quadrant": "reviewReserve",
+     "conf": 0.611,
+     "manual": 80.6,
+     "spend": 65.2,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.426,
+     "y": 0.467,
+     "quadrant": "reviewReserve",
+     "conf": 0.467,
+     "manual": 71.3,
+     "spend": 73.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 3,
-     "streak": 1,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
-      "quadrant": "skim",
-      "x": -0.784,
-      "y": -0.064
+      "round": "round-005-sim",
+      "quadrant": "first",
+      "x": -0.772,
+      "y": 0.49
      }
     },
     "handling": {
      "mode": "handling",
      "tries": 4,
-     "streak": 1,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "reviewLight",
-      "x": 0.367,
-      "y": -0.108
+      "round": "round-005-sim",
+      "quadrant": "reviewReserve",
+      "x": 0.426,
+      "y": 0.467
      }
     }
    }
@@ -6053,19 +6399,34 @@
      "urgency": 70,
      "importance": 40,
      "priority": 52
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.566,
+     "y": 0.064,
+     "quadrant": "first",
+     "conf": 0.566,
+     "urgency": 78.3,
+     "importance": 53.2,
+     "priority": 63.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-003",
-      "quadrant": "skim",
-      "x": -0.678,
-      "y": -0.218
+      "round": "round-005-sim",
+      "quadrant": "first",
+      "x": -0.566,
+      "y": 0.064
      }
     },
     "handling": {
@@ -6128,31 +6489,31 @@
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.446,
-     "y": 0.347,
-     "quadrant": "reviewReserve",
-     "conf": 0.446,
-     "manual": 72.3,
-     "spend": 67.4,
-     "tier": "manual",
+     "x": -0.402,
+     "y": 0.407,
+     "quadrant": "autoPremium",
+     "conf": 0.407,
+     "manual": 29.9,
+     "spend": 70.4,
+     "tier": "codex",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf"
+     "at": "20261031183555-qpxuu"
     },
     {
      "round": "round-004",
      "mode": "handling",
      "by": "human",
-     "x": 0.552,
-     "y": 0.343,
-     "quadrant": "reviewReserve",
-     "conf": 0.552,
-     "manual": 77.6,
-     "spend": 67.2,
-     "tier": "manual",
+     "x": -0.898,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 5.1,
+     "spend": 100,
+     "tier": "grokbuild",
      "src": "handling",
      "counts": true,
-     "at": "20261031183120-37mqf",
+     "at": "20261031183555-qpxuu",
      "repeat": true
     },
     {
@@ -6180,6 +6541,36 @@
      "manual": 80,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.021,
+     "y": 0.423,
+     "quadrant": "reviewReserve",
+     "conf": 0.423,
+     "manual": 51.1,
+     "spend": 71.2,
+     "tier": "hybrid-codex",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.598,
+     "y": 0.384,
+     "quadrant": "reviewReserve",
+     "conf": 0.598,
+     "manual": 79.9,
+     "spend": 69.2,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
@@ -6197,14 +6588,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
-     "streak": 2,
+     "tries": 4,
+     "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "reviewReserve",
-      "x": 0.552,
-      "y": 0.343
+      "x": 0.598,
+      "y": 0.384
      }
     }
    }
@@ -6350,17 +6741,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.618,
-     "y": -0.31,
-     "quadrant": "deprio",
-     "conf": 0.618,
-     "urgency": 19.1,
-     "importance": 34.5,
-     "priority": 28.3,
+     "x": 0.98,
+     "y": 0.052,
+     "quadrant": "schedule",
+     "conf": 0.98,
+     "urgency": 1,
+     "importance": 52.6,
+     "priority": 32,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|qwen2.5:1.5b",
@@ -6384,9 +6774,9 @@
      "state": "open",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.618,
-      "y": -0.31
+      "quadrant": "schedule",
+      "x": 0.98,
+      "y": 0.052
      }
     },
     "handling": {
@@ -6475,48 +6865,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": -0.54,
-     "y": -0.034,
+     "x": -0.87,
+     "y": -0.188,
      "quadrant": "skim",
-     "conf": 0.54,
-     "urgency": 77,
-     "importance": 48.3,
-     "priority": 59.8,
+     "conf": 0.87,
+     "urgency": 93.5,
+     "importance": 40.6,
+     "priority": 61.8,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.462,
-     "y": -0.388,
-     "quadrant": "deprio",
-     "conf": 0.462,
-     "urgency": 26.9,
-     "importance": 30.6,
-     "priority": 29.1,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.526,
-     "y": -0.496,
-     "quadrant": "deprio",
-     "conf": 0.526,
-     "urgency": 23.7,
-     "importance": 25.2,
-     "priority": 24.6,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|qwen2.5:1.5b",
@@ -6535,14 +6893,14 @@
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 5,
-     "streak": 2,
-     "state": "manual-review",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
       "round": "round-004",
-      "quadrant": "deprio",
-      "x": 0.526,
-      "y": -0.496
+      "quadrant": "skim",
+      "x": -0.87,
+      "y": -0.188
      }
     },
     "handling": {
@@ -6574,16 +6932,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.7,
-     "y": -0.45,
-     "quadrant": "deprio",
-     "conf": 0.7,
-     "urgency": 15,
-     "importance": 27.5,
-     "priority": 22.5,
+     "x": -0.242,
+     "y": 0.32,
+     "quadrant": "first",
+     "conf": 0.32,
+     "urgency": 62.1,
+     "importance": 66,
+     "priority": 64.4,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -6610,27 +6968,77 @@
      "urgency": 100,
      "importance": 70,
      "priority": 82
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.522,
+     "y": -0.3,
+     "quadrant": "deprio",
+     "conf": 0.522,
+     "urgency": 23.9,
+     "importance": 35,
+     "priority": 30.6,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.724,
+     "y": -0.46,
+     "quadrant": "deprio",
+     "conf": 0.724,
+     "urgency": 13.8,
+     "importance": 27,
+     "priority": 21.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.374,
+     "y": 0.589,
+     "quadrant": "reviewReserve",
+     "conf": 0.589,
+     "manual": 68.7,
+     "spend": 79.5,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.7,
-      "y": -0.45
+      "x": 0.724,
+      "y": -0.46
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 0,
-     "streak": 0,
-     "state": "new",
-     "last": null
+     "tries": 1,
+     "streak": 1,
+     "state": "open",
+     "last": {
+      "round": "round-005-sim",
+      "quadrant": "reviewReserve",
+      "x": 0.374,
+      "y": 0.589
+     }
     }
    }
   },
@@ -6655,30 +7063,30 @@
      "mode": "priority",
      "by": "human",
      "x": 0.694,
-     "y": -0.79,
+     "y": -0.26,
      "quadrant": "deprio",
-     "conf": 0.79,
+     "conf": 0.694,
      "urgency": 15.3,
-     "importance": 10.5,
-     "priority": 12.4,
+     "importance": 37,
+     "priority": 28.3,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.878,
-     "y": -0.9,
+     "x": 0.904,
+     "y": -0.538,
      "quadrant": "deprio",
-     "conf": 0.9,
-     "urgency": 6.1,
-     "importance": 5,
-     "priority": 5.4,
+     "conf": 0.904,
+     "urgency": 4.8,
+     "importance": 23.1,
+     "priority": 15.8,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -6706,19 +7114,50 @@
      "urgency": 50,
      "importance": 80,
      "priority": 68
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.892,
+     "y": -0.95,
+     "quadrant": "deprio",
+     "conf": 0.95,
+     "urgency": 5.4,
+     "importance": 2.5,
+     "priority": 3.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.798,
+     "y": -0.734,
+     "quadrant": "deprio",
+     "conf": 0.798,
+     "urgency": 10.1,
+     "importance": 13.3,
+     "priority": 12,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 4,
+     "streak": 4,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.878,
-      "y": -0.9
+      "x": 0.798,
+      "y": -0.734
      }
     },
     "handling": {
@@ -6750,31 +7189,31 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.468,
-     "y": -0.376,
-     "quadrant": "deprio",
-     "conf": 0.468,
-     "urgency": 26.6,
-     "importance": 31.2,
-     "priority": 29.4,
+     "x": -0.546,
+     "y": -0.44,
+     "quadrant": "skim",
+     "conf": 0.546,
+     "urgency": 77.3,
+     "importance": 28,
+     "priority": 47.7,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
+     "at": "20261031183918-6j9dj"
     },
     {
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.48,
-     "y": -0.362,
-     "quadrant": "deprio",
-     "conf": 0.48,
-     "urgency": 26,
-     "importance": 31.9,
-     "priority": 29.5,
+     "x": -0.55,
+     "y": -0.708,
+     "quadrant": "skim",
+     "conf": 0.708,
+     "urgency": 77.5,
+     "importance": 14.6,
+     "priority": 39.8,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
+     "at": "20261031183918-6j9dj",
      "repeat": true
     },
     {
@@ -6802,19 +7241,65 @@
      "urgency": 20,
      "importance": 60,
      "priority": 44
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.602,
+     "y": -0.334,
+     "quadrant": "deprio",
+     "conf": 0.602,
+     "urgency": 19.9,
+     "importance": 33.3,
+     "priority": 27.9,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.698,
+     "y": -0.34,
+     "quadrant": "deprio",
+     "conf": 0.698,
+     "urgency": 15.1,
+     "importance": 33,
+     "priority": 25.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.57,
+     "y": -0.488,
+     "quadrant": "deprio",
+     "conf": 0.57,
+     "urgency": 21.5,
+     "importance": 25.6,
+     "priority": 24,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.48,
-      "y": -0.362
+      "x": 0.57,
+      "y": -0.488
      }
     },
     "handling": {
@@ -6846,48 +7331,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.478,
-     "y": 0.05,
-     "quadrant": "schedule",
-     "conf": 0.478,
-     "urgency": 26.1,
-     "importance": 52.5,
-     "priority": 41.9,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.85,
-     "y": -0.856,
+     "x": 0.842,
+     "y": -0.504,
      "quadrant": "deprio",
-     "conf": 0.856,
-     "urgency": 7.5,
-     "importance": 7.2,
-     "priority": 7.3,
+     "conf": 0.842,
+     "urgency": 7.9,
+     "importance": 24.8,
+     "priority": 18,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.988,
-     "y": -0.882,
-     "quadrant": "deprio",
-     "conf": 0.988,
-     "urgency": 0.6,
-     "importance": 5.9,
-     "priority": 3.8,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -6914,19 +7367,80 @@
      "urgency": 30,
      "importance": 90,
      "priority": 66
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.002,
+     "y": -0.894,
+     "quadrant": "skim",
+     "conf": 0.894,
+     "urgency": 50.1,
+     "importance": 5.3,
+     "priority": 23.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.668,
+     "y": -0.83,
+     "quadrant": "deprio",
+     "conf": 0.83,
+     "urgency": 16.6,
+     "importance": 8.5,
+     "priority": 11.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw",
+     "repeat": true
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.546,
+     "y": -0.858,
+     "quadrant": "deprio",
+     "conf": 0.858,
+     "urgency": 22.7,
+     "importance": 7.1,
+     "priority": 13.3,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.734,
+     "y": -0.918,
+     "quadrant": "deprio",
+     "conf": 0.918,
+     "urgency": 13.3,
+     "importance": 4.1,
+     "priority": 7.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 3,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "deprio",
-      "x": 0.988,
-      "y": -0.882
+      "x": 0.734,
+      "y": -0.918
      }
     },
     "handling": {
@@ -6958,32 +7472,16 @@
      "round": "round-004",
      "mode": "priority",
      "by": "human",
-     "x": 0.62,
-     "y": 0.634,
-     "quadrant": "schedule",
-     "conf": 0.634,
-     "urgency": 19,
-     "importance": 81.7,
-     "priority": 56.6,
+     "x": 0.578,
+     "y": -0.298,
+     "quadrant": "deprio",
+     "conf": 0.578,
+     "urgency": 21.1,
+     "importance": 35.1,
+     "priority": 29.5,
      "src": "priority",
      "counts": true,
-     "at": "20261031183120-defj1"
-    },
-    {
-     "round": "round-004",
-     "mode": "priority",
-     "by": "human",
-     "x": 0.66,
-     "y": 0.458,
-     "quadrant": "schedule",
-     "conf": 0.66,
-     "urgency": 17,
-     "importance": 72.9,
-     "priority": 50.5,
-     "src": "priority",
-     "counts": true,
-     "at": "20261031183120-defj1",
-     "repeat": true
+     "at": "20261031183918-6j9dj"
     },
     {
      "key": "round-004|priority|llama3.2:3b",
@@ -7010,19 +7508,64 @@
      "urgency": 40,
      "importance": 50,
      "priority": 46
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.574,
+     "y": -0.476,
+     "quadrant": "deprio",
+     "conf": 0.574,
+     "urgency": 21.3,
+     "importance": 26.2,
+     "priority": 24.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.658,
+     "y": 0.58,
+     "quadrant": "schedule",
+     "conf": 0.658,
+     "urgency": 17.1,
+     "importance": 79,
+     "priority": 54.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
+    },
+    {
+     "round": "round-005-sim",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.634,
+     "y": 0.34,
+     "quadrant": "schedule",
+     "conf": 0.634,
+     "urgency": 18.3,
+     "importance": 67,
+     "priority": 47.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031190922-ctizw"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
+     "tries": 4,
      "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005-sim",
       "quadrant": "schedule",
-      "x": 0.66,
-      "y": 0.458
+      "x": 0.634,
+      "y": 0.34
      }
     },
     "handling": {
@@ -7045,28 +7588,355 @@
  "counts": {
   "priority": {
    "new": 13,
-   "open": 45,
-   "settled": 2,
+   "open": 31,
+   "settled": 16,
    "manual-review": 1,
    "streak": {
-    "0": 6,
-    "1": 28,
-    "2": 12,
-    "3": 2
+    "0": 7,
+    "1": 21,
+    "2": 4,
+    "3": 16
    }
   },
   "handling": {
-   "new": 45,
-   "open": 14,
-   "settled": 2,
-   "manual-review": 0,
+   "new": 42,
+   "open": 18,
+   "settled": 0,
+   "manual-review": 1,
    "streak": {
     "0": 2,
-    "1": 7,
-    "2": 5,
-    "3": 2
+    "1": 8,
+    "2": 9,
+    "3": 0
    }
   }
  },
- "updatedAt": "2026-10-31T18:31:20.146Z"
+ "updatedAt": "2026-10-31T19:09:55.840Z",
+ "clusters": {
+  "round-005-c002": {
+   "members": {
+    "r003-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 411
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 406
+      }
+     ]
+    },
+    "r003-qwen2515b-04": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 402
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 406
+      }
+     ]
+    },
+    "r002-llama323b-03": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r002-llama323b-08": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      }
+     ]
+    },
+    "r002-llama323b-09": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r002-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 406
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      }
+     ]
+    },
+    "r002-qwen2515b-03": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      }
+     ]
+    },
+    "r002-qwen2515b-06": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    }
+   }
+  },
+  "round-005-c001": {
+   "members": {
+    "r004-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r004-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r002-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 402
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r005-llama323b-01": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r005-llama323b-02": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 406
+      }
+     ]
+    },
+    "r005-llama323b-03": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      }
+     ]
+    },
+    "r005-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      }
+     ]
+    },
+    "r005-llama323b-05": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 405
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 406
+      }
+     ]
+    },
+    "r005-llama323b-06": {
+     "evals": [
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      },
+      {
+       "round": "round-005-sim",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031190922-ctizw",
+       "ms": 403
+      }
+     ]
+    }
+   }
+  }
+ },
+ "clusterCounts": {
+  "members": 17,
+  "settledIn": 0,
+  "settledOut": 0,
+  "open": 17,
+  "streak": {
+   "1": 7,
+   "2": 10,
+   "3": 0
+  }
+ }
 }

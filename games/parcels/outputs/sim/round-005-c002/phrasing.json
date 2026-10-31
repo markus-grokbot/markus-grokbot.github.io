@@ -1,0 +1,78 @@
+{
+ "schema": "parcels-output",
+ "kind": "phrasing",
+ "version": "1.0.0",
+ "sim": true,
+ "seededUnlock": true,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-005-c002",
+  "label": "Invoice and Payment",
+  "rationale": "This cluster includes items related to invoices, payments, and overdue payments.",
+  "work": "reply",
+  "members": [
+   "r003-qwen2515b-01",
+   "r003-qwen2515b-04",
+   "r002-llama323b-03",
+   "r002-llama323b-08",
+   "r002-llama323b-09",
+   "r002-qwen2515b-01",
+   "r002-qwen2515b-03",
+   "r002-qwen2515b-06"
+  ],
+  "proposedBy": [
+   "qwen2.5:1.5b"
+  ]
+ },
+ "round": "round-005-sim",
+ "fromLog": "logs/sim/parcels5s-round-005-sim-session-good-seed1.json",
+ "picks": [
+  {
+   "pairId": "round-005-c002-ph1",
+   "a": "round-005-c002:llama323b:guided",
+   "b": "round-005-c002:llama323b:terse",
+   "choice": "B",
+   "winner": "round-005-c002:llama323b:terse",
+   "winnerModel": "llama3.2:3b",
+   "ms": 504
+  }
+ ],
+ "preferred": {
+  "id": "round-005-c002:llama323b:terse",
+  "model": "llama3.2:3b",
+  "variant": "terse",
+  "text": "Invoices are overdue. Payment due by next Friday. $500 for Invoice 1234, $400 for Invoice 9876.",
+  "dims": {
+   "brevity": 1,
+   "directness": 1
+  }
+ },
+ "candidates": [
+  {
+   "id": "round-005-c002:llama323b:guided",
+   "model": "llama3.2:3b",
+   "variant": "guided",
+   "text": "Dear valued customers,\n\nWe are writing to inform you that your invoices are overdue. Please make payment by next Friday to avoid any further action. For Invoice 1234, the amount due is $500, and for Invoice 9876, the amount due is $400. If you have any questions or concerns, please don't hesitate to reach out.\n\nBest regards, Engineer",
+   "dims": {
+    "brevity": 0,
+    "directness": 0
+   }
+  },
+  {
+   "id": "round-005-c002:llama323b:terse",
+   "model": "llama3.2:3b",
+   "variant": "terse",
+   "text": "Invoices are overdue. Payment due by next Friday. $500 for Invoice 1234, $400 for Invoice 9876.",
+   "dims": {
+    "brevity": 1,
+    "directness": 1
+   }
+  }
+ ],
+ "toneSignal": [
+  {
+   "brevity": 1,
+   "directness": 1
+  }
+ ]
+}

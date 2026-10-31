@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "phrasing-round-005-c002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:06:15.287Z",
+ "ms": 28766,
+ "promptSha256": "4c7f4ef8975625b6481153aeab45672c3aa30318560d5333e2edda6122f8342c",
+ "prompt": "Write a short fictional reply email that answers ALL of these related inbox items in one message (they form the batch \"Invoice and Payment\"). Write it as the engineer. Write two variants: \"guided\" follows this style guide, \"terse\" is deliberately shorter and more direct.\n## Style guide for a writing model\n\n- Strongly prefer **serious, dry** (humor -1 ± 1.111, n=2, low confidence)\n- Prefer **assertive, confident** (confidence 0.52 ± 0.559, n=3, low confidence)\n- Prefer **plain-language, explanatory** (technicality -0.462 ± 0.508, n=4, low confidence)\n- Prefer **expansive, explanatory** (brevity -0.417 ± 0.439, n=5, low confidence)\n- Prefer **formal** (formality 0.294 ± 0.488, n=6, low confidence)\n- No clear lean on **directness** (directness 0.067 ± 0.547, n=4, low confidence)\n- No clear lean on **warmth** (warmth -0.048 ± 0.48, n=6, low confidence)\n- No clear lean on **personal** (personal -0.033 ± 0.449, n=6, low confidence)\n\nTreat low-confidence lines as hints only. Content is fictional; only the voice is signal.\n\n| dim | pref | se | n | beta | conf |\n|---|---|---|---|---|---|\n| formality | 0.294 | 0.488 | 6 | 0.376 | low |\n| warmth | -0.048 | 0.48 | 6 | -0.019 | low |\n| brevity | -0.417 | 0.439 | 5 | -0.774 | low |\n| humor | -1 | 1.111 | 2 | -0.418 | low |\n| confidence | 0.52 | 0.559 | 3 | 0.505 | low |\n| technicality | -0.462 | 0.508 | 4 | -0.428 | low |\n| directness | 0.067 | 0.547 | 4 | 0.164 | low |\n| emoji | 0 |  | 0 | 0 | none |\n| personal | -0.033 | 0.449 | 6 | -0.241 | low |\nItems:\nr003-qwen2515b-01 | service | Service Notice · MyCompany | Invoice 1234 - Payment Due | Your invoice for $500 is overdue. Please make payment by next Friday.\nr003-qwen2515b-04 | service | Service Notice · MyCompany | Invoice 9876 - Payment Due | Your invoice for $400 is overdue. Please make payment by next Friday.\nr002-llama323b-03 | service | Service · TechCorp | System Downtime Notification | Our system is currently experiencing downtime.\nr002-llama323b-08 | recruiter | Recruiter · Pinewood Talent | Follow-up on Application | We would like to schedule a call to discuss your application.\nr002-llama323b-09 | job-board | Job-Board · TechHub | Job Opening: Senior DevOps Engineer | We are looking for a senior DevOps engineer to join our team.\nr002-qwen2515b-01 | job-board | Job Board · TechJobs | New Job Posting: Senior Software Engineer | We are seeking a Senior Software Engineer with experience in React and Node.js.\nr002-qwen2515b-03 | collaborator | Collaborator · MyProject | Meeting Request: AI Workshop | Please join the AI Workshop on Monday at 10 AM.\nr002-qwen2515b-06 | service | Service · MyProject | Service Request: Network Issue | We noticed a network issue with your project. Please check the logs.\nMax 70 words each. No real names, emails or addresses; use the fictional senders above. Return JSON only: {\"guided\":\"...\",\"terse\":\"...\"}",
+ "raw": "{\n  \"guided\": \"Dear valued customers,\\n\\nWe are writing to inform you that your invoices are overdue. Please make payment by next Friday to avoid any further action. For Invoice 1234, the amount due is $500, and for Invoice 9876, the amount due is $400. If you have any questions or concerns, please don't hesitate to reach out.\\n\\nBest regards, Engineer\",\n  \"terse\": \"Invoices are overdue. Payment due by next Friday. $500 for Invoice 1234, $400 for Invoice 9876.\"\n}",
+ "parseError": null,
+ "evalCount": 121,
+ "promptEvalCount": 903
+}

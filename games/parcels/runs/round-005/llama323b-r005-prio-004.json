@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r005-prio-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:54:13.270Z",
+ "ms": 6757,
+ "promptSha256": "25616fb9c6c1a094c74640b998cec035176f9b2d4cb2031b5424c515e143d558",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Items from recruiters and job-boards should be prioritized based on their importance, with a minimum urgency of 50.\n* Items from collaborators and service providers should be prioritized based on their urgency, with a minimum importance of 30.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr003-llama323b-06 | Service · DevSupport | Server Maintenance | Our servers will be down for maintenance.\np012 | Accounts · Stellan Print AB | Invoice 3391 – payment overdue | We have not received payment for invoice 3391. Please confirm the order number you used.\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\np026 | Collaborator · bot tester | Found a bug in the tone pit | Undo after 'neither' skips a pair. Repro steps below. Want me to file it?\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r003\",\"urgency\":0,\"importance\":0,\"summary\":\"Server Maintenance\"}],\"items\":[{\"id\":\"p012\",\"urgency\":0,\"importance\":0,\"summary\":\"Invoice Overdue\"}],\"items\":[{\"id\":\"p039\",\"urgency\":0,\"importance\":0,\"summary\":\"Coffee Next Week\"}],\"items\":[{\"id\":\"p013\",\"urgency\":0,\"importance\":0,\"summary\":\"New Issue in Games\"}],\"items\":[{\"id\":\"p026\",\"urgency\":0,\"importance\":0,\"summary\":\"Bug Report\"}]}",
+ "parseError": null,
+ "evalCount": 121,
+ "promptEvalCount": 450
+}

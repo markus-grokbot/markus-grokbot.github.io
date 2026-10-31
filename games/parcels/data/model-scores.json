@@ -500,16 +500,277 @@
        "weight": 0.976
       }
      ]
+    },
+    {
+     "round": "round-004",
+     "roundWeight": 1,
+     "note": "Full weight. Priority + handling.",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.567,
+     "abShown": 2,
+     "abWins": 2,
+     "abWinRate": 1,
+     "authoredSorted": 17,
+     "authoredClarity": 0.949,
+     "authoredMeanConf": 0.795,
+     "priority": {
+      "graded": 20,
+      "agreement": 0.567,
+      "urgency": 0.592,
+      "importance": 0.521,
+      "meanAbsPriorityError": 41.5,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.692,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "0/0",
+       "his": "95/100",
+       "agreement": 0.023,
+       "weight": 1.904
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "96/40",
+       "agreement": 0.133,
+       "weight": 1.118
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/0",
+       "his": "88/94",
+       "agreement": 0.088,
+       "weight": 1.019
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "0/0",
+       "his": "100/30",
+       "agreement": 0.198,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "92/46",
+       "agreement": 0.117,
+       "weight": 0.93
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "0/0",
+       "his": "66/65",
+       "agreement": 0.346,
+       "weight": 0.614
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "20/0",
+       "his": "66/68",
+       "agreement": 0.421,
+       "weight": 0.686
+      },
+      {
+       "parcelId": "r004-llama323b-03",
+       "subject": "Service Notice: Maintenance Scheduled",
+       "yours": "20/0",
+       "his": "77/28",
+       "agreement": 0.558,
+       "weight": 0.883
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "0/0",
+       "his": "62/66",
+       "agreement": 0.357,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "subject": "Service Request: Network Issue",
+       "yours": "20/40",
+       "his": "77/40",
+       "agreement": 0.581,
+       "weight": 0.63
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "0/0",
+       "his": "95/100",
+       "agreement": 0.023,
+       "weight": 1.904
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "96/40",
+       "agreement": 0.133,
+       "weight": 1.118
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/0",
+       "his": "88/94",
+       "agreement": 0.088,
+       "weight": 1.019
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "0/0",
+       "his": "100/30",
+       "agreement": 0.198,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "92/46",
+       "agreement": 0.117,
+       "weight": 0.93
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "0/0",
+       "his": "66/65",
+       "agreement": 0.346,
+       "weight": 0.614
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "20/0",
+       "his": "66/68",
+       "agreement": 0.421,
+       "weight": 0.686
+      },
+      {
+       "parcelId": "r004-llama323b-03",
+       "subject": "Service Notice: Maintenance Scheduled",
+       "yours": "20/0",
+       "his": "77/28",
+       "agreement": 0.558,
+       "weight": 0.883
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "0/0",
+       "his": "62/66",
+       "agreement": 0.357,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "subject": "Service Request: Network Issue",
+       "yours": "20/40",
+       "his": "77/40",
+       "agreement": 0.581,
+       "weight": 0.63
+      }
+     ],
+     "handling": {
+      "graded": 16,
+      "agreement": 0.519,
+      "manualAxis": 0.724,
+      "spendAxis": 0.274,
+      "sameTier": 0,
+      "misses": [
+       {
+        "parcelId": "p024",
+        "yours": "0/0",
+        "his": "81/34",
+        "agreement": 0.353
+       },
+       {
+        "parcelId": "p013",
+        "yours": "0/60",
+        "his": "69/45",
+        "agreement": 0.422
+       },
+       {
+        "parcelId": "p010",
+        "yours": "0/0",
+        "his": "36/68",
+        "agreement": 0.458
+       },
+       {
+        "parcelId": "p034",
+        "yours": "0/0",
+        "his": "27/76",
+        "agreement": 0.465
+       },
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "0/0",
+        "his": "3/100",
+        "agreement": 0.466
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "0/0",
+        "his": "2/100",
+        "agreement": 0.482
+       },
+       {
+        "parcelId": "p037",
+        "yours": "0/0",
+        "his": "34/67",
+        "agreement": 0.492
+       },
+       {
+        "parcelId": "r003-llama323b-02",
+        "yours": "0/0",
+        "his": "24/76",
+        "agreement": 0.498
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "0/0",
+        "his": "30/70",
+        "agreement": 0.498
+       },
+       {
+        "parcelId": "p030",
+        "yours": "0/0",
+        "his": "28/72",
+        "agreement": 0.5
+       }
+      ]
+     },
+     "scoreWithHandling": 0.649
     }
    ],
    "latest": {
-    "round": "round-003",
-    "score": 0.619,
-    "weightedAgreement": 0.613,
-    "priorityAgreement": 0.613
+    "round": "round-004",
+    "score": 0.692,
+    "weightedAgreement": 0.567,
+    "priorityAgreement": 0.567
    },
-   "cumulative": 0.452,
-   "trend": 0.29
+   "cumulative": 0.521,
+   "trend": 0.073
   },
   "qwen2.5:1.5b": {
    "history": [
@@ -1006,16 +1267,277 @@
        "weight": 0.779
       }
      ]
+    },
+    {
+     "round": "round-004",
+     "roundWeight": 1,
+     "note": "Full weight. Priority + handling.",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.624,
+     "abShown": 2,
+     "abWins": 0,
+     "abWinRate": 0,
+     "authoredSorted": 8,
+     "authoredClarity": 0.947,
+     "authoredMeanConf": 0.773,
+     "priority": {
+      "graded": 24,
+      "agreement": 0.624,
+      "urgency": 0.602,
+      "importance": 0.667,
+      "meanAbsPriorityError": 29.5,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.532,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "90/90",
+       "his": "5/19",
+       "agreement": 0.211,
+       "weight": 1.294
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "20/80",
+       "his": "95/100",
+       "agreement": 0.54,
+       "weight": 1.651
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "80/20",
+       "his": "1/53",
+       "agreement": 0.233,
+       "weight": 0.94
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "60/80",
+       "his": "7/31",
+       "agreement": 0.479,
+       "weight": 1.246
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "80/50",
+       "his": "95/100",
+       "agreement": 0.665,
+       "weight": 1.904
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "40/60",
+       "his": "100/30",
+       "agreement": 0.486,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "60/50",
+       "his": "1/27",
+       "agreement": 0.527,
+       "weight": 1.1
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "30/90",
+       "his": "8/25",
+       "agreement": 0.618,
+       "weight": 1.346
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "100/80",
+       "his": "15/65",
+       "agreement": 0.353,
+       "weight": 0.752
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "50/30",
+       "his": "95/38",
+       "agreement": 0.631,
+       "weight": 1.13
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "90/90",
+       "his": "5/19",
+       "agreement": 0.211,
+       "weight": 1.294
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "20/80",
+       "his": "95/100",
+       "agreement": 0.54,
+       "weight": 1.651
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "80/20",
+       "his": "1/53",
+       "agreement": 0.233,
+       "weight": 0.94
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "60/80",
+       "his": "7/31",
+       "agreement": 0.479,
+       "weight": 1.246
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "80/50",
+       "his": "95/100",
+       "agreement": 0.665,
+       "weight": 1.904
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "40/60",
+       "his": "100/30",
+       "agreement": 0.486,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "60/50",
+       "his": "1/27",
+       "agreement": 0.527,
+       "weight": 1.1
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "30/90",
+       "his": "8/25",
+       "agreement": 0.618,
+       "weight": 1.346
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "100/80",
+       "his": "15/65",
+       "agreement": 0.353,
+       "weight": 0.752
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "50/30",
+       "his": "95/38",
+       "agreement": 0.631,
+       "weight": 1.13
+      }
+     ],
+     "handling": {
+      "graded": 16,
+      "agreement": 0.522,
+      "manualAxis": 0.505,
+      "spendAxis": 0.543,
+      "sameTier": 0.188,
+      "misses": [
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "80/30",
+        "his": "3/100",
+        "agreement": 0.268
+       },
+       {
+        "parcelId": "p028",
+        "yours": "90/10",
+        "his": "25/71",
+        "agreement": 0.368
+       },
+       {
+        "parcelId": "p037",
+        "yours": "90/10",
+        "his": "34/67",
+        "agreement": 0.436
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "50/40",
+        "his": "2/100",
+        "agreement": 0.458
+       },
+       {
+        "parcelId": "p024",
+        "yours": "10/50",
+        "his": "81/34",
+        "agreement": 0.479
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "80/20",
+        "his": "30/70",
+        "agreement": 0.498
+       },
+       {
+        "parcelId": "p008",
+        "yours": "70/30",
+        "his": "17/47",
+        "agreement": 0.503
+       },
+       {
+        "parcelId": "p034",
+        "yours": "80/30",
+        "his": "27/76",
+        "agreement": 0.509
+       },
+       {
+        "parcelId": "p029",
+        "yours": "90/10",
+        "his": "41/43",
+        "agreement": 0.577
+       },
+       {
+        "parcelId": "p010",
+        "yours": "70/20",
+        "his": "36/68",
+        "agreement": 0.579
+       }
+      ]
+     },
+     "scoreWithHandling": 0.53
     }
    ],
    "latest": {
-    "round": "round-003",
-    "score": 0.602,
-    "weightedAgreement": 0.59,
-    "priorityAgreement": 0.59
+    "round": "round-004",
+    "score": 0.532,
+    "weightedAgreement": 0.624,
+    "priorityAgreement": 0.624
    },
-   "cumulative": 0.49,
-   "trend": 0.119
+   "cumulative": 0.502,
+   "trend": -0.07
   }
  },
  "rounds": [
@@ -1048,9 +1570,23 @@
    "decisions": 34,
    "ab": 2,
    "next": "round-004"
+  },
+  {
+   "round": "round-004",
+   "log": "games/parcels/logs/human/human-parcels-round-004-priority-20261031183918-6j9dj.json",
+   "logs": [
+    "games/parcels/logs/human/human-parcels-round-004-priority-20261031183918-6j9dj.json",
+    "games/parcels/logs/human/human-parcels-round-004-handling-20261031183555-qpxuu.json"
+   ],
+   "roundWeight": 1,
+   "note": "Full weight. Priority + handling.",
+   "gradedAt": "2026-10-31T18:50:25.435Z",
+   "decisions": 34,
+   "ab": 2,
+   "next": "round-005"
   }
  ],
- "updatedAt": "2026-10-31T18:21:21.219Z",
+ "updatedAt": "2026-10-31T18:50:25.435Z",
  "ranking": [
   "llama3.2:3b",
   "qwen2.5:1.5b"

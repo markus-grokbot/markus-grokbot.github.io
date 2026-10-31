@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r005-prio-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:53:29.886Z",
+ "ms": 13662,
+ "promptSha256": "9a5c732e2ddebfde88b1cdba6aacdbb8f63a4935787785b876f7ed9f1e49f3c5",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Items from recruiters and job-boards should be prioritized based on their importance, with a minimum urgency of 50.\n* Items from collaborators and service providers should be prioritized based on their urgency, with a minimum importance of 30.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr004-llama323b-03 | Service · TechSupport | Service Notice: Maintenance Scheduled | Our servers will be undergoing maintenance on Friday.\nr003-llama323b-02 | Collaborator · DevTeam | Question about project deadline | Can we discuss the project deadline?\nr003-qwen2515b-04 | Service Notice · MyCompany | Invoice 9876 - Payment Due | Your invoice for $400 is overdue. Please make payment by next Friday.\nr004-llama323b-02 | Marketing · TechCorp | New Product Launch | Our new product is now available for purchase.\nr003-qwen2515b-01 | Service Notice · MyCompany | Invoice 1234 - Payment Due | Your invoice for $500 is overdue. Please make payment by next Friday.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r004-llama323b-03\",\"urgency\":0,\"importance\":0,\"summary\":\"Server maintenance Friday\"}],\"items\":[{\"id\":\"r003-llama323b-02\",\"urgency\":0,\"importance\":0,\"summary\":\"Project deadline question\"}],\"items\":[{\"id\":\"r003-qwen2515b-04\",\"urgency\":0,\"importance\":0,\"summary\":\"Overdue invoice payment\"}],\"items\":[{\"id\":\"r004-llama323b-02\",\"urgency\":0,\"importance\":0,\"summary\":\"New product launch\"}],\"items\":[{\"id\":\"r003-qwen2515b-01\",\"urgency\":0,\"importance\":0,\"summary\":\"Overdue invoice payment\"}]}",
+ "parseError": null,
+ "evalCount": 159,
+ "promptEvalCount": 441
+}

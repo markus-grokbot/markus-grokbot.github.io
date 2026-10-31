@@ -1,0 +1,81 @@
+{
+ "schema": "parcels-output",
+ "kind": "codepass",
+ "version": "1.0.0",
+ "sim": true,
+ "seededUnlock": true,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-005-c002",
+  "label": "Invoice and Payment",
+  "rationale": "This cluster includes items related to invoices, payments, and overdue payments.",
+  "work": "reply",
+  "members": [
+   "r003-qwen2515b-01",
+   "r003-qwen2515b-04",
+   "r002-llama323b-03",
+   "r002-llama323b-08",
+   "r002-llama323b-09",
+   "r002-qwen2515b-01",
+   "r002-qwen2515b-03",
+   "r002-qwen2515b-06"
+  ],
+  "proposedBy": [
+   "qwen2.5:1.5b"
+  ]
+ },
+ "round": "round-005-sim",
+ "fromLog": "logs/sim/parcels5s-round-005-sim-session-good-seed1.json",
+ "picks": [
+  {
+   "pairId": "round-005-c002-cp1",
+   "a": "round-005-c002:llama323b:plan",
+   "b": "round-005-c002:qwen2515b:plan",
+   "choice": "A",
+   "winner": "round-005-c002:llama323b:plan",
+   "winnerModel": "llama3.2:3b",
+   "ms": 501
+  }
+ ],
+ "preferred": {
+  "id": "round-005-c002:llama323b:plan",
+  "model": "llama3.2:3b",
+  "steps": [
+   "1. Parse JSON data to extract relevant information",
+   "2. Categorize and prioritize tasks based on urgency and importance",
+   "3. Implement a notification system for overdue invoices",
+   "4. Integrate with calendar API for meeting requests",
+   "5. Create a log tracking system for network issues",
+   "6. Design a user interface for the new job posting"
+  ],
+  "risk": ""
+ },
+ "candidates": [
+  {
+   "id": "round-005-c002:llama323b:plan",
+   "model": "llama3.2:3b",
+   "steps": [
+    "1. Parse JSON data to extract relevant information",
+    "2. Categorize and prioritize tasks based on urgency and importance",
+    "3. Implement a notification system for overdue invoices",
+    "4. Integrate with calendar API for meeting requests",
+    "5. Create a log tracking system for network issues",
+    "6. Design a user interface for the new job posting"
+   ],
+   "risk": ""
+  },
+  {
+   "id": "round-005-c002:qwen2515b:plan",
+   "model": "qwen2.5:1.5b",
+   "steps": [
+    "Parse all service notices and job postings.",
+    "Identify the project related to the invoice and payment due notices.",
+    "Create a plan to address the overdue invoices and network issue.",
+    "Prepare a meeting request for the AI workshop.",
+    "Review the project logs for any network issues and address them.",
+    "Implement the payment for the overdue invoices."
+   ],
+   "risk": "Risk of missing important details or misinterpreting the project context."
+  }
+ ]
+}

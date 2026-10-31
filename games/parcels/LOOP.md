@@ -142,3 +142,8 @@ Sim: `node games/parcels/sim/run-sim3.js --round round-003`; browser `?sim=1&ski
 - The end screen previews the ledger effect of the run. It is applied when the log is graded.
 
 Grading with both logs: `node tools/next-round.js --round round-004 --log <priority.json>,<handling.json> --force`. To rebuild the ledger: `node games/parcels/tools/ledger.js --rebuild`.
+
+## Chained session (game 0.5.0)
+`?mode=session`: warm-up → (priority → handling → cluster) × cycles → threshold → output A/B (reply phrasing, code-pass plan) → summary.
+Prep with `tools/session-prep.js --round <id>`, process the log with `tools/session-process.js --log <file>` (next-round refuses a
+session log until that's done; pass `--session-ok` to grade its priority/handling levels too). Full description and flow: SESSION.md.

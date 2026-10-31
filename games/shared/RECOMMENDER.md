@@ -32,3 +32,5 @@ Task `triage` (Mail triage warm-up / triage data) → Parcel Panic first (each s
 
 ### Parcel Panic modes (round 4)
 `?mode=handling` is a second stage after priority. It should be recommended once a priority log exists for the current round. Sim logs and ledger files (`*.sim.json`) never feed the recommender's human signals or the human ledger.
+
+`?mode=session` (game 0.5.0, entry `parcelsSession`, ~8 min) chains warm-up → priority → handling → cluster (×2 cycles) → outputs. Recommended second for `triage` when there are ≥ 8 minutes and he isn't tired. Session logs go through `tools/session-process.js`; sim session logs only touch `*.sim.json` and `outputs/sim/`. See games/parcels/SESSION.md.
