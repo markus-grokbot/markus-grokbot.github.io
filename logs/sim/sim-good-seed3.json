@@ -1,0 +1,840 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.0.0",
+ "game": {
+  "id": "tetris",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "tetris"
+ },
+ "run": {
+  "id": "20261031142059-ksubl",
+  "type": "sim",
+  "startedAt": "1970-01-01T00:00:00.000Z",
+  "endedAt": "2026-10-31T00:04:07.878Z",
+  "device": {
+   "platform": "node v24.22.1",
+   "headless": true
+  },
+  "player": {
+   "kind": "heuristic-bot",
+   "skill": "good"
+  },
+  "seed": 3,
+  "tuningSource": "tuning.json"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "level": 1,
+    "linesToClear": 6,
+    "gravityMs": 900,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:00:00.000Z",
+   "endedAt": "2026-10-31T00:00:11.722Z",
+   "durationMs": 11722,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 11722,
+    "score": 1712,
+    "actions": 23,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 496,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 11722,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 7,
+     "pieces": 23,
+     "maxHeight": 7,
+     "holesEnd": 1,
+     "avgHoles": 1,
+     "bumpinessEnd": 9,
+     "gravityMs": 900,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 2,
+   "params": {
+    "level": 2,
+    "linesToClear": 10,
+    "gravityMs": 720,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:00:11.722Z",
+   "endedAt": "2026-10-31T00:00:26.569Z",
+   "durationMs": 14847,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 14847,
+    "score": 3954,
+    "actions": 31,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 14847,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 11,
+     "pieces": 31,
+     "maxHeight": 6,
+     "holesEnd": 0,
+     "avgHoles": 0,
+     "bumpinessEnd": 8,
+     "gravityMs": 720,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 3,
+   "params": {
+    "level": 3,
+    "linesToClear": 12,
+    "gravityMs": 576,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:00:26.569Z",
+   "endedAt": "2026-10-31T00:00:45.124Z",
+   "durationMs": 18555,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 18555,
+    "score": 5498,
+    "actions": 38,
+    "misplays": 3,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 6266,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 10909,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 18555,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 18555,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 12,
+     "pieces": 38,
+     "maxHeight": 10,
+     "holesEnd": 2,
+     "avgHoles": 0.82,
+     "bumpinessEnd": 12,
+     "gravityMs": 576,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 4,
+   "params": {
+    "level": 4,
+    "linesToClear": 14,
+    "gravityMs": 461,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:00:45.124Z",
+   "endedAt": "2026-10-31T00:01:04.757Z",
+   "durationMs": 19633,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 19633,
+    "score": 7422,
+    "actions": 39,
+    "misplays": 2,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 8137,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 15105,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 19633,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 14,
+     "pieces": 39,
+     "maxHeight": 6,
+     "holesEnd": 0,
+     "avgHoles": 0.54,
+     "bumpinessEnd": 10,
+     "gravityMs": 461,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 5,
+   "params": {
+    "level": 5,
+    "linesToClear": 16,
+    "gravityMs": 369,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:01:04.757Z",
+   "endedAt": "2026-10-31T00:01:25.905Z",
+   "durationMs": 21148,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 21148,
+    "score": 11028,
+    "actions": 43,
+    "misplays": 3,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 516,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 13624,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 18564,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 21148,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 16,
+     "pieces": 43,
+     "maxHeight": 10,
+     "holesEnd": 0,
+     "avgHoles": 0.91,
+     "bumpinessEnd": 9,
+     "gravityMs": 369,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 6,
+   "params": {
+    "level": 6,
+    "linesToClear": 18,
+    "gravityMs": 295,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:01:25.905Z",
+   "endedAt": "2026-10-31T00:01:52.513Z",
+   "durationMs": 26608,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 26608,
+    "score": 16174,
+    "actions": 55,
+    "misplays": 6,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 396,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 4705,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 9501,
+     "type": "hole_created",
+     "holes": 4
+    },
+    {
+     "t": 11914,
+     "type": "hole_created",
+     "holes": 5
+    },
+    {
+     "t": 19182,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 23315,
+     "type": "hole_created",
+     "holes": 4
+    },
+    {
+     "t": 26608,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 18,
+     "pieces": 55,
+     "maxHeight": 10,
+     "holesEnd": 3,
+     "avgHoles": 2.78,
+     "bumpinessEnd": 7,
+     "gravityMs": 295,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 7,
+   "params": {
+    "level": 7,
+    "linesToClear": 20,
+    "gravityMs": 236,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:01:52.513Z",
+   "endedAt": "2026-10-31T00:02:23.263Z",
+   "durationMs": 30750,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 30750,
+    "score": 18894,
+    "actions": 59,
+    "misplays": 6,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 13676,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 16875,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 21403,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 22326,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 24894,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 29087,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 30750,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 20,
+     "pieces": 59,
+     "maxHeight": 8,
+     "holesEnd": 2,
+     "avgHoles": 0.81,
+     "bumpinessEnd": 8,
+     "gravityMs": 236,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 8,
+   "params": {
+    "level": 8,
+    "linesToClear": 22,
+    "gravityMs": 189,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:02:23.263Z",
+   "endedAt": "2026-10-31T00:02:55.473Z",
+   "durationMs": 32210,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 32210,
+    "score": 20588,
+    "actions": 64,
+    "misplays": 6,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2420,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 9673,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 19552,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 23647,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 28247,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 30768,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 32210,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 22,
+     "pieces": 64,
+     "maxHeight": 8,
+     "holesEnd": 3,
+     "avgHoles": 1.67,
+     "bumpinessEnd": 9,
+     "gravityMs": 189,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 9,
+   "params": {
+    "level": 9,
+    "linesToClear": 24,
+    "gravityMs": 151,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:02:55.473Z",
+   "endedAt": "2026-10-31T00:03:33.727Z",
+   "durationMs": 38254,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 38254,
+    "score": 27896,
+    "actions": 77,
+    "misplays": 7,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 9722,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 18354,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 22615,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 25896,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 28427,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 37250,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 37717,
+     "type": "hole_created",
+     "holes": 4
+    },
+    {
+     "t": 38254,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 26,
+     "pieces": 77,
+     "maxHeight": 10,
+     "holesEnd": 3,
+     "avgHoles": 1.18,
+     "bumpinessEnd": 11,
+     "gravityMs": 151,
+     "lockDelayMs": 500
+    }
+   }
+  },
+  {
+   "level": 10,
+   "params": {
+    "level": 10,
+    "linesToClear": 26,
+    "gravityMs": 121,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:03:33.727Z",
+   "endedAt": "2026-10-31T00:04:07.878Z",
+   "durationMs": 34151,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 34151,
+    "score": 33372,
+    "actions": 68,
+    "misplays": 7,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 6852,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 10251,
+     "type": "hole_created",
+     "holes": 5
+    },
+    {
+     "t": 11276,
+     "type": "hole_created",
+     "holes": 6
+    },
+    {
+     "t": 16979,
+     "type": "hole_created",
+     "holes": 5
+    },
+    {
+     "t": 20039,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 29454,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 33558,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 34151,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 26,
+     "pieces": 68,
+     "maxHeight": 7,
+     "holesEnd": 1,
+     "avgHoles": 1.94,
+     "bumpinessEnd": 5,
+     "gravityMs": 121,
+     "lockDelayMs": 500
+    }
+   }
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:00:11.722Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 6,
+     "to": 10
+    },
+    {
+     "param": "gravityMs",
+     "from": 900,
+     "to": 720
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:00:26.569Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 10,
+     "to": 12
+    },
+    {
+     "param": "gravityMs",
+     "from": 720,
+     "to": 576
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:00:45.124Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 12,
+     "to": 14
+    },
+    {
+     "param": "gravityMs",
+     "from": 576,
+     "to": 461
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:01:04.757Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 14,
+     "to": 16
+    },
+    {
+     "param": "gravityMs",
+     "from": 461,
+     "to": 369
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 5,
+   "to": 6,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:01:25.905Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 16,
+     "to": 18
+    },
+    {
+     "param": "gravityMs",
+     "from": 369,
+     "to": 295
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:01:52.513Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 18,
+     "to": 20
+    },
+    {
+     "param": "gravityMs",
+     "from": 295,
+     "to": 236
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:02:23.263Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 20,
+     "to": 22
+    },
+    {
+     "param": "gravityMs",
+     "from": 236,
+     "to": 189
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:02:55.473Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 22,
+     "to": 24
+    },
+    {
+     "param": "gravityMs",
+     "from": 189,
+     "to": 151
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:03:33.727Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 24,
+     "to": 26
+    },
+    {
+     "param": "gravityMs",
+     "from": 151,
+     "to": 121
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 10,
+  "highestLevel": 10,
+  "totalDurationMs": 247878
+ }
+}

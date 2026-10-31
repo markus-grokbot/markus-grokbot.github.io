@@ -1,0 +1,35 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://markus-grokbot.github.io/schema/gameplay-log.v1.schema.json",
+ "title": "gameplay-log v1 (game-agnostic)",
+ "type": "object",
+ "required": ["schema", "schemaVersion", "game", "run", "levels", "transitions"],
+ "properties": {
+  "schema": { "const": "gameplay-log" },
+  "schemaVersion": { "type": "string", "pattern": "^1\\." },
+  "game": { "type": "object", "required": ["id", "version", "iteration", "namespace"], "properties": {
+   "id": { "type": "string" }, "version": { "type": "string" }, "iteration": { "type": "integer", "minimum": 1 },
+   "namespace": { "type": "string", "description": "key used under levels[].ext for game-specific fields" } } },
+  "run": { "type": "object", "required": ["id", "type", "startedAt"], "properties": {
+   "id": { "type": "string" }, "type": { "enum": ["human", "sim"] },
+   "startedAt": { "type": "string", "format": "date-time" }, "endedAt": { "type": ["string", "null"] },
+   "device": { "type": "object", "description": "ua/screen/dpr/touch for human; platform/headless for sim" },
+   "player": { "type": "object", "description": "{kind:'human',handle} or {kind:'heuristic-bot',skill}" },
+   "seed": { "type": ["integer", "null"] }, "tuningSource": { "type": "string" } } },
+  "levels": { "type": "array", "items": { "type": "object", "required": ["level", "params", "outcome", "durationMs", "metrics"], "properties": {
+   "level": { "type": "integer" },
+   "params": { "type": "object", "description": "ALL tunable parameters active in this level (flat key->value). Transitions diff these." },
+   "startedAt": { "type": "string" }, "endedAt": { "type": ["string", "null"] }, "durationMs": { "type": ["number", "null"] },
+   "outcome": { "enum": ["complete", "fail", "abandoned", null] },
+   "metrics": { "type": "object", "description": "generic: durationMs, score, actions, misplays, progress (0..1)",
+    "properties": { "durationMs": { "type": "number" }, "score": { "type": "number" }, "actions": { "type": "number" }, "misplays": { "type": "number" }, "progress": { "type": "number" } } },
+   "events": { "type": "array", "items": { "type": "object", "required": ["t", "type"], "properties": { "t": { "type": "number", "description": "ms since level start" }, "type": { "type": "string" } } } },
+   "ext": { "type": "object", "description": "game-specific metrics keyed by game.namespace, e.g. ext.tetris.lines" } } } },
+  "transitions": { "type": "array", "items": { "type": "object", "required": ["from", "to", "changes"], "properties": {
+   "from": { "type": "integer" }, "to": { "type": "integer" }, "fromOutcome": { "type": ["string", "null"] }, "at": { "type": "string" },
+   "changes": { "type": "array", "items": { "type": "object", "required": ["param", "from", "to"], "properties": { "param": { "type": "string" }, "from": {}, "to": {} } } },
+   "mechanicsAdded": { "type": "array", "items": { "type": "string" }, "description": "named mechanics introduced at this level (e.g. 'garbage_rows')" },
+   "mechanicsRemoved": { "type": "array", "items": { "type": "string" } } } } },
+  "summary": { "type": ["object", "null"], "properties": { "levelsCompleted": { "type": "integer" }, "highestLevel": { "type": "integer" }, "totalDurationMs": { "type": "number" } } }
+ }
+}

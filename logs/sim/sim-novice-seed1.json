@@ -1,0 +1,151 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.0.0",
+ "game": {
+  "id": "tetris",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "tetris"
+ },
+ "run": {
+  "id": "20261031142059-agdc0",
+  "type": "sim",
+  "startedAt": "1970-01-01T00:00:00.000Z",
+  "endedAt": "2026-10-31T00:00:46.437Z",
+  "device": {
+   "platform": "node v24.22.1",
+   "headless": true
+  },
+  "player": {
+   "kind": "heuristic-bot",
+   "skill": "novice"
+  },
+  "seed": 1,
+  "tuningSource": "tuning.json"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "level": 1,
+    "linesToClear": 6,
+    "gravityMs": 900,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T00:00:00.000Z",
+   "endedAt": "2026-10-31T00:00:46.437Z",
+   "durationMs": 46437,
+   "outcome": "fail",
+   "metrics": {
+    "durationMs": 46437,
+    "score": 1556,
+    "actions": 45,
+    "misplays": 14,
+    "progress": 0.8333333333333334
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2104,
+     "type": "hole_created",
+     "holes": 1
+    },
+    {
+     "t": 5274,
+     "type": "hole_created",
+     "holes": 2
+    },
+    {
+     "t": 6351,
+     "type": "hole_created",
+     "holes": 3
+    },
+    {
+     "t": 9198,
+     "type": "hole_created",
+     "holes": 4
+    },
+    {
+     "t": 15270,
+     "type": "hole_created",
+     "holes": 15
+    },
+    {
+     "t": 16108,
+     "type": "hole_created",
+     "holes": 20
+    },
+    {
+     "t": 19518,
+     "type": "hole_created",
+     "holes": 21
+    },
+    {
+     "t": 24812,
+     "type": "hole_created",
+     "holes": 22
+    },
+    {
+     "t": 27382,
+     "type": "hole_created",
+     "holes": 23
+    },
+    {
+     "t": 32298,
+     "type": "hole_created",
+     "holes": 24
+    },
+    {
+     "t": 35528,
+     "type": "hole_created",
+     "holes": 25
+    },
+    {
+     "t": 41542,
+     "type": "hole_created",
+     "holes": 28
+    },
+    {
+     "t": 43487,
+     "type": "hole_created",
+     "holes": 31
+    },
+    {
+     "t": 45787,
+     "type": "misplay",
+     "reason": "too_slow"
+    },
+    {
+     "t": 46437,
+     "type": "hole_created",
+     "holes": 37
+    },
+    {
+     "t": 46437,
+     "type": "level_fail"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 5,
+     "pieces": 45,
+     "maxHeight": 20,
+     "holesEnd": 37,
+     "avgHoles": 17.44,
+     "bumpinessEnd": 16,
+     "gravityMs": 900,
+     "lockDelayMs": 500
+    }
+   }
+  }
+ ],
+ "transitions": [],
+ "summary": {
+  "levelsCompleted": 0,
+  "highestLevel": 0,
+  "totalDurationMs": 46437
+ }
+}
