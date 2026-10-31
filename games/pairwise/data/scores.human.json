@@ -2,14 +2,178 @@
  "schema": "pairwise-scores",
  "schemaVersion": "1.0.0",
  "dataKind": "human",
- "generatedAt": "2026-10-31T15:24:12.174Z",
+ "generatedAt": "2026-10-31T15:45:58.543Z",
  "method": {
   "winRate": "(wins + 0.5*ties) / comparisons",
   "bradleyTerry": "MM, strength weights 1/1.5/2, prior 1 virtual tie, geometric-mean normalised (1 = average)",
   "elo": "K=32*weight, start 1500, log order"
  },
  "setFilter": null,
- "sources": [],
- "comparisons": 0,
- "items": []
+ "sources": [
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/human/runner-20261031152745-jo2un.json",
+   "runId": "20261031152745-jo2un",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  }
+ ],
+ "comparisons": 6,
+ "items": [
+  {
+   "id": "tone1-pr-b",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-linkedin-b",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-onboarding-a",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-changelog-a",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-linkedin2-b",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-readme2-b",
+   "comparisons": 1,
+   "wins": 1,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 2.4675,
+   "elo": 1524
+  },
+  {
+   "id": "tone1-pr-a",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  },
+  {
+   "id": "tone1-linkedin-a",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  },
+  {
+   "id": "tone1-onboarding-b",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  },
+  {
+   "id": "tone1-changelog-b",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  },
+  {
+   "id": "tone1-linkedin2-a",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  },
+  {
+   "id": "tone1-readme2-a",
+   "comparisons": 1,
+   "wins": 0,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0,
+   "bt": 0.4053,
+   "elo": 1476
+  }
+ ]
 }

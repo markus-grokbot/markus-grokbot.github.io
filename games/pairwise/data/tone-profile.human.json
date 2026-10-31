@@ -2,70 +2,70 @@
  "schema": "tone-profile",
  "schemaVersion": "1.0.0",
  "dataKind": "human",
- "generatedAt": "2026-10-31T15:24:12.178Z",
+ "generatedAt": "2026-10-31T15:45:58.576Z",
  "note": "Tone-discovery data from fictional texts. +1 = prefers the high end of the dimension (e.g. brevity +1 = terse).",
  "sets": {
   "tone-001": "1.0.0"
  },
- "comparisons": 0,
+ "comparisons": 6,
  "neither": 0,
  "method": "per-dim weighted mean of signed wins (|delta|>=0.2, strength weights 1/1.5/2) + joint L2 logistic regression (lambda 1)",
  "dimensions": [
   {
    "dim": "formality",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": 0.294,
+   "se": 0.488,
+   "n": 6,
+   "logisticBeta": 0.376,
+   "confidence": "low"
   },
   {
    "dim": "warmth",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": -0.048,
+   "se": 0.48,
+   "n": 6,
+   "logisticBeta": -0.019,
+   "confidence": "low"
   },
   {
    "dim": "brevity",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": -0.417,
+   "se": 0.439,
+   "n": 5,
+   "logisticBeta": -0.774,
+   "confidence": "low"
   },
   {
    "dim": "humor",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": -1,
+   "se": 1.111,
+   "n": 2,
+   "logisticBeta": -0.418,
+   "confidence": "low"
   },
   {
    "dim": "confidence",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": 0.52,
+   "se": 0.559,
+   "n": 3,
+   "logisticBeta": 0.505,
+   "confidence": "low"
   },
   {
    "dim": "technicality",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": -0.462,
+   "se": 0.508,
+   "n": 4,
+   "logisticBeta": -0.428,
+   "confidence": "low"
   },
   {
    "dim": "directness",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": 0.067,
+   "se": 0.547,
+   "n": 4,
+   "logisticBeta": 0.164,
+   "confidence": "low"
   },
   {
    "dim": "emoji",
@@ -77,11 +77,11 @@
   },
   {
    "dim": "personal",
-   "preference": 0,
-   "se": null,
-   "n": 0,
-   "logisticBeta": 0,
-   "confidence": "none"
+   "preference": -0.033,
+   "se": 0.449,
+   "n": 6,
+   "logisticBeta": -0.241,
+   "confidence": "low"
   }
  ],
  "rejectedBoth": []
