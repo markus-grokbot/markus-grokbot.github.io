@@ -2,7 +2,7 @@
  "schema": "pairwise-scores",
  "schemaVersion": "1.0.0",
  "dataKind": "sim",
- "generatedAt": "2026-10-31T14:56:58.969Z",
+ "generatedAt": "2026-10-31T15:19:55.487Z",
  "warning": "SIMULATED preferences (sim choosers). Do not use as human preference data.",
  "method": {
   "winRate": "(wins + 0.5*ties) / comparisons",
@@ -66,10 +66,544 @@
    "setId": "test-001",
    "setVersion": "1.0.0",
    "demo": true
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed1.json",
+   "runId": "20261031151955-2irch",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-persona-terse-seed2.json",
+   "runId": "20261031151955-xtm1w",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed1.json",
+   "runId": "20261031151955-jwq2v",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-casual-random-seed2.json",
+   "runId": "20261031151955-j2zny",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed1.json",
+   "runId": "20261031151955-pf0g9",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-persona-terse-seed2.json",
+   "runId": "20261031151955-a3nz3",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed1.json",
+   "runId": "20261031151955-0hf4n",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-good-random-seed2.json",
+   "runId": "20261031151955-dj9m6",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed1.json",
+   "runId": "20261031151955-dsuu8",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-persona-terse-seed2.json",
+   "runId": "20261031151955-stnri",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed1.json",
+   "runId": "20261031151955-ohfpe",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
+  },
+  {
+   "file": "logs/sim/runner-novice-random-seed2.json",
+   "runId": "20261031151955-12sjf",
+   "setId": "tone-001",
+   "setVersion": "1.0.0",
+   "demo": false
   }
  ],
- "comparisons": 40,
+ "comparisons": 111,
  "items": [
+  {
+   "id": "tone1-readme-a",
+   "comparisons": 6,
+   "wins": 6,
+   "ties": 0,
+   "losses": 0,
+   "winRate": 1,
+   "bt": 5.2627,
+   "elo": 1613
+  },
+  {
+   "id": "tone1-tweet-b",
+   "comparisons": 6,
+   "wins": 5,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0.833,
+   "bt": 2.2181,
+   "elo": 1587
+  },
+  {
+   "id": "tone1-commit-a",
+   "comparisons": 6,
+   "wins": 5,
+   "ties": 0,
+   "losses": 1,
+   "winRate": 0.833,
+   "bt": 1.9533,
+   "elo": 1566
+  },
   {
    "id": "tf-v2",
    "comparisons": 8,
@@ -77,8 +611,18 @@
    "ties": 0,
    "losses": 2,
    "winRate": 0.75,
-   "bt": 1.7713,
+   "bt": 1.7726,
    "elo": 1573
+  },
+  {
+   "id": "tone1-onboarding-b",
+   "comparisons": 12,
+   "wins": 9,
+   "ties": 0,
+   "losses": 3,
+   "winRate": 0.75,
+   "bt": 1.7039,
+   "elo": 1604
   },
   {
    "id": "ssb-v1",
@@ -87,8 +631,48 @@
    "ties": 2,
    "losses": 6,
    "winRate": 0.563,
-   "bt": 1.4299,
+   "bt": 1.4357,
    "elo": 1580
+  },
+  {
+   "id": "tone1-recruiter2-b",
+   "comparisons": 12,
+   "wins": 8,
+   "ties": 0,
+   "losses": 4,
+   "winRate": 0.667,
+   "bt": 1.217,
+   "elo": 1539
+  },
+  {
+   "id": "tone1-tweet2-b",
+   "comparisons": 6,
+   "wins": 4,
+   "ties": 0,
+   "losses": 2,
+   "winRate": 0.667,
+   "bt": 1.2126,
+   "elo": 1523
+  },
+  {
+   "id": "tone1-changelog2-b",
+   "comparisons": 6,
+   "wins": 3,
+   "ties": 1,
+   "losses": 2,
+   "winRate": 0.583,
+   "bt": 1.2088,
+   "elo": 1509
+  },
+  {
+   "id": "tone1-readme2-a",
+   "comparisons": 6,
+   "wins": 3,
+   "ties": 1,
+   "losses": 2,
+   "winRate": 0.583,
+   "bt": 1.1921,
+   "elo": 1494
   },
   {
    "id": "ae-open-v1",
@@ -97,8 +681,38 @@
    "ties": 0,
    "losses": 4,
    "winRate": 0.5,
-   "bt": 1.1747,
+   "bt": 1.1753,
    "elo": 1532
+  },
+  {
+   "id": "tone1-changelog-a",
+   "comparisons": 5,
+   "wins": 3,
+   "ties": 0,
+   "losses": 2,
+   "winRate": 0.6,
+   "bt": 1.1435,
+   "elo": 1513
+  },
+  {
+   "id": "tone1-onboarding2-a",
+   "comparisons": 6,
+   "wins": 3,
+   "ties": 0,
+   "losses": 3,
+   "winRate": 0.5,
+   "bt": 1.0001,
+   "elo": 1512
+  },
+  {
+   "id": "tone1-onboarding2-b",
+   "comparisons": 6,
+   "wins": 3,
+   "ties": 0,
+   "losses": 3,
+   "winRate": 0.5,
+   "bt": 1.0001,
+   "elo": 1488
   },
   {
    "id": "ssb-v2",
@@ -107,8 +721,18 @@
    "ties": 2,
    "losses": 6,
    "winRate": 0.563,
-   "bt": 0.9108,
+   "bt": 0.9145,
    "elo": 1482
+  },
+  {
+   "id": "tone1-changelog-b",
+   "comparisons": 5,
+   "wins": 2,
+   "ties": 0,
+   "losses": 3,
+   "winRate": 0.4,
+   "bt": 0.8745,
+   "elo": 1487
   },
   {
    "id": "ae-open-v2",
@@ -117,8 +741,48 @@
    "ties": 0,
    "losses": 4,
    "winRate": 0.5,
-   "bt": 0.8507,
+   "bt": 0.8511,
    "elo": 1468
+  },
+  {
+   "id": "tone1-readme2-b",
+   "comparisons": 6,
+   "wins": 2,
+   "ties": 1,
+   "losses": 3,
+   "winRate": 0.417,
+   "bt": 0.839,
+   "elo": 1506
+  },
+  {
+   "id": "tone1-changelog2-a",
+   "comparisons": 6,
+   "wins": 2,
+   "ties": 1,
+   "losses": 3,
+   "winRate": 0.417,
+   "bt": 0.8273,
+   "elo": 1491
+  },
+  {
+   "id": "tone1-tweet2-a",
+   "comparisons": 6,
+   "wins": 2,
+   "ties": 0,
+   "losses": 4,
+   "winRate": 0.333,
+   "bt": 0.8247,
+   "elo": 1477
+  },
+  {
+   "id": "tone1-recruiter2-a",
+   "comparisons": 12,
+   "wins": 4,
+   "ties": 0,
+   "losses": 8,
+   "winRate": 0.333,
+   "bt": 0.8224,
+   "elo": 1461
   },
   {
    "id": "ssb-v3",
@@ -127,8 +791,18 @@
    "ties": 0,
    "losses": 10,
    "winRate": 0.375,
-   "bt": 0.7692,
+   "bt": 0.7723,
    "elo": 1438
+  },
+  {
+   "id": "tone1-onboarding-a",
+   "comparisons": 12,
+   "wins": 3,
+   "ties": 0,
+   "losses": 9,
+   "winRate": 0.25,
+   "bt": 0.5878,
+   "elo": 1396
   },
   {
    "id": "tf-v1",
@@ -137,8 +811,38 @@
    "ties": 0,
    "losses": 6,
    "winRate": 0.25,
-   "bt": 0.5639,
+   "bt": 0.5643,
    "elo": 1427
+  },
+  {
+   "id": "tone1-commit-b",
+   "comparisons": 6,
+   "wins": 1,
+   "ties": 0,
+   "losses": 5,
+   "winRate": 0.167,
+   "bt": 0.512,
+   "elo": 1434
+  },
+  {
+   "id": "tone1-tweet-a",
+   "comparisons": 6,
+   "wins": 1,
+   "ties": 0,
+   "losses": 5,
+   "winRate": 0.167,
+   "bt": 0.4509,
+   "elo": 1413
+  },
+  {
+   "id": "tone1-readme-b",
+   "comparisons": 6,
+   "wins": 0,
+   "ties": 0,
+   "losses": 6,
+   "winRate": 0,
+   "bt": 0.1867,
+   "elo": 1387
   }
  ]
 }

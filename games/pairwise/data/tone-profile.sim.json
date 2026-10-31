@@ -1,0 +1,96 @@
+{
+ "schema": "tone-profile",
+ "schemaVersion": "1.0.0",
+ "dataKind": "sim",
+ "generatedAt": "2026-10-31T15:19:55.501Z",
+ "warning": "SIMULATED (sim choosers / planted personas). Not Markus’s tone.",
+ "note": "Tone-discovery data from fictional texts. +1 = prefers the high end of the dimension (e.g. brevity +1 = terse).",
+ "sets": {
+  "tone-001": "1.0.0"
+ },
+ "comparisons": 71,
+ "neither": 1,
+ "method": "per-dim weighted mean of signed wins (|delta|>=0.2, strength weights 1/1.5/2) + joint L2 logistic regression (lambda 1)",
+ "dimensions": [
+  {
+   "dim": "formality",
+   "preference": 0.249,
+   "se": 0.129,
+   "n": 71,
+   "logisticBeta": -0.773,
+   "confidence": "high"
+  },
+  {
+   "dim": "warmth",
+   "preference": -0.346,
+   "se": 0.127,
+   "n": 71,
+   "logisticBeta": 0.341,
+   "confidence": "high"
+  },
+  {
+   "dim": "brevity",
+   "preference": 0.409,
+   "se": 0.141,
+   "n": 60,
+   "logisticBeta": -0.26,
+   "confidence": "high"
+  },
+  {
+   "dim": "humor",
+   "preference": -0.354,
+   "se": 0.243,
+   "n": 29,
+   "logisticBeta": 0.121,
+   "confidence": "low"
+  },
+  {
+   "dim": "confidence",
+   "preference": 0.011,
+   "se": 0.246,
+   "n": 23,
+   "logisticBeta": -0.459,
+   "confidence": "low"
+  },
+  {
+   "dim": "technicality",
+   "preference": 0.408,
+   "se": 0.246,
+   "n": 23,
+   "logisticBeta": 0.401,
+   "confidence": "high"
+  },
+  {
+   "dim": "directness",
+   "preference": 0.453,
+   "se": 0.136,
+   "n": 48,
+   "logisticBeta": 0.907,
+   "confidence": "high"
+  },
+  {
+   "dim": "emoji",
+   "preference": -0.7,
+   "se": 0.284,
+   "n": 6,
+   "logisticBeta": -0.557,
+   "confidence": "medium"
+  },
+  {
+   "dim": "personal",
+   "preference": -0.411,
+   "se": 0.144,
+   "n": 53,
+   "logisticBeta": -0.052,
+   "confidence": "high"
+  }
+ ],
+ "rejectedBoth": [
+  {
+   "pairId": "tone1-p6",
+   "a": "tone1-changelog-a",
+   "b": "tone1-changelog-b",
+   "setId": "tone-001"
+  }
+ ]
+}

@@ -1,0 +1,601 @@
+{
+ "setId": "tone-001",
+ "setVersion": "1.0.0",
+ "demo": false,
+ "kind": "tone-discovery",
+ "fictional": true,
+ "note": "TONE-DISCOVERY DATA (real preference signal), FICTIONAL CONTENT. Each pair is the same fictional message in two tones. Choices estimate Markus’s preferred writing voice; they are not product or content decisions. No personal data.",
+ "title": "Tone 001: which voice is yours?",
+ "criterion": "Which sounds more like how you’d want to write?",
+ "toneDimensions": {
+  "formality": "-1 casual .. +1 formal",
+  "warmth": "-1 cool .. +1 warm",
+  "brevity": "-1 expansive .. +1 terse",
+  "humor": "-1 dry/serious .. +1 playful",
+  "confidence": "-1 humble/hedged .. +1 assertive",
+  "technicality": "-1 lay explanatory .. +1 technical-precise",
+  "directness": "-1 polite/indirect .. +1 direct (Swedish-direct)",
+  "emoji": "-1 none .. +1 emoji",
+  "personal": "-1 impersonal .. +1 first person"
+ },
+ "pairs": [
+  {
+   "id": "tone1-p1",
+   "kind": "README intro for a dev tool",
+   "contrast": "plain vs playful",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-readme-a",
+    "label": "Plain",
+    "text": "logtap streams structured logs from any process to your terminal, with filtering by level, service and field. No agent, no config file. Install with one command and pipe anything into it.",
+    "tone": {
+     "formality": 0.3,
+     "warmth": 0,
+     "brevity": 0.5,
+     "humor": 0,
+     "confidence": 0.4,
+     "technicality": 0.5,
+     "directness": 0.6,
+     "emoji": 0,
+     "personal": -0.6
+    }
+   },
+   "b": {
+    "id": "tone1-readme-b",
+    "label": "Playful",
+    "text": "Your logs are shouting and nobody is listening. logtap fixes that: pipe any process into it and get tidy, filterable output by level, service or field. No agent, no config, no yak shaving.",
+    "tone": {
+     "formality": -0.6,
+     "warmth": 0.4,
+     "brevity": 0.2,
+     "humor": 0.8,
+     "confidence": 0.6,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": -0.3
+    }
+   }
+  },
+  {
+   "id": "tone1-p2",
+   "kind": "GitHub PR description",
+   "contrast": "terse vs explanatory",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-pr-a",
+    "label": "Terse",
+    "text": "Fix race in cache invalidation.\n- lock around refresh\n- add regression test\nCloses #212.",
+    "tone": {
+     "formality": 0.2,
+     "warmth": 0,
+     "brevity": 1,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0.6,
+     "directness": 0.8,
+     "emoji": 0,
+     "personal": -0.8
+    }
+   },
+   "b": {
+    "id": "tone1-pr-b",
+    "label": "Explanatory",
+    "text": "This fixes a race where two requests could refresh the cache at once and one would overwrite fresh data with stale data. I added a lock around refresh and a regression test that reproduced it reliably. Closes #212.",
+    "tone": {
+     "formality": 0,
+     "warmth": 0.3,
+     "brevity": -0.5,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0.3,
+     "directness": 0.2,
+     "emoji": 0,
+     "personal": 0.6
+    }
+   }
+  },
+  {
+   "id": "tone1-p3",
+   "kind": "LinkedIn post about shipping",
+   "contrast": "humble vs confident",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-linkedin-a",
+    "label": "Humble",
+    "text": "Small milestone: the habit tracker I have been tinkering with on weekends is finally public. It is rough around the edges and I am sure I got things wrong, so any feedback is very welcome. Thanks to everyone who tested it.",
+    "tone": {
+     "formality": -0.2,
+     "warmth": 0.7,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": -0.8,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.9
+    }
+   },
+   "b": {
+    "id": "tone1-linkedin-b",
+    "label": "Confident",
+    "text": "Shipped: a habit tracker that works offline, syncs in under a second and needs no account. Built it in six weekends. If you have tried five trackers and quit all of them, try this one. Link in comments.",
+    "tone": {
+     "formality": 0,
+     "warmth": -0.1,
+     "brevity": 0.3,
+     "humor": 0,
+     "confidence": 0.9,
+     "technicality": 0,
+     "directness": 0.8,
+     "emoji": 0,
+     "personal": 0.4
+    }
+   }
+  },
+  {
+   "id": "tone1-p4",
+   "kind": "Email reply to a recruiter",
+   "contrast": "Swedish-direct vs Anglo-polite",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-recruiter-a",
+    "label": "Direct",
+    "text": "Hi Sam, thanks. I am not looking right now, but I would consider a fully remote staff role with a clear product focus. If that comes up, send it over. Best, M.",
+    "tone": {
+     "formality": 0,
+     "warmth": 0,
+     "brevity": 0.6,
+     "humor": 0,
+     "confidence": 0.5,
+     "technicality": 0,
+     "directness": 0.9,
+     "emoji": 0,
+     "personal": 0.8
+    }
+   },
+   "b": {
+    "id": "tone1-recruiter-b",
+    "label": "Polite",
+    "text": "Hi Sam, thank you so much for reaching out, I really appreciate you thinking of me. I am quite happy where I am at the moment, but I would love to stay in touch, and if a remote staff role ever comes up, I would be glad to hear about it.",
+    "tone": {
+     "formality": 0.3,
+     "warmth": 0.8,
+     "brevity": -0.5,
+     "humor": 0,
+     "confidence": -0.2,
+     "technicality": 0,
+     "directness": -0.7,
+     "emoji": 0,
+     "personal": 0.8
+    }
+   }
+  },
+  {
+   "id": "tone1-p5",
+   "kind": "Commit message",
+   "contrast": "impersonal-technical vs first person casual",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-commit-a",
+    "label": "Impersonal",
+    "text": "Refactor auth middleware: extract token parsing into parseBearer(), remove duplicate expiry check, no behaviour change.",
+    "tone": {
+     "formality": 0.5,
+     "warmth": 0,
+     "brevity": 0.6,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0.9,
+     "directness": 0.6,
+     "emoji": 0,
+     "personal": -1
+    }
+   },
+   "b": {
+    "id": "tone1-commit-b",
+    "label": "Casual",
+    "text": "Clean up auth middleware a bit. I pulled token parsing into its own function and dropped the expiry check we were doing twice. Should behave exactly the same.",
+    "tone": {
+     "formality": -0.6,
+     "warmth": 0.3,
+     "brevity": -0.1,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.8
+    }
+   }
+  },
+  {
+   "id": "tone1-p6",
+   "kind": "Changelog entry",
+   "contrast": "formal vs conversational",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-changelog-a",
+    "label": "Formal",
+    "text": "Version 2.4.0. Added support for exporting reports as CSV. Improved startup time by approximately 40 percent. Resolved an issue where time zones were displayed incorrectly for some users.",
+    "tone": {
+     "formality": 0.9,
+     "warmth": 0,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": 0.2,
+     "technicality": 0.3,
+     "directness": 0,
+     "emoji": 0,
+     "personal": -0.9
+    }
+   },
+   "b": {
+    "id": "tone1-changelog-b",
+    "label": "Conversational",
+    "text": "2.4.0 is out! You can now export reports to CSV, the app starts about 40% faster, and we finally squashed that annoying bug that showed the wrong time zone for some of you.",
+    "tone": {
+     "formality": -0.7,
+     "warmth": 0.6,
+     "brevity": 0,
+     "humor": 0.2,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.4
+    }
+   }
+  },
+  {
+   "id": "tone1-p7",
+   "kind": "Tweet about a new skill",
+   "contrast": "emoji vs none",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-tweet-a",
+    "label": "Emoji",
+    "text": "New skill unlocked 🎉 I can finally write Rust without fighting the borrow checker every five minutes 🦀 Took three weekends and one very small CLI. Next up: async 😅",
+    "tone": {
+     "formality": -0.8,
+     "warmth": 0.5,
+     "brevity": 0,
+     "humor": 0.6,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 1,
+     "personal": 0.8
+    }
+   },
+   "b": {
+    "id": "tone1-tweet-b",
+    "label": "No emoji",
+    "text": "Three weekends and one small CLI later, I can write Rust without fighting the borrow checker every five minutes. Next up: async.",
+    "tone": {
+     "formality": -0.3,
+     "warmth": 0,
+     "brevity": 0.5,
+     "humor": 0.2,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.4,
+     "emoji": -1,
+     "personal": 0.6
+    }
+   }
+  },
+  {
+   "id": "tone1-p8",
+   "kind": "App onboarding microcopy",
+   "contrast": "warm vs terse",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-onboarding-a",
+    "label": "Warm",
+    "text": "Welcome in! Let us set things up together. It takes about a minute, and you can change anything later.",
+    "tone": {
+     "formality": -0.4,
+     "warmth": 0.9,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.3
+    }
+   },
+   "b": {
+    "id": "tone1-onboarding-b",
+    "label": "Terse",
+    "text": "Set up your workspace. About 1 minute. Editable later.",
+    "tone": {
+     "formality": 0.2,
+     "warmth": -0.4,
+     "brevity": 1,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.8,
+     "emoji": 0,
+     "personal": -0.7
+    }
+   }
+  },
+  {
+   "id": "tone1-p9",
+   "kind": "README intro for a dev tool",
+   "contrast": "technical-precise vs explanatory",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-readme2-a",
+    "label": "Precise",
+    "text": "qcache is an in-process LRU cache for Node with TTL, size-based eviction and stale-while-revalidate. O(1) get and set, zero dependencies, 3 kB gzipped. Works in Node 18+ and Bun.",
+    "tone": {
+     "formality": 0.4,
+     "warmth": 0,
+     "brevity": 0.5,
+     "humor": 0,
+     "confidence": 0.6,
+     "technicality": 1,
+     "directness": 0,
+     "emoji": 0,
+     "personal": -0.8
+    }
+   },
+   "b": {
+    "id": "tone1-readme2-b",
+    "label": "Explanatory",
+    "text": "qcache keeps recently used data in memory so your app does not have to fetch it again. Old entries expire on their own, and if something is a little stale it is served instantly while a fresh copy loads in the background.",
+    "tone": {
+     "formality": 0,
+     "warmth": 0.4,
+     "brevity": -0.4,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": -0.6,
+     "directness": 0,
+     "emoji": 0,
+     "personal": -0.3
+    }
+   }
+  },
+  {
+   "id": "tone1-p10",
+   "kind": "GitHub PR description",
+   "contrast": "confident vs humble",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-pr2-a",
+    "label": "Confident",
+    "text": "Replaces the polling sync with websockets. Latency drops from about 5 s to under 200 ms and server load falls by roughly a third. Tested on staging for a week. Ready to merge.",
+    "tone": {
+     "formality": 0,
+     "warmth": 0,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": 0.9,
+     "technicality": 0.5,
+     "directness": 0.7,
+     "emoji": 0,
+     "personal": -0.5
+    }
+   },
+   "b": {
+    "id": "tone1-pr2-b",
+    "label": "Humble",
+    "text": "First attempt at replacing polling sync with websockets. It seems to cut latency a lot on staging, but I am not fully sure about reconnect edge cases, so I would really value a careful review before we merge.",
+    "tone": {
+     "formality": 0,
+     "warmth": 0.5,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": -0.8,
+     "technicality": 0,
+     "directness": -0.2,
+     "emoji": 0,
+     "personal": 0.8
+    }
+   }
+  },
+  {
+   "id": "tone1-p11",
+   "kind": "LinkedIn post about shipping",
+   "contrast": "storytelling vs bullet facts",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-linkedin2-a",
+    "label": "Story",
+    "text": "Last spring I kept losing track of which side projects were actually alive. So I built a tiny dashboard that pings each one every morning. Today I am open-sourcing it, in case your graveyard of repos needs a heartbeat monitor too.",
+    "tone": {
+     "formality": -0.4,
+     "warmth": 0.6,
+     "brevity": -0.4,
+     "humor": 0.4,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 1
+    }
+   },
+   "b": {
+    "id": "tone1-linkedin2-b",
+    "label": "Facts",
+    "text": "Open-sourced today: a small dashboard that checks your side projects every morning.\n- uptime and last deploy\n- stale dependency alerts\n- one YAML file\nRepo in comments.",
+    "tone": {
+     "formality": 0,
+     "warmth": -0.2,
+     "brevity": 0.7,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0.4,
+     "directness": 0.8,
+     "emoji": 0,
+     "personal": -0.3
+    }
+   }
+  },
+  {
+   "id": "tone1-p12",
+   "kind": "Email reply to a recruiter",
+   "contrast": "formal vs conversational",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-recruiter2-a",
+    "label": "Formal",
+    "text": "Dear Ms. Patel, thank you for your message regarding the platform engineering position. I would be pleased to arrange a brief call. I am available Tuesday or Thursday afternoon next week. Kind regards.",
+    "tone": {
+     "formality": 1,
+     "warmth": 0.1,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.3,
+     "emoji": 0,
+     "personal": 0.5
+    }
+   },
+   "b": {
+    "id": "tone1-recruiter2-b",
+    "label": "Conversational",
+    "text": "Hi Priya, thanks for getting in touch! The platform role sounds interesting. Happy to jump on a quick call, Tuesday or Thursday afternoon next week works for me.",
+    "tone": {
+     "formality": -0.6,
+     "warmth": 0.6,
+     "brevity": 0.2,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.4,
+     "emoji": 0,
+     "personal": 0.7
+    }
+   }
+  },
+  {
+   "id": "tone1-p13",
+   "kind": "App onboarding microcopy",
+   "contrast": "playful vs plain",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-onboarding2-a",
+    "label": "Playful",
+    "text": "No notes yet. This page is suspiciously tidy. Tap + and make a mess.",
+    "tone": {
+     "formality": -0.7,
+     "warmth": 0.4,
+     "brevity": 0.4,
+     "humor": 0.9,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0
+    }
+   },
+   "b": {
+    "id": "tone1-onboarding2-b",
+    "label": "Plain",
+    "text": "You have no notes yet. Tap + to create your first note.",
+    "tone": {
+     "formality": 0.2,
+     "warmth": 0,
+     "brevity": 0.5,
+     "humor": -0.5,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.6,
+     "emoji": 0,
+     "personal": 0
+    }
+   }
+  },
+  {
+   "id": "tone1-p14",
+   "kind": "Changelog entry",
+   "contrast": "we vs impersonal",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-changelog2-a",
+    "label": "We",
+    "text": "We rebuilt search from scratch. It is faster, it understands typos, and it finally finds things inside attachments. We would love to hear what still feels off.",
+    "tone": {
+     "formality": -0.3,
+     "warmth": 0.6,
+     "brevity": 0,
+     "humor": 0,
+     "confidence": 0.3,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.8
+    }
+   },
+   "b": {
+    "id": "tone1-changelog2-b",
+    "label": "Impersonal",
+    "text": "Search rebuilt. Faster results, typo tolerance and full-text search inside attachments. Feedback: Settings > Help > Report a problem.",
+    "tone": {
+     "formality": 0.3,
+     "warmth": -0.3,
+     "brevity": 0.7,
+     "humor": 0,
+     "confidence": 0,
+     "technicality": 0,
+     "directness": 0.7,
+     "emoji": 0,
+     "personal": -0.9
+    }
+   }
+  },
+  {
+   "id": "tone1-p15",
+   "kind": "Tweet about a new skill",
+   "contrast": "hype vs understated",
+   "criterion": "Which sounds more like how you’d want to write?",
+   "a": {
+    "id": "tone1-tweet2-a",
+    "label": "Hype",
+    "text": "I just learned to build browser games from scratch and honestly it is the most fun I have had coding in years. Canvas, touch controls, physics, all of it. You should try it this weekend!",
+    "tone": {
+     "formality": -0.6,
+     "warmth": 0.5,
+     "brevity": -0.3,
+     "humor": 0.2,
+     "confidence": 0.6,
+     "technicality": 0,
+     "directness": 0,
+     "emoji": 0,
+     "personal": 0.9
+    }
+   },
+   "b": {
+    "id": "tone1-tweet2-b",
+    "label": "Understated",
+    "text": "Learned to make small browser games this month. Canvas, touch input, a bit of physics. Surprisingly fun.",
+    "tone": {
+     "formality": -0.3,
+     "warmth": 0,
+     "brevity": 0.8,
+     "humor": 0,
+     "confidence": 0.2,
+     "technicality": 0,
+     "directness": 0.5,
+     "emoji": 0,
+     "personal": 0.5
+    }
+   }
+  }
+ ],
+ "reasonTags": [
+  "sounds_like_me",
+  "too_stiff",
+  "too_cute",
+  "too_long",
+  "too_vague",
+  "too_salesy"
+ ]
+}

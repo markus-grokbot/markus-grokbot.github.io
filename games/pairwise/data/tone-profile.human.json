@@ -1,0 +1,88 @@
+{
+ "schema": "tone-profile",
+ "schemaVersion": "1.0.0",
+ "dataKind": "human",
+ "generatedAt": "2026-10-31T15:24:12.178Z",
+ "note": "Tone-discovery data from fictional texts. +1 = prefers the high end of the dimension (e.g. brevity +1 = terse).",
+ "sets": {
+  "tone-001": "1.0.0"
+ },
+ "comparisons": 0,
+ "neither": 0,
+ "method": "per-dim weighted mean of signed wins (|delta|>=0.2, strength weights 1/1.5/2) + joint L2 logistic regression (lambda 1)",
+ "dimensions": [
+  {
+   "dim": "formality",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "warmth",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "brevity",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "humor",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "confidence",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "technicality",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "directness",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "emoji",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  },
+  {
+   "dim": "personal",
+   "preference": 0,
+   "se": null,
+   "n": 0,
+   "logisticBeta": 0,
+   "confidence": "none"
+  }
+ ],
+ "rejectedBoth": []
+}
