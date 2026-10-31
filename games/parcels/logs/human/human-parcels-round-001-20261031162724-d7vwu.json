@@ -1,0 +1,2742 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.2.0",
+ "game": {
+  "id": "parcels",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "parcels"
+ },
+ "run": {
+  "id": "20261031162724-d7vwu",
+  "type": "human",
+  "startedAt": "2026-10-31T16:27:24.537Z",
+  "endedAt": "2026-10-31T16:31:56.909Z",
+  "device": {
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+   "w": 375,
+   "h": 549,
+   "touch": true
+  },
+  "player": {},
+  "seed": 464044535,
+  "tuningSource": "round:round-001"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "wave": 1,
+    "waveSpeed": 1,
+    "durationMs": 35000,
+    "baseFallMs": 8000,
+    "baseGapMs": 4200,
+    "graceMs": 350,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T16:27:24.537Z",
+   "endedAt": "2026-10-31T16:28:05.398Z",
+   "durationMs": 40861,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 40861,
+    "score": 648,
+    "actions": 6,
+    "misplays": 3,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2138,
+     "type": "spawn",
+     "parcelId": "p001",
+     "speed": 1
+    },
+    {
+     "t": 6340,
+     "type": "spawn",
+     "parcelId": "p002",
+     "speed": 1.018
+    },
+    {
+     "t": 8740,
+     "type": "sort",
+     "parcelId": "p001",
+     "bin": "reply",
+     "sortMs": 6600,
+     "changedMind": false,
+     "speed": 1.028
+    },
+    {
+     "t": 10470,
+     "type": "spawn",
+     "parcelId": "p003",
+     "speed": 1.036
+    },
+    {
+     "t": 13853,
+     "type": "sort",
+     "parcelId": "p002",
+     "bin": "archive",
+     "sortMs": 7517,
+     "changedMind": false,
+     "speed": 1.05
+    },
+    {
+     "t": 14539,
+     "type": "spawn",
+     "parcelId": "p004",
+     "speed": 1.053
+    },
+    {
+     "t": 18207,
+     "type": "miss",
+     "parcelId": "p003",
+     "speed": 1.069
+    },
+    {
+     "t": 18536,
+     "type": "spawn",
+     "parcelId": "p005",
+     "speed": 1.07
+    },
+    {
+     "t": 21820,
+     "type": "sort",
+     "parcelId": "p004",
+     "bin": "spam",
+     "sortMs": 7283,
+     "changedMind": false,
+     "speed": 1.084
+    },
+    {
+     "t": 22471,
+     "type": "spawn",
+     "parcelId": "p006",
+     "speed": 1.087
+    },
+    {
+     "t": 25904,
+     "type": "sort",
+     "parcelId": "p005",
+     "bin": "info",
+     "sortMs": 7367,
+     "changedMind": false,
+     "speed": 1.102
+    },
+    {
+     "t": 26337,
+     "type": "spawn",
+     "parcelId": "p007",
+     "speed": 1.104
+    },
+    {
+     "t": 29821,
+     "type": "miss",
+     "parcelId": "p006",
+     "speed": 1.119
+    },
+    {
+     "t": 30154,
+     "type": "spawn",
+     "parcelId": "p008",
+     "speed": 1.12
+    },
+    {
+     "t": 33571,
+     "type": "miss",
+     "parcelId": "p007",
+     "speed": 1.135
+    },
+    {
+     "t": 33904,
+     "type": "spawn",
+     "parcelId": "p009",
+     "speed": 1.136
+    },
+    {
+     "t": 36904,
+     "type": "sort",
+     "parcelId": "p008",
+     "bin": "reply",
+     "sortMs": 6750,
+     "changedMind": false,
+     "speed": 1.149
+    },
+    {
+     "t": 40855,
+     "type": "sort",
+     "parcelId": "p009",
+     "bin": "archive",
+     "sortMs": 6950,
+     "changedMind": false,
+     "speed": 1.15
+    },
+    {
+     "t": 40861,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 1,
+     "parcelsShown": 9,
+     "sorted": 6,
+     "misses": 3,
+     "changedMind": 0,
+     "bestCombo": 2,
+     "scoreWave": 648,
+     "speedEnd": 1.15,
+     "decisions": [
+      {
+       "parcelId": "p001",
+       "bin": "reply",
+       "sortMs": 6600,
+       "firstMs": 6250,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.028,
+       "speedAtSpawn": 1,
+       "y": 0.827,
+       "combo": 1,
+       "missed": false,
+       "anchorBin": "reply",
+       "points": 109
+      },
+      {
+       "parcelId": "p002",
+       "bin": "archive",
+       "sortMs": 7517,
+       "firstMs": 7150,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.05,
+       "speedAtSpawn": 1.018,
+       "y": 0.959,
+       "combo": 2,
+       "missed": false,
+       "points": 112
+      },
+      {
+       "parcelId": "p003",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.069,
+       "speedAtSpawn": 1.036,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p004",
+       "bin": "spam",
+       "sortMs": 7283,
+       "firstMs": 6933,
+       "changedMind": false,
+       "binsTried": [
+        "spam"
+       ],
+       "speed": 1.084,
+       "speedAtSpawn": 1.053,
+       "y": 0.961,
+       "combo": 1,
+       "missed": false,
+       "anchorBin": "spam",
+       "points": 102
+      },
+      {
+       "parcelId": "p005",
+       "bin": "info",
+       "sortMs": 7367,
+       "firstMs": 7017,
+       "changedMind": false,
+       "binsTried": [
+        "info"
+       ],
+       "speed": 1.102,
+       "speedAtSpawn": 1.07,
+       "y": 0.988,
+       "combo": 2,
+       "missed": false,
+       "anchorBin": "reply",
+       "points": 111
+      },
+      {
+       "parcelId": "p006",
+       "anchorBin": "archive",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.119,
+       "speedAtSpawn": 1.087,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p007",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.135,
+       "speedAtSpawn": 1.104,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p008",
+       "bin": "reply",
+       "sortMs": 6750,
+       "firstMs": 6383,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.149,
+       "speedAtSpawn": 1.12,
+       "y": 0.947,
+       "combo": 1,
+       "missed": false,
+       "points": 103
+      },
+      {
+       "parcelId": "p009",
+       "bin": "archive",
+       "sortMs": 6950,
+       "firstMs": 6583,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.15,
+       "speedAtSpawn": 1.136,
+       "y": 0.989,
+       "combo": 2,
+       "missed": false,
+       "points": 111
+      }
+     ],
+     "roundId": "round-001",
+     "roundNo": 1,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 2,
+   "params": {
+    "setId": "round-001-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T16:28:05.402Z",
+   "endedAt": "2026-10-31T16:28:39.338Z",
+   "durationMs": 33936,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 33936,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 33936,
+     "type": "ab_decision",
+     "pairId": "round-001-ab1",
+     "choice": "B"
+    },
+    {
+     "t": 33936,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-001-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-001",
+     "decisions": [
+      {
+       "pairId": "round-001-ab1",
+       "itemA": "p018:qwen2515b",
+       "itemB": "p018:llama323b",
+       "choice": "B",
+       "winner": "p018:llama323b",
+       "strength": 2,
+       "decisionTimeMs": 33935,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "p018",
+       "modelA": "qwen2.5:1.5b",
+       "modelB": "llama3.2:3b",
+       "winnerModel": "llama3.2:3b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 3,
+   "params": {
+    "wave": 2,
+    "waveSpeed": 1.3,
+    "durationMs": 35000,
+    "baseFallMs": 8000,
+    "baseGapMs": 4200,
+    "graceMs": 350,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T16:28:39.338Z",
+   "endedAt": "2026-10-31T16:29:20.297Z",
+   "durationMs": 40959,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 40959,
+    "score": 1191,
+    "actions": 9,
+    "misplays": 3,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2123,
+     "type": "spawn",
+     "parcelId": "p010",
+     "speed": 1.3
+    },
+    {
+     "t": 5356,
+     "type": "spawn",
+     "parcelId": "p011",
+     "speed": 1.318
+    },
+    {
+     "t": 6206,
+     "type": "sort",
+     "parcelId": "p010",
+     "bin": "reply",
+     "sortMs": 4083,
+     "changedMind": false,
+     "speed": 1.323
+    },
+    {
+     "t": 8556,
+     "type": "spawn",
+     "parcelId": "p012",
+     "speed": 1.336
+    },
+    {
+     "t": 9723,
+     "type": "sort",
+     "parcelId": "p011",
+     "bin": "archive",
+     "sortMs": 4367,
+     "changedMind": false,
+     "speed": 1.342
+    },
+    {
+     "t": 11706,
+     "type": "spawn",
+     "parcelId": "p013",
+     "speed": 1.353
+    },
+    {
+     "t": 12758,
+     "type": "sort",
+     "parcelId": "p012",
+     "bin": "reply",
+     "sortMs": 4200,
+     "changedMind": false,
+     "speed": 1.359
+    },
+    {
+     "t": 14823,
+     "type": "spawn",
+     "parcelId": "p014",
+     "speed": 1.371
+    },
+    {
+     "t": 16640,
+     "type": "sort",
+     "parcelId": "p013",
+     "bin": "reply",
+     "sortMs": 4933,
+     "changedMind": false,
+     "speed": 1.381
+    },
+    {
+     "t": 17890,
+     "type": "spawn",
+     "parcelId": "p015",
+     "speed": 1.388
+    },
+    {
+     "t": 19490,
+     "type": "sort",
+     "parcelId": "p014",
+     "bin": "archive",
+     "sortMs": 4667,
+     "changedMind": false,
+     "speed": 1.397
+    },
+    {
+     "t": 20923,
+     "type": "spawn",
+     "parcelId": "p016",
+     "speed": 1.405
+    },
+    {
+     "t": 23340,
+     "type": "sort",
+     "parcelId": "p015",
+     "bin": "reply",
+     "sortMs": 5450,
+     "changedMind": false,
+     "speed": 1.418
+    },
+    {
+     "t": 23924,
+     "type": "spawn",
+     "parcelId": "p017",
+     "speed": 1.422
+    },
+    {
+     "t": 26457,
+     "type": "sort",
+     "parcelId": "p016",
+     "bin": "archive",
+     "sortMs": 5533,
+     "changedMind": false,
+     "speed": 1.436
+    },
+    {
+     "t": 26890,
+     "type": "spawn",
+     "parcelId": "p018",
+     "speed": 1.438
+    },
+    {
+     "t": 29541,
+     "type": "miss",
+     "parcelId": "p017",
+     "speed": 1.453
+    },
+    {
+     "t": 29824,
+     "type": "spawn",
+     "parcelId": "p019",
+     "speed": 1.454
+    },
+    {
+     "t": 32441,
+     "type": "miss",
+     "parcelId": "p018",
+     "speed": 1.469
+    },
+    {
+     "t": 32724,
+     "type": "spawn",
+     "parcelId": "p020",
+     "speed": 1.471
+    },
+    {
+     "t": 34991,
+     "type": "sort",
+     "parcelId": "p019",
+     "bin": "archive",
+     "sortMs": 5167,
+     "changedMind": false,
+     "speed": 1.483
+    },
+    {
+     "t": 35591,
+     "type": "spawn",
+     "parcelId": "p021",
+     "speed": 1.487
+    },
+    {
+     "t": 38158,
+     "type": "sort",
+     "parcelId": "p020",
+     "bin": "archive",
+     "sortMs": 5433,
+     "changedMind": false,
+     "speed": 1.495
+    },
+    {
+     "t": 40958,
+     "type": "miss",
+     "parcelId": "p021",
+     "speed": 1.495
+    },
+    {
+     "t": 40959,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 2,
+     "parcelsShown": 12,
+     "sorted": 9,
+     "misses": 3,
+     "changedMind": 0,
+     "bestCombo": 7,
+     "scoreWave": 1191,
+     "speedEnd": 1.495,
+     "decisions": [
+      {
+       "parcelId": "p010",
+       "bin": "reply",
+       "sortMs": 4083,
+       "firstMs": 3717,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.323,
+       "speedAtSpawn": 1.3,
+       "y": 0.666,
+       "combo": 1,
+       "missed": false,
+       "points": 117
+      },
+      {
+       "parcelId": "p011",
+       "bin": "archive",
+       "sortMs": 4367,
+       "firstMs": 4017,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.342,
+       "speedAtSpawn": 1.318,
+       "y": 0.722,
+       "combo": 2,
+       "missed": false,
+       "points": 124
+      },
+      {
+       "parcelId": "p012",
+       "bin": "reply",
+       "sortMs": 4200,
+       "firstMs": 3833,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.359,
+       "speedAtSpawn": 1.336,
+       "y": 0.704,
+       "combo": 3,
+       "missed": false,
+       "points": 135
+      },
+      {
+       "parcelId": "p013",
+       "bin": "reply",
+       "sortMs": 4933,
+       "firstMs": 4567,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.381,
+       "speedAtSpawn": 1.353,
+       "y": 0.837,
+       "combo": 4,
+       "missed": false,
+       "points": 138
+      },
+      {
+       "parcelId": "p014",
+       "bin": "archive",
+       "sortMs": 4667,
+       "firstMs": 4317,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.397,
+       "speedAtSpawn": 1.371,
+       "y": 0.803,
+       "combo": 5,
+       "missed": false,
+       "points": 150
+      },
+      {
+       "parcelId": "p015",
+       "bin": "reply",
+       "sortMs": 5450,
+       "firstMs": 5100,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.418,
+       "speedAtSpawn": 1.388,
+       "y": 0.948,
+       "combo": 6,
+       "missed": false,
+       "points": 153
+      },
+      {
+       "parcelId": "p016",
+       "bin": "archive",
+       "sortMs": 5533,
+       "firstMs": 5183,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.436,
+       "speedAtSpawn": 1.405,
+       "y": 0.975,
+       "combo": 7,
+       "missed": false,
+       "anchorBin": "archive",
+       "points": 161
+      },
+      {
+       "parcelId": "p017",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.453,
+       "speedAtSpawn": 1.422,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p018",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.469,
+       "speedAtSpawn": 1.438,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p019",
+       "bin": "archive",
+       "sortMs": 5167,
+       "firstMs": 4817,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.483,
+       "speedAtSpawn": 1.454,
+       "y": 0.942,
+       "combo": 1,
+       "missed": false,
+       "points": 103
+      },
+      {
+       "parcelId": "p020",
+       "bin": "archive",
+       "sortMs": 5433,
+       "firstMs": 5067,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.495,
+       "speedAtSpawn": 1.471,
+       "y": 1.002,
+       "combo": 2,
+       "missed": false,
+       "anchorBin": "spam",
+       "points": 110
+      },
+      {
+       "parcelId": "p021",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 5100,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.495,
+       "speedAtSpawn": 1.487,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      }
+     ],
+     "roundId": "round-001",
+     "roundNo": 1,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 4,
+   "params": {
+    "setId": "round-001-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T16:29:20.299Z",
+   "endedAt": "2026-10-31T16:30:07.958Z",
+   "durationMs": 47659,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 47659,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 47659,
+     "type": "ab_decision",
+     "pairId": "round-001-ab2",
+     "choice": "B"
+    },
+    {
+     "t": 47659,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-001-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-001",
+     "decisions": [
+      {
+       "pairId": "round-001-ab2",
+       "itemA": "p033:llama323b",
+       "itemB": "p033:qwen2515b",
+       "choice": "B",
+       "winner": "p033:qwen2515b",
+       "strength": 2,
+       "decisionTimeMs": 47658,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "p033",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "qwen2.5:1.5b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 5,
+   "params": {
+    "wave": 3,
+    "waveSpeed": 1.6,
+    "durationMs": 40000,
+    "baseFallMs": 8000,
+    "baseGapMs": 4200,
+    "graceMs": 350,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T16:30:07.958Z",
+   "endedAt": "2026-10-31T16:30:53.852Z",
+   "durationMs": 45894,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 45894,
+    "score": 1510,
+    "actions": 11,
+    "misplays": 6,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2125,
+     "type": "spawn",
+     "parcelId": "p022",
+     "speed": 1.6
+    },
+    {
+     "t": 4758,
+     "type": "spawn",
+     "parcelId": "p023",
+     "speed": 1.616
+    },
+    {
+     "t": 6608,
+     "type": "sort",
+     "parcelId": "p022",
+     "bin": "archive",
+     "sortMs": 4483,
+     "changedMind": false,
+     "speed": 1.627
+    },
+    {
+     "t": 7358,
+     "type": "spawn",
+     "parcelId": "p024",
+     "speed": 1.632
+    },
+    {
+     "t": 9341,
+     "type": "sort",
+     "parcelId": "p023",
+     "bin": "reply",
+     "sortMs": 4583,
+     "changedMind": false,
+     "speed": 1.643
+    },
+    {
+     "t": 9941,
+     "type": "spawn",
+     "parcelId": "p025",
+     "speed": 1.647
+    },
+    {
+     "t": 12008,
+     "type": "sort",
+     "parcelId": "p024",
+     "bin": "archive",
+     "sortMs": 4650,
+     "changedMind": false,
+     "speed": 1.659
+    },
+    {
+     "t": 12508,
+     "type": "spawn",
+     "parcelId": "p026",
+     "speed": 1.662
+    },
+    {
+     "t": 14458,
+     "type": "sort",
+     "parcelId": "p025",
+     "bin": "reply",
+     "sortMs": 4517,
+     "changedMind": false,
+     "speed": 1.674
+    },
+    {
+     "t": 15042,
+     "type": "spawn",
+     "parcelId": "p027",
+     "speed": 1.678
+    },
+    {
+     "t": 16759,
+     "type": "sort",
+     "parcelId": "p026",
+     "bin": "reply",
+     "sortMs": 4250,
+     "changedMind": false,
+     "speed": 1.688
+    },
+    {
+     "t": 17558,
+     "type": "spawn",
+     "parcelId": "p028",
+     "speed": 1.693
+    },
+    {
+     "t": 19309,
+     "type": "sort",
+     "parcelId": "p027",
+     "bin": "spam",
+     "sortMs": 4267,
+     "changedMind": false,
+     "speed": 1.703
+    },
+    {
+     "t": 20042,
+     "type": "spawn",
+     "parcelId": "p029",
+     "speed": 1.708
+    },
+    {
+     "t": 22176,
+     "type": "sort",
+     "parcelId": "p028",
+     "bin": "reply",
+     "sortMs": 4617,
+     "changedMind": false,
+     "speed": 1.72
+    },
+    {
+     "t": 22509,
+     "type": "spawn",
+     "parcelId": "p030",
+     "speed": 1.722
+    },
+    {
+     "t": 24442,
+     "type": "sort",
+     "parcelId": "p029",
+     "bin": "reply",
+     "sortMs": 4400,
+     "changedMind": false,
+     "speed": 1.734
+    },
+    {
+     "t": 24959,
+     "type": "spawn",
+     "parcelId": "p031",
+     "speed": 1.737
+    },
+    {
+     "t": 26993,
+     "type": "sort",
+     "parcelId": "p030",
+     "bin": "reply",
+     "sortMs": 4483,
+     "changedMind": false,
+     "speed": 1.749
+    },
+    {
+     "t": 27392,
+     "type": "spawn",
+     "parcelId": "p032",
+     "speed": 1.752
+    },
+    {
+     "t": 29559,
+     "type": "miss",
+     "parcelId": "p031",
+     "speed": 1.765
+    },
+    {
+     "t": 29792,
+     "type": "spawn",
+     "parcelId": "p033",
+     "speed": 1.766
+    },
+    {
+     "t": 31960,
+     "type": "miss",
+     "parcelId": "p032",
+     "speed": 1.779
+    },
+    {
+     "t": 32176,
+     "type": "spawn",
+     "parcelId": "p034",
+     "speed": 1.78
+    },
+    {
+     "t": 34312,
+     "type": "miss",
+     "parcelId": "p033",
+     "speed": 1.793
+    },
+    {
+     "t": 34543,
+     "type": "spawn",
+     "parcelId": "p035",
+     "speed": 1.795
+    },
+    {
+     "t": 36643,
+     "type": "sort",
+     "parcelId": "p034",
+     "bin": "reply",
+     "sortMs": 4467,
+     "changedMind": false,
+     "speed": 1.807
+    },
+    {
+     "t": 36893,
+     "type": "spawn",
+     "parcelId": "p036",
+     "speed": 1.809
+    },
+    {
+     "t": 38993,
+     "type": "miss",
+     "parcelId": "p035",
+     "speed": 1.821
+    },
+    {
+     "t": 39226,
+     "type": "spawn",
+     "parcelId": "p037",
+     "speed": 1.823
+    },
+    {
+     "t": 41310,
+     "type": "miss",
+     "parcelId": "p036",
+     "speed": 1.835
+    },
+    {
+     "t": 41543,
+     "type": "spawn",
+     "parcelId": "p038",
+     "speed": 1.837
+    },
+    {
+     "t": 41943,
+     "type": "sort",
+     "parcelId": "p037",
+     "bin": "archive",
+     "sortMs": 2717,
+     "changedMind": false,
+     "speed": 1.839
+    },
+    {
+     "t": 45894,
+     "type": "miss",
+     "parcelId": "p038",
+     "speed": 1.84
+    },
+    {
+     "t": 45894,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 3,
+     "parcelsShown": 17,
+     "sorted": 11,
+     "misses": 6,
+     "changedMind": 0,
+     "bestCombo": 9,
+     "scoreWave": 1510,
+     "speedEnd": 1.84,
+     "decisions": [
+      {
+       "parcelId": "p022",
+       "bin": "archive",
+       "sortMs": 4483,
+       "firstMs": 4133,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.627,
+       "speedAtSpawn": 1.6,
+       "y": 0.9,
+       "combo": 1,
+       "missed": false,
+       "points": 105
+      },
+      {
+       "parcelId": "p023",
+       "bin": "reply",
+       "sortMs": 4583,
+       "firstMs": 4233,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.643,
+       "speedAtSpawn": 1.616,
+       "y": 0.929,
+       "combo": 2,
+       "missed": false,
+       "points": 114
+      },
+      {
+       "parcelId": "p024",
+       "bin": "archive",
+       "sortMs": 4650,
+       "firstMs": 4283,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.659,
+       "speedAtSpawn": 1.632,
+       "y": 0.952,
+       "combo": 3,
+       "missed": false,
+       "points": 122
+      },
+      {
+       "parcelId": "p025",
+       "bin": "reply",
+       "sortMs": 4517,
+       "firstMs": 4150,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.674,
+       "speedAtSpawn": 1.647,
+       "y": 0.933,
+       "combo": 4,
+       "missed": false,
+       "points": 133
+      },
+      {
+       "parcelId": "p026",
+       "bin": "reply",
+       "sortMs": 4250,
+       "firstMs": 3883,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.688,
+       "speedAtSpawn": 1.662,
+       "y": 0.887,
+       "combo": 5,
+       "missed": false,
+       "points": 146
+      },
+      {
+       "parcelId": "p027",
+       "bin": "spam",
+       "sortMs": 4267,
+       "firstMs": 3917,
+       "changedMind": false,
+       "binsTried": [
+        "spam"
+       ],
+       "speed": 1.703,
+       "speedAtSpawn": 1.678,
+       "y": 0.898,
+       "combo": 6,
+       "missed": false,
+       "points": 155
+      },
+      {
+       "parcelId": "p028",
+       "bin": "reply",
+       "sortMs": 4617,
+       "firstMs": 4267,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.72,
+       "speedAtSpawn": 1.693,
+       "y": 0.98,
+       "combo": 7,
+       "missed": false,
+       "points": 161
+      },
+      {
+       "parcelId": "p029",
+       "bin": "reply",
+       "sortMs": 4400,
+       "firstMs": 4050,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.734,
+       "speedAtSpawn": 1.708,
+       "y": 0.943,
+       "combo": 8,
+       "missed": false,
+       "points": 173
+      },
+      {
+       "parcelId": "p030",
+       "bin": "reply",
+       "sortMs": 4483,
+       "firstMs": 4133,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.749,
+       "speedAtSpawn": 1.722,
+       "y": 0.969,
+       "combo": 9,
+       "missed": false,
+       "points": 182
+      },
+      {
+       "parcelId": "p031",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 4367,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.765,
+       "speedAtSpawn": 1.737,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p032",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.779,
+       "speedAtSpawn": 1.752,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p033",
+       "anchorBin": "spam",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 4433,
+       "changedMind": false,
+       "binsTried": [
+        "later"
+       ],
+       "speed": 1.793,
+       "speedAtSpawn": 1.766,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p034",
+       "bin": "reply",
+       "sortMs": 4467,
+       "firstMs": 4100,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.807,
+       "speedAtSpawn": 1.78,
+       "y": 0.998,
+       "combo": 1,
+       "missed": false,
+       "points": 100
+      },
+      {
+       "parcelId": "p035",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 4150,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.821,
+       "speedAtSpawn": 1.795,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p036",
+       "anchorBin": "archive",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.835,
+       "speedAtSpawn": 1.809,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p037",
+       "bin": "archive",
+       "sortMs": 2717,
+       "firstMs": 2350,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.839,
+       "speedAtSpawn": 1.823,
+       "y": 0.623,
+       "combo": 1,
+       "missed": false,
+       "points": 119
+      },
+      {
+       "parcelId": "p038",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 1.84,
+       "speedAtSpawn": 1.837,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      }
+     ],
+     "roundId": "round-001",
+     "roundNo": 1,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 6,
+   "params": {
+    "setId": "round-001-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T16:30:53.853Z",
+   "endedAt": "2026-10-31T16:31:12.710Z",
+   "durationMs": 18857,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 18857,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 18857,
+     "type": "ab_decision",
+     "pairId": "round-001-ab3",
+     "choice": "A"
+    },
+    {
+     "t": 18857,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-001-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-001",
+     "decisions": [
+      {
+       "pairId": "round-001-ab3",
+       "itemA": "p004:llama323b",
+       "itemB": "p004:qwen2515b",
+       "choice": "A",
+       "winner": "p004:llama323b",
+       "strength": 2,
+       "decisionTimeMs": 18857,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "p004",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "llama3.2:3b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 7,
+   "params": {
+    "wave": 4,
+    "waveSpeed": 1.95,
+    "durationMs": 40000,
+    "baseFallMs": 8000,
+    "baseGapMs": 4200,
+    "graceMs": 350,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T16:31:12.712Z",
+   "endedAt": "2026-10-31T16:31:56.906Z",
+   "durationMs": 44194,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 44194,
+    "score": 1355,
+    "actions": 11,
+    "misplays": 9,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2125,
+     "type": "spawn",
+     "parcelId": "p039",
+     "speed": 1.95
+    },
+    {
+     "t": 4291,
+     "type": "spawn",
+     "parcelId": "p040",
+     "speed": 1.966
+    },
+    {
+     "t": 6058,
+     "type": "sort",
+     "parcelId": "p039",
+     "bin": "reply",
+     "sortMs": 3933,
+     "changedMind": false,
+     "speed": 1.979
+    },
+    {
+     "t": 6443,
+     "type": "spawn",
+     "parcelId": "p027",
+     "speed": 1.982
+    },
+    {
+     "t": 8358,
+     "type": "miss",
+     "parcelId": "p040",
+     "speed": 1.996
+    },
+    {
+     "t": 8575,
+     "type": "spawn",
+     "parcelId": "p040",
+     "speed": 1.997
+    },
+    {
+     "t": 10291,
+     "type": "sort",
+     "parcelId": "p027",
+     "bin": "archive",
+     "sortMs": 3850,
+     "changedMind": false,
+     "speed": 2.01
+    },
+    {
+     "t": 10691,
+     "type": "spawn",
+     "parcelId": "p029",
+     "speed": 2.013
+    },
+    {
+     "t": 12275,
+     "type": "sort",
+     "parcelId": "p040",
+     "bin": "archive",
+     "sortMs": 3700,
+     "changedMind": false,
+     "speed": 2.024
+    },
+    {
+     "t": 12792,
+     "type": "spawn",
+     "parcelId": "p026",
+     "speed": 2.028
+    },
+    {
+     "t": 14158,
+     "type": "sort",
+     "parcelId": "p029",
+     "bin": "reply",
+     "sortMs": 3467,
+     "changedMind": false,
+     "speed": 2.038
+    },
+    {
+     "t": 14875,
+     "type": "spawn",
+     "parcelId": "p012",
+     "speed": 2.043
+    },
+    {
+     "t": 15775,
+     "type": "sort",
+     "parcelId": "p026",
+     "bin": "reply",
+     "sortMs": 2983,
+     "changedMind": false,
+     "speed": 2.05
+    },
+    {
+     "t": 16942,
+     "type": "spawn",
+     "parcelId": "p006",
+     "speed": 2.058
+    },
+    {
+     "t": 18442,
+     "type": "sort",
+     "parcelId": "p012",
+     "bin": "info",
+     "sortMs": 3567,
+     "changedMind": false,
+     "speed": 2.069
+    },
+    {
+     "t": 18992,
+     "type": "spawn",
+     "parcelId": "p019",
+     "speed": 2.073
+    },
+    {
+     "t": 20792,
+     "type": "sort",
+     "parcelId": "p006",
+     "bin": "archive",
+     "sortMs": 3850,
+     "changedMind": false,
+     "speed": 2.087
+    },
+    {
+     "t": 21025,
+     "type": "spawn",
+     "parcelId": "p037",
+     "speed": 2.088
+    },
+    {
+     "t": 22842,
+     "type": "miss",
+     "parcelId": "p019",
+     "speed": 2.102
+    },
+    {
+     "t": 23042,
+     "type": "spawn",
+     "parcelId": "p020",
+     "speed": 2.103
+    },
+    {
+     "t": 24842,
+     "type": "miss",
+     "parcelId": "p037",
+     "speed": 2.116
+    },
+    {
+     "t": 25042,
+     "type": "spawn",
+     "parcelId": "p038",
+     "speed": 2.118
+    },
+    {
+     "t": 26643,
+     "type": "sort",
+     "parcelId": "p020",
+     "bin": "archive",
+     "sortMs": 3600,
+     "changedMind": false,
+     "speed": 2.129
+    },
+    {
+     "t": 27026,
+     "type": "spawn",
+     "parcelId": "p039",
+     "speed": 2.132
+    },
+    {
+     "t": 28709,
+     "type": "sort",
+     "parcelId": "p038",
+     "bin": "archive",
+     "sortMs": 3667,
+     "changedMind": false,
+     "speed": 2.145
+    },
+    {
+     "t": 29009,
+     "type": "spawn",
+     "parcelId": "p015",
+     "speed": 2.147
+    },
+    {
+     "t": 30093,
+     "type": "sort",
+     "parcelId": "p039",
+     "bin": "reply",
+     "sortMs": 3067,
+     "changedMind": false,
+     "speed": 2.155
+    },
+    {
+     "t": 30976,
+     "type": "spawn",
+     "parcelId": "p021",
+     "speed": 2.161
+    },
+    {
+     "t": 32526,
+     "type": "sort",
+     "parcelId": "p015",
+     "bin": "reply",
+     "sortMs": 3517,
+     "changedMind": false,
+     "speed": 2.172
+    },
+    {
+     "t": 32926,
+     "type": "spawn",
+     "parcelId": "p030",
+     "speed": 2.175
+    },
+    {
+     "t": 34676,
+     "type": "miss",
+     "parcelId": "p021",
+     "speed": 2.188
+    },
+    {
+     "t": 34859,
+     "type": "spawn",
+     "parcelId": "p033",
+     "speed": 2.189
+    },
+    {
+     "t": 36593,
+     "type": "miss",
+     "parcelId": "p030",
+     "speed": 2.202
+    },
+    {
+     "t": 36793,
+     "type": "spawn",
+     "parcelId": "p011",
+     "speed": 2.204
+    },
+    {
+     "t": 38510,
+     "type": "miss",
+     "parcelId": "p033",
+     "speed": 2.216
+    },
+    {
+     "t": 38710,
+     "type": "spawn",
+     "parcelId": "p031",
+     "speed": 2.218
+    },
+    {
+     "t": 40410,
+     "type": "miss",
+     "parcelId": "p011",
+     "speed": 2.23
+    },
+    {
+     "t": 40610,
+     "type": "spawn",
+     "parcelId": "p018",
+     "speed": 2.232
+    },
+    {
+     "t": 42310,
+     "type": "miss",
+     "parcelId": "p031",
+     "speed": 2.242
+    },
+    {
+     "t": 44193,
+     "type": "miss",
+     "parcelId": "p018",
+     "speed": 2.242
+    },
+    {
+     "t": 44194,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 4,
+     "parcelsShown": 20,
+     "sorted": 11,
+     "misses": 9,
+     "changedMind": 0,
+     "bestCombo": 6,
+     "scoreWave": 1355,
+     "speedEnd": 2.242,
+     "decisions": [
+      {
+       "parcelId": "p039",
+       "bin": "reply",
+       "sortMs": 3933,
+       "firstMs": 3567,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 1.979,
+       "speedAtSpawn": 1.95,
+       "y": 0.963,
+       "combo": 1,
+       "missed": false,
+       "points": 102
+      },
+      {
+       "parcelId": "p040",
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 3767,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 1.996,
+       "speedAtSpawn": 1.966,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p027",
+       "bin": "archive",
+       "sortMs": 3850,
+       "firstMs": 3500,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.01,
+       "speedAtSpawn": 1.982,
+       "y": 0.958,
+       "combo": 1,
+       "missed": false,
+       "repeat": true,
+       "points": 102
+      },
+      {
+       "parcelId": "p040",
+       "bin": "archive",
+       "sortMs": 3700,
+       "firstMs": 3333,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.024,
+       "speedAtSpawn": 1.997,
+       "y": 0.928,
+       "combo": 2,
+       "missed": false,
+       "repeat": true,
+       "points": 114
+      },
+      {
+       "parcelId": "p029",
+       "bin": "reply",
+       "sortMs": 3467,
+       "firstMs": 3100,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 2.038,
+       "speedAtSpawn": 2.013,
+       "y": 0.876,
+       "combo": 3,
+       "missed": false,
+       "repeat": true,
+       "points": 126
+      },
+      {
+       "parcelId": "p026",
+       "bin": "reply",
+       "sortMs": 2983,
+       "firstMs": 2617,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 2.05,
+       "speedAtSpawn": 2.028,
+       "y": 0.761,
+       "combo": 4,
+       "missed": false,
+       "repeat": true,
+       "points": 142
+      },
+      {
+       "parcelId": "p012",
+       "bin": "info",
+       "sortMs": 3567,
+       "firstMs": 3200,
+       "changedMind": false,
+       "binsTried": [
+        "info"
+       ],
+       "speed": 2.069,
+       "speedAtSpawn": 2.043,
+       "y": 0.915,
+       "combo": 5,
+       "missed": false,
+       "repeat": true,
+       "points": 144
+      },
+      {
+       "parcelId": "p006",
+       "bin": "archive",
+       "sortMs": 3850,
+       "firstMs": 3500,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.087,
+       "speedAtSpawn": 2.058,
+       "y": 0.995,
+       "combo": 6,
+       "missed": false,
+       "anchorBin": "archive",
+       "repeat": true,
+       "points": 150
+      },
+      {
+       "parcelId": "p019",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 2.102,
+       "speedAtSpawn": 2.073,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p037",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 2.116,
+       "speedAtSpawn": 2.088,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p020",
+       "bin": "archive",
+       "sortMs": 3600,
+       "firstMs": 3250,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.129,
+       "speedAtSpawn": 2.103,
+       "y": 0.951,
+       "combo": 1,
+       "missed": false,
+       "anchorBin": "spam",
+       "repeat": true,
+       "points": 102
+      },
+      {
+       "parcelId": "p038",
+       "bin": "archive",
+       "sortMs": 3667,
+       "firstMs": 3317,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.145,
+       "speedAtSpawn": 2.118,
+       "y": 0.975,
+       "combo": 2,
+       "missed": false,
+       "repeat": true,
+       "points": 111
+      },
+      {
+       "parcelId": "p039",
+       "bin": "reply",
+       "sortMs": 3067,
+       "firstMs": 2717,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 2.155,
+       "speedAtSpawn": 2.132,
+       "y": 0.822,
+       "combo": 3,
+       "missed": false,
+       "repeat": true,
+       "points": 129
+      },
+      {
+       "parcelId": "p015",
+       "bin": "reply",
+       "sortMs": 3517,
+       "firstMs": 3167,
+       "changedMind": false,
+       "binsTried": [
+        "reply"
+       ],
+       "speed": 2.172,
+       "speedAtSpawn": 2.147,
+       "y": 0.948,
+       "combo": 4,
+       "missed": false,
+       "repeat": true,
+       "points": 133
+      },
+      {
+       "parcelId": "p021",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 2.188,
+       "speedAtSpawn": 2.161,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p030",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 2.202,
+       "speedAtSpawn": 2.175,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p033",
+       "anchorBin": "spam",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": null,
+       "changedMind": false,
+       "binsTried": [],
+       "speed": 2.216,
+       "speedAtSpawn": 2.189,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p011",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 3267,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.23,
+       "speedAtSpawn": 2.204,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p031",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 3300,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.242,
+       "speedAtSpawn": 2.218,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      },
+      {
+       "parcelId": "p018",
+       "repeat": true,
+       "bin": null,
+       "sortMs": null,
+       "firstMs": 3300,
+       "changedMind": false,
+       "binsTried": [
+        "archive"
+       ],
+       "speed": 2.242,
+       "speedAtSpawn": 2.232,
+       "y": 1,
+       "missed": true,
+       "points": 0
+      }
+     ],
+     "roundId": "round-001",
+     "roundNo": 1,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false
+    }
+   },
+   "segment": "parcels"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:28:05.402Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 35000,
+     "to": null
+    },
+    {
+     "param": "baseFallMs",
+     "from": 8000,
+     "to": null
+    },
+    {
+     "param": "baseGapMs",
+     "from": 4200,
+     "to": null
+    },
+    {
+     "param": "graceMs",
+     "from": 350,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-001-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:28:39.338Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-001-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 2
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.3
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 35000
+    },
+    {
+     "param": "baseFallMs",
+     "from": null,
+     "to": 8000
+    },
+    {
+     "param": "baseGapMs",
+     "from": null,
+     "to": 4200
+    },
+    {
+     "param": "graceMs",
+     "from": null,
+     "to": 350
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:29:20.299Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 2,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1.3,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 35000,
+     "to": null
+    },
+    {
+     "param": "baseFallMs",
+     "from": 8000,
+     "to": null
+    },
+    {
+     "param": "baseGapMs",
+     "from": 4200,
+     "to": null
+    },
+    {
+     "param": "graceMs",
+     "from": 350,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-001-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:30:07.958Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-001-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.6
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 40000
+    },
+    {
+     "param": "baseFallMs",
+     "from": null,
+     "to": 8000
+    },
+    {
+     "param": "baseGapMs",
+     "from": null,
+     "to": 4200
+    },
+    {
+     "param": "graceMs",
+     "from": null,
+     "to": 350
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 5,
+   "to": 6,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:30:53.853Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1.6,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 40000,
+     "to": null
+    },
+    {
+     "param": "baseFallMs",
+     "from": 8000,
+     "to": null
+    },
+    {
+     "param": "baseGapMs",
+     "from": 4200,
+     "to": null
+    },
+    {
+     "param": "graceMs",
+     "from": 350,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-001-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T16:31:12.712Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-001-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.95
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 40000
+    },
+    {
+     "param": "baseFallMs",
+     "from": null,
+     "to": 8000
+    },
+    {
+     "param": "baseGapMs",
+     "from": null,
+     "to": 4200
+    },
+    {
+     "param": "graceMs",
+     "from": null,
+     "to": 350
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 7,
+  "highestLevel": 7,
+  "totalDurationMs": 272360,
+  "parcels": {
+   "roundId": "round-001",
+   "roundNo": 1,
+   "roundVersion": "1.0.0",
+   "synthetic": true,
+   "sim": false,
+   "score": 4704,
+   "bestCombo": 9,
+   "parcels": 58,
+   "sorted": 37,
+   "misses": 21,
+   "changedMind": 0,
+   "abAnswered": 3,
+   "bins": {
+    "reply": 18,
+    "archive": 15,
+    "spam": 2,
+    "info": 2
+   }
+  }
+ },
+ "session": {
+  "id": "20261031162724-d7vwu",
+  "kind": "parcels+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "parcels",
+    "wave": 1,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 40861
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "pairwise",
+    "pairId": "round-001-ab1",
+    "questionNo": 1,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 33936
+   },
+   {
+    "index": 2,
+    "levelIndex": 2,
+    "kind": "parcels",
+    "wave": 2,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 40959
+   },
+   {
+    "index": 3,
+    "levelIndex": 3,
+    "kind": "pairwise",
+    "pairId": "round-001-ab2",
+    "questionNo": 2,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 47659
+   },
+   {
+    "index": 4,
+    "levelIndex": 4,
+    "kind": "parcels",
+    "wave": 3,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 45894
+   },
+   {
+    "index": 5,
+    "levelIndex": 5,
+    "kind": "pairwise",
+    "pairId": "round-001-ab3",
+    "questionNo": 3,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 18857
+   },
+   {
+    "index": 6,
+    "levelIndex": 6,
+    "kind": "parcels",
+    "wave": 4,
+    "roundId": "round-001",
+    "outcome": "complete",
+    "durationMs": 44194
+   }
+  ]
+ },
+ "qualities": {
+  "modelVersion": "1.1.0",
+  "computedAt": "2026-10-31T16:31:56.921Z",
+  "runType": "human",
+  "adapters": [
+   "parcels",
+   "pairwise"
+  ],
+  "items": {
+   "focus": {
+    "score": 64,
+    "confidence": 0.7,
+    "label": "estimate",
+    "evidence": [
+     "parcels: parcels missed 21/58, changed mind 0"
+    ]
+   },
+   "reaction": {
+    "score": 19,
+    "confidence": 0.64,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median first touch 4.10 s after a parcel appears"
+    ]
+   },
+   "consistency": {
+    "score": 75,
+    "confidence": 0.5,
+    "label": "estimate",
+    "evidence": [
+     "parcels: wave focus sd 8.2 over 4 waves"
+    ]
+   },
+   "accuracy": {
+    "score": 57,
+    "confidence": 0.47,
+    "label": "rough",
+    "evidence": [
+     "parcels: clear-cut parcels sorted as expected 4/7"
+    ]
+   },
+   "endurance": {
+    "score": 14,
+    "confidence": 0.44,
+    "label": "rough",
+    "evidence": [
+     "parcels: wave focus trend -4.5 pts/wave (speed rises each wave)"
+    ]
+   },
+   "decisionSpeed": {
+    "score": 30,
+    "confidence": 0.6,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median sort 4.47 s",
+     "pairwise: median 33.9 s per pick (n=3)"
+    ]
+   },
+   "decisiveness": {
+    "score": 70,
+    "confidence": 0.27,
+    "label": "rough",
+    "evidence": [
+     "pairwise: mean strength 2.00 of 3; tie/neither 0/3"
+    ]
+   }
+  },
+  "note": "Rough gameplay estimates for choosing a game; not an assessment of the person. \"rough\" = confidence < 0.5."
+ }
+}
