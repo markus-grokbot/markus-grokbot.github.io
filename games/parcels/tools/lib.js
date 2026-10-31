@@ -35,6 +35,25 @@ function labelPrompt(parcels, rubric) {
     parcels.map(p => p.id + ' | ' + p.sender + ' | ' + p.subject + ' | ' + p.snippet).join('\n') +
     '\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {"id":"x01","bin":"later","summary":"Weekly digest, read later"}\nReturn JSON only: {"items":[ one object per item above, ' + parcels.length + ' objects, same ids ]}';
 }
+const PR = require('../priority.js');
+const PRIO_TEXT = '- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\n';
+function labelPromptPriority(parcels, rubric) {
+  return 'You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n' + PRIO_TEXT +
+    (rubric && rubric.length ? 'Your own prioritising rubric from last round:\n' + rubric.map(r => '* ' + r).join('\n') + '\n' : '') +
+    'Also write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\n' + parcels.map(p => p.id + ' | ' + p.sender + ' | ' + p.subject + ' | ' + p.snippet).join('\n') +
+    '\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {"id":"x01","urgency":30,"importance":70,"summary":"Interview prep notes, this week"}\nReturn JSON only: {"items":[ one object per item above, ' + parcels.length + ' objects, same ids ]}';
+}
+function genPromptPriority(model, fb, n) {
+  return 'You are one of two AI models competing to PRIORITISE a software engineer\'s inbox like he does. Last round he placed each item on two scales in a game:\n' + PRIO_TEXT +
+    'Your agreement with his placements (1 - distance, weighted by how sure he was on each scale): ' + fb.agreementPct + '% over ' + fb.n + ' items.' +
+    (fb.misses.length ? '\nItems where you were furthest off (subject: yours -> HIS, as urgency/importance):\n' + fb.misses.map(m => '- "' + m.subject + '": ' + m.yours + ' -> ' + m.his).join('\n') : '') +
+    (fb.byType ? '\nHis mean placement by sender type (urgency/importance): ' + fb.byType : '') +
+    (fb.ab ? '\nYour summary badges won ' + fb.ab + ' of the A/B style questions he answered.' : '') +
+    '\nTasks:\n1. Write a revised prioritising rubric: 3 to 5 short rules that would match HIS priorities better.\n2. Write ' + n + ' NEW fictional inbox items of the kinds he gets: recruiter replies, job-board digests, code-host (CI/PR/issue) notifications, service notices, marketing, collaborator questions, invoices, newsletters. Make some of them hard to prioritise (urgent but unimportant, important but not urgent).\n' +
+    'Rules for items: sender is a role plus a made-up company, like "Recruiter · Pinewood Talent" or "Code host notifications"; NO personal names, NO email addresses, NO URLs, NO phone numbers, no placeholders like [name]. subject max 60 characters, snippet is one full sentence of 40 to 110 characters (the first line of the mail body). senderType one of: ' + SENDER_TYPES.join(', ') + '. Give your urgency and importance for each.\n' +
+    'Example item (do not copy it): {"senderType":"recruiter","sender":"Recruiter · Pinewood Talent","subject":"Re: Backend role, quick follow-up","snippet":"Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?","badge":"call request","urgency":80,"importance":75}\n' +
+    'Return JSON only, exactly ' + n + ' parcels: {"rubric":["rule 1","rule 2","rule 3"],"parcels":[ ... ]}';
+}
 function genPrompt(model, fb, n) {
   return 'You are one of two AI models competing to triage a software engineer\'s inbox like he does. Last round he sorted the items himself in a game.\n' +
     'Bins:\n' + binText() + '\nYour weighted agreement with him: ' + fb.agreementPct + '% over ' + fb.n + ' items.' +
@@ -72,7 +91,25 @@ function extractItems(r) {
   if (!out.length && r.parsed && typeof r.parsed === 'object') Object.keys(r.parsed).forEach(k => { const v = r.parsed[k]; if (v && typeof v === 'object' && v.bin) out.push({ id: k, bin: v.bin, summary: v.summary }); });
   return out;
 }
+function extractItemsPrio(r) {
+  const out = [], raw = r.raw || ''; const re = /\{[^{}]*"id"\s*:\s*"([^"]+)"[^{}]*\}/g; let m;
+  while ((m = re.exec(raw))) { const o = m[0], g = k => { const x = new RegExp('"' + k + '"\\s*:\\s*"?(-?[\\d.]+)').exec(o); return x ? +x[1] : null; }, sm = /"summary"\s*:\s*"([^"]*)"/.exec(o); out.push({ id: m[1], urgency: g('urgency'), importance: g('importance'), summary: sm ? sm[1] : null }); }
+  return out;
+}
 // ---------- labelling (blind: each model sees only the parcel texts and its own rubric) ----------
+async function labelAllPriority(model, parcels, rubric, runDir, tag) {
+  const positions = {}, summaries = {}, stats = { calls: 0, ms: 0, invalid: 0, retries: 0 }, num = v => { const n = Math.round(+v); return isFinite(n) && n >= 0 && n <= 100 ? n : null; };
+  for (let i = 0; i < parcels.length; i += 5) {
+    const batch = parcels.slice(i, i + 5); let got = {};
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const missing = batch.filter(p => !got[p.id]); if (!missing.length) break; if (attempt) stats.retries++;
+      const r = await generate(model, labelPromptPriority(missing, rubric), runDir, tag + '-prio-' + pad(i / 5 + 1) + (attempt ? '-retry' : '')); stats.calls++; stats.ms += r.ms;
+      extractItemsPrio(r).forEach(it => { const u = it && num(it.urgency), im = it && num(it.importance); if (it && missing.some(p => p.id === it.id) && u != null && im != null) got[it.id] = { u, i: im, summary: cleanSummary(it.summary) }; else stats.invalid++; });
+    }
+    batch.forEach(p => { if (got[p.id]) { positions[p.id] = { urgency: got[p.id].u, importance: got[p.id].i }; if (got[p.id].summary) summaries[p.id] = got[p.id].summary; } });
+  }
+  return { positions, summaries, stats };
+}
 async function labelAll(model, parcels, rubric, runDir, tag) {
   const labels = {}, summaries = {}, stats = { calls: 0, ms: 0, invalid: 0, retries: 0 };
   for (let i = 0; i < parcels.length; i += 5) {
@@ -108,6 +145,7 @@ function humanTruth(log) {
   const ab = []; (log.levels || []).forEach(l => { if (l.ext && l.ext.pairwise && l.ext.pairwise.roundId) (l.ext.pairwise.decisions || []).forEach(d => { if (!d.undone) ab.push(d); }); });
   return { decisions: dec, medianSortMs: med, roundFocus: qf, ab };
 }
+function humanPos(d) { if (d.urgency != null) return PR.fromUI(d.urgency, d.importance); if (d.x != null) return PR.describe(d.x, d.y); return d.bin ? PR.fromBin(d.bin) : null; }
 function grade(round, truth) {
   const by = {}; truth.decisions.forEach(d => { if (!by[d.parcelId] || (by[d.parcelId].repeat && !d.repeat)) by[d.parcelId] = d; }); const P = {}; round.parcels.forEach(p => { P[p.id] = p; }); const out = {}; // first non-repeat sort is the truth const P = {}; round.parcels.forEach(p => { P[p.id] = p; }); const out = {};
   Object.keys(round.models).forEach(m => {
@@ -120,13 +158,23 @@ function grade(round, truth) {
       if (xa.x != null) { wx += d.weight * cx; ax += d.weight * cx * xa.x; } if (xa.y != null) { wy += d.weight * cy; ay += d.weight * cy * xa.y; }
       n++; if (L[pid] === hard) a++; w += wt; wa += wt * ag; if (ag < 0.5) misses.push({ parcelId: pid, subject: P[pid] ? P[pid].subject : pid, yours: L[pid], his: hard, agreement: +ag.toFixed(3), weight: +wt.toFixed(3) }); const k = L[pid] + '>' + hard; conf[k] = (conf[k] || 0) + 1; });
     const axisX = wx ? +(ax / wx).toFixed(3) : null, axisY = wy ? +(ay / wy).toFixed(3) : null;
+    // priority (positional) agreement, every round type: human (urgency, importance) from v3 fields, v2 x/y (same semantics:
+    // act now = urgent, worth it = matters) or v1 bin -> BIN_UI; model from positions[] (v3) or its bin -> BIN_UI.
+    // per axis 1-|diff|/100 weighted by the human's confidence on that axis (v1 hard sorts: confidence of the bin's position)
+    const POS = round.models[m].positions || {}; let pw = 0, pa = 0, pu = 0, pi = 0, pwu = 0, pwi = 0, perr = 0, pn = 0; const pmiss = [];
+    Object.keys(by).forEach(pid => { const d = by[pid], h = humanPos(d), mp = POS[pid] ? PR.fromUI(POS[pid].urgency, POS[pid].importance) : L[pid] ? PR.fromBin(L[pid]) : null; if (!h || !mp) return;
+      const au = PR.agree(h.urgency, mp.urgency), ai = PR.agree(h.importance, mp.importance), cu = h.confX * d.weight, ci = h.confY * d.weight;
+      pwu += cu; pu += cu * au; pwi += ci; pi += ci * ai; pw += cu + ci; pa += cu * au + ci * ai; perr += Math.abs(h.priority - mp.priority); pn++;
+      pmiss.push({ parcelId: pid, subject: P[pid] ? P[pid].subject : pid, yours: Math.round(mp.urgency) + '/' + Math.round(mp.importance), his: Math.round(h.urgency) + '/' + Math.round(h.importance), agreement: +((cu * au + ci * ai) / Math.max(1e-9, cu + ci)).toFixed(3), weight: +(cu + ci).toFixed(3) }); });
+    const prio = { graded: pn, agreement: pw ? +(pa / pw).toFixed(3) : null, urgency: pwu ? +(pu / pwu).toFixed(3) : null, importance: pwi ? +(pi / pwi).toFixed(3) : null, meanAbsPriorityError: pn ? +(perr / pn).toFixed(1) : null, source: Object.keys(POS).length ? 'model positions' : 'model bins mapped to positions (BIN_UI)' };
+    const pm = pmiss.filter(x => x.agreement < 0.75).sort((x, y) => (y.weight * (1 - y.agreement)) - (x.weight * (1 - x.agreement)));
     const shown = truth.ab.filter(d => d.modelA === m || d.modelB === m), wins = shown.filter(d => d.winnerModel === m).length;
     const authored = truth.decisions.filter(d => P[d.parcelId] && P[d.parcelId].author === m), clarity = authored.length ? +(authored.reduce((s, d) => s + d.weight, 0) / authored.length).toFixed(3) : null;
-    const wAg = w ? wa / w : null, abRate = shown.length ? wins / shown.length : null;
+    const isPrio = round.task === 'priority', wAg = isPrio ? prio.agreement : (w ? wa / w : null), abRate = shown.length ? wins / shown.length : null;
     const parts = [[0.7, wAg], [0.2, abRate], [0.1, clarity]].filter(x => x[1] != null), score = parts.length ? parts.reduce((s, x) => s + x[0] * x[1], 0) / parts.reduce((s, x) => s + x[0], 0) : null;
-    out[m] = { graded: n, rawAgreement: n ? +(a / n).toFixed(3) : null, weightedAgreement: wAg == null ? null : +wAg.toFixed(3), abShown: shown.length, abWins: wins, abWinRate: abRate == null ? null : +abRate.toFixed(3), authoredSorted: authored.length, authoredClarity: clarity, axisX: axisX, axisY: axisY, score: score == null ? null : +score.toFixed(3), confusion: conf, misses: misses.sort((x, y) => y.weight - x.weight) };
+    out[m] = { graded: n, rawAgreement: n ? +(a / n).toFixed(3) : null, weightedAgreement: wAg == null ? null : +wAg.toFixed(3), abShown: shown.length, abWins: wins, abWinRate: abRate == null ? null : +abRate.toFixed(3), authoredSorted: authored.length, authoredClarity: clarity, authoredMeanConf: authored.length && authored[0].conf != null ? +(authored.reduce((s, d) => s + d.conf, 0) / authored.length).toFixed(3) : null, priority: prio, binAgreement: w ? +(wa / w).toFixed(3) : null, axisX: axisX, axisY: axisY, score: score == null ? null : +score.toFixed(3), confusion: conf, misses: isPrio ? pm : misses.sort((x, y) => y.weight - x.weight), priorityMisses: pm.slice(0, 10) };
   });
   return out;
 }
 const AX = require('../axes.js');
-module.exports = { extractObjects, extractRubric, ROOT, REPO, BINS, BIN_IDS, SENDER_TYPES, MODELS, OPTIONS, short, pad, readJ, writeJ, findHost, generate, labelPrompt, genPrompt, validParcel, textProblems, labelAll, abQuestions, humanTruth, grade, median };
+module.exports = { extractItemsPrio, labelPromptPriority, genPromptPriority, labelAllPriority, humanPos, PR, extractObjects, extractRubric, ROOT, REPO, BINS, BIN_IDS, SENDER_TYPES, MODELS, OPTIONS, short, pad, readJ, writeJ, findHost, generate, labelPrompt, genPrompt, validParcel, textProblems, labelAll, abQuestions, humanTruth, grade, median };

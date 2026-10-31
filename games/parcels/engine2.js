@@ -3,8 +3,11 @@
    Each parcel has a visible countdown (limitMs, ~6 s in wave 1 tightening to ~4.4 s in wave 3). On release, or on timeout
    while held, the position is committed as a SOFT sort (softmax over zone centres + per-axis confidence). Timeout without
    ever touching it = miss. Partial credit: points scale with the stronger axis, so a clear x with a middling y still pays. */
-(function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(require('./axes.js')); else root.ParcelEngine2 = f(root.ParcelAxes); })(typeof self !== 'undefined' ? self : this, function (A) {
-  var GAME_ID = 'parcels', GAME_VERSION = '0.2.0', ITERATION = 2, MODE = 'field2d';
+/* v3 (game 0.3.0, mode 'priority'): same engine with priority.js geometry -> decisions carry urgency/importance/priority/quadrant
+   instead of soft bins: ParcelEngine2.make(ParcelPriority, '0.3.0', 3, 'priority'). */
+(function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(require('./axes.js')); else root.ParcelEngine2 = f(root.ParcelAxes); })(typeof self !== 'undefined' ? self : this, function (AX0) {
+ function make(A, GAME_VERSION, ITERATION, MODE) {
+  var GAME_ID = 'parcels';
   var DEFAULTS = { driftMs: 1400, gapMs: 900, inWaveTighten: 0.08, startY: 1.12, restY: 0, waves: [{ durationMs: 50000, limitMs: 6000, speed: 1 }, { durationMs: 50000, limitMs: 5200, speed: 1.15 }, { durationMs: 50000, limitMs: 4400, speed: 1.36 }], points: 60, confPoints: 60, timeBonus: 40, middlePoints: 10, comboConf: 0.5 };
   function merge(t) { var p = JSON.parse(JSON.stringify(DEFAULTS)); if (t && t.v2) Object.keys(t.v2).forEach(function (k) { if (k in p) p[k] = t.v2[k]; }); return p; }
   function createWave(src, w, P, hooks) {
@@ -19,7 +22,7 @@
       var D = A.describe(c.x, c.y), last = c.strongZones[c.strongZones.length - 1], changed = c.strongZones.length > 1 && !(D.pTop >= 0.6 && D.bin === c.strongZones[0]) || (c.strongZones.length === 1 && D.pTop >= 0.6 && D.bin !== last);
       var pts; if (D.conf < 0.25) { pts = P.middlePoints; combo = 0; } else { pts = Math.round(P.points + P.confPoints * D.conf + P.timeBonus * Math.max(0, 1 - ms / c.limitMs)); if (D.conf >= P.comboConf) { combo++; pts += Math.min(combo, 10) * 5; } }
       best = Math.max(best, combo); score += pts;
-      var d = Object.assign(base, { missed: false, timedOut: !!timedOut, x: D.x, y: D.y, dist: D.dist, soft: D.soft, bin: D.bin, pTop: D.pTop, confX: D.confX, confY: D.confY, conf: D.conf, sortMs: Math.round(ms), firstMs: Math.round(c.firstMs), changedMind: !!changed, zoneChanges: Math.max(0, c.zones.length - 1), points: pts, combo: combo });
+      var d = Object.assign(base, { missed: false, timedOut: !!timedOut }, D.soft ? { x: D.x, y: D.y, dist: D.dist, soft: D.soft, bin: D.bin, pTop: D.pTop } : { x: D.x, y: D.y, urgency: D.urgency, importance: D.importance, priority: D.priority, quadrant: D.quadrant, pTop: D.pTop }, { confX: D.confX, confY: D.confY, conf: D.conf, sortMs: Math.round(ms), firstMs: Math.round(c.firstMs), changedMind: !!changed, zoneChanges: Math.max(0, c.zones.length - 1), points: pts, combo: combo });
       dec.push(d); emit('sort', d);
     }
     return {
@@ -35,5 +38,7 @@
       state: function () { return { t: t, decisions: dec, misses: misses, combo: combo, bestCombo: best, score: score, speed: w.speed, limitMs: cur ? cur.limitMs : limit(), left: cur ? Math.max(0, cur.limitMs - (t - cur.t0)) : null }; }
     };
   }
-  return { GAME_ID: GAME_ID, GAME_VERSION: GAME_VERSION, ITERATION: ITERATION, MODE: MODE, DEFAULTS: DEFAULTS, merge: merge, createWave: createWave };
+  return { GAME_ID: GAME_ID, GAME_VERSION: GAME_VERSION, ITERATION: ITERATION, MODE: MODE, AXES: A, DEFAULTS: DEFAULTS, merge: merge, createWave: createWave, make: make };
+ }
+ var m = make(AX0, '0.2.0', 2, 'field2d'); return m;
 });

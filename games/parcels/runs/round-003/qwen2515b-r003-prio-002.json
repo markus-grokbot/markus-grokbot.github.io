@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r003-prio-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:51:18.614Z",
+ "ms": 6237,
+ "promptSha256": "b8256394dc6cd9a5072153d4f4c3ab71a5f6de2f529ba2cf7371fabe624f9866",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize based on the urgency of the action required, not the importance of the task itself.\n* Consider the sender's role and the context of the email to determine its importance.\n* Use a 1-10 scale for urgency, with 10 being 'right now' and 1 being 'can wait weeks'.\n* Use a 1-10 scale for importance, with 10 being 'career/project critical' and 1 being 'noise'.\n* Assign a weight to each scale based on the sender's certainty about the placement.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr002-qwen2515b-01 | Job Board · TechJobs | New Job Posting: Senior Software Engineer | We are seeking a Senior Software Engineer with experience in React and Node.js.\nr002-qwen2515b-07 | Recruiter · Pinewood Talent | Re: Frontend role, follow-up | Thanks for applying. Are you available for an interview on Friday?\nr002-llama323b-01 | Job-Board · TechHub | New Job Opening: Junior DevOps Engineer | We are looking for a talented Junior DevOps Engineer to join our team.\np030 | Recruiter · Northlake Talent | Interview confirmed: Thu 13:00 | Calendar invite sent. The panel is two engineers and a product lead.\nr002-qwen2515b-03 | Collaborator · MyProject | Meeting Request: AI Workshop | Please join the AI Workshop on Monday at 10 AM.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r002-qwen2515b-01\",\"urgency\":10,\"importance\":80,\"summary\":\"New job posting, urgent\"},\n  {\"id\":\"r002-qwen2515b-07\",\"urgency\":5,\"importance\":60,\"summary\":\"Follow-up, less urgent\"},\n  {\"id\":\"r002-llama323b-01\",\"urgency\":5,\"importance\":80,\"summary\":\"Interview confirmation, less urgent\"},\n  {\"id\":\"p030\",\"urgency\":5,\"importance\":70,\"summary\":\"Calendar invite, less urgent\"},\n  {\"id\":\"r002-qwen2515b-03\",\"urgency\":5,\"importance\":80,\"summary\":\"AI workshop, less urgent\"}\n]}",
+ "parseError": null,
+ "evalCount": 187,
+ "promptEvalCount": 569
+}

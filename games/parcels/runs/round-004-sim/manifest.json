@@ -1,0 +1,797 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": true,
+ "fromRound": "round-003",
+ "toRound": "round-004-sim",
+ "log": "logs/sim/parcels3-round-003-good-seed1.json",
+ "startedAt": "2026-10-31T17:52:07.275Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 52,
+   "medianSortMs": 1817,
+   "roundFocus": 87,
+   "ab": 2,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.604,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 17,
+     "authoredClarity": 0.672,
+     "authoredMeanConf": 0.665,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.604,
+      "urgency": 0.629,
+      "importance": 0.574,
+      "meanAbsPriorityError": 26.5,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.59,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "90/90",
+       "his": "15/11",
+       "agreement": 0.227,
+       "weight": 1
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "89/72",
+       "agreement": 0.21,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "0/90",
+       "his": "22/10",
+       "agreement": 0.44,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "84/77",
+       "agreement": 0.43,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "10/80",
+       "his": "12/3",
+       "agreement": 0.567,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "27/23",
+       "agreement": 0.623,
+       "weight": 0.867
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "50/30",
+       "his": "85/83",
+       "agreement": 0.561,
+       "weight": 0.742
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/60",
+       "his": "80/75",
+       "agreement": 0.605,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "0/20",
+       "his": "17/72",
+       "agreement": 0.69,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "55/82",
+       "agreement": 0.541,
+       "weight": 0.608
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "50/20",
+       "his": "23/72",
+       "agreement": 0.614,
+       "weight": 0.722
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "40/30",
+       "his": "6/52",
+       "agreement": 0.665,
+       "weight": 0.79
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "50/40",
+       "his": "16/21",
+       "agreement": 0.73,
+       "weight": 0.929
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "40/60",
+       "his": "21/26",
+       "agreement": 0.745,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "0/100",
+       "his": "69/56",
+       "agreement": 0.373,
+       "weight": 0.364
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "30/60",
+       "his": "77/48",
+       "agreement": 0.551,
+       "weight": 0.49
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "50/90",
+       "his": "15/28",
+       "agreement": 0.544,
+       "weight": 0.389
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "50/90",
+       "his": "13/50",
+       "agreement": 0.633,
+       "weight": 0.452
+      },
+      {
+       "parcelId": "r003-qwen2515b-03",
+       "subject": "Payment Due",
+       "yours": "80/0",
+       "his": "18/35",
+       "agreement": 0.464,
+       "weight": 0.27
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "100/10",
+       "his": "18/36",
+       "agreement": 0.353,
+       "weight": 0.216
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "50/90",
+       "his": "45/41",
+       "agreement": 0.66,
+       "weight": 0.155
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "90/90",
+       "his": "15/11",
+       "agreement": 0.227,
+       "weight": 1
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "89/72",
+       "agreement": 0.21,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "0/90",
+       "his": "22/10",
+       "agreement": 0.44,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "84/77",
+       "agreement": 0.43,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "10/80",
+       "his": "12/3",
+       "agreement": 0.567,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "27/23",
+       "agreement": 0.623,
+       "weight": 0.867
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "50/30",
+       "his": "85/83",
+       "agreement": 0.561,
+       "weight": 0.742
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/60",
+       "his": "80/75",
+       "agreement": 0.605,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "0/20",
+       "his": "17/72",
+       "agreement": 0.69,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "55/82",
+       "agreement": 0.541,
+       "weight": 0.608
+      }
+     ]
+    },
+    "qwen2.5:1.5b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.606,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 21,
+     "authoredClarity": 0.661,
+     "authoredMeanConf": 0.606,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.606,
+      "urgency": 0.592,
+      "importance": 0.624,
+      "meanAbsPriorityError": 29.9,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.59,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "80/90",
+       "his": "15/11",
+       "agreement": 0.274,
+       "weight": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "80/10",
+       "his": "17/72",
+       "agreement": 0.375,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "30/90",
+       "his": "12/3",
+       "agreement": 0.439,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "100/80",
+       "his": "24/26",
+       "agreement": 0.343,
+       "weight": 0.855
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "5/80",
+       "his": "22/10",
+       "agreement": 0.519,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "84/77",
+       "agreement": 0.53,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "15/25",
+       "agreement": 0.33,
+       "weight": 0.687
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "100/80",
+       "his": "13/50",
+       "agreement": 0.136,
+       "weight": 0.452
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "5/90",
+       "his": "80/75",
+       "agreement": 0.527,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "21/26",
+       "agreement": 0.667,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "10/80",
+       "his": "85/83",
+       "agreement": 0.601,
+       "weight": 0.742
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/80",
+       "his": "16/21",
+       "agreement": 0.711,
+       "weight": 0.929
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "40/60",
+       "his": "6/52",
+       "agreement": 0.671,
+       "weight": 0.79
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "40/50",
+       "his": "19/82",
+       "agreement": 0.736,
+       "weight": 0.799
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "60/90",
+       "his": "15/28",
+       "agreement": 0.483,
+       "weight": 0.389
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "70/80",
+       "his": "26/53",
+       "agreement": 0.577,
+       "weight": 0.353
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "70/90",
+       "his": "20/33",
+       "agreement": 0.479,
+       "weight": 0.274
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "50/70",
+       "his": "77/48",
+       "agreement": 0.733,
+       "weight": 0.49
+      },
+      {
+       "parcelId": "r003-qwen2515b-03",
+       "subject": "Payment Due",
+       "yours": "60/50",
+       "his": "18/35",
+       "agreement": 0.663,
+       "weight": 0.27
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "70/40",
+       "his": "18/36",
+       "agreement": 0.626,
+       "weight": 0.216
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "10/80",
+       "his": "45/41",
+       "agreement": 0.622,
+       "weight": 0.155
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "80/90",
+       "his": "15/11",
+       "agreement": 0.274,
+       "weight": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "80/10",
+       "his": "17/72",
+       "agreement": 0.375,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "30/90",
+       "his": "12/3",
+       "agreement": 0.439,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "100/80",
+       "his": "24/26",
+       "agreement": 0.343,
+       "weight": 0.855
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "5/80",
+       "his": "22/10",
+       "agreement": 0.519,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "84/77",
+       "agreement": 0.53,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "15/25",
+       "agreement": 0.33,
+       "weight": 0.687
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "100/80",
+       "his": "13/50",
+       "agreement": 0.136,
+       "weight": 0.452
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "5/90",
+       "his": "80/75",
+       "agreement": 0.527,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "21/26",
+       "agreement": 0.667,
+       "weight": 0.896
+      }
+     ]
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 2,
+    "valid": 4,
+    "rejected": 4,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host · GitHub",
+       "subject": "PR #123: New Feature",
+       "snippet": "We have implemented a new feature that improves performance by 30%.",
+       "urgency": 40,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service Notice",
+       "subject": "System Maintenance",
+       "snippet": "Our system will be down for maintenance on Friday.",
+       "badge": "system notice",
+       "urgency": 70,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "sender looks like a personal name"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize items with a clear deadline or time-sensitive request, even if they are not critical to the project.",
+     "Give higher priority to items from collaborators and service providers, as they are more likely to require attention and resolution."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 1,
+    "rejected": 7,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Junior DevOps Engineer · TechCo",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "TechCo is looking for a Junior DevOps Engineer. Apply now!",
+       "badge": "job opening",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host Notifications · GitHub",
+       "subject": "CI/PR/Issue: Resolved",
+       "snippet": "Your pull request has been merged successfully. No further action required.",
+       "badge": "resolved issue",
+       "urgency": 20,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Junior DevOps Engineer · TechRecruit",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We are seeking a Junior DevOps Engineer with experience in cloud infrastructure and automation. Apply now!",
+       "badge": "job opening",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host Notifications · GitHub",
+       "subject": "CI/PR/Issue: Resolved",
+       "snippet": "Your pull request has been merged and resolved. Thank you for your contribution!",
+       "badge": "resolved issue",
+       "urgency": 20,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service Notice · MyCompany",
+       "subject": "Invoice 9876 - Payment Due",
+       "snippet": "Your invoice for $1200 is due on 14th of this month. Please make payment immediately.",
+       "badge": "invoice",
+       "urgency": 100,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize based on the urgency and importance of the task, with a focus on the sender's role and the impact on the project or career.",
+     "Use a numerical scale of 0-100 for urgency and 0-100 for importance, with a higher score indicating higher priority.",
+     "Consider the sender's role and the specific context of the task to determine the urgency and importance.",
+     "Prioritize tasks based on the urgency and importance, with a higher score indicating higher priority."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 6,
+    "ms": 54855,
+    "invalid": 3,
+    "retries": 1,
+    "wallMs": 54861
+   },
+   "qwen2.5:1.5b": {
+    "calls": 5,
+    "ms": 46763,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 46765
+   }
+  }
+ },
+ "roundWeight": 1,
+ "endedAt": "2026-10-31T17:55:35.234Z",
+ "wallMs": 207959,
+ "output": {
+  "round": "rounds/round-004-sim.json",
+  "parcels": 25,
+  "carried": 20,
+  "ab": 3
+ }
+}

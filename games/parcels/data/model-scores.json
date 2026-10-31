@@ -104,15 +104,221 @@
        "weight": 0.263
       }
      ]
+    },
+    {
+     "round": "round-002",
+     "roundWeight": 1,
+     "note": "Full weight. First v2 field round; Markus: noticeably better, but should be used for priority, not final decisions.",
+     "graded": 33,
+     "rawAgreement": 0.424,
+     "weightedAgreement": 0.355,
+     "abShown": 2,
+     "abWins": 0,
+     "abWinRate": 0,
+     "authoredSorted": 8,
+     "authoredClarity": 0.8,
+     "authoredMeanConf": 0.488,
+     "priority": {
+      "graded": 33,
+      "agreement": 0.706,
+      "urgency": 0.707,
+      "importance": 0.703,
+      "meanAbsPriorityError": 25,
+      "source": "model bins mapped to positions (BIN_UI)"
+     },
+     "binAgreement": 0.355,
+     "axisX": 0.612,
+     "axisY": 0.679,
+     "score": 0.329,
+     "confusion": {
+      "spam>info": 2,
+      "reply>reply": 7,
+      "info>info": 4,
+      "spam>reply": 2,
+      "spam>archive": 4,
+      "reply>archive": 2,
+      "archive>archive": 3,
+      "archive>reply": 3,
+      "archive>info": 1,
+      "later>reply": 2,
+      "info>reply": 1,
+      "reply>info": 1,
+      "archive>later": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "reply",
+       "his": "archive",
+       "agreement": 0,
+       "weight": 0.803
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.055,
+       "weight": 0.663
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0.001,
+       "weight": 0.652
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "spam",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.64
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "reply",
+       "his": "info",
+       "agreement": 0.108,
+       "weight": 0.628
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "spam",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.618
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.611
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.4,
+       "weight": 0.602
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.112,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.008,
+       "weight": 0.595
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "10/5",
+       "his": "86/87",
+       "agreement": 0.21,
+       "weight": 1.042
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "85/80",
+       "his": "12/21",
+       "agreement": 0.33,
+       "weight": 1.227
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "20/30",
+       "his": "85/86",
+       "agreement": 0.399,
+       "weight": 1.004
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "10/5",
+       "his": "74/73",
+       "agreement": 0.344,
+       "weight": 0.804
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "20/30",
+       "his": "72/75",
+       "agreement": 0.517,
+       "weight": 0.821
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "10/5",
+       "his": "74/22",
+       "agreement": 0.607,
+       "weight": 0.636
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "10/5",
+       "his": "66/59",
+       "agreement": 0.449,
+       "weight": 0.397
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "20/30",
+       "his": "64/65",
+       "agreement": 0.606,
+       "weight": 0.508
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "20/75",
+       "his": "68/64",
+       "agreement": 0.689,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "20/75",
+       "his": "68/64",
+       "agreement": 0.689,
+       "weight": 0.558
+      }
+     ]
     }
    ],
    "latest": {
-    "round": "round-001",
-    "score": 0.366,
-    "weightedAgreement": 0.28
+    "round": "round-002",
+    "score": 0.329,
+    "weightedAgreement": 0.355,
+    "priorityAgreement": 0.706
    },
-   "cumulative": 0.366,
-   "trend": null
+   "cumulative": 0.341,
+   "trend": -0.037
   },
   "qwen2.5:1.5b": {
    "history": [
@@ -214,15 +420,220 @@
        "weight": 0.265
       }
      ]
+    },
+    {
+     "round": "round-002",
+     "roundWeight": 1,
+     "note": "Full weight. First v2 field round; Markus: noticeably better, but should be used for priority, not final decisions.",
+     "graded": 33,
+     "rawAgreement": 0.333,
+     "weightedAgreement": 0.288,
+     "abShown": 2,
+     "abWins": 2,
+     "abWinRate": 1,
+     "authoredSorted": 8,
+     "authoredClarity": 0.808,
+     "authoredMeanConf": 0.449,
+     "priority": {
+      "graded": 33,
+      "agreement": 0.757,
+      "urgency": 0.753,
+      "importance": 0.764,
+      "meanAbsPriorityError": 19.3,
+      "source": "model bins mapped to positions (BIN_UI)"
+     },
+     "binAgreement": 0.288,
+     "axisX": 0.668,
+     "axisY": 0.754,
+     "score": 0.483,
+     "confusion": {
+      "info>info": 3,
+      "reply>reply": 4,
+      "info>reply": 7,
+      "spam>info": 1,
+      "later>archive": 1,
+      "info>archive": 4,
+      "archive>archive": 4,
+      "archive>info": 1,
+      "later>info": 3,
+      "later>reply": 3,
+      "archive>reply": 1,
+      "archive>later": 1
+     },
+     "misses": [
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.023,
+       "weight": 0.866
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0,
+       "weight": 0.803
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.071,
+       "weight": 0.744
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0.002,
+       "weight": 0.663
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.003,
+       "weight": 0.64
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.062,
+       "weight": 0.618
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.068,
+       "weight": 0.611
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.007,
+       "weight": 0.602
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0.011,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0.008,
+       "weight": 0.595
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "75/55",
+       "his": "12/21",
+       "agreement": 0.495,
+       "weight": 1.227
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "75/55",
+       "his": "89/95",
+       "agreement": 0.721,
+       "weight": 1.529
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "75/55",
+       "his": "25/42",
+       "agreement": 0.586,
+       "weight": 0.585
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "20/75",
+       "his": "21/19",
+       "agreement": 0.703,
+       "weight": 0.793
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "20/30",
+       "his": "68/64",
+       "agreement": 0.583,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "20/75",
+       "his": "74/73",
+       "agreement": 0.713,
+       "weight": 0.804
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/75",
+       "his": "69/68",
+       "agreement": 0.709,
+       "weight": 0.636
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "20/30",
+       "his": "73/55",
+       "agreement": 0.517,
+       "weight": 0.38
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "10/5",
+       "his": "70/43",
+       "agreement": 0.455,
+       "weight": 0.328
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "75/55",
+       "his": "32/43",
+       "agreement": 0.657,
+       "weight": 0.448
+      }
+     ]
     }
    ],
    "latest": {
-    "round": "round-001",
-    "score": 0.278,
-    "weightedAgreement": 0.262
+    "round": "round-002",
+    "score": 0.483,
+    "weightedAgreement": 0.288,
+    "priorityAgreement": 0.757
    },
-   "cumulative": 0.278,
-   "trend": null
+   "cumulative": 0.415,
+   "trend": 0.205
   }
  },
  "rounds": [
@@ -235,11 +646,21 @@
    "decisions": 37,
    "ab": 3,
    "next": "round-002"
+  },
+  {
+   "round": "round-002",
+   "log": "games/parcels/logs/human/human-parcels-round-002-20261031173324-2y01c.json",
+   "roundWeight": 1,
+   "note": "Full weight. First v2 field round; Markus: noticeably better, but should be used for priority, not final decisions.",
+   "gradedAt": "2026-10-31T17:40:31.117Z",
+   "decisions": 33,
+   "ab": 2,
+   "next": "round-003"
   }
  ],
- "updatedAt": "2026-10-31T17:02:30.344Z",
+ "updatedAt": "2026-10-31T17:40:31.117Z",
  "ranking": [
-  "llama3.2:3b",
-  "qwen2.5:1.5b"
+  "qwen2.5:1.5b",
+  "llama3.2:3b"
  ]
 }

@@ -1,0 +1,736 @@
+{
+ "schema": "parcels-round",
+ "version": "1.0.0",
+ "roundId": "round-004-sim",
+ "roundNo": 4,
+ "synthetic": true,
+ "sim": true,
+ "createdAt": "2026-10-31T17:53:53.602Z",
+ "basedOn": {
+  "round": "round-003",
+  "log": "logs/sim/parcels3-round-003-good-seed1.json"
+ },
+ "note": "PRIORITY task: models[*].positions = blind {urgency, importance} 0-100 per parcel. SIM DRY-RUN round, built from a SIM log; never graded into the human leaderboard. SYNTHETIC fictional parcels: 20 carried from round-003 (most disputed first) + parcels written by the models. models[*].labels are blind predictions, never shown in the game.",
+ "task": "priority",
+ "bins": [
+  {
+   "id": "reply",
+   "label": "Reply",
+   "emoji": "↩️",
+   "swipe": "right",
+   "key": "1",
+   "rule": "he must write back himself"
+  },
+  {
+   "id": "archive",
+   "label": "Archive",
+   "emoji": "🗄️",
+   "swipe": "left",
+   "key": "2",
+   "rule": "FYI / done / automatic, no action"
+  },
+  {
+   "id": "later",
+   "label": "Later",
+   "emoji": "⏰",
+   "swipe": "up",
+   "key": "3",
+   "rule": "worth reading or doing, not now"
+  },
+  {
+   "id": "info",
+   "label": "Needs info",
+   "emoji": "❓",
+   "swipe": null,
+   "key": "4",
+   "rule": "cannot act until a detail is supplied or clarified"
+  },
+  {
+   "id": "spam",
+   "label": "Spam / ignore",
+   "emoji": "🚫",
+   "swipe": "down",
+   "key": "5",
+   "rule": "marketing, noise or suspicious"
+  }
+ ],
+ "parcels": [
+  {
+   "id": "p030",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Northlake Talent",
+   "subject": "Interview confirmed: Thu 13:00",
+   "snippet": "Calendar invite sent. The panel is two engineers and a product lead.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "p028",
+   "senderType": "github",
+   "sender": "Code host notifications",
+   "subject": "[games] PR #14 review requested",
+   "snippet": "'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.",
+   "badge": "review",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r003-qwen2515b-01",
+   "senderType": "service",
+   "sender": "Service Notice · MyCompany",
+   "subject": "Invoice 1234 - Payment Due",
+   "snippet": "Your invoice for $500 is overdue. Please make payment by next Friday.",
+   "badge": "invoice",
+   "author": "qwen2.5:1.5b",
+   "authorPos": {
+    "urgency": 10,
+    "importance": 30
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r002-qwen2515b-05",
+   "senderType": "newsletter",
+   "sender": "Newsletter · TechNews",
+   "subject": "Tech News Update",
+   "snippet": "Check out the latest tech news in the newsletter.",
+   "badge": "info",
+   "author": "qwen2.5:1.5b",
+   "authorBin": "info",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r002-qwen2515b-03",
+   "senderType": "collaborator",
+   "sender": "Collaborator · MyProject",
+   "subject": "Meeting Request: AI Workshop",
+   "snippet": "Please join the AI Workshop on Monday at 10 AM.",
+   "badge": "reply",
+   "author": "qwen2.5:1.5b",
+   "authorBin": "later",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r004-llama323b-03",
+   "senderType": "job-board",
+   "sender": "Job Board Digests",
+   "subject": "New Job Listings",
+   "snippet": "Check out our latest job listings for software engineers.",
+   "badge": "job listing",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 30,
+    "importance": 40
+   },
+   "anchor": false
+  },
+  {
+   "id": "r002-qwen2515b-02",
+   "senderType": "marketing",
+   "sender": "Marketing · TechWorld",
+   "subject": "New Product Launch: AI Assistant",
+   "snippet": "Join our community to get the latest updates on the AI Assistant.",
+   "badge": "spam",
+   "author": "qwen2.5:1.5b",
+   "authorBin": "archive",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "p034",
+   "senderType": "collaborator",
+   "sender": "Collaborator · podcast host",
+   "subject": "Guest slot – topic?",
+   "snippet": "Happy to have you on in December. What would you like to talk about: games or LLM tooling?",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "p008",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Vinterberg Search",
+   "subject": "Exciting opportunity!!! (urgent)",
+   "snippet": "I came across your profile and think you'd be a perfect fit for a role I can't name yet.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r003-llama323b-03",
+   "senderType": "marketing",
+   "sender": "Marketing · DevNews",
+   "subject": "New Software Engineer Course",
+   "snippet": "Learn the latest software engineering techniques.",
+   "badge": "marketing promotion",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 30,
+    "importance": 20
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r002-qwen2515b-08",
+   "senderType": "job-board",
+   "sender": "Job Board · TechJobs",
+   "subject": "New Job Posting: Full Stack Developer",
+   "snippet": "We are seeking a Full Stack Developer with experience in both frontend and backend.",
+   "badge": "info",
+   "author": "qwen2.5:1.5b",
+   "authorBin": "info",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r004-llama323b-04",
+   "senderType": "github",
+   "sender": "Code host notifications",
+   "subject": "CI/PR/Issue Notification",
+   "snippet": "Your pull request has been merged.",
+   "badge": "code review",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 90,
+    "importance": 60
+   },
+   "anchor": false
+  },
+  {
+   "id": "r002-qwen2515b-04",
+   "senderType": "invoice",
+   "sender": "Invoice · TechCorp",
+   "subject": "Membership Invoice",
+   "snippet": "Please pay the membership invoice by the end of the week.",
+   "badge": "info",
+   "author": "qwen2.5:1.5b",
+   "authorBin": "info",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r003-llama323b-01",
+   "senderType": "github",
+   "sender": "Code host notifications",
+   "subject": "CI/PR/Issue: Resolved",
+   "snippet": "The pull request has been merged.",
+   "badge": "ci/merge",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 20,
+    "importance": 90
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r004-llama323b-01",
+   "senderType": "job-board",
+   "sender": "Job-Board · TechHub",
+   "subject": "New Job Listing: Junior Dev",
+   "snippet": "We are looking for a junior developer to join our team.",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 60,
+    "importance": 50
+   },
+   "anchor": false
+  },
+  {
+   "id": "r003-qwen2515b-04",
+   "senderType": "service",
+   "sender": "Service Notice · MyCompany",
+   "subject": "Invoice 9876 - Payment Due",
+   "snippet": "Your invoice for $400 is overdue. Please make payment by next Friday.",
+   "badge": "invoice",
+   "author": "qwen2.5:1.5b",
+   "authorPos": {
+    "urgency": 10,
+    "importance": 30
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r002-llama323b-01",
+   "senderType": "job-board",
+   "sender": "Job-Board · TechHub",
+   "subject": "New Job Opening: Junior DevOps Engineer",
+   "snippet": "We are looking for a talented Junior DevOps Engineer to join our team.",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorBin": "archive",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "p024",
+   "senderType": "newsletter",
+   "sender": "Newsletter · Small Models Monthly",
+   "subject": "Gemma, Qwen and Llama compared on CPU",
+   "snippet": "We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r003-llama323b-05",
+   "senderType": "job-board",
+   "sender": "Job-Board · DevFolio",
+   "subject": "New Job Opening: Senior Software Engineer",
+   "snippet": "We are seeking a Senior Software Engineer to join our team.",
+   "badge": "job posting",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 40,
+    "importance": 85
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "p014",
+   "senderType": "marketing",
+   "sender": "Webinar team · DataHarbor",
+   "subject": "Last chance to register: AI in logistics",
+   "snippet": "Join 2,000 leaders on Thursday. Seats are filling up fast.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r004-llama323b-02",
+   "senderType": "service",
+   "sender": "Service · TechSupport",
+   "subject": "Notification: Maintenance Scheduled",
+   "snippet": "Our servers will be undergoing maintenance on Friday at 2 PM.",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 70,
+    "importance": 30
+   },
+   "anchor": false
+  },
+  {
+   "id": "r002-llama323b-05",
+   "senderType": "collaborator",
+   "sender": "Collaborator · TechCorp",
+   "subject": "Question about Project Scope",
+   "snippet": "Can you clarify the project scope?",
+   "badge": "question",
+   "author": "llama3.2:3b",
+   "authorBin": "reply",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r004-qwen2515b-01",
+   "senderType": "service",
+   "sender": "Service Notice · Support Team",
+   "subject": "Account Suspended",
+   "snippet": "Your account has been suspended due to recent activity. Please contact support immediately.",
+   "badge": "account suspension",
+   "author": "qwen2.5:1.5b",
+   "authorPos": {
+    "urgency": 90,
+    "importance": 50
+   },
+   "anchor": false
+  },
+  {
+   "id": "p023",
+   "senderType": "service",
+   "sender": "Calendar",
+   "subject": "Invitation: Sprint review (Tue 10:00)",
+   "snippet": "Organizer asks you to accept or decline. Agenda not attached yet.",
+   "badge": "rsvp",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-003"
+  },
+  {
+   "id": "r003-llama323b-02",
+   "senderType": "collaborator",
+   "sender": "Collaborator · DevTeam",
+   "subject": "Question about project deadline",
+   "snippet": "Can we discuss the project deadline?",
+   "badge": "collaborator question",
+   "author": "llama3.2:3b",
+   "authorPos": {
+    "urgency": 60,
+    "importance": 40
+   },
+   "anchor": false,
+   "carriedFrom": "round-003"
+  }
+ ],
+ "models": {
+  "llama3.2:3b": {
+   "labels": {},
+   "positions": {
+    "p030": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "p028": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r003-qwen2515b-01": {
+     "urgency": 50,
+     "importance": 0
+    },
+    "r002-qwen2515b-05": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r002-qwen2515b-03": {
+     "urgency": 0,
+     "importance": 100
+    },
+    "r004-llama323b-03": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r002-qwen2515b-02": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "p034": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "p008": {
+     "urgency": 100,
+     "importance": 100
+    },
+    "r003-llama323b-03": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r002-qwen2515b-08": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r004-llama323b-04": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r002-qwen2515b-04": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r003-llama323b-01": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r004-llama323b-01": {
+     "urgency": 0,
+     "importance": 0
+    },
+    "r003-qwen2515b-04": {
+     "urgency": 50,
+     "importance": 20
+    },
+    "r002-llama323b-01": {
+     "urgency": 0,
+     "importance": 80
+    },
+    "p024": {
+     "urgency": 0,
+     "importance": 10
+    },
+    "r003-llama323b-05": {
+     "urgency": 0,
+     "importance": 90
+    },
+    "p014": {
+     "urgency": 90,
+     "importance": 0
+    },
+    "r004-llama323b-02": {
+     "urgency": 50,
+     "importance": 20
+    },
+    "r002-llama323b-05": {
+     "urgency": 0,
+     "importance": 60
+    },
+    "r004-qwen2515b-01": {
+     "urgency": 100,
+     "importance": 10
+    },
+    "p023": {
+     "urgency": 0,
+     "importance": 40
+    },
+    "r003-llama323b-02": {
+     "urgency": 0,
+     "importance": 50
+    }
+   },
+   "summaries": {
+    "p030": "Interview confirmation",
+    "p028": "PR review requested",
+    "r003-qwen2515b-01": "Overdue invoice",
+    "r002-qwen2515b-05": "Tech News Update",
+    "r002-qwen2515b-03": "AI Workshop meeting",
+    "r004-llama323b-03": "Job Board Digests",
+    "r002-qwen2515b-02": "New Product Launch: AI Assistant",
+    "p034": "Guest slot – topic?",
+    "p008": "Exciting opportunity!!!",
+    "r003-llama323b-03": "New Software Engineer Course",
+    "r002-qwen2515b-08": "New Job Posting: Full Stack Developer",
+    "r004-llama323b-04": "CI/PR/Issue Notification",
+    "r002-qwen2515b-04": "Membership Invoice",
+    "r003-llama323b-01": "CI/PR/Issue: Resolved",
+    "r004-llama323b-01": "New Job Listing: Junior Dev",
+    "r003-qwen2515b-04": "Overdue payment, next Friday",
+    "r002-llama323b-01": "New Job Opening: Junior DevOps Engineer",
+    "p024": "Gemma, Qwen and Llama compared on CPU",
+    "r003-llama323b-05": "New Job Opening: Senior Software Engineer",
+    "p014": "Last chance to register: AI in logistics",
+    "r004-llama323b-02": "Maintenance notice, Friday 2 PM",
+    "r002-llama323b-05": "Project scope question",
+    "r004-qwen2515b-01": "Account suspended, contact support",
+    "p023": "Sprint review invitation",
+    "r003-llama323b-02": "Project deadline question"
+   },
+   "rubric": [
+    "Prioritize items with a clear deadline or time-sensitive request, even if they are not critical to the project.",
+    "Give higher priority to items from collaborators and service providers, as they are more likely to require attention and resolution."
+   ],
+   "authored": 4,
+   "stats": {
+    "calls": 6,
+    "ms": 54855,
+    "invalid": 3,
+    "retries": 1,
+    "wallMs": 54861
+   }
+  },
+  "qwen2.5:1.5b": {
+   "labels": {},
+   "positions": {
+    "p030": {
+     "urgency": 100,
+     "importance": 80
+    },
+    "p028": {
+     "urgency": 40,
+     "importance": 90
+    },
+    "r003-qwen2515b-01": {
+     "urgency": 50,
+     "importance": 70
+    },
+    "r002-qwen2515b-05": {
+     "urgency": 20,
+     "importance": 80
+    },
+    "r002-qwen2515b-03": {
+     "urgency": 30,
+     "importance": 60
+    },
+    "r004-llama323b-03": {
+     "urgency": 10,
+     "importance": 80
+    },
+    "r002-qwen2515b-02": {
+     "urgency": 50,
+     "importance": 90
+    },
+    "p034": {
+     "urgency": 20,
+     "importance": 80
+    },
+    "p008": {
+     "urgency": 90,
+     "importance": 100
+    },
+    "r003-llama323b-03": {
+     "urgency": 5,
+     "importance": 70
+    },
+    "r002-qwen2515b-08": {
+     "urgency": 100,
+     "importance": 100
+    },
+    "r004-llama323b-04": {
+     "urgency": 80,
+     "importance": 50
+    },
+    "r002-qwen2515b-04": {
+     "urgency": 50,
+     "importance": 90
+    },
+    "r003-llama323b-01": {
+     "urgency": 20,
+     "importance": 80
+    },
+    "r004-llama323b-01": {
+     "urgency": 70,
+     "importance": 20
+    },
+    "r003-qwen2515b-04": {
+     "urgency": 100,
+     "importance": 80
+    },
+    "r002-llama323b-01": {
+     "urgency": 80,
+     "importance": 90
+    },
+    "p024": {
+     "urgency": 70,
+     "importance": 60
+    },
+    "r003-llama323b-05": {
+     "urgency": 60,
+     "importance": 50
+    },
+    "p014": {
+     "urgency": 50,
+     "importance": 40
+    },
+    "r004-llama323b-02": {
+     "urgency": 80,
+     "importance": 60
+    },
+    "r002-llama323b-05": {
+     "urgency": 50,
+     "importance": 80
+    },
+    "r004-qwen2515b-01": {
+     "urgency": 70,
+     "importance": 40
+    },
+    "p023": {
+     "urgency": 20,
+     "importance": 90
+    },
+    "r003-llama323b-02": {
+     "urgency": 60,
+     "importance": 50
+    }
+   },
+   "summaries": {
+    "p030": "Interview confirmation, urgent",
+    "p028": "PR review, important",
+    "r003-qwen2515b-01": "Invoice overdue, important",
+    "r002-qwen2515b-05": "Tech News Update, important",
+    "r002-qwen2515b-03": "AI Workshop, moderate",
+    "r004-llama323b-03": "New job listings, urgent",
+    "r002-qwen2515b-02": "AI Assistant updates, important",
+    "p034": "Guest slot, moderate",
+    "p008": "Perfect fit opportunity, high",
+    "r003-llama323b-03": "Software engineering course, low",
+    "r002-qwen2515b-08": "New Full Stack Developer opportunity, urgent and critical",
+    "r004-llama323b-04": "Merged pull request, noise",
+    "r002-qwen2515b-04": "Membership invoice, important but not urgent",
+    "r003-llama323b-01": "Merged pull request, low urgency but high importance",
+    "r004-llama323b-01": "Junior Dev job listing, low urgency but high importance",
+    "r003-qwen2515b-04": "Invoice overdue, urgent and critical",
+    "r002-llama323b-01": "New job opening, career critical",
+    "p024": "Model comparison, medium importance",
+    "r003-llama323b-05": "Job opening, medium importance",
+    "p014": "Webinar registration, low importance",
+    "r004-llama323b-02": "Server maintenance, urgent and critical to project stability",
+    "r002-llama323b-05": "Project scope clarification, important for project direction",
+    "r004-qwen2515b-01": "Account suspension, urgent but less critical to career",
+    "p023": "Sprint review invitation, important but not career-critical"
+   },
+   "rubric": [
+    "Prioritize based on the urgency and importance of the task, with a focus on the sender's role and the impact on the project or career.",
+    "Use a numerical scale of 0-100 for urgency and 0-100 for importance, with a higher score indicating higher priority.",
+    "Consider the sender's role and the specific context of the task to determine the urgency and importance.",
+    "Prioritize tasks based on the urgency and importance, with a higher score indicating higher priority."
+   ],
+   "authored": 1,
+   "stats": {
+    "calls": 5,
+    "ms": 46763,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 46765
+   }
+  }
+ },
+ "reference": {
+  "p030": "archive",
+  "p014": "spam",
+  "p008": "spam",
+  "p034": "reply",
+  "p028": "later",
+  "p024": "later",
+  "p023": "info"
+ },
+ "abQuestions": [
+  {
+   "id": "round-004-sim-ab1",
+   "parcelId": "p030",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "p030:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "Interview confirmation, urgent"
+   },
+   "b": {
+    "id": "p030:llama323b",
+    "model": "llama3.2:3b",
+    "text": "Interview confirmation"
+   }
+  },
+  {
+   "id": "round-004-sim-ab2",
+   "parcelId": "p028",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "p028:llama323b",
+    "model": "llama3.2:3b",
+    "text": "PR review requested"
+   },
+   "b": {
+    "id": "p028:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "PR review, important"
+   }
+  },
+  {
+   "id": "round-004-sim-ab3",
+   "parcelId": "r003-qwen2515b-01",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "r003-qwen2515b-01:llama323b",
+    "model": "llama3.2:3b",
+    "text": "Overdue invoice"
+   },
+   "b": {
+    "id": "r003-qwen2515b-01:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "Invoice overdue, important"
+   }
+  }
+ ],
+ "pipeline": {
+  "runDir": "runs/round-004-sim",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096,
+   "num_predict": 1800
+  }
+ }
+}

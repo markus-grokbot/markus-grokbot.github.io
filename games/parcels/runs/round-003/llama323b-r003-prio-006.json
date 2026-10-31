@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r003-prio-006",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:50:54.362Z",
+ "ms": 10319,
+ "promptSha256": "d7c200d373291e1e0c596a441556d5ee466777af30162ccc85fefa975b1b8778",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize items from recruiters and job-boards with high importance and medium urgency.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr003-llama323b-05 | Job-Board · DevFolio | New Job Opening: Senior Software Engineer | We are seeking a Senior Software Engineer to join our team.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nr003-llama323b-01 | Code host notifications | CI/PR/Issue: Resolved | The pull request has been merged.\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\nr003-qwen2515b-03 | Invoice 5678 · MyCompany | Payment Due | Your invoice for $200 is overdue. Please make payment by next Friday.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r003-llama323b-05\",\"urgency\":50,\"importance\":90,\"summary\":\"Senior Software Engineer Job Opening\"},{\"id\":\"p028\",\"urgency\":0,\"importance\":10,\"summary\":\"PR #14 review requested\"},{\"id\":\"r003-llama323b-01\",\"urgency\":0,\"importance\":0,\"summary\":\"CI/PR/Issue: Resolved\"},{\"id\":\"p011\",\"urgency\":0,\"importance\":20,\"summary\":\"Application viewed\"},{\"id\":\"r003-qwen2515b-03\",\"urgency\":80,\"importance\":0,\"summary\":\"Payment Due\"}]}",
+ "parseError": null,
+ "evalCount": 138,
+ "promptEvalCount": 419
+}

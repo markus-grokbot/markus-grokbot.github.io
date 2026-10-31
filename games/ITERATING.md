@@ -195,6 +195,11 @@ x, y, dist, softmax `soft`, confX/confY. Engine `engine2.js`, bot `ParcelBot.cre
 `sim/drag-check.mjs`. Grading uses expected agreement from `soft` and per-axis scores; see parcels/LOOP.md. Round-001 was
 graded at roundWeight 0.5 because Markus found v1 too fast.
 
+**v3 priority (game 0.3.0, default from round-003; bins at `?v=2`).** Axes = urgency (now ↔ can wait) × importance
+(matters ↔ low value) → priority 0-100, quadrants Handle first / Schedule / Quick skim / Deprioritise, 'Your queue' at
+the end. Models predict {urgency, importance}; graded by confidence-weighted distance. `priority.js`, `sim/run-sim3.js`,
+engine `ParcelEngine2.make(ParcelPriority, ...)`. Old bins map to approximate positions (LOOP.md).
+
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.
 - **Iteration 2:** ≥2 levels truly tuned from Markus's human logs (run tune.js once logs/human has files);

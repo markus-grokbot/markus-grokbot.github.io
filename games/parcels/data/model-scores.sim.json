@@ -106,14 +106,206 @@
        "weight": 0.794
       }
      ]
+    },
+    {
+     "round": "round-003",
+     "roundWeight": 1,
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.604,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 17,
+     "authoredClarity": 0.672,
+     "authoredMeanConf": 0.665,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.604,
+      "urgency": 0.629,
+      "importance": 0.574,
+      "meanAbsPriorityError": 26.5,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.59,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "90/90",
+       "his": "15/11",
+       "agreement": 0.227,
+       "weight": 1
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "89/72",
+       "agreement": 0.21,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "0/90",
+       "his": "22/10",
+       "agreement": 0.44,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "84/77",
+       "agreement": 0.43,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "10/80",
+       "his": "12/3",
+       "agreement": 0.567,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "27/23",
+       "agreement": 0.623,
+       "weight": 0.867
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "50/30",
+       "his": "85/83",
+       "agreement": 0.561,
+       "weight": 0.742
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/60",
+       "his": "80/75",
+       "agreement": 0.605,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "0/20",
+       "his": "17/72",
+       "agreement": 0.69,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "55/82",
+       "agreement": 0.541,
+       "weight": 0.608
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "90/90",
+       "his": "15/11",
+       "agreement": 0.227,
+       "weight": 1
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "89/72",
+       "agreement": 0.21,
+       "weight": 0.896
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "0/90",
+       "his": "22/10",
+       "agreement": 0.44,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "84/77",
+       "agreement": 0.43,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "10/80",
+       "his": "12/3",
+       "agreement": 0.567,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "27/23",
+       "agreement": 0.623,
+       "weight": 0.867
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "50/30",
+       "his": "85/83",
+       "agreement": 0.561,
+       "weight": 0.742
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/60",
+       "his": "80/75",
+       "agreement": 0.605,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "0/20",
+       "his": "17/72",
+       "agreement": 0.69,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "55/82",
+       "agreement": 0.541,
+       "weight": 0.608
+      }
+     ]
     }
    ],
    "latest": {
-    "round": "round-001",
-    "score": 0.387,
-    "weightedAgreement": 0.497
+    "round": "round-003",
+    "score": 0.59,
+    "weightedAgreement": 0.604,
+    "priorityAgreement": 0.604
    },
-   "trend": null
+   "trend": 0.203,
+   "cumulative": 0.488
   },
   "qwen2.5:1.5b": {
    "history": [
@@ -221,14 +413,206 @@
        "weight": 0.925
       }
      ]
+    },
+    {
+     "round": "round-003",
+     "roundWeight": 1,
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.606,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 21,
+     "authoredClarity": 0.661,
+     "authoredMeanConf": 0.606,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.606,
+      "urgency": 0.592,
+      "importance": 0.624,
+      "meanAbsPriorityError": 29.9,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.59,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "80/90",
+       "his": "15/11",
+       "agreement": 0.274,
+       "weight": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "80/10",
+       "his": "17/72",
+       "agreement": 0.375,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "30/90",
+       "his": "12/3",
+       "agreement": 0.439,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "100/80",
+       "his": "24/26",
+       "agreement": 0.343,
+       "weight": 0.855
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "5/80",
+       "his": "22/10",
+       "agreement": 0.519,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "84/77",
+       "agreement": 0.53,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "15/25",
+       "agreement": 0.33,
+       "weight": 0.687
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "100/80",
+       "his": "13/50",
+       "agreement": 0.136,
+       "weight": 0.452
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "5/90",
+       "his": "80/75",
+       "agreement": 0.527,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "21/26",
+       "agreement": 0.667,
+       "weight": 0.896
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "80/90",
+       "his": "15/11",
+       "agreement": 0.274,
+       "weight": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "80/10",
+       "his": "17/72",
+       "agreement": 0.375,
+       "weight": 0.935
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "30/90",
+       "his": "12/3",
+       "agreement": 0.439,
+       "weight": 1.02
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "100/80",
+       "his": "24/26",
+       "agreement": 0.343,
+       "weight": 0.855
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "5/80",
+       "his": "22/10",
+       "agreement": 0.519,
+       "weight": 1.165
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "84/77",
+       "agreement": 0.53,
+       "weight": 1.034
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "15/25",
+       "agreement": 0.33,
+       "weight": 0.687
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "100/80",
+       "his": "13/50",
+       "agreement": 0.136,
+       "weight": 0.452
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "5/90",
+       "his": "80/75",
+       "agreement": 0.527,
+       "weight": 0.802
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "21/26",
+       "agreement": 0.667,
+       "weight": 0.896
+      }
+     ]
     }
    ],
    "latest": {
-    "round": "round-001",
-    "score": 0.406,
-    "weightedAgreement": 0.331
+    "round": "round-003",
+    "score": 0.59,
+    "weightedAgreement": 0.606,
+    "priorityAgreement": 0.606
    },
-   "trend": null
+   "trend": 0.184,
+   "cumulative": 0.498
   }
  },
  "rounds": [
@@ -239,11 +623,20 @@
    "decisions": 57,
    "ab": 3,
    "next": "round-002-sim"
+  },
+  {
+   "round": "round-003",
+   "log": "logs/sim/parcels3-round-003-good-seed1.json",
+   "roundWeight": 1,
+   "gradedAt": "2026-10-31T17:52:07.285Z",
+   "decisions": 52,
+   "ab": 2,
+   "next": "round-004-sim"
   }
  ],
- "updatedAt": "2026-10-31T16:19:13.503Z",
+ "updatedAt": "2026-10-31T17:52:07.286Z",
  "ranking": [
-  "qwen2.5:1.5b",
-  "llama3.2:3b"
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
  ]
 }

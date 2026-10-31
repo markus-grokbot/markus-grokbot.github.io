@@ -95,3 +95,30 @@ and `axisX`/`axisY` = confidence-weighted 1 − |human − target|/2, reported i
 Qualities: accuracy = mean soft prob on anchor bins, decisiveness = mean `conf` (merged with A/B).
 Sim: `node games/parcels/sim/run-sim2.js --round round-002 --skill good --seed 1` (bot aims at its guess's centre with noise,
 sometimes one axis only). Browser: `?sim=1&skill=good&fast=16`; drag test: `node games/parcels/sim/drag-check.mjs`.
+
+## v3 "priority" (game 0.3.0, default from round-003; bins v2 at `?v=2`, classic v1 at `?v=1`)
+Markus after round-002: "noticeably better, but should to a large extent be used for priority, not ultimate decisions."
+Same calm drag field, countdown and pace as v2, but the axes are priority, not verdicts (`priority.js` 1.0.0):
+
+| axis | left / bottom | right / top |
+|---|---|---|
+| x = urgency | **now** (urgency 100) | **can wait** (0) |
+| y = importance | **low value** (0) | **matters** (100) |
+
+urgency = 100·(1−x)/2, importance = 100·(1+y)/2, **priority = 0.6·importance + 0.4·urgency** (0–100). Quadrants are
+labels only: 🔥 **Handle first** (now + matters), 📅 **Schedule** (can wait + matters), 👀 **Quick skim** (now + low value),
+💤 **Deprioritise** (can wait + low value). Axis confidence = |x|, |y|. No Archive/Spam verdicts. The round end shows
+**Your queue**: every parcel (first placement) sorted by priority. Log: decisions carry urgency, importance, priority,
+quadrant, confX/confY; summary.parcels.queue/quadrants/meanPriority.
+
+Model task from round-003: blind **{urgency, importance} 0–100 per parcel** (`labelAllPriority`, stored in
+`round.models[m].positions`, round `task: "priority"`) plus the summary badge; the parcels they write carry `authorPos`.
+Grading (`grade().priority`): per axis 1 − |model − human|/100, weighted by Markus's confidence on that axis × decision
+weight; `priority.agreement` is the score's agreement term for priority rounds; also urgency/importance separately and the
+mean absolute priority error. A/B summaries and authored clarity are unchanged.
+
+**History mapping** (approximate, so bin rounds stay comparable): old bins → (urgency, importance): Reply (85, 80),
+Needs info (75, 55), Later (20, 75), Archive (20, 30), Spam (10, 5). v2 drops convert directly (act now ≈ urgent,
+worth it ≈ matters). Rounds 001–002 keep their bin-based `score`; their `priority` block uses this mapping for both the model
+labels and v1 human sorts, so it is an estimate, not a measured position.
+Sim: `node games/parcels/sim/run-sim3.js --round round-003`; browser `?sim=1&skill=good&fast=16`; `next-round.js --grade-only` re-grades without Ollama generation.

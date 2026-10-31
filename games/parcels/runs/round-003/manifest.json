@@ -1,0 +1,981 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": false,
+ "fromRound": "round-002",
+ "toRound": "round-003",
+ "log": "games/parcels/logs/human/human-parcels-round-002-20261031173324-2y01c.json",
+ "startedAt": "2026-10-31T17:40:31.112Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 33,
+   "medianSortMs": 3517,
+   "roundFocus": 92,
+   "ab": 2,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 33,
+     "rawAgreement": 0.424,
+     "weightedAgreement": 0.355,
+     "abShown": 2,
+     "abWins": 0,
+     "abWinRate": 0,
+     "authoredSorted": 8,
+     "authoredClarity": 0.8,
+     "authoredMeanConf": 0.488,
+     "priority": {
+      "graded": 33,
+      "agreement": 0.706,
+      "urgency": 0.707,
+      "importance": 0.703,
+      "meanAbsPriorityError": 25,
+      "source": "model bins mapped to positions (BIN_UI)"
+     },
+     "binAgreement": 0.355,
+     "axisX": 0.612,
+     "axisY": 0.679,
+     "score": 0.329,
+     "confusion": {
+      "spam>info": 2,
+      "reply>reply": 7,
+      "info>info": 4,
+      "spam>reply": 2,
+      "spam>archive": 4,
+      "reply>archive": 2,
+      "archive>archive": 3,
+      "archive>reply": 3,
+      "archive>info": 1,
+      "later>reply": 2,
+      "info>reply": 1,
+      "reply>info": 1,
+      "archive>later": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "reply",
+       "his": "archive",
+       "agreement": 0,
+       "weight": 0.803
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.055,
+       "weight": 0.663
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0.001,
+       "weight": 0.652
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "spam",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.64
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "reply",
+       "his": "info",
+       "agreement": 0.108,
+       "weight": 0.628
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "spam",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.618
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0,
+       "weight": 0.611
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.4,
+       "weight": 0.602
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.112,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.008,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.008,
+       "weight": 0.591
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.095,
+       "weight": 0.571
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "reply",
+       "his": "archive",
+       "agreement": 0.002,
+       "weight": 0.571
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0.016,
+       "weight": 0.568
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "spam",
+       "his": "archive",
+       "agreement": 0.47,
+       "weight": 0.539
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "subject": "Service Request: Network Issue",
+       "yours": "archive",
+       "his": "info",
+       "agreement": 0.018,
+       "weight": 0.533
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "spam",
+       "his": "info",
+       "agreement": 0.013,
+       "weight": 0.524
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "spam",
+       "his": "info",
+       "agreement": 0.488,
+       "weight": 0.476
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "archive",
+       "his": "later",
+       "agreement": 0.362,
+       "weight": 0.276
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "10/5",
+       "his": "86/87",
+       "agreement": 0.21,
+       "weight": 1.042
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "85/80",
+       "his": "12/21",
+       "agreement": 0.33,
+       "weight": 1.227
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "20/30",
+       "his": "85/86",
+       "agreement": 0.399,
+       "weight": 1.004
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "10/5",
+       "his": "74/73",
+       "agreement": 0.344,
+       "weight": 0.804
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "20/30",
+       "his": "72/75",
+       "agreement": 0.517,
+       "weight": 0.821
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "10/5",
+       "his": "74/22",
+       "agreement": 0.607,
+       "weight": 0.636
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "10/5",
+       "his": "66/59",
+       "agreement": 0.449,
+       "weight": 0.397
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "20/30",
+       "his": "64/65",
+       "agreement": 0.606,
+       "weight": 0.508
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "20/75",
+       "his": "68/64",
+       "agreement": 0.689,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "20/75",
+       "his": "68/64",
+       "agreement": 0.689,
+       "weight": 0.558
+      }
+     ]
+    },
+    "qwen2.5:1.5b": {
+     "graded": 33,
+     "rawAgreement": 0.333,
+     "weightedAgreement": 0.288,
+     "abShown": 2,
+     "abWins": 2,
+     "abWinRate": 1,
+     "authoredSorted": 8,
+     "authoredClarity": 0.808,
+     "authoredMeanConf": 0.449,
+     "priority": {
+      "graded": 33,
+      "agreement": 0.757,
+      "urgency": 0.753,
+      "importance": 0.764,
+      "meanAbsPriorityError": 19.3,
+      "source": "model bins mapped to positions (BIN_UI)"
+     },
+     "binAgreement": 0.288,
+     "axisX": 0.668,
+     "axisY": 0.754,
+     "score": 0.483,
+     "confusion": {
+      "info>info": 3,
+      "reply>reply": 4,
+      "info>reply": 7,
+      "spam>info": 1,
+      "later>archive": 1,
+      "info>archive": 4,
+      "archive>archive": 4,
+      "archive>info": 1,
+      "later>info": 3,
+      "later>reply": 3,
+      "archive>reply": 1,
+      "archive>later": 1
+     },
+     "misses": [
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.023,
+       "weight": 0.866
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0,
+       "weight": 0.803
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.071,
+       "weight": 0.744
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0.002,
+       "weight": 0.663
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.003,
+       "weight": 0.64
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.062,
+       "weight": 0.618
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.068,
+       "weight": 0.611
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.007,
+       "weight": 0.602
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0.011,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "archive",
+       "his": "reply",
+       "agreement": 0.008,
+       "weight": 0.595
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "subject": "New Job Posting: Full Stack Developer",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.488,
+       "weight": 0.591
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "info",
+       "his": "archive",
+       "agreement": 0.023,
+       "weight": 0.571
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "reply",
+       "his": "reply",
+       "agreement": 0.489,
+       "weight": 0.568
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "later",
+       "his": "info",
+       "agreement": 0.014,
+       "weight": 0.566
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "later",
+       "his": "archive",
+       "agreement": 0.002,
+       "weight": 0.539
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "later",
+       "his": "info",
+       "agreement": 0.013,
+       "weight": 0.529
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "later",
+       "his": "info",
+       "agreement": 0.009,
+       "weight": 0.524
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "archive",
+       "his": "info",
+       "agreement": 0.003,
+       "weight": 0.488
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "spam",
+       "his": "info",
+       "agreement": 0.085,
+       "weight": 0.432
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "archive",
+       "his": "later",
+       "agreement": 0.362,
+       "weight": 0.276
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.325,
+       "weight": 0.256
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "info",
+       "his": "reply",
+       "agreement": 0.441,
+       "weight": 0.228
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "later",
+       "his": "reply",
+       "agreement": 0.003,
+       "weight": 0.222
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "75/55",
+       "his": "12/21",
+       "agreement": 0.495,
+       "weight": 1.227
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "75/55",
+       "his": "89/95",
+       "agreement": 0.721,
+       "weight": 1.529
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "75/55",
+       "his": "25/42",
+       "agreement": 0.586,
+       "weight": 0.585
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "20/75",
+       "his": "21/19",
+       "agreement": 0.703,
+       "weight": 0.793
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "20/30",
+       "his": "68/64",
+       "agreement": 0.583,
+       "weight": 0.562
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "20/75",
+       "his": "74/73",
+       "agreement": 0.713,
+       "weight": 0.804
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/75",
+       "his": "69/68",
+       "agreement": 0.709,
+       "weight": 0.636
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "20/30",
+       "his": "73/55",
+       "agreement": 0.517,
+       "weight": 0.38
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "10/5",
+       "his": "70/43",
+       "agreement": 0.455,
+       "weight": 0.328
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "subject": "New Product Launch: AI Assistant",
+       "yours": "75/55",
+       "his": "32/43",
+       "agreement": 0.657,
+       "weight": 0.448
+      }
+     ]
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 1,
+    "valid": 6,
+    "rejected": 5,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job-Board · DevFolio",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We are seeking a Junior DevOps Engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · DevNews",
+       "subject": "New Software Engineer Course",
+       "snippet": "Learn the latest software engineering techniques.",
+       "badge": "marketing promotion",
+       "urgency": 20,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · DevTeam",
+       "subject": "Question about project deadline",
+       "snippet": "Can we discuss the project deadline?",
+       "badge": "collaborator question",
+       "urgency": 50,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job-Board · DevFolio",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We are seeking a Junior DevOps Engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 20,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize items from recruiters and job-boards with high importance and medium urgency."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 4,
+    "rejected": 16,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "snippet": "Join us for the launch of our new product. Don't miss this opportunity to see the future of technology firsthand.",
+       "badge": "launch",
+       "urgency": 50,
+       "importance": 90,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · MyProject",
+       "subject": "Tech News Update",
+       "snippet": "Check out the latest news from the tech world. Stay ahead of the curve with our latest developments.",
+       "badge": "news",
+       "urgency": 20,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Support Team",
+       "subject": "Membership invoice – missing VAT number",
+       "snippet": "Your membership is due for renewal. Please update your invoice to include the missing VAT number.",
+       "badge": "invoice",
+       "urgency": 10,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "snippet": "We are seeking a Senior DevOps Engineer for our team. Apply now to join our cutting-edge projects.",
+       "badge": "job",
+       "urgency": 75,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · BrandA",
+       "subject": "New Product Launch: AI Assistant",
+       "snippet": "Introducing our new AI assistant, designed to revolutionize the way you work. Experience the future of technology today.",
+       "badge": "launch",
+       "urgency": 25,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · JaneSmith",
+       "subject": "Meet your new AI co-pilot for email",
+       "snippet": "We're excited to introduce you to our new AI co-pilot for email. It's designed to help you stay organized and productive.",
+       "badge": "co-pilot",
+       "urgency": 80,
+       "importance": 95,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · 3391",
+       "subject": "Invoice 3391 – payment overdue",
+       "snippet": "Your invoice for product XYZ is overdue. Please make the payment as soon as possible to avoid further charges.",
+       "badge": "payment",
+       "urgency": 5,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · TechTalks",
+       "subject": "Tech News Update",
+       "snippet": "Check out the latest tech news from the world of programming. Stay informed and up-to-date with the latest trends.",
+       "badge": "news",
+       "urgency": 25,
+       "importance": 55,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "New Product Launch: AI Assistant",
+       "snippet": "Join us for the launch of our new AI assistant. Experience the future of technology today.",
+       "badge": "launch",
+       "urgency": 20,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior DevOps Engineer · Tech Talent",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "snippet": "We are looking for a Senior DevOps Engineer to join our team. Apply now!",
+       "badge": "job opening",
+       "urgency": 50,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code host notifications · GitHub",
+       "subject": "CI/CD Update",
+       "snippet": "Your project's CI/CD pipeline is running smoothly. No issues detected.",
+       "badge": "ci/cd update",
+       "urgency": 20,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · MyCompany",
+       "subject": "New Product Launch: AI Assistant",
+       "snippet": "Join us for the launch of our new AI assistant!",
+       "badge": "new product launch",
+       "urgency": 30,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · MyCompany",
+       "subject": "New Product Launch: AI Assistant",
+       "snippet": "Join us for the launch of our new AI assistant!",
+       "badge": "newsletter",
+       "urgency": 30,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior DevOps Engineer · Tech Talent",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "snippet": "We are looking for a Senior DevOps Engineer to join our team. Apply now!",
+       "badge": "job opening",
+       "urgency": 50,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize based on the urgency of the action required, not the importance of the task itself.",
+     "Consider the sender's role and the context of the email to determine its importance.",
+     "Use a 1-10 scale for urgency, with 10 being 'right now' and 1 being 'can wait weeks'.",
+     "Use a 1-10 scale for importance, with 10 being 'career/project critical' and 1 being 'noise'.",
+     "Assign a weight to each scale based on the sender's certainty about the placement."
+    ]
+   }
+  },
+  "label": {
+   "note": "first pass parsed 0 items (bin regex); re-labelled with tools/relabel.js after adding extractItemsPrio",
+   "models": {
+    "llama3.2:3b": {
+     "calls": 7,
+     "ms": 85877,
+     "invalid": 4,
+     "retries": 1,
+     "wallMs": 86214,
+     "relabelled": "2026-10-31T17:51:04.682Z"
+    },
+    "qwen2.5:1.5b": {
+     "calls": 7,
+     "ms": 46231,
+     "invalid": 4,
+     "retries": 1,
+     "wallMs": 46236,
+     "relabelled": "2026-10-31T17:51:50.922Z"
+    }
+   }
+  }
+ },
+ "roundWeight": 1,
+ "note": "Full weight. First v2 field round; Markus: noticeably better, but should be used for priority, not final decisions.",
+ "endedAt": "2026-10-31T17:45:30.734Z",
+ "wallMs": 299622,
+ "output": {
+  "round": "rounds/round-003.json",
+  "parcels": 30,
+  "carried": 20,
+  "ab": 0
+ }
+}

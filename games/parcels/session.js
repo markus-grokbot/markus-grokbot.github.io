@@ -25,9 +25,11 @@
     return { pairId: q.id, itemA: q.a.id, itemB: q.b.id, choice: c, winner: c === 'A' ? q.a.id : c === 'B' ? q.b.id : null, strength: 2, decisionTimeMs: Math.round(ms), swapped: !!swapped, undone: false, source: source, parcelId: q.parcelId, modelA: q.a.model, modelB: q.b.model, winnerModel: c === 'A' ? q.a.model : c === 'B' ? q.b.model : null };
   }
   // round summary (v1 and v2 decisions)
-  function summarize(waves, total, best, qi) { var all = []; waves.forEach(function (w) { all = all.concat(w.decisions); }); var s = all.filter(function (d) { return !d.missed; }), bins = {}; s.forEach(function (d) { bins[d.bin] = (bins[d.bin] || 0) + 1; });
+  function summarize(waves, total, best, qi) { var all = []; waves.forEach(function (w) { all = all.concat(w.decisions); }); var s = all.filter(function (d) { return !d.missed; }), bins = {}; s.forEach(function (d) { if (d.bin) bins[d.bin] = (bins[d.bin] || 0) + 1; });
     var o = { score: total, bestCombo: best, parcels: all.length, sorted: s.length, misses: all.length - s.length, changedMind: all.filter(function (d) { return d.changedMind; }).length, abAnswered: qi, bins: bins };
     if (s.length && s[0].conf != null) { o.timedOut = s.filter(function (d) { return d.timedOut; }).length; o.partial = s.filter(function (d) { return d.pTop < 0.6 && d.conf >= 0.3; }).length; o.middle = s.filter(function (d) { return d.conf < 0.25; }).length; o.meanConf = +(s.reduce(function (a, d) { return a + d.conf; }, 0) / s.length).toFixed(3); o.meanConfX = +(s.reduce(function (a, d) { return a + d.confX; }, 0) / s.length).toFixed(3); o.meanConfY = +(s.reduce(function (a, d) { return a + d.confY; }, 0) / s.length).toFixed(3); }
+    if (s.length && s[0].priority != null) { delete o.bins; o.quadrants = {}; s.forEach(function (d) { o.quadrants[d.quadrant] = (o.quadrants[d.quadrant] || 0) + 1; }); o.meanPriority = +(s.reduce(function (a, d) { return a + d.priority; }, 0) / s.length).toFixed(1);
+      var seen = {}; o.queue = s.filter(function (d) { if (seen[d.parcelId] || d.repeat) return false; seen[d.parcelId] = 1; return true; }).sort(function (a, b) { return b.priority - a.priority; }).map(function (d) { return { parcelId: d.parcelId, priority: d.priority, urgency: d.urgency, importance: d.importance, quadrant: d.quadrant }; }); }
     return o; }
   return { create: create, abDecision: abDecision, summarize: summarize };
 });

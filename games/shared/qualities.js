@@ -3,7 +3,7 @@
    partial qualities; compute() merges them (confidence-weighted). Registry: games/shared/qualities.registry.json.
    These are rough gameplay estimates for picking a game, NOT assessments of a person. Labelled 'rough' until confidence >= 0.5. */
 (function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(); else root.Qualities = f(); })(typeof self !== 'undefined' ? self : this, function () {
-  var MODEL_VERSION = '1.2.0';
+  var MODEL_VERSION = '1.3.0';
   var QUALITIES = {
     focus: 'Sustained attention: few avoidable mistakes per opportunity',
     reaction: 'Responding in time to sudden threats',
@@ -93,7 +93,13 @@
       var fm = all.filter(function (d) { return d.firstMs != null; }).map(function (d) { return d.firstMs; }), sm = all.filter(function (d) { return !d.missed; }).map(function (d) { return d.sortMs; });
       if (fm.length) res.reaction = q(logScale(median(fm) / 1000, 0.8, 6), fm.length, 25, ['median first touch ' + (median(fm) / 1000).toFixed(2) + ' s after a parcel appears']);
       if (sm.length) res.decisionSpeed = q(logScale(median(sm) / 1000, 1, 8), sm.length, 25, ['median sort ' + (median(sm) / 1000).toFixed(2) + ' s']);
-      var an = all.filter(function (d) { return d.anchorBin && !d.missed; }), v2 = all.filter(function (d) { return !d.missed && d.soft; });
+      var an = all.filter(function (d) { return d.anchorBin && !d.missed; }), v2 = all.filter(function (d) { return !d.missed && d.soft; }), v3 = all.filter(function (d) { return !d.missed && d.priority != null; });
+      // v3 priority: accuracy = anchor parcels vs the anchor bin's approximate (urgency, importance), 1-|diff|/100 weighted by axis confidence
+      var BUI = { reply: [85, 80], info: [75, 55], later: [20, 75], archive: [20, 30], spam: [10, 5] };
+      if (v3.length) { var a3 = v3.filter(function (d) { return BUI[d.anchorBin]; }), sw = 0, sa = 0; a3.forEach(function (d) { var t = BUI[d.anchorBin]; sw += d.confX + d.confY; sa += d.confX * (1 - Math.abs(d.urgency - t[0]) / 100) + d.confY * (1 - Math.abs(d.importance - t[1]) / 100); });
+        if (a3.length && sw) res.accuracy = q(100 * sa / sw, a3.length, 8, ['clear-cut parcels: priority agreement ' + (sa / sw).toFixed(2) + ' over ' + a3.length]);
+        res.decisiveness = q(100 * mean(v3.map(function (d) { return d.conf; })), v3.length, 20, ['mean axis confidence urgency ' + mean(v3.map(function (d) { return d.confX; })).toFixed(2) + ', importance ' + mean(v3.map(function (d) { return d.confY; })).toFixed(2)]); }
+      else
       // v2 field: accuracy = mean soft probability on the anchor's bin (partial credit); decisiveness = mean stronger-axis confidence
       if (v2.length) { var a2 = v2.filter(function (d) { return d.anchorBin; }); if (a2.length) res.accuracy = q(100 * mean(a2.map(function (d) { return d.soft[d.anchorBin] || 0; })), a2.length, 8, ['clear-cut parcels: mean soft agreement ' + mean(a2.map(function (d) { return d.soft[d.anchorBin] || 0; })).toFixed(2) + ' over ' + a2.length]);
         res.decisiveness = q(100 * mean(v2.map(function (d) { return d.conf; })), v2.length, 20, ['mean axis confidence x ' + mean(v2.map(function (d) { return d.confX; })).toFixed(2) + ', y ' + mean(v2.map(function (d) { return d.confY; })).toFixed(2) + ' (0 = dropped in the middle)']); }

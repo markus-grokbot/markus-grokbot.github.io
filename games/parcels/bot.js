@@ -25,9 +25,9 @@
 /* v2 field bot (SIM only): aims at the zone centre of its guess with gaussian noise; sometimes commits only one axis
    (partial sort: the other coordinate stays near the middle). Drags in small steps, releases after a think time. */
 (function (root) {
-  var B = typeof module === 'object' && module.exports ? module.exports : root.ParcelBot, A = typeof module === 'object' && module.exports ? require('./axes.js') : root.ParcelAxes;
+  var B = typeof module === 'object' && module.exports ? module.exports : root.ParcelBot, A0 = typeof module === 'object' && module.exports ? require('./axes.js') : root.ParcelAxes;
   var SK2 = { casual: { acc: 0.7, think: 2600, sd: 0.28, partial: 0.25, slow: 0.08 }, good: { acc: 0.85, think: 1900, sd: 0.16, partial: 0.12, slow: 0.03 } };
-  B.createField = function (skill, rng) {
+  B.createField = function (skill, rng, AXM) { var A = AXM || A0;
     var k = SK2[skill] || SK2.casual, plan = null; function g() { return (rng() + rng() + rng() - 1.5) * 1.15; }
     return { skill: skill, abChoose: B.create(skill, rng).abChoose, act: function (wave) {
       var c = wave.current(), st = wave.state(); if (!c) { plan = null; return; }

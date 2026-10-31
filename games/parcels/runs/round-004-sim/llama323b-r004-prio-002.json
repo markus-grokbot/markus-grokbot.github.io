@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r004-prio-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T17:54:07.321Z",
+ "ms": 7833,
+ "promptSha256": "4a2ca585b84824ca6c1e0c2ba21f87ea7c731cfda639ae99ee53470473f90275",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize items with a clear deadline or time-sensitive request, even if they are not critical to the project.\n* Give higher priority to items from collaborators and service providers, as they are more likely to require attention and resolution.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr004-llama323b-03 | Job Board Digests | New Job Listings | Check out our latest job listings for software engineers.\nr002-qwen2515b-02 | Marketing · TechWorld | New Product Launch: AI Assistant | Join our community to get the latest updates on the AI Assistant.\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\np008 | Recruiter · Vinterberg Search | Exciting opportunity!!! (urgent) | I came across your profile and think you'd be a perfect fit for a role I can't name yet.\nr003-llama323b-03 | Marketing · DevNews | New Software Engineer Course | Learn the latest software engineering techniques.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r004\",\"urgency\":0,\"importance\":0,\"summary\":\"Job Board Digests\"},{\"id\":\"r002\",\"urgency\":0,\"importance\":0,\"summary\":\"New Product Launch: AI Assistant\"},{\"id\":\"p034\",\"urgency\":0,\"importance\":0,\"summary\":\"Guest slot – topic?\"},{\"id\":\"p008\",\"urgency\":100,\"importance\":100,\"summary\":\"Exciting opportunity!!!\"},{\"id\":\"r003\",\"urgency\":0,\"importance\":0,\"summary\":\"New Software Engineer Course\"}]}",
+ "parseError": null,
+ "evalCount": 118,
+ "promptEvalCount": 444
+}
