@@ -3,7 +3,7 @@
    partial qualities; compute() merges them (confidence-weighted). Registry: games/shared/qualities.registry.json.
    These are rough gameplay estimates for picking a game, NOT assessments of a person. Labelled 'rough' until confidence >= 0.5. */
 (function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(); else root.Qualities = f(); })(typeof self !== 'undefined' ? self : this, function () {
-  var MODEL_VERSION = '1.0.0';
+  var MODEL_VERSION = '1.1.0';
   var QUALITIES = {
     focus: 'Sustained attention: few avoidable mistakes per opportunity',
     reaction: 'Responding in time to sudden threats',
@@ -81,6 +81,21 @@
         var h = gaps.length >> 1, a = median(gaps.slice(0, h)), b = median(gaps.slice(h)); res.endurance = q(50 + 50 * (a - b) / Math.max(a, b), gaps.length, 80, ['median piece time 1st half ' + (a / 1000).toFixed(1) + ' s vs 2nd ' + (b / 1000).toFixed(1) + ' s']); }
       res.accuracy = q(100 * (1 - Math.min(1, mr * 2)), pieces, 60, ['clean placements ' + (pieces - mis) + '/' + pieces]);
       res.riskTaking = q(100 * mean(maxH) / 20, lv.length * 10, 30, ['max stack height ' + mean(maxH).toFixed(1) + '/20']);
+      return res;
+    },
+    // Parcel Panic: per wave focus = 100*(1-(misses + 0.5*changed)/shown); reaction = spawn->first touch; decisionSpeed = spawn->commit;
+    // accuracy = agreement on anchor parcels (unambiguous ones, flagged in the round file, copied into each decision as d.anchorBin)
+    parcels: function (log) {
+      var w = ext(log, 'parcels'); if (!w.length) return null; var all = [], fs = [], res = {};
+      w.forEach(function (o) { var x = o.x; all = all.concat(x.decisions || []); if (x.parcelsShown) fs.push(100 * (1 - (x.misses + 0.5 * x.changedMind) / x.parcelsShown)); });
+      var n = all.length, miss = all.filter(function (d) { return d.missed; }).length, ch = all.filter(function (d) { return d.changedMind; }).length; if (!n) return null;
+      res.focus = q(100 * (1 - (miss + 0.5 * ch) / n), n, 25, ['parcels missed ' + miss + '/' + n + ', changed mind ' + ch]);
+      var fm = all.filter(function (d) { return d.firstMs != null; }).map(function (d) { return d.firstMs; }), sm = all.filter(function (d) { return !d.missed; }).map(function (d) { return d.sortMs; });
+      if (fm.length) res.reaction = q(logScale(median(fm) / 1000, 0.8, 6), fm.length, 25, ['median first touch ' + (median(fm) / 1000).toFixed(2) + ' s after a parcel appears']);
+      if (sm.length) res.decisionSpeed = q(logScale(median(sm) / 1000, 1, 8), sm.length, 25, ['median sort ' + (median(sm) / 1000).toFixed(2) + ' s']);
+      var an = all.filter(function (d) { return d.anchorBin && !d.missed; }); if (an.length) { var ok = an.filter(function (d) { return d.bin === d.anchorBin; }).length; res.accuracy = q(100 * ok / an.length, an.length, 8, ['clear-cut parcels sorted as expected ' + ok + '/' + an.length]); }
+      if (fs.length >= 2) res.consistency = q(100 - 3 * sd(fs), fs.length, 4, ['wave focus sd ' + sd(fs).toFixed(1) + ' over ' + fs.length + ' waves']);
+      if (fs.length >= 3) res.endurance = q(50 + 8 * slope(fs), fs.length, 5, ['wave focus trend ' + slope(fs).toFixed(1) + ' pts/wave (speed rises each wave)']);
       return res;
     },
     pairwise: function (log) {

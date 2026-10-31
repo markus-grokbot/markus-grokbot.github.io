@@ -4,6 +4,7 @@
 <div id="rec" style="border:1px solid #5bd;border-radius:12px;padding:.8rem 1rem;margin:1rem 0"><b>Which game now?</b>
 <div style="display:flex;gap:.5rem;margin:.5rem 0;flex-wrap:wrap"><select id="task" style="flex:2;padding:.5rem;background:#222;color:#eee;border-radius:8px"></select><select id="mins" style="flex:1;padding:.5rem;background:#222;color:#eee;border-radius:8px"><option value="3">3 min</option><option value="5" selected>5 min</option><option value="10">10 min</option><option value="30">30 min</option></select></div>
 <div id="recout" style="font-size:.95rem"></div><div id="recstate" style="font-size:.75rem;color:#999;margin-top:.4rem"></div></div>
+<a class="g" href="parcels/">📦 Parcel Panic — sort the inbox, grade the local models (4 waves, ~4 min)</a>
 <a class="g" href="runner/">🐾 Lynx Dash — runner + tone questions (6 × 30 s, ~4 min)</a>
 <a class="g" href="pairwise/?set=tone-001">🗣️ Tone Pit — which voice is yours? (15 pairs)</a>
 <a class="g" href="tetris/">🧱 Tetris — iteration 1 (10 levels)</a>
@@ -11,7 +12,7 @@
 <a class="g" href="pairwise/">⚖️ Pairwise Pit — test round (demo set, selling copy)</a>
 <p style="font-size:.85rem;color:#999">For agents: <a href="ITERATING.md">ITERATING.md</a> · log schema <a href="../schema/gameplay-log.v1.schema.json">gameplay-log v1</a></p>
 <script src="shared/qualities.js"></script><script src="shared/recommend.js"></script><script>
-(function () { var logs = []; ['runner.logs.v1', 'tetris.logs.v1', 'combo.logs.v1', 'pairwise.logs.v1'].forEach(function (k) { try { var o = JSON.parse(localStorage.getItem(k) || '{}'); Object.keys(o).forEach(function (id) { logs.push(o[id]); }); } catch (e) { } });
+(function () { var logs = []; ['parcels.logs.v1', 'runner.logs.v1', 'tetris.logs.v1', 'combo.logs.v1', 'pairwise.logs.v1'].forEach(function (k) { try { var o = JSON.parse(localStorage.getItem(k) || '{}'); Object.keys(o).forEach(function (id) { logs.push(o[id]); }); } catch (e) { } });
   var T = document.getElementById('task'), M = document.getElementById('mins'); Object.keys(Recommend.TASKS).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = Recommend.TASKS[k]; T.appendChild(o); });
   try { T.value = localStorage.getItem('games.lastTask') || 'tone-data'; } catch (e) { }
   var st = Recommend.stateFromLogs(logs);

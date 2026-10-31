@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r001-label-003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:06:28.841Z",
+ "ms": 2764,
+ "promptSha256": "505254dc3e7ea7b30468c0129937d551e05760deca98c889ea95bd2964e41302",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\np012 | Accounts · Stellan Print AB | Invoice 3391 – payment overdue | We have not received payment for invoice 3391. Please confirm the order number you used.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\np015 | Talent partner · Kestrel Labs | Salary range for the staff role | Before we book the panel: what range are you targeting, and what notice period do you have?\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n    {\"id\":\"p011\",\"bin\":\"reply\",\"summary\":\"Apply update\"},\n    {\"id\":\"p012\",\"bin\":\"info\",\"summary\":\"Payment overdue\"},\n    {\"id\":\"p013\",\"bin\":\"later\",\"summary\":\"Runner lag\"},\n    {\"id\":\"p014\",\"bin\":\"info\",\"summary\":\"Webinar registration\"},\n    {\"id\":\"p015\",\"bin\":\"info\",\"summary\":\"Salary range\"}\n]}",
+ "parseError": null,
+ "evalCount": 97,
+ "promptEvalCount": 411
+}

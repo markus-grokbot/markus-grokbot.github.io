@@ -177,6 +177,18 @@ measures and how), `recommend.js` (+ `RECOMMENDER.md`), `tools/profile.js` → `
 only). Every game page attaches `qualities` at the end of a run and shows it on its summary; `games/index.html` has
 "Which game now?" from localStorage. New game = write an adapter + a registry entry. No clinical language; label rough estimates.
 
+## Parcel Panic (games/parcels/) + Ollama round loop
+Mail-triage arcade: parcels (fictional inbox items) fall; sort into Reply/Archive/Later/Needs info/Spam by swipe or tap. 4 time-based
+waves with rising speed, combos, misses, A/B summary-style question between waves (model A vs model B, Neither). Files: `engine.js`
+(pure, UMD; `source()` round-wide parcel queue with repeats, `createWave()` with arm-then-commit grace → changedMind), `session.js`
+(log: levels alternate `segment: parcels` ext.parcels and `segment: pairwise`), `bot.js` (SIM sorter), `parcels.js` + `index.html`,
+`sim/run-sim.js` (virtual clock), `sim/headless-check.mjs` (CDP, 390×844), `tools/` (lib, seed-round, next-round).
+ext.parcels per wave: wave, parcelsShown, sorted, misses, changedMind, bestCombo, scoreWave, speedEnd, roundId, and `decisions[]`
+{parcelId, bin (null if missed), sortMs (spawn→commit), firstMs (spawn→first touch), changedMind, binsTried, speed (at commit),
+speedAtSpawn, y, combo, points, missed, repeat?, anchorBin?}. Qualities adapter `parcels` (focus, reaction, decisionSpeed, accuracy on
+anchors, consistency, endurance); recommender task `triage`. **The Ollama loop, upload steps and the next-round command are in
+[parcels/LOOP.md](parcels/LOOP.md).** After Markus uploads a round-N log to `logs/human/`: `node games/parcels/tools/next-round.js`.
+
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.
 - **Iteration 2:** ≥2 levels truly tuned from Markus's human logs (run tune.js once logs/human has files);

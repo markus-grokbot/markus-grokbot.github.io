@@ -1,19 +1,123 @@
 {
- "schema": "qualities-registry", "version": "1.0.0", "model": "games/shared/qualities.js",
+ "schema": "qualities-registry",
+ "version": "1.1.0",
+ "model": "games/shared/qualities.js",
  "note": "Which qualities each game measures and how. Scores 0-100, confidence 0-1 (n/(n+k)), 'rough' below 0.5. Gameplay estimates for picking a game, not assessments of a person.",
- "qualities": ["focus", "reaction", "pace", "consistency", "accuracy", "planning", "riskTaking", "endurance", "decisionSpeed", "decisiveness"],
+ "qualities": [
+  "focus",
+  "reaction",
+  "pace",
+  "consistency",
+  "accuracy",
+  "planning",
+  "riskTaking",
+  "endurance",
+  "decisionSpeed",
+  "decisiveness"
+ ],
  "games": {
-  "runner": { "path": "/games/runner/", "adapters": ["runner", "pairwise"], "minutes": [4, 6], "measures": {
+  "runner": {
+   "path": "/games/runner/",
+   "adapters": [
+    "runner",
+    "pairwise"
+   ],
+   "minutes": [
+    4,
+    6
+   ],
+   "measures": {
     "focus": "100*(1 - sum(w*rate)/sum(w)); rates = obstacle hits/obstacles faced, crow hits/crows faced, coins missed/coins offered; weights in runner/tuning.json focus.weights (3/2/1)",
-    "reaction": "crows avoided / crows faced (obstacle clear rate if < 3 crows)", "accuracy": "coins caught / offered",
-    "consistency": "100 - 4*sd(segment focus)", "endurance": "50 + 8*slope(segment focus) per segment", "riskTaking": "near misses per obstacle",
-    "decisionSpeed": "tone questions (pairwise adapter)", "decisiveness": "tone questions (pairwise adapter)" }, "yields": ["tone-001 preferences"] },
-  "tetris": { "path": "/games/tetris/", "adapters": ["tetris"], "minutes": [2, 30], "measures": {
-    "focus": "misdrops/piece and hesitations (lock gap > 2.5x median)", "planning": "avg holes and end bumpiness", "pace": "s/piece, log scale 1.5 s=100 .. 10 s=0",
-    "consistency": "CV of piece times", "endurance": "median piece time 1st vs 2nd half", "accuracy": "clean placements / pieces", "riskTaking": "max stack height" }, "yields": [] },
-  "combo": { "path": "/games/combo/", "adapters": ["tetris", "pairwise"], "minutes": [3, 8], "measures": { "*": "tetris + pairwise adapters on one log" }, "yields": ["pairwise set preferences"] },
-  "pairwise": { "path": "/games/pairwise/?set=tone-001", "adapters": ["pairwise"], "minutes": [3, 10], "measures": {
-    "decisionSpeed": "median decision time, log scale 5 s=100 .. 90 s=0", "decisiveness": "0.6*(mean strength-1)/2 + 0.4*(1 - tie/neither rate)",
-    "consistency": "repeat pairs agreeing (only when a pair was answered twice; transitivity check: TODO when sets have triangles)" }, "yields": ["tone-001 preferences"] }
+    "reaction": "crows avoided / crows faced (obstacle clear rate if < 3 crows)",
+    "accuracy": "coins caught / offered",
+    "consistency": "100 - 4*sd(segment focus)",
+    "endurance": "50 + 8*slope(segment focus) per segment",
+    "riskTaking": "near misses per obstacle",
+    "decisionSpeed": "tone questions (pairwise adapter)",
+    "decisiveness": "tone questions (pairwise adapter)"
+   },
+   "yields": [
+    "tone-001 preferences"
+   ]
+  },
+  "tetris": {
+   "path": "/games/tetris/",
+   "adapters": [
+    "tetris"
+   ],
+   "minutes": [
+    2,
+    30
+   ],
+   "measures": {
+    "focus": "misdrops/piece and hesitations (lock gap > 2.5x median)",
+    "planning": "avg holes and end bumpiness",
+    "pace": "s/piece, log scale 1.5 s=100 .. 10 s=0",
+    "consistency": "CV of piece times",
+    "endurance": "median piece time 1st vs 2nd half",
+    "accuracy": "clean placements / pieces",
+    "riskTaking": "max stack height"
+   },
+   "yields": []
+  },
+  "combo": {
+   "path": "/games/combo/",
+   "adapters": [
+    "tetris",
+    "pairwise"
+   ],
+   "minutes": [
+    3,
+    8
+   ],
+   "measures": {
+    "*": "tetris + pairwise adapters on one log"
+   },
+   "yields": [
+    "pairwise set preferences"
+   ]
+  },
+  "pairwise": {
+   "path": "/games/pairwise/?set=tone-001",
+   "adapters": [
+    "pairwise"
+   ],
+   "minutes": [
+    3,
+    10
+   ],
+   "measures": {
+    "decisionSpeed": "median decision time, log scale 5 s=100 .. 90 s=0",
+    "decisiveness": "0.6*(mean strength-1)/2 + 0.4*(1 - tie/neither rate)",
+    "consistency": "repeat pairs agreeing (only when a pair was answered twice; transitivity check: TODO when sets have triangles)"
+   },
+   "yields": [
+    "tone-001 preferences"
+   ]
+  },
+  "parcels": {
+   "path": "/games/parcels/",
+   "adapters": [
+    "parcels",
+    "pairwise"
+   ],
+   "minutes": [
+    3,
+    5
+   ],
+   "measures": {
+    "focus": "100*(1-(missed + 0.5*changed mind)/parcels shown)",
+    "reaction": "median spawn->first touch, log scale 0.8 s=100 .. 6 s=0",
+    "decisionSpeed": "median spawn->commit, log scale 1 s=100 .. 8 s=0 (merged with A/B questions)",
+    "accuracy": "anchor (clear-cut) parcels sorted to their expected bin",
+    "consistency": "100 - 3*sd(wave focus)",
+    "endurance": "50 + 8*slope(wave focus) per wave (speed rises every wave)",
+    "decisiveness": "A/B summary questions (pairwise adapter)"
+   },
+   "yields": [
+    "mail-triage sorts that grade the Ollama models' bin predictions",
+    "summary-badge style preferences (A/B per model)"
+   ]
+  }
  }
 }

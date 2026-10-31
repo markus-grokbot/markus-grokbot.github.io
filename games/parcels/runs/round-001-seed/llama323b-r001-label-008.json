@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r001-label-008",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:06:14.804Z",
+ "ms": 4854,
+ "promptSha256": "8bf65201cb535f9824bb7be0f5860b83d3e5b825b992ae6d47be4d3376fd951f",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np036 | Code host notifications | [site] Pages deployed successfully | Deployment to github-pages completed in 38 s.\np037 | Recruiter · Halvsjö Partners | Role in Oslo or Copenhagen? | I have two similar roles. Before I introduce you: which city, and is relocation an option?\np038 | Domain registrar | Your domain renews in 30 days | Auto-renew is on. Card ending in **** will be charged 149 kr.\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\np040 | Digest · Hacker roundup | Top 10 links this week | A new terminal, a Rust web framework and a long read on burnout.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p036\",\"bin\":\"archive\",\"summary\":\"Deployment success, FYI\"},{\"id\":\"p037\",\"bin\":\"info\",\"summary\":\"Job inquiry, need clarification\"},{\"id\":\"p038\",\"bin\":\"spam\",\"summary\":\"Domain renewal notice, spam\"},{\"id\":\"p039\",\"bin\":\"later\",\"summary\":\"Social invite, read later\"},{\"id\":\"p040\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}]}",
+ "parseError": null,
+ "evalCount": 90,
+ "promptEvalCount": 366
+}
