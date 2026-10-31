@@ -107,13 +107,13 @@
   }
  ],
  "dropTarget": {
-  "source": "human:tetris@225wpm",
+  "source": "human:combo",
   "n": 1,
   "estimates": [
-   18.26
+   9.45
   ],
   "params": {
-   "wordsPerDrop": 18,
+   "wordsPerDrop": 9,
    "minDrops": 8,
    "maxDrops": 60,
    "assumedWpm": 225
