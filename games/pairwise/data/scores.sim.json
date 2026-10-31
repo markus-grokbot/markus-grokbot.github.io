@@ -1,0 +1,144 @@
+{
+ "schema": "pairwise-scores",
+ "schemaVersion": "1.0.0",
+ "dataKind": "sim",
+ "generatedAt": "2026-10-31T14:56:58.969Z",
+ "warning": "SIMULATED preferences (sim choosers). Do not use as human preference data.",
+ "method": {
+  "winRate": "(wins + 0.5*ties) / comparisons",
+  "bradleyTerry": "MM, strength weights 1/1.5/2, prior 1 virtual tie, geometric-mean normalised (1 = average)",
+  "elo": "K=32*weight, start 1500, log order"
+ },
+ "setFilter": null,
+ "sources": [
+  {
+   "file": "logs/sim/combo-casual-length-seed1.json",
+   "runId": "20261031145658-m11f4",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-casual-length-seed2.json",
+   "runId": "20261031145658-lhtyl",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-casual-random-seed1.json",
+   "runId": "20261031145658-dcal5",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-casual-random-seed2.json",
+   "runId": "20261031145658-elp8m",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-good-length-seed1.json",
+   "runId": "20261031145658-gc705",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-good-length-seed2.json",
+   "runId": "20261031145658-ev46v",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-good-random-seed1.json",
+   "runId": "20261031145658-vlkve",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  },
+  {
+   "file": "logs/sim/combo-good-random-seed2.json",
+   "runId": "20261031145658-a32hy",
+   "setId": "test-001",
+   "setVersion": "1.0.0",
+   "demo": true
+  }
+ ],
+ "comparisons": 40,
+ "items": [
+  {
+   "id": "tf-v2",
+   "comparisons": 8,
+   "wins": 6,
+   "ties": 0,
+   "losses": 2,
+   "winRate": 0.75,
+   "bt": 1.7713,
+   "elo": 1573
+  },
+  {
+   "id": "ssb-v1",
+   "comparisons": 16,
+   "wins": 8,
+   "ties": 2,
+   "losses": 6,
+   "winRate": 0.563,
+   "bt": 1.4299,
+   "elo": 1580
+  },
+  {
+   "id": "ae-open-v1",
+   "comparisons": 8,
+   "wins": 4,
+   "ties": 0,
+   "losses": 4,
+   "winRate": 0.5,
+   "bt": 1.1747,
+   "elo": 1532
+  },
+  {
+   "id": "ssb-v2",
+   "comparisons": 16,
+   "wins": 8,
+   "ties": 2,
+   "losses": 6,
+   "winRate": 0.563,
+   "bt": 0.9108,
+   "elo": 1482
+  },
+  {
+   "id": "ae-open-v2",
+   "comparisons": 8,
+   "wins": 4,
+   "ties": 0,
+   "losses": 4,
+   "winRate": 0.5,
+   "bt": 0.8507,
+   "elo": 1468
+  },
+  {
+   "id": "ssb-v3",
+   "comparisons": 16,
+   "wins": 6,
+   "ties": 0,
+   "losses": 10,
+   "winRate": 0.375,
+   "bt": 0.7692,
+   "elo": 1438
+  },
+  {
+   "id": "tf-v1",
+   "comparisons": 8,
+   "wins": 2,
+   "ties": 0,
+   "losses": 6,
+   "winRate": 0.25,
+   "bt": 0.5639,
+   "elo": 1427
+  }
+ ]
+}

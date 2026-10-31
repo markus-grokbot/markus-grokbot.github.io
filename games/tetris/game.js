@@ -9,7 +9,7 @@
   function resize() { var r = cv.getBoundingClientRect(); var h = Math.floor(r.height); cell = Math.max(8, Math.floor(Math.min(h / 20, r.width / 10))); cv.width = cell * 10; cv.height = cell * 20; draw(); }
   function newLog() { log = GameLog.createLog({ gameId: L.GAME_ID, gameVersion: L.GAME_VERSION, iteration: L.ITERATION, runType: 'human', device: device(), player: { kind: 'human', handle: 'markus' }, tuningSource: tuningSource }); }
   function startLevel(n) {
-    lvl = n; var P = levels[n - 1]; game = E.createGame({ seed: Date.now(), level: n, params: P, onLock: function (i) { if (i.linesCleared) log.event('lines', { n: i.linesCleared }); } });
+    lvl = n; var P = levels[n - 1]; game = E.createGame({ seed: Date.now(), level: n, params: P, onLock: function (i) { log.event('lock', i); if (i.linesCleared) log.event('lines', { n: i.linesCleared }); } });
     log.startLevel(n, P); levelT = 0; $('lv').textContent = n; $('goal').textContent = P.linesToClear; paused = false; hide(); last = performance.now();
   }
   function act(name, fn) { if (paused || !game) return; var before = game.getState().pieces; fn(); if (name === 'hard') log.event('hard_drop'); check(); draw(); }

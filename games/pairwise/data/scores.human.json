@@ -1,0 +1,15 @@
+{
+ "schema": "pairwise-scores",
+ "schemaVersion": "1.0.0",
+ "dataKind": "human",
+ "generatedAt": "2026-10-31T14:56:58.996Z",
+ "method": {
+  "winRate": "(wins + 0.5*ties) / comparisons",
+  "bradleyTerry": "MM, strength weights 1/1.5/2, prior 1 virtual tie, geometric-mean normalised (1 = average)",
+  "elo": "K=32*weight, start 1500, log order"
+ },
+ "setFilter": null,
+ "sources": [],
+ "comparisons": 0,
+ "items": []
+}

@@ -1,0 +1,821 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.1.0",
+ "game": {
+  "id": "combo",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "combo"
+ },
+ "run": {
+  "id": "20261031145658-elp8m",
+  "type": "sim",
+  "startedAt": "2026-10-31T00:00:00.000Z",
+  "endedAt": "2026-10-31T00:03:32.496Z",
+  "device": {
+   "platform": "node v24.22.1",
+   "headless": true
+  },
+  "player": {
+   "kind": "heuristic-bot",
+   "skill": "casual",
+   "pairwiseChooser": "sim:random"
+  },
+  "seed": 2,
+  "tuningSource": "tuning.json"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "level": 1,
+    "linesToClear": 6,
+    "gravityMs": 900,
+    "lockDelayMs": 500,
+    "goal": "drops",
+    "dropsTarget": 35,
+    "wordsPerDrop": 18
+   },
+   "startedAt": "2026-10-31T00:00:00.000Z",
+   "endedAt": "2026-10-31T00:00:27.384Z",
+   "durationMs": 27384,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 27384,
+    "score": 1946,
+    "actions": 35,
+    "misplays": 8,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 794,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 1,
+     "pieceType": "S",
+     "x": 0,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 2
+    },
+    {
+     "t": 1385,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 2,
+     "pieceType": "T",
+     "x": -1,
+     "y": 16,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 2048,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 3,
+     "pieceType": "O",
+     "x": 2,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 2801,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 4,
+     "pieceType": "L",
+     "x": 4,
+     "y": 17,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 3699,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 5,
+     "pieceType": "I",
+     "x": 6,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 4571,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 6,
+     "pieceType": "J",
+     "x": 6,
+     "y": 17,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 5462,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 7,
+     "pieceType": "Z",
+     "x": 6,
+     "y": 16,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 6154,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 8,
+     "pieceType": "S",
+     "x": 2,
+     "y": 16,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 4
+    },
+    {
+     "t": 7000,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 9,
+     "pieceType": "T",
+     "x": 8,
+     "y": 15,
+     "rot": 3,
+     "linesCleared": 1,
+     "holes": 2,
+     "maxHeight": 4
+    },
+    {
+     "t": 7000,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 7870,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 10,
+     "pieceType": "J",
+     "x": 7,
+     "y": 14,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 8732,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 11,
+     "pieceType": "L",
+     "x": 0,
+     "y": 15,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 9545,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 12,
+     "pieceType": "Z",
+     "x": 4,
+     "y": 15,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 4,
+     "maxHeight": 5
+    },
+    {
+     "t": 9545,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 10401,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 13,
+     "pieceType": "O",
+     "x": 2,
+     "y": 16,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 5
+    },
+    {
+     "t": 11025,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 14,
+     "pieceType": "I",
+     "x": 3,
+     "y": 13,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 7
+    },
+    {
+     "t": 11781,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 15,
+     "pieceType": "L",
+     "x": 1,
+     "y": 15,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 7
+    },
+    {
+     "t": 12410,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 16,
+     "pieceType": "O",
+     "x": 2,
+     "y": 14,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 7
+    },
+    {
+     "t": 13119,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 17,
+     "pieceType": "I",
+     "x": -2,
+     "y": 14,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 3,
+     "maxHeight": 6
+    },
+    {
+     "t": 13119,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 13745,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 18,
+     "pieceType": "J",
+     "x": 5,
+     "y": 14,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 14628,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 19,
+     "pieceType": "Z",
+     "x": 7,
+     "y": 15,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 4,
+     "maxHeight": 5
+    },
+    {
+     "t": 14628,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 15382,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 20,
+     "pieceType": "T",
+     "x": 0,
+     "y": 14,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 16203,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 21,
+     "pieceType": "S",
+     "x": 3,
+     "y": 14,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 16973,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 22,
+     "pieceType": "Z",
+     "x": 7,
+     "y": 14,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 17879,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 23,
+     "pieceType": "T",
+     "x": 1,
+     "y": 13,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 3,
+     "maxHeight": 6
+    },
+    {
+     "t": 17879,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 18691,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 24,
+     "pieceType": "S",
+     "x": 5,
+     "y": 14,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 6
+    },
+    {
+     "t": 19378,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 25,
+     "pieceType": "I",
+     "x": -2,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 8
+    },
+    {
+     "t": 20043,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 26,
+     "pieceType": "J",
+     "x": 7,
+     "y": 13,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 5,
+     "maxHeight": 7
+    },
+    {
+     "t": 20043,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 20696,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 27,
+     "pieceType": "L",
+     "x": 3,
+     "y": 14,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 5,
+     "maxHeight": 7
+    },
+    {
+     "t": 21580,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 28,
+     "pieceType": "O",
+     "x": 5,
+     "y": 13,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 6,
+     "maxHeight": 7
+    },
+    {
+     "t": 22371,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 29,
+     "pieceType": "Z",
+     "x": 3,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 6,
+     "maxHeight": 8
+    },
+    {
+     "t": 23298,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 30,
+     "pieceType": "T",
+     "x": 1,
+     "y": 13,
+     "rot": 0,
+     "linesCleared": 1,
+     "holes": 5,
+     "maxHeight": 7
+    },
+    {
+     "t": 23298,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 24160,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 31,
+     "pieceType": "I",
+     "x": -1,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 5,
+     "maxHeight": 8
+    },
+    {
+     "t": 24875,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 32,
+     "pieceType": "S",
+     "x": 1,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 5,
+     "maxHeight": 8
+    },
+    {
+     "t": 25784,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 33,
+     "pieceType": "O",
+     "x": 7,
+     "y": 13,
+     "rot": 0,
+     "linesCleared": 1,
+     "holes": 5,
+     "maxHeight": 7
+    },
+    {
+     "t": 25784,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 26678,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 34,
+     "pieceType": "J",
+     "x": -1,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 5,
+     "maxHeight": 8
+    },
+    {
+     "t": 27384,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 35,
+     "pieceType": "L",
+     "x": 7,
+     "y": 12,
+     "rot": 2,
+     "linesCleared": 0,
+     "holes": 6,
+     "maxHeight": 8
+    },
+    {
+     "t": 27384,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "goal": "drops",
+     "dropsTarget": 35,
+     "totalWords": 633,
+     "wordsPerDrop": 18,
+     "formula": "clamp(round(633 / 18), 8, 60) = 35",
+     "lines": 8,
+     "pieces": 35,
+     "maxHeight": 8,
+     "holesEnd": 6,
+     "avgHoles": 3.57,
+     "bumpinessEnd": 7,
+     "gravityMs": 900,
+     "lockDelayMs": 500
+    }
+   },
+   "segment": "tetris"
+  },
+  {
+   "level": 2,
+   "params": {
+    "setId": "test-001",
+    "setVersion": "1.0.0",
+    "pairs": 5,
+    "demo": true
+   },
+   "startedAt": "2026-10-31T00:00:27.384Z",
+   "endedAt": "2026-10-31T00:03:32.496Z",
+   "durationMs": 185112,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 185112,
+    "actions": 5,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 42163,
+     "type": "pairwise_decision",
+     "pairId": "t001-p1",
+     "choice": "tie",
+     "seq": 0
+    },
+    {
+     "t": 76897,
+     "type": "pairwise_decision",
+     "pairId": "t001-p2",
+     "choice": "A",
+     "seq": 1
+    },
+    {
+     "t": 112856,
+     "type": "pairwise_decision",
+     "pairId": "t001-p3",
+     "choice": "B",
+     "seq": 2
+    },
+    {
+     "t": 148264,
+     "type": "pairwise_decision",
+     "pairId": "t001-p4",
+     "choice": "B",
+     "seq": 3
+    },
+    {
+     "t": 185112,
+     "type": "pairwise_decision",
+     "pairId": "t001-p5",
+     "choice": "A",
+     "seq": 4
+    },
+    {
+     "t": 185112,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "test-001",
+     "setVersion": "1.0.0",
+     "demo": true,
+     "pairsShown": 5,
+     "decisionsMade": 5,
+     "undos": 0,
+     "decisions": [
+      {
+       "seq": 0,
+       "pairId": "t001-p1",
+       "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+       "itemA": "ssb-v1",
+       "itemB": "ssb-v2",
+       "choice": "tie",
+       "winner": null,
+       "strength": null,
+       "decisionTimeMs": 42163,
+       "reasonTags": [],
+       "swapped": false,
+       "undone": false,
+       "source": "sim:random"
+      },
+      {
+       "seq": 1,
+       "pairId": "t001-p2",
+       "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+       "itemA": "ssb-v2",
+       "itemB": "ssb-v3",
+       "choice": "A",
+       "winner": "ssb-v2",
+       "strength": 3,
+       "decisionTimeMs": 34734,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      },
+      {
+       "seq": 2,
+       "pairId": "t001-p3",
+       "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+       "itemA": "ssb-v3",
+       "itemB": "ssb-v1",
+       "choice": "B",
+       "winner": "ssb-v1",
+       "strength": 2,
+       "decisionTimeMs": 35959,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      },
+      {
+       "seq": 3,
+       "pairId": "t001-p4",
+       "criterion": "Which description makes it clearer what the skill does and when to use it?",
+       "itemA": "tf-v1",
+       "itemB": "tf-v2",
+       "choice": "B",
+       "winner": "tf-v2",
+       "strength": 2,
+       "decisionTimeMs": 35408,
+       "reasonTags": [],
+       "swapped": false,
+       "undone": false,
+       "source": "sim:random"
+      },
+      {
+       "seq": 4,
+       "pairId": "t001-p5",
+       "criterion": "Which opening line would make a hiring manager for a generic AI engineer role keep reading?",
+       "itemA": "ae-open-v1",
+       "itemB": "ae-open-v2",
+       "choice": "A",
+       "winner": "ae-open-v1",
+       "strength": 2,
+       "decisionTimeMs": 36848,
+       "reasonTags": [],
+       "swapped": true,
+       "undone": false,
+       "source": "sim:random"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T00:00:27.384Z",
+   "changes": [
+    {
+     "param": "linesToClear",
+     "from": 6,
+     "to": null
+    },
+    {
+     "param": "gravityMs",
+     "from": 900,
+     "to": null
+    },
+    {
+     "param": "lockDelayMs",
+     "from": 500,
+     "to": null
+    },
+    {
+     "param": "goal",
+     "from": "drops",
+     "to": null
+    },
+    {
+     "param": "dropsTarget",
+     "from": 35,
+     "to": null
+    },
+    {
+     "param": "wordsPerDrop",
+     "from": 18,
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "test-001"
+    },
+    {
+     "param": "setVersion",
+     "from": null,
+     "to": "1.0.0"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 5
+    },
+    {
+     "param": "demo",
+     "from": null,
+     "to": true
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 2,
+  "highestLevel": 2,
+  "totalDurationMs": 212496
+ },
+ "session": {
+  "id": "20261031145658-elp8m",
+  "kind": "tetris+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "tetris",
+    "mode": "drops",
+    "dropsTarget": 35,
+    "totalWords": 633,
+    "setId": "test-001",
+    "setVersion": "1.0.0",
+    "outcome": "complete",
+    "durationMs": 27384
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "pairwise",
+    "setId": "test-001",
+    "setVersion": "1.0.0",
+    "outcome": "complete",
+    "durationMs": 185112
+   }
+  ]
+ }
+}

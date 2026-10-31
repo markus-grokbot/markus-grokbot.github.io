@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111"><title>Pairwise Pit · test round</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#111;color:#eee;font:14px system-ui,sans-serif}#app{max-width:520px;margin:0 auto;padding:env(safe-area-inset-top) 8px env(safe-area-inset-bottom)}
+.box{text-align:center;padding:16px}.box button{font-size:15px;padding:10px 14px;margin:5px;border-radius:10px;background:#2a2a2a;color:#eee;border:1px solid #444}code{background:#000;padding:1px 4px;border-radius:4px;font-size:12px}a{color:#7cf}table{margin:0 auto;font-size:13px;text-align:left}td{padding:2px 6px}</style>
+<style id="pwcss"></style></head><body><div id="app"><div class="box">Loading…</div></div>
+<script src="../tetris/logger.js"></script><script src="../tetris/droptarget.js"></script><script src="pairwise.js"></script>
+<script>
+(function () {
+  var app = document.getElementById('app'), LS_KEY = 'pairwise.logs.v1'; document.getElementById('pwcss').textContent = PairwisePit.CSS;
+  var setId = (new URLSearchParams(location.search).get('set') || 'test-001').replace(/[^\w-]/g, '');
+  function device() { return { ua: navigator.userAgent, screen: screen.width + 'x' + screen.height, dpr: devicePixelRatio, touch: 'ontouchstart' in window, lang: navigator.language, viewport: innerWidth + 'x' + innerHeight }; }
+  function download(d) { var b = new Blob([JSON.stringify(d, null, 1)], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'human-pairwise-' + d.run.id + '.json'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); }
+  fetch('sets/' + setId + '.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (set) {
+    if (!set) { app.innerHTML = '<div class="box">Set not found: ' + setId + '</div>'; return; }
+    app.innerHTML = '<div class="box"><h2>Pairwise Pit · test round</h2><p>' + set.pairs.length + ' pairs, ' + DropTarget.setWords(set) + ' words. Pick the better text for the criterion, set a strength, optionally tag why.</p>' + (set.demo ? '<p style="color:#fa6">Set <code>' + set.setId + '</code> is DEMO data.</p>' : '') + '<button id="go">▶ Start</button> <a href="../combo/">or play the Combo</a></div>';
+    document.getElementById('go').onclick = function () {
+      var log = GameLog.createLog({ gameId: 'pairwise', gameVersion: '0.1.0', iteration: 1, runType: 'human', device: device(), player: { kind: 'human', handle: 'markus' }, tuningSource: 'set:' + set.setId + '@' + set.setVersion });
+      log.startLevel(1, { setId: set.setId, setVersion: set.setVersion, pairs: set.pairs.length, demo: !!set.demo }, { kind: 'pairwise' });
+      PairwisePit.mount(app, set, { onEvent: function (t, d) { log.event(t, d); }, onDone: function (r) {
+        var x = r.ext(); log.endLevel('complete', { actions: x.decisions.length, misplays: x.undos, progress: 1 }, x, 'pairwise'); log.finish(); var d = log.toJSON();
+        try { var all = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); all[d.run.id] = d; localStorage.setItem(LS_KEY, JSON.stringify(all)); } catch (e) { }
+        app.innerHTML = '<div class="box"><h2>Done</h2><table>' + x.decisions.filter(function (q) { return !q.undone; }).map(function (q) { return '<tr><td>' + q.pairId + '</td><td>' + q.choice + (q.strength ? ' ×' + q.strength : '') + '</td><td>' + (q.decisionTimeMs / 1000).toFixed(1) + 's</td></tr>'; }).join('') + '</table><p style="font-size:12px;color:#aaa">Saved in this browser. Download and drop into <code>logs/human/</code>, then run <code>node games/pairwise/tools/aggregate.js</code>.</p><button id="dl">⬇ Download log</button><button onclick="location.reload()">↻ Again</button></div>';
+        document.getElementById('dl').onclick = function () { download(d); };
+      } });
+    };
+  });
+})();
+</script></body></html>

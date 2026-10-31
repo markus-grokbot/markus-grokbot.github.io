@@ -105,5 +105,19 @@
     "lockDelayMs": 500
    }
   }
- ]
+ ],
+ "dropTarget": {
+  "source": "human:tetris@225wpm",
+  "n": 1,
+  "estimates": [
+   18.26
+  ],
+  "params": {
+   "wordsPerDrop": 18,
+   "minDrops": 8,
+   "maxDrops": 60,
+   "assumedWpm": 225
+  },
+  "note": "dropsTarget = clamp(round(totalWords / wordsPerDrop), minDrops, maxDrops). See games/tetris/droptarget.js"
+ }
 }

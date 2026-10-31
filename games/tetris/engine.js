@@ -51,25 +51,29 @@
     }
     return out;
   }
+  // goal 'lines' (default): level ends at linesToClear. goal 'drops': level ends when `dropsTarget` pieces
+  // have locked; lines still score but do not end the level.
+  function goalReached(p, lines, pieces) { return p.goal === 'drops' ? pieces >= p.dropsTarget : lines >= p.linesToClear; }
   function createGame(opts) {
     opts = opts || {};
-    var p = Object.assign({ gravityMs: 800, linesToClear: 10, lockDelayMs: 500, scoreTable: [0, 100, 300, 500, 800] }, opts.params || {});
+    var p = Object.assign({ goal: 'lines', dropsTarget: 0, gravityMs: 800, linesToClear: 10, lockDelayMs: 500, scoreTable: [0, 100, 300, 500, 800] }, opts.params || {});
     var level = opts.level || 1, rng = mulberry32(opts.seed == null ? Date.now() : opts.seed);
     var board = emptyBoard(), bag = [], cur = null, next, score = 0, lines = 0, pieces = 0, over = false, misplays = 0;
-    var gAcc = 0, lockAcc = 0, onLock = opts.onLock || null, maxHeightSeen = 0, holesSum = 0;
+    var softUsed = false, gAcc = 0, lockAcc = 0, onLock = opts.onLock || null, maxHeightSeen = 0, holesSum = 0;
     function draw() { if (!bag.length) { bag = [1, 2, 3, 4, 5, 6, 7]; for (var i = 6; i > 0; i--) { var j = Math.floor(rng() * (i + 1)); var t = bag[i]; bag[i] = bag[j]; bag[j] = t; } } return bag.pop(); }
-    function spawn() { var t = next || draw(); next = draw(); cur = { type: t, rot: 0, x: 3, y: t === 1 ? -1 : 0 }; if (!fits(board, cells())) over = true; gAcc = 0; lockAcc = 0; }
+    function spawn() { var t = next || draw(); next = draw(); cur = { type: t, rot: 0, x: 3, y: t === 1 ? -1 : 0 }; softUsed = false; if (!fits(board, cells())) over = true; gAcc = 0; lockAcc = 0; }
     function cells() { return cellsOf(cur.type, cur.rot, cur.x, cur.y); }
     function tryMove(dx, dy, dr) { if (over || !cur) return false; var c = cellsOf(cur.type, cur.rot + (dr || 0), cur.x + dx, cur.y + dy); if (fits(board, c)) { cur.x += dx; cur.y += dy; cur.rot = (cur.rot + (dr || 0)) & 3; return true; } return false; }
     function grounded() { return !fits(board, cellsOf(cur.type, cur.rot, cur.x, cur.y + 1)); }
-    function lock() {
-      var before = boardStats(board).holes, r = placeOnBoard(board, cells(), cur.type);
+    function lock(how) {
+      how = how || (softUsed ? 'soft_drop' : 'gravity');
+      var landed = { x: cur.x, y: cur.y, rot: cur.rot }, before = boardStats(board).holes, r = placeOnBoard(board, cells(), cur.type);
       board = r.board; pieces++; lines += r.linesCleared; score += (p.scoreTable[r.linesCleared] || 0) * level;
       var st = boardStats(board); if (st.holes > before) misplays++;
       maxHeightSeen = Math.max(maxHeightSeen, st.maxHeight); holesSum += st.holes;
-      var info = { type: NAMES[cur.type], linesCleared: r.linesCleared, holes: st.holes, maxHeight: st.maxHeight };
+      var info = { how: how, pieceNo: pieces, pieceType: NAMES[cur.type], x: landed.x, y: landed.y, rot: landed.rot, linesCleared: r.linesCleared, holes: st.holes, maxHeight: st.maxHeight };
       cur = null; if (onLock) onLock(info);
-      if (lines < p.linesToClear) spawn();
+      if (!goalReached(p, lines, pieces)) spawn();
     }
     var g = {
       params: p, level: level,
@@ -81,16 +85,16 @@
         for (var i = 0; i < kicks.length; i++) if (tryMove(kicks[i], 0, dir)) { lockAcc = 0; return true; }
         return tryMove(0, -1, dir);
       },
-      softDrop: function () { if (tryMove(0, 1)) { score += 1; gAcc = 0; return true; } return false; },
-      hardDrop: function () { if (over || !cur) return 0; var n = 0; while (tryMove(0, 1)) n++; score += 2 * n; lock(); return n; },
-      place: function (rot, x) { if (over || !cur) return false; cur.rot = rot; cur.x = x; cur.y = -2; if (!fits(board, cells())) { cur.y = 0; } return g.hardDrop(); },
+      softDrop: function () { if (tryMove(0, 1)) { softUsed = true; score += 1; gAcc = 0; return true; } return false; },
+      hardDrop: function () { if (over || !cur) return 0; var n = 0; while (tryMove(0, 1)) n++; score += 2 * n; lock(g._how || 'hard_drop'); g._how = null; return n; },
+      place: function (rot, x) { if (over || !cur) return false; cur.rot = rot; cur.x = x; cur.y = -2; if (!fits(board, cells())) { cur.y = 0; } g._how = 'place'; return g.hardDrop(); },
       tick: function (dt) {
         if (over || !cur) return;
         if (grounded()) { lockAcc += dt; if (lockAcc >= p.lockDelayMs) lock(); return; }
         gAcc += dt; while (gAcc >= p.gravityMs && cur && !grounded()) { gAcc -= p.gravityMs; cur.y++; }
       },
       ghost: function () { if (!cur) return []; var y = cur.y; while (fits(board, cellsOf(cur.type, cur.rot, cur.x, y + 1))) y++; return cellsOf(cur.type, cur.rot, cur.x, y); },
-      getState: function () { return { board: board, current: cur ? { type: cur.type, rot: cur.rot, x: cur.x, y: cur.y, cells: cells() } : null, next: next, score: score, lines: lines, pieces: pieces, over: over, levelComplete: lines >= p.linesToClear }; },
+      getState: function () { return { board: board, current: cur ? { type: cur.type, rot: cur.rot, x: cur.x, y: cur.y, cells: cells() } : null, next: next, score: score, lines: lines, pieces: pieces, over: over, levelComplete: goalReached(p, lines, pieces) }; },
       stats: function () { var s = boardStats(board); return { maxHeight: s.maxHeight, holes: s.holes, bumpiness: s.bumpiness, misplays: misplays, maxHeightSeen: maxHeightSeen, avgHoles: pieces ? +(holesSum / pieces).toFixed(2) : 0 }; }
     };
     spawn();

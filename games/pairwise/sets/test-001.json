@@ -1,0 +1,39 @@
+{
+ "setId": "test-001",
+ "setVersion": "1.0.0",
+ "demo": true,
+ "note": "DEMO DATA. Fictional but realistic texts written for testing the Pairwise Pit UI and logging. Not real listings, not real applications, no personal data. Do not treat preferences on this set as real product decisions.",
+ "title": "Test round: skill listings and letter openings",
+ "pairs": [
+  {
+   "id": "t001-p1",
+   "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+   "a": { "id": "ssb-v1", "label": "Sellable Skill Builder, version 1", "text": "Sellable Skill Builder audits your prompt before you list it. Paste any prompt and get a scored report on clarity, reusability, input handling and edge cases, plus a rewritten version ready to package as a skill. Built for creators who sell on prompt marketplaces and keep getting 'didn't work for me' reviews. Works with any major chat model. Includes a checklist of the eight most common reasons listings get refunded." },
+   "b": { "id": "ssb-v2", "label": "Sellable Skill Builder, version 2", "text": "Turn rough prompts into products people pay for. This skill reviews your prompt like a strict marketplace editor: it flags vague instructions, missing inputs and outputs that break on unusual requests, then hands back a cleaned-up skill with a title, a short description and three example uses. Ideal if you have a folder of prompts that work for you but have never sold." }
+  },
+  {
+   "id": "t001-p2",
+   "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+   "a": { "id": "ssb-v2", "label": "Sellable Skill Builder, version 2", "text": "Turn rough prompts into products people pay for. This skill reviews your prompt like a strict marketplace editor: it flags vague instructions, missing inputs and outputs that break on unusual requests, then hands back a cleaned-up skill with a title, a short description and three example uses. Ideal if you have a folder of prompts that work for you but have never sold." },
+   "b": { "id": "ssb-v3", "label": "Sellable Skill Builder, version 3", "text": "Prompt audit in one pass. Score, fix, package. You get a 0 to 100 sellability score, the three weakest lines in your prompt with suggested replacements, and a final skill file. No fluff, no theory. Most audits take under two minutes." }
+  },
+  {
+   "id": "t001-p3",
+   "criterion": "Which listing would make a buyer more likely to purchase this skill?",
+   "a": { "id": "ssb-v3", "label": "Sellable Skill Builder, version 3", "text": "Prompt audit in one pass. Score, fix, package. You get a 0 to 100 sellability score, the three weakest lines in your prompt with suggested replacements, and a final skill file. No fluff, no theory. Most audits take under two minutes." },
+   "b": { "id": "ssb-v1", "label": "Sellable Skill Builder, version 1", "text": "Sellable Skill Builder audits your prompt before you list it. Paste any prompt and get a scored report on clarity, reusability, input handling and edge cases, plus a rewritten version ready to package as a skill. Built for creators who sell on prompt marketplaces and keep getting 'didn't work for me' reviews. Works with any major chat model. Includes a checklist of the eight most common reasons listings get refunded." }
+  },
+  {
+   "id": "t001-p4",
+   "criterion": "Which description makes it clearer what the skill does and when to use it?",
+   "a": { "id": "tf-v1", "label": "Task Finisher, version 1", "text": "Task Finisher is for the last 20 percent. Give it a half-done task, such as a draft, a spreadsheet or a to-do list with loose ends, and it lists exactly what is missing, asks at most two questions, then finishes the work and tells you what it assumed. It refuses to start new side quests, so you end with one finished thing instead of three new ideas." },
+   "b": { "id": "tf-v2", "label": "Task Finisher, version 2", "text": "An agent skill that helps you get things done. It uses structured reasoning to analyse incomplete work, identify gaps and produce completed outputs across many domains, from writing to planning to data. Fully customisable and compatible with popular assistants. Boost your productivity today." }
+  },
+  {
+   "id": "t001-p5",
+   "criterion": "Which opening line would make a hiring manager for a generic AI engineer role keep reading?",
+   "a": { "id": "ae-open-v1", "label": "AI engineer letter opening, version 1", "text": "Last quarter I replaced a brittle chain of six prompts with one evaluated pipeline, cutting failed runs from one in five to one in fifty. That kind of unglamorous reliability work is what I would bring to your AI engineering team: measuring first, shipping small, and leaving behind tests that the next person can trust." },
+   "b": { "id": "ae-open-v2", "label": "AI engineer letter opening, version 2", "text": "I am writing to express my strong interest in the AI Engineer position at your company. As a passionate technologist with experience in machine learning, large language models and software development, I believe I would be a valuable addition to your innovative team and am excited about the opportunity to contribute to your mission." }
+  }
+ ]
+}

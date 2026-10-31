@@ -26,6 +26,14 @@ games/tetris/logger.js           game-agnostic logger -> gameplay-log v1 (copy t
 games/tetris/bot.js              heuristic player, skills: novice | casual | good | expert
 games/tetris/sim/run-sim.js      headless sim -> logs/sim/*.json
 games/tetris/sim/tune.js         logs -> proposed tuning.json
+games/tetris/droptarget.js       drop-target formula (words in a Pairwise set -> dropsTarget)
+games/pairwise/index.html        Pairwise Pit standalone test round (?set=<id>)
+games/pairwise/pairwise.js       Pairwise core (round state, undo, ext.pairwise) + mobile UI
+games/pairwise/sim-chooser.js    SIM chooser: random | length (sim-only data)
+games/pairwise/sets/*.json       pair sets (test-001 = demo data)
+games/pairwise/tools/aggregate.js  logs -> data/scores.human.json | data/scores.sim.json (win rate, Bradley-Terry, Elo)
+games/combo/index.html, combo.js Combo: Tetris drop-target round -> Pairwise round -> summary (?set=<id>)
+games/combo/session.js           combo log builder (shared by browser + run-sim.js --mode drops)
 schema/gameplay-log.v1.schema.json + schema/README.md
 logs/human/                      Markus's downloaded runs (priority data)
 logs/sim/                        bot runs
@@ -63,6 +71,48 @@ and records `run.tuningSource`.
 2. Page loads with no JS errors (headless Chrome via CDP, or open locally with `python3 -m http.server`).
 3. Validate a log against the schema if a validator is available; at minimum `JSON.parse` + required keys.
 4. Bump `ITERATION` (and `GAME_VERSION`) in levels.js for every published iteration.
+
+## Drop-target Tetris (engine param `goal: 'drops'`)
+`createGame({ params: { goal: 'drops', dropsTarget: N, ... } })` ends the level after N locked pieces; lines still
+score but don't end it (`goal` defaults to `'lines'`, so the 10-level game is unchanged). The combo computes N from the
+upcoming Pairwise round:
+```
+totalWords  = Σ over pairs: words(criterion) + words(A.text) + words(B.text)   (an item shown in two pairs counts twice)
+dropsTarget = clamp(round(totalWords / wordsPerDrop), minDrops, maxDrops)
+```
+Defaults (`games/tetris/tuning.json` → `dropTarget.params`): wordsPerDrop **18**, minDrops 8, maxDrops 60, assumedWpm 225.
+Why 18: first human log = 155.8 s / 32 pieces = 4.87 s per piece; 4.87 s × 225 wpm / 60 = 18.3 words. So the Tetris
+segment should last about as long as reading the round. test-001: 633 words → **35 drops** (~2.8 min read, ~2.8 min Tetris).
+Recalibrate: `node games/tetris/sim/tune.js --drop-target-only` (human logs only). With combo human logs it uses
+`totalWords × (tetrisMs/pieces) / pairwiseMs` (the value that would have equalised the two segments), else
+ms-per-piece from tetris human logs × assumedWpm. tune.js now also reads `games/tetris/logs/human/` (where the first log lives).
+
+## Logger fix (1.1.0)
+The first human log had 32 pieces but 29 `hard_drop` events: `hard_drop` was only logged on hard-drop input, so pieces
+that locked by gravity or after soft drop were invisible. Now the engine reports every lock via `onLock` with
+`how: hard_drop | soft_drop | gravity | place` (+ pieceNo, pieceType, x, y, rot, linesCleared, holes, maxHeight),
+and tetris/combo/sim all log it as a `lock` event, so `count(lock) == pieces`. `hard_drop` events are kept for compat.
+
+## Schema 1.1.0 (additive)
+Optional `session {id, kind, segments[]}`; levels can carry `segment`; ext can be written under another namespace
+(`ext.tetris`, `ext.pairwise`). Pairwise decisions live in `levels[].ext.pairwise.decisions[]` with pairId, itemA/B,
+choice (A|B|tie|not_enough_info, in SET terms even when sides are swapped on screen), winner, strength 1–3, decisionTimeMs,
+reasonTags, swapped, undone, source (`human` or `sim:<strategy>`), plus setId/setVersion/demo. See schema/README.md.
+
+## Pairwise sims & aggregation
+`node games/tetris/sim/run-sim.js --mode drops --skill casual,good --chooser random,length --runs 2`
+→ `logs/sim/combo-*.json` (run.type `sim`). Sim choosers are NOT preferences; they only exercise the pipeline.
+`node games/pairwise/tools/aggregate.js` → `games/pairwise/data/scores.human.json` (human logs only; demo sets skipped
+unless `--include-demo`). `--sim` → `scores.sim.json` (sim logs only). Output `pairwise-scores` 1.0.0:
+`items[]{id, comparisons, wins, ties, losses, winRate, bt, elo}` sorted by Bradley-Terry strength (1 = average).
+
+## Add a new pair set
+1. Copy `games/pairwise/sets/test-001.json` to `sets/<setId>.json`; set `setId`, `setVersion`, `demo` (true for fake data).
+2. Each pair: `{id, criterion, a:{id,label,text}, b:{id,label,text}}`. Item ids are global: reuse an id to compare the
+   same text in several pairs (needed for Bradley-Terry to link items). Keep texts 40–120 words.
+3. Play it: `/games/combo/?set=<setId>` or `/games/pairwise/?set=<setId>`; the combo shows words and the drop target.
+4. Sim check: `node games/tetris/sim/run-sim.js --mode drops --set games/pairwise/sets/<setId>.json`.
+5. Bump `setVersion` whenever any text changes; aggregate with `--set <setId>`.
 
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.

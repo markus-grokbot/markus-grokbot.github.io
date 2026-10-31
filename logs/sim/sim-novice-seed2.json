@@ -1,6 +1,6 @@
 {
  "schema": "gameplay-log",
- "schemaVersion": "1.0.0",
+ "schemaVersion": "1.1.0",
  "game": {
   "id": "tetris",
   "version": "0.1.0",
@@ -8,7 +8,7 @@
   "namespace": "tetris"
  },
  "run": {
-  "id": "20261031142059-dyyut",
+  "id": "20261031145427-l7g1n",
   "type": "sim",
   "startedAt": "1970-01-01T00:00:00.000Z",
   "endedAt": "2026-10-31T00:00:34.647Z",
@@ -50,8 +50,47 @@
     },
     {
      "t": 1116,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 1,
+     "pieceType": "S",
+     "x": 0,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 2
+    },
+    {
+     "t": 1116,
      "type": "hole_created",
      "holes": 1
+    },
+    {
+     "t": 1928,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 2,
+     "pieceType": "T",
+     "x": 3,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 1,
+     "maxHeight": 2
+    },
+    {
+     "t": 2848,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 3,
+     "pieceType": "O",
+     "x": -1,
+     "y": 16,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 4
     },
     {
      "t": 2848,
@@ -59,9 +98,113 @@
      "holes": 2
     },
     {
+     "t": 3903,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 4,
+     "pieceType": "L",
+     "x": 6,
+     "y": 18,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 4
+    },
+    {
+     "t": 5175,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 5,
+     "pieceType": "I",
+     "x": 0,
+     "y": 14,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 6
+    },
+    {
+     "t": 6408,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 6,
+     "pieceType": "J",
+     "x": 0,
+     "y": 13,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 7
+    },
+    {
+     "t": 7670,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 7,
+     "pieceType": "Z",
+     "x": 6,
+     "y": 16,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 7
+    },
+    {
+     "t": 8633,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 8,
+     "pieceType": "S",
+     "x": 0,
+     "y": 11,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 2,
+     "maxHeight": 9
+    },
+    {
+     "t": 9674,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 9,
+     "pieceType": "T",
+     "x": 3,
+     "y": 15,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 9
+    },
+    {
      "t": 9674,
      "type": "hole_created",
      "holes": 4
+    },
+    {
+     "t": 10904,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 10,
+     "pieceType": "J",
+     "x": 5,
+     "y": 16,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 4,
+     "maxHeight": 9
+    },
+    {
+     "t": 12221,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 11,
+     "pieceType": "L",
+     "x": 4,
+     "y": 14,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 5,
+     "maxHeight": 9
     },
     {
      "t": 12221,
@@ -70,8 +213,34 @@
     },
     {
      "t": 13157,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 12,
+     "pieceType": "Z",
+     "x": 2,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 6,
+     "maxHeight": 9
+    },
+    {
+     "t": 13157,
      "type": "hole_created",
      "holes": 6
+    },
+    {
+     "t": 13992,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 13,
+     "pieceType": "O",
+     "x": 1,
+     "y": 10,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 7,
+     "maxHeight": 10
     },
     {
      "t": 13992,
@@ -79,9 +248,74 @@
      "holes": 7
     },
     {
+     "t": 15210,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 14,
+     "pieceType": "I",
+     "x": 5,
+     "y": 13,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 7,
+     "maxHeight": 10
+    },
+    {
+     "t": 16271,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 15,
+     "pieceType": "L",
+     "x": 8,
+     "y": 15,
+     "rot": 3,
+     "linesCleared": 1,
+     "holes": 9,
+     "maxHeight": 9
+    },
+    {
      "t": 16271,
      "type": "hole_created",
      "holes": 9
+    },
+    {
+     "t": 17537,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 16,
+     "pieceType": "O",
+     "x": 7,
+     "y": 14,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 9,
+     "maxHeight": 9
+    },
+    {
+     "t": 18760,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 17,
+     "pieceType": "I",
+     "x": 4,
+     "y": 13,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 9,
+     "maxHeight": 9
+    },
+    {
+     "t": 19837,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 18,
+     "pieceType": "J",
+     "x": 7,
+     "y": 11,
+     "rot": 2,
+     "linesCleared": 0,
+     "holes": 11,
+     "maxHeight": 9
     },
     {
      "t": 19837,
@@ -90,13 +324,91 @@
     },
     {
      "t": 20804,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 19,
+     "pieceType": "Z",
+     "x": 7,
+     "y": 10,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 12,
+     "maxHeight": 10
+    },
+    {
+     "t": 20804,
      "type": "hole_created",
      "holes": 12
+    },
+    {
+     "t": 21680,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 20,
+     "pieceType": "T",
+     "x": 8,
+     "y": 8,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 12,
+     "maxHeight": 12
+    },
+    {
+     "t": 22625,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 21,
+     "pieceType": "S",
+     "x": 3,
+     "y": 11,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 13,
+     "maxHeight": 12
     },
     {
      "t": 22625,
      "type": "hole_created",
      "holes": 13
+    },
+    {
+     "t": 23445,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 22,
+     "pieceType": "Z",
+     "x": 7,
+     "y": 6,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 13,
+     "maxHeight": 14
+    },
+    {
+     "t": 24266,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 23,
+     "pieceType": "T",
+     "x": 7,
+     "y": 4,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 13,
+     "maxHeight": 16
+    },
+    {
+     "t": 25097,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 24,
+     "pieceType": "S",
+     "x": 2,
+     "y": 8,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 14,
+     "maxHeight": 16
     },
     {
      "t": 25097,
@@ -105,13 +417,78 @@
     },
     {
      "t": 25986,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 25,
+     "pieceType": "I",
+     "x": 2,
+     "y": 6,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 22,
+     "maxHeight": 16
+    },
+    {
+     "t": 25986,
      "type": "hole_created",
      "holes": 22
     },
     {
      "t": 26827,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 26,
+     "pieceType": "J",
+     "x": 8,
+     "y": 1,
+     "rot": 3,
+     "linesCleared": 0,
+     "holes": 23,
+     "maxHeight": 19
+    },
+    {
+     "t": 26827,
      "type": "hole_created",
      "holes": 23
+    },
+    {
+     "t": 27744,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 27,
+     "pieceType": "L",
+     "x": 1,
+     "y": 4,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 23,
+     "maxHeight": 19
+    },
+    {
+     "t": 28548,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 28,
+     "pieceType": "O",
+     "x": 3,
+     "y": 5,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 23,
+     "maxHeight": 19
+    },
+    {
+     "t": 29357,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 29,
+     "pieceType": "Z",
+     "x": 2,
+     "y": 3,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 23,
+     "maxHeight": 19
     },
     {
      "t": 29357,
@@ -120,8 +497,47 @@
     },
     {
      "t": 30007,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 30,
+     "pieceType": "T",
+     "x": 2,
+     "y": 1,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 25,
+     "maxHeight": 19
+    },
+    {
+     "t": 30007,
      "type": "hole_created",
      "holes": 25
+    },
+    {
+     "t": 31167,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 31,
+     "pieceType": "I",
+     "x": -2,
+     "y": 12,
+     "rot": 1,
+     "linesCleared": 1,
+     "holes": 25,
+     "maxHeight": 18
+    },
+    {
+     "t": 32213,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 32,
+     "pieceType": "S",
+     "x": -1,
+     "y": 10,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 26,
+     "maxHeight": 18
     },
     {
      "t": 32213,
@@ -130,13 +546,52 @@
     },
     {
      "t": 33065,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 33,
+     "pieceType": "O",
+     "x": 5,
+     "y": 9,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 29,
+     "maxHeight": 18
+    },
+    {
+     "t": 33065,
      "type": "hole_created",
      "holes": 29
     },
     {
      "t": 33997,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 34,
+     "pieceType": "J",
+     "x": 7,
+     "y": 1,
+     "rot": 1,
+     "linesCleared": 0,
+     "holes": 29,
+     "maxHeight": 19
+    },
+    {
+     "t": 33997,
      "type": "misplay",
      "reason": "too_slow"
+    },
+    {
+     "t": 34647,
+     "type": "lock",
+     "how": "place",
+     "pieceNo": 35,
+     "pieceType": "L",
+     "x": 2,
+     "y": 0,
+     "rot": 0,
+     "linesCleared": 0,
+     "holes": 31,
+     "maxHeight": 20
     },
     {
      "t": 34647,
