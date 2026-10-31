@@ -1,0 +1,2634 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.2.0",
+ "game": {
+  "id": "parcels",
+  "version": "0.2.0",
+  "iteration": 2,
+  "namespace": "parcels"
+ },
+ "run": {
+  "id": "20261031173324-2y01c",
+  "type": "human",
+  "startedAt": "2026-10-31T17:33:24.500Z",
+  "endedAt": "2026-10-31T17:36:15.573Z",
+  "device": {
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+   "w": 375,
+   "h": 549,
+   "touch": true
+  },
+  "player": {},
+  "seed": 468004498,
+  "tuningSource": "round:round-002"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "wave": 1,
+    "waveSpeed": 1,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T17:33:24.500Z",
+   "endedAt": "2026-10-31T17:34:17.101Z",
+   "durationMs": 52601,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 52601,
+    "score": 1098,
+    "actions": 10,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2715,
+     "type": "spawn",
+     "parcelId": "p020",
+     "limitMs": 5997,
+     "repeat": false
+    },
+    {
+     "t": 7531,
+     "type": "zone",
+     "parcelId": "p020",
+     "bin": "info"
+    },
+    {
+     "t": 7965,
+     "type": "sort",
+     "parcelId": "p020",
+     "x": -0.485,
+     "y": -0.552,
+     "bin": "info",
+     "conf": 0.552,
+     "sortMs": 5233,
+     "timedOut": false
+    },
+    {
+     "t": 8848,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-08",
+     "limitMs": 5938,
+     "repeat": false
+    },
+    {
+     "t": 12815,
+     "type": "zone",
+     "parcelId": "r002-llama323b-08",
+     "bin": "reply"
+    },
+    {
+     "t": 13132,
+     "type": "sort",
+     "parcelId": "r002-llama323b-08",
+     "x": -0.441,
+     "y": 0.506,
+     "bin": "reply",
+     "conf": 0.506,
+     "sortMs": 4267,
+     "timedOut": false
+    },
+    {
+     "t": 14032,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 5888,
+     "repeat": false
+    },
+    {
+     "t": 16932,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-07",
+     "bin": "reply"
+    },
+    {
+     "t": 17249,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-07",
+     "x": -0.777,
+     "y": 0.9,
+     "bin": "reply",
+     "conf": 0.9,
+     "sortMs": 3200,
+     "timedOut": false
+    },
+    {
+     "t": 18148,
+     "type": "spawn",
+     "parcelId": "p012",
+     "limitMs": 5849,
+     "repeat": false
+    },
+    {
+     "t": 22999,
+     "type": "zone",
+     "parcelId": "p012",
+     "bin": "info"
+    },
+    {
+     "t": 23349,
+     "type": "sort",
+     "parcelId": "p012",
+     "x": -0.397,
+     "y": -0.133,
+     "bin": "info",
+     "conf": 0.397,
+     "sortMs": 5183,
+     "timedOut": false
+    },
+    {
+     "t": 24232,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 5791,
+     "repeat": false
+    },
+    {
+     "t": 28532,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "reply"
+    },
+    {
+     "t": 28732,
+     "type": "sort",
+     "parcelId": "p008",
+     "x": -0.727,
+     "y": 0.73,
+     "bin": "reply",
+     "conf": 0.73,
+     "sortMs": 4483,
+     "timedOut": false
+    },
+    {
+     "t": 29615,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-04",
+     "limitMs": 5739,
+     "repeat": false
+    },
+    {
+     "t": 34449,
+     "type": "sort",
+     "parcelId": "r002-llama323b-04",
+     "x": 0.573,
+     "y": -0.618,
+     "bin": "archive",
+     "conf": 0.618,
+     "sortMs": 4817,
+     "timedOut": false
+    },
+    {
+     "t": 35332,
+     "type": "spawn",
+     "parcelId": "p027",
+     "limitMs": 5684,
+     "repeat": false
+    },
+    {
+     "t": 38316,
+     "type": "zone",
+     "parcelId": "p027",
+     "bin": "archive"
+    },
+    {
+     "t": 38566,
+     "type": "sort",
+     "parcelId": "p027",
+     "x": 0.76,
+     "y": -0.585,
+     "bin": "archive",
+     "conf": 0.76,
+     "sortMs": 3217,
+     "timedOut": false
+    },
+    {
+     "t": 39466,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-06",
+     "limitMs": 5644,
+     "repeat": false
+    },
+    {
+     "t": 44049,
+     "type": "sort",
+     "parcelId": "r002-llama323b-06",
+     "x": 0.209,
+     "y": 0.232,
+     "bin": "archive",
+     "conf": 0.232,
+     "sortMs": 4567,
+     "timedOut": false
+    },
+    {
+     "t": 44949,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 5592,
+     "repeat": false
+    },
+    {
+     "t": 46866,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "info"
+    },
+    {
+     "t": 47066,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "reply"
+    },
+    {
+     "t": 47183,
+     "type": "sort",
+     "parcelId": "p039",
+     "x": -0.402,
+     "y": 0.402,
+     "bin": "reply",
+     "conf": 0.402,
+     "sortMs": 2217,
+     "timedOut": false
+    },
+    {
+     "t": 48083,
+     "type": "spawn",
+     "parcelId": "p030",
+     "limitMs": 5562,
+     "repeat": false
+    },
+    {
+     "t": 52466,
+     "type": "zone",
+     "parcelId": "p030",
+     "bin": "reply"
+    },
+    {
+     "t": 52600,
+     "type": "sort",
+     "parcelId": "p030",
+     "x": -0.694,
+     "y": 0.714,
+     "bin": "reply",
+     "conf": 0.714,
+     "sortMs": 4500,
+     "timedOut": false
+    },
+    {
+     "t": 52601,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 1,
+     "parcelsShown": 10,
+     "sorted": 10,
+     "misses": 0,
+     "changedMind": 1,
+     "bestCombo": 6,
+     "scoreWave": 1098,
+     "speedEnd": 1,
+     "decisions": [
+      {
+       "parcelId": "p020",
+       "limitMs": 5997,
+       "speed": 1,
+       "anchorBin": "spam",
+       "missed": false,
+       "timedOut": false,
+       "x": -0.485,
+       "y": -0.552,
+       "dist": {
+        "reply": 1.183,
+        "info": 0.528,
+        "later": 1.631,
+        "archive": 1.241,
+        "spam": 0.536
+       },
+       "soft": {
+        "reply": 0.003,
+        "info": 0.507,
+        "later": 0,
+        "archive": 0.002,
+        "spam": 0.488
+       },
+       "bin": "info",
+       "pTop": 0.507,
+       "confX": 0.485,
+       "confY": 0.552,
+       "conf": 0.552,
+       "sortMs": 5233,
+       "firstMs": 4583,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 103,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "limitMs": 5938,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.441,
+       "y": 0.506,
+       "dist": {
+        "reply": 0.238,
+        "info": 0.594,
+        "later": 1.097,
+        "archive": 1.224,
+        "spam": 1.36
+       },
+       "soft": {
+        "reply": 0.789,
+        "info": 0.205,
+        "later": 0.004,
+        "archive": 0.001,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.789,
+       "confX": 0.441,
+       "confY": 0.506,
+       "conf": 0.506,
+       "sortMs": 4267,
+       "firstMs": 3733,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 112,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "limitMs": 5888,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.777,
+       "y": 0.9,
+       "dist": {
+        "reply": 0.308,
+        "info": 0.959,
+        "later": 1.454,
+        "archive": 1.714,
+        "spam": 1.851
+       },
+       "soft": {
+        "reply": 0.977,
+        "info": 0.023,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.977,
+       "confX": 0.777,
+       "confY": 0.9,
+       "conf": 0.9,
+       "sortMs": 3200,
+       "firstMs": 2750,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 147,
+       "combo": 3
+      },
+      {
+       "parcelId": "p012",
+       "limitMs": 5849,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.397,
+       "y": -0.133,
+       "dist": {
+        "reply": 0.794,
+        "info": 0.266,
+        "later": 1.289,
+        "archive": 1.05,
+        "spam": 0.759
+       },
+       "soft": {
+        "reply": 0.066,
+        "info": 0.841,
+        "later": 0.001,
+        "archive": 0.008,
+        "spam": 0.085
+       },
+       "bin": "info",
+       "pTop": 0.841,
+       "confX": 0.397,
+       "confY": 0.133,
+       "conf": 0.397,
+       "sortMs": 5183,
+       "firstMs": 4550,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 88,
+       "combo": 3
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 5791,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.727,
+       "y": 0.73,
+       "dist": {
+        "reply": 0.135,
+        "info": 0.784,
+        "later": 1.382,
+        "archive": 1.583,
+        "spam": 1.676
+       },
+       "soft": {
+        "reply": 0.937,
+        "info": 0.062,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.937,
+       "confX": 0.727,
+       "confY": 0.73,
+       "conf": 0.73,
+       "sortMs": 4483,
+       "firstMs": 4033,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 133,
+       "combo": 4
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "limitMs": 5739,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.573,
+       "y": -0.618,
+       "dist": {
+        "reply": 1.74,
+        "info": 1.349,
+        "later": 1.241,
+        "archive": 0.573,
+        "spam": 0.595
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.001,
+        "later": 0.002,
+        "archive": 0.528,
+        "spam": 0.47
+       },
+       "bin": "archive",
+       "pTop": 0.528,
+       "confX": 0.573,
+       "confY": 0.618,
+       "conf": 0.618,
+       "sortMs": 4817,
+       "firstMs": 4467,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 129,
+       "combo": 5
+      },
+      {
+       "parcelId": "p027",
+       "limitMs": 5684,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.76,
+       "y": -0.585,
+       "dist": {
+        "reply": 1.855,
+        "info": 1.508,
+        "later": 1.21,
+        "archive": 0.546,
+        "spam": 0.785
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.004,
+        "archive": 0.806,
+        "spam": 0.19
+       },
+       "bin": "archive",
+       "pTop": 0.806,
+       "confX": 0.76,
+       "confY": 0.585,
+       "conf": 0.76,
+       "sortMs": 3217,
+       "firstMs": 2900,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 153,
+       "combo": 6
+      },
+      {
+       "parcelId": "r002-llama323b-06",
+       "limitMs": 5644,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.209,
+       "y": 0.232,
+       "dist": {
+        "reply": 0.943,
+        "info": 0.905,
+        "later": 0.587,
+        "archive": 0.523,
+        "spam": 1.034
+       },
+       "soft": {
+        "reply": 0.032,
+        "info": 0.044,
+        "later": 0.382,
+        "archive": 0.528,
+        "spam": 0.014
+       },
+       "bin": "archive",
+       "pTop": 0.528,
+       "confX": 0.209,
+       "confY": 0.232,
+       "conf": 0.232,
+       "sortMs": 4567,
+       "firstMs": 4317,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 10,
+       "combo": 0
+      },
+      {
+       "parcelId": "p039",
+       "limitMs": 5592,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.402,
+       "y": 0.402,
+       "dist": {
+        "reply": 0.33,
+        "info": 0.516,
+        "later": 1.074,
+        "archive": 1.145,
+        "spam": 1.249
+       },
+       "soft": {
+        "reply": 0.665,
+        "info": 0.325,
+        "later": 0.006,
+        "archive": 0.003,
+        "spam": 0.001
+       },
+       "bin": "reply",
+       "pTop": 0.665,
+       "confX": 0.402,
+       "confY": 0.402,
+       "conf": 0.402,
+       "sortMs": 2217,
+       "firstMs": 1783,
+       "changedMind": true,
+       "zoneChanges": 1,
+       "points": 108,
+       "combo": 0
+      },
+      {
+       "parcelId": "p030",
+       "limitMs": 5562,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.694,
+       "y": 0.714,
+       "dist": {
+        "reply": 0.104,
+        "info": 0.765,
+        "later": 1.347,
+        "archive": 1.546,
+        "spam": 1.647
+       },
+       "soft": {
+        "reply": 0.931,
+        "info": 0.068,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.931,
+       "confX": 0.694,
+       "confY": 0.714,
+       "conf": 0.714,
+       "sortMs": 4500,
+       "firstMs": 4217,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 115,
+       "combo": 1
+      }
+     ],
+     "limitMsEnd": 5520,
+     "partial": 2,
+     "timedOut": 0,
+     "meanConf": 0.581,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 2,
+   "params": {
+    "setId": "round-002-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T17:34:17.103Z",
+   "endedAt": "2026-10-31T17:34:23.110Z",
+   "durationMs": 6007,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 6007,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 6007,
+     "type": "ab_decision",
+     "pairId": "round-002-ab1",
+     "choice": "B"
+    },
+    {
+     "t": 6007,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-002-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-002",
+     "decisions": [
+      {
+       "pairId": "round-002-ab1",
+       "itemA": "p020:llama323b",
+       "itemB": "p020:qwen2515b",
+       "choice": "B",
+       "winner": "p020:qwen2515b",
+       "strength": 2,
+       "decisionTimeMs": 6007,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "p020",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "qwen2.5:1.5b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 3,
+   "params": {
+    "wave": 2,
+    "waveSpeed": 1.15,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T17:34:23.111Z",
+   "endedAt": "2026-10-31T17:35:15.753Z",
+   "durationMs": 52642,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 52642,
+    "score": 1127,
+    "actions": 11,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2706,
+     "type": "spawn",
+     "parcelId": "p029",
+     "limitMs": 5198,
+     "repeat": false
+    },
+    {
+     "t": 7123,
+     "type": "zone",
+     "parcelId": "p029",
+     "bin": "info"
+    },
+    {
+     "t": 7339,
+     "type": "sort",
+     "parcelId": "p029",
+     "x": -0.468,
+     "y": 0.104,
+     "bin": "info",
+     "conf": 0.468,
+     "sortMs": 4617,
+     "timedOut": false
+    },
+    {
+     "t": 8222,
+     "type": "spawn",
+     "parcelId": "p037",
+     "limitMs": 5152,
+     "repeat": false
+    },
+    {
+     "t": 11406,
+     "type": "zone",
+     "parcelId": "p037",
+     "bin": "info"
+    },
+    {
+     "t": 11606,
+     "type": "zone",
+     "parcelId": "p037",
+     "bin": "reply"
+    },
+    {
+     "t": 12639,
+     "type": "zone",
+     "parcelId": "p037",
+     "bin": "info"
+    },
+    {
+     "t": 13073,
+     "type": "sort",
+     "parcelId": "p037",
+     "x": -0.793,
+     "y": 0.324,
+     "bin": "reply",
+     "conf": 0.793,
+     "sortMs": 4833,
+     "timedOut": false
+    },
+    {
+     "t": 13973,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-06",
+     "limitMs": 5104,
+     "repeat": false
+    },
+    {
+     "t": 17623,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-06",
+     "bin": "info"
+    },
+    {
+     "t": 17756,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-06",
+     "x": -0.309,
+     "y": 0.116,
+     "bin": "info",
+     "conf": 0.309,
+     "sortMs": 3767,
+     "timedOut": false
+    },
+    {
+     "t": 18656,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-01",
+     "limitMs": 5065,
+     "repeat": false
+    },
+    {
+     "t": 22406,
+     "type": "zone",
+     "parcelId": "r002-llama323b-01",
+     "bin": "info"
+    },
+    {
+     "t": 22506,
+     "type": "sort",
+     "parcelId": "r002-llama323b-01",
+     "x": -0.309,
+     "y": 0.187,
+     "bin": "info",
+     "conf": 0.309,
+     "sortMs": 3833,
+     "timedOut": false
+    },
+    {
+     "t": 23390,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-08",
+     "limitMs": 5025,
+     "repeat": false
+    },
+    {
+     "t": 26106,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-08",
+     "bin": "info"
+    },
+    {
+     "t": 26357,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-08",
+     "x": -0.353,
+     "y": 0.286,
+     "bin": "reply",
+     "conf": 0.353,
+     "sortMs": 2950,
+     "timedOut": false
+    },
+    {
+     "t": 27240,
+     "type": "spawn",
+     "parcelId": "p024",
+     "limitMs": 4993,
+     "repeat": false
+    },
+    {
+     "t": 30590,
+     "type": "zone",
+     "parcelId": "p024",
+     "bin": "reply"
+    },
+    {
+     "t": 30690,
+     "type": "sort",
+     "parcelId": "p024",
+     "x": -0.446,
+     "y": 0.494,
+     "bin": "reply",
+     "conf": 0.494,
+     "sortMs": 3433,
+     "timedOut": false
+    },
+    {
+     "t": 31573,
+     "type": "spawn",
+     "parcelId": "p026",
+     "limitMs": 4957,
+     "repeat": false
+    },
+    {
+     "t": 35440,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "info"
+    },
+    {
+     "t": 35574,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "reply"
+    },
+    {
+     "t": 35590,
+     "type": "sort",
+     "parcelId": "p026",
+     "x": -0.446,
+     "y": 0.407,
+     "bin": "reply",
+     "conf": 0.446,
+     "sortMs": 4000,
+     "timedOut": false
+    },
+    {
+     "t": 36490,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-07",
+     "limitMs": 4916,
+     "repeat": false
+    },
+    {
+     "t": 39157,
+     "type": "zone",
+     "parcelId": "r002-llama323b-07",
+     "bin": "archive"
+    },
+    {
+     "t": 39640,
+     "type": "sort",
+     "parcelId": "r002-llama323b-07",
+     "x": 0.771,
+     "y": -0.158,
+     "bin": "archive",
+     "conf": 0.771,
+     "sortMs": 3133,
+     "timedOut": false
+    },
+    {
+     "t": 40540,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-02",
+     "limitMs": 4883,
+     "repeat": false
+    },
+    {
+     "t": 43924,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-02",
+     "bin": "archive"
+    },
+    {
+     "t": 44074,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-02",
+     "x": 0.364,
+     "y": -0.149,
+     "bin": "archive",
+     "conf": 0.364,
+     "sortMs": 3517,
+     "timedOut": false
+    },
+    {
+     "t": 44974,
+     "type": "spawn",
+     "parcelId": "p034",
+     "limitMs": 4846,
+     "repeat": false
+    },
+    {
+     "t": 47957,
+     "type": "zone",
+     "parcelId": "p034",
+     "bin": "info"
+    },
+    {
+     "t": 48357,
+     "type": "sort",
+     "parcelId": "p034",
+     "x": -0.38,
+     "y": 0.349,
+     "bin": "reply",
+     "conf": 0.38,
+     "sortMs": 3367,
+     "timedOut": false
+    },
+    {
+     "t": 49257,
+     "type": "spawn",
+     "parcelId": "p011",
+     "limitMs": 4810,
+     "repeat": false
+    },
+    {
+     "t": 51957,
+     "type": "zone",
+     "parcelId": "p011",
+     "bin": "reply"
+    },
+    {
+     "t": 52641,
+     "type": "sort",
+     "parcelId": "p011",
+     "x": -0.634,
+     "y": 0.705,
+     "bin": "reply",
+     "conf": 0.705,
+     "sortMs": 3367,
+     "timedOut": false
+    },
+    {
+     "t": 52642,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 2,
+     "parcelsShown": 11,
+     "sorted": 11,
+     "misses": 0,
+     "changedMind": 2,
+     "bestCombo": 3,
+     "scoreWave": 1127,
+     "speedEnd": 1.15,
+     "decisions": [
+      {
+       "parcelId": "p029",
+       "limitMs": 5198,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.468,
+       "y": 0.104,
+       "dist": {
+        "reply": 0.547,
+        "info": 0.238,
+        "later": 1.232,
+        "archive": 1.129,
+        "spam": 1
+       },
+       "soft": {
+        "reply": 0.246,
+        "info": 0.74,
+        "later": 0.001,
+        "archive": 0.003,
+        "spam": 0.01
+       },
+       "bin": "info",
+       "pTop": 0.74,
+       "confX": 0.468,
+       "confY": 0.104,
+       "conf": 0.468,
+       "sortMs": 4617,
+       "firstMs": 4267,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 93,
+       "combo": 0
+      },
+      {
+       "parcelId": "p037",
+       "limitMs": 5152,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.793,
+       "y": 0.324,
+       "dist": {
+        "reply": 0.329,
+        "info": 0.4,
+        "later": 1.473,
+        "archive": 1.491,
+        "spam": 1.359
+       },
+       "soft": {
+        "reply": 0.558,
+        "info": 0.441,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.558,
+       "confX": 0.793,
+       "confY": 0.324,
+       "conf": 0.793,
+       "sortMs": 4833,
+       "firstMs": 3067,
+       "changedMind": true,
+       "zoneChanges": 3,
+       "points": 115,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "limitMs": 5104,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.309,
+       "y": 0.116,
+       "dist": {
+        "reply": 0.609,
+        "info": 0.38,
+        "later": 1.083,
+        "archive": 0.973,
+        "spam": 0.948
+       },
+       "soft": {
+        "reply": 0.251,
+        "info": 0.702,
+        "later": 0.007,
+        "archive": 0.018,
+        "spam": 0.023
+       },
+       "bin": "info",
+       "pTop": 0.702,
+       "confX": 0.309,
+       "confY": 0.116,
+       "conf": 0.309,
+       "sortMs": 3767,
+       "firstMs": 3517,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 89,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "limitMs": 5065,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.309,
+       "y": 0.187,
+       "dist": {
+        "reply": 0.552,
+        "info": 0.415,
+        "later": 1.052,
+        "archive": 0.987,
+        "spam": 1.015
+       },
+       "soft": {
+        "reply": 0.341,
+        "info": 0.622,
+        "later": 0.009,
+        "archive": 0.016,
+        "spam": 0.013
+       },
+       "bin": "info",
+       "pTop": 0.622,
+       "confX": 0.309,
+       "confY": 0.187,
+       "conf": 0.309,
+       "sortMs": 3833,
+       "firstMs": 3617,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 88,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "limitMs": 5025,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.353,
+       "y": 0.286,
+       "dist": {
+        "reply": 0.447,
+        "info": 0.449,
+        "later": 1.057,
+        "archive": 1.058,
+        "spam": 1.123
+       },
+       "soft": {
+        "reply": 0.492,
+        "info": 0.488,
+        "later": 0.008,
+        "archive": 0.008,
+        "spam": 0.004
+       },
+       "bin": "reply",
+       "pTop": 0.492,
+       "confX": 0.353,
+       "confY": 0.286,
+       "conf": 0.353,
+       "sortMs": 2950,
+       "firstMs": 2533,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 98,
+       "combo": 1
+      },
+      {
+       "parcelId": "p024",
+       "limitMs": 4993,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.446,
+       "y": 0.494,
+       "dist": {
+        "reply": 0.24,
+        "info": 0.581,
+        "later": 1.104,
+        "archive": 1.224,
+        "spam": 1.35
+       },
+       "soft": {
+        "reply": 0.777,
+        "info": 0.218,
+        "later": 0.004,
+        "archive": 0.001,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.777,
+       "confX": 0.446,
+       "confY": 0.494,
+       "conf": 0.494,
+       "sortMs": 3433,
+       "firstMs": 3100,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 102,
+       "combo": 1
+      },
+      {
+       "parcelId": "p026",
+       "limitMs": 4957,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.446,
+       "y": 0.407,
+       "dist": {
+        "reply": 0.295,
+        "info": 0.5,
+        "later": 1.117,
+        "archive": 1.188,
+        "spam": 1.268
+       },
+       "soft": {
+        "reply": 0.673,
+        "info": 0.321,
+        "later": 0.003,
+        "archive": 0.002,
+        "spam": 0.001
+       },
+       "bin": "reply",
+       "pTop": 0.673,
+       "confX": 0.446,
+       "confY": 0.407,
+       "conf": 0.446,
+       "sortMs": 4000,
+       "firstMs": 3700,
+       "changedMind": true,
+       "zoneChanges": 1,
+       "points": 94,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-07",
+       "limitMs": 4916,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.771,
+       "y": -0.158,
+       "dist": {
+        "reply": 1.62,
+        "info": 1.425,
+        "later": 0.787,
+        "archive": 0.162,
+        "spam": 0.991
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.062,
+        "archive": 0.925,
+        "spam": 0.012
+       },
+       "bin": "archive",
+       "pTop": 0.925,
+       "confX": 0.771,
+       "confY": 0.158,
+       "conf": 0.771,
+       "sortMs": 3133,
+       "firstMs": 2583,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 131,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "limitMs": 4883,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.364,
+       "y": -0.149,
+       "dist": {
+        "reply": 1.273,
+        "info": 1.018,
+        "later": 0.821,
+        "archive": 0.303,
+        "spam": 0.728
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0.011,
+        "later": 0.058,
+        "archive": 0.818,
+        "spam": 0.112
+       },
+       "bin": "archive",
+       "pTop": 0.818,
+       "confX": 0.364,
+       "confY": 0.149,
+       "conf": 0.364,
+       "sortMs": 3517,
+       "firstMs": 3300,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 93,
+       "combo": 2
+      },
+      {
+       "parcelId": "p034",
+       "limitMs": 4846,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.38,
+       "y": 0.349,
+       "dist": {
+        "reply": 0.383,
+        "info": 0.481,
+        "later": 1.065,
+        "archive": 1.105,
+        "spam": 1.191
+       },
+       "soft": {
+        "reply": 0.587,
+        "info": 0.4,
+        "later": 0.007,
+        "archive": 0.004,
+        "spam": 0.002
+       },
+       "bin": "reply",
+       "pTop": 0.587,
+       "confX": 0.38,
+       "confY": 0.349,
+       "conf": 0.38,
+       "sortMs": 3367,
+       "firstMs": 2850,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 95,
+       "combo": 2
+      },
+      {
+       "parcelId": "p011",
+       "limitMs": 4810,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.634,
+       "y": 0.705,
+       "dist": {
+        "reply": 0.087,
+        "info": 0.756,
+        "later": 1.286,
+        "archive": 1.489,
+        "spam": 1.615
+       },
+       "soft": {
+        "reply": 0.928,
+        "info": 0.071,
+        "later": 0.001,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.928,
+       "confX": 0.634,
+       "confY": 0.705,
+       "conf": 0.705,
+       "sortMs": 3367,
+       "firstMs": 2417,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 129,
+       "combo": 3
+      }
+     ],
+     "limitMsEnd": 4784,
+     "partial": 3,
+     "timedOut": 0,
+     "meanConf": 0.49,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 4,
+   "params": {
+    "setId": "round-002-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T17:35:15.754Z",
+   "endedAt": "2026-10-31T17:35:23.024Z",
+   "durationMs": 7270,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 7270,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 7270,
+     "type": "ab_decision",
+     "pairId": "round-002-ab2",
+     "choice": "B"
+    },
+    {
+     "t": 7270,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-002-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-002",
+     "decisions": [
+      {
+       "pairId": "round-002-ab2",
+       "itemA": "r002-qwen2515b-07:llama323b",
+       "itemB": "r002-qwen2515b-07:qwen2515b",
+       "choice": "B",
+       "winner": "r002-qwen2515b-07:qwen2515b",
+       "strength": 2,
+       "decisionTimeMs": 7270,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "r002-qwen2515b-07",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "qwen2.5:1.5b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 5,
+   "params": {
+    "wave": 3,
+    "waveSpeed": 1.36,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T17:35:23.024Z",
+   "endedAt": "2026-10-31T17:36:15.572Z",
+   "durationMs": 52548,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 52548,
+    "score": 1143,
+    "actions": 12,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2711,
+     "type": "spawn",
+     "parcelId": "p013",
+     "limitMs": 4398,
+     "repeat": false
+    },
+    {
+     "t": 6312,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "info"
+    },
+    {
+     "t": 6495,
+     "type": "sort",
+     "parcelId": "p013",
+     "x": -0.287,
+     "y": 0.22,
+     "bin": "info",
+     "conf": 0.287,
+     "sortMs": 3767,
+     "timedOut": false
+    },
+    {
+     "t": 7378,
+     "type": "spawn",
+     "parcelId": "p023",
+     "limitMs": 4365,
+     "repeat": false
+    },
+    {
+     "t": 10762,
+     "type": "zone",
+     "parcelId": "p023",
+     "bin": "info"
+    },
+    {
+     "t": 10912,
+     "type": "sort",
+     "parcelId": "p023",
+     "x": -0.353,
+     "y": 0.286,
+     "bin": "reply",
+     "conf": 0.353,
+     "sortMs": 3517,
+     "timedOut": false
+    },
+    {
+     "t": 11812,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-05",
+     "limitMs": 4334,
+     "repeat": false
+    },
+    {
+     "t": 15162,
+     "type": "zone",
+     "parcelId": "r002-llama323b-05",
+     "bin": "info"
+    },
+    {
+     "t": 15445,
+     "type": "sort",
+     "parcelId": "r002-llama323b-05",
+     "x": -0.468,
+     "y": -0.054,
+     "bin": "info",
+     "conf": 0.468,
+     "sortMs": 3617,
+     "timedOut": false
+    },
+    {
+     "t": 16345,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-09",
+     "limitMs": 4302,
+     "repeat": false
+    },
+    {
+     "t": 19879,
+     "type": "zone",
+     "parcelId": "r002-llama323b-09",
+     "bin": "reply"
+    },
+    {
+     "t": 19929,
+     "type": "sort",
+     "parcelId": "r002-llama323b-09",
+     "x": -0.474,
+     "y": 0.452,
+     "bin": "reply",
+     "conf": 0.474,
+     "sortMs": 3567,
+     "timedOut": false
+    },
+    {
+     "t": 20812,
+     "type": "spawn",
+     "parcelId": "p010",
+     "limitMs": 4270,
+     "repeat": false
+    },
+    {
+     "t": 24496,
+     "type": "zone",
+     "parcelId": "p010",
+     "bin": "info"
+    },
+    {
+     "t": 24729,
+     "type": "zone",
+     "parcelId": "p010",
+     "bin": "reply"
+    },
+    {
+     "t": 24812,
+     "type": "sort",
+     "parcelId": "p010",
+     "x": -0.408,
+     "y": 0.456,
+     "bin": "reply",
+     "conf": 0.456,
+     "sortMs": 3983,
+     "timedOut": false
+    },
+    {
+     "t": 25696,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-03",
+     "limitMs": 4236,
+     "repeat": false
+    },
+    {
+     "t": 29029,
+     "type": "zone",
+     "parcelId": "r002-llama323b-03",
+     "bin": "archive"
+    },
+    {
+     "t": 29196,
+     "type": "sort",
+     "parcelId": "r002-llama323b-03",
+     "x": 0.523,
+     "y": 0.166,
+     "bin": "archive",
+     "conf": 0.523,
+     "sortMs": 3483,
+     "timedOut": false
+    },
+    {
+     "t": 30079,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-05",
+     "limitMs": 4205,
+     "repeat": false
+    },
+    {
+     "t": 33379,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-05",
+     "bin": "archive"
+    },
+    {
+     "t": 33513,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-05",
+     "x": 0.507,
+     "y": -0.158,
+     "bin": "archive",
+     "conf": 0.507,
+     "sortMs": 3417,
+     "timedOut": false
+    },
+    {
+     "t": 34396,
+     "type": "spawn",
+     "parcelId": "p028",
+     "limitMs": 4175,
+     "repeat": false
+    },
+    {
+     "t": 37546,
+     "type": "sort",
+     "parcelId": "p028",
+     "x": -0.287,
+     "y": 0.241,
+     "bin": "info",
+     "conf": 0.287,
+     "sortMs": 3133,
+     "timedOut": false
+    },
+    {
+     "t": 38446,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-04",
+     "limitMs": 4146,
+     "repeat": false
+    },
+    {
+     "t": 40996,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-04",
+     "bin": "archive"
+    },
+    {
+     "t": 41346,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-04",
+     "bin": "later"
+    },
+    {
+     "t": 41380,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-04",
+     "x": 0.567,
+     "y": 0.378,
+     "bin": "later",
+     "conf": 0.567,
+     "sortMs": 2917,
+     "timedOut": false
+    },
+    {
+     "t": 42279,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-01",
+     "limitMs": 4119,
+     "repeat": false
+    },
+    {
+     "t": 44846,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-01",
+     "x": -0.287,
+     "y": 0.29,
+     "bin": "reply",
+     "conf": 0.29,
+     "sortMs": 2550,
+     "timedOut": false
+    },
+    {
+     "t": 45746,
+     "type": "spawn",
+     "parcelId": "p014",
+     "limitMs": 4095,
+     "repeat": false
+    },
+    {
+     "t": 48730,
+     "type": "zone",
+     "parcelId": "p014",
+     "bin": "archive"
+    },
+    {
+     "t": 48847,
+     "type": "sort",
+     "parcelId": "p014",
+     "x": 0.298,
+     "y": -0.071,
+     "bin": "archive",
+     "conf": 0.298,
+     "sortMs": 3083,
+     "timedOut": false
+    },
+    {
+     "t": 49747,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-03",
+     "limitMs": 4067,
+     "repeat": false
+    },
+    {
+     "t": 52447,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-03",
+     "bin": "archive"
+    },
+    {
+     "t": 52547,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-03",
+     "x": 0.298,
+     "y": -0.095,
+     "bin": "archive",
+     "conf": 0.298,
+     "sortMs": 2783,
+     "timedOut": false
+    },
+    {
+     "t": 52548,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 3,
+     "parcelsShown": 12,
+     "sorted": 12,
+     "misses": 0,
+     "changedMind": 2,
+     "bestCombo": 3,
+     "scoreWave": 1143,
+     "speedEnd": 1.36,
+     "decisions": [
+      {
+       "parcelId": "p013",
+       "limitMs": 4398,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.287,
+       "y": 0.22,
+       "dist": {
+        "reply": 0.541,
+        "info": 0.453,
+        "later": 1.018,
+        "archive": 0.975,
+        "spam": 1.04
+       },
+       "soft": {
+        "reply": 0.385,
+        "info": 0.572,
+        "later": 0.013,
+        "archive": 0.019,
+        "spam": 0.011
+       },
+       "bin": "info",
+       "pTop": 0.572,
+       "confX": 0.287,
+       "confY": 0.22,
+       "conf": 0.287,
+       "sortMs": 3767,
+       "firstMs": 3400,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 83,
+       "combo": 0
+      },
+      {
+       "parcelId": "p023",
+       "limitMs": 4365,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.353,
+       "y": 0.286,
+       "dist": {
+        "reply": 0.447,
+        "info": 0.449,
+        "later": 1.057,
+        "archive": 1.058,
+        "spam": 1.123
+       },
+       "soft": {
+        "reply": 0.492,
+        "info": 0.488,
+        "later": 0.008,
+        "archive": 0.008,
+        "spam": 0.004
+       },
+       "bin": "reply",
+       "pTop": 0.492,
+       "confX": 0.353,
+       "confY": 0.286,
+       "conf": 0.353,
+       "sortMs": 3517,
+       "firstMs": 3233,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 89,
+       "combo": 0
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "limitMs": 4334,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.468,
+       "y": -0.054,
+       "dist": {
+        "reply": 0.698,
+        "info": 0.182,
+        "later": 1.306,
+        "archive": 1.118,
+        "spam": 0.864
+       },
+       "soft": {
+        "reply": 0.108,
+        "info": 0.854,
+        "later": 0,
+        "archive": 0.003,
+        "spam": 0.033
+       },
+       "bin": "info",
+       "pTop": 0.854,
+       "confX": 0.468,
+       "confY": 0.054,
+       "conf": 0.468,
+       "sortMs": 3617,
+       "firstMs": 3183,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 95,
+       "combo": 0
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "limitMs": 4302,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.474,
+       "y": 0.452,
+       "dist": {
+        "reply": 0.243,
+        "info": 0.532,
+        "later": 1.136,
+        "archive": 1.231,
+        "spam": 1.32
+       },
+       "soft": {
+        "reply": 0.732,
+        "info": 0.264,
+        "later": 0.003,
+        "archive": 0.001,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.732,
+       "confX": 0.474,
+       "confY": 0.452,
+       "conf": 0.474,
+       "sortMs": 3567,
+       "firstMs": 3383,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 95,
+       "combo": 0
+      },
+      {
+       "parcelId": "p010",
+       "limitMs": 4270,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.408,
+       "y": 0.456,
+       "dist": {
+        "reply": 0.292,
+        "info": 0.561,
+        "later": 1.07,
+        "archive": 1.173,
+        "spam": 1.302
+       },
+       "soft": {
+        "reply": 0.733,
+        "info": 0.258,
+        "later": 0.006,
+        "archive": 0.002,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.733,
+       "confX": 0.408,
+       "confY": 0.456,
+       "conf": 0.456,
+       "sortMs": 3983,
+       "firstMs": 3517,
+       "changedMind": true,
+       "zoneChanges": 1,
+       "points": 90,
+       "combo": 0
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "limitMs": 4236,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.523,
+       "y": 0.166,
+       "dist": {
+        "reply": 1.258,
+        "info": 1.193,
+        "later": 0.471,
+        "archive": 0.25,
+        "spam": 1.081
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0.001,
+        "later": 0.324,
+        "archive": 0.669,
+        "spam": 0.004
+       },
+       "bin": "archive",
+       "pTop": 0.669,
+       "confX": 0.523,
+       "confY": 0.166,
+       "conf": 0.523,
+       "sortMs": 3483,
+       "firstMs": 3233,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 103,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "limitMs": 4205,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.507,
+       "y": -0.158,
+       "dist": {
+        "reply": 1.394,
+        "info": 1.162,
+        "later": 0.791,
+        "archive": 0.179,
+        "spam": 0.803
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.002,
+        "later": 0.059,
+        "archive": 0.884,
+        "spam": 0.055
+       },
+       "bin": "archive",
+       "pTop": 0.884,
+       "confX": 0.507,
+       "confY": 0.158,
+       "conf": 0.507,
+       "sortMs": 3417,
+       "firstMs": 3233,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 108,
+       "combo": 2
+      },
+      {
+       "parcelId": "p028",
+       "limitMs": 4175,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.287,
+       "y": 0.241,
+       "dist": {
+        "reply": 0.525,
+        "info": 0.465,
+        "later": 1.01,
+        "archive": 0.981,
+        "spam": 1.06
+       },
+       "soft": {
+        "reply": 0.415,
+        "info": 0.544,
+        "later": 0.014,
+        "archive": 0.018,
+        "spam": 0.009
+       },
+       "bin": "info",
+       "pTop": 0.544,
+       "confX": 0.287,
+       "confY": 0.241,
+       "conf": 0.287,
+       "sortMs": 3133,
+       "firstMs": 2967,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 87,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "limitMs": 4146,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.567,
+       "y": 0.378,
+       "dist": {
+        "reply": 1.241,
+        "info": 1.29,
+        "later": 0.256,
+        "archive": 0.435,
+        "spam": 1.289
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.636,
+        "archive": 0.362,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.636,
+       "confX": 0.567,
+       "confY": 0.378,
+       "conf": 0.567,
+       "sortMs": 2917,
+       "firstMs": 2450,
+       "changedMind": true,
+       "zoneChanges": 2,
+       "points": 121,
+       "combo": 3
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "limitMs": 4119,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.287,
+       "y": 0.29,
+       "dist": {
+        "reply": 0.491,
+        "info": 0.498,
+        "later": 0.993,
+        "archive": 0.996,
+        "spam": 1.108
+       },
+       "soft": {
+        "reply": 0.489,
+        "info": 0.473,
+        "later": 0.017,
+        "archive": 0.016,
+        "spam": 0.006
+       },
+       "bin": "reply",
+       "pTop": 0.489,
+       "confX": 0.287,
+       "confY": 0.29,
+       "conf": 0.29,
+       "sortMs": 2550,
+       "firstMs": 2250,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 93,
+       "combo": 3
+      },
+      {
+       "parcelId": "p014",
+       "limitMs": 4095,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.298,
+       "y": -0.071,
+       "dist": {
+        "reply": 1.172,
+        "info": 0.948,
+        "later": 0.775,
+        "archive": 0.353,
+        "spam": 0.769
+       },
+       "soft": {
+        "reply": 0.003,
+        "info": 0.023,
+        "later": 0.091,
+        "archive": 0.789,
+        "spam": 0.095
+       },
+       "bin": "archive",
+       "pTop": 0.789,
+       "confX": 0.298,
+       "confY": 0.071,
+       "conf": 0.298,
+       "sortMs": 3083,
+       "firstMs": 2900,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 88,
+       "combo": 3
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "limitMs": 4067,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.298,
+       "y": -0.095,
+       "dist": {
+        "reply": 1.187,
+        "info": 0.949,
+        "later": 0.798,
+        "archive": 0.355,
+        "spam": 0.746
+       },
+       "soft": {
+        "reply": 0.002,
+        "info": 0.023,
+        "later": 0.077,
+        "archive": 0.786,
+        "spam": 0.111
+       },
+       "bin": "archive",
+       "pTop": 0.786,
+       "confX": 0.298,
+       "confY": 0.095,
+       "conf": 0.298,
+       "sortMs": 2783,
+       "firstMs": 2600,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 91,
+       "combo": 3
+      }
+     ],
+     "limitMsEnd": 4048,
+     "partial": 1,
+     "timedOut": 0,
+     "meanConf": 0.401,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T17:34:17.103Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 50000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-002-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T17:34:23.111Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-002-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 2
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.15
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 50000
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T17:35:15.754Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 2,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1.15,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 50000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-002-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T17:35:23.024Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-002-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.36
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 50000
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 5,
+  "highestLevel": 5,
+  "totalDurationMs": 171068,
+  "parcels": {
+   "roundId": "round-002",
+   "roundNo": 2,
+   "roundVersion": "1.0.0",
+   "synthetic": true,
+   "sim": false,
+   "mode": "field2d",
+   "axesVersion": "1.0.0",
+   "score": 3368,
+   "bestCombo": 6,
+   "parcels": 33,
+   "sorted": 33,
+   "misses": 0,
+   "changedMind": 5,
+   "abAnswered": 2,
+   "bins": {
+    "info": 8,
+    "reply": 15,
+    "archive": 9,
+    "later": 1
+   },
+   "timedOut": 0,
+   "partial": 6,
+   "middle": 1,
+   "meanConf": 0.485,
+   "meanConfX": 0.47,
+   "meanConfY": 0.349
+  }
+ },
+ "session": {
+  "id": "20261031173324-2y01c",
+  "kind": "parcels+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "parcels",
+    "wave": 1,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 52601
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "pairwise",
+    "pairId": "round-002-ab1",
+    "questionNo": 1,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 6007
+   },
+   {
+    "index": 2,
+    "levelIndex": 2,
+    "kind": "parcels",
+    "wave": 2,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 52642
+   },
+   {
+    "index": 3,
+    "levelIndex": 3,
+    "kind": "pairwise",
+    "pairId": "round-002-ab2",
+    "questionNo": 2,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 7270
+   },
+   {
+    "index": 4,
+    "levelIndex": 4,
+    "kind": "parcels",
+    "wave": 3,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 52548
+   }
+  ]
+ },
+ "qualities": {
+  "modelVersion": "1.2.0",
+  "computedAt": "2026-10-31T17:36:15.575Z",
+  "runType": "human",
+  "adapters": [
+   "parcels",
+   "pairwise"
+  ],
+  "items": {
+   "focus": {
+    "score": 92,
+    "confidence": 0.57,
+    "label": "estimate",
+    "evidence": [
+     "parcels: parcels missed 0/33, changed mind 5"
+    ]
+   },
+   "reaction": {
+    "score": 31,
+    "confidence": 0.57,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median first touch 3.23 s after a parcel appears"
+    ]
+   },
+   "consistency": {
+    "score": 93,
+    "confidence": 0.43,
+    "label": "rough",
+    "evidence": [
+     "parcels: wave focus sd 2.2 over 3 waves"
+    ]
+   },
+   "accuracy": {
+    "score": 49,
+    "confidence": 0.11,
+    "label": "rough",
+    "evidence": [
+     "parcels: clear-cut parcels: mean soft agreement 0.49 over 1"
+    ]
+   },
+   "endurance": {
+    "score": 37,
+    "confidence": 0.38,
+    "label": "rough",
+    "evidence": [
+     "parcels: wave focus trend -1.7 pts/wave (speed rises each wave)"
+    ]
+   },
+   "decisionSpeed": {
+    "score": 53,
+    "confidence": 0.57,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median sort 3.52 s",
+     "pairwise: median 6.6 s per pick (n=2)"
+    ]
+   },
+   "decisiveness": {
+    "score": 54,
+    "confidence": 0.62,
+    "label": "estimate",
+    "evidence": [
+     "parcels: mean axis confidence x 0.47, y 0.35 (0 = dropped in the middle)",
+     "pairwise: mean strength 2.00 of 3; tie/neither 0/2"
+    ]
+   }
+  },
+  "note": "Rough gameplay estimates for choosing a game; not an assessment of the person. \"rough\" = confidence < 0.5."
+ }
+}
