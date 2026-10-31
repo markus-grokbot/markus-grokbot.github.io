@@ -8,7 +8,8 @@
   "games/parcels/logs/human/human-parcels-round-002-20261031173324-2y01c.json",
   "games/parcels/logs/human/human-parcels-round-003-20261031180247-73vwk.json",
   "games/parcels/logs/human/human-parcels-round-004-priority-20261031183918-6j9dj.json",
-  "games/parcels/logs/human/human-parcels-round-004-handling-20261031183555-qpxuu.json"
+  "games/parcels/logs/human/human-parcels-round-004-handling-20261031183555-qpxuu.json",
+  "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json"
  ],
  "parcels": {
   "p001": {
@@ -328,6 +329,32 @@
      "manual": 70,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.8,
+     "y": -0.8,
+     "quadrant": "reviewLight",
+     "conf": 0.8,
+     "manual": 90,
+     "spend": 10,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -485,31 +512,143 @@
      "manual": 70,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.458,
+     "y": 0.508,
+     "quadrant": "first",
+     "conf": 0.508,
+     "urgency": 72.9,
+     "importance": 75.4,
+     "priority": 74.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.54,
+     "y": 0.469,
+     "quadrant": "reviewReserve",
+     "conf": 0.54,
+     "manual": 77,
+     "spend": 73.4,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.728,
+     "y": 0.996,
+     "quadrant": "first",
+     "conf": 0.996,
+     "urgency": 86.4,
+     "importance": 99.8,
+     "priority": 94.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.474,
+     "y": 0.44,
+     "quadrant": "reviewReserve",
+     "conf": 0.474,
+     "manual": 73.7,
+     "spend": 72,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 0.4,
+     "y": -0.4,
+     "quadrant": "deprio",
+     "conf": 0.4,
+     "urgency": 30,
+     "importance": 30,
+     "priority": 30
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": 0.6,
+     "y": -0.8,
+     "quadrant": "reviewLight",
+     "conf": 0.8,
+     "manual": 80,
+     "spend": 10,
+     "tier": "manual"
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.4,
+     "y": 0.2,
+     "quadrant": "first",
+     "conf": 0.4,
+     "urgency": 70,
+     "importance": 60,
+     "priority": 64
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": 0.4,
+     "quadrant": "autoPremium",
+     "conf": 0.4,
+     "manual": 50,
+     "spend": 70,
+     "tier": "hybrid-codex"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
+      "round": "round-005",
       "quadrant": "first",
-      "x": -0.408,
-      "y": 0.456
+      "x": -0.728,
+      "y": 0.996
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.281,
-      "y": 0.365
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 0.474,
+      "y": 0.44
      }
     }
    }
@@ -709,6 +848,62 @@
      "manual": 70,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.336,
+     "y": 0.104,
+     "quadrant": "reviewReserve",
+     "conf": 0.336,
+     "manual": 66.8,
+     "spend": 55.2,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.314,
+     "y": -0.17,
+     "quadrant": "reviewLight",
+     "conf": 0.314,
+     "manual": 65.7,
+     "spend": 41.5,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.4,
+     "y": -0.4,
+     "quadrant": "reviewLight",
+     "conf": 0.4,
+     "manual": 70,
+     "spend": 30,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -726,14 +921,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
+     "tries": 4,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "reviewLight",
-      "x": 0.452,
-      "y": -0.066
+      "x": 0.314,
+      "y": -0.17
      }
     }
    }
@@ -795,19 +990,60 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.82,
+     "y": -0.108,
+     "quadrant": "skim",
+     "conf": 0.82,
+     "urgency": 91,
+     "importance": 44.6,
+     "priority": 63.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": 0.6,
+     "quadrant": "first",
+     "conf": 0.6,
+     "urgency": 50,
+     "importance": 80,
+     "priority": 68
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 2,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-002",
+      "round": "round-005",
       "quadrant": "skim",
-      "x": -0.397,
-      "y": -0.133
+      "x": -0.82,
+      "y": -0.108
      }
     },
     "handling": {
@@ -916,6 +1152,32 @@
      "manual": 20,
      "spend": 60,
      "tier": "codex"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.4,
+     "y": 0.4,
+     "quadrant": "schedule",
+     "conf": 0.4,
+     "urgency": 30,
+     "importance": 70,
+     "priority": 54
     }
    ],
    "status": {
@@ -1297,18 +1559,74 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.848,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 7.6,
+     "importance": 0,
+     "priority": 3,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.744,
+     "y": -0.552,
+     "quadrant": "deprio",
+     "conf": 0.744,
+     "urgency": 12.8,
+     "importance": 22.4,
+     "priority": 18.6,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -0.8,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 10,
+     "priority": 6
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.9,
+     "y": -0.6,
+     "quadrant": "deprio",
+     "conf": 0.9,
+     "urgency": 5,
+     "importance": 20,
+     "priority": 14
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "skim",
-      "x": -0.485,
+      "round": "round-005",
+      "quadrant": "deprio",
+      "x": 0.744,
       "y": -0.552
      }
     },
@@ -1837,6 +2155,73 @@
      "manual": 10,
      "spend": 50,
      "tier": "codex"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.386,
+     "y": 0.44,
+     "quadrant": "autoPremium",
+     "conf": 0.44,
+     "manual": 30.7,
+     "spend": 72,
+     "tier": "codex",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -0.2,
+     "y": 0.4,
+     "quadrant": "autoPremium",
+     "conf": 0.4,
+     "manual": 40,
+     "spend": 70,
+     "tier": "hybrid-codex"
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.2,
+     "y": 0,
+     "quadrant": "schedule",
+     "conf": 0.2,
+     "urgency": 40,
+     "importance": 50,
+     "priority": 46
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": 0.8,
+     "quadrant": "reviewReserve",
+     "conf": 0.8,
+     "manual": 80,
+     "spend": 90,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -1854,14 +2239,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "autoPremium",
-      "x": -0.468,
-      "y": 0.423
+      "x": -0.386,
+      "y": 0.44
      }
     }
    }
@@ -2224,6 +2609,32 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": -0.2,
+     "quadrant": "reviewLight",
+     "conf": 0.6,
+     "manual": 80,
+     "spend": 40,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -2367,19 +2778,75 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.75,
+     "y": -0.158,
+     "quadrant": "skim",
+     "conf": 0.75,
+     "urgency": 87.5,
+     "importance": 42.1,
+     "priority": 60.3,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.766,
+     "y": -0.07,
+     "quadrant": "skim",
+     "conf": 0.766,
+     "urgency": 88.3,
+     "importance": 46.5,
+     "priority": 63.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": -0.6,
+     "quadrant": "skim",
+     "conf": 0.6,
+     "urgency": 50,
+     "importance": 20,
+     "priority": 32
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.2,
+     "y": -0.4,
+     "quadrant": "skim",
+     "conf": 0.4,
+     "urgency": 60,
+     "importance": 30,
+     "priority": 42
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.468,
-      "y": 0.104
+      "round": "round-005",
+      "quadrant": "skim",
+      "x": -0.766,
+      "y": -0.07
      }
     },
     "handling": {
@@ -2575,6 +3042,62 @@
      "manual": 10,
      "spend": 50,
      "tier": "codex"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.898,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 5.1,
+     "spend": 100,
+     "tier": "grokbuild",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 1,
+     "y": 0.938,
+     "quadrant": "reviewReserve",
+     "conf": 1,
+     "manual": 100,
+     "spend": 96.9,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": -0.2,
+     "quadrant": "reviewLight",
+     "conf": 0.6,
+     "manual": 80,
+     "spend": 40,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -2592,14 +3115,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
+     "tries": 4,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.777,
-      "y": 1
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 1,
+      "y": 0.938
      }
     }
    }
@@ -2783,6 +3306,32 @@
      "manual": 80,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.4,
+     "y": -0.4,
+     "quadrant": "reviewLight",
+     "conf": 0.4,
+     "manual": 70,
+     "spend": 30,
+     "tier": "manual"
     }
    ],
    "status": {
@@ -2926,31 +3475,130 @@
      "manual": 90,
      "spend": 10,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.38,
+     "y": 0.562,
+     "quadrant": "first",
+     "conf": 0.562,
+     "urgency": 69,
+     "importance": 78.1,
+     "priority": 74.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.441,
+     "y": 0.481,
+     "quadrant": "autoPremium",
+     "conf": 0.481,
+     "manual": 27.9,
+     "spend": 74.1,
+     "tier": "codex",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.832,
+     "y": 1,
+     "quadrant": "first",
+     "conf": 1,
+     "urgency": 91.6,
+     "importance": 100,
+     "priority": 96.6,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.534,
+     "y": 0.456,
+     "quadrant": "reviewReserve",
+     "conf": 0.534,
+     "manual": 76.7,
+     "spend": 72.8,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": 0.2,
+     "quadrant": "first",
+     "conf": 0.2,
+     "urgency": 50,
+     "importance": 60,
+     "priority": 56
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.6,
+     "y": -0.2,
+     "quadrant": "skim",
+     "conf": 0.6,
+     "urgency": 80,
+     "importance": 40,
+     "priority": 56
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.2,
+     "y": -0.6,
+     "quadrant": "reviewLight",
+     "conf": 0.6,
+     "manual": 60,
+     "spend": 20,
+     "tier": "hybrid-ollama"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
+      "round": "round-005",
       "quadrant": "first",
-      "x": -0.793,
-      "y": 0.324
+      "x": -0.832,
+      "y": 1
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 3,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 1,
+     "state": "manual-review",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoCheap",
-      "x": -0.793,
-      "y": -0.203
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 0.534,
+      "y": 0.456
      }
     }
    }
@@ -3068,6 +3716,88 @@
      "manual": 50,
      "spend": 50,
      "tier": "hybrid-codex"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.678,
+     "y": 0.535,
+     "quadrant": "reviewReserve",
+     "conf": 0.678,
+     "manual": 83.9,
+     "spend": 76.8,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.457,
+     "y": 0.506,
+     "quadrant": "reviewReserve",
+     "conf": 0.506,
+     "manual": 72.9,
+     "spend": 75.3,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": 0.2,
+     "y": -0.2,
+     "quadrant": "reviewLight",
+     "conf": 0.2,
+     "manual": 60,
+     "spend": 40,
+     "tier": "hybrid-opencode"
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": 0.2,
+     "quadrant": "schedule",
+     "conf": 0.6,
+     "urgency": 20,
+     "importance": 60,
+     "priority": 44
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.2,
+     "y": 0.6,
+     "quadrant": "reviewReserve",
+     "conf": 0.6,
+     "manual": 60,
+     "spend": 80,
+     "tier": "hybrid-grokbuild"
     }
    ],
    "status": {
@@ -3085,14 +3815,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
-     "streak": 1,
+     "tries": 4,
+     "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.298,
-      "y": 0.261
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 0.457,
+      "y": 0.506
      }
     }
    }
@@ -3316,31 +4046,128 @@
      "manual": 50,
      "spend": 40,
      "tier": "hybrid-opencode"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.87,
+     "y": 1,
+     "quadrant": "first",
+     "conf": 1,
+     "urgency": 93.5,
+     "importance": 100,
+     "priority": 97.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.948,
+     "y": 1,
+     "quadrant": "autoPremium",
+     "conf": 1,
+     "manual": 2.6,
+     "spend": 100,
+     "tier": "grokbuild",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 1,
+     "y": 0.938,
+     "quadrant": "schedule",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 96.9,
+     "priority": 58.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": 0.4,
+     "quadrant": "first",
+     "conf": 0.4,
+     "urgency": 50,
+     "importance": 70,
+     "priority": 62
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": -0.4,
+     "quadrant": "autoCheap",
+     "conf": 0.4,
+     "manual": 50,
+     "spend": 30,
+     "tier": "hybrid-opencode"
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.6,
+     "y": 0.8,
+     "quadrant": "first",
+     "conf": 0.8,
+     "urgency": 80,
+     "importance": 90,
+     "priority": 86
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.8,
+     "y": 0,
+     "quadrant": "autoPremium",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 50,
+     "tier": "codex"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "first",
-      "x": -0.441,
-      "y": 0.506
+      "round": "round-005",
+      "quadrant": "schedule",
+      "x": 1,
+      "y": 0.938
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "autoPremium",
-      "x": -0.661,
-      "y": 0.884
+      "x": -0.948,
+      "y": 1
      }
     }
    }
@@ -3510,6 +4337,49 @@
      "manual": 80,
      "spend": 30,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.959,
+     "y": 0.896,
+     "quadrant": "reviewReserve",
+     "conf": 0.959,
+     "manual": 98,
+     "spend": 94.8,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 1,
+     "y": 1,
+     "quadrant": "reviewReserve",
+     "conf": 1,
+     "manual": 100,
+     "spend": 100,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.8,
+     "y": 0,
+     "quadrant": "autoPremium",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 50,
+     "tier": "codex"
     }
    ],
    "status": {
@@ -3527,13 +4397,13 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
+     "tries": 4,
      "streak": 2,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.854,
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 1,
       "y": 1
      }
     }
@@ -3636,19 +4506,60 @@
      "urgency": 60,
      "importance": 50,
      "priority": 54
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.782,
+     "y": -0.802,
+     "quadrant": "deprio",
+     "conf": 0.802,
+     "urgency": 10.9,
+     "importance": 9.9,
+     "priority": 10.3,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.8,
+     "y": 0.6,
+     "quadrant": "schedule",
+     "conf": 0.8,
+     "urgency": 10,
+     "importance": 80,
+     "priority": 52
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 4,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "deprio",
-      "x": 0.98,
-      "y": -0.464
+      "x": 0.782,
+      "y": -0.802
      }
     },
     "handling": {
@@ -3792,6 +4703,32 @@
      "urgency": 50,
      "importance": 50,
      "priority": 50
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -0.8,
+     "y": -0.2,
+     "quadrant": "autoCheap",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 40,
+     "tier": "opencode"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": 0,
+     "quadrant": "autoPremium",
+     "conf": 0,
+     "manual": 50,
+     "spend": 50,
+     "tier": "hybrid-codex"
     }
    ],
    "status": {
@@ -4346,6 +5283,47 @@
      "urgency": 40,
      "importance": 60,
      "priority": 52
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.634,
+     "y": 0.871,
+     "quadrant": "autoPremium",
+     "conf": 0.871,
+     "manual": 18.3,
+     "spend": 93.6,
+     "tier": "grokbuild",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": -0.4,
+     "quadrant": "autoCheap",
+     "conf": 0.4,
+     "manual": 50,
+     "spend": 30,
+     "tier": "hybrid-opencode"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.8,
+     "y": 0,
+     "quadrant": "autoPremium",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 50,
+     "tier": "codex"
     }
    ],
    "status": {
@@ -4363,10 +5341,15 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 0,
-     "streak": 0,
-     "state": "new",
-     "last": null
+     "tries": 1,
+     "streak": 1,
+     "state": "open",
+     "last": {
+      "round": "round-005",
+      "quadrant": "autoPremium",
+      "x": -0.634,
+      "y": 0.871
+     }
     }
    }
   },
@@ -4485,19 +5468,75 @@
      "src": "field2d",
      "counts": true,
      "at": "20261031173324-2y01c"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.078,
+     "y": -0.14,
+     "quadrant": "skim",
+     "conf": 0.14,
+     "urgency": 53.9,
+     "importance": 43,
+     "priority": 47.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.49,
+     "y": -0.36,
+     "quadrant": "deprio",
+     "conf": 0.49,
+     "urgency": 25.5,
+     "importance": 32,
+     "priority": 29.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "skim",
+     "conf": 1,
+     "urgency": 100,
+     "importance": 0,
+     "priority": 40
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.6,
+     "y": -0.8,
+     "quadrant": "skim",
+     "conf": 0.8,
+     "urgency": 80,
+     "importance": 10,
+     "priority": 38
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-002",
-      "quadrant": "schedule",
-      "x": 0.523,
-      "y": 0.166
+      "round": "round-005",
+      "quadrant": "deprio",
+      "x": 0.49,
+      "y": -0.36
      }
     },
     "handling": {
@@ -5002,19 +6041,60 @@
      "urgency": 100,
      "importance": 100,
      "priority": 100
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.71,
+     "y": -0.124,
+     "quadrant": "skim",
+     "conf": 0.71,
+     "urgency": 85.5,
+     "importance": 43.8,
+     "priority": 60.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.4,
+     "y": 0.6,
+     "quadrant": "schedule",
+     "conf": 0.6,
+     "urgency": 30,
+     "importance": 80,
+     "priority": 60
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "skim",
-      "x": -0.848,
-      "y": -0.082
+      "x": -0.71,
+      "y": -0.124
      }
     },
     "handling": {
@@ -5247,19 +6327,60 @@
      "urgency": 100,
      "importance": 100,
      "priority": 100
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.716,
+     "y": -0.106,
+     "quadrant": "skim",
+     "conf": 0.716,
+     "urgency": 85.8,
+     "importance": 44.7,
+     "priority": 61.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": 0.8,
+     "quadrant": "schedule",
+     "conf": 0.8,
+     "urgency": 20,
+     "importance": 90,
+     "priority": 62
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "skim",
-      "x": -0.926,
-      "y": -0.192
+      "x": -0.716,
+      "y": -0.106
      }
     },
     "handling": {
@@ -5520,31 +6641,131 @@
      "manual": 50,
      "spend": 40,
      "tier": "hybrid-opencode"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.6,
+     "y": 0.674,
+     "quadrant": "first",
+     "conf": 0.674,
+     "urgency": 80,
+     "importance": 83.7,
+     "priority": 82.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.612,
+     "y": 0.61,
+     "quadrant": "first",
+     "conf": 0.612,
+     "urgency": 80.6,
+     "importance": 80.5,
+     "priority": 80.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p",
+     "repeat": true
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": -0.623,
+     "y": 0.705,
+     "quadrant": "autoPremium",
+     "conf": 0.705,
+     "manual": 18.9,
+     "spend": 85.3,
+     "tier": "grokbuild",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 1,
+     "y": 0.95,
+     "quadrant": "reviewReserve",
+     "conf": 1,
+     "manual": 100,
+     "spend": 97.5,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": 0.6,
+     "quadrant": "first",
+     "conf": 0.6,
+     "urgency": 50,
+     "importance": 80,
+     "priority": 68
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": -0.6,
+     "quadrant": "autoCheap",
+     "conf": 0.6,
+     "manual": 50,
+     "spend": 20,
+     "tier": "hybrid-ollama"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 4,
+     "streak": 4,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "first",
-      "x": -0.898,
-      "y": 1
+      "x": -0.612,
+      "y": 0.61
      }
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
-     "streak": 0,
+     "tries": 4,
+     "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.226,
-      "y": 0.095
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 1,
+      "y": 0.95
      }
     }
    }
@@ -5605,19 +6826,60 @@
      "urgency": 70,
      "importance": 40,
      "priority": 52
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.506,
+     "y": -0.142,
+     "quadrant": "deprio",
+     "conf": 0.506,
+     "urgency": 24.7,
+     "importance": 42.9,
+     "priority": 35.6,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.8,
+     "y": 0,
+     "quadrant": "schedule",
+     "conf": 0.8,
+     "urgency": 10,
+     "importance": 50,
+     "priority": 34
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
+     "tries": 2,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-003",
-      "quadrant": "skim",
-      "x": -0.678,
-      "y": -0.218
+      "round": "round-005",
+      "quadrant": "deprio",
+      "x": 0.506,
+      "y": -0.142
      }
     },
     "handling": {
@@ -5732,6 +6994,47 @@
      "manual": 80,
      "spend": 20,
      "tier": "manual"
+    },
+    {
+     "round": "round-005",
+     "mode": "handling",
+     "by": "human",
+     "x": 0.694,
+     "y": 0.73,
+     "quadrant": "reviewReserve",
+     "conf": 0.73,
+     "manual": 84.7,
+     "spend": 86.5,
+     "tier": "manual",
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -0.8,
+     "y": 0.8,
+     "quadrant": "autoPremium",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 90,
+     "tier": "grokbuild"
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0,
+     "y": -0.2,
+     "quadrant": "autoCheap",
+     "conf": 0.2,
+     "manual": 50,
+     "spend": 40,
+     "tier": "hybrid-opencode"
     }
    ],
    "status": {
@@ -5749,14 +7052,14 @@
     },
     "handling": {
      "mode": "handling",
-     "tries": 2,
+     "tries": 3,
      "streak": 1,
      "state": "open",
      "last": {
-      "round": "round-004",
-      "quadrant": "autoPremium",
-      "x": -0.898,
-      "y": 1
+      "round": "round-005",
+      "quadrant": "reviewReserve",
+      "x": 0.694,
+      "y": 0.73
      }
     }
    }
@@ -6129,19 +7432,101 @@
      "urgency": 100,
      "importance": 70,
      "priority": 82
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.352,
+     "y": 0.44,
+     "quadrant": "first",
+     "conf": 0.44,
+     "urgency": 67.6,
+     "importance": 72,
+     "priority": 70.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": -0.188,
+     "y": 0.208,
+     "quadrant": "first",
+     "conf": 0.208,
+     "urgency": 59.4,
+     "importance": 60.4,
+     "priority": 60,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 0,
+     "y": -0.4,
+     "quadrant": "skim",
+     "conf": 0.4,
+     "urgency": 50,
+     "importance": 30,
+     "priority": 38
+    },
+    {
+     "key": "round-005|handling|llama3.2:3b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:llama3.2:3b",
+     "x": -1,
+     "y": -1,
+     "quadrant": "autoCheap",
+     "conf": 1,
+     "manual": 0,
+     "spend": 0,
+     "tier": "ollama"
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.4,
+     "y": -0.6,
+     "quadrant": "skim",
+     "conf": 0.6,
+     "urgency": 70,
+     "importance": 20,
+     "priority": 40
+    },
+    {
+     "key": "round-005|handling|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "handling",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.8,
+     "y": 0.6,
+     "quadrant": "autoPremium",
+     "conf": 0.8,
+     "manual": 10,
+     "spend": 80,
+     "tier": "grokbuild"
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
+     "tries": 3,
+     "streak": 0,
      "state": "open",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "first",
-      "x": -0.242,
-      "y": 0.32
+      "x": -0.188,
+      "y": 0.208
      }
     },
     "handling": {
@@ -6225,19 +7610,60 @@
      "urgency": 50,
      "importance": 80,
      "priority": 68
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.87,
+     "y": -0.294,
+     "quadrant": "deprio",
+     "conf": 0.87,
+     "urgency": 6.5,
+     "importance": 35.3,
+     "priority": 23.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": -0.6,
+     "y": 1,
+     "quadrant": "first",
+     "conf": 1,
+     "urgency": 80,
+     "importance": 100,
+     "priority": 92
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "deprio",
-      "x": 0.904,
-      "y": -0.538
+      "x": 0.87,
+      "y": -0.294
      }
     },
     "handling": {
@@ -6321,19 +7747,91 @@
      "urgency": 20,
      "importance": 60,
      "priority": 44
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.948,
+     "y": -0.286,
+     "quadrant": "deprio",
+     "conf": 0.948,
+     "urgency": 2.6,
+     "importance": 35.7,
+     "priority": 22.5,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.65,
+     "y": -0.234,
+     "quadrant": "deprio",
+     "conf": 0.65,
+     "urgency": 17.5,
+     "importance": 38.3,
+     "priority": 30,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p",
+     "repeat": true
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.798,
+     "y": -0.366,
+     "quadrant": "deprio",
+     "conf": 0.798,
+     "urgency": 10.1,
+     "importance": 31.7,
+     "priority": 23.1,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.8,
+     "y": 0.4,
+     "quadrant": "schedule",
+     "conf": 0.8,
+     "urgency": 10,
+     "importance": 70,
+     "priority": 46
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 2,
-     "streak": 2,
-     "state": "open",
+     "tries": 5,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
-      "quadrant": "skim",
-      "x": -0.55,
-      "y": -0.708
+      "round": "round-005",
+      "quadrant": "deprio",
+      "x": 0.798,
+      "y": -0.366
      }
     },
     "handling": {
@@ -6401,19 +7899,75 @@
      "urgency": 30,
      "importance": 90,
      "priority": 66
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.75,
+     "y": -0.942,
+     "quadrant": "deprio",
+     "conf": 0.942,
+     "urgency": 12.5,
+     "importance": 2.9,
+     "priority": 6.7,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.866,
+     "y": -0.942,
+     "quadrant": "deprio",
+     "conf": 0.942,
+     "urgency": 6.7,
+     "importance": 2.9,
+     "priority": 4.4,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.9,
+     "y": 0.2,
+     "quadrant": "schedule",
+     "conf": 0.9,
+     "urgency": 5,
+     "importance": 60,
+     "priority": 38
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "deprio",
-      "x": 0.842,
-      "y": -0.504
+      "x": 0.866,
+      "y": -0.942
      }
     },
     "handling": {
@@ -6481,19 +8035,75 @@
      "urgency": 40,
      "importance": 50,
      "priority": 46
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.612,
+     "y": -0.52,
+     "quadrant": "deprio",
+     "conf": 0.612,
+     "urgency": 19.4,
+     "importance": 24,
+     "priority": 22.2,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "round": "round-005",
+     "mode": "priority",
+     "by": "human",
+     "x": 0.506,
+     "y": -0.336,
+     "quadrant": "deprio",
+     "conf": 0.506,
+     "urgency": 24.7,
+     "importance": 33.2,
+     "priority": 29.8,
+     "src": "session",
+     "counts": true,
+     "at": "20261031191406-ag68p"
+    },
+    {
+     "key": "round-005|priority|llama3.2:3b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:llama3.2:3b",
+     "x": 1,
+     "y": -1,
+     "quadrant": "deprio",
+     "conf": 1,
+     "urgency": 0,
+     "importance": 0,
+     "priority": 0
+    },
+    {
+     "key": "round-005|priority|qwen2.5:1.5b",
+     "round": "round-005",
+     "mode": "priority",
+     "by": "model:qwen2.5:1.5b",
+     "x": 0.6,
+     "y": 0.7,
+     "quadrant": "schedule",
+     "conf": 0.7,
+     "urgency": 20,
+     "importance": 85,
+     "priority": 59
     }
    ],
    "status": {
     "priority": {
      "mode": "priority",
-     "tries": 1,
-     "streak": 1,
-     "state": "open",
+     "tries": 3,
+     "streak": 3,
+     "state": "settled",
      "last": {
-      "round": "round-004",
+      "round": "round-005",
       "quadrant": "deprio",
-      "x": 0.578,
-      "y": -0.298
+      "x": 0.506,
+      "y": -0.336
      }
     },
     "handling": {
@@ -6516,28 +8126,355 @@
  "counts": {
   "priority": {
    "new": 13,
-   "open": 39,
-   "settled": 9,
+   "open": 31,
+   "settled": 17,
    "manual-review": 0,
    "streak": {
-    "0": 6,
-    "1": 27,
-    "2": 6,
-    "3": 9
+    "0": 7,
+    "1": 21,
+    "2": 3,
+    "3": 17
    }
   },
   "handling": {
-   "new": 45,
-   "open": 16,
-   "settled": 0,
-   "manual-review": 0,
+   "new": 44,
+   "open": 14,
+   "settled": 2,
+   "manual-review": 1,
    "streak": {
-    "0": 3,
-    "1": 7,
-    "2": 6,
-    "3": 0
+    "0": 2,
+    "1": 8,
+    "2": 5,
+    "3": 2
    }
   }
  },
- "updatedAt": "2026-10-31T18:50:25.441Z"
+ "updatedAt": "2026-10-31T19:39:12.749Z",
+ "clusters": {
+  "round-005-c002": {
+   "members": {
+    "r003-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 15722
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 3439
+      }
+     ]
+    },
+    "r003-qwen2515b-04": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 2603
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 1971
+      }
+     ]
+    },
+    "r002-llama323b-03": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 10415
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2081
+      }
+     ]
+    },
+    "r002-llama323b-08": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 4765
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1485
+      }
+     ]
+    },
+    "r002-llama323b-09": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2102
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 997
+      }
+     ]
+    },
+    "r002-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2200
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 4417
+      }
+     ]
+    },
+    "r002-qwen2515b-03": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 4684
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 4418
+      }
+     ]
+    },
+    "r002-qwen2515b-06": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1767
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2582
+      }
+     ]
+    }
+   }
+  },
+  "round-005-c001": {
+   "members": {
+    "r004-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 4584
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1783
+      }
+     ]
+    },
+    "r004-qwen2515b-01": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 3167
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": true,
+       "at": "20261031191406-ag68p",
+       "ms": 1170
+      }
+     ]
+    },
+    "r002-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 11881
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1731
+      }
+     ]
+    },
+    "r005-llama323b-01": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1918
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1402
+      }
+     ]
+    },
+    "r005-llama323b-02": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 3168
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 9101
+      }
+     ]
+    },
+    "r005-llama323b-03": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2883
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 2380
+      }
+     ]
+    },
+    "r005-llama323b-04": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1685
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 5851
+      }
+     ]
+    },
+    "r005-llama323b-05": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1880
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 5850
+      }
+     ]
+    },
+    "r005-llama323b-06": {
+     "evals": [
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1618
+      },
+      {
+       "round": "round-005",
+       "by": "human",
+       "belongs": false,
+       "at": "20261031191406-ag68p",
+       "ms": 1503
+      }
+     ]
+    }
+   }
+  }
+ },
+ "clusterCounts": {
+  "members": 17,
+  "settledIn": 0,
+  "settledOut": 0,
+  "open": 17,
+  "streak": {
+   "1": 0,
+   "2": 17,
+   "3": 0
+  }
+ }
 }

@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r006-prio-003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:24:18.613Z",
+ "ms": 8360,
+ "promptSha256": "6dfda4775a0c6508bab19d225cf3ace5a0611b6e37e63fb4609e4fbbc6017c8a",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize tasks with a clear deadline or time-sensitive action.\n* Give higher importance to tasks that directly impact project or business goals.\n* Balance urgency and importance by considering the potential impact of each task on the project timeline and resources.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr003-llama323b-03 | Marketing · DevNews | New Software Engineer Course | Learn the latest software engineering techniques.\nr003-qwen2515b-02 | Collaborator · MyCompany | Meeting Request | We have a meeting scheduled for 10:00 AM on Tuesday. Please confirm your availability.\nr002-qwen2515b-04 | Invoice · TechCorp | Membership Invoice | Please pay the membership invoice by the end of the week.\nr002-qwen2515b-03 | Collaborator · MyProject | Meeting Request: AI Workshop | Please join the AI Workshop on Monday at 10 AM.\nr002-llama323b-08 | Recruiter · Pinewood Talent | Follow-up on Application | We would like to schedule a call to discuss your application.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r003-llama323b-03\",\"urgency\":0,\"importance\":0,\"summary\":\"Learn software engineering techniques\"},{\"id\":\"r003-qwen2515b-02\",\"urgency\":0,\"importance\":0,\"summary\":\"Meeting request, Tuesday\"},{\"id\":\"r002-qwen2515b-04\",\"urgency\":0,\"importance\":0,\"summary\":\"Membership invoice, end of week\"},{\"id\":\"r002-qwen2515b-03\",\"urgency\":0,\"importance\":0,\"summary\":\"AI Workshop, Monday\"},{\"id\":\"r002-llama323b-08\",\"urgency\":0,\"importance\":0,\"summary\":\"Follow-up on application\"}]}",
+ "parseError": null,
+ "evalCount": 152,
+ "promptEvalCount": 438
+}

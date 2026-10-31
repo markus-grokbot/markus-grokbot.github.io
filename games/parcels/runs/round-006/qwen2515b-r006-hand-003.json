@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r006-hand-003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:26:04.435Z",
+ "ms": 3312,
+ "promptSha256": "10c9069edf3f257e9bc5f34899ba33d8c9c40111f3a15391e9420ccfaac5a554",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\np008 | Recruiter · Vinterberg Search | Exciting opportunity!!! (urgent) | I came across your profile and think you'd be a perfect fit for a role I can't name yet.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\np023 | Calendar | Invitation: Sprint review (Tue 10:00) | Organizer asks you to accept or decline. Agenda not attached yet.\nr002-qwen2515b-08 | Job Board · TechJobs | New Job Posting: Full Stack Developer | We are seeking a Full Stack Developer with experience in both frontend and backend.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"p034\",\"manual\":10,\"spend\":50},\n    {\"id\":\"p008\",\"manual\":50,\"spend\":50},\n    {\"id\":\"p013\",\"manual\":20,\"spend\":50},\n    {\"id\":\"p023\",\"manual\":30,\"spend\":50},\n    {\"id\":\"r002-qwen2515b-08\",\"manual\":80,\"spend\":50}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 120,
+ "promptEvalCount": 435
+}

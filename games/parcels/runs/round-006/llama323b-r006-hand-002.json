@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r006-hand-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:24:56.589Z",
+ "ms": 6517,
+ "promptSha256": "4d344d40a6f31136cec021015d9bf99bb865974a24968bcec4db0223e33e709e",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\nr003-qwen2515b-02 | Collaborator · MyCompany | Meeting Request | We have a meeting scheduled for 10:00 AM on Tuesday. Please confirm your availability.\nr002-llama323b-05 | Collaborator · TechCorp | Question about Project Scope | Can you clarify the project scope?\nr002-qwen2515b-06 | Service · MyProject | Service Request: Network Issue | We noticed a network issue with your project. Please check the logs.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p039\",\"manual\":50,\"spend\":30},{\"id\":\"r003-qwen2515b-02\",\"manual\":10,\"spend\":20},{\"id\":\"r002-llama323b-05\",\"manual\":80,\"spend\":40},{\"id\":\"r002-qwen2515b-06\",\"manual\":0,\"spend\":0},{\"id\":\"p028\",\"manual\":0,\"spend\":0}]}",
+ "parseError": null,
+ "evalCount": 96,
+ "promptEvalCount": 388
+}

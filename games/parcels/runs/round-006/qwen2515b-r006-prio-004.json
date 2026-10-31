@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r006-prio-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:25:45.380Z",
+ "ms": 5876,
+ "promptSha256": "5f8ff8c2677827c4306625ce8f582ba5a68094cdf737432ea7fd89ee13a4d518",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize based on the urgency and importance of the task, not the sender's role.\n* Consider the impact of the task on the software engineer's career and project, not just the sender's role.\n* Use a 1-10 scale for urgency, not a 100-1 scale, to better reflect the urgency of the task.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\np037 | Recruiter · Halvsjö Partners | Role in Oslo or Copenhagen? | I have two similar roles. Before I introduce you: which city, and is relocation an option?\nr002-llama323b-03 | Service · TechCorp | System Downtime Notification | Our system is currently experiencing downtime.\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\np024 | Newsletter · Small Models Monthly | Gemma, Qwen and Llama compared on CPU | We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n    {\"id\":\"p010\",\"urgency\":80,\"importance\":70,\"summary\":\"Design decision, urgent and important\"},\n    {\"id\":\"p037\",\"urgency\":50,\"importance\":20,\"summary\":\"Role selection, low urgency, low importance\"},\n    {\"id\":\"r002-llama323b-03\",\"urgency\":70,\"importance\":80,\"summary\":\"System issue, high urgency, high importance\"},\n    {\"id\":\"p014\",\"urgency\":60,\"importance\":90,\"summary\":\"Webinar registration, high urgency, high importance\"},\n    {\"id\":\"p024\",\"urgency\":40,\"importance\":60,\"summary\":\"CPU comparison, low urgency, low importance\"}\n]}",
+ "parseError": null,
+ "evalCount": 175,
+ "promptEvalCount": 516
+}

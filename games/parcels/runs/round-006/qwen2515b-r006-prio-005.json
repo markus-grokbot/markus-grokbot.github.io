@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r006-prio-005",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:25:51.257Z",
+ "ms": 5626,
+ "promptSha256": "8fcdcef6d3291a4e4e96f6ad9aaf14537ab3d83b3eb3685ea426dc11fd80dd65",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize based on the urgency and importance of the task, not the sender's role.\n* Consider the impact of the task on the software engineer's career and project, not just the sender's role.\n* Use a 1-10 scale for urgency, not a 100-1 scale, to better reflect the urgency of the task.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr006-llama323b-01 | Job-Board · TechHub | Job Alert: Senior Software Engineer | A senior software engineer position is available at TechHub.\nr006-llama323b-02 | Code host notifications | CI/PR/Issue Notification | Your pull request has been merged.\nr006-llama323b-03 | Invoice · TechPay | Payment Overdue | Your payment is overdue.\nr006-llama323b-04 | Newsletter · TechUpdate | Newsletter: New Features | Our new features are now available.\nr006-llama323b-05 | Job-Board · TechHub | Job Alert: Junior Software Engineer | A junior software engineer position is available at TechHub.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\": [{\"id\":\"r006-llama323b-01\",\"urgency\":10,\"importance\":80,\"summary\":\"Senior Engineer opportunity, urgent and career-critical\"},{\"id\":\"r006-llama323b-02\",\"urgency\":5,\"importance\":90,\"summary\":\"Pull request merged, noise\"},{\"id\":\"r006-llama323b-03\",\"urgency\":20,\"importance\":60,\"summary\":\"Payment overdue, not urgent\"},{\"id\":\"r006-llama323b-04\",\"urgency\":70,\"importance\":85,\"summary\":\"New features newsletter, career-focused\"},{\"id\":\"r006-llama323b-05\",\"urgency\":30,\"importance\":75,\"summary\":\"Junior Engineer opportunity, career-important\"}]}",
+ "parseError": null,
+ "evalCount": 196,
+ "promptEvalCount": 492
+}

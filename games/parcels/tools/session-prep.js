@@ -16,17 +16,22 @@ async function main() {
   const runDir = path.join(L.ROOT, 'runs', rid, 'session'); fs.mkdirSync(runDir, { recursive: true });
   const P = {}; round.parcels.concat(round.handling ? round.handling.parcels : []).forEach(p => { P[p.id] = L.stripP(p); });
   Object.keys(ledger.parcels).forEach(id => { const e = ledger.parcels[id]; if (!P[id] && e.parcel && e.parcel.subject) { const lp = ST.latestPrio(ledger, id); if (lp.quadrant === 'first' || lp.quadrant === 'schedule') P[id] = e.parcel; } });
+  // carry the previous round's clusters (same ids) so cluster-membership streaks can reach clusterSettleAfter across sessions; members he settled as 'split out' are dropped
+  const prevId = 'round-' + L.pad(round.roundNo - 1) + (SIM ? '-sim' : ''), prevP = path.join(L.ROOT, 'rounds', prevId + '.json'), carried = [];
+  if (fs.existsSync(prevP)) { const pr = L.readJ(prevP); ((pr.session && pr.session.clusters) || []).forEach(c => { const lc = ledger.clusters && ledger.clusters[c.id]; if (!lc) return;
+    const mem = c.members.filter(id => { const ev = lc.members[id] ? lc.members[id].evals : []; const st = ST.memberStreak(ev, ST.cfg(T).batch.clusterSettleAfter); return !(st.settled && st.value === false); });
+    mem.forEach(id => { if (!P[id] && ledger.parcels[id] && ledger.parcels[id].parcel && ledger.parcels[id].parcel.subject) P[id] = ledger.parcels[id].parcel; }); if (pr.session.parcels) pr.session.parcels.forEach(p => { if (!P[p.id] && mem.indexOf(p.id) >= 0) P[p.id] = p; }); const kept = mem.filter(id => P[id]); if (kept.length < 2) return; mem.length = 0; kept.forEach(id => mem.push(id)); carried.push({ id: c.id, label: c.label, rationale: c.rationale, work: c.work, members: mem, proposedBy: c.proposedBy.slice(), carriedFrom: prevId }); }); }
   const ws = Object.keys(P).map(id => P[id]).filter(p => p.subject);
   const prioOf = id => ST.latestPrio(ledger, id).priority;
-  const clusters = [];
+  const clusters = carried.slice();
   for (const m of L.MODELS) {
     const prompt = 'You group a busy software engineer\'s inbox items (job hunting, small open-source game projects) into CLUSTERS of items that relate to each other and could be processed together in one pass (same topic, same counterpart type, or the same kind of work needed). Propose 3 to 6 clusters of 2 to 6 items each; an item may be left out. For each cluster give: label (max 5 words), rationale (max 20 words), work (one word: reply, code, review, admin or read), members (item ids).\nItems (id | sender type | sender | subject | snippet):\n' + ws.map(line).join('\n') + '\nReturn JSON only: {"clusters":[{"label":"...","rationale":"...","work":"reply","members":["id1","id2"]}]}';
     const r = await L.generate(m, prompt, runDir, 'clusters'); const cs = (r.parsed && Array.isArray(r.parsed.clusters) ? r.parsed.clusters : []).map(c => ({ label: String(c.label || '').slice(0, 40), rationale: String(c.rationale || '').slice(0, 160), work: /^(reply|code|review|admin|read)$/.test(c.work) ? c.work : 'review', members: [...new Set((c.members || []).map(String))].filter(id => P[id]) })).filter(c => c.members.length >= 2 && c.label);
     console.log(m, 'proposed', cs.length, 'clusters', r.ms + 'ms');
     cs.forEach(c => { const same = clusters.find(x => jacc(x.members, c.members) >= 0.6); if (same) { if (same.proposedBy.indexOf(m) < 0) same.proposedBy.push(m); same.alt = (same.alt || []).concat([{ model: m, label: c.label, rationale: c.rationale, members: c.members }]); } else clusters.push(Object.assign(c, { proposedBy: [m] })); });
   }
-  clusters.forEach((c, i) => { c.id = rid + '-c' + L.pad(i + 1); c.combinedPriorityNow = Math.round(c.members.reduce((a, id) => a + (prioOf(id) || 0), 0)); c.batchPreview = ST.batchStatus(c, ledger, T); });
-  clusters.sort((a, b) => b.combinedPriorityNow - a.combinedPriorityNow);
+  let nNew = 0; clusters.forEach(c => { if (!c.carriedFrom) c.id = rid + '-c' + L.pad(++nNew); c.combinedPriorityNow = Math.round(c.members.reduce((a, id) => a + (prioOf(id) || 0), 0)); c.batchPreview = ST.batchStatus(c, ledger, T); });
+  clusters.sort((a, b) => (!!b.carriedFrom - !!a.carriedFrom) || b.combinedPriorityNow - a.combinedPriorityNow); console.log('carried', carried.length, 'clusters from', prevId);
   const top = clusters.slice(0, T.session.clustersPerCycle || 3), outputs = {};
   for (const c of top) { const items = c.members.map(id => P[id]); outputs[c.id] = { phrasing: [], codepass: [] };
     for (const m of L.MODELS) {

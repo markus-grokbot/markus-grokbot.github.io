@@ -34,7 +34,7 @@ Object.keys(byBatch).forEach(b => { const c = cl[b] || { id: b }, O = (round.ses
 const BP = path.join(L.ROOT, 'data', SIM ? 'model-scores.sim.json' : 'model-scores.json'), board = L.readJ(BP); board.stageColumns = board.stageColumns || {};
 Object.keys(g).forEach(m => { const h = board.models[m] && board.models[m].history.slice(-1)[0], sc = board.stageColumns[m] = board.stageColumns[m] || {};
   if (h) { sc.priority = h.priority ? h.priority.agreement : h.weightedAgreement; if (h.handling) sc.handling = h.handling.agreement; sc.fromRound = h.round; }
-  const keep = (k, v, n) => { if (v != null) { const o = sc[k + 'Hist'] = (sc[k + 'Hist'] || []).concat([{ log: rel, value: v, n }]); sc[k] = +(o.reduce((a, x) => a + x.value * x.n, 0) / o.reduce((a, x) => a + x.n, 0)).toFixed(3); } };
+  const keep = (k, v, n) => { if (v != null) { const o = sc[k + 'Hist'] = (sc[k + 'Hist'] || []).filter(x => x.log !== rel).concat([{ log: rel, value: v, n }]); sc[k] = +(o.reduce((a, x) => a + x.value * x.n, 0) / o.reduce((a, x) => a + x.n, 0)).toFixed(3); } };
   keep('cluster', g[m].cluster.precision, g[m].cluster.answered); keep('phrasing', g[m].phrasing.winRate, g[m].phrasing.shown); keep('codepass', g[m].codepass.winRate, g[m].codepass.shown); });
 board.stageColumnsNote = 'Per-stage model columns: priority/handling = latest round agreement; cluster = share of its proposed memberships he confirmed; phrasing/codepass = A/B win rate (weighted over session logs).';
 board.sessions = (board.sessions || []).filter(s => s.log !== rel).concat([{ log: rel, round: rid, processedAt: new Date().toISOString(), grades: g, outputs: written }]); L.writeJ(BP, board);

@@ -1,0 +1,959 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": false,
+ "fromRound": "round-005",
+ "toRound": "round-006",
+ "log": "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
+ "startedAt": "2026-10-31T19:21:39.876Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 29,
+   "medianSortMs": 3483,
+   "roundFocus": 100,
+   "ab": 0,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.659,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 16,
+     "authoredClarity": 0.884,
+     "authoredMeanConf": 0.689,
+     "priority": {
+      "graded": 17,
+      "agreement": 0.659,
+      "urgency": 0.614,
+      "importance": 0.723,
+      "meanAbsPriorityError": 32.8,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.687,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "0/0",
+       "his": "80/84",
+       "agreement": 0.18,
+       "weight": 1.032
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.144,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "subject": "Follow-up on Application",
+       "yours": "50/70",
+       "his": "94/100",
+       "agreement": 0.637,
+       "weight": 1.87
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "86/45",
+       "agreement": 0.195,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "86/44",
+       "agreement": 0.207,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "30/30",
+       "his": "73/75",
+       "agreement": 0.558,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "50/20",
+       "his": "88/42",
+       "agreement": 0.652,
+       "weight": 0.814
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "50/30",
+       "his": "68/72",
+       "agreement": 0.688,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "0/0",
+       "his": "25/43",
+       "agreement": 0.713,
+       "weight": 0.648
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "100/0",
+       "his": "54/43",
+       "agreement": 0.559,
+       "weight": 0.149
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "0/0",
+       "his": "80/84",
+       "agreement": 0.18,
+       "weight": 1.032
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.144,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "subject": "Follow-up on Application",
+       "yours": "50/70",
+       "his": "94/100",
+       "agreement": 0.637,
+       "weight": 1.87
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "86/45",
+       "agreement": 0.195,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "86/44",
+       "agreement": 0.207,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "30/30",
+       "his": "73/75",
+       "agreement": 0.558,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "50/20",
+       "his": "88/42",
+       "agreement": 0.652,
+       "weight": 0.814
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "50/30",
+       "his": "68/72",
+       "agreement": 0.688,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "0/0",
+       "his": "25/43",
+       "agreement": 0.713,
+       "weight": 0.648
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "100/0",
+       "his": "54/43",
+       "agreement": 0.559,
+       "weight": 0.149
+      }
+     ],
+     "handling": {
+      "graded": 8,
+      "agreement": 0.557,
+      "manualAxis": 0.675,
+      "spendAxis": 0.442,
+      "sameTier": 0.125,
+      "misses": [
+       {
+        "parcelId": "p011",
+        "yours": "0/0",
+        "his": "67/55",
+        "agreement": 0.359
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "50/30",
+        "his": "3/100",
+        "agreement": 0.41
+       },
+       {
+        "parcelId": "p030",
+        "yours": "0/0",
+        "his": "5/100",
+        "agreement": 0.449
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "50/30",
+        "his": "18/94",
+        "agreement": 0.498
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "10/90",
+        "his": "85/87",
+        "agreement": 0.618
+       },
+       {
+        "parcelId": "p010",
+        "yours": "80/10",
+        "his": "77/73",
+        "agreement": 0.689
+       },
+       {
+        "parcelId": "p039",
+        "yours": "60/40",
+        "his": "84/77",
+        "agreement": 0.704
+       }
+      ]
+     },
+     "scoreWithHandling": 0.654
+    },
+    "qwen2.5:1.5b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.71,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 4,
+     "authoredClarity": 0.936,
+     "authoredMeanConf": 0.637,
+     "priority": {
+      "graded": 17,
+      "agreement": 0.71,
+      "urgency": 0.758,
+      "importance": 0.644,
+      "meanAbsPriorityError": 19.6,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.738,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r004-llama323b-02",
+       "subject": "New Product Launch",
+       "yours": "80/100",
+       "his": "7/35",
+       "agreement": 0.287,
+       "weight": 0.885
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "5/60",
+       "his": "13/3",
+       "agreement": 0.649,
+       "weight": 1.692
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "10/80",
+       "his": "11/10",
+       "agreement": 0.641,
+       "weight": 1.584
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "20/90",
+       "his": "86/45",
+       "agreement": 0.368,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "30/80",
+       "his": "86/44",
+       "agreement": 0.474,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "50/80",
+       "his": "91/45",
+       "agreement": 0.597,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "80/40",
+       "his": "69/78",
+       "agreement": 0.728,
+       "weight": 0.937
+      },
+      {
+       "parcelId": "r004-qwen2515b-01",
+       "subject": "Project Update",
+       "yours": "20/85",
+       "his": "19/24",
+       "agreement": 0.717,
+       "weight": 0.842
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "70/20",
+       "his": "68/72",
+       "agreement": 0.7,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "80/10",
+       "his": "54/43",
+       "agreement": 0.695,
+       "weight": 0.149
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r004-llama323b-02",
+       "subject": "New Product Launch",
+       "yours": "80/100",
+       "his": "7/35",
+       "agreement": 0.287,
+       "weight": 0.885
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "5/60",
+       "his": "13/3",
+       "agreement": 0.649,
+       "weight": 1.692
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "10/80",
+       "his": "11/10",
+       "agreement": 0.641,
+       "weight": 1.584
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "20/90",
+       "his": "86/45",
+       "agreement": 0.368,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "30/80",
+       "his": "86/44",
+       "agreement": 0.474,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "50/80",
+       "his": "91/45",
+       "agreement": 0.597,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "80/40",
+       "his": "69/78",
+       "agreement": 0.728,
+       "weight": 0.937
+      },
+      {
+       "parcelId": "r004-qwen2515b-01",
+       "subject": "Project Update",
+       "yours": "20/85",
+       "his": "19/24",
+       "agreement": 0.717,
+       "weight": 0.842
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "70/20",
+       "his": "68/72",
+       "agreement": 0.7,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "80/10",
+       "his": "54/43",
+       "agreement": 0.695,
+       "weight": 0.149
+      }
+     ],
+     "handling": {
+      "graded": 11,
+      "agreement": 0.601,
+      "manualAxis": 0.631,
+      "spendAxis": 0.572,
+      "sameTier": 0.091,
+      "misses": [
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "10/50",
+        "his": "98/95",
+        "agreement": 0.329
+       },
+       {
+        "parcelId": "p030",
+        "yours": "80/40",
+        "his": "5/100",
+        "agreement": 0.33
+       },
+       {
+        "parcelId": "r003-llama323b-02",
+        "yours": "50/20",
+        "his": "19/85",
+        "agreement": 0.507
+       },
+       {
+        "parcelId": "p037",
+        "yours": "60/20",
+        "his": "28/74",
+        "agreement": 0.565
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "50/40",
+        "his": "85/87",
+        "agreement": 0.593
+       },
+       {
+        "parcelId": "p026",
+        "yours": "80/90",
+        "his": "31/72",
+        "agreement": 0.674
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "10/50",
+        "his": "3/100",
+        "agreement": 0.707
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "10/50",
+        "his": "18/94",
+        "agreement": 0.713
+       }
+      ]
+     },
+     "scoreWithHandling": 0.704
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 1,
+    "valid": 5,
+    "rejected": 6,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are looking for a junior software engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · TechSupport",
+       "subject": "Server Maintenance",
+       "snippet": "Our servers are currently undergoing maintenance.",
+       "badge": "server maintenance",
+       "urgency": 0,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechNews",
+       "subject": "New Product Launch",
+       "snippet": "Our new product is now available.",
+       "badge": "marketing",
+       "urgency": 40,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · TechPartners",
+       "subject": "Question about Project Deadline",
+       "snippet": "Can you confirm the project deadline?",
+       "badge": "collaborator question",
+       "urgency": 60,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Follow-up on Application",
+       "snippet": "We need to follow up on your application.",
+       "badge": "follow-up",
+       "urgency": 80,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · TechSupport",
+       "subject": "System Downtime Notification",
+       "snippet": "Our systems are currently down.",
+       "badge": "system downtime",
+       "urgency": 100,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize tasks with a clear deadline or time-sensitive action.",
+     "Give higher importance to tasks that directly impact project or business goals.",
+     "Balance urgency and importance by considering the potential impact of each task on the project timeline and resources."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 0,
+    "rejected": 20,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Software Engineer · XYZ Company",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are looking for a Junior Software Engineer to join our team. Apply now!",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 25,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host Notifications",
+       "subject": "System Downtime Notification",
+       "snippet": "We're experiencing a system downtime. Please check your system and restart if necessary.",
+       "badge": "system downtime",
+       "urgency": 80,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service Notice",
+       "subject": "Invoice 9876 - Payment Due",
+       "snippet": "Your invoice for $1,200 is due on the 15th of this month. Please make the payment by the 20th.",
+       "badge": "invoice",
+       "urgency": 30,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · ABC Company",
+       "subject": "Special Offer",
+       "snippet": "Get 10% off on all our products this week!",
+       "badge": "marketing offer",
+       "urgency": 10,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · ABC Company",
+       "subject": "Role in Oslo or Copenhagen?",
+       "snippet": "I'm interested in working in either Oslo or Copenhagen. Do you have any experience in both locations?",
+       "badge": "collaborator question",
+       "urgency": 5,
+       "importance": 5,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · 9876",
+       "subject": "Invoice 9876 - Payment Due",
+       "snippet": "Your invoice for $1,200 is due on the 15th of this month. Please make the payment by the 20th.",
+       "badge": "invoice",
+       "urgency": 30,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · ABC Company",
+       "subject": "New Product Launch",
+       "snippet": "We're excited to announce our new product launch!",
+       "badge": "newsletter",
+       "urgency": 50,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Software Engineer · XYZ Company",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are looking for a Junior Software Engineer to join our team. Apply now!",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 25,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · ABC Company",
+       "subject": "Special Offer",
+       "snippet": "Get 10% off on all our products this week!",
+       "badge": "marketing offer",
+       "urgency": 10,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Software Engineer · TechRecruiters",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are looking for a Junior Software Engineer to join our team. Apply now!",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 25,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host Notifications",
+       "subject": "System Downtime Notification",
+       "snippet": "There is a system downtime for the software we use. Please check the system status.",
+       "badge": "system downtime",
+       "urgency": 80,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service Notice",
+       "subject": "Invoice 9876 - Payment Due",
+       "snippet": "Your invoice for $1234 is due on 14th of this month. Please make the payment immediately.",
+       "badge": "invoice",
+       "urgency": 20,
+       "importance": 5,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechMarketing",
+       "subject": "Special Offer",
+       "snippet": "We have a new offer for our software. Sign up now to get 10% off your next purchase.",
+       "badge": "marketing offer",
+       "urgency": 10,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · SoftwareDev",
+       "subject": "Role in Oslo or Copenhagen?",
+       "snippet": "I am interested in working in either Oslo or Copenhagen. Can you provide more information on the roles available?",
+       "badge": "collaborator question",
+       "urgency": 50,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · TechInvoice",
+       "subject": "Invoice 1234 - Payment Due",
+       "snippet": "Your invoice for $3456 is due on 21st of this month. Please make the payment immediately.",
+       "badge": "invoice",
+       "urgency": 30,
+       "importance": 15,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · TechNews",
+       "subject": "New Product Launch",
+       "snippet": "We are excited to announce our new product launch on the 25th of this month. Don't miss out!",
+       "badge": "newsletter",
+       "urgency": 50,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Software Engineer · TechRecruiters",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are looking for a Junior Software Engineer to join our team. Apply now!",
+       "badge": "job posting",
+       "urgency": 60,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechMarketing",
+       "subject": "Special Offer",
+       "snippet": "We have a new offer for our software. Sign up now to get 10% off your next purchase.",
+       "badge": "marketing offer",
+       "urgency": 15,
+       "importance": 35,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize based on the urgency and importance of the task, not the sender's role.",
+     "Consider the impact of the task on the software engineer's career and project, not just the sender's role.",
+     "Use a 1-10 scale for urgency, not a 100-1 scale, to better reflect the urgency of the task."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 5,
+    "ms": 46974,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 76642
+   },
+   "qwen2.5:1.5b": {
+    "calls": 6,
+    "ms": 43998,
+    "invalid": 1,
+    "retries": 1,
+    "wallMs": 56229
+   }
+  }
+ },
+ "roundWeight": 1,
+ "note": "Full weight. First chained session (priority+handling levels split from one session log).",
+ "endedAt": "2026-10-31T19:26:09.117Z",
+ "wallMs": 269241,
+ "output": {
+  "round": "rounds/round-006.json",
+  "parcels": 25,
+  "carried": 20,
+  "handling": 16,
+  "ab": 3
+ }
+}

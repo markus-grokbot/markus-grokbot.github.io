@@ -17,8 +17,13 @@ const h = s => parseInt(crypto.createHash('md5').update(s).digest('hex').slice(0
   if (!logPath) { const dirs = SIM ? [path.join(L.REPO, 'logs/sim')] : [path.join(L.REPO, 'logs/human'), path.join(L.ROOT, 'logs/human')]; const c = [].concat(...dirs.filter(d => fs.existsSync(d)).map(dir => fs.readdirSync(dir).filter(f => f.endsWith('.json')).map(f => path.join(dir, f)))).filter(f => { try { const j = L.readJ(f); return j.game && j.game.id === 'parcels' && j.summary && j.summary.parcels && j.summary.parcels.roundId === rid; } catch (e) { return false; } }).sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs); logPath = c[0]; }
   if (!logPath) throw new Error('no ' + (SIM ? 'sim' : 'human') + ' parcels log for ' + rid + ' in logs/' + (SIM ? 'sim' : 'human') + '/');
   // --log a.json[,b.json]: priority/bins log and optionally the handling-mode log of the same round
-  const logPaths = String(logPath).split(',').map(f => path.resolve(L.REPO, f)), logsAll = logPaths.map(f => L.readJ(f)), hIdx = logsAll.findIndex(l => L.logMode(l) === 'handling');
+  const logPaths = String(logPath).split(',').map(f => path.resolve(L.REPO, f)), logsAll = logPaths.map(f => L.readJ(f)); let hIdx = logsAll.findIndex(l => L.logMode(l) === 'handling');
   if (logsAll.some(l => l.summary && l.summary.parcels && l.summary.parcels.mode === 'session')) { console.error('session log: run tools/session-process.js --log <file> first (ledger, clusters, outputs, per-stage columns), then next-round with --log <file> for priority/handling grading.'); if (!process.argv.includes('--session-ok')) process.exit(2); }
+  // a session log holds both modes: split it into a priority view and a handling view by per-level ext.parcels.mode (warm-up counts as priority)
+  for (let i = logsAll.length - 1; i >= 0; i--) { const l = logsAll[i]; if (!(l.summary && l.summary.parcels && l.summary.parcels.mode === 'session')) continue;
+    const view = m => { const v = JSON.parse(JSON.stringify(l)); v.levels = l.levels.filter(x => x.ext && x.ext.parcels && x.ext.parcels.mode === m); v.summary.parcels = Object.assign({}, l.summary.parcels, { mode: m, fromSession: true }); return v; };
+    logsAll.splice(i, 1, view('priority'), view('handling')); logPaths.splice(i, 1, logPaths[i], logPaths[i]); }
+  hIdx = logsAll.findIndex(l => L.logMode(l) === 'handling');
   const hLog = hIdx >= 0 ? logsAll[hIdx] : null, pIdx = logsAll.findIndex(l => L.logMode(l) !== 'handling'); if (pIdx < 0) throw new Error('need a priority (or bins) log');
   logPath = logPaths[pIdx]; const log = logsAll[pIdx], relLog = path.relative(L.REPO, logPath), relLogs = logPaths.map(f => path.relative(L.REPO, f));
   if (hLog && hLog.summary.parcels.roundId !== rid) throw new Error('handling log is for ' + hLog.summary.parcels.roundId);

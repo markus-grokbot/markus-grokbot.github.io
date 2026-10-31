@@ -761,16 +761,259 @@
       ]
      },
      "scoreWithHandling": 0.649
+    },
+    {
+     "round": "round-005",
+     "roundWeight": 1,
+     "note": "Full weight. First chained session (priority+handling levels split from one session log).",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.659,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 16,
+     "authoredClarity": 0.884,
+     "authoredMeanConf": 0.689,
+     "priority": {
+      "graded": 17,
+      "agreement": 0.659,
+      "urgency": 0.614,
+      "importance": 0.723,
+      "meanAbsPriorityError": 32.8,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.687,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "0/0",
+       "his": "80/84",
+       "agreement": 0.18,
+       "weight": 1.032
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.144,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "subject": "Follow-up on Application",
+       "yours": "50/70",
+       "his": "94/100",
+       "agreement": 0.637,
+       "weight": 1.87
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "86/45",
+       "agreement": 0.195,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "86/44",
+       "agreement": 0.207,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "30/30",
+       "his": "73/75",
+       "agreement": 0.558,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "50/20",
+       "his": "88/42",
+       "agreement": 0.652,
+       "weight": 0.814
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "50/30",
+       "his": "68/72",
+       "agreement": 0.688,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "0/0",
+       "his": "25/43",
+       "agreement": 0.713,
+       "weight": 0.648
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "100/0",
+       "his": "54/43",
+       "agreement": 0.559,
+       "weight": 0.149
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "0/0",
+       "his": "80/84",
+       "agreement": 0.18,
+       "weight": 1.032
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.144,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "subject": "Follow-up on Application",
+       "yours": "50/70",
+       "his": "94/100",
+       "agreement": 0.637,
+       "weight": 1.87
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "0/0",
+       "his": "86/45",
+       "agreement": 0.195,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/0",
+       "his": "86/44",
+       "agreement": 0.207,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "30/30",
+       "his": "73/75",
+       "agreement": 0.558,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "50/20",
+       "his": "88/42",
+       "agreement": 0.652,
+       "weight": 0.814
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "50/30",
+       "his": "68/72",
+       "agreement": 0.688,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "0/0",
+       "his": "25/43",
+       "agreement": 0.713,
+       "weight": 0.648
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "100/0",
+       "his": "54/43",
+       "agreement": 0.559,
+       "weight": 0.149
+      }
+     ],
+     "handling": {
+      "graded": 8,
+      "agreement": 0.557,
+      "manualAxis": 0.675,
+      "spendAxis": 0.442,
+      "sameTier": 0.125,
+      "misses": [
+       {
+        "parcelId": "p011",
+        "yours": "0/0",
+        "his": "67/55",
+        "agreement": 0.359
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "50/30",
+        "his": "3/100",
+        "agreement": 0.41
+       },
+       {
+        "parcelId": "p030",
+        "yours": "0/0",
+        "his": "5/100",
+        "agreement": 0.449
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "50/30",
+        "his": "18/94",
+        "agreement": 0.498
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "10/90",
+        "his": "85/87",
+        "agreement": 0.618
+       },
+       {
+        "parcelId": "p010",
+        "yours": "80/10",
+        "his": "77/73",
+        "agreement": 0.689
+       },
+       {
+        "parcelId": "p039",
+        "yours": "60/40",
+        "his": "84/77",
+        "agreement": 0.704
+       }
+      ]
+     },
+     "scoreWithHandling": 0.654
     }
    ],
    "latest": {
-    "round": "round-004",
-    "score": 0.692,
-    "weightedAgreement": 0.567,
-    "priorityAgreement": 0.567
+    "round": "round-005",
+    "score": 0.687,
+    "weightedAgreement": 0.659,
+    "priorityAgreement": 0.659
    },
-   "cumulative": 0.521,
-   "trend": 0.073
+   "cumulative": 0.558,
+   "trend": -0.005
   },
   "qwen2.5:1.5b": {
    "history": [
@@ -1528,16 +1771,265 @@
       ]
      },
      "scoreWithHandling": 0.53
+    },
+    {
+     "round": "round-005",
+     "roundWeight": 1,
+     "note": "Full weight. First chained session (priority+handling levels split from one session log).",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.71,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 4,
+     "authoredClarity": 0.936,
+     "authoredMeanConf": 0.637,
+     "priority": {
+      "graded": 17,
+      "agreement": 0.71,
+      "urgency": 0.758,
+      "importance": 0.644,
+      "meanAbsPriorityError": 19.6,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.738,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r004-llama323b-02",
+       "subject": "New Product Launch",
+       "yours": "80/100",
+       "his": "7/35",
+       "agreement": 0.287,
+       "weight": 0.885
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "5/60",
+       "his": "13/3",
+       "agreement": 0.649,
+       "weight": 1.692
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "10/80",
+       "his": "11/10",
+       "agreement": 0.641,
+       "weight": 1.584
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "20/90",
+       "his": "86/45",
+       "agreement": 0.368,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "30/80",
+       "his": "86/44",
+       "agreement": 0.474,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "50/80",
+       "his": "91/45",
+       "agreement": 0.597,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "80/40",
+       "his": "69/78",
+       "agreement": 0.728,
+       "weight": 0.937
+      },
+      {
+       "parcelId": "r004-qwen2515b-01",
+       "subject": "Project Update",
+       "yours": "20/85",
+       "his": "19/24",
+       "agreement": 0.717,
+       "weight": 0.842
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "70/20",
+       "his": "68/72",
+       "agreement": 0.7,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "80/10",
+       "his": "54/43",
+       "agreement": 0.695,
+       "weight": 0.149
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r004-llama323b-02",
+       "subject": "New Product Launch",
+       "yours": "80/100",
+       "his": "7/35",
+       "agreement": 0.287,
+       "weight": 0.885
+      },
+      {
+       "parcelId": "r004-llama323b-04",
+       "subject": "Special Offer",
+       "yours": "5/60",
+       "his": "13/3",
+       "agreement": 0.649,
+       "weight": 1.692
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "subject": "New Product Launch: Get Ready for the Future",
+       "yours": "10/80",
+       "his": "11/10",
+       "agreement": 0.641,
+       "weight": 1.584
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "20/90",
+       "his": "86/45",
+       "agreement": 0.368,
+       "weight": 0.822
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "30/80",
+       "his": "86/44",
+       "agreement": 0.474,
+       "weight": 0.834
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "50/80",
+       "his": "91/45",
+       "agreement": 0.597,
+       "weight": 0.928
+      },
+      {
+       "parcelId": "p037",
+       "subject": "Role in Oslo or Copenhagen?",
+       "yours": "80/40",
+       "his": "69/78",
+       "agreement": 0.728,
+       "weight": 0.937
+      },
+      {
+       "parcelId": "r004-qwen2515b-01",
+       "subject": "Project Update",
+       "yours": "20/85",
+       "his": "19/24",
+       "agreement": 0.717,
+       "weight": 0.842
+      },
+      {
+       "parcelId": "r004-llama323b-01",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "yours": "70/20",
+       "his": "68/72",
+       "agreement": 0.7,
+       "weight": 0.792
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "subject": "System Downtime Notification",
+       "yours": "80/10",
+       "his": "54/43",
+       "agreement": 0.695,
+       "weight": 0.149
+      }
+     ],
+     "handling": {
+      "graded": 11,
+      "agreement": 0.601,
+      "manualAxis": 0.631,
+      "spendAxis": 0.572,
+      "sameTier": 0.091,
+      "misses": [
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "10/50",
+        "his": "98/95",
+        "agreement": 0.329
+       },
+       {
+        "parcelId": "p030",
+        "yours": "80/40",
+        "his": "5/100",
+        "agreement": 0.33
+       },
+       {
+        "parcelId": "r003-llama323b-02",
+        "yours": "50/20",
+        "his": "19/85",
+        "agreement": 0.507
+       },
+       {
+        "parcelId": "p037",
+        "yours": "60/20",
+        "his": "28/74",
+        "agreement": 0.565
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "50/40",
+        "his": "85/87",
+        "agreement": 0.593
+       },
+       {
+        "parcelId": "p026",
+        "yours": "80/90",
+        "his": "31/72",
+        "agreement": 0.674
+       },
+       {
+        "parcelId": "r002-llama323b-08",
+        "yours": "10/50",
+        "his": "3/100",
+        "agreement": 0.707
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "10/50",
+        "his": "18/94",
+        "agreement": 0.713
+       }
+      ]
+     },
+     "scoreWithHandling": 0.704
     }
    ],
    "latest": {
-    "round": "round-004",
-    "score": 0.532,
-    "weightedAgreement": 0.624,
-    "priorityAgreement": 0.624
+    "round": "round-005",
+    "score": 0.738,
+    "weightedAgreement": 0.71,
+    "priorityAgreement": 0.71
    },
-   "cumulative": 0.502,
-   "trend": -0.07
+   "cumulative": 0.554,
+   "trend": 0.206
   }
  },
  "rounds": [
@@ -1584,11 +2076,90 @@
    "decisions": 34,
    "ab": 2,
    "next": "round-005"
+  },
+  {
+   "round": "round-005",
+   "log": "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
+   "logs": [
+    "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
+    "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json"
+   ],
+   "roundWeight": 1,
+   "note": "Full weight. First chained session (priority+handling levels split from one session log).",
+   "gradedAt": "2026-10-31T19:21:39.887Z",
+   "decisions": 29,
+   "ab": 0,
+   "next": "round-006"
   }
  ],
- "updatedAt": "2026-10-31T18:50:25.435Z",
+ "updatedAt": "2026-10-31T19:21:39.887Z",
  "ranking": [
-  "llama3.2:3b",
-  "qwen2.5:1.5b"
+  "qwen2.5:1.5b",
+  "llama3.2:3b"
+ ],
+ "stageColumns": {
+  "llama3.2:3b": {
+   "priority": 0.659,
+   "handling": 0.557,
+   "fromRound": "round-005"
+  },
+  "qwen2.5:1.5b": {
+   "priority": 0.71,
+   "handling": 0.601,
+   "fromRound": "round-005",
+   "clusterHist": [
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
+     "value": 0.176,
+     "n": 34
+    }
+   ],
+   "cluster": 0.176
+  }
+ },
+ "stageColumnsNote": "Per-stage model columns: priority/handling = latest round agreement; cluster = share of its proposed memberships he confirmed; phrasing/codepass = A/B win rate (weighted over session logs).",
+ "sessions": [
+  {
+   "log": "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
+   "round": "round-005",
+   "processedAt": "2026-10-31T19:39:12.785Z",
+   "grades": {
+    "llama3.2:3b": {
+     "cluster": {
+      "answered": 0,
+      "confirmed": 0,
+      "precision": null
+     },
+     "phrasing": {
+      "shown": 0,
+      "wins": 0,
+      "winRate": null
+     },
+     "codepass": {
+      "shown": 0,
+      "wins": 0,
+      "winRate": null
+     }
+    },
+    "qwen2.5:1.5b": {
+     "cluster": {
+      "answered": 34,
+      "confirmed": 6,
+      "precision": 0.176
+     },
+     "phrasing": {
+      "shown": 0,
+      "wins": 0,
+      "winRate": null
+     },
+     "codepass": {
+      "shown": 0,
+      "wins": 0,
+      "winRate": null
+     }
+    }
+   },
+   "outputs": []
+  }
  ]
 }

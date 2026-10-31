@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r006-hand-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T19:25:56.883Z",
+ "ms": 3724,
+ "promptSha256": "f9cce7be79b74358e3527ef643bc2217863dd23b6086c99d9dd8bd4075906e53",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\nr002-qwen2515b-07 | Recruiter · Pinewood Talent | Re: Frontend role, follow-up | Thanks for applying. Are you available for an interview on Friday?\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\np030 | Recruiter · Northlake Talent | Interview confirmed: Thu 13:00 | Calendar invite sent. The panel is two engineers and a product lead.\nr003-llama323b-02 | Collaborator · DevTeam | Question about project deadline | Can we discuss the project deadline?\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"r002-qwen2515b-07\",\"manual\":10,\"spend\":50},\n    {\"id\":\"p010\",\"manual\":50,\"spend\":70},\n    {\"id\":\"p030\",\"manual\":80,\"spend\":90},\n    {\"id\":\"r003-llama323b-02\",\"manual\":30,\"spend\":40},\n    {\"id\":\"p011\",\"manual\":90,\"spend\":80}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 130,
+ "promptEvalCount": 411
+}
