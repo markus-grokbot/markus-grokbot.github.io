@@ -1,0 +1,108 @@
+{
+ "schema": "parcels-queue",
+ "version": "1.0.0",
+ "sim": false,
+ "status": "assessment/plan only: nothing executes; not wired to the real night routines",
+ "builtAt": "2026-10-31T19:55:12.491Z",
+ "round": "round-006",
+ "rule": "lanes: any cluster with >= minMembers confirmed members unlocks; lane high if settled high-priority share >= minSettledHighShare AND combined priority >= combinedPriorityThreshold, else lane low",
+ "lanes": {
+  "high": {
+   "label": "High lane",
+   "queue": "day",
+   "precedence": 1,
+   "allowedTiers": [
+    "ollama",
+    "opencode",
+    "codex",
+    "grokbuild"
+   ],
+   "budgetPool": 0.9,
+   "note": "Existing handling tiers allowed (local Ollama, OpenCode free, Codex, Grok Build)."
+  },
+  "low": {
+   "label": "Low lane · night queue, free tools",
+   "queue": "night",
+   "precedence": 99,
+   "allowedTiers": [
+    "ollama",
+    "opencode"
+   ],
+   "budgetPool": 0,
+   "freeOnly": true,
+   "note": "Lowest priority: free tools only (local Ollama / free models; no Codex, Grok Build or paid tiers). Processed only when the night queue has no higher-priority work left."
+  }
+ },
+ "budgetNote": "budgetShare = share of the paid/automated budget pool (high lane only, split by combined priority). Low lane spends no paid budget; freeComputeShare splits free night capacity by combined priority.",
+ "entries": [
+  {
+   "batch": "round-005-c002",
+   "label": "Invoice and Payment",
+   "work": "reply",
+   "members": 8,
+   "status": "pending",
+   "lane": "low",
+   "confirmed": 0,
+   "pendingConfirmations": [
+    {
+     "parcelId": "r003-qwen2515b-01",
+     "streak": 2
+    },
+    {
+     "parcelId": "r003-qwen2515b-04",
+     "streak": 2
+    }
+   ],
+   "combinedPriority": 122,
+   "settledHighShare": 0,
+   "why": [
+    "unlocks after one more consistent \"belongs\" answer for 2 member(s)"
+   ],
+   "highLaneWhy": [
+    "settled high-priority share 0% < 50%",
+    "combined priority 122 < 140"
+   ],
+   "outputs": [],
+   "position": 1,
+   "queue": "night",
+   "precedence": 99,
+   "allowedTiers": [
+    "ollama",
+    "opencode"
+   ],
+   "freeOnly": true,
+   "budgetShare": 0,
+   "freeComputeShare": 1,
+   "runWhen": "night queue, only when it has no higher-priority work left"
+  },
+  {
+   "batch": "round-005-c001",
+   "label": "Project Updates",
+   "work": "reply",
+   "members": 9,
+   "status": "pending",
+   "lane": null,
+   "confirmed": 0,
+   "pendingConfirmations": [
+    {
+     "parcelId": "r004-qwen2515b-01",
+     "streak": 2
+    }
+   ],
+   "combinedPriority": 30,
+   "settledHighShare": 0,
+   "why": [
+    "needs 2 confirmed members (has 0)"
+   ],
+   "highLaneWhy": [
+    "settled high-priority share 0% < 50%",
+    "combined priority 30 < 140"
+   ],
+   "outputs": [],
+   "position": 2,
+   "queue": null,
+   "allowedTiers": [],
+   "budgetShare": 0
+  }
+ ]
+}

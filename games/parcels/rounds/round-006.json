@@ -1284,7 +1284,35 @@
      "schedule"
     ],
     "combinedPriorityThreshold": 140,
-    "clusterSettleAfter": 3
+    "clusterSettleAfter": 3,
+    "unlock": "lanes: any cluster with >= minMembers confirmed members unlocks; lane high if settled high-priority share >= minSettledHighShare AND combined priority >= combinedPriorityThreshold, else lane low",
+    "lanes": {
+     "high": {
+      "label": "High lane",
+      "queue": "day",
+      "precedence": 1,
+      "allowedTiers": [
+       "ollama",
+       "opencode",
+       "codex",
+       "grokbuild"
+      ],
+      "budgetPool": 0.9,
+      "note": "Existing handling tiers allowed (local Ollama, OpenCode free, Codex, Grok Build)."
+     },
+     "low": {
+      "label": "Low lane · night queue, free tools",
+      "queue": "night",
+      "precedence": 99,
+      "allowedTiers": [
+       "ollama",
+       "opencode"
+      ],
+      "budgetPool": 0,
+      "freeOnly": true,
+      "note": "Lowest priority: free tools only (local Ollama / free models; no Codex, Grok Build or paid tiers). Processed only when the night queue has no higher-priority work left."
+     }
+    }
    },
    "outputs": {
     "phrasingPairs": 2,

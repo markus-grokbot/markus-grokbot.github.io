@@ -9,9 +9,10 @@ flowchart TD
     P1[Priority<br/>unsettled parcels] --> H1[Handling<br/>Handle first / Schedule ones] --> K1[Cluster<br/>Belongs? / merge?]
   end
   K1 -->|more cycles, not all settled| P1
-  K1 --> T{Batch threshold?<br/>≥2 confirmed members<br/>≥50% settled high-priority<br/>combined priority ≥140}
-  T -->|unlocked| O1[Output A/B: reply phrasing<br/>tone profile]
-  T -->|unlocked + code work| O2[Output A/B: code-pass plan]
+  K1 --> T{≥2 confirmed members?<br/>lane: high if ≥50% settled high<br/>and combined ≥140, else low}
+  T -->|high lane| O1[Output A/B: reply phrasing<br/>tone profile]
+  T -->|low lane: night, free tools| O1
+  T -->|code work| O2[Output A/B: code-pass plan]
   T -->|locked| L[🔒 reasons shown]
   O1 --> S[Summary: stages, ledger before/after, batches, outputs]
   O2 --> S
@@ -19,6 +20,7 @@ flowchart TD
   S --> X[session log → tools/session-process.js]
   X --> LG[ledger: priority, handling, cluster memberships]
   X --> GR[model grades per stage → leaderboard stageColumns]
+  X --> Q[outputs/queue.json<br/>high lane, then night/free-only]
   X --> OUT[outputs/&lt;batch&gt;/phrasing.json · codepass.json<br/>plans only: nothing sent or executed]
 ```
 
@@ -38,7 +40,10 @@ naming it in `tuning.json → session.chain`.
    per-stage columns in `data/model-scores.json → stageColumns`. Then next-round for the following round.
    `--sim` writes only `*.sim.json` and `outputs/sim/`.
 
-## Thresholds (`tuning.json → session.batch`)
-A cluster becomes a batch when ≥ `minMembers` (2) members are confirmed, ≥ `minSettledHighShare` (50 %) of them are settled in
-Handle first/Schedule in the priority ledger, and their combined priority ≥ `combinedPriorityThreshold` (140). A SIM round can carry
-`session.seededUnlock` with lowered thresholds (share 0, combined 60) to demonstrate the unlock path; it is labelled SIM everywhere.
+## Unlock and lanes (`tuning.json → session.batch`)
+A cluster becomes a batch once ≥ `minMembers` (2) members are confirmed (3 consistent answers, or confirmed this session). Its lane:
+**high** if ≥ `minSettledHighShare` (50 %) of confirmed members are settled in Handle first/Schedule and combined priority ≥
+`combinedPriorityThreshold` (140), existing tiers allowed; otherwise **low**: night queue, free tools only (local Ollama / OpenCode
+free), lowest precedence, processed only when higher night work runs out. Low-lane batches still get phrasing picks (marked 🌙) and
+code plans filtered to free-tier steps. The ordered plan is `outputs/queue.json` (see outputs/QUEUE.md); nothing executes.
+A SIM round can carry `session.seededUnlock` with lowered thresholds to demo the high lane; it is labelled SIM everywhere.

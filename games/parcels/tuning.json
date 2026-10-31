@@ -3,20 +3,69 @@
  "version": "1.0.0",
  "note": "Session-mode tuning (?mode=session). Read by the page (fetch) and by tools/next-round.js + sim. Change here, not in code.",
  "session": {
-  "chain": ["priority", "handling", "cluster"],
+  "chain": [
+   "priority",
+   "handling",
+   "cluster"
+  ],
   "cycles": 2,
   "stopWhenSettled": true,
-  "warmup": { "durationMs": 45000, "limitMs": 7000, "speed": 0.8, "mode": "priority", "use": "settled-first" },
-  "stageWave": { "durationMs": 40000, "limitMs": 5600, "speed": 1 },
+  "warmup": {
+   "durationMs": 45000,
+   "limitMs": 7000,
+   "speed": 0.8,
+   "mode": "priority",
+   "use": "settled-first"
+  },
+  "stageWave": {
+   "durationMs": 40000,
+   "limitMs": 5600,
+   "speed": 1
+  },
   "cycleSpeedUp": 0.1,
   "clustersPerCycle": 3,
   "batch": {
    "minMembers": 2,
    "minSettledHighShare": 0.5,
-   "highQuadrants": ["first", "schedule"],
+   "highQuadrants": [
+    "first",
+    "schedule"
+   ],
    "combinedPriorityThreshold": 140,
-   "clusterSettleAfter": 3
+   "clusterSettleAfter": 3,
+   "unlock": "lanes: any cluster with >= minMembers confirmed members unlocks; lane high if settled high-priority share >= minSettledHighShare AND combined priority >= combinedPriorityThreshold, else lane low",
+   "lanes": {
+    "high": {
+     "label": "High lane",
+     "queue": "day",
+     "precedence": 1,
+     "allowedTiers": [
+      "ollama",
+      "opencode",
+      "codex",
+      "grokbuild"
+     ],
+     "budgetPool": 0.9,
+     "note": "Existing handling tiers allowed (local Ollama, OpenCode free, Codex, Grok Build)."
+    },
+    "low": {
+     "label": "Low lane · night queue, free tools",
+     "queue": "night",
+     "precedence": 99,
+     "allowedTiers": [
+      "ollama",
+      "opencode"
+     ],
+     "budgetPool": 0,
+     "freeOnly": true,
+     "note": "Lowest priority: free tools only (local Ollama / free models; no Codex, Grok Build or paid tiers). Processed only when the night queue has no higher-priority work left."
+    }
+   }
   },
-  "outputs": { "phrasingPairs": 2, "codepassPairs": 1, "maxBatchesPerSession": 2 }
+  "outputs": {
+   "phrasingPairs": 2,
+   "codepassPairs": 1,
+   "maxBatchesPerSession": 2
+  }
  }
 }

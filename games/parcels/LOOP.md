@@ -147,3 +147,5 @@ Grading with both logs: `node tools/next-round.js --round round-004 --log <prior
 `?mode=session`: warm-up → (priority → handling → cluster) × cycles → threshold → output A/B (reply phrasing, code-pass plan) → summary.
 Prep with `tools/session-prep.js --round <id>`, process the log with `tools/session-process.js --log <file>` (next-round refuses a
 session log until that's done; pass `--session-ok` to grade its priority/handling levels too). Full description and flow: SESSION.md.
+
+Batch lanes (Markus, 2026-10-31): any cluster with ≥ 2 confirmed members unlocks; high lane (≥ 50 % settled high + combined ≥ 140, existing tiers) or low lane (night queue, free tools only, lowest precedence). `tools/queue.js` writes the plan-only `outputs/queue.json`; see outputs/QUEUE.md.
