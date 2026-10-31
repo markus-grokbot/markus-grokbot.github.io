@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r004-prio-005",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:26:00.794Z",
+ "ms": 5187,
+ "promptSha256": "4a2d11e0001fe644a809949c44c4d08ceee9b9e8981907c95237f1d697027646",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize based on the urgency and importance of the task, not the sender's role.\n* Consider the impact of the task on the software engineer's career and project, not just the sender's role.\n* Evaluate the time sensitivity of the task, not just the sender's role.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr004-llama323b-01 | Job Board · TechHub | New Job Posting: Junior Software Engineer | We are seeking a junior software engineer to join our team.\nr004-llama323b-02 | Marketing · TechCorp | New Product Launch | Our new product is now available for purchase.\nr004-llama323b-03 | Service · TechSupport | Service Notice: Maintenance Scheduled | Our servers will be undergoing maintenance on Friday.\nr004-llama323b-04 | Marketing · TechPromotions | Special Offer | Get 10% off your next purchase.\nr004-qwen2515b-01 | Newsletter · MyCompany | Project Update | We are updating the project timeline and scope. Please review the changes.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r004-llama323b-01\",\"urgency\":100,\"importance\":70,\"summary\":\"New Junior Software Engineer opportunity, urgent\"},\n  {\"id\":\"r004-llama323b-02\",\"urgency\":50,\"importance\":80,\"summary\":\"Product Launch, important\"},\n  {\"id\":\"r004-llama323b-03\",\"urgency\":20,\"importance\":60,\"summary\":\"Maintenance Notice, low urgency\"},\n  {\"id\":\"r004-llama323b-04\",\"urgency\":30,\"importance\":90,\"summary\":\"Special Offer, important\"},\n  {\"id\":\"r004-qwen2515b-01\",\"urgency\":40,\"importance\":50,\"summary\":\"Project Update, moderate urgency\"}\n]}",
+ "parseError": null,
+ "evalCount": 202,
+ "promptEvalCount": 483
+}

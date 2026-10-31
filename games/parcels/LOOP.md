@@ -122,3 +122,23 @@ Needs info (75, 55), Later (20, 75), Archive (20, 30), Spam (10, 5). v2 drops co
 worth it ≈ matters). Rounds 001–002 keep their bin-based `score`; their `priority` block uses this mapping for both the model
 labels and v1 human sorts, so it is an estimate, not a measured position.
 Sim: `node games/parcels/sim/run-sim3.js --round round-003`; browser `?sim=1&skill=good&fast=16`; `next-round.js --grade-only` re-grades without Ollama generation.
+
+## Round 4: handling stage + consistency ledger (v0.4.0)
+
+**Handling mode** (`?mode=handling`, same drag field). Parcels: `round.handling.parcels`. These are the parcels his latest priority run put in 🔥 Handle first, then 📅 Schedule, highest priority first, up to 16. Parcels already settled for handling are left out.
+- x: best automated ◀ ▶ best manually reviewed. `manual = 100(1+x)/2`, `automation = 100 − manual`.
+- y: relative budget spend, high at the top. `spend = 100(1+y)/2`.
+- Tier (handling.js): manual > 60 → manual review. The spend then counts as a reserve for later agentic work. Manual 40–60 → hybrid (tier prep + review). Otherwise the tier comes from spend: local Ollama <25, OpenCode free <50, Codex <75, Grok Build.
+- Output: `summary.parcels.plan[]` holds {automation, manual, spend, budgetShare (% of the pool, spend-weighted), tier, quadrant}, plus `budgetPool` {automatedShare, manualReserveShare}. This is an assessment only. Nothing runs.
+- Models predict {manual, spend} per handling parcel (`models[m].handling`). They are graded per axis, weighted by his confidence on that axis (`grades[m].handling`, `scoreWithHandling = .75·score + .25·handling`).
+
+**Consistency ledger.** The human ledger is `data/parcel-ledger.json`. The sim writes only `parcel-ledger.sim.json`. The rule is in ledger.js (RULE v1.0.0):
+- Two evaluations are *consistent* when they share a quadrant, lie within 0.5 field units (25 points) of each other, and both have conf ≥ 0.25.
+- **Settled** = the last 3 counting human evaluations of that mode are pairwise-consecutively consistent. Settled parcels leave the rotation.
+- An undecided drop resets the streak.
+- 5 counting tries without settling → **manual-review**, which also leaves the rotation.
+- Model evaluations are stored but never count toward settling. v1 bin drops are stored with counts:false.
+- Round build: the ledger's open parcels come first (closest to settling, then fewest tries), then never-counted ones, then the models' new parcels. engine.source spaces repeats within a round (min gap ≤ 8).
+- The end screen previews the ledger effect of the run. It is applied when the log is graded.
+
+Grading with both logs: `node tools/next-round.js --round round-004 --log <priority.json>,<handling.json> --force`. To rebuild the ledger: `node games/parcels/tools/ledger.js --rebuild`.

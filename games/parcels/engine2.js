@@ -22,7 +22,7 @@
       var D = A.describe(c.x, c.y), last = c.strongZones[c.strongZones.length - 1], changed = c.strongZones.length > 1 && !(D.pTop >= 0.6 && D.bin === c.strongZones[0]) || (c.strongZones.length === 1 && D.pTop >= 0.6 && D.bin !== last);
       var pts; if (D.conf < 0.25) { pts = P.middlePoints; combo = 0; } else { pts = Math.round(P.points + P.confPoints * D.conf + P.timeBonus * Math.max(0, 1 - ms / c.limitMs)); if (D.conf >= P.comboConf) { combo++; pts += Math.min(combo, 10) * 5; } }
       best = Math.max(best, combo); score += pts;
-      var d = Object.assign(base, { missed: false, timedOut: !!timedOut }, D.soft ? { x: D.x, y: D.y, dist: D.dist, soft: D.soft, bin: D.bin, pTop: D.pTop } : { x: D.x, y: D.y, urgency: D.urgency, importance: D.importance, priority: D.priority, quadrant: D.quadrant, pTop: D.pTop }, { confX: D.confX, confY: D.confY, conf: D.conf, sortMs: Math.round(ms), firstMs: Math.round(c.firstMs), changedMind: !!changed, zoneChanges: Math.max(0, c.zones.length - 1), points: pts, combo: combo });
+      var d = Object.assign(base, { missed: false, timedOut: !!timedOut }, D.soft ? { x: D.x, y: D.y, dist: D.dist, soft: D.soft, bin: D.bin, pTop: D.pTop } : (function () { var o = {}; Object.keys(D).forEach(function (k) { if (k !== 'bin') o[k] = D[k]; }); return o; })(), { confX: D.confX, confY: D.confY, conf: D.conf, sortMs: Math.round(ms), firstMs: Math.round(c.firstMs), changedMind: !!changed, zoneChanges: Math.max(0, c.zones.length - 1), points: pts, combo: combo });
       dec.push(d); emit('sort', d);
     }
     return {

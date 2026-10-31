@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r004-hand-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:25:35.338Z",
+ "ms": 1820,
+ "promptSha256": "f1591acd5fbd0a0264a6bd443a167dabf8ae54963e440d60d69ae0d479cdb1d8",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 1 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p013\",\"manual\":0,\"spend\":60},{\"id\":\"p013\",\"manual\":0,\"spend\":60}]}",
+ "parseError": null,
+ "evalCount": 33,
+ "promptEvalCount": 254
+}

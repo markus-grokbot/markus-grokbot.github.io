@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r004-hand-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:26:09.615Z",
+ "ms": 3274,
+ "promptSha256": "63558d6faa4605565466e16ea6efa55884e914205a7218e7b59904e7d34a1822",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np024 | Newsletter · Small Models Monthly | Gemma, Qwen and Llama compared on CPU | We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.\nr002-llama323b-08 | Recruiter · Pinewood Talent | Follow-up on Application | We would like to schedule a call to discuss your application.\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\np010 | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"p024\",\"manual\":10,\"spend\":50},\n    {\"id\":\"r002-llama323b-08\",\"manual\":50,\"spend\":40},\n    {\"id\":\"p034\",\"manual\":80,\"spend\":30},\n    {\"id\":\"p010\",\"manual\":70,\"spend\":20},\n    {\"id\":\"p028\",\"manual\":90,\"spend\":10}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 120,
+ "promptEvalCount": 440
+}

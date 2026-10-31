@@ -8,7 +8,12 @@
   function merge(t) { var p = JSON.parse(JSON.stringify(DEFAULTS)); if (t) Object.keys(t).forEach(function (k) { if (k in p) p[k] = t[k]; }); return p; }
   /* round-wide parcel source: round order first; once all were shown, repeats (shuffled by rng) flagged repeat:true,
      which gives a consistency check (same parcel sorted twice) */
-  function source(parcels, rng) { var i = 0, pool = []; return { next: function () { if (i < parcels.length) return parcels[i++]; if (!pool.length) { pool = parcels.slice(); for (var k = pool.length - 1; k > 0; k--) { var j = Math.floor(rng() * (k + 1)), x = pool[k]; pool[k] = pool[j]; pool[j] = x; } } return Object.assign({}, pool.pop(), { repeat: true }); }, shown: function () { return i; } }; }
+  // repeats are spaced out: a parcel is not shown again within SPACING shows of its last appearance (when the pool allows)
+  function source(parcels, rng, spacing) { var i = 0, n = 0, pool = [], lastAt = {}, SP = spacing == null ? Math.min(8, Math.max(0, parcels.length - 2)) : spacing;
+    function mark(p) { lastAt[p.id] = n++; return p; }
+    return { next: function () { if (i < parcels.length) return mark(parcels[i++]); if (!pool.length) { pool = parcels.slice(); for (var k = pool.length - 1; k > 0; k--) { var j = Math.floor(rng() * (k + 1)), x = pool[k]; pool[k] = pool[j]; pool[j] = x; } }
+      var pick = pool.length - 1; for (var q = pool.length - 1; q >= 0; q--) { if (lastAt[pool[q].id] == null || n - lastAt[pool[q].id] > SP) { pick = q; break; } }
+      var p = pool.splice(pick, 1)[0]; return mark(Object.assign({}, p, { repeat: true })); }, shown: function () { return i; } }; }
   // waves are time-based: spawning stops after durationMs, the wave ends when the belt is clear
   function createWave(src, w, P, hooks) {
     hooks = hooks || {}; var t = 0, next = 0, active = [], pend = null, dec = [], misses = 0, combo = 0, best = 0, score = 0, spawned = 0;

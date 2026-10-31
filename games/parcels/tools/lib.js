@@ -35,7 +35,43 @@ function labelPrompt(parcels, rubric) {
     parcels.map(p => p.id + ' | ' + p.sender + ' | ' + p.subject + ' | ' + p.snippet).join('\n') +
     '\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {"id":"x01","bin":"later","summary":"Weekly digest, read later"}\nReturn JSON only: {"items":[ one object per item above, ' + parcels.length + ' objects, same ids ]}';
 }
-const PR = require('../priority.js');
+const PR = require('../priority.js'), HD = require('../handling.js'), LG = require('../ledger.js');
+const HANDLING_TEXT = '- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\n';
+function labelPromptHandling(parcels, rubric) {
+  return 'You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n' + HANDLING_TEXT +
+    'Items (id | sender | subject | snippet):\n' + parcels.map(p => p.id + ' | ' + p.sender + ' | ' + p.subject + ' | ' + p.snippet).join('\n') +
+    '\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {"id":"x01","manual":20,"spend":60}\nReturn JSON only: {"items":[ one object per item above, ' + parcels.length + ' objects, same ids ]}';
+}
+async function labelAllHandling(model, parcels, runDir, tag) {
+  const handling = {}, stats = { calls: 0, ms: 0, invalid: 0, retries: 0 }, num = v => { const n = Math.round(+v); return isFinite(n) && n >= 0 && n <= 100 ? n : null; };
+  for (let i = 0; i < parcels.length; i += 5) { const batch = parcels.slice(i, i + 5); let got = {};
+    for (let attempt = 0; attempt < 2; attempt++) { const missing = batch.filter(p => !got[p.id]); if (!missing.length) break; if (attempt) stats.retries++;
+      const r = await generate(model, labelPromptHandling(missing), runDir, tag + '-hand-' + pad(i / 5 + 1) + (attempt ? '-retry' : '')); stats.calls++; stats.ms += r.ms;
+      const re = /\{[^{}]*"id"\s*:\s*"([^"]+)"[^{}]*\}/g; let mm; while ((mm = re.exec(r.raw || ''))) { const o = mm[0], g = k => { const x = new RegExp('"' + k + '"\\s*:\\s*"?(-?[\\d.]+)').exec(o); return x ? num(x[1]) : null; }, a = g('manual'), b = g('spend');
+        if (missing.some(p => p.id === mm[1]) && a != null && b != null) got[mm[1]] = { manual: a, spend: b }; else stats.invalid++; } }
+    Object.assign(handling, got); }
+  return { handling, stats };
+}
+// handling grading: per axis 1-|model-human|/100 (manual, spend), weighted by his axis confidence x decision weight
+function gradeHandling(round, truth) { const by = {}; truth.decisions.forEach(d => { if (d.manual == null) return; if (!by[d.parcelId] || (by[d.parcelId].repeat && !d.repeat)) by[d.parcelId] = d; }); const out = {};
+  Object.keys(round.models).forEach(m => { const H = round.models[m].handling || {}; let wm = 0, am = 0, ws = 0, as = 0, n = 0, tierOk = 0; const miss = [];
+    Object.keys(by).forEach(pid => { const d = by[pid], mp = H[pid]; if (!mp) return; const t = HD.fromMS(mp.manual, mp.spend), x = HD.agree(d.manual, mp.manual), y = HD.agree(d.spend, mp.spend), cx = d.confX * d.weight, cy = d.confY * d.weight;
+      wm += cx; am += cx * x; ws += cy; as += cy * y; n++; if (t.tier === d.tier) tierOk++; const ag = (cx * x + cy * y) / Math.max(1e-9, cx + cy); if (ag < 0.75) miss.push({ parcelId: pid, yours: mp.manual + '/' + mp.spend, his: Math.round(d.manual) + '/' + Math.round(d.spend), agreement: +ag.toFixed(3) }); });
+    out[m] = { graded: n, agreement: wm + ws ? +((am + as) / (wm + ws)).toFixed(3) : null, manualAxis: wm ? +(am / wm).toFixed(3) : null, spendAxis: ws ? +(as / ws).toFixed(3) : null, sameTier: n ? +(tierOk / n).toFixed(3) : null, misses: miss.sort((a, b) => a.agreement - b.agreement).slice(0, 10) }; });
+  return out; }
+// ledger evaluation records
+function evalOf(d, mode, round, by, extra) { const D = mode === 'handling' ? (d.manual != null ? HD.describe(d.x, d.y) : null) : d.urgency != null ? PR.fromUI(d.urgency, d.importance) : d.x != null ? PR.describe(d.x, d.y) : d.bin ? PR.fromBin(d.bin) : null; if (!D) return null;
+  const e = { round, mode, by, x: D.x, y: D.y, quadrant: D.quadrant, conf: D.conf }; if (mode === 'handling') Object.assign(e, { manual: D.manual, spend: D.spend, tier: D.tier }); else Object.assign(e, { urgency: D.urgency, importance: D.importance, priority: D.priority }); return Object.assign(e, extra || {}); }
+function ledgerAddLog(ledger, log, round, relLog) { const mode = logMode(log) === 'handling' ? 'handling' : 'priority', src = logMode(log), P = {}; (round.parcels || []).concat(round.handling ? round.handling.parcels : []).forEach(p => { P[p.id] = p; }); let added = 0;
+  if ((ledger.logs || []).indexOf(relLog) >= 0) return 0; ledger.logs = (ledger.logs || []).concat([relLog]);
+  (log.levels || []).filter(l => l.ext && l.ext.parcels).forEach(l => (l.ext.parcels.decisions || []).forEach(d => { if (d.missed) return; const e = evalOf(d, mode, round.roundId, 'human', { src, counts: src !== 'bins', at: log.run.id, repeat: d.repeat || undefined }); if (!e) return; const pe = ledger.parcels[d.parcelId] = ledger.parcels[d.parcelId] || { parcel: stripP(P[d.parcelId]), evals: [] }; if (!pe.parcel && P[d.parcelId]) pe.parcel = stripP(P[d.parcelId]); pe.evals.push(e); added++; }));
+  return added; }
+function ledgerAddModels(ledger, round) { let added = 0; Object.keys(round.models || {}).forEach(m => { const M = round.models[m];
+  Object.keys(M.positions || {}).forEach(pid => { if (!ledger.parcels[pid]) return; const k = round.roundId + '|priority|' + m; if (ledger.parcels[pid].evals.some(e => e.key === k)) return; const D = PR.fromUI(M.positions[pid].urgency, M.positions[pid].importance); ledger.parcels[pid].evals.push({ key: k, round: round.roundId, mode: 'priority', by: 'model:' + m, x: D.x, y: D.y, quadrant: D.quadrant, conf: D.conf, urgency: D.urgency, importance: D.importance, priority: D.priority }); added++; });
+  Object.keys(M.handling || {}).forEach(pid => { if (!ledger.parcels[pid]) return; const k = round.roundId + '|handling|' + m; if (ledger.parcels[pid].evals.some(e => e.key === k)) return; const D = HD.fromMS(M.handling[pid].manual, M.handling[pid].spend); ledger.parcels[pid].evals.push({ key: k, round: round.roundId, mode: 'handling', by: 'model:' + m, x: D.x, y: D.y, quadrant: D.quadrant, conf: D.conf, manual: D.manual, spend: D.spend, tier: D.tier }); added++; }); });
+  return added; }
+function stripP(p) { if (!p) return null; const o = {}; ['id', 'senderType', 'sender', 'subject', 'snippet', 'badge', 'author', 'anchor', 'authorPos'].forEach(k => { if (p[k] != null) o[k] = p[k]; }); return o; }
+function ledgerRefresh(ledger) { const c = {}; Object.keys(ledger.parcels).forEach(id => { const e = ledger.parcels[id]; e.status = { priority: LG.status(e.evals, 'priority'), handling: LG.status(e.evals, 'handling') }; }); ledger.rule = LG.RULE; ledger.counts = { priority: LG.counts(ledger, 'priority'), handling: LG.counts(ledger, 'handling') }; ledger.updatedAt = new Date().toISOString(); return ledger; }
 const PRIO_TEXT = '- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\n';
 function labelPromptPriority(parcels, rubric) {
   return 'You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n' + PRIO_TEXT +
@@ -137,6 +173,7 @@ function abQuestions(round, n) {
 function median(a) { const b = a.slice().sort((x, y) => x - y), m = b.length >> 1; return b.length ? (b.length % 2 ? b[m] : (b[m - 1] + b[m]) / 2) : null; }
 /* weight of one human decision as ground truth: changed mind x0.4; slower than his median -> med/t (floor 0.3);
    x wave focus factor (wave focus = 100*(1-(misses+0.5*changed)/shown), floor 0.3); x (0.5 + 0.5*round focus/100) from qualities */
+function logMode(log) { return (log.summary && log.summary.parcels && log.summary.parcels.mode) || 'bins'; }
 function humanTruth(log) {
   const waves = (log.levels || []).filter(l => l.ext && l.ext.parcels).map(l => l.ext.parcels), dec = [];
   waves.forEach(w => { const f = Math.max(0.3, 1 - (w.misses + 0.5 * w.changedMind) / Math.max(1, w.parcelsShown)); w.decisions.forEach(d => { if (!d.missed) dec.push(Object.assign({ waveFocus: +f.toFixed(3) }, d)); }); });
@@ -177,4 +214,4 @@ function grade(round, truth) {
   return out;
 }
 const AX = require('../axes.js');
-module.exports = { extractItemsPrio, labelPromptPriority, genPromptPriority, labelAllPriority, humanPos, PR, extractObjects, extractRubric, ROOT, REPO, BINS, BIN_IDS, SENDER_TYPES, MODELS, OPTIONS, short, pad, readJ, writeJ, findHost, generate, labelPrompt, genPrompt, validParcel, textProblems, labelAll, abQuestions, humanTruth, grade, median };
+module.exports = { logMode, labelPromptHandling, labelAllHandling, gradeHandling, evalOf, ledgerAddLog, ledgerAddModels, ledgerRefresh, stripP, HD, LG, extractItemsPrio, labelPromptPriority, genPromptPriority, labelAllPriority, humanPos, PR, extractObjects, extractRubric, ROOT, REPO, BINS, BIN_IDS, SENDER_TYPES, MODELS, OPTIONS, short, pad, readJ, writeJ, findHost, generate, labelPrompt, genPrompt, validParcel, textProblems, labelAll, abQuestions, humanTruth, grade, median };

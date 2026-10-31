@@ -1,0 +1,1155 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": false,
+ "fromRound": "round-003",
+ "toRound": "round-004",
+ "log": "games/parcels/logs/human/human-parcels-round-003-20261031180247-73vwk.json",
+ "startedAt": "2026-10-31T18:21:21.208Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 34,
+   "medianSortMs": 3416.5,
+   "roundFocus": 100,
+   "ab": 2,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.613,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 10,
+     "authoredClarity": 0.895,
+     "authoredMeanConf": 0.624,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.613,
+      "urgency": 0.606,
+      "importance": 0.624,
+      "meanAbsPriorityError": 26.3,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.619,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "93/100",
+       "agreement": 0.426,
+       "weight": 1.854
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "0/20",
+       "his": "77/87",
+       "agreement": 0.285,
+       "weight": 1.273
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/0",
+       "his": "3/96",
+       "agreement": 0.507,
+       "weight": 1.839
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "97/100",
+       "agreement": 0.532,
+       "weight": 1.582
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "0/40",
+       "his": "97/21",
+       "agreement": 0.329,
+       "weight": 1.072
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "70/72",
+       "agreement": 0.34,
+       "weight": 0.85
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "20/80",
+       "his": "87/85",
+       "agreement": 0.629,
+       "weight": 1.448
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "50/90",
+       "his": "86/38",
+       "agreement": 0.598,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "84/46",
+       "agreement": 0.218,
+       "weight": 0.436
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "30/50",
+       "his": "73/75",
+       "agreement": 0.66,
+       "weight": 0.976
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "20/60",
+       "his": "75/72",
+       "agreement": 0.65,
+       "weight": 0.946
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "40/60",
+       "his": "87/35",
+       "agreement": 0.597,
+       "weight": 0.779
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "50/40",
+       "his": "88/40",
+       "agreement": 0.698,
+       "weight": 0.974
+      },
+      {
+       "parcelId": "r003-qwen2515b-04",
+       "subject": "Invoice 9876 - Payment Due",
+       "yours": "20/40",
+       "his": "83/48",
+       "agreement": 0.405,
+       "weight": 0.469
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "50/30",
+       "his": "94/37",
+       "agreement": 0.646,
+       "weight": 0.781
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "subject": "Job Opening: Senior DevOps Engineer",
+       "yours": "0/100",
+       "his": "57/59",
+       "agreement": 0.515,
+       "weight": 0.318
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "40/30",
+       "his": "63/59",
+       "agreement": 0.747,
+       "weight": 0.355
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "50/20",
+       "his": "61/61",
+       "agreement": 0.744,
+       "weight": 0.338
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "50/30",
+       "his": "93/100",
+       "agreement": 0.426,
+       "weight": 1.854
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "0/20",
+       "his": "77/87",
+       "agreement": 0.285,
+       "weight": 1.273
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/0",
+       "his": "3/96",
+       "agreement": 0.507,
+       "weight": 1.839
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "0/100",
+       "his": "97/100",
+       "agreement": 0.532,
+       "weight": 1.582
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "0/40",
+       "his": "97/21",
+       "agreement": 0.329,
+       "weight": 1.072
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "0/10",
+       "his": "70/72",
+       "agreement": 0.34,
+       "weight": 0.85
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "20/80",
+       "his": "87/85",
+       "agreement": 0.629,
+       "weight": 1.448
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "50/90",
+       "his": "86/38",
+       "agreement": 0.598,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "0/70",
+       "his": "84/46",
+       "agreement": 0.218,
+       "weight": 0.436
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "30/50",
+       "his": "73/75",
+       "agreement": 0.66,
+       "weight": 0.976
+      }
+     ]
+    },
+    "qwen2.5:1.5b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.59,
+     "abShown": 2,
+     "abWins": 1,
+     "abWinRate": 0.5,
+     "authoredSorted": 15,
+     "authoredClarity": 0.893,
+     "authoredMeanConf": 0.623,
+     "priority": {
+      "graded": 28,
+      "agreement": 0.59,
+      "urgency": 0.465,
+      "importance": 0.784,
+      "meanAbsPriorityError": 20.7,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.602,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "3/96",
+       "agreement": 0.483,
+       "weight": 1.839
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "97/100",
+       "agreement": 0.401,
+       "weight": 1.582
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "10/80",
+       "his": "93/100",
+       "agreement": 0.511,
+       "weight": 1.854
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "5/60",
+       "his": "87/85",
+       "agreement": 0.455,
+       "weight": 1.448
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "70/80",
+       "his": "6/35",
+       "agreement": 0.41,
+       "weight": 1.178
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "10/80",
+       "his": "86/38",
+       "agreement": 0.325,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/80",
+       "his": "88/40",
+       "agreement": 0.377,
+       "weight": 0.974
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "10/80",
+       "his": "94/37",
+       "agreement": 0.254,
+       "weight": 0.781
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "20/5",
+       "his": "97/21",
+       "agreement": 0.463,
+       "weight": 1.072
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "87/35",
+       "agreement": 0.29,
+       "weight": 0.779
+      },
+      {
+       "parcelId": "p034",
+       "subject": "Guest slot – topic?",
+       "yours": "5/90",
+       "his": "75/72",
+       "agreement": 0.544,
+       "weight": 0.946
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "subject": "Tech News Update",
+       "yours": "80/10",
+       "his": "19/38",
+       "agreement": 0.483,
+       "weight": 0.647
+      },
+      {
+       "parcelId": "r003-qwen2515b-01",
+       "subject": "Invoice 1234 - Payment Due",
+       "yours": "5/20",
+       "his": "84/46",
+       "agreement": 0.261,
+       "weight": 0.436
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "40/50",
+       "his": "73/75",
+       "agreement": 0.708,
+       "weight": 0.976
+      },
+      {
+       "parcelId": "p023",
+       "subject": "Invitation: Sprint review (Tue 10:00)",
+       "yours": "20/80",
+       "his": "61/61",
+       "agreement": 0.697,
+       "weight": 0.338
+      },
+      {
+       "parcelId": "r003-llama323b-05",
+       "subject": "New Job Opening: Senior Software Engineer",
+       "yours": "100/80",
+       "his": "57/58",
+       "agreement": 0.677,
+       "weight": 0.282
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "90/80",
+       "his": "3/96",
+       "agreement": 0.483,
+       "weight": 1.839
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "5/70",
+       "his": "97/100",
+       "agreement": 0.401,
+       "weight": 1.582
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "subject": "Question about project deadline",
+       "yours": "10/80",
+       "his": "93/100",
+       "agreement": 0.511,
+       "weight": 1.854
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "subject": "Re: Frontend role, follow-up",
+       "yours": "5/60",
+       "his": "87/85",
+       "agreement": 0.455,
+       "weight": 1.448
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "70/80",
+       "his": "6/35",
+       "agreement": 0.41,
+       "weight": 1.178
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "yours": "10/80",
+       "his": "86/38",
+       "agreement": 0.325,
+       "weight": 0.966
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/80",
+       "his": "88/40",
+       "agreement": 0.377,
+       "weight": 0.974
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "subject": "Question about Project Scope",
+       "yours": "10/80",
+       "his": "94/37",
+       "agreement": 0.254,
+       "weight": 0.781
+      },
+      {
+       "parcelId": "r003-llama323b-04",
+       "subject": "Payment Due",
+       "yours": "20/5",
+       "his": "97/21",
+       "agreement": 0.463,
+       "weight": 1.072
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "5/80",
+       "his": "87/35",
+       "agreement": 0.29,
+       "weight": 0.779
+      }
+     ]
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 2,
+    "valid": 4,
+    "rejected": 20,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host · GitHub",
+       "subject": "CI/PR/Issue: Resolved",
+       "snippet": "The issue has been resolved.",
+       "badge": "issue resolved",
+       "urgency": 10,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · TechPartner",
+       "subject": "Question about project deadline",
+       "snippet": "Can you confirm the project deadline?",
+       "badge": "deadline inquiry",
+       "urgency": 30,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · TechInc",
+       "subject": "Invoice 1234 - Payment Due",
+       "snippet": "Payment is due by the end of the week.",
+       "badge": "payment due",
+       "urgency": 90,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · CareerHub",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a senior software engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 90,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechCorp",
+       "subject": "New Product Launch",
+       "snippet": "Our new product is now available for purchase.",
+       "badge": "product launch",
+       "urgency": 30,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · TechPartner",
+       "subject": "Re: Frontend role, follow-up",
+       "snippet": "Can you provide an update on the frontend role?",
+       "badge": "follow-up",
+       "urgency": 40,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host · GitHub",
+       "subject": "[games] PR #14 review requested",
+       "snippet": "We need your review on PR #14.",
+       "badge": "pr review",
+       "urgency": 10,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · TechInc",
+       "subject": "Invoice 1234 - Payment Due",
+       "snippet": "Payment is due by the end of the week.",
+       "badge": "payment due",
+       "urgency": 80,
+       "importance": 5,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · CareerHub",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are seeking a junior software engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 60,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechHub",
+       "subject": "New Job Posting: Junior Software Engineer",
+       "snippet": "We are seeking a junior software engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 60,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host · DevOps Inc.",
+       "subject": "CI/PR/Issue: Resolved",
+       "snippet": "The issue has been resolved.",
+       "badge": "issue resolved",
+       "urgency": 10,
+       "importance": 90,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · TechSupport",
+       "subject": "Invoice 1234 - Payment Due",
+       "snippet": "Your invoice is due for payment.",
+       "badge": "payment due",
+       "urgency": 80,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechNews",
+       "subject": "New Product Launch",
+       "snippet": "Our new product is now available.",
+       "badge": "product launch",
+       "urgency": 50,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · TechPartners",
+       "subject": "Question about project deadline",
+       "snippet": "Can you confirm the project deadline?",
+       "badge": "question",
+       "urgency": 90,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · CareerLink",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a senior software engineer to join our team.",
+       "badge": "job posting",
+       "urgency": 70,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · FinTech",
+       "subject": "Payment Due",
+       "snippet": "Your payment is due for processing.",
+       "badge": "payment due",
+       "urgency": 90,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · TechPartners",
+       "subject": "Re: Frontend role, follow-up",
+       "snippet": "Can you provide more information about the role?",
+       "badge": "follow-up",
+       "urgency": 80,
+       "importance": 85,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host · DevOps Inc.",
+       "subject": "[games] PR #14 review requested",
+       "snippet": "We need your review on this PR.",
+       "badge": "pr review",
+       "urgency": 60,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Items from collaborators and service providers should be prioritized based on their importance, with a minimum urgency of 20.",
+     "Items from job boards and marketing should be prioritized based on their urgency, with a minimum importance of 30."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 1,
+    "rejected": 19,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior Software Engineer · TechRecruiters",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a Senior Software Engineer with experience in React and Node.js. Apply now!",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code host notifications · GitHub",
+       "subject": "CI/PR Issue: Resolved",
+       "snippet": "The CI/PR issue has been resolved. The build is green and the code is merged.",
+       "badge": "resolved issue",
+       "urgency": 0,
+       "importance": 100,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · MyCompany",
+       "subject": "Payment Due",
+       "snippet": "Your payment is due on the 15th of this month. Please make the payment by the 20th.",
+       "badge": "payment due",
+       "urgency": 20,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Junior DevOps Engineer · TechRecruiters",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We are looking for a Junior DevOps Engineer with experience in Docker and Kubernetes. Apply now!",
+       "badge": "job opening",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · MyProject",
+       "subject": "Meeting Request",
+       "snippet": "We need to meet to discuss the upcoming project deadline.",
+       "badge": "meeting request",
+       "urgency": 30,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · MyCompany",
+       "subject": "Membership Invoice",
+       "snippet": "Your membership invoice is due on the 25th of this month. Please pay by the 30th.",
+       "badge": "invoice",
+       "urgency": 20,
+       "importance": 50,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · MyCompany",
+       "subject": "Question about Project Scope",
+       "snippet": "We are unsure about the project scope. Can you clarify the requirements?",
+       "badge": "project scope",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior Software Engineer · TechRecruiters",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a Senior Software Engineer with experience in React and Node.js. Apply now!",
+       "badge": "job posting",
+       "urgency": 50,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior Software Engineer · Tech Innovators",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a Senior Software Engineer with experience in front-end and back-end development.",
+       "badge": "career opportunity",
+       "urgency": 50,
+       "importance": 90,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code Host Notifications · GitHub",
+       "subject": "CI/PR Issue: Resolved",
+       "snippet": "The CI/PR issue has been resolved successfully. The build is green.",
+       "badge": "build status",
+       "urgency": 20,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service Notice · Cloudflare",
+       "subject": "Payment Due",
+       "snippet": "Your payment is due on the 15th of this month.",
+       "badge": "payment reminder",
+       "urgency": 5,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Junior DevOps Engineer · DevOps Hub",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We are looking for a Junior DevOps Engineer with experience in container orchestration and automation.",
+       "badge": "career opportunity",
+       "urgency": 30,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · Brand Buzz",
+       "subject": "Question about Project Scope",
+       "snippet": "We are currently working on a project that involves multiple components. Can you clarify the scope of the project?",
+       "badge": "project scope",
+       "urgency": 10,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · Project Team",
+       "subject": "Re: Frontend role, follow-up",
+       "snippet": "Thanks for the follow-up. I am still interested in the frontend role.",
+       "badge": "career interest",
+       "urgency": 50,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · Pinewood Talent",
+       "subject": "Membership Invoice",
+       "snippet": "Your membership invoice for the next quarter is due on the 25th of this month.",
+       "badge": "invoice",
+       "urgency": 20,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · Tech Weekly",
+       "subject": "Question about Project Deadline",
+       "snippet": "We are currently working on a project that involves multiple components. Can you clarify the project deadline?",
+       "badge": "project deadline",
+       "urgency": 5,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Senior Software Engineer · Tech Innovators",
+       "subject": "New Job Posting: Senior Software Engineer",
+       "snippet": "We are seeking a Senior Software Engineer with experience in front-end and back-end development.",
+       "badge": "career opportunity",
+       "urgency": 50,
+       "importance": 90,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize based on the urgency and importance of the task, not the sender's role.",
+     "Consider the impact of the task on the software engineer's career and project, not just the sender's role.",
+     "Evaluate the time sensitivity of the task, not just the sender's role."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 6,
+    "ms": 57783,
+    "invalid": 10,
+    "retries": 1,
+    "wallMs": 81136
+   },
+   "qwen2.5:1.5b": {
+    "calls": 6,
+    "ms": 28821,
+    "invalid": 1,
+    "retries": 1,
+    "wallMs": 39791
+   }
+  }
+ },
+ "roundWeight": 1,
+ "note": "Full weight. First priority-mode round.",
+ "endedAt": "2026-10-31T18:26:16.952Z",
+ "wallMs": 295744,
+ "output": {
+  "round": "rounds/round-004.json",
+  "parcels": 25,
+  "carried": 20,
+  "handling": 16,
+  "ab": 3
+ }
+}

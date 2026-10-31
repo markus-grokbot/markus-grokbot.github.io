@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r004-prio-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:24:27.602Z",
+ "ms": 7361,
+ "promptSha256": "65980de40c06e979b64cfd276dc1dd5604650767b3ff404f862e80df2baa8c44",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Items from collaborators and service providers should be prioritized based on their importance, with a minimum urgency of 20.\n* Items from job boards and marketing should be prioritized based on their urgency, with a minimum importance of 30.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\np027 | Team · Promptly AI | Meet your new AI co-pilot for email | Sign up today and get 3 months free. Cancel anytime.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\nr002-llama323b-04 | Marketing · TechHub | New Product Launch: Get Ready for the Future | Our new product is launching soon.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p011\",\"urgency\":0,\"importance\":0,\"summary\":\"Application viewed, recruiter interest\"}],\"items\":[{\"id\":\"p027\",\"urgency\":0,\"importance\":0,\"summary\":\"AI co-pilot sign up offer\"}],\"items\":[{\"id\":\"p028\",\"urgency\":20,\"importance\":0,\"summary\":\"PR review requested for games project\"}],\"items\":[{\"id\":\"p014\",\"urgency\":0,\"importance\":0,\"summary\":\"Last chance to register webinar\"}],\"items\":[{\"id\":\"r002-llama323b-04\",\"urgency\":0,\"importance\":30,\"summary\":\"New product launch, marketing\"}]}",
+ "parseError": null,
+ "evalCount": 142,
+ "promptEvalCount": 445
+}

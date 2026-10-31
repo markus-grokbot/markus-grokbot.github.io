@@ -208,3 +208,6 @@ engine `ParcelEngine2.make(ParcelPriority, ...)`. Old bins map to approximate po
   preview count, invisible/flashing pieces, timed goals, combos). Target 5–30 minutes of fun per session.
 - **Later:** only when sessions feel fun, add real-world decision hooks (game choices that produce useful data
   for other tasks), then new games in the series reusing logger.js + the schema.
+
+### Parcel Panic: consistency before action (round 4)
+A parcel's placement is only trusted after **3 consistent human evaluations in a row** (same quadrant, ≤25 pts apart, not undecided). Doubtful parcels are re-queued first in the next round. After 5 tries without settling they go to manual review. The ledger is `games/parcels/data/parcel-ledger.json`, and the rule is in `games/parcels/ledger.js`. Within a round, repeats are spaced out, and they count as separate evaluations.

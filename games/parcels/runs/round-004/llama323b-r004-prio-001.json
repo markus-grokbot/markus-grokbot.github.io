@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r004-prio-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:24:16.023Z",
+ "ms": 11578,
+ "promptSha256": "095f2caea284182e7573a16d5883b529e90e475b16ee4ed2f7f02e15f35ea349",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Items from collaborators and service providers should be prioritized based on their importance, with a minimum urgency of 20.\n* Items from job boards and marketing should be prioritized based on their urgency, with a minimum importance of 30.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\np030 | Recruiter · Northlake Talent | Interview confirmed: Thu 13:00 | Calendar invite sent. The panel is two engineers and a product lead.\nr002-qwen2515b-07 | Recruiter · Pinewood Talent | Re: Frontend role, follow-up | Thanks for applying. Are you available for an interview on Friday?\np024 | Newsletter · Small Models Monthly | Gemma, Qwen and Llama compared on CPU | We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\nr002-llama323b-05 | Collaborator · TechCorp | Question about Project Scope | Can you clarify the project scope?\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p030\",\"urgency\":0,\"importance\":0,\"summary\":\"Interview confirmation\"}],\"items\":[{\"id\":\"r002-qwen2515b-07\",\"urgency\":0,\"importance\":0,\"summary\":\"Frontend role follow-up\"}],\"items\":[{\"id\":\"p024\",\"urgency\":0,\"importance\":0,\"summary\":\"Newsletter\"}],\"items\":[{\"id\":\"p034\",\"urgency\":0,\"importance\":0,\"summary\":\"Guest slot for podcast\"}],\"items\":[{\"id\":\"r002-llama323b-05\",\"urgency\":0,\"importance\":0,\"summary\":\"Project scope question\"}]}",
+ "parseError": null,
+ "evalCount": 136,
+ "promptEvalCount": 459
+}

@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r004-prio-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T18:25:43.610Z",
+ "ms": 4630,
+ "promptSha256": "cdb57af41ba7d3b45cca91754fa18ecbf30bf6fab03cf0a06c9f05d0c82b3aa7",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize based on the urgency and importance of the task, not the sender's role.\n* Consider the impact of the task on the software engineer's career and project, not just the sender's role.\n* Evaluate the time sensitivity of the task, not just the sender's role.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\np027 | Team · Promptly AI | Meet your new AI co-pilot for email | Sign up today and get 3 months free. Cancel anytime.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\nr002-llama323b-04 | Marketing · TechHub | New Product Launch: Get Ready for the Future | Our new product is launching soon.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n    {\"id\":\"p011\",\"urgency\":100,\"importance\":80,\"summary\":\"Recruiter view, urgent\"},\n    {\"id\":\"p027\",\"urgency\":90,\"importance\":90,\"summary\":\"AI co-pilot, important\"},\n    {\"id\":\"p028\",\"urgency\":80,\"importance\":70,\"summary\":\"PR review, moderate\"},\n    {\"id\":\"p014\",\"urgency\":70,\"importance\":80,\"summary\":\"AI webinar, important\"},\n    {\"id\":\"r002-llama323b-04\",\"urgency\":60,\"importance\":50,\"summary\":\"Product launch, low\"}\n]}",
+ "parseError": null,
+ "evalCount": 161,
+ "promptEvalCount": 491
+}
