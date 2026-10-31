@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-006",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:22:24.400Z",
+ "ms": 2365,
+ "promptSha256": "053de797b1603b3668a66faf6eca426d12a8ba9d35a7e95c6128a54f788b0b09",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize 'reply' for direct communication with collaborators and job-board inquiries.\n* Archive 'FYI' and 'done' items for future reference.\n* Move 'later' items to the 'info' bin for further consideration.\n* Classify 'info' items as needing more details before action.\n* Sort 'spam' items based on urgency and relevance to the sender's role.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np039 | Collaborator · ex-colleague | Coffee next week? | I'm in town Tue–Thu. Any morning works for me, you pick.\np024 | Newsletter · Small Models Monthly | Gemma, Qwen and Llama compared on CPU | We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.\np003 | Code host notifications | [site] CI failed on main: pages build | Run #212 failed in 'deploy' after 41 s. 1 job failed, 2 skipped.\np001 | Recruiter · Northlake Talent | Re: Platform engineer role – next step? | Thanks for your note. Could you share two time slots next week for a 30 min intro call?\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 4 objects, same ids ]}",
+ "raw": "{\"items\":[\n    {\"id\":\"p039\",\"bin\":\"reply\",\"summary\":\"Respond to job inquiry\"},\n    {\"id\":\"p024\",\"bin\":\"info\",\"summary\":\"Compare models, read later\"},\n    {\"id\":\"p003\",\"bin\":\"archive\",\"summary\":\"CI failure, read later\"},\n    {\"id\":\"p001\",\"bin\":\"later\",\"summary\":\"Follow up, read later\"}\n]}",
+ "parseError": null,
+ "evalCount": 89,
+ "promptEvalCount": 471
+}

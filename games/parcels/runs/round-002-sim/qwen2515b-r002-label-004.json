@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r002-label-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:22:17.694Z",
+ "ms": 3345,
+ "promptSha256": "f8867eefb23029b8d7bc4e77d764e4acd00bc89b8e59784c3012909dc5273af6",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* Prioritize 'reply' for direct communication with collaborators and job-board inquiries.\n* Archive 'FYI' and 'done' items for future reference.\n* Move 'later' items to the 'info' bin for further consideration.\n* Classify 'info' items as needing more details before action.\n* Sort 'spam' items based on urgency and relevance to the sender's role.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\nr002-llama323b-07 | Collaborator · CodeForge | Question about Project Timeline | Can you provide an update on the project timeline?\nr002-llama323b-02 | Collaborator · NovaTech | Dataset Access Request | Can you provide access to the dataset for our project?\np025 | Job alert · Fjordhire | Job closing soon: Senior SRE (Stockholm) | Applications close in 2 days. 87 people have applied.\np012 | Accounts · Stellan Print AB | Invoice 3391 – payment overdue | We have not received payment for invoice 3391. Please confirm the order number you used.\nr002-llama323b-08 | Service · TechSupport | System Update Notification | Our system is currently undergoing maintenance.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r002-llama323b-07\",\"bin\":\"reply\",\"summary\":\"Update project timeline\"},\n  {\"id\":\"r002-llama323b-02\",\"bin\":\"archive\",\"summary\":\"Dataset access request\"},\n  {\"id\":\"p025\",\"bin\":\"info\",\"summary\":\"Senior SRE (Stockholm) job\"},\n  {\"id\":\"p012\",\"bin\":\"info\",\"summary\":\"Payment overdue invoice\"},\n  {\"id\":\"r002-llama323b-08\",\"bin\":\"info\",\"summary\":\"System update notification\"}\n]}",
+ "parseError": null,
+ "evalCount": 136,
+ "promptEvalCount": 485
+}

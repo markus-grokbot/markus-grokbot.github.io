@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:21:38.859Z",
+ "ms": 5778,
+ "promptSha256": "41638d30ecd645573a0c15247cf3349ec1c500ee5ea6b1be32320a94aa8f7e80",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question, assign it to 'reply'.\n* If the subject is a job posting, assign it to 'job-board'.\n* If the subject is related to a payment or invoice, assign it to 'invoice'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\nr002-qwen2515b-01 | Newsletter · TechTalks | TechTalks Newsletter | This week's newsletter is out. Check it out!\np030 | Recruiter · Northlake Talent | Interview confirmed: Thu 13:00 | Calendar invite sent. The panel is two engineers and a product lead.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\nr002-llama323b-06 | Service · TechSupport | System Downtime Notification | Our system is currently experiencing technical difficulties.\nr002-llama323b-01 | Recruiter · Pinewood Talent | New Backend Role Available | We are looking for a skilled backend developer to join our team.\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"r002-qwen2515b-01\",\"bin\":\"archive\",\"summary\":\"Newsletter, FYI\"},{\"id\":\"p030\",\"bin\":\"archive\",\"summary\":\"Interview confirmed, FYI\"},{\"id\":\"r002-llama323b-06\",\"bin\":\"archive\",\"summary\":\"System Downtime, FYI\"},{\"id\":\"p013\",\"bin\":\"info\",\"summary\":\"Game issue, info needed\"},{\"id\":\"r002-llama323b-01\",\"bin\":\"archive\",\"summary\":\"Job posting, archive\"}]}",
+ "parseError": null,
+ "evalCount": 111,
+ "promptEvalCount": 434
+}

@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r002-label-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T16:21:29.407Z",
+ "ms": 9450,
+ "promptSha256": "4721624d39ecbdfb48082e6433af4f03b3f655ebcdced336ec9ae74f0da37270",
+ "prompt": "You triage a busy software engineer's inbox (he is job hunting and runs small open-source game projects). Sort each item into exactly one bin:\n- reply: he must write back himself\n- archive: FYI / done / automatic, no action\n- later: worth reading or doing, not now\n- info: cannot act until a detail is supplied or clarified\n- spam: marketing, noise or suspicious\nYour own sorting rubric from last round:\n* If the subject contains a question, assign it to 'reply'.\n* If the subject is a job posting, assign it to 'job-board'.\n* If the subject is related to a payment or invoice, assign it to 'invoice'.\nAlso write a summary badge of at most 6 words that would help him sort it at a glance.\nItems (id | sender | subject | snippet):\np020 | Rewards · Fuelpoint | You've earned 0 points this month | Come back and fill up to keep your status. Tap to see offers.\np008 | Recruiter · Vinterberg Search | Exciting opportunity!!! (urgent) | I came across your profile and think you'd be a perfect fit for a role I can't name yet.\np038 | Domain registrar | Your domain renews in 30 days | Auto-renew is on. Card ending in **** will be charged 149 kr.\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\nr002-llama323b-05 | Collaborator · CodeForge | Question about Project Requirements | Can you clarify the project deadline?\nThe bin value must be exactly one word from: reply, archive, later, info, spam. Example of the format for one item: {\"id\":\"x01\",\"bin\":\"later\",\"summary\":\"Weekly digest, read later\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p020\",\"bin\":\"spam\",\"summary\":\"Marketing email, read later\"},{\"id\":\"p008\",\"bin\":\"reply\",\"summary\":\"Job opportunity, reply now\"},{\"id\":\"p038\",\"bin\":\"archive\",\"summary\":\"Domain renewal, FYI\"},{\"id\":\"p011\",\"bin\":\"later\",\"summary\":\"Application update, read later\"},{\"id\":\"r002-llama323b-05\",\"bin\":\"info\",\"summary\":\"Project question, info needed\"}]}",
+ "parseError": null,
+ "evalCount": 97,
+ "promptEvalCount": 428
+}

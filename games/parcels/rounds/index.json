@@ -3,5 +3,7 @@
  "rounds": [
   "round-001"
  ],
- "sim": []
+ "sim": [
+  "round-002-sim"
+ ]
 }

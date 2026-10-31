@@ -1,0 +1,879 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": true,
+ "fromRound": "round-001",
+ "toRound": "round-002-sim",
+ "log": "logs/sim/parcels-round-001-casual-seed1.json",
+ "startedAt": "2026-10-31T16:19:13.498Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 57,
+   "medianSortMs": 2533,
+   "roundFocus": 85,
+   "ab": 3,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 40,
+     "rawAgreement": 0.5,
+     "weightedAgreement": 0.497,
+     "abShown": 3,
+     "abWins": 0,
+     "abWinRate": 0,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.387,
+     "confusion": {
+      "info>info": 6,
+      "later>spam": 3,
+      "spam>later": 2,
+      "spam>spam": 4,
+      "archive>archive": 6,
+      "later>later": 4,
+      "info>spam": 4,
+      "info>reply": 3,
+      "spam>reply": 2,
+      "reply>info": 1,
+      "spam>info": 1,
+      "later>archive": 1,
+      "archive>reply": 1,
+      "later>reply": 1,
+      "spam>archive": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p002",
+       "subject": "14 new jobs matching 'backend, remote'",
+       "yours": "later",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "reply",
+       "his": "info",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p018",
+       "subject": "Dataset access – which split?",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "spam",
+       "his": "info",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "spam",
+       "his": "later",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p025",
+       "subject": "Job closing soon: Senior SRE (Stockholm)",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p017",
+       "subject": "Monthly salary report: Sweden 2026",
+       "yours": "later",
+       "his": "spam",
+       "weight": 0.873
+      },
+      {
+       "parcelId": "p010",
+       "subject": "Mockups for the games index",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.794
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p033",
+       "subject": "Re: your invoice",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p038",
+       "subject": "Your domain renews in 30 days",
+       "yours": "spam",
+       "his": "archive",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p021",
+       "subject": "Take-home task: deadline Friday",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.76
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.744
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "later",
+       "his": "spam",
+       "weight": 0.731
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.685
+      },
+      {
+       "parcelId": "p003",
+       "subject": "[site] CI failed on main: pages build",
+       "yours": "spam",
+       "his": "later",
+       "weight": 0.645
+      },
+      {
+       "parcelId": "p031",
+       "subject": "You're using 92 % of your storage",
+       "yours": "spam",
+       "his": "reply",
+       "weight": 0.316
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "archive",
+       "his": "reply",
+       "weight": 0.314
+      }
+     ]
+    },
+    "qwen2.5:1.5b": {
+     "graded": 40,
+     "rawAgreement": 0.325,
+     "weightedAgreement": 0.331,
+     "abShown": 3,
+     "abWins": 2,
+     "abWinRate": 0.667,
+     "authoredSorted": 0,
+     "authoredClarity": null,
+     "score": 0.406,
+     "confusion": {
+      "reply>info": 1,
+      "archive>spam": 2,
+      "info>later": 5,
+      "info>spam": 5,
+      "later>info": 2,
+      "archive>archive": 4,
+      "later>spam": 2,
+      "later>archive": 2,
+      "reply>reply": 3,
+      "reply>spam": 1,
+      "info>reply": 2,
+      "info>info": 4,
+      "later>later": 1,
+      "reply>archive": 1,
+      "spam>info": 1,
+      "later>reply": 1,
+      "archive>reply": 1,
+      "spam>spam": 1,
+      "info>archive": 1
+     },
+     "misses": [
+      {
+       "parcelId": "p001",
+       "subject": "Re: Platform engineer role – next step?",
+       "yours": "reply",
+       "his": "info",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p002",
+       "subject": "14 new jobs matching 'backend, remote'",
+       "yours": "archive",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p004",
+       "subject": "48h only: 30% off everything 🔥",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p005",
+       "subject": "Quick question about the log schema",
+       "yours": "later",
+       "his": "info",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p007",
+       "subject": "Issue 88: local LLMs on a laptop",
+       "yours": "info",
+       "his": "later",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p011",
+       "subject": "Your application was viewed",
+       "yours": "reply",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "later",
+       "his": "info",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p018",
+       "subject": "Dataset access – which split?",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p024",
+       "subject": "Gemma, Qwen and Llama compared on CPU",
+       "yours": "info",
+       "his": "later",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p025",
+       "subject": "Job closing soon: Senior SRE (Stockholm)",
+       "yours": "reply",
+       "his": "archive",
+       "weight": 0.925
+      },
+      {
+       "parcelId": "p014",
+       "subject": "Last chance to register: AI in logistics",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.907
+      },
+      {
+       "parcelId": "p017",
+       "subject": "Monthly salary report: Sweden 2026",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.873
+      },
+      {
+       "parcelId": "p009",
+       "subject": "New sign-in from Chrome on Linux",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.822
+      },
+      {
+       "parcelId": "p019",
+       "subject": "[site] dependabot: bump undici to 6.21",
+       "yours": "later",
+       "his": "archive",
+       "weight": 0.794
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "spam",
+       "his": "info",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p032",
+       "subject": "November meetup: talks announced",
+       "yours": "info",
+       "his": "later",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p035",
+       "subject": "Profiles with photos get 3x more views",
+       "yours": "info",
+       "his": "spam",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p038",
+       "subject": "Your domain renews in 30 days",
+       "yours": "info",
+       "his": "archive",
+       "weight": 0.789
+      },
+      {
+       "parcelId": "p008",
+       "subject": "Exciting opportunity!!! (urgent)",
+       "yours": "later",
+       "his": "spam",
+       "weight": 0.744
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "later",
+       "his": "spam",
+       "weight": 0.731
+      },
+      {
+       "parcelId": "p030",
+       "subject": "Interview confirmed: Thu 13:00",
+       "yours": "later",
+       "his": "reply",
+       "weight": 0.685
+      },
+      {
+       "parcelId": "p003",
+       "subject": "[site] CI failed on main: pages build",
+       "yours": "info",
+       "his": "later",
+       "weight": 0.645
+      },
+      {
+       "parcelId": "p027",
+       "subject": "Meet your new AI co-pilot for email",
+       "yours": "archive",
+       "his": "spam",
+       "weight": 0.316
+      },
+      {
+       "parcelId": "p031",
+       "subject": "You're using 92 % of your storage",
+       "yours": "archive",
+       "his": "reply",
+       "weight": 0.316
+      },
+      {
+       "parcelId": "p040",
+       "subject": "Top 10 links this week",
+       "yours": "info",
+       "his": "later",
+       "weight": 0.316
+      },
+      {
+       "parcelId": "p028",
+       "subject": "[games] PR #14 review requested",
+       "yours": "info",
+       "his": "reply",
+       "weight": 0.314
+      }
+     ]
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 2,
+    "valid": 8,
+    "rejected": 14,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job-Board · TechJobs",
+       "subject": "Job Closing Soon: Senior SRE (Stockholm)",
+       "snippet": "Don't miss this opportunity to join our team as a Senior SRE.",
+       "badge": "archive",
+       "bin": "archive"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · GitHub",
+       "subject": "New Pull Request: runner lags on old Android",
+       "snippet": "We've found a bug in our runner that affects older Android versions.",
+       "badge": "info",
+       "bin": "info"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · PayHub",
+       "subject": "Invoice 3391 – payment overdue",
+       "snippet": "Your payment is overdue and needs to be settled today.",
+       "badge": "spam",
+       "bin": "spam"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · NovaTech",
+       "subject": "Mockups for the games index",
+       "snippet": "We need your feedback on the mockups for the games index.",
+       "badge": "reply",
+       "bin": "reply"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · AdTech",
+       "subject": "Monthly Salary Report: Sweden 2026",
+       "snippet": "Your monthly salary report for Sweden 2026 is available.",
+       "badge": "spam",
+       "bin": "spam"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job-Board · TechJobs",
+       "subject": "New Backend Role Available",
+       "snippet": "We are looking for a skilled backend developer to join our team.",
+       "badge": "later",
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · SupportHub",
+       "subject": "Service Notice: Maintenance Scheduled",
+       "snippet": "Our service will be unavailable for maintenance on Friday.",
+       "badge": "archive",
+       "bin": "archive"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "question",
+       "bin": "reply"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechHub",
+       "subject": "New Backend Developer Job in Stockholm",
+       "snippet": "We are looking for a skilled backend developer to join our team.",
+       "bin": "job-board"
+      },
+      "problems": [
+       "bin job-board"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · FinTech",
+       "subject": "Payment Overdue: Invoice 3391",
+       "snippet": "Please pay the outstanding amount to avoid late fees.",
+       "bin": "invoice"
+      },
+      "problems": [
+       "bin invoice"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · NovaTech",
+       "subject": "New Product Launch: Get Exclusive Access",
+       "snippet": "Be one of the first to experience our new product.",
+       "bin": "marketing"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · CodeHost",
+       "subject": "New Pull Request: Merge Request",
+       "snippet": "This pull request is waiting for review.",
+       "bin": "archive"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechHub",
+       "subject": "Senior SRE Job in Stockholm",
+       "snippet": "We are looking for a senior SRE to join our team.",
+       "bin": "job-board"
+      },
+      "problems": [
+       "bin job-board"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · NovaTech",
+       "subject": "Exclusive Offer: Get 10% Off",
+       "snippet": "Use the code NOVATECH10 at checkout.",
+       "bin": "marketing"
+      },
+      "problems": [
+       "bin marketing"
+      ]
+     }
+    ],
+    "rubric": [
+     "If the subject contains a question, assign it to 'reply'.",
+     "If the subject is a job posting, assign it to 'job-board'.",
+     "If the subject is related to a payment or invoice, assign it to 'invoice'."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 1,
+    "rejected": 19,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "bin": "reply"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer! Don't miss out on this deal.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · MyProject",
+       "subject": "14 new jobs matching 'backend, remote'",
+       "snippet": "Check out these backend remote jobs!",
+       "bin": "archive"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Support",
+       "subject": "Issue 88: local LLMs on a laptop",
+       "snippet": "Please check your local LLM setup.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechTalks",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer! Don't miss out on this deal.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · MyProject",
+       "subject": "Re: Platform engineer role – next step?",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · TechInvoice",
+       "subject": "Invoice 3391 – payment overdue",
+       "snippet": "Your payment is overdue. Please contact us immediately.",
+       "bin": "reply"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "newsletter",
+       "sender": "Newsletter · TechNews",
+       "subject": "Your application was viewed",
+       "snippet": "Your application was viewed by our team. Please check your inbox for more details.",
+       "bin": "reply"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer! Don't miss out on this deal.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechTalks",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer! Don't miss out on this deal.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "bin": "reply"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer on all products 🔥",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · CodeReview",
+       "subject": "Quick question about the log schema",
+       "snippet": "I'm having trouble understanding the log output. Any help would be appreciated.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · 3391",
+       "subject": "Invoice 3391 – payment overdue",
+       "snippet": "Payment is overdue. Please review and make the necessary adjustments.",
+       "bin": "reply"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechTalks",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer on all products 🔥",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · Pinewood Talent",
+       "subject": "Re: Platform engineer role – next step?",
+       "snippet": "Thanks for the follow-up. I'm still considering the options.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Support",
+       "subject": "Dataset access – which split?",
+       "snippet": "I need help understanding the dataset access options.",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "marketing",
+       "sender": "Marketing · TechTalks",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer on all products 🔥",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job Board · TechJobs",
+       "subject": "48h only: 30% off everything 🔥",
+       "snippet": "Limited time offer on all products 🔥",
+       "bin": "info"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize 'reply' for direct communication with collaborators and job-board inquiries.",
+     "Archive 'FYI' and 'done' items for future reference.",
+     "Move 'later' items to the 'info' bin for further consideration.",
+     "Classify 'info' items as needing more details before action.",
+     "Sort 'spam' items based on urgency and relevance to the sender's role."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 7,
+    "ms": 36139,
+    "invalid": 1,
+    "retries": 1,
+    "wallMs": 36147
+   },
+   "qwen2.5:1.5b": {
+    "calls": 6,
+    "ms": 21211,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 21212
+   }
+  }
+ },
+ "endedAt": "2026-10-31T16:22:26.767Z",
+ "wallMs": 193269,
+ "output": {
+  "round": "rounds/round-002-sim.json",
+  "parcels": 29,
+  "carried": 20,
+  "ab": 3
+ }
+}

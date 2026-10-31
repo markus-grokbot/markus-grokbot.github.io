@@ -1,0 +1,613 @@
+{
+ "schema": "parcels-round",
+ "version": "1.0.0",
+ "roundId": "round-002-sim",
+ "roundNo": 2,
+ "synthetic": true,
+ "sim": true,
+ "createdAt": "2026-10-31T16:21:29.406Z",
+ "basedOn": {
+  "round": "round-001",
+  "log": "logs/sim/parcels-round-001-casual-seed1.json"
+ },
+ "note": "SIM DRY-RUN round, built from a SIM log; never graded into the human leaderboard. SYNTHETIC fictional parcels: 20 carried from round-001 (most disputed first) + parcels written by the models. models[*].labels are blind predictions, never shown in the game.",
+ "bins": [
+  {
+   "id": "reply",
+   "label": "Reply",
+   "emoji": "↩️",
+   "swipe": "right",
+   "key": "1",
+   "rule": "he must write back himself"
+  },
+  {
+   "id": "archive",
+   "label": "Archive",
+   "emoji": "🗄️",
+   "swipe": "left",
+   "key": "2",
+   "rule": "FYI / done / automatic, no action"
+  },
+  {
+   "id": "later",
+   "label": "Later",
+   "emoji": "⏰",
+   "swipe": "up",
+   "key": "3",
+   "rule": "worth reading or doing, not now"
+  },
+  {
+   "id": "info",
+   "label": "Needs info",
+   "emoji": "❓",
+   "swipe": null,
+   "key": "4",
+   "rule": "cannot act until a detail is supplied or clarified"
+  },
+  {
+   "id": "spam",
+   "label": "Spam / ignore",
+   "emoji": "🚫",
+   "swipe": "down",
+   "key": "5",
+   "rule": "marketing, noise or suspicious"
+  }
+ ],
+ "parcels": [
+  {
+   "id": "p020",
+   "senderType": "marketing",
+   "sender": "Rewards · Fuelpoint",
+   "subject": "You've earned 0 points this month",
+   "snippet": "Come back and fill up to keep your status. Tap to see offers.",
+   "badge": null,
+   "author": "seed",
+   "anchor": true,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p008",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Vinterberg Search",
+   "subject": "Exciting opportunity!!! (urgent)",
+   "snippet": "I came across your profile and think you'd be a perfect fit for a role I can't name yet.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p038",
+   "senderType": "service",
+   "sender": "Domain registrar",
+   "subject": "Your domain renews in 30 days",
+   "snippet": "Auto-renew is on. Card ending in **** will be charged 149 kr.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p011",
+   "senderType": "job-board",
+   "sender": "Application update · Talentloop",
+   "subject": "Your application was viewed",
+   "snippet": "A recruiter at a logistics scale-up viewed your application for 'ML engineer'.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "r002-llama323b-05",
+   "senderType": "collaborator",
+   "sender": "Collaborator · CodeForge",
+   "subject": "Question about Project Requirements",
+   "snippet": "Can you clarify the project deadline?",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorBin": "reply",
+   "anchor": false
+  },
+  {
+   "id": "r002-qwen2515b-01",
+   "senderType": "newsletter",
+   "sender": "Newsletter · TechTalks",
+   "subject": "TechTalks Newsletter",
+   "snippet": "This week's newsletter is out. Check it out!",
+   "badge": null,
+   "author": "qwen2.5:1.5b",
+   "authorBin": "later",
+   "anchor": false
+  },
+  {
+   "id": "p030",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Northlake Talent",
+   "subject": "Interview confirmed: Thu 13:00",
+   "snippet": "Calendar invite sent. The panel is two engineers and a product lead.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p013",
+   "senderType": "github",
+   "sender": "Code host notifications",
+   "subject": "[games] New issue: runner lags on old Android",
+   "snippet": "Frame drops after 20 s on a 2019 phone. Which browser version do you support?",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "r002-llama323b-06",
+   "senderType": "service",
+   "sender": "Service · TechSupport",
+   "subject": "System Downtime Notification",
+   "snippet": "Our system is currently experiencing technical difficulties.",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorBin": "archive",
+   "anchor": false
+  },
+  {
+   "id": "r002-llama323b-01",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Pinewood Talent",
+   "subject": "New Backend Role Available",
+   "snippet": "We are looking for a skilled backend developer to join our team.",
+   "badge": "job-board",
+   "author": "llama3.2:3b",
+   "authorBin": "later",
+   "anchor": false
+  },
+  {
+   "id": "p018",
+   "senderType": "collaborator",
+   "sender": "Collaborator · research group",
+   "subject": "Dataset access – which split?",
+   "snippet": "I can send the data, but I need to know whether you want the 2025 split or the full archive.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p007",
+   "senderType": "newsletter",
+   "sender": "Newsletter · The Weekly Diff",
+   "subject": "Issue 88: local LLMs on a laptop",
+   "snippet": "This week: quantisation tricks, small-model evals and a CPU-only benchmark.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p004",
+   "senderType": "marketing",
+   "sender": "Offers · Brightcart",
+   "subject": "48h only: 30% off everything 🔥",
+   "snippet": "Your exclusive code is waiting. Free shipping on orders over 500 kr.",
+   "badge": null,
+   "author": "seed",
+   "anchor": true,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p014",
+   "senderType": "marketing",
+   "sender": "Webinar team · DataHarbor",
+   "subject": "Last chance to register: AI in logistics",
+   "snippet": "Join 2,000 leaders on Thursday. Seats are filling up fast.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p009",
+   "senderType": "service",
+   "sender": "Account security · Notely",
+   "subject": "New sign-in from Chrome on Linux",
+   "snippet": "If this was you, you can ignore this message. Otherwise reset your password.",
+   "badge": "security",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "r002-llama323b-07",
+   "senderType": "collaborator",
+   "sender": "Collaborator · CodeForge",
+   "subject": "Question about Project Timeline",
+   "snippet": "Can you provide an update on the project timeline?",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorBin": "reply",
+   "anchor": false
+  },
+  {
+   "id": "r002-llama323b-02",
+   "senderType": "collaborator",
+   "sender": "Collaborator · NovaTech",
+   "subject": "Dataset Access Request",
+   "snippet": "Can you provide access to the dataset for our project?",
+   "badge": "info",
+   "author": "llama3.2:3b",
+   "authorBin": "info",
+   "anchor": false
+  },
+  {
+   "id": "p025",
+   "senderType": "job-board",
+   "sender": "Job alert · Fjordhire",
+   "subject": "Job closing soon: Senior SRE (Stockholm)",
+   "snippet": "Applications close in 2 days. 87 people have applied.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p012",
+   "senderType": "invoice",
+   "sender": "Accounts · Stellan Print AB",
+   "subject": "Invoice 3391 – payment overdue",
+   "snippet": "We have not received payment for invoice 3391. Please confirm the order number you used.",
+   "badge": "overdue",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "r002-llama323b-08",
+   "senderType": "service",
+   "sender": "Service · TechSupport",
+   "subject": "System Update Notification",
+   "snippet": "Our system is currently undergoing maintenance.",
+   "badge": null,
+   "author": "llama3.2:3b",
+   "authorBin": "archive",
+   "anchor": false
+  },
+  {
+   "id": "p005",
+   "senderType": "collaborator",
+   "sender": "Collaborator · open-source project",
+   "subject": "Quick question about the log schema",
+   "snippet": "Should ext fields be per level or per session? I can open a PR either way, just tell me which.",
+   "badge": "question",
+   "author": "seed",
+   "anchor": true,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "r002-llama323b-04",
+   "senderType": "service",
+   "sender": "Service · SupportHub",
+   "subject": "Service Notice: Maintenance Scheduled",
+   "snippet": "Our service will be unavailable for maintenance on Friday.",
+   "badge": "archive",
+   "author": "llama3.2:3b",
+   "authorBin": "archive",
+   "anchor": false
+  },
+  {
+   "id": "r002-llama323b-03",
+   "senderType": "marketing",
+   "sender": "Marketing · AdTech",
+   "subject": "New Product Launch: Get Exclusive Access",
+   "snippet": "Be one of the first to experience our new product.",
+   "badge": "spam",
+   "author": "llama3.2:3b",
+   "authorBin": "spam",
+   "anchor": false
+  },
+  {
+   "id": "p002",
+   "senderType": "job-board",
+   "sender": "Job digest · Fjordhire",
+   "subject": "14 new jobs matching 'backend, remote'",
+   "snippet": "Senior Go developer, Data engineer (hybrid), Staff SRE and 11 more from this week.",
+   "badge": "digest",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p017",
+   "senderType": "newsletter",
+   "sender": "Digest · Nordic Dev Jobs",
+   "subject": "Monthly salary report: Sweden 2026",
+   "snippet": "Median backend salaries rose 4 %. Full table and methodology inside.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p039",
+   "senderType": "collaborator",
+   "sender": "Collaborator · ex-colleague",
+   "subject": "Coffee next week?",
+   "snippet": "I'm in town Tue–Thu. Any morning works for me, you pick.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p024",
+   "senderType": "newsletter",
+   "sender": "Newsletter · Small Models Monthly",
+   "subject": "Gemma, Qwen and Llama compared on CPU",
+   "snippet": "We ran 40 prompts on three 2–3B models. Spoiler: JSON mode matters more than size.",
+   "badge": null,
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p003",
+   "senderType": "github",
+   "sender": "Code host notifications",
+   "subject": "[site] CI failed on main: pages build",
+   "snippet": "Run #212 failed in 'deploy' after 41 s. 1 job failed, 2 skipped.",
+   "badge": "failing",
+   "author": "seed",
+   "anchor": false,
+   "carriedFrom": "round-001"
+  },
+  {
+   "id": "p001",
+   "senderType": "recruiter",
+   "sender": "Recruiter · Northlake Talent",
+   "subject": "Re: Platform engineer role – next step?",
+   "snippet": "Thanks for your note. Could you share two time slots next week for a 30 min intro call?",
+   "badge": "reply needed",
+   "author": "seed",
+   "anchor": true,
+   "carriedFrom": "round-001"
+  }
+ ],
+ "models": {
+  "llama3.2:3b": {
+   "labels": {
+    "p020": "spam",
+    "p008": "reply",
+    "p038": "archive",
+    "p011": "later",
+    "r002-llama323b-05": "info",
+    "r002-qwen2515b-01": "archive",
+    "p030": "archive",
+    "p013": "info",
+    "r002-llama323b-06": "archive",
+    "r002-llama323b-01": "archive",
+    "p018": "info",
+    "p007": "later",
+    "p004": "spam",
+    "p014": "later",
+    "p009": "archive",
+    "r002-llama323b-07": "reply",
+    "r002-llama323b-02": "info",
+    "p025": "archive",
+    "p012": "archive",
+    "r002-llama323b-08": "archive",
+    "p005": "reply",
+    "r002-llama323b-04": "archive",
+    "r002-llama323b-03": "spam",
+    "p002": "later",
+    "p017": "info",
+    "p039": "reply",
+    "p024": "archive",
+    "p003": "info",
+    "p001": "reply"
+   },
+   "summaries": {
+    "p020": "Marketing email, read later",
+    "p008": "Job opportunity, reply now",
+    "p038": "Domain renewal, FYI",
+    "p011": "Application update, read later",
+    "r002-llama323b-05": "Project question, info needed",
+    "r002-qwen2515b-01": "Newsletter, FYI",
+    "p030": "Interview confirmed, FYI",
+    "p013": "Game issue, info needed",
+    "r002-llama323b-06": "System Downtime, FYI",
+    "r002-llama323b-01": "Job posting, archive",
+    "p018": "Dataset access, clarify split details",
+    "p007": "Weekly digest, read later",
+    "p004": "Exclusive offer, ignore",
+    "p014": "Webinar, read later",
+    "p009": "Password reset, FYI",
+    "r002-llama323b-07": "Update needed, reply required",
+    "r002-llama323b-02": "Dataset access info needed",
+    "p025": "Job alert, read later",
+    "p012": "Invoice, FYI",
+    "r002-llama323b-08": "System update, done",
+    "p005": "Log schema question",
+    "r002-llama323b-04": "Service maintenance notice",
+    "r002-llama323b-03": "Marketing spam",
+    "p002": "Job digest, read later",
+    "p017": "Salary report, need details",
+    "p039": "Coffee meetup, respond now",
+    "p024": "Newsletter, read later",
+    "p003": "CI failed, info needed",
+    "p001": "Platform role, respond now"
+   },
+   "rubric": [
+    "If the subject contains a question, assign it to 'reply'.",
+    "If the subject is a job posting, assign it to 'job-board'.",
+    "If the subject is related to a payment or invoice, assign it to 'invoice'."
+   ],
+   "authored": 8,
+   "stats": {
+    "calls": 7,
+    "ms": 36139,
+    "invalid": 1,
+    "retries": 1,
+    "wallMs": 36147
+   }
+  },
+  "qwen2.5:1.5b": {
+   "labels": {
+    "p020": "reply",
+    "p008": "later",
+    "p038": "info",
+    "p011": "info",
+    "r002-llama323b-05": "info",
+    "r002-qwen2515b-01": "archive",
+    "p030": "info",
+    "p013": "info",
+    "r002-llama323b-06": "info",
+    "r002-llama323b-01": "reply",
+    "p018": "reply",
+    "p007": "info",
+    "p004": "later",
+    "p014": "info",
+    "p009": "archive",
+    "r002-llama323b-07": "reply",
+    "r002-llama323b-02": "archive",
+    "p025": "info",
+    "p012": "info",
+    "r002-llama323b-08": "info",
+    "p005": "reply",
+    "r002-llama323b-04": "archive",
+    "r002-llama323b-03": "spam",
+    "p002": "info",
+    "p017": "info",
+    "p039": "reply",
+    "p024": "info",
+    "p003": "archive",
+    "p001": "later"
+   },
+   "summaries": {
+    "p020": "Respond to points earned",
+    "p008": "Job opportunity, later",
+    "p038": "Domain renewal reminder, info needed",
+    "p011": "Application viewed, info needed",
+    "r002-llama323b-05": "Project requirement clarification, info needed",
+    "r002-qwen2515b-01": "TechTalks Newsletter, FYI",
+    "p030": "Interview confirmation, Calendar invite",
+    "p013": "Runner lag, Frame drops, Browser version",
+    "r002-llama323b-06": "System downtime, read later",
+    "r002-llama323b-01": "Backend role, job opportunity",
+    "p018": "Dataset access details",
+    "p007": "Weekly newsletter, read later",
+    "p004": "Offer, read later",
+    "p014": "Webinar registration, read later",
+    "p009": "Account security, read later",
+    "r002-llama323b-07": "Update project timeline",
+    "r002-llama323b-02": "Dataset access request",
+    "p025": "Senior SRE (Stockholm) job",
+    "p012": "Payment overdue invoice",
+    "r002-llama323b-08": "System update notification",
+    "p005": "Quick question, open PR",
+    "r002-llama323b-04": "Service Notice, FYI",
+    "r002-llama323b-03": "Product Launch, Marketing",
+    "p002": "New jobs, read later",
+    "p017": "Salary report, read later",
+    "p039": "Respond to job inquiry",
+    "p024": "Compare models, read later",
+    "p003": "CI failure, read later",
+    "p001": "Follow up, read later"
+   },
+   "rubric": [
+    "Prioritize 'reply' for direct communication with collaborators and job-board inquiries.",
+    "Archive 'FYI' and 'done' items for future reference.",
+    "Move 'later' items to the 'info' bin for further consideration.",
+    "Classify 'info' items as needing more details before action.",
+    "Sort 'spam' items based on urgency and relevance to the sender's role."
+   ],
+   "authored": 1,
+   "stats": {
+    "calls": 6,
+    "ms": 21211,
+    "invalid": 0,
+    "retries": 0,
+    "wallMs": 21212
+   }
+  }
+ },
+ "reference": {
+  "p011": "archive",
+  "p013": "info",
+  "p018": "info",
+  "p025": "archive",
+  "p012": "info",
+  "p002": "later",
+  "p024": "later",
+  "p017": "later",
+  "p038": "archive",
+  "p008": "spam",
+  "p039": "reply",
+  "p030": "archive",
+  "p003": "reply",
+  "p020": "spam",
+  "p007": "later",
+  "p004": "spam",
+  "p005": "reply",
+  "p001": "reply",
+  "p014": "spam",
+  "p009": "archive"
+ },
+ "abQuestions": [
+  {
+   "id": "round-002-sim-ab1",
+   "parcelId": "p020",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "p020:llama323b",
+    "model": "llama3.2:3b",
+    "text": "Marketing email, read later"
+   },
+   "b": {
+    "id": "p020:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "Respond to points earned"
+   }
+  },
+  {
+   "id": "round-002-sim-ab2",
+   "parcelId": "p008",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "p008:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "Job opportunity, later"
+   },
+   "b": {
+    "id": "p008:llama323b",
+    "model": "llama3.2:3b",
+    "text": "Job opportunity, reply now"
+   }
+  },
+  {
+   "id": "round-002-sim-ab3",
+   "parcelId": "p038",
+   "criterion": "Which summary badge makes this parcel quicker to sort?",
+   "a": {
+    "id": "p038:qwen2515b",
+    "model": "qwen2.5:1.5b",
+    "text": "Domain renewal reminder, info needed"
+   },
+   "b": {
+    "id": "p038:llama323b",
+    "model": "llama3.2:3b",
+    "text": "Domain renewal, FYI"
+   }
+  }
+ ],
+ "pipeline": {
+  "runDir": "runs/round-002-sim",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096,
+   "num_predict": 1800
+  }
+ }
+}
