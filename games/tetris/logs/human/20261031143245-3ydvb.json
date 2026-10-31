@@ -1,0 +1,226 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.0.0",
+ "game": {
+  "id": "tetris",
+  "version": "0.1.0",
+  "iteration": 1,
+  "namespace": "tetris"
+ },
+ "run": {
+  "id": "20261031143245-3ydvb",
+  "type": "human",
+  "startedAt": "2026-10-31T14:32:45.889Z",
+  "endedAt": "2026-10-31T14:35:32.362Z",
+  "device": {
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+   "screen": "375x667",
+   "dpr": 2,
+   "touch": true,
+   "lang": "sv-SE",
+   "viewport": "375x549"
+  },
+  "player": {
+   "kind": "human",
+   "handle": "markus"
+  },
+  "seed": null,
+  "tuningSource": "tuning.json@2026-10-31T14:00:00Z"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "level": 1,
+    "linesToClear": 6,
+    "gravityMs": 900,
+    "lockDelayMs": 500
+   },
+   "startedAt": "2026-10-31T14:32:56.559Z",
+   "endedAt": "2026-10-31T14:35:32.360Z",
+   "durationMs": 155801,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 155801,
+    "score": 1914,
+    "actions": 32,
+    "misplays": 6,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 10992,
+     "type": "hard_drop"
+    },
+    {
+     "t": 20076,
+     "type": "hard_drop"
+    },
+    {
+     "t": 26482,
+     "type": "hard_drop"
+    },
+    {
+     "t": 29852,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 29852,
+     "type": "hard_drop"
+    },
+    {
+     "t": 32449,
+     "type": "hard_drop"
+    },
+    {
+     "t": 50449,
+     "type": "hard_drop"
+    },
+    {
+     "t": 57263,
+     "type": "hard_drop"
+    },
+    {
+     "t": 61231,
+     "type": "hard_drop"
+    },
+    {
+     "t": 66616,
+     "type": "hard_drop"
+    },
+    {
+     "t": 71030,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 71030,
+     "type": "hard_drop"
+    },
+    {
+     "t": 77084,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 77084,
+     "type": "hard_drop"
+    },
+    {
+     "t": 82198,
+     "type": "hard_drop"
+    },
+    {
+     "t": 91531,
+     "type": "hard_drop"
+    },
+    {
+     "t": 92898,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 92898,
+     "type": "hard_drop"
+    },
+    {
+     "t": 97252,
+     "type": "hard_drop"
+    },
+    {
+     "t": 99764,
+     "type": "hard_drop"
+    },
+    {
+     "t": 103652,
+     "type": "hard_drop"
+    },
+    {
+     "t": 109252,
+     "type": "lines",
+     "n": 1
+    },
+    {
+     "t": 109252,
+     "type": "hard_drop"
+    },
+    {
+     "t": 113319,
+     "type": "hard_drop"
+    },
+    {
+     "t": 118299,
+     "type": "hard_drop"
+    },
+    {
+     "t": 123601,
+     "type": "hard_drop"
+    },
+    {
+     "t": 128232,
+     "type": "hard_drop"
+    },
+    {
+     "t": 131532,
+     "type": "hard_drop"
+    },
+    {
+     "t": 133887,
+     "type": "hard_drop"
+    },
+    {
+     "t": 139700,
+     "type": "hard_drop"
+    },
+    {
+     "t": 143467,
+     "type": "hard_drop"
+    },
+    {
+     "t": 147286,
+     "type": "hard_drop"
+    },
+    {
+     "t": 151054,
+     "type": "hard_drop"
+    },
+    {
+     "t": 155800,
+     "type": "lines",
+     "n": 4
+    },
+    {
+     "t": 155801,
+     "type": "hard_drop"
+    },
+    {
+     "t": 155801,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "tetris": {
+     "lines": 9,
+     "pieces": 32,
+     "maxHeight": 9,
+     "holesEnd": 4,
+     "avgHoles": 2.75,
+     "bumpinessEnd": 2,
+     "gravityMs": 900,
+     "lockDelayMs": 500
+    }
+   }
+  }
+ ],
+ "transitions": [],
+ "summary": {
+  "levelsCompleted": 1,
+  "highestLevel": 1,
+  "totalDurationMs": 155801
+ }
+}
