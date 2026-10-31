@@ -111,14 +111,22 @@ function humanTruth(log) {
 function grade(round, truth) {
   const by = {}; truth.decisions.forEach(d => { if (!by[d.parcelId] || (by[d.parcelId].repeat && !d.repeat)) by[d.parcelId] = d; }); const P = {}; round.parcels.forEach(p => { P[p.id] = p; }); const out = {}; // first non-repeat sort is the truth const P = {}; round.parcels.forEach(p => { P[p.id] = p; }); const out = {};
   Object.keys(round.models).forEach(m => {
-    const L = round.models[m].labels; let w = 0, wa = 0, n = 0, a = 0; const misses = [], conf = {};
-    Object.keys(by).forEach(pid => { if (!L[pid]) return; const d = by[pid], ok = L[pid] === d.bin; n++; if (ok) a++; w += d.weight; if (ok) wa += d.weight; else misses.push({ parcelId: pid, subject: P[pid] ? P[pid].subject : pid, yours: L[pid], his: d.bin, weight: d.weight }); const k = L[pid] + '>' + d.bin; conf[k] = (conf[k] || 0) + 1; });
+    // expected agreement: v2 decisions carry a soft distribution (agreement = human soft prob of the model's bin) and a weight
+    // scaled by the stronger-axis confidence; v1 hard sorts count as one-hot at full confidence. Per-axis: the model bin's axis
+    // target vs the human x / y, weighted by that axis's confidence (spam has no x target).
+    const L = round.models[m].labels; let w = 0, wa = 0, n = 0, a = 0, wx = 0, ax = 0, wy = 0, ay = 0; const misses = [], conf = {};
+    Object.keys(by).forEach(pid => { if (!L[pid]) return; const d = by[pid], hard = d.bin, v2 = !!d.soft, ag = v2 ? (d.soft[L[pid]] || 0) : (L[pid] === hard ? 1 : 0), wt = d.weight * (v2 ? 0.5 + 0.5 * d.conf : 1);
+      const pos = v2 ? d : AX.fromBin(hard), xa = AX.axisAgreement(L[pid], pos.x, pos.y), cx = v2 ? d.confX : 1, cy = v2 ? d.confY : 1;
+      if (xa.x != null) { wx += d.weight * cx; ax += d.weight * cx * xa.x; } if (xa.y != null) { wy += d.weight * cy; ay += d.weight * cy * xa.y; }
+      n++; if (L[pid] === hard) a++; w += wt; wa += wt * ag; if (ag < 0.5) misses.push({ parcelId: pid, subject: P[pid] ? P[pid].subject : pid, yours: L[pid], his: hard, agreement: +ag.toFixed(3), weight: +wt.toFixed(3) }); const k = L[pid] + '>' + hard; conf[k] = (conf[k] || 0) + 1; });
+    const axisX = wx ? +(ax / wx).toFixed(3) : null, axisY = wy ? +(ay / wy).toFixed(3) : null;
     const shown = truth.ab.filter(d => d.modelA === m || d.modelB === m), wins = shown.filter(d => d.winnerModel === m).length;
     const authored = truth.decisions.filter(d => P[d.parcelId] && P[d.parcelId].author === m), clarity = authored.length ? +(authored.reduce((s, d) => s + d.weight, 0) / authored.length).toFixed(3) : null;
     const wAg = w ? wa / w : null, abRate = shown.length ? wins / shown.length : null;
     const parts = [[0.7, wAg], [0.2, abRate], [0.1, clarity]].filter(x => x[1] != null), score = parts.length ? parts.reduce((s, x) => s + x[0] * x[1], 0) / parts.reduce((s, x) => s + x[0], 0) : null;
-    out[m] = { graded: n, rawAgreement: n ? +(a / n).toFixed(3) : null, weightedAgreement: wAg == null ? null : +wAg.toFixed(3), abShown: shown.length, abWins: wins, abWinRate: abRate == null ? null : +abRate.toFixed(3), authoredSorted: authored.length, authoredClarity: clarity, score: score == null ? null : +score.toFixed(3), confusion: conf, misses: misses.sort((x, y) => y.weight - x.weight) };
+    out[m] = { graded: n, rawAgreement: n ? +(a / n).toFixed(3) : null, weightedAgreement: wAg == null ? null : +wAg.toFixed(3), abShown: shown.length, abWins: wins, abWinRate: abRate == null ? null : +abRate.toFixed(3), authoredSorted: authored.length, authoredClarity: clarity, axisX: axisX, axisY: axisY, score: score == null ? null : +score.toFixed(3), confusion: conf, misses: misses.sort((x, y) => y.weight - x.weight) };
   });
   return out;
 }
+const AX = require('../axes.js');
 module.exports = { extractObjects, extractRubric, ROOT, REPO, BINS, BIN_IDS, SENDER_TYPES, MODELS, OPTIONS, short, pad, readJ, writeJ, findHost, generate, labelPrompt, genPrompt, validParcel, textProblems, labelAll, abQuestions, humanTruth, grade, median };

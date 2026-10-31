@@ -1,6 +1,6 @@
 {
  "schema": "qualities-registry",
- "version": "1.1.0",
+ "version": "1.2.0",
  "model": "games/shared/qualities.js",
  "note": "Which qualities each game measures and how. Scores 0-100, confidence 0-1 (n/(n+k)), 'rough' below 0.5. Gameplay estimates for picking a game, not assessments of a person.",
  "qualities": [
@@ -109,10 +109,10 @@
     "focus": "100*(1-(missed + 0.5*changed mind)/parcels shown)",
     "reaction": "median spawn->first touch, log scale 0.8 s=100 .. 6 s=0",
     "decisionSpeed": "median spawn->commit, log scale 1 s=100 .. 8 s=0 (merged with A/B questions)",
-    "accuracy": "anchor (clear-cut) parcels sorted to their expected bin",
+    "accuracy": "v1: anchor (clear-cut) parcels sorted to their expected bin; v2 field: mean soft probability on the anchor bin",
     "consistency": "100 - 3*sd(wave focus)",
     "endurance": "50 + 8*slope(wave focus) per wave (speed rises every wave)",
-    "decisiveness": "A/B summary questions (pairwise adapter)"
+    "decisiveness": "v2 field: mean stronger-axis confidence max(|x|,|y|), merged with A/B summary questions (pairwise adapter)"
    },
    "yields": [
     "mail-triage sorts that grade the Ollama models' bin predictions",

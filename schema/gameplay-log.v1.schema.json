@@ -383,7 +383,7 @@
    }
   }
  },
- "description": "1.1.0 (additive, backward compatible with 1.0.0): optional top-level session {id,kind,segments[]}, optional levels[].segment, ext.pairwise, lock events {how}. 1.2.0 (additive): optional top-level qualities {modelVersion, items{<quality>{score 0-100, confidence 0-1, label, evidence[]}}, runnerFocus}; ext.runner exposure counters. 1.2.x: ext.parcels (Parcel Panic waves: decisions[] {parcelId, bin, sortMs, firstMs, changedMind, binsTried, speed, speedAtSpawn, missed, repeat?, anchorBin?}); see games/parcels/LOOP.md.",
+ "description": "1.1.0 (additive, backward compatible with 1.0.0): optional top-level session {id,kind,segments[]}, optional levels[].segment, ext.pairwise, lock events {how}. 1.2.0 (additive): optional top-level qualities {modelVersion, items{<quality>{score 0-100, confidence 0-1, label, evidence[]}}, runnerFocus}; ext.runner exposure counters. 1.2.x: ext.parcels (Parcel Panic waves: decisions[] {parcelId, bin, sortMs, firstMs, changedMind, binsTried, speed, speedAtSpawn, missed, repeat?, anchorBin?}); v2 field mode (game 0.2.0, summary.parcels.mode='field2d', axesVersion) decisions[] {parcelId, x, y in [-1,1] (x act now..not now, y noise..worth it), dist{bin}, soft{bin} softmax, bin=argmax, pTop, confX=|x|, confY=|y|, conf=max, limitMs, timedOut, sortMs, firstMs, changedMind, zoneChanges, points, combo, missed, repeat?, anchorBin?}; see games/parcels/LOOP.md.",
  "$defs": {
   "pairwiseExt": {
    "type": "object",

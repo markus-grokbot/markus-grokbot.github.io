@@ -2,27 +2,43 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="theme-color" content="#14161c"><title>Parcel Panic · inbox triage game</title>
+<script>if (new URLSearchParams(location.search).get('v') === '1') location.replace('classic.html' + location.search);</script>
 <style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;height:100%;background:#14161c;color:#eee;font:14px system-ui,sans-serif;overscroll-behavior:none}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html,body{margin:0;height:100%;background:#14161c;color:#eee;font:14px system-ui,sans-serif;overscroll-behavior:none;overflow:hidden;position:fixed;inset:0}
 #app{display:flex;flex-direction:column;height:100%;max-width:560px;margin:0 auto;padding:env(safe-area-inset-top) 6px env(safe-area-inset-bottom)}
 #hud{display:flex;justify-content:space-between;align-items:center;padding:6px 4px;font-size:13px;color:#bbb}#hud b{color:#fff}
-#belt{position:relative;flex:1;min-height:0;overflow:hidden;border-radius:12px;background:repeating-linear-gradient(180deg,#1c2029 0 22px,#191c24 22px 44px);touch-action:none;user-select:none}
-#belt.flash{box-shadow:inset 0 0 0 3px #e55}
-.card{position:absolute;left:8%;width:84%;padding:8px 10px;border-radius:10px;background:#262b37;border-left:6px solid #888;box-shadow:0 3px 8px #0008;transition:opacity .15s}
-.card.tg{background:#2f3646;outline:2px solid #7cf}.card .s{font-size:11px;color:#9ab}.card .h{font-weight:600;margin:2px 0;font-size:14px}.card .n{font-size:12px;color:#ccc}
-.card .bd{display:inline-block;font-size:10px;padding:1px 6px;border-radius:8px;background:#444;margin-left:6px;color:#fd8}.card .arm{position:absolute;right:8px;top:6px;font-size:12px;color:#7cf}
-#bins{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:6px 0}#bins button{padding:10px 2px;border:0;border-radius:10px;background:#2a3040;color:#eee;font-size:12px;line-height:1.2}
-#bins button .e{font-size:20px;display:block}#bins button.on{background:#3b6fa0}#bins button small{display:block;font-size:9px;color:#9ab}
-#pop{position:absolute;left:0;right:0;top:40%;text-align:center;font-size:22px;font-weight:700;color:#fd8;pointer-events:none;opacity:0;transition:opacity .3s}
-#ov{position:fixed;inset:0;background:#14161cf2;display:flex;align-items:center;justify-content:center;padding:16px;z-index:5}#ov.hide,.hide{display:none!important}
+#field{position:relative;flex:1;min-height:0;overflow:hidden;border-radius:14px;touch-action:none;background:
+ radial-gradient(circle at 17.5% 19% ,#2f7a4f88 0,#2f7a4f00 34%),radial-gradient(circle at 17.5% 52.5%,#3a6fb088 0,#3a6fb000 30%),
+ radial-gradient(circle at 82.5% 19%,#a08a2f88 0,#a08a2f00 34%),radial-gradient(circle at 82.5% 52.5%,#6a6a7a88 0,#6a6a7a00 30%),
+ radial-gradient(circle at 50% 89%,#a0363688 0,#a0363600 34%),#1a1d25}
+#field.flash{box-shadow:inset 0 0 0 3px #e55}
+.zl{position:absolute;transform:translate(-50%,-50%);text-align:center;font-size:12px;color:#ddd;opacity:.75;pointer-events:none;transition:all .12s}.zl .e{font-size:22px;display:block}.zl.on{opacity:1;color:#fff;transform:translate(-50%,-50%) scale(1.25);text-shadow:0 0 8px #fff8}
+.ax{position:absolute;font-size:10px;color:#889;pointer-events:none;letter-spacing:.04em;text-transform:uppercase}
+#vline,#hline{position:absolute;background:#ffffff14;pointer-events:none}#vline{left:50%;top:0;bottom:0;width:1px}#hline{top:50%;left:0;right:0;height:1px}
+#card{position:absolute;width:168px;margin-left:-84px;margin-top:-46px;padding:7px 9px 9px;border-radius:12px;background:#2a3040ee;border-left:6px solid #888;box-shadow:0 4px 14px #000a;pointer-events:none;display:none}
+#card.held{outline:2px solid #7cf;background:#334059ee}#card .s{font-size:10px;color:#9ab}#card .h{font-weight:600;margin:2px 0;font-size:13px;line-height:1.2}#card .n{font-size:11px;color:#ccc;line-height:1.25;max-height:42px;overflow:hidden}
+#card .bd{display:inline-block;font-size:9px;padding:1px 5px;border-radius:8px;background:#444;margin-left:5px;color:#fd8}
+#card .bar{position:absolute;left:0;right:0;bottom:0;height:5px;border-radius:0 0 12px 12px;background:#7cf;transform-origin:left}
+#pt{position:absolute;width:16px;height:16px;margin:-8px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 6px #7cf;pointer-events:none;display:none;z-index:2}#card.held{opacity:.88}
+#card .t{position:absolute;right:7px;top:5px;font-size:11px;color:#fd8;font-variant-numeric:tabular-nums}
+#read{text-align:center;font-size:11px;color:#9ab;height:16px;padding-top:2px}
+#pop{position:absolute;left:0;right:0;top:44%;text-align:center;font-size:22px;font-weight:700;color:#fd8;pointer-events:none;opacity:0;transition:opacity .3s}
+#ov{position:fixed;inset:0;background:#14161cf2;display:flex;align-items:center;justify-content:center;padding:16px;z-index:5;overflow:auto}#ov.hide,.hide{display:none!important}
 #ov .box{max-width:460px;width:100%;text-align:center}#ov button{margin:6px;padding:12px 18px;border:0;border-radius:10px;background:#3b6fa0;color:#fff;font-size:15px}
+.pc{background:#262b37;border-left:6px solid #888;border-radius:10px;padding:8px 10px;text-align:left;margin:6px 0}.pc .s{font-size:11px;color:#9ab}.pc .h{font-weight:600}.pc .n{font-size:12px;color:#ccc}
 .ab{display:block;width:100%;text-align:left!important;background:#262b37!important;border:2px solid #445!important}.ab b{color:#fd8}
 table{margin:8px auto;border-collapse:collapse}td{padding:3px 8px;text-align:left}.k{color:#7cf;font-weight:600}.sim{background:#a50;color:#fff;padding:1px 6px;border-radius:6px;font-size:11px}
-#cd{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;color:#7cf;pointer-events:none}
+#cd{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:800;color:#7cf;pointer-events:none}
+a{color:#7cf}
 </style></head><body>
-<div id="app"><div id="hud"><span>Wave <b id="wv">1</b>/<b id="wt">4</b></span><span>Score <b id="sc">0</b></span><span>Combo <b id="cb">0</b></span><span>Speed <b id="sp">1.0</b>×</span><button id="bp" style="background:#333;color:#ccc;border:0;border-radius:8px;padding:4px 10px">❚❚</button></div>
-<div id="belt"><div id="pop"></div><div id="cd" class="hide"></div></div><div id="bins"></div>
-<div style="font-size:10px;color:#777;text-align:center;padding-bottom:4px">Swipe the glowing parcel: → Reply · ← Archive · ↑ Later · ↓ Spam — or tap a bin (tap twice to lock in fast). Keys 1–5.</div></div>
+<div id="app"><div id="hud"><span>Wave <b id="wv">1</b>/<b id="wt">3</b></span><span>Score <b id="sc">0</b></span><span>Combo <b id="cb">0</b></span><button id="bp" style="background:#333;color:#ccc;border:0;border-radius:8px;padding:4px 10px">❚❚</button></div>
+<div id="field"><div id="vline"></div><div id="hline"></div>
+ <span class="ax" style="left:6px;top:50%;transform:translateY(-130%)">◀ act now</span><span class="ax" style="right:6px;top:50%;transform:translateY(-130%)">not now ▶</span>
+ <span class="ax" style="left:50%;top:5px;transform:translateX(-50%)">▲ worth it</span><span class="ax" style="left:50%;bottom:4px;transform:translateX(-50%)">noise ▼</span>
+ <div id="zones"></div><div id="pt"></div><div id="card"><span class="t"></span><div class="s"></div><div class="h"></div><div class="n"></div><div class="bar"></div></div><div id="pop"></div><div id="cd" class="hide"></div></div>
+<div id="read">Drag anywhere on the field to move the parcel · let go to drop it</div>
+<div style="font-size:10px;color:#777;text-align:center;padding-bottom:4px">Between zones is fine: a clear left/right or up/down still counts. <a href="classic.html">Classic v1</a></div></div>
 <div id="ov"><div class="box">Loading…</div></div>
-<script src="../tetris/logger.js"></script><script src="../shared/qualities.js"></script><script src="engine.js"></script><script src="bot.js"></script><script src="session.js"></script><script src="parcels.js"></script>
+<script src="../tetris/logger.js"></script><script src="../shared/qualities.js"></script><script src="axes.js"></script><script src="engine.js"></script><script src="engine2.js"></script><script src="bot.js"></script><script src="session.js"></script><script src="parcels2.js"></script>
 </body></html>

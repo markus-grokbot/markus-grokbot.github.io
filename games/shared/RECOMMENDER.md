@@ -28,4 +28,4 @@ tone-data, creative-input, break, triage (mail triage warm-up / triage data → 
 last hour. Rules: focus-check → Lynx Dash; warm-up → Tetris (Lynx Dash if recent focus < 60); tone-data → Lynx Dash, or Tone Pit
 when short on time / tired (≥ 30 min this hour or endurance < 40); games longer than the time available drop; low recent focus on
 tone-data adds a "short break" option, because tired picks are noisier. `games/index.html` runs it on localStorage logs.
-Task `triage` (Mail triage warm-up / triage data) → Parcel Panic first (each sort also grades the local Ollama models; see games/parcels/LOOP.md), Tetris second; with low recent focus it notes that slow or changed sorts count less.
+Task `triage` (Mail triage warm-up / triage data) → Parcel Panic first (each sort also grades the local Ollama models; see games/parcels/LOOP.md), Tetris second; with low recent focus it notes that drops near the middle or changed minds count less. Since game 0.2.0 Parcel Panic is a calm 2D drag field (classic v1 at `?v=1`).

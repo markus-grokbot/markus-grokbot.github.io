@@ -189,6 +189,12 @@ speedAtSpawn, y, combo, points, missed, repeat?, anchorBin?}. Qualities adapter 
 anchors, consistency, endurance); recommender task `triage`. **The Ollama loop, upload steps and the next-round command are in
 [parcels/LOOP.md](parcels/LOOP.md).** After Markus uploads a round-N log to `logs/human/`: `node games/parcels/tools/next-round.js`.
 
+**v2 field (game 0.2.0, default since round-002; v1 kept at `?v=1` / `classic.html`).** Slow single parcel with a visible
+countdown (6 → 4.4 s), dragged anywhere on a 2D plane (`axes.js`: x act now ↔ not now, y noise ↔ worth it); decisions log
+x, y, dist, softmax `soft`, confX/confY. Engine `engine2.js`, bot `ParcelBot.createField`, sim `sim/run-sim2.js`, drag test
+`sim/drag-check.mjs`. Grading uses expected agreement from `soft` and per-axis scores; see parcels/LOOP.md. Round-001 was
+graded at roundWeight 0.5 because Markus found v1 too fast.
+
 ## Roadmap
 - **Iteration 1 (done):** 10 levels reachable, L1 = 6 lines (~1–5 min human calibration), logging, sim, tuner.
 - **Iteration 2:** ≥2 levels truly tuned from Markus's human logs (run tune.js once logs/human has files);

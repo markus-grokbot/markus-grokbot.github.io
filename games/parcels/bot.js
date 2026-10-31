@@ -22,3 +22,21 @@
   }
   return { BINS: BINS, guess: guess, create: create };
 });
+/* v2 field bot (SIM only): aims at the zone centre of its guess with gaussian noise; sometimes commits only one axis
+   (partial sort: the other coordinate stays near the middle). Drags in small steps, releases after a think time. */
+(function (root) {
+  var B = typeof module === 'object' && module.exports ? module.exports : root.ParcelBot, A = typeof module === 'object' && module.exports ? require('./axes.js') : root.ParcelAxes;
+  var SK2 = { casual: { acc: 0.7, think: 2600, sd: 0.28, partial: 0.25, slow: 0.08 }, good: { acc: 0.85, think: 1900, sd: 0.16, partial: 0.12, slow: 0.03 } };
+  B.createField = function (skill, rng) {
+    var k = SK2[skill] || SK2.casual, plan = null; function g() { return (rng() + rng() + rng() - 1.5) * 1.15; }
+    return { skill: skill, abChoose: B.create(skill, rng).abChoose, act: function (wave) {
+      var c = wave.current(), st = wave.state(); if (!c) { plan = null; return; }
+      if (!plan || plan.id !== c.p.id) { var bin = rng() < k.acc ? B.guess(c.p) : B.BINS[Math.floor(rng() * 5)], z = A.ZONES[bin], tx = z.x + g() * k.sd, ty = z.y + g() * k.sd;
+        if (rng() < k.partial) { if (rng() < 0.5) tx = g() * 0.15; else ty = g() * 0.15; }
+        plan = { id: c.p.id, grabAt: st.t + 500 + rng() * 900, relAt: st.t + k.think * (0.7 + rng() * 0.8) / st.speed, never: rng() < k.slow, tx: tx, ty: ty }; }
+      if (plan.never) return; var now = st.t;
+      if (!c.held && !c.touched && now >= plan.grabAt) { wave.grab(); plan.sx = c.x; plan.sy = c.y; plan.g0 = now; }
+      if (c.held) { var f = Math.min(1, (now - plan.g0) / Math.max(200, plan.relAt - plan.g0 - 150)); wave.move(plan.sx + (plan.tx - plan.sx) * f, plan.sy + (plan.ty - plan.sy) * f); if (now >= plan.relAt) wave.release(); }
+    } };
+  };
+})(typeof self !== 'undefined' ? self : this);

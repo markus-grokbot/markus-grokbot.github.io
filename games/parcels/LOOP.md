@@ -64,3 +64,34 @@ The human pipeline refuses sim logs and sim rounds; `--sim` refuses human logs.
 ## Seeding
 `tools/seed-round.js` built round-001 from `tools/seed-parcels.json` (40 hand-written fictional parcels) and blind predictions
 + summaries from llama3.2:3b and qwen2.5:1.5b (`runs/round-001-seed/`).
+
+## v2 "field" interaction (game 0.2.0, default; classic v1 at `?v=1` → `classic.html`)
+Markus's round-1 feedback: v1 was too fast to feel his sorts were accurate (21/58 missed, median sort 4.5 s). So round-001 was
+graded with `--round-weight 0.5` (every decision weight ×0.5 and `roundWeight: 0.5` + note stored in `data/model-scores.json`
+rounds/history; within one round the weighted agreement is a ratio and does not change, the factor matters in the per-model
+`cumulative` score = roundWeight-weighted mean over rounds).
+
+v2: one parcel at a time drifts from the top to the centre of a 2D field and shows a countdown (wave 1 6.0 s, wave 2 5.2 s,
+wave 3 4.4 s, each tightening 8 % within the wave; 3 × 50 s waves, 0.9 s gap). Drag with a finger **anywhere on the field**
+(relative 1:1 drag, pointer capture, `touch-action:none`, document touchmove blocked, so the page never scrolls); a ring
+marker shows the exact point, the card stays on-screen; `navigator.vibrate(12)` when entering a strong zone (Android only).
+Release = commit; timeout while held = commit at that spot (`timedOut:true`); never touched = miss.
+
+Axis mapping (`axes.js`, version 1.0.0), coordinates in [-1,1]:
+| axis | −1 | +1 |
+|---|---|---|
+| x | act now (Reply, Needs info) | not now (Later, Archive) |
+| y | noise (Spam) | worth it (Reply, Later) |
+
+Zone centres: Reply (−0.65, 0.62), Needs info (−0.65, −0.05), Later (0.65, 0.62), Archive (0.65, −0.05), Spam (0, −0.78);
+drawn as soft radial gradients. Logged per parcel: x, y, distance to each centre, `soft` = softmax(−d²/0.22), `bin` = argmax,
+`confX` = |x|, `confY` = |y|, `conf` = max. Partial sorting: a clear x with y near 0 still splits between e.g. Reply/Needs info
+and pays points ∝ the stronger axis (60 + 60·conf + 40·time left; conf < 0.25 = "undecided", 10 pts, combo reset).
+
+Grading v2 logs (`tools/lib.js grade`): agreement = human `soft[modelBin]` (expected agreement), decision weight × (0.5 + 0.5·conf).
+Per axis, each model bin has a target (Reply (−1, 1), Needs info (−0.8, 0.3), Later (0.8, 0.6), Archive (1, −0.2), Spam (–, −1))
+and `axisX`/`axisY` = confidence-weighted 1 − |human − target|/2, reported in the leaderboard (score formula unchanged:
+0.7 agreement + 0.2 A/B + 0.1 authored clarity). v1 logs grade as one-hot at the zone centre, so their numbers are unchanged.
+Qualities: accuracy = mean soft prob on anchor bins, decisiveness = mean `conf` (merged with A/B).
+Sim: `node games/parcels/sim/run-sim2.js --round round-002 --skill good --seed 1` (bot aims at its guess's centre with noise,
+sometimes one axis only). Browser: `?sim=1&skill=good&fast=16`; drag test: `node games/parcels/sim/drag-check.mjs`.

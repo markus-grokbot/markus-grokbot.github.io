@@ -1,0 +1,4582 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.2.0",
+ "game": {
+  "id": "parcels",
+  "version": "0.2.0",
+  "iteration": 2,
+  "namespace": "parcels"
+ },
+ "run": {
+  "id": "20261031171012-qjrof",
+  "type": "sim",
+  "startedAt": "2026-10-31T12:00:00.000Z",
+  "endedAt": "2026-10-31T12:02:57.158Z",
+  "device": {
+   "sim": true
+  },
+  "player": {
+   "bot": "ParcelBot.field",
+   "skill": "casual"
+  },
+  "seed": 2,
+  "tuningSource": "round:round-002"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "wave": 1,
+    "waveSpeed": 1,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T12:00:02.100Z",
+   "endedAt": "2026-10-31T12:00:57.333Z",
+   "durationMs": 55233.60302734375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 55233.60302734375,
+    "score": 1810,
+    "actions": 14,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 283.334716796875,
+     "type": "spawn",
+     "parcelId": "p020",
+     "limitMs": 5997,
+     "repeat": false
+    },
+    {
+     "t": 1233.33935546875,
+     "type": "zone",
+     "parcelId": "p020",
+     "bin": "later"
+    },
+    {
+     "t": 2550.012451171875,
+     "type": "zone",
+     "parcelId": "p020",
+     "bin": "archive"
+    },
+    {
+     "t": 3766.68505859375,
+     "type": "sort",
+     "parcelId": "p020",
+     "limitMs": 5997,
+     "speed": 1,
+     "anchorBin": "spam",
+     "missed": false,
+     "timedOut": false,
+     "x": 0.714,
+     "y": -0.054,
+     "dist": {
+      "reply": 1.521,
+      "info": 1.364,
+      "later": 0.677,
+      "archive": 0.064,
+      "spam": 1.018
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.112,
+      "archive": 0.88,
+      "spam": 0.008
+     },
+     "bin": "archive",
+     "pTop": 0.88,
+     "confX": 0.714,
+     "confY": 0.054,
+     "conf": 0.714,
+     "sortMs": 3467,
+     "firstMs": 617,
+     "changedMind": true,
+     "zoneChanges": 2,
+     "points": 125,
+     "combo": 1
+    },
+    {
+     "t": 4650.022705078125,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-08",
+     "limitMs": 5955,
+     "repeat": false
+    },
+    {
+     "t": 5483.360107421875,
+     "type": "zone",
+     "parcelId": "r002-llama323b-08",
+     "bin": "later"
+    },
+    {
+     "t": 6900.03369140625,
+     "type": "zone",
+     "parcelId": "r002-llama323b-08",
+     "bin": "archive"
+    },
+    {
+     "t": 8450.041259765625,
+     "type": "sort",
+     "parcelId": "r002-llama323b-08",
+     "limitMs": 5955,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.668,
+     "y": -0.193,
+     "dist": {
+      "reply": 1.549,
+      "info": 1.326,
+      "later": 0.813,
+      "archive": 0.144,
+      "spam": 0.89
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.05,
+      "archive": 0.922,
+      "spam": 0.028
+     },
+     "bin": "archive",
+     "pTop": 0.922,
+     "confX": 0.668,
+     "confY": 0.193,
+     "conf": 0.668,
+     "sortMs": 3783,
+     "firstMs": 517,
+     "changedMind": true,
+     "zoneChanges": 2,
+     "points": 125,
+     "combo": 2
+    },
+    {
+     "t": 9350.045654296875,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 5910,
+     "repeat": false
+    },
+    {
+     "t": 11350.055419921875,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 5910,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.046,
+     "y": 0.434,
+     "dist": {
+      "reply": 0.72,
+      "info": 0.848,
+      "later": 0.632,
+      "archive": 0.774,
+      "spam": 1.215
+     },
+     "soft": {
+      "reply": 0.261,
+      "info": 0.105,
+      "later": 0.449,
+      "archive": 0.181,
+      "spam": 0.003
+     },
+     "bin": "later",
+     "pTop": 0.449,
+     "confX": 0.046,
+     "confY": 0.434,
+     "conf": 0.434,
+     "sortMs": 1983,
+     "firstMs": 1400,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 113,
+     "combo": 2
+    },
+    {
+     "t": 12250.059814453125,
+     "type": "spawn",
+     "parcelId": "p012",
+     "limitMs": 5882,
+     "repeat": false
+    },
+    {
+     "t": 13800.0673828125,
+     "type": "zone",
+     "parcelId": "p012",
+     "bin": "reply"
+    },
+    {
+     "t": 14250.069580078125,
+     "type": "sort",
+     "parcelId": "p012",
+     "limitMs": 5882,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.835,
+     "y": 0.947,
+     "dist": {
+      "reply": 0.376,
+      "info": 1.014,
+      "later": 1.521,
+      "archive": 1.789,
+      "spam": 1.919
+     },
+     "soft": {
+      "reply": 0.983,
+      "info": 0.017,
+      "later": 0,
+      "archive": 0,
+      "spam": 0
+     },
+     "bin": "reply",
+     "pTop": 0.983,
+     "confX": 0.835,
+     "confY": 0.947,
+     "conf": 0.947,
+     "sortMs": 1983,
+     "firstMs": 1367,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 158,
+     "combo": 3
+    },
+    {
+     "t": 15150.073974609375,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 5854,
+     "repeat": false
+    },
+    {
+     "t": 17883.420654296875,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "spam"
+    },
+    {
+     "t": 18933.42578125,
+     "type": "sort",
+     "parcelId": "p008",
+     "limitMs": 5854,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.097,
+     "y": -0.543,
+     "dist": {
+      "reply": 1.288,
+      "info": 0.741,
+      "later": 1.382,
+      "archive": 0.895,
+      "spam": 0.256
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0.097,
+      "later": 0,
+      "archive": 0.031,
+      "spam": 0.872
+     },
+     "bin": "spam",
+     "pTop": 0.872,
+     "confX": 0.097,
+     "confY": 0.543,
+     "conf": 0.543,
+     "sortMs": 3767,
+     "firstMs": 1317,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 127,
+     "combo": 4
+    },
+    {
+     "t": 19816.763427734375,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-04",
+     "limitMs": 5810,
+     "repeat": false
+    },
+    {
+     "t": 21600.10546875,
+     "type": "zone",
+     "parcelId": "r002-llama323b-04",
+     "bin": "spam"
+    },
+    {
+     "t": 22100.10791015625,
+     "type": "sort",
+     "parcelId": "r002-llama323b-04",
+     "limitMs": 5810,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.07,
+     "y": -0.585,
+     "dist": {
+      "reply": 1.338,
+      "info": 0.79,
+      "later": 1.404,
+      "archive": 0.897,
+      "spam": 0.207
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.065,
+      "later": 0,
+      "archive": 0.028,
+      "spam": 0.907
+     },
+     "bin": "spam",
+     "pTop": 0.907,
+     "confX": 0.07,
+     "confY": 0.585,
+     "conf": 0.585,
+     "sortMs": 2267,
+     "firstMs": 900,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 144,
+     "combo": 5
+    },
+    {
+     "t": 22983.445556640625,
+     "type": "spawn",
+     "parcelId": "p027",
+     "limitMs": 5779,
+     "repeat": false
+    },
+    {
+     "t": 24800.12109375,
+     "type": "zone",
+     "parcelId": "p027",
+     "bin": "spam"
+    },
+    {
+     "t": 25700.12548828125,
+     "type": "sort",
+     "parcelId": "p027",
+     "limitMs": 5779,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.047,
+     "y": -0.889,
+     "dist": {
+      "reply": 1.662,
+      "info": 1.091,
+      "later": 1.625,
+      "archive": 1.033,
+      "spam": 0.119
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.005,
+      "later": 0,
+      "archive": 0.008,
+      "spam": 0.987
+     },
+     "bin": "spam",
+     "pTop": 0.987,
+     "confX": 0.047,
+     "confY": 0.889,
+     "conf": 0.889,
+     "sortMs": 2700,
+     "firstMs": 867,
+     "changedMind": false,
+     "zoneChanges": 3,
+     "points": 165,
+     "combo": 6
+    },
+    {
+     "t": 26583.463134765625,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-06",
+     "limitMs": 5745,
+     "repeat": false
+    },
+    {
+     "t": 28133.470703125,
+     "type": "zone",
+     "parcelId": "r002-llama323b-06",
+     "bin": "later"
+    },
+    {
+     "t": 29016.808349609375,
+     "type": "sort",
+     "parcelId": "r002-llama323b-06",
+     "limitMs": 5745,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.597,
+     "y": 0.608,
+     "dist": {
+      "reply": 1.247,
+      "info": 1.41,
+      "later": 0.055,
+      "archive": 0.66,
+      "spam": 1.511
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0,
+      "later": 0.876,
+      "archive": 0.123,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.876,
+     "confX": 0.597,
+     "confY": 0.608,
+     "conf": 0.608,
+     "sortMs": 2417,
+     "firstMs": 1083,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 155,
+     "combo": 7
+    },
+    {
+     "t": 29900.14599609375,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 5713,
+     "repeat": false
+    },
+    {
+     "t": 31450.153564453125,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "spam"
+    },
+    {
+     "t": 31800.1552734375,
+     "type": "sort",
+     "parcelId": "p039",
+     "limitMs": 5713,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.152,
+     "y": -0.709,
+     "dist": {
+      "reply": 1.419,
+      "info": 0.826,
+      "later": 1.552,
+      "archive": 1.038,
+      "spam": 0.168
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.048,
+      "later": 0,
+      "archive": 0.008,
+      "spam": 0.944
+     },
+     "bin": "spam",
+     "pTop": 0.944,
+     "confX": 0.152,
+     "confY": 0.709,
+     "conf": 0.709,
+     "sortMs": 1883,
+     "firstMs": 1367,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 169,
+     "combo": 8
+    },
+    {
+     "t": 32683.492919921875,
+     "type": "spawn",
+     "parcelId": "p030",
+     "limitMs": 5686,
+     "repeat": false
+    },
+    {
+     "t": 33766.83154296875,
+     "type": "zone",
+     "parcelId": "p030",
+     "bin": "reply"
+    },
+    {
+     "t": 35733.5078125,
+     "type": "sort",
+     "parcelId": "p030",
+     "limitMs": 5686,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.492,
+     "y": 0.601,
+     "dist": {
+      "reply": 0.159,
+      "info": 0.67,
+      "later": 1.143,
+      "archive": 1.315,
+      "spam": 1.466
+     },
+     "soft": {
+      "reply": 0.87,
+      "info": 0.127,
+      "later": 0.003,
+      "archive": 0,
+      "spam": 0
+     },
+     "bin": "reply",
+     "pTop": 0.87,
+     "confX": 0.492,
+     "confY": 0.601,
+     "conf": 0.601,
+     "sortMs": 3033,
+     "firstMs": 717,
+     "changedMind": false,
+     "zoneChanges": 0,
+     "points": 160,
+     "combo": 9
+    },
+    {
+     "t": 36633.51220703125,
+     "type": "spawn",
+     "parcelId": "p029",
+     "limitMs": 5648,
+     "repeat": false
+    },
+    {
+     "t": 38950.190185546875,
+     "type": "sort",
+     "parcelId": "p029",
+     "limitMs": 5648,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.041,
+     "y": 0.119,
+     "dist": {
+      "reply": 0.788,
+      "info": 0.632,
+      "later": 0.853,
+      "archive": 0.711,
+      "spam": 0.9
+     },
+     "soft": {
+      "reply": 0.155,
+      "info": 0.423,
+      "later": 0.095,
+      "archive": 0.261,
+      "spam": 0.065
+     },
+     "bin": "info",
+     "pTop": 0.423,
+     "confX": 0.041,
+     "confY": 0.119,
+     "conf": 0.119,
+     "sortMs": 2300,
+     "firstMs": 1383,
+     "changedMind": false,
+     "zoneChanges": 0,
+     "points": 10,
+     "combo": 0
+    },
+    {
+     "t": 39850.194580078125,
+     "type": "spawn",
+     "parcelId": "p037",
+     "limitMs": 5617,
+     "repeat": false
+    },
+    {
+     "t": 41666.8701171875,
+     "type": "zone",
+     "parcelId": "p037",
+     "bin": "info"
+    },
+    {
+     "t": 42583.541259765625,
+     "type": "sort",
+     "parcelId": "p037",
+     "limitMs": 5617,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.5,
+     "y": -0.018,
+     "dist": {
+      "reply": 0.656,
+      "info": 0.153,
+      "later": 1.315,
+      "archive": 1.15,
+      "spam": 0.911
+     },
+     "soft": {
+      "reply": 0.133,
+      "info": 0.843,
+      "later": 0,
+      "archive": 0.002,
+      "spam": 0.022
+     },
+     "bin": "info",
+     "pTop": 0.843,
+     "confX": 0.5,
+     "confY": 0.018,
+     "conf": 0.5,
+     "sortMs": 2717,
+     "firstMs": 817,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 116,
+     "combo": 1
+    },
+    {
+     "t": 43483.545654296875,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-06",
+     "limitMs": 5582,
+     "repeat": false
+    },
+    {
+     "t": 44516.884033203125,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-06",
+     "bin": "later"
+    },
+    {
+     "t": 45916.890869140625,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-06",
+     "limitMs": 5582,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.602,
+     "y": 0.381,
+     "dist": {
+      "reply": 1.275,
+      "info": 1.325,
+      "later": 0.243,
+      "archive": 0.434,
+      "spam": 1.308
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0,
+      "later": 0.642,
+      "archive": 0.357,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.642,
+     "confX": 0.602,
+     "confY": 0.381,
+     "conf": 0.602,
+     "sortMs": 2417,
+     "firstMs": 750,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 129,
+     "combo": 2
+    },
+    {
+     "t": 46816.895263671875,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-01",
+     "limitMs": 5550,
+     "repeat": false
+    },
+    {
+     "t": 48283.569091796875,
+     "type": "zone",
+     "parcelId": "r002-llama323b-01",
+     "bin": "archive"
+    },
+    {
+     "t": 48783.571533203125,
+     "type": "sort",
+     "parcelId": "r002-llama323b-01",
+     "limitMs": 5550,
+     "speed": 1,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.471,
+     "y": 0.13,
+     "dist": {
+      "reply": 1.223,
+      "info": 1.135,
+      "later": 0.522,
+      "archive": 0.254,
+      "spam": 1.025
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0.003,
+      "later": 0.277,
+      "archive": 0.712,
+      "spam": 0.008
+     },
+     "bin": "archive",
+     "pTop": 0.712,
+     "confX": 0.471,
+     "confY": 0.13,
+     "conf": 0.471,
+     "sortMs": 1950,
+     "firstMs": 1283,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 114,
+     "combo": 2
+    },
+    {
+     "t": 49683.575927734375,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-08",
+     "limitMs": 5523,
+     "repeat": false
+    },
+    {
+     "t": 55216.936279296875,
+     "type": "miss",
+     "parcelId": "r002-qwen2515b-08",
+     "limitMs": 5523,
+     "speed": 1,
+     "missed": true,
+     "timedOut": true,
+     "sortMs": null,
+     "firstMs": null,
+     "points": 0,
+     "combo": 0
+    },
+    {
+     "t": 55233.60302734375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 1,
+     "parcelsShown": 15,
+     "sorted": 14,
+     "misses": 1,
+     "changedMind": 2,
+     "bestCombo": 9,
+     "scoreWave": 1810,
+     "speedEnd": 1,
+     "decisions": [
+      {
+       "parcelId": "p020",
+       "limitMs": 5997,
+       "speed": 1,
+       "anchorBin": "spam",
+       "missed": false,
+       "timedOut": false,
+       "x": 0.714,
+       "y": -0.054,
+       "dist": {
+        "reply": 1.521,
+        "info": 1.364,
+        "later": 0.677,
+        "archive": 0.064,
+        "spam": 1.018
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.112,
+        "archive": 0.88,
+        "spam": 0.008
+       },
+       "bin": "archive",
+       "pTop": 0.88,
+       "confX": 0.714,
+       "confY": 0.054,
+       "conf": 0.714,
+       "sortMs": 3467,
+       "firstMs": 617,
+       "changedMind": true,
+       "zoneChanges": 2,
+       "points": 125,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-08",
+       "limitMs": 5955,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.668,
+       "y": -0.193,
+       "dist": {
+        "reply": 1.549,
+        "info": 1.326,
+        "later": 0.813,
+        "archive": 0.144,
+        "spam": 0.89
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.05,
+        "archive": 0.922,
+        "spam": 0.028
+       },
+       "bin": "archive",
+       "pTop": 0.922,
+       "confX": 0.668,
+       "confY": 0.193,
+       "conf": 0.668,
+       "sortMs": 3783,
+       "firstMs": 517,
+       "changedMind": true,
+       "zoneChanges": 2,
+       "points": 125,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "limitMs": 5910,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.046,
+       "y": 0.434,
+       "dist": {
+        "reply": 0.72,
+        "info": 0.848,
+        "later": 0.632,
+        "archive": 0.774,
+        "spam": 1.215
+       },
+       "soft": {
+        "reply": 0.261,
+        "info": 0.105,
+        "later": 0.449,
+        "archive": 0.181,
+        "spam": 0.003
+       },
+       "bin": "later",
+       "pTop": 0.449,
+       "confX": 0.046,
+       "confY": 0.434,
+       "conf": 0.434,
+       "sortMs": 1983,
+       "firstMs": 1400,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 113,
+       "combo": 2
+      },
+      {
+       "parcelId": "p012",
+       "limitMs": 5882,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.835,
+       "y": 0.947,
+       "dist": {
+        "reply": 0.376,
+        "info": 1.014,
+        "later": 1.521,
+        "archive": 1.789,
+        "spam": 1.919
+       },
+       "soft": {
+        "reply": 0.983,
+        "info": 0.017,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.983,
+       "confX": 0.835,
+       "confY": 0.947,
+       "conf": 0.947,
+       "sortMs": 1983,
+       "firstMs": 1367,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 158,
+       "combo": 3
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 5854,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.097,
+       "y": -0.543,
+       "dist": {
+        "reply": 1.288,
+        "info": 0.741,
+        "later": 1.382,
+        "archive": 0.895,
+        "spam": 0.256
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0.097,
+        "later": 0,
+        "archive": 0.031,
+        "spam": 0.872
+       },
+       "bin": "spam",
+       "pTop": 0.872,
+       "confX": 0.097,
+       "confY": 0.543,
+       "conf": 0.543,
+       "sortMs": 3767,
+       "firstMs": 1317,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 127,
+       "combo": 4
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "limitMs": 5810,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.07,
+       "y": -0.585,
+       "dist": {
+        "reply": 1.338,
+        "info": 0.79,
+        "later": 1.404,
+        "archive": 0.897,
+        "spam": 0.207
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.065,
+        "later": 0,
+        "archive": 0.028,
+        "spam": 0.907
+       },
+       "bin": "spam",
+       "pTop": 0.907,
+       "confX": 0.07,
+       "confY": 0.585,
+       "conf": 0.585,
+       "sortMs": 2267,
+       "firstMs": 900,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 144,
+       "combo": 5
+      },
+      {
+       "parcelId": "p027",
+       "limitMs": 5779,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.047,
+       "y": -0.889,
+       "dist": {
+        "reply": 1.662,
+        "info": 1.091,
+        "later": 1.625,
+        "archive": 1.033,
+        "spam": 0.119
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.005,
+        "later": 0,
+        "archive": 0.008,
+        "spam": 0.987
+       },
+       "bin": "spam",
+       "pTop": 0.987,
+       "confX": 0.047,
+       "confY": 0.889,
+       "conf": 0.889,
+       "sortMs": 2700,
+       "firstMs": 867,
+       "changedMind": false,
+       "zoneChanges": 3,
+       "points": 165,
+       "combo": 6
+      },
+      {
+       "parcelId": "r002-llama323b-06",
+       "limitMs": 5745,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.597,
+       "y": 0.608,
+       "dist": {
+        "reply": 1.247,
+        "info": 1.41,
+        "later": 0.055,
+        "archive": 0.66,
+        "spam": 1.511
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.876,
+        "archive": 0.123,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.876,
+       "confX": 0.597,
+       "confY": 0.608,
+       "conf": 0.608,
+       "sortMs": 2417,
+       "firstMs": 1083,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 155,
+       "combo": 7
+      },
+      {
+       "parcelId": "p039",
+       "limitMs": 5713,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.152,
+       "y": -0.709,
+       "dist": {
+        "reply": 1.419,
+        "info": 0.826,
+        "later": 1.552,
+        "archive": 1.038,
+        "spam": 0.168
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.048,
+        "later": 0,
+        "archive": 0.008,
+        "spam": 0.944
+       },
+       "bin": "spam",
+       "pTop": 0.944,
+       "confX": 0.152,
+       "confY": 0.709,
+       "conf": 0.709,
+       "sortMs": 1883,
+       "firstMs": 1367,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 169,
+       "combo": 8
+      },
+      {
+       "parcelId": "p030",
+       "limitMs": 5686,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.492,
+       "y": 0.601,
+       "dist": {
+        "reply": 0.159,
+        "info": 0.67,
+        "later": 1.143,
+        "archive": 1.315,
+        "spam": 1.466
+       },
+       "soft": {
+        "reply": 0.87,
+        "info": 0.127,
+        "later": 0.003,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.87,
+       "confX": 0.492,
+       "confY": 0.601,
+       "conf": 0.601,
+       "sortMs": 3033,
+       "firstMs": 717,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 160,
+       "combo": 9
+      },
+      {
+       "parcelId": "p029",
+       "limitMs": 5648,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.041,
+       "y": 0.119,
+       "dist": {
+        "reply": 0.788,
+        "info": 0.632,
+        "later": 0.853,
+        "archive": 0.711,
+        "spam": 0.9
+       },
+       "soft": {
+        "reply": 0.155,
+        "info": 0.423,
+        "later": 0.095,
+        "archive": 0.261,
+        "spam": 0.065
+       },
+       "bin": "info",
+       "pTop": 0.423,
+       "confX": 0.041,
+       "confY": 0.119,
+       "conf": 0.119,
+       "sortMs": 2300,
+       "firstMs": 1383,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 10,
+       "combo": 0
+      },
+      {
+       "parcelId": "p037",
+       "limitMs": 5617,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.5,
+       "y": -0.018,
+       "dist": {
+        "reply": 0.656,
+        "info": 0.153,
+        "later": 1.315,
+        "archive": 1.15,
+        "spam": 0.911
+       },
+       "soft": {
+        "reply": 0.133,
+        "info": 0.843,
+        "later": 0,
+        "archive": 0.002,
+        "spam": 0.022
+       },
+       "bin": "info",
+       "pTop": 0.843,
+       "confX": 0.5,
+       "confY": 0.018,
+       "conf": 0.5,
+       "sortMs": 2717,
+       "firstMs": 817,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 116,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "limitMs": 5582,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.602,
+       "y": 0.381,
+       "dist": {
+        "reply": 1.275,
+        "info": 1.325,
+        "later": 0.243,
+        "archive": 0.434,
+        "spam": 1.308
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.642,
+        "archive": 0.357,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.642,
+       "confX": 0.602,
+       "confY": 0.381,
+       "conf": 0.602,
+       "sortMs": 2417,
+       "firstMs": 750,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 129,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "limitMs": 5550,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.471,
+       "y": 0.13,
+       "dist": {
+        "reply": 1.223,
+        "info": 1.135,
+        "later": 0.522,
+        "archive": 0.254,
+        "spam": 1.025
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0.003,
+        "later": 0.277,
+        "archive": 0.712,
+        "spam": 0.008
+       },
+       "bin": "archive",
+       "pTop": 0.712,
+       "confX": 0.471,
+       "confY": 0.13,
+       "conf": 0.471,
+       "sortMs": 1950,
+       "firstMs": 1283,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 114,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-08",
+       "limitMs": 5523,
+       "speed": 1,
+       "missed": true,
+       "timedOut": true,
+       "sortMs": null,
+       "firstMs": null,
+       "points": 0,
+       "combo": 0
+      }
+     ],
+     "limitMsEnd": 5520,
+     "partial": 1,
+     "timedOut": 0,
+     "meanConf": 0.599,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 2,
+   "params": {
+    "setId": "round-002-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T12:00:57.333Z",
+   "endedAt": "2026-10-31T12:01:00.878Z",
+   "durationMs": 3545.31787109375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 3545.31787109375,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 3545.31787109375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-002-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-002",
+     "decisions": [
+      {
+       "pairId": "round-002-ab1",
+       "itemA": "p020:llama323b",
+       "itemB": "p020:qwen2515b",
+       "choice": "A",
+       "winner": "p020:llama323b",
+       "strength": 2,
+       "decisionTimeMs": 3545,
+       "swapped": false,
+       "undone": false,
+       "source": "sim:shorter-bias",
+       "parcelId": "p020",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "llama3.2:3b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 3,
+   "params": {
+    "wave": 2,
+    "waveSpeed": 1.15,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T12:01:02.978Z",
+   "endedAt": "2026-10-31T12:01:56.195Z",
+   "durationMs": 53216.926513671875,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 53216.926513671875,
+    "score": 2248,
+    "actions": 16,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 283.334716796875,
+     "type": "spawn",
+     "parcelId": "p024",
+     "limitMs": 5198,
+     "repeat": false
+    },
+    {
+     "t": 983.338134765625,
+     "type": "zone",
+     "parcelId": "p024",
+     "bin": "later"
+    },
+    {
+     "t": 2550.012451171875,
+     "type": "sort",
+     "parcelId": "p024",
+     "limitMs": 5198,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.581,
+     "y": 0.553,
+     "dist": {
+      "reply": 1.233,
+      "info": 1.371,
+      "later": 0.096,
+      "archive": 0.607,
+      "spam": 1.454
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0,
+      "later": 0.836,
+      "archive": 0.163,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.836,
+     "confX": 0.581,
+     "confY": 0.553,
+     "conf": 0.581,
+     "sortMs": 2250,
+     "firstMs": 533,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 123,
+     "combo": 1
+    },
+    {
+     "t": 3450.016845703125,
+     "type": "spawn",
+     "parcelId": "p026",
+     "limitMs": 5171,
+     "repeat": false
+    },
+    {
+     "t": 5116.691650390625,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "reply"
+    },
+    {
+     "t": 6216.697021484375,
+     "type": "sort",
+     "parcelId": "p026",
+     "limitMs": 5171,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.669,
+     "y": 0.577,
+     "dist": {
+      "reply": 0.047,
+      "info": 0.628,
+      "later": 1.32,
+      "archive": 1.461,
+      "spam": 1.513
+     },
+     "soft": {
+      "reply": 0.856,
+      "info": 0.144,
+      "later": 0,
+      "archive": 0,
+      "spam": 0
+     },
+     "bin": "reply",
+     "pTop": 0.856,
+     "confX": 0.669,
+     "confY": 0.577,
+     "conf": 0.669,
+     "sortMs": 2750,
+     "firstMs": 1083,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 129,
+     "combo": 2
+    },
+    {
+     "t": 7100.03466796875,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-07",
+     "limitMs": 5141,
+     "repeat": false
+    },
+    {
+     "t": 8033.37255859375,
+     "type": "zone",
+     "parcelId": "r002-llama323b-07",
+     "bin": "later"
+    },
+    {
+     "t": 8983.377197265625,
+     "type": "sort",
+     "parcelId": "r002-llama323b-07",
+     "limitMs": 5141,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.406,
+     "y": 0.585,
+     "dist": {
+      "reply": 1.057,
+      "info": 1.232,
+      "later": 0.246,
+      "archive": 0.68,
+      "spam": 1.424
+     },
+     "soft": {
+      "reply": 0.007,
+      "info": 0.001,
+      "later": 0.854,
+      "archive": 0.137,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.854,
+     "confX": 0.406,
+     "confY": 0.585,
+     "conf": 0.585,
+     "sortMs": 1867,
+     "firstMs": 717,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 136,
+     "combo": 3
+    },
+    {
+     "t": 9883.381591796875,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-02",
+     "limitMs": 5118,
+     "repeat": false
+    },
+    {
+     "t": 11333.388671875,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-02",
+     "bin": "archive"
+    },
+    {
+     "t": 12350.060302734375,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-02",
+     "limitMs": 5118,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.689,
+     "y": -0.192,
+     "dist": {
+      "reply": 1.566,
+      "info": 1.346,
+      "later": 0.813,
+      "archive": 0.147,
+      "spam": 0.905
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.051,
+      "archive": 0.925,
+      "spam": 0.025
+     },
+     "bin": "archive",
+     "pTop": 0.925,
+     "confX": 0.689,
+     "confY": 0.192,
+     "conf": 0.689,
+     "sortMs": 2450,
+     "firstMs": 817,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 142,
+     "combo": 4
+    },
+    {
+     "t": 13250.064697265625,
+     "type": "spawn",
+     "parcelId": "p034",
+     "limitMs": 5090,
+     "repeat": false
+    },
+    {
+     "t": 15066.740234375,
+     "type": "zone",
+     "parcelId": "p034",
+     "bin": "reply"
+    },
+    {
+     "t": 15250.074462890625,
+     "type": "sort",
+     "parcelId": "p034",
+     "limitMs": 5090,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.494,
+     "y": 0.391,
+     "dist": {
+      "reply": 0.277,
+      "info": 0.467,
+      "later": 1.167,
+      "archive": 1.226,
+      "spam": 1.271
+     },
+     "soft": {
+      "reply": 0.653,
+      "info": 0.343,
+      "later": 0.002,
+      "archive": 0.001,
+      "spam": 0.001
+     },
+     "bin": "reply",
+     "pTop": 0.653,
+     "confX": 0.494,
+     "confY": 0.391,
+     "conf": 0.494,
+     "sortMs": 1983,
+     "firstMs": 1383,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 114,
+     "combo": 4
+    },
+    {
+     "t": 16150.078857421875,
+     "type": "spawn",
+     "parcelId": "p011",
+     "limitMs": 5065,
+     "repeat": false
+    },
+    {
+     "t": 17833.42041015625,
+     "type": "zone",
+     "parcelId": "p011",
+     "bin": "archive"
+    },
+    {
+     "t": 19150.093505859375,
+     "type": "sort",
+     "parcelId": "p011",
+     "limitMs": 5065,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.499,
+     "y": -0.052,
+     "dist": {
+      "reply": 1.331,
+      "info": 1.149,
+      "later": 0.688,
+      "archive": 0.151,
+      "spam": 0.883
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.002,
+      "later": 0.111,
+      "archive": 0.859,
+      "spam": 0.028
+     },
+     "bin": "archive",
+     "pTop": 0.859,
+     "confX": 0.499,
+     "confY": 0.052,
+     "conf": 0.499,
+     "sortMs": 2983,
+     "firstMs": 1233,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 106,
+     "combo": 4
+    },
+    {
+     "t": 20033.43115234375,
+     "type": "spawn",
+     "parcelId": "p013",
+     "limitMs": 5033,
+     "repeat": false
+    },
+    {
+     "t": 20933.435546875,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "reply"
+    },
+    {
+     "t": 21350.104248046875,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "info"
+    },
+    {
+     "t": 21766.77294921875,
+     "type": "sort",
+     "parcelId": "p013",
+     "limitMs": 5033,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.745,
+     "y": 0.066,
+     "dist": {
+      "reply": 0.562,
+      "info": 0.15,
+      "later": 1.501,
+      "archive": 1.4,
+      "spam": 1.127
+     },
+     "soft": {
+      "reply": 0.208,
+      "info": 0.789,
+      "later": 0,
+      "archive": 0,
+      "spam": 0.003
+     },
+     "bin": "info",
+     "pTop": 0.789,
+     "confX": 0.745,
+     "confY": 0.066,
+     "conf": 0.745,
+     "sortMs": 1717,
+     "firstMs": 733,
+     "changedMind": true,
+     "zoneChanges": 1,
+     "points": 156,
+     "combo": 5
+    },
+    {
+     "t": 22650.110595703125,
+     "type": "spawn",
+     "parcelId": "p023",
+     "limitMs": 5011,
+     "repeat": false
+    },
+    {
+     "t": 23583.448486328125,
+     "type": "zone",
+     "parcelId": "p023",
+     "bin": "later"
+    },
+    {
+     "t": 25250.123291015625,
+     "type": "sort",
+     "parcelId": "p023",
+     "limitMs": 5011,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.735,
+     "y": 0.789,
+     "dist": {
+      "reply": 1.396,
+      "info": 1.619,
+      "later": 0.189,
+      "archive": 0.843,
+      "spam": 1.732
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.955,
+      "archive": 0.044,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.955,
+     "confX": 0.735,
+     "confY": 0.789,
+     "conf": 0.789,
+     "sortMs": 2583,
+     "firstMs": 733,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 157,
+     "combo": 6
+    },
+    {
+     "t": 26133.4609375,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-05",
+     "limitMs": 4982,
+     "repeat": false
+    },
+    {
+     "t": 27116.799072265625,
+     "type": "zone",
+     "parcelId": "r002-llama323b-05",
+     "bin": "later"
+    },
+    {
+     "t": 27866.802734375,
+     "type": "sort",
+     "parcelId": "r002-llama323b-05",
+     "limitMs": 4982,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.202,
+     "y": 0.469,
+     "dist": {
+      "reply": 0.866,
+      "info": 0.998,
+      "later": 0.473,
+      "archive": 0.685,
+      "spam": 1.265
+     },
+     "soft": {
+      "reply": 0.063,
+      "info": 0.021,
+      "later": 0.689,
+      "archive": 0.226,
+      "spam": 0.001
+     },
+     "bin": "later",
+     "pTop": 0.689,
+     "confX": 0.202,
+     "confY": 0.469,
+     "conf": 0.469,
+     "sortMs": 1717,
+     "firstMs": 617,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 114,
+     "combo": 6
+    },
+    {
+     "t": 28750.140380859375,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-09",
+     "limitMs": 4961,
+     "repeat": false
+    },
+    {
+     "t": 30183.480712890625,
+     "type": "zone",
+     "parcelId": "r002-llama323b-09",
+     "bin": "archive"
+    },
+    {
+     "t": 30950.151123046875,
+     "type": "sort",
+     "parcelId": "r002-llama323b-09",
+     "limitMs": 4961,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.508,
+     "y": -0.045,
+     "dist": {
+      "reply": 1.336,
+      "info": 1.158,
+      "later": 0.68,
+      "archive": 0.142,
+      "spam": 0.893
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.002,
+      "later": 0.115,
+      "archive": 0.858,
+      "spam": 0.025
+     },
+     "bin": "archive",
+     "pTop": 0.858,
+     "confX": 0.508,
+     "confY": 0.045,
+     "conf": 0.508,
+     "sortMs": 2183,
+     "firstMs": 1017,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 148,
+     "combo": 7
+    },
+    {
+     "t": 31833.48876953125,
+     "type": "spawn",
+     "parcelId": "p010",
+     "limitMs": 4935,
+     "repeat": false
+    },
+    {
+     "t": 32733.4931640625,
+     "type": "zone",
+     "parcelId": "p010",
+     "bin": "later"
+    },
+    {
+     "t": 34916.837158203125,
+     "type": "sort",
+     "parcelId": "p010",
+     "limitMs": 4935,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.451,
+     "y": 0.442,
+     "dist": {
+      "reply": 1.115,
+      "info": 1.206,
+      "later": 0.267,
+      "archive": 0.53,
+      "spam": 1.302
+     },
+     "soft": {
+      "reply": 0.003,
+      "info": 0.001,
+      "later": 0.718,
+      "archive": 0.277,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.718,
+     "confX": 0.451,
+     "confY": 0.442,
+     "conf": 0.451,
+     "sortMs": 3067,
+     "firstMs": 567,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 102,
+     "combo": 7
+    },
+    {
+     "t": 35816.841552734375,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-03",
+     "limitMs": 4902,
+     "repeat": false
+    },
+    {
+     "t": 37316.848876953125,
+     "type": "zone",
+     "parcelId": "r002-llama323b-03",
+     "bin": "archive"
+    },
+    {
+     "t": 38250.186767578125,
+     "type": "sort",
+     "parcelId": "r002-llama323b-03",
+     "limitMs": 4902,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.581,
+     "y": -0.066,
+     "dist": {
+      "reply": 1.409,
+      "info": 1.231,
+      "later": 0.689,
+      "archive": 0.071,
+      "spam": 0.921
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.001,
+      "later": 0.104,
+      "archive": 0.876,
+      "spam": 0.019
+     },
+     "bin": "archive",
+     "pTop": 0.876,
+     "confX": 0.581,
+     "confY": 0.066,
+     "conf": 0.581,
+     "sortMs": 2417,
+     "firstMs": 1250,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 155,
+     "combo": 8
+    },
+    {
+     "t": 39150.191162109375,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-05",
+     "limitMs": 4874,
+     "repeat": false
+    },
+    {
+     "t": 40966.86669921875,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-05",
+     "bin": "later"
+    },
+    {
+     "t": 42350.206787109375,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-05",
+     "limitMs": 4874,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.549,
+     "y": 0.832,
+     "dist": {
+      "reply": 1.217,
+      "info": 1.488,
+      "later": 0.235,
+      "archive": 0.888,
+      "spam": 1.703
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0,
+      "later": 0.964,
+      "archive": 0.034,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.964,
+     "confX": 0.549,
+     "confY": 0.832,
+     "conf": 0.832,
+     "sortMs": 3183,
+     "firstMs": 1167,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 169,
+     "combo": 9
+    },
+    {
+     "t": 43250.211181640625,
+     "type": "spawn",
+     "parcelId": "p028",
+     "limitMs": 4840,
+     "repeat": false
+    },
+    {
+     "t": 45700.22314453125,
+     "type": "sort",
+     "parcelId": "p028",
+     "limitMs": 4840,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.049,
+     "y": 0.678,
+     "dist": {
+      "reply": 0.701,
+      "info": 1.009,
+      "later": 0.604,
+      "archive": 0.944,
+      "spam": 1.459
+     },
+     "soft": {
+      "reply": 0.33,
+      "info": 0.03,
+      "later": 0.586,
+      "archive": 0.054,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.586,
+     "confX": 0.049,
+     "confY": 0.678,
+     "conf": 0.678,
+     "sortMs": 2433,
+     "firstMs": 567,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 171,
+     "combo": 10
+    },
+    {
+     "t": 46600.2275390625,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-04",
+     "limitMs": 4812,
+     "repeat": false
+    },
+    {
+     "t": 48900.23876953125,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-04",
+     "limitMs": 4812,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.624,
+     "y": 0.299,
+     "dist": {
+      "reply": 1.314,
+      "info": 1.321,
+      "later": 0.322,
+      "archive": 0.35,
+      "spam": 1.246
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.521,
+      "archive": 0.478,
+      "spam": 0.001
+     },
+     "bin": "later",
+     "pTop": 0.521,
+     "confX": 0.624,
+     "confY": 0.299,
+     "conf": 0.624,
+     "sortMs": 2283,
+     "firstMs": 1167,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 168,
+     "combo": 11
+    },
+    {
+     "t": 49800.2431640625,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-01",
+     "limitMs": 4786,
+     "repeat": false
+    },
+    {
+     "t": 53200.259765625,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-01",
+     "limitMs": 4786,
+     "speed": 1.15,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.611,
+     "y": 0.312,
+     "dist": {
+      "reply": 1.298,
+      "info": 1.312,
+      "later": 0.31,
+      "archive": 0.364,
+      "spam": 1.251
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.541,
+      "archive": 0.458,
+      "spam": 0.001
+     },
+     "bin": "later",
+     "pTop": 0.541,
+     "confX": 0.611,
+     "confY": 0.312,
+     "conf": 0.611,
+     "sortMs": 3383,
+     "firstMs": 967,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 158,
+     "combo": 12
+    },
+    {
+     "t": 53216.926513671875,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 2,
+     "parcelsShown": 16,
+     "sorted": 16,
+     "misses": 0,
+     "changedMind": 1,
+     "bestCombo": 12,
+     "scoreWave": 2248,
+     "speedEnd": 1.15,
+     "decisions": [
+      {
+       "parcelId": "p024",
+       "limitMs": 5198,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.581,
+       "y": 0.553,
+       "dist": {
+        "reply": 1.233,
+        "info": 1.371,
+        "later": 0.096,
+        "archive": 0.607,
+        "spam": 1.454
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.836,
+        "archive": 0.163,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.836,
+       "confX": 0.581,
+       "confY": 0.553,
+       "conf": 0.581,
+       "sortMs": 2250,
+       "firstMs": 533,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 123,
+       "combo": 1
+      },
+      {
+       "parcelId": "p026",
+       "limitMs": 5171,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.669,
+       "y": 0.577,
+       "dist": {
+        "reply": 0.047,
+        "info": 0.628,
+        "later": 1.32,
+        "archive": 1.461,
+        "spam": 1.513
+       },
+       "soft": {
+        "reply": 0.856,
+        "info": 0.144,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.856,
+       "confX": 0.669,
+       "confY": 0.577,
+       "conf": 0.669,
+       "sortMs": 2750,
+       "firstMs": 1083,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 129,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-llama323b-07",
+       "limitMs": 5141,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.406,
+       "y": 0.585,
+       "dist": {
+        "reply": 1.057,
+        "info": 1.232,
+        "later": 0.246,
+        "archive": 0.68,
+        "spam": 1.424
+       },
+       "soft": {
+        "reply": 0.007,
+        "info": 0.001,
+        "later": 0.854,
+        "archive": 0.137,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.854,
+       "confX": 0.406,
+       "confY": 0.585,
+       "conf": 0.585,
+       "sortMs": 1867,
+       "firstMs": 717,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 136,
+       "combo": 3
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "limitMs": 5118,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.689,
+       "y": -0.192,
+       "dist": {
+        "reply": 1.566,
+        "info": 1.346,
+        "later": 0.813,
+        "archive": 0.147,
+        "spam": 0.905
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.051,
+        "archive": 0.925,
+        "spam": 0.025
+       },
+       "bin": "archive",
+       "pTop": 0.925,
+       "confX": 0.689,
+       "confY": 0.192,
+       "conf": 0.689,
+       "sortMs": 2450,
+       "firstMs": 817,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 142,
+       "combo": 4
+      },
+      {
+       "parcelId": "p034",
+       "limitMs": 5090,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.494,
+       "y": 0.391,
+       "dist": {
+        "reply": 0.277,
+        "info": 0.467,
+        "later": 1.167,
+        "archive": 1.226,
+        "spam": 1.271
+       },
+       "soft": {
+        "reply": 0.653,
+        "info": 0.343,
+        "later": 0.002,
+        "archive": 0.001,
+        "spam": 0.001
+       },
+       "bin": "reply",
+       "pTop": 0.653,
+       "confX": 0.494,
+       "confY": 0.391,
+       "conf": 0.494,
+       "sortMs": 1983,
+       "firstMs": 1383,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 114,
+       "combo": 4
+      },
+      {
+       "parcelId": "p011",
+       "limitMs": 5065,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.499,
+       "y": -0.052,
+       "dist": {
+        "reply": 1.331,
+        "info": 1.149,
+        "later": 0.688,
+        "archive": 0.151,
+        "spam": 0.883
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.002,
+        "later": 0.111,
+        "archive": 0.859,
+        "spam": 0.028
+       },
+       "bin": "archive",
+       "pTop": 0.859,
+       "confX": 0.499,
+       "confY": 0.052,
+       "conf": 0.499,
+       "sortMs": 2983,
+       "firstMs": 1233,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 106,
+       "combo": 4
+      },
+      {
+       "parcelId": "p013",
+       "limitMs": 5033,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.745,
+       "y": 0.066,
+       "dist": {
+        "reply": 0.562,
+        "info": 0.15,
+        "later": 1.501,
+        "archive": 1.4,
+        "spam": 1.127
+       },
+       "soft": {
+        "reply": 0.208,
+        "info": 0.789,
+        "later": 0,
+        "archive": 0,
+        "spam": 0.003
+       },
+       "bin": "info",
+       "pTop": 0.789,
+       "confX": 0.745,
+       "confY": 0.066,
+       "conf": 0.745,
+       "sortMs": 1717,
+       "firstMs": 733,
+       "changedMind": true,
+       "zoneChanges": 1,
+       "points": 156,
+       "combo": 5
+      },
+      {
+       "parcelId": "p023",
+       "limitMs": 5011,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.735,
+       "y": 0.789,
+       "dist": {
+        "reply": 1.396,
+        "info": 1.619,
+        "later": 0.189,
+        "archive": 0.843,
+        "spam": 1.732
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.955,
+        "archive": 0.044,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.955,
+       "confX": 0.735,
+       "confY": 0.789,
+       "conf": 0.789,
+       "sortMs": 2583,
+       "firstMs": 733,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 157,
+       "combo": 6
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "limitMs": 4982,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.202,
+       "y": 0.469,
+       "dist": {
+        "reply": 0.866,
+        "info": 0.998,
+        "later": 0.473,
+        "archive": 0.685,
+        "spam": 1.265
+       },
+       "soft": {
+        "reply": 0.063,
+        "info": 0.021,
+        "later": 0.689,
+        "archive": 0.226,
+        "spam": 0.001
+       },
+       "bin": "later",
+       "pTop": 0.689,
+       "confX": 0.202,
+       "confY": 0.469,
+       "conf": 0.469,
+       "sortMs": 1717,
+       "firstMs": 617,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 114,
+       "combo": 6
+      },
+      {
+       "parcelId": "r002-llama323b-09",
+       "limitMs": 4961,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.508,
+       "y": -0.045,
+       "dist": {
+        "reply": 1.336,
+        "info": 1.158,
+        "later": 0.68,
+        "archive": 0.142,
+        "spam": 0.893
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.002,
+        "later": 0.115,
+        "archive": 0.858,
+        "spam": 0.025
+       },
+       "bin": "archive",
+       "pTop": 0.858,
+       "confX": 0.508,
+       "confY": 0.045,
+       "conf": 0.508,
+       "sortMs": 2183,
+       "firstMs": 1017,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 148,
+       "combo": 7
+      },
+      {
+       "parcelId": "p010",
+       "limitMs": 4935,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.451,
+       "y": 0.442,
+       "dist": {
+        "reply": 1.115,
+        "info": 1.206,
+        "later": 0.267,
+        "archive": 0.53,
+        "spam": 1.302
+       },
+       "soft": {
+        "reply": 0.003,
+        "info": 0.001,
+        "later": 0.718,
+        "archive": 0.277,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.718,
+       "confX": 0.451,
+       "confY": 0.442,
+       "conf": 0.451,
+       "sortMs": 3067,
+       "firstMs": 567,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 102,
+       "combo": 7
+      },
+      {
+       "parcelId": "r002-llama323b-03",
+       "limitMs": 4902,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.581,
+       "y": -0.066,
+       "dist": {
+        "reply": 1.409,
+        "info": 1.231,
+        "later": 0.689,
+        "archive": 0.071,
+        "spam": 0.921
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.001,
+        "later": 0.104,
+        "archive": 0.876,
+        "spam": 0.019
+       },
+       "bin": "archive",
+       "pTop": 0.876,
+       "confX": 0.581,
+       "confY": 0.066,
+       "conf": 0.581,
+       "sortMs": 2417,
+       "firstMs": 1250,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 155,
+       "combo": 8
+      },
+      {
+       "parcelId": "r002-qwen2515b-05",
+       "limitMs": 4874,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.549,
+       "y": 0.832,
+       "dist": {
+        "reply": 1.217,
+        "info": 1.488,
+        "later": 0.235,
+        "archive": 0.888,
+        "spam": 1.703
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.964,
+        "archive": 0.034,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.964,
+       "confX": 0.549,
+       "confY": 0.832,
+       "conf": 0.832,
+       "sortMs": 3183,
+       "firstMs": 1167,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 169,
+       "combo": 9
+      },
+      {
+       "parcelId": "p028",
+       "limitMs": 4840,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.049,
+       "y": 0.678,
+       "dist": {
+        "reply": 0.701,
+        "info": 1.009,
+        "later": 0.604,
+        "archive": 0.944,
+        "spam": 1.459
+       },
+       "soft": {
+        "reply": 0.33,
+        "info": 0.03,
+        "later": 0.586,
+        "archive": 0.054,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.586,
+       "confX": 0.049,
+       "confY": 0.678,
+       "conf": 0.678,
+       "sortMs": 2433,
+       "firstMs": 567,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 171,
+       "combo": 10
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "limitMs": 4812,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.624,
+       "y": 0.299,
+       "dist": {
+        "reply": 1.314,
+        "info": 1.321,
+        "later": 0.322,
+        "archive": 0.35,
+        "spam": 1.246
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.521,
+        "archive": 0.478,
+        "spam": 0.001
+       },
+       "bin": "later",
+       "pTop": 0.521,
+       "confX": 0.624,
+       "confY": 0.299,
+       "conf": 0.624,
+       "sortMs": 2283,
+       "firstMs": 1167,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 168,
+       "combo": 11
+      },
+      {
+       "parcelId": "r002-qwen2515b-01",
+       "limitMs": 4786,
+       "speed": 1.15,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.611,
+       "y": 0.312,
+       "dist": {
+        "reply": 1.298,
+        "info": 1.312,
+        "later": 0.31,
+        "archive": 0.364,
+        "spam": 1.251
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.541,
+        "archive": 0.458,
+        "spam": 0.001
+       },
+       "bin": "later",
+       "pTop": 0.541,
+       "confX": 0.611,
+       "confY": 0.312,
+       "conf": 0.611,
+       "sortMs": 3383,
+       "firstMs": 967,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 158,
+       "combo": 12
+      }
+     ],
+     "limitMsEnd": 4784,
+     "partial": 3,
+     "timedOut": 0,
+     "meanConf": 0.613,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 4,
+   "params": {
+    "setId": "round-002-ab",
+    "pairs": 1,
+    "kind": "summary-style"
+   },
+   "startedAt": "2026-10-31T12:01:56.195Z",
+   "endedAt": "2026-10-31T12:02:02.574Z",
+   "durationMs": 6379.13330078125,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 6379.13330078125,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 6379.13330078125,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-002-ab",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "summary-style",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-002",
+     "decisions": [
+      {
+       "pairId": "round-002-ab2",
+       "itemA": "r002-qwen2515b-07:llama323b",
+       "itemB": "r002-qwen2515b-07:qwen2515b",
+       "choice": "A",
+       "winner": "r002-qwen2515b-07:llama323b",
+       "strength": 2,
+       "decisionTimeMs": 6379,
+       "swapped": true,
+       "undone": false,
+       "source": "sim:shorter-bias",
+       "parcelId": "r002-qwen2515b-07",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "llama3.2:3b"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 5,
+   "params": {
+    "wave": 3,
+    "waveSpeed": 1.36,
+    "durationMs": 50000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T12:02:04.674Z",
+   "endedAt": "2026-10-31T12:02:57.158Z",
+   "durationMs": 52483.589599609375,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 52483.589599609375,
+    "score": 1914,
+    "actions": 16,
+    "misplays": 1,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 283.334716796875,
+     "type": "spawn",
+     "parcelId": "p014",
+     "limitMs": 4398,
+     "repeat": false
+    },
+    {
+     "t": 2283.344482421875,
+     "type": "zone",
+     "parcelId": "p014",
+     "bin": "reply"
+    },
+    {
+     "t": 2783.346923828125,
+     "type": "sort",
+     "parcelId": "p014",
+     "limitMs": 4398,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.628,
+     "y": 0.445,
+     "dist": {
+      "reply": 0.176,
+      "info": 0.495,
+      "later": 1.29,
+      "archive": 1.371,
+      "spam": 1.377
+     },
+     "soft": {
+      "reply": 0.725,
+      "info": 0.274,
+      "later": 0,
+      "archive": 0,
+      "spam": 0
+     },
+     "bin": "reply",
+     "pTop": 0.725,
+     "confX": 0.628,
+     "confY": 0.445,
+     "conf": 0.628,
+     "sortMs": 2483,
+     "firstMs": 1200,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 120,
+     "combo": 1
+    },
+    {
+     "t": 3683.351318359375,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-03",
+     "limitMs": 4374,
+     "repeat": false
+    },
+    {
+     "t": 4716.689697265625,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-03",
+     "bin": "info"
+    },
+    {
+     "t": 5083.358154296875,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-03",
+     "limitMs": 4374,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.74,
+     "y": -0.146,
+     "dist": {
+      "reply": 0.772,
+      "info": 0.132,
+      "later": 1.587,
+      "archive": 1.393,
+      "spam": 0.974
+     },
+     "soft": {
+      "reply": 0.066,
+      "info": 0.92,
+      "later": 0,
+      "archive": 0,
+      "spam": 0.013
+     },
+     "bin": "info",
+     "pTop": 0.92,
+     "confX": 0.74,
+     "confY": 0.146,
+     "conf": 0.74,
+     "sortMs": 1383,
+     "firstMs": 850,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 142,
+     "combo": 2
+    },
+    {
+     "t": 5966.69580078125,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-02",
+     "limitMs": 4358,
+     "repeat": false
+    },
+    {
+     "t": 7083.367919921875,
+     "type": "zone",
+     "parcelId": "r002-llama323b-02",
+     "bin": "archive"
+    },
+    {
+     "t": 7600.037109375,
+     "type": "sort",
+     "parcelId": "r002-llama323b-02",
+     "limitMs": 4358,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.803,
+     "y": -0.19,
+     "dist": {
+      "reply": 1.664,
+      "info": 1.46,
+      "later": 0.825,
+      "archive": 0.208,
+      "spam": 0.996
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.052,
+      "archive": 0.936,
+      "spam": 0.013
+     },
+     "bin": "archive",
+     "pTop": 0.936,
+     "confX": 0.803,
+     "confY": 0.19,
+     "conf": 0.803,
+     "sortMs": 1617,
+     "firstMs": 867,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 148,
+     "combo": 3
+    },
+    {
+     "t": 8483.374755859375,
+     "type": "spawn",
+     "parcelId": "p038",
+     "limitMs": 4340,
+     "repeat": false
+    },
+    {
+     "t": 10033.38232421875,
+     "type": "zone",
+     "parcelId": "p038",
+     "bin": "archive"
+    },
+    {
+     "t": 10666.71875,
+     "type": "sort",
+     "parcelId": "p038",
+     "limitMs": 4340,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.573,
+     "y": 0.086,
+     "dist": {
+      "reply": 1.335,
+      "info": 1.231,
+      "later": 0.54,
+      "archive": 0.156,
+      "spam": 1.038
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.001,
+      "later": 0.227,
+      "archive": 0.765,
+      "spam": 0.006
+     },
+     "bin": "archive",
+     "pTop": 0.765,
+     "confX": 0.573,
+     "confY": 0.086,
+     "conf": 0.573,
+     "sortMs": 2167,
+     "firstMs": 983,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 134,
+     "combo": 4
+    },
+    {
+     "t": 11566.72314453125,
+     "type": "spawn",
+     "parcelId": "p040",
+     "limitMs": 4318,
+     "repeat": false
+    },
+    {
+     "t": 13100.06396484375,
+     "type": "zone",
+     "parcelId": "p040",
+     "bin": "archive"
+    },
+    {
+     "t": 13716.733642578125,
+     "type": "zone",
+     "parcelId": "p040",
+     "bin": "later"
+    },
+    {
+     "t": 14166.73583984375,
+     "type": "sort",
+     "parcelId": "p040",
+     "limitMs": 4318,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.969,
+     "y": 0.471,
+     "dist": {
+      "reply": 1.625,
+      "info": 1.7,
+      "later": 0.351,
+      "archive": 0.611,
+      "spam": 1.582
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.757,
+      "archive": 0.243,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.757,
+     "confX": 0.969,
+     "confY": 0.471,
+     "conf": 0.969,
+     "sortMs": 2583,
+     "firstMs": 1350,
+     "changedMind": true,
+     "zoneChanges": 2,
+     "points": 159,
+     "combo": 5
+    },
+    {
+     "t": 15066.740234375,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-10",
+     "limitMs": 4294,
+     "repeat": false
+    },
+    {
+     "t": 17150.083740234375,
+     "type": "sort",
+     "parcelId": "r002-llama323b-10",
+     "limitMs": 4294,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.086,
+     "y": -0.181,
+     "dist": {
+      "reply": 1.087,
+      "info": 0.747,
+      "later": 0.98,
+      "archive": 0.58,
+      "spam": 0.605
+     },
+     "soft": {
+      "reply": 0.009,
+      "info": 0.157,
+      "later": 0.025,
+      "archive": 0.431,
+      "spam": 0.377
+     },
+     "bin": "archive",
+     "pTop": 0.431,
+     "confX": 0.086,
+     "confY": 0.181,
+     "conf": 0.181,
+     "sortMs": 2067,
+     "firstMs": 1183,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 10,
+     "combo": 0
+    },
+    {
+     "t": 18033.42138671875,
+     "type": "spawn",
+     "parcelId": "p015",
+     "limitMs": 4273,
+     "repeat": false
+    },
+    {
+     "t": 19466.76171875,
+     "type": "zone",
+     "parcelId": "p015",
+     "bin": "info"
+    },
+    {
+     "t": 20333.4326171875,
+     "type": "sort",
+     "parcelId": "p015",
+     "limitMs": 4273,
+     "speed": 1.36,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.697,
+     "y": 0.029,
+     "dist": {
+      "reply": 0.593,
+      "info": 0.092,
+      "later": 1.471,
+      "archive": 1.349,
+      "spam": 1.068
+     },
+     "soft": {
+      "reply": 0.173,
+      "info": 0.822,
+      "later": 0,
+      "archive": 0,
+      "spam": 0.005
+     },
+     "bin": "info",
+     "pTop": 0.822,
+     "confX": 0.697,
+     "confY": 0.029,
+     "conf": 0.697,
+     "sortMs": 2283,
+     "firstMs": 1183,
+     "changedMind": false,
+     "zoneChanges": 0,
+     "points": 125,
+     "combo": 1
+    },
+    {
+     "t": 21216.770263671875,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-04",
+     "limitMs": 4251,
+     "repeat": true
+    },
+    {
+     "t": 22650.110595703125,
+     "type": "zone",
+     "parcelId": "r002-llama323b-04",
+     "bin": "spam"
+    },
+    {
+     "t": 22950.112060546875,
+     "type": "sort",
+     "parcelId": "r002-llama323b-04",
+     "limitMs": 4251,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.047,
+     "y": -0.982,
+     "dist": {
+      "reply": 1.747,
+      "info": 1.164,
+      "later": 1.712,
+      "archive": 1.11,
+      "spam": 0.208
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.003,
+      "later": 0,
+      "archive": 0.004,
+      "spam": 0.993
+     },
+     "bin": "spam",
+     "pTop": 0.993,
+     "confX": 0.047,
+     "confY": 0.982,
+     "conf": 0.982,
+     "sortMs": 1717,
+     "firstMs": 1333,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 153,
+     "combo": 2
+    },
+    {
+     "t": 23833.44970703125,
+     "type": "spawn",
+     "parcelId": "p015",
+     "limitMs": 4232,
+     "repeat": true
+    },
+    {
+     "t": 24650.120361328125,
+     "type": "zone",
+     "parcelId": "p015",
+     "bin": "reply"
+    },
+    {
+     "t": 26450.129150390625,
+     "type": "sort",
+     "parcelId": "p015",
+     "limitMs": 4232,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.769,
+     "y": 0.827,
+     "dist": {
+      "reply": 0.238,
+      "info": 0.885,
+      "later": 1.434,
+      "archive": 1.668,
+      "spam": 1.781
+     },
+     "soft": {
+      "reply": 0.964,
+      "info": 0.035,
+      "later": 0,
+      "archive": 0,
+      "spam": 0
+     },
+     "bin": "reply",
+     "pTop": 0.964,
+     "confX": 0.769,
+     "confY": 0.827,
+     "conf": 0.827,
+     "sortMs": 2600,
+     "firstMs": 650,
+     "changedMind": false,
+     "zoneChanges": 0,
+     "points": 140,
+     "combo": 3
+    },
+    {
+     "t": 27333.466796875,
+     "type": "spawn",
+     "parcelId": "p020",
+     "limitMs": 4207,
+     "repeat": true
+    },
+    {
+     "t": 29066.80859375,
+     "type": "zone",
+     "parcelId": "p020",
+     "bin": "spam"
+    },
+    {
+     "t": 29733.478515625,
+     "type": "sort",
+     "parcelId": "p020",
+     "limitMs": 4207,
+     "speed": 1.36,
+     "repeat": true,
+     "anchorBin": "spam",
+     "missed": false,
+     "timedOut": false,
+     "x": -0.051,
+     "y": -0.733,
+     "dist": {
+      "reply": 1.479,
+      "info": 0.908,
+      "later": 1.524,
+      "archive": 0.979,
+      "spam": 0.07
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.023,
+      "later": 0,
+      "archive": 0.013,
+      "spam": 0.964
+     },
+     "bin": "spam",
+     "pTop": 0.964,
+     "confX": 0.051,
+     "confY": 0.733,
+     "conf": 0.733,
+     "sortMs": 2383,
+     "firstMs": 1017,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 141,
+     "combo": 4
+    },
+    {
+     "t": 30616.816162109375,
+     "type": "spawn",
+     "parcelId": "p011",
+     "limitMs": 4184,
+     "repeat": true
+    },
+    {
+     "t": 32666.826171875,
+     "type": "zone",
+     "parcelId": "p011",
+     "bin": "archive"
+    },
+    {
+     "t": 32883.493896484375,
+     "type": "sort",
+     "parcelId": "p011",
+     "limitMs": 4184,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.147,
+     "y": 0.071,
+     "dist": {
+      "reply": 0.967,
+      "info": 0.806,
+      "later": 0.745,
+      "archive": 0.518,
+      "spam": 0.864
+     },
+     "soft": {
+      "reply": 0.03,
+      "info": 0.11,
+      "later": 0.169,
+      "archive": 0.621,
+      "spam": 0.071
+     },
+     "bin": "archive",
+     "pTop": 0.621,
+     "confX": 0.147,
+     "confY": 0.071,
+     "conf": 0.147,
+     "sortMs": 2250,
+     "firstMs": 700,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 10,
+     "combo": 0
+    },
+    {
+     "t": 33783.498291015625,
+     "type": "spawn",
+     "parcelId": "p024",
+     "limitMs": 4162,
+     "repeat": true
+    },
+    {
+     "t": 34833.50341796875,
+     "type": "zone",
+     "parcelId": "p024",
+     "bin": "later"
+    },
+    {
+     "t": 35650.174072265625,
+     "type": "sort",
+     "parcelId": "p024",
+     "limitMs": 4162,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.54,
+     "y": 0.584,
+     "dist": {
+      "reply": 1.19,
+      "info": 1.348,
+      "later": 0.116,
+      "archive": 0.643,
+      "spam": 1.467
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0,
+      "later": 0.859,
+      "archive": 0.139,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.859,
+     "confX": 0.54,
+     "confY": 0.584,
+     "conf": 0.584,
+     "sortMs": 1850,
+     "firstMs": 850,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 122,
+     "combo": 1
+    },
+    {
+     "t": 36550.178466796875,
+     "type": "spawn",
+     "parcelId": "p030",
+     "limitMs": 4143,
+     "repeat": true
+    },
+    {
+     "t": 39000.1904296875,
+     "type": "sort",
+     "parcelId": "p030",
+     "limitMs": 4143,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.048,
+     "y": 0.638,
+     "dist": {
+      "reply": 0.699,
+      "info": 0.981,
+      "later": 0.602,
+      "archive": 0.914,
+      "spam": 1.419
+     },
+     "soft": {
+      "reply": 0.323,
+      "info": 0.037,
+      "later": 0.573,
+      "archive": 0.067,
+      "spam": 0
+     },
+     "bin": "later",
+     "pTop": 0.573,
+     "confX": 0.048,
+     "confY": 0.638,
+     "conf": 0.638,
+     "sortMs": 2433,
+     "firstMs": 533,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 125,
+     "combo": 2
+    },
+    {
+     "t": 39900.19482421875,
+     "type": "spawn",
+     "parcelId": "p026",
+     "limitMs": 4119,
+     "repeat": true
+    },
+    {
+     "t": 41350.201904296875,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "spam"
+    },
+    {
+     "t": 41383.535400390625,
+     "type": "sort",
+     "parcelId": "p026",
+     "limitMs": 4119,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": -0.039,
+     "y": -0.461,
+     "dist": {
+      "reply": 1.241,
+      "info": 0.736,
+      "later": 1.282,
+      "archive": 0.802,
+      "spam": 0.322
+     },
+     "soft": {
+      "reply": 0.001,
+      "info": 0.111,
+      "later": 0.001,
+      "archive": 0.07,
+      "spam": 0.816
+     },
+     "bin": "spam",
+     "pTop": 0.816,
+     "confX": 0.039,
+     "confY": 0.461,
+     "conf": 0.461,
+     "sortMs": 1467,
+     "firstMs": 1333,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 113,
+     "combo": 2
+    },
+    {
+     "t": 42283.539794921875,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-02",
+     "limitMs": 4102,
+     "repeat": true
+    },
+    {
+     "t": 43683.546630859375,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-02",
+     "bin": "archive"
+    },
+    {
+     "t": 43916.881103515625,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-02",
+     "limitMs": 4102,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.569,
+     "y": 0.003,
+     "dist": {
+      "reply": 1.366,
+      "info": 1.22,
+      "later": 0.622,
+      "archive": 0.097,
+      "spam": 0.968
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0.001,
+      "later": 0.15,
+      "archive": 0.836,
+      "spam": 0.012
+     },
+     "bin": "archive",
+     "pTop": 0.836,
+     "confX": 0.569,
+     "confY": 0.003,
+     "conf": 0.569,
+     "sortMs": 1617,
+     "firstMs": 1333,
+     "changedMind": false,
+     "zoneChanges": 1,
+     "points": 133,
+     "combo": 3
+    },
+    {
+     "t": 44816.885498046875,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-06",
+     "limitMs": 4084,
+     "repeat": true
+    },
+    {
+     "t": 46300.22607421875,
+     "type": "zone",
+     "parcelId": "r002-llama323b-06",
+     "bin": "archive"
+    },
+    {
+     "t": 47500.23193359375,
+     "type": "sort",
+     "parcelId": "r002-llama323b-06",
+     "limitMs": 4084,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": false,
+     "timedOut": false,
+     "x": 0.75,
+     "y": -0.128,
+     "dist": {
+      "reply": 1.588,
+      "info": 1.402,
+      "later": 0.755,
+      "archive": 0.127,
+      "spam": 0.993
+     },
+     "soft": {
+      "reply": 0,
+      "info": 0,
+      "later": 0.074,
+      "archive": 0.915,
+      "spam": 0.011
+     },
+     "bin": "archive",
+     "pTop": 0.915,
+     "confX": 0.75,
+     "confY": 0.128,
+     "conf": 0.75,
+     "sortMs": 2667,
+     "firstMs": 1017,
+     "changedMind": false,
+     "zoneChanges": 2,
+     "points": 139,
+     "combo": 4
+    },
+    {
+     "t": 48400.236328125,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 4059,
+     "repeat": true
+    },
+    {
+     "t": 52466.9228515625,
+     "type": "miss",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 4059,
+     "speed": 1.36,
+     "repeat": true,
+     "missed": true,
+     "timedOut": true,
+     "sortMs": null,
+     "firstMs": null,
+     "points": 0,
+     "combo": 0
+    },
+    {
+     "t": 52483.589599609375,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 3,
+     "parcelsShown": 17,
+     "sorted": 16,
+     "misses": 1,
+     "changedMind": 1,
+     "bestCombo": 5,
+     "scoreWave": 1914,
+     "speedEnd": 1.36,
+     "decisions": [
+      {
+       "parcelId": "p014",
+       "limitMs": 4398,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.628,
+       "y": 0.445,
+       "dist": {
+        "reply": 0.176,
+        "info": 0.495,
+        "later": 1.29,
+        "archive": 1.371,
+        "spam": 1.377
+       },
+       "soft": {
+        "reply": 0.725,
+        "info": 0.274,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.725,
+       "confX": 0.628,
+       "confY": 0.445,
+       "conf": 0.628,
+       "sortMs": 2483,
+       "firstMs": 1200,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 120,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "limitMs": 4374,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.74,
+       "y": -0.146,
+       "dist": {
+        "reply": 0.772,
+        "info": 0.132,
+        "later": 1.587,
+        "archive": 1.393,
+        "spam": 0.974
+       },
+       "soft": {
+        "reply": 0.066,
+        "info": 0.92,
+        "later": 0,
+        "archive": 0,
+        "spam": 0.013
+       },
+       "bin": "info",
+       "pTop": 0.92,
+       "confX": 0.74,
+       "confY": 0.146,
+       "conf": 0.74,
+       "sortMs": 1383,
+       "firstMs": 850,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 142,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-llama323b-02",
+       "limitMs": 4358,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.803,
+       "y": -0.19,
+       "dist": {
+        "reply": 1.664,
+        "info": 1.46,
+        "later": 0.825,
+        "archive": 0.208,
+        "spam": 0.996
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.052,
+        "archive": 0.936,
+        "spam": 0.013
+       },
+       "bin": "archive",
+       "pTop": 0.936,
+       "confX": 0.803,
+       "confY": 0.19,
+       "conf": 0.803,
+       "sortMs": 1617,
+       "firstMs": 867,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 148,
+       "combo": 3
+      },
+      {
+       "parcelId": "p038",
+       "limitMs": 4340,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.573,
+       "y": 0.086,
+       "dist": {
+        "reply": 1.335,
+        "info": 1.231,
+        "later": 0.54,
+        "archive": 0.156,
+        "spam": 1.038
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.001,
+        "later": 0.227,
+        "archive": 0.765,
+        "spam": 0.006
+       },
+       "bin": "archive",
+       "pTop": 0.765,
+       "confX": 0.573,
+       "confY": 0.086,
+       "conf": 0.573,
+       "sortMs": 2167,
+       "firstMs": 983,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 134,
+       "combo": 4
+      },
+      {
+       "parcelId": "p040",
+       "limitMs": 4318,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.969,
+       "y": 0.471,
+       "dist": {
+        "reply": 1.625,
+        "info": 1.7,
+        "later": 0.351,
+        "archive": 0.611,
+        "spam": 1.582
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.757,
+        "archive": 0.243,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.757,
+       "confX": 0.969,
+       "confY": 0.471,
+       "conf": 0.969,
+       "sortMs": 2583,
+       "firstMs": 1350,
+       "changedMind": true,
+       "zoneChanges": 2,
+       "points": 159,
+       "combo": 5
+      },
+      {
+       "parcelId": "r002-llama323b-10",
+       "limitMs": 4294,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.086,
+       "y": -0.181,
+       "dist": {
+        "reply": 1.087,
+        "info": 0.747,
+        "later": 0.98,
+        "archive": 0.58,
+        "spam": 0.605
+       },
+       "soft": {
+        "reply": 0.009,
+        "info": 0.157,
+        "later": 0.025,
+        "archive": 0.431,
+        "spam": 0.377
+       },
+       "bin": "archive",
+       "pTop": 0.431,
+       "confX": 0.086,
+       "confY": 0.181,
+       "conf": 0.181,
+       "sortMs": 2067,
+       "firstMs": 1183,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 10,
+       "combo": 0
+      },
+      {
+       "parcelId": "p015",
+       "limitMs": 4273,
+       "speed": 1.36,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.697,
+       "y": 0.029,
+       "dist": {
+        "reply": 0.593,
+        "info": 0.092,
+        "later": 1.471,
+        "archive": 1.349,
+        "spam": 1.068
+       },
+       "soft": {
+        "reply": 0.173,
+        "info": 0.822,
+        "later": 0,
+        "archive": 0,
+        "spam": 0.005
+       },
+       "bin": "info",
+       "pTop": 0.822,
+       "confX": 0.697,
+       "confY": 0.029,
+       "conf": 0.697,
+       "sortMs": 2283,
+       "firstMs": 1183,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 125,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-04",
+       "limitMs": 4251,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.047,
+       "y": -0.982,
+       "dist": {
+        "reply": 1.747,
+        "info": 1.164,
+        "later": 1.712,
+        "archive": 1.11,
+        "spam": 0.208
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.003,
+        "later": 0,
+        "archive": 0.004,
+        "spam": 0.993
+       },
+       "bin": "spam",
+       "pTop": 0.993,
+       "confX": 0.047,
+       "confY": 0.982,
+       "conf": 0.982,
+       "sortMs": 1717,
+       "firstMs": 1333,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 153,
+       "combo": 2
+      },
+      {
+       "parcelId": "p015",
+       "limitMs": 4232,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.769,
+       "y": 0.827,
+       "dist": {
+        "reply": 0.238,
+        "info": 0.885,
+        "later": 1.434,
+        "archive": 1.668,
+        "spam": 1.781
+       },
+       "soft": {
+        "reply": 0.964,
+        "info": 0.035,
+        "later": 0,
+        "archive": 0,
+        "spam": 0
+       },
+       "bin": "reply",
+       "pTop": 0.964,
+       "confX": 0.769,
+       "confY": 0.827,
+       "conf": 0.827,
+       "sortMs": 2600,
+       "firstMs": 650,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 140,
+       "combo": 3
+      },
+      {
+       "parcelId": "p020",
+       "limitMs": 4207,
+       "speed": 1.36,
+       "repeat": true,
+       "anchorBin": "spam",
+       "missed": false,
+       "timedOut": false,
+       "x": -0.051,
+       "y": -0.733,
+       "dist": {
+        "reply": 1.479,
+        "info": 0.908,
+        "later": 1.524,
+        "archive": 0.979,
+        "spam": 0.07
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.023,
+        "later": 0,
+        "archive": 0.013,
+        "spam": 0.964
+       },
+       "bin": "spam",
+       "pTop": 0.964,
+       "confX": 0.051,
+       "confY": 0.733,
+       "conf": 0.733,
+       "sortMs": 2383,
+       "firstMs": 1017,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 141,
+       "combo": 4
+      },
+      {
+       "parcelId": "p011",
+       "limitMs": 4184,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.147,
+       "y": 0.071,
+       "dist": {
+        "reply": 0.967,
+        "info": 0.806,
+        "later": 0.745,
+        "archive": 0.518,
+        "spam": 0.864
+       },
+       "soft": {
+        "reply": 0.03,
+        "info": 0.11,
+        "later": 0.169,
+        "archive": 0.621,
+        "spam": 0.071
+       },
+       "bin": "archive",
+       "pTop": 0.621,
+       "confX": 0.147,
+       "confY": 0.071,
+       "conf": 0.147,
+       "sortMs": 2250,
+       "firstMs": 700,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 10,
+       "combo": 0
+      },
+      {
+       "parcelId": "p024",
+       "limitMs": 4162,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.54,
+       "y": 0.584,
+       "dist": {
+        "reply": 1.19,
+        "info": 1.348,
+        "later": 0.116,
+        "archive": 0.643,
+        "spam": 1.467
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0,
+        "later": 0.859,
+        "archive": 0.139,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.859,
+       "confX": 0.54,
+       "confY": 0.584,
+       "conf": 0.584,
+       "sortMs": 1850,
+       "firstMs": 850,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 122,
+       "combo": 1
+      },
+      {
+       "parcelId": "p030",
+       "limitMs": 4143,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.048,
+       "y": 0.638,
+       "dist": {
+        "reply": 0.699,
+        "info": 0.981,
+        "later": 0.602,
+        "archive": 0.914,
+        "spam": 1.419
+       },
+       "soft": {
+        "reply": 0.323,
+        "info": 0.037,
+        "later": 0.573,
+        "archive": 0.067,
+        "spam": 0
+       },
+       "bin": "later",
+       "pTop": 0.573,
+       "confX": 0.048,
+       "confY": 0.638,
+       "conf": 0.638,
+       "sortMs": 2433,
+       "firstMs": 533,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 125,
+       "combo": 2
+      },
+      {
+       "parcelId": "p026",
+       "limitMs": 4119,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.039,
+       "y": -0.461,
+       "dist": {
+        "reply": 1.241,
+        "info": 0.736,
+        "later": 1.282,
+        "archive": 0.802,
+        "spam": 0.322
+       },
+       "soft": {
+        "reply": 0.001,
+        "info": 0.111,
+        "later": 0.001,
+        "archive": 0.07,
+        "spam": 0.816
+       },
+       "bin": "spam",
+       "pTop": 0.816,
+       "confX": 0.039,
+       "confY": 0.461,
+       "conf": 0.461,
+       "sortMs": 1467,
+       "firstMs": 1333,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 113,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-02",
+       "limitMs": 4102,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.569,
+       "y": 0.003,
+       "dist": {
+        "reply": 1.366,
+        "info": 1.22,
+        "later": 0.622,
+        "archive": 0.097,
+        "spam": 0.968
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0.001,
+        "later": 0.15,
+        "archive": 0.836,
+        "spam": 0.012
+       },
+       "bin": "archive",
+       "pTop": 0.836,
+       "confX": 0.569,
+       "confY": 0.003,
+       "conf": 0.569,
+       "sortMs": 1617,
+       "firstMs": 1333,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 133,
+       "combo": 3
+      },
+      {
+       "parcelId": "r002-llama323b-06",
+       "limitMs": 4084,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.75,
+       "y": -0.128,
+       "dist": {
+        "reply": 1.588,
+        "info": 1.402,
+        "later": 0.755,
+        "archive": 0.127,
+        "spam": 0.993
+       },
+       "soft": {
+        "reply": 0,
+        "info": 0,
+        "later": 0.074,
+        "archive": 0.915,
+        "spam": 0.011
+       },
+       "bin": "archive",
+       "pTop": 0.915,
+       "confX": 0.75,
+       "confY": 0.128,
+       "conf": 0.75,
+       "sortMs": 2667,
+       "firstMs": 1017,
+       "changedMind": false,
+       "zoneChanges": 2,
+       "points": 139,
+       "combo": 4
+      },
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "limitMs": 4059,
+       "speed": 1.36,
+       "repeat": true,
+       "missed": true,
+       "timedOut": true,
+       "sortMs": null,
+       "firstMs": null,
+       "points": 0,
+       "combo": 0
+      }
+     ],
+     "limitMsEnd": 4048,
+     "partial": 1,
+     "timedOut": 0,
+     "meanConf": 0.643,
+     "roundId": "round-002",
+     "roundNo": 2,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "field2d",
+     "axesVersion": "1.0.0"
+    }
+   },
+   "segment": "parcels"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:00:57.333Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 50000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-002-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:01:02.978Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-002-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 2
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.15
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 50000
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:01:56.195Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 2,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1.15,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 50000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-002-ab"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "summary-style"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T12:02:04.674Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-002-ab",
+     "to": null
+    },
+    {
+     "param": "pairs",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "kind",
+     "from": "summary-style",
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 3
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.36
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 50000
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 5,
+  "highestLevel": 5,
+  "totalDurationMs": 170858.5703125,
+  "parcels": {
+   "roundId": "round-002",
+   "roundNo": 2,
+   "roundVersion": "1.0.0",
+   "synthetic": true,
+   "sim": false,
+   "mode": "field2d",
+   "axesVersion": "1.0.0",
+   "score": 5972,
+   "bestCombo": 12,
+   "parcels": 48,
+   "sorted": 46,
+   "misses": 2,
+   "changedMind": 4,
+   "abAnswered": 2,
+   "bins": {
+    "archive": 13,
+    "later": 15,
+    "reply": 6,
+    "spam": 7,
+    "info": 5
+   },
+   "timedOut": 0,
+   "partial": 5,
+   "middle": 3,
+   "meanConf": 0.619,
+   "meanConfX": 0.46,
+   "meanConfY": 0.403
+  }
+ },
+ "session": {
+  "id": "20261031171012-qjrof",
+  "kind": "parcels+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "parcels",
+    "wave": 1,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 55233.60302734375
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "pairwise",
+    "pairId": "round-002-ab1",
+    "questionNo": 1,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 3545.31787109375
+   },
+   {
+    "index": 2,
+    "levelIndex": 2,
+    "kind": "parcels",
+    "wave": 2,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 53216.926513671875
+   },
+   {
+    "index": 3,
+    "levelIndex": 3,
+    "kind": "pairwise",
+    "pairId": "round-002-ab2",
+    "questionNo": 2,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 6379.13330078125
+   },
+   {
+    "index": 4,
+    "levelIndex": 4,
+    "kind": "parcels",
+    "wave": 3,
+    "roundId": "round-002",
+    "outcome": "complete",
+    "durationMs": 52483.589599609375
+   }
+  ]
+ },
+ "qualities": {
+  "modelVersion": "1.2.0",
+  "computedAt": "2026-10-31T17:10:12.841Z",
+  "runType": "sim",
+  "adapters": [
+   "parcels",
+   "pairwise"
+  ],
+  "items": {
+   "focus": {
+    "score": 92,
+    "confidence": 0.66,
+    "label": "estimate",
+    "evidence": [
+     "parcels: parcels missed 2/48, changed mind 4"
+    ]
+   },
+   "reaction": {
+    "score": 89,
+    "confidence": 0.65,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median first touch 1.00 s after a parcel appears"
+    ]
+   },
+   "consistency": {
+    "score": 85,
+    "confidence": 0.43,
+    "label": "rough",
+    "evidence": [
+     "parcels: wave focus sd 5.1 over 3 waves"
+    ]
+   },
+   "accuracy": {
+    "score": 49,
+    "confidence": 0.2,
+    "label": "rough",
+    "evidence": [
+     "parcels: clear-cut parcels: mean soft agreement 0.49 over 2"
+    ]
+   },
+   "endurance": {
+    "score": 68,
+    "confidence": 0.38,
+    "label": "rough",
+    "evidence": [
+     "parcels: wave focus trend 2.3 pts/wave (speed rises each wave)"
+    ]
+   },
+   "decisionSpeed": {
+    "score": 69,
+    "confidence": 0.65,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median sort 2.34 s",
+     "pairwise: median 5.0 s per pick (n=2)"
+    ]
+   },
+   "decisiveness": {
+    "score": 64,
+    "confidence": 0.7,
+    "label": "estimate",
+    "evidence": [
+     "parcels: mean axis confidence x 0.46, y 0.40 (0 = dropped in the middle)",
+     "pairwise: mean strength 2.00 of 3; tie/neither 0/2"
+    ]
+   }
+  },
+  "note": "Rough gameplay estimates for choosing a game; not an assessment of the person. \"rough\" = confidence < 0.5."
+ }
+}

@@ -3,7 +3,7 @@
    partial qualities; compute() merges them (confidence-weighted). Registry: games/shared/qualities.registry.json.
    These are rough gameplay estimates for picking a game, NOT assessments of a person. Labelled 'rough' until confidence >= 0.5. */
 (function (root, f) { if (typeof module === 'object' && module.exports) module.exports = f(); else root.Qualities = f(); })(typeof self !== 'undefined' ? self : this, function () {
-  var MODEL_VERSION = '1.1.0';
+  var MODEL_VERSION = '1.2.0';
   var QUALITIES = {
     focus: 'Sustained attention: few avoidable mistakes per opportunity',
     reaction: 'Responding in time to sudden threats',
@@ -93,7 +93,11 @@
       var fm = all.filter(function (d) { return d.firstMs != null; }).map(function (d) { return d.firstMs; }), sm = all.filter(function (d) { return !d.missed; }).map(function (d) { return d.sortMs; });
       if (fm.length) res.reaction = q(logScale(median(fm) / 1000, 0.8, 6), fm.length, 25, ['median first touch ' + (median(fm) / 1000).toFixed(2) + ' s after a parcel appears']);
       if (sm.length) res.decisionSpeed = q(logScale(median(sm) / 1000, 1, 8), sm.length, 25, ['median sort ' + (median(sm) / 1000).toFixed(2) + ' s']);
-      var an = all.filter(function (d) { return d.anchorBin && !d.missed; }); if (an.length) { var ok = an.filter(function (d) { return d.bin === d.anchorBin; }).length; res.accuracy = q(100 * ok / an.length, an.length, 8, ['clear-cut parcels sorted as expected ' + ok + '/' + an.length]); }
+      var an = all.filter(function (d) { return d.anchorBin && !d.missed; }), v2 = all.filter(function (d) { return !d.missed && d.soft; });
+      // v2 field: accuracy = mean soft probability on the anchor's bin (partial credit); decisiveness = mean stronger-axis confidence
+      if (v2.length) { var a2 = v2.filter(function (d) { return d.anchorBin; }); if (a2.length) res.accuracy = q(100 * mean(a2.map(function (d) { return d.soft[d.anchorBin] || 0; })), a2.length, 8, ['clear-cut parcels: mean soft agreement ' + mean(a2.map(function (d) { return d.soft[d.anchorBin] || 0; })).toFixed(2) + ' over ' + a2.length]);
+        res.decisiveness = q(100 * mean(v2.map(function (d) { return d.conf; })), v2.length, 20, ['mean axis confidence x ' + mean(v2.map(function (d) { return d.confX; })).toFixed(2) + ', y ' + mean(v2.map(function (d) { return d.confY; })).toFixed(2) + ' (0 = dropped in the middle)']); }
+      else if (an.length) { var ok = an.filter(function (d) { return d.bin === d.anchorBin; }).length; res.accuracy = q(100 * ok / an.length, an.length, 8, ['clear-cut parcels sorted as expected ' + ok + '/' + an.length]); }
       if (fs.length >= 2) res.consistency = q(100 - 3 * sd(fs), fs.length, 4, ['wave focus sd ' + sd(fs).toFixed(1) + ' over ' + fs.length + ' waves']);
       if (fs.length >= 3) res.endurance = q(50 + 8 * slope(fs), fs.length, 5, ['wave focus trend ' + slope(fs).toFixed(1) + ' pts/wave (speed rises each wave)']);
       return res;
