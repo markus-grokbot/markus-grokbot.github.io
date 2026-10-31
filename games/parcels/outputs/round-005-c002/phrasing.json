@@ -1,0 +1,85 @@
+{
+ "schema": "parcels-output",
+ "kind": "phrasing",
+ "version": "1.0.0",
+ "lane": "low",
+ "queue": "night",
+ "allowedTiers": [
+  "ollama",
+  "opencode"
+ ],
+ "laneNote": "night queue, free tools only",
+ "sim": false,
+ "seededUnlock": false,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-005-c002",
+  "label": "Invoice and Payment",
+  "rationale": "This cluster includes items related to invoices, payments, and overdue payments.",
+  "work": "reply",
+  "members": [
+   "r003-qwen2515b-01",
+   "r003-qwen2515b-04",
+   "r002-llama323b-03",
+   "r002-llama323b-08",
+   "r002-llama323b-09",
+   "r002-qwen2515b-01",
+   "r002-qwen2515b-03",
+   "r002-qwen2515b-06"
+  ],
+  "proposedBy": [
+   "qwen2.5:1.5b"
+  ]
+ },
+ "round": "round-006",
+ "fromLog": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+ "picks": [
+  {
+   "pairId": "round-005-c002-ph1",
+   "a": "round-005-c002:llama323b:guided",
+   "b": "round-005-c002:llama323b:terse",
+   "choice": "A",
+   "winner": "round-005-c002:llama323b:guided",
+   "winnerModel": "llama3.2:3b",
+   "ms": 15705
+  }
+ ],
+ "preferred": {
+  "id": "round-005-c002:llama323b:guided",
+  "model": "llama3.2:3b",
+  "variant": "guided",
+  "text": "Dear valued customers,\n\nWe are writing to inform you that your invoices are overdue. Please make payment by next Friday to avoid any further action. For invoice 1234, the amount due is $500. For invoice 9876, the amount due is $400. If you have any questions or concerns, please don't hesitate to reach out.\n\nBest regards, Engineer",
+  "dims": {
+   "brevity": 0,
+   "directness": 0
+  }
+ },
+ "candidates": [
+  {
+   "id": "round-005-c002:llama323b:guided",
+   "model": "llama3.2:3b",
+   "variant": "guided",
+   "text": "Dear valued customers,\n\nWe are writing to inform you that your invoices are overdue. Please make payment by next Friday to avoid any further action. For invoice 1234, the amount due is $500. For invoice 9876, the amount due is $400. If you have any questions or concerns, please don't hesitate to reach out.\n\nBest regards, Engineer",
+   "dims": {
+    "brevity": 0,
+    "directness": 0
+   }
+  },
+  {
+   "id": "round-005-c002:llama323b:terse",
+   "model": "llama3.2:3b",
+   "variant": "terse",
+   "text": "Invoices are overdue. Payment due by next Friday. $500 for invoice 1234, $400 for invoice 9876. Contact us if you have questions.",
+   "dims": {
+    "brevity": 1,
+    "directness": 1
+   }
+  }
+ ],
+ "toneSignal": [
+  {
+   "brevity": -1,
+   "directness": -1
+  }
+ ]
+}

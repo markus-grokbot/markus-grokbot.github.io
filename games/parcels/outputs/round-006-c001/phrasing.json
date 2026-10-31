@@ -1,0 +1,85 @@
+{
+ "schema": "parcels-output",
+ "kind": "phrasing",
+ "version": "1.0.0",
+ "lane": "low",
+ "queue": "night",
+ "allowedTiers": [
+  "ollama",
+  "opencode"
+ ],
+ "laneNote": "night queue, free tools only",
+ "sim": false,
+ "seededUnlock": false,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-006-c001",
+  "label": "Overdue Payments",
+  "rationale": "Multiple invoices and payments are overdue",
+  "work": "reply",
+  "members": [
+   "p029",
+   "p026",
+   "r003-qwen2515b-04",
+   "r002-llama323b-06",
+   "r002-llama323b-09",
+   "r002-qwen2515b-01",
+   "r003-llama323b-05",
+   "r005-llama323b-04"
+  ],
+  "proposedBy": [
+   "llama3.2:3b"
+  ]
+ },
+ "round": "round-006",
+ "fromLog": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+ "picks": [
+  {
+   "pairId": "round-006-c001-ph1",
+   "a": "round-006-c001:llama323b:guided",
+   "b": "round-006-c001:llama323b:terse",
+   "choice": "A",
+   "winner": "round-006-c001:llama323b:guided",
+   "winnerModel": "llama3.2:3b",
+   "ms": 2893
+  }
+ ],
+ "preferred": {
+  "id": "round-006-c001:llama323b:guided",
+  "model": "llama3.2:3b",
+  "variant": "guided",
+  "text": "Dear valued customers and collaborators,\n\nWe are writing to inform you of the following overdue payments:\n\n- Invoice #9876: Payment due by next Friday.\n- Invoice #1234: Payment is overdue.\n\nPlease make the necessary payments to avoid any further action.\n\nBest regards, [Engineer's Name]",
+  "dims": {
+   "brevity": 0,
+   "directness": 0
+  }
+ },
+ "candidates": [
+  {
+   "id": "round-006-c001:llama323b:guided",
+   "model": "llama3.2:3b",
+   "variant": "guided",
+   "text": "Dear valued customers and collaborators,\n\nWe are writing to inform you of the following overdue payments:\n\n- Invoice #9876: Payment due by next Friday.\n- Invoice #1234: Payment is overdue.\n\nPlease make the necessary payments to avoid any further action.\n\nBest regards, [Engineer's Name]",
+   "dims": {
+    "brevity": 0,
+    "directness": 0
+   }
+  },
+  {
+   "id": "round-006-c001:llama323b:terse",
+   "model": "llama3.2:3b",
+   "variant": "terse",
+   "text": "Overdue payments:\n- Invoice #9876: Payment due by next Friday.\n- Invoice #1234: Payment is overdue.\n\nMake payments to avoid further action.",
+   "dims": {
+    "brevity": 1,
+    "directness": 1
+   }
+  }
+ ],
+ "toneSignal": [
+  {
+   "brevity": -1,
+   "directness": -1
+  }
+ ]
+}

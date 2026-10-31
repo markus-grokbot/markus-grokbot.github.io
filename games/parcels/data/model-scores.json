@@ -1004,16 +1004,243 @@
       ]
      },
      "scoreWithHandling": 0.654
+    },
+    {
+     "round": "round-006",
+     "roundWeight": 1,
+     "note": "Full weight. Second chained session; first low-lane unlock.",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.623,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 8,
+     "authoredClarity": 0.926,
+     "authoredMeanConf": 0.524,
+     "priority": {
+      "graded": 14,
+      "agreement": 0.623,
+      "urgency": 0.578,
+      "importance": 0.689,
+      "meanAbsPriorityError": 41,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.661,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "0/0",
+       "his": "89/40",
+       "agreement": 0.207,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "0/0",
+       "his": "73/74",
+       "agreement": 0.269,
+       "weight": 0.755
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.138,
+       "weight": 0.63
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "0/0",
+       "his": "72/73",
+       "agreement": 0.276,
+       "weight": 0.725
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "0/0",
+       "his": "85/55",
+       "agreement": 0.187,
+       "weight": 0.593
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "0/0",
+       "his": "30/74",
+       "agreement": 0.466,
+       "weight": 0.712
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "100/0",
+       "his": "28/57",
+       "agreement": 0.314,
+       "weight": 0.431
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "subject": "Meeting Request",
+       "yours": "0/0",
+       "his": "70/79",
+       "agreement": 0.247,
+       "weight": 0.364
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "0/70",
+       "his": "63/63",
+       "agreement": 0.65,
+       "weight": 0.525
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "0/0",
+       "his": "89/40",
+       "agreement": 0.207,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "0/0",
+       "his": "73/74",
+       "agreement": 0.269,
+       "weight": 0.755
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.138,
+       "weight": 0.63
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "0/0",
+       "his": "72/73",
+       "agreement": 0.276,
+       "weight": 0.725
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "0/0",
+       "his": "85/55",
+       "agreement": 0.187,
+       "weight": 0.593
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "0/0",
+       "his": "30/74",
+       "agreement": 0.466,
+       "weight": 0.712
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "100/0",
+       "his": "28/57",
+       "agreement": 0.314,
+       "weight": 0.431
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "subject": "Meeting Request",
+       "yours": "0/0",
+       "his": "70/79",
+       "agreement": 0.247,
+       "weight": 0.364
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "0/70",
+       "his": "63/63",
+       "agreement": 0.65,
+       "weight": 0.525
+      }
+     ],
+     "handling": {
+      "graded": 11,
+      "agreement": 0.655,
+      "manualAxis": 0.582,
+      "spendAxis": 0.73,
+      "sameTier": 0.182,
+      "misses": [
+       {
+        "parcelId": "p010",
+        "yours": "0/0",
+        "his": "69/67",
+        "agreement": 0.323
+       },
+       {
+        "parcelId": "p023",
+        "yours": "0/0",
+        "his": "67/57",
+        "agreement": 0.361
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "10/20",
+        "his": "78/75",
+        "agreement": 0.382
+       },
+       {
+        "parcelId": "p028",
+        "yours": "0/0",
+        "his": "40/63",
+        "agreement": 0.47
+       },
+       {
+        "parcelId": "p008",
+        "yours": "0/80",
+        "his": "87/85",
+        "agreement": 0.526
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "80/40",
+        "his": "30/74",
+        "agreement": 0.589
+       },
+       {
+        "parcelId": "p039",
+        "yours": "50/30",
+        "his": "80/80",
+        "agreement": 0.603
+       }
+      ]
+     },
+     "scoreWithHandling": 0.659
     }
    ],
    "latest": {
-    "round": "round-005",
-    "score": 0.687,
-    "weightedAgreement": 0.659,
-    "priorityAgreement": 0.659
+    "round": "round-006",
+    "score": 0.661,
+    "weightedAgreement": 0.623,
+    "priorityAgreement": 0.623
    },
-   "cumulative": 0.558,
-   "trend": -0.005
+   "cumulative": 0.577,
+   "trend": -0.026
   },
   "qwen2.5:1.5b": {
    "history": [
@@ -2020,16 +2247,207 @@
       ]
      },
      "scoreWithHandling": 0.704
+    },
+    {
+     "round": "round-006",
+     "roundWeight": 1,
+     "note": "Full weight. Second chained session; first low-lane unlock.",
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.707,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 3,
+     "authoredClarity": 0.75,
+     "authoredMeanConf": 0.678,
+     "priority": {
+      "graded": 14,
+      "agreement": 0.707,
+      "urgency": 0.724,
+      "importance": 0.684,
+      "meanAbsPriorityError": 23.1,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.712,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "50/80",
+       "his": "2/5",
+       "agreement": 0.39,
+       "weight": 1.853
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "70/90",
+       "his": "16/25",
+       "agreement": 0.414,
+       "weight": 1.106
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/50",
+       "his": "89/40",
+       "agreement": 0.428,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "10/80",
+       "his": "19/23",
+       "agreement": 0.691,
+       "weight": 1.084
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/100",
+       "his": "19/42",
+       "agreement": 0.732,
+       "weight": 0.723
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "50/20",
+       "his": "28/57",
+       "agreement": 0.741,
+       "weight": 0.431
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "50/80",
+       "his": "2/5",
+       "agreement": 0.39,
+       "weight": 1.853
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "70/90",
+       "his": "16/25",
+       "agreement": 0.414,
+       "weight": 1.106
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/50",
+       "his": "89/40",
+       "agreement": 0.428,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "10/80",
+       "his": "19/23",
+       "agreement": 0.691,
+       "weight": 1.084
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/100",
+       "his": "19/42",
+       "agreement": 0.732,
+       "weight": 0.723
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "50/20",
+       "his": "28/57",
+       "agreement": 0.741,
+       "weight": 0.431
+      }
+     ],
+     "handling": {
+      "graded": 14,
+      "agreement": 0.532,
+      "manualAxis": 0.476,
+      "spendAxis": 0.589,
+      "sameTier": 0.214,
+      "misses": [
+       {
+        "parcelId": "p011",
+        "yours": "90/80",
+        "his": "10/3",
+        "agreement": 0.216
+       },
+       {
+        "parcelId": "r002-qwen2515b-06",
+        "yours": "80/80",
+        "his": "11/8",
+        "agreement": 0.293
+       },
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "10/50",
+        "his": "100/100",
+        "agreement": 0.3
+       },
+       {
+        "parcelId": "p039",
+        "yours": "10/20",
+        "his": "80/80",
+        "agreement": 0.352
+       },
+       {
+        "parcelId": "r003-llama323b-02",
+        "yours": "30/40",
+        "his": "100/97",
+        "agreement": 0.365
+       },
+       {
+        "parcelId": "p028",
+        "yours": "90/90",
+        "his": "40/63",
+        "agreement": 0.631
+       },
+       {
+        "parcelId": "p008",
+        "yours": "50/50",
+        "his": "87/85",
+        "agreement": 0.639
+       },
+       {
+        "parcelId": "p023",
+        "yours": "30/50",
+        "his": "67/57",
+        "agreement": 0.719
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "50/50",
+        "his": "78/75",
+        "agreement": 0.735
+       }
+      ]
+     },
+     "scoreWithHandling": 0.667
     }
    ],
    "latest": {
-    "round": "round-005",
-    "score": 0.738,
-    "weightedAgreement": 0.71,
-    "priorityAgreement": 0.71
+    "round": "round-006",
+    "score": 0.712,
+    "weightedAgreement": 0.707,
+    "priorityAgreement": 0.707
    },
-   "cumulative": 0.554,
-   "trend": 0.206
+   "cumulative": 0.583,
+   "trend": -0.026
   }
  },
  "rounds": [
@@ -2090,31 +2508,82 @@
    "decisions": 29,
    "ab": 0,
    "next": "round-006"
+  },
+  {
+   "round": "round-006",
+   "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+   "logs": [
+    "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+    "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json"
+   ],
+   "roundWeight": 1,
+   "note": "Full weight. Second chained session; first low-lane unlock.",
+   "gradedAt": "2026-10-31T20:08:34.909Z",
+   "decisions": 25,
+   "ab": 0,
+   "next": "round-007"
   }
  ],
- "updatedAt": "2026-10-31T19:21:39.887Z",
+ "updatedAt": "2026-10-31T20:08:34.910Z",
  "ranking": [
   "qwen2.5:1.5b",
   "llama3.2:3b"
  ],
  "stageColumns": {
   "llama3.2:3b": {
-   "priority": 0.659,
-   "handling": 0.557,
-   "fromRound": "round-005"
+   "priority": 0.623,
+   "handling": 0.655,
+   "fromRound": "round-006",
+   "clusterHist": [
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+     "value": 0.25,
+     "n": 16
+    }
+   ],
+   "cluster": 0.25,
+   "phrasingHist": [
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+     "value": 1,
+     "n": 2
+    }
+   ],
+   "phrasing": 1,
+   "codepassHist": [
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+     "value": 0.5,
+     "n": 2
+    }
+   ],
+   "codepass": 0.5
   },
   "qwen2.5:1.5b": {
-   "priority": 0.71,
-   "handling": 0.601,
-   "fromRound": "round-005",
+   "priority": 0.707,
+   "handling": 0.532,
+   "fromRound": "round-006",
    "clusterHist": [
     {
      "log": "games/parcels/logs/human/human-parcels-round-005-session-20261031191406-ag68p.json",
      "value": 0.176,
      "n": 34
+    },
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+     "value": 0.206,
+     "n": 34
     }
    ],
-   "cluster": 0.176
+   "cluster": 0.191,
+   "codepassHist": [
+    {
+     "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+     "value": 0.5,
+     "n": 2
+    }
+   ],
+   "codepass": 0.5
   }
  },
  "stageColumnsNote": "Per-stage model columns: priority/handling = latest round agreement; cluster = share of its proposed memberships he confirmed; phrasing/codepass = A/B win rate (weighted over session logs).",
@@ -2160,6 +2629,53 @@
     }
    },
    "outputs": []
+  },
+  {
+   "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+   "round": "round-006",
+   "processedAt": "2026-10-31T20:29:11.964Z",
+   "grades": {
+    "llama3.2:3b": {
+     "cluster": {
+      "answered": 16,
+      "confirmed": 4,
+      "precision": 0.25
+     },
+     "phrasing": {
+      "shown": 2,
+      "wins": 2,
+      "winRate": 1
+     },
+     "codepass": {
+      "shown": 2,
+      "wins": 1,
+      "winRate": 0.5
+     }
+    },
+    "qwen2.5:1.5b": {
+     "cluster": {
+      "answered": 34,
+      "confirmed": 7,
+      "precision": 0.206
+     },
+     "phrasing": {
+      "shown": 0,
+      "wins": 0,
+      "winRate": null
+     },
+     "codepass": {
+      "shown": 2,
+      "wins": 1,
+      "winRate": 0.5
+     }
+    }
+   },
+   "outputs": [
+    "games/parcels/outputs/round-005-c002/phrasing.json",
+    "games/parcels/outputs/round-005-c002/codepass.json",
+    "games/parcels/outputs/round-006-c001/phrasing.json",
+    "games/parcels/outputs/round-006-c001/codepass.json"
+   ]
   }
  ]
 }

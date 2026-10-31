@@ -1,0 +1,4603 @@
+{
+ "schema": "gameplay-log",
+ "schemaVersion": "1.2.0",
+ "game": {
+  "id": "parcels",
+  "version": "0.5.0",
+  "iteration": 5,
+  "namespace": "parcels"
+ },
+ "run": {
+  "id": "20261031195848-kmdgh",
+  "type": "human",
+  "startedAt": "2026-10-31T19:58:48.015Z",
+  "endedAt": "2026-10-31T20:05:57.662Z",
+  "device": {
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+   "w": 375,
+   "h": 549,
+   "touch": true
+  },
+  "player": {},
+  "seed": 476728014,
+  "tuningSource": "round:round-006"
+ },
+ "levels": [
+  {
+   "level": 1,
+   "params": {
+    "wave": 1,
+    "waveSpeed": 0.8,
+    "durationMs": 45000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T19:58:49.219Z",
+   "endedAt": "2026-10-31T19:59:38.543Z",
+   "durationMs": 49324,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 49324,
+    "score": 932,
+    "actions": 8,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2722,
+     "type": "spawn",
+     "parcelId": "p012",
+     "limitMs": 6996,
+     "repeat": false
+    },
+    {
+     "t": 8988,
+     "type": "sort",
+     "parcelId": "p012",
+     "x": -0.826,
+     "y": -0.102,
+     "priority": 63.5,
+     "conf": 0.826,
+     "sortMs": 6250,
+     "timedOut": false
+    },
+    {
+     "t": 9871,
+     "type": "spawn",
+     "parcelId": "p029",
+     "limitMs": 6907,
+     "repeat": false
+    },
+    {
+     "t": 15604,
+     "type": "sort",
+     "parcelId": "p029",
+     "x": -0.7,
+     "y": 0.098,
+     "priority": 66.9,
+     "conf": 0.7,
+     "sortMs": 5717,
+     "timedOut": false
+    },
+    {
+     "t": 16504,
+     "type": "spawn",
+     "parcelId": "p020",
+     "limitMs": 6825,
+     "repeat": false
+    },
+    {
+     "t": 18670,
+     "type": "zone",
+     "parcelId": "p020",
+     "bin": "deprio"
+    },
+    {
+     "t": 19187,
+     "type": "sort",
+     "parcelId": "p020",
+     "x": 0.97,
+     "y": -0.891,
+     "priority": 3.9,
+     "conf": 0.97,
+     "sortMs": 2667,
+     "timedOut": false
+    },
+    {
+     "t": 20070,
+     "type": "spawn",
+     "parcelId": "p026",
+     "limitMs": 6780,
+     "repeat": false
+    },
+    {
+     "t": 24904,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "first"
+    },
+    {
+     "t": 25271,
+     "type": "sort",
+     "parcelId": "p026",
+     "x": -0.452,
+     "y": 0.469,
+     "priority": 73.1,
+     "conf": 0.469,
+     "sortMs": 5183,
+     "timedOut": false
+    },
+    {
+     "t": 26154,
+     "type": "spawn",
+     "parcelId": "p013",
+     "limitMs": 6705,
+     "repeat": false
+    },
+    {
+     "t": 31187,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "first"
+    },
+    {
+     "t": 31423,
+     "type": "sort",
+     "parcelId": "p013",
+     "x": -0.435,
+     "y": 0.461,
+     "priority": 72.5,
+     "conf": 0.461,
+     "sortMs": 5250,
+     "timedOut": false
+    },
+    {
+     "t": 32304,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 6628,
+     "repeat": false
+    },
+    {
+     "t": 34521,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "schedule"
+    },
+    {
+     "t": 37521,
+     "type": "sort",
+     "parcelId": "p039",
+     "x": 0.402,
+     "y": 0.469,
+     "priority": 56,
+     "conf": 0.469,
+     "sortMs": 5200,
+     "timedOut": false
+    },
+    {
+     "t": 38421,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-06",
+     "limitMs": 6552,
+     "repeat": false
+    },
+    {
+     "t": 44254,
+     "type": "sort",
+     "parcelId": "r003-llama323b-06",
+     "x": 0.446,
+     "y": 0.145,
+     "priority": 45.4,
+     "conf": 0.446,
+     "sortMs": 5817,
+     "timedOut": false
+    },
+    {
+     "t": 45154,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 6468,
+     "repeat": false
+    },
+    {
+     "t": 48688,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "first"
+    },
+    {
+     "t": 49321,
+     "type": "sort",
+     "parcelId": "p008",
+     "x": -0.964,
+     "y": 1,
+     "priority": 99.3,
+     "conf": 1,
+     "sortMs": 4150,
+     "timedOut": false
+    },
+    {
+     "t": 49324,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 1,
+     "parcelsShown": 8,
+     "sorted": 8,
+     "misses": 0,
+     "changedMind": 0,
+     "bestCombo": 4,
+     "scoreWave": 932,
+     "speedEnd": 0.8,
+     "decisions": [
+      {
+       "parcelId": "p012",
+       "limitMs": 6996,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.826,
+       "y": -0.102,
+       "urgency": 91.3,
+       "importance": 44.9,
+       "priority": 63.5,
+       "quadrant": "skim",
+       "pTop": 0.551,
+       "confX": 0.826,
+       "confY": 0.102,
+       "conf": 0.826,
+       "sortMs": 6250,
+       "firstMs": 5583,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 119,
+       "combo": 1
+      },
+      {
+       "parcelId": "p029",
+       "limitMs": 6907,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.7,
+       "y": 0.098,
+       "urgency": 85,
+       "importance": 54.9,
+       "priority": 66.9,
+       "quadrant": "first",
+       "pTop": 0.549,
+       "confX": 0.7,
+       "confY": 0.098,
+       "conf": 0.7,
+       "sortMs": 5717,
+       "firstMs": 4333,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 119,
+       "combo": 2
+      },
+      {
+       "parcelId": "p020",
+       "limitMs": 6825,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.97,
+       "y": -0.891,
+       "urgency": 1.5,
+       "importance": 5.4,
+       "priority": 3.9,
+       "quadrant": "deprio",
+       "pTop": 0.946,
+       "confX": 0.97,
+       "confY": 0.891,
+       "conf": 0.97,
+       "sortMs": 2667,
+       "firstMs": 1983,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 158,
+       "combo": 3
+      },
+      {
+       "parcelId": "p026",
+       "limitMs": 6780,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.452,
+       "y": 0.469,
+       "urgency": 72.6,
+       "importance": 73.5,
+       "priority": 73.1,
+       "quadrant": "first",
+       "pTop": 0.726,
+       "confX": 0.452,
+       "confY": 0.469,
+       "conf": 0.469,
+       "sortMs": 5183,
+       "firstMs": 4500,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 98,
+       "combo": 3
+      },
+      {
+       "parcelId": "p013",
+       "limitMs": 6705,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.435,
+       "y": 0.461,
+       "urgency": 71.8,
+       "importance": 73,
+       "priority": 72.5,
+       "quadrant": "first",
+       "pTop": 0.718,
+       "confX": 0.435,
+       "confY": 0.461,
+       "conf": 0.461,
+       "sortMs": 5250,
+       "firstMs": 4800,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 96,
+       "combo": 3
+      },
+      {
+       "parcelId": "p039",
+       "limitMs": 6628,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.402,
+       "y": 0.469,
+       "urgency": 29.9,
+       "importance": 73.5,
+       "priority": 56,
+       "quadrant": "schedule",
+       "pTop": 0.701,
+       "confX": 0.402,
+       "confY": 0.469,
+       "conf": 0.469,
+       "sortMs": 5200,
+       "firstMs": 2067,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 97,
+       "combo": 3
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "limitMs": 6552,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.446,
+       "y": 0.145,
+       "urgency": 27.7,
+       "importance": 57.2,
+       "priority": 45.4,
+       "quadrant": "schedule",
+       "pTop": 0.572,
+       "confX": 0.446,
+       "confY": 0.145,
+       "conf": 0.446,
+       "sortMs": 5817,
+       "firstMs": 5433,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 91,
+       "combo": 3
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 6468,
+       "speed": 0.8,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.964,
+       "y": 1,
+       "urgency": 98.2,
+       "importance": 100,
+       "priority": 99.3,
+       "quadrant": "first",
+       "pTop": 0.982,
+       "confX": 0.964,
+       "confY": 1,
+       "conf": 1,
+       "sortMs": 4150,
+       "firstMs": 3383,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 154,
+       "combo": 4
+      }
+     ],
+     "limitMsEnd": 6440,
+     "partial": 3,
+     "timedOut": 0,
+     "meanConf": 0.668,
+     "roundId": "round-006",
+     "roundNo": 6,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "priority",
+     "axesVersion": "1.0.0",
+     "stage": "warmup",
+     "cycle": 0
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 2,
+   "params": {
+    "wave": 2,
+    "waveSpeed": 1,
+    "durationMs": 40000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T19:59:39.746Z",
+   "endedAt": "2026-10-31T20:00:23.310Z",
+   "durationMs": 43564,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 43564,
+    "score": 831,
+    "actions": 8,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2711,
+     "type": "spawn",
+     "parcelId": "p029",
+     "limitMs": 5597,
+     "repeat": false
+    },
+    {
+     "t": 8245,
+     "type": "sort",
+     "parcelId": "p029",
+     "x": -0.408,
+     "y": 0.072,
+     "priority": 60.3,
+     "conf": 0.408,
+     "sortMs": 5517,
+     "timedOut": false
+    },
+    {
+     "t": 9128,
+     "type": "spawn",
+     "parcelId": "p026",
+     "limitMs": 5525,
+     "repeat": false
+    },
+    {
+     "t": 13778,
+     "type": "zone",
+     "parcelId": "p026",
+     "bin": "first"
+    },
+    {
+     "t": 14012,
+     "type": "sort",
+     "parcelId": "p026",
+     "x": -0.468,
+     "y": 0.456,
+     "priority": 73.1,
+     "conf": 0.468,
+     "sortMs": 4867,
+     "timedOut": false
+    },
+    {
+     "t": 14911,
+     "type": "spawn",
+     "parcelId": "p013",
+     "limitMs": 5460,
+     "repeat": false
+    },
+    {
+     "t": 18595,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "first"
+    },
+    {
+     "t": 18896,
+     "type": "sort",
+     "parcelId": "p013",
+     "x": -0.485,
+     "y": 0.478,
+     "priority": 74,
+     "conf": 0.485,
+     "sortMs": 3967,
+     "timedOut": false
+    },
+    {
+     "t": 19778,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 5405,
+     "repeat": false
+    },
+    {
+     "t": 21845,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "schedule"
+    },
+    {
+     "t": 23562,
+     "type": "sort",
+     "parcelId": "p039",
+     "x": 0.474,
+     "y": 0.546,
+     "priority": 56.9,
+     "conf": 0.546,
+     "sortMs": 3767,
+     "timedOut": false
+    },
+    {
+     "t": 24445,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-06",
+     "limitMs": 5353,
+     "repeat": false
+    },
+    {
+     "t": 28146,
+     "type": "zone",
+     "parcelId": "r003-llama323b-06",
+     "bin": "deprio"
+    },
+    {
+     "t": 28363,
+     "type": "sort",
+     "parcelId": "r003-llama323b-06",
+     "x": 0.534,
+     "y": -0.192,
+     "priority": 33.6,
+     "conf": 0.534,
+     "sortMs": 3900,
+     "timedOut": false
+    },
+    {
+     "t": 29246,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 5299,
+     "repeat": false
+    },
+    {
+     "t": 32212,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "first"
+    },
+    {
+     "t": 33863,
+     "type": "sort",
+     "parcelId": "p008",
+     "x": -0.534,
+     "y": 0.631,
+     "priority": 79.6,
+     "conf": 0.631,
+     "sortMs": 4600,
+     "timedOut": false
+    },
+    {
+     "t": 34746,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-01",
+     "limitMs": 5238,
+     "repeat": false
+    },
+    {
+     "t": 39296,
+     "type": "sort",
+     "parcelId": "r003-llama323b-01",
+     "x": 0.617,
+     "y": -0.154,
+     "priority": 33.1,
+     "conf": 0.617,
+     "sortMs": 4533,
+     "timedOut": false
+    },
+    {
+     "t": 40196,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-01",
+     "limitMs": 5177,
+     "repeat": false
+    },
+    {
+     "t": 43480,
+     "type": "zone",
+     "parcelId": "r002-llama323b-01",
+     "bin": "first"
+    },
+    {
+     "t": 43563,
+     "type": "sort",
+     "parcelId": "r002-llama323b-01",
+     "x": -0.264,
+     "y": 0.264,
+     "priority": 63.2,
+     "conf": 0.264,
+     "sortMs": 3350,
+     "timedOut": false
+    },
+    {
+     "t": 43564,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 2,
+     "parcelsShown": 8,
+     "sorted": 8,
+     "misses": 0,
+     "changedMind": 0,
+     "bestCombo": 4,
+     "scoreWave": 831,
+     "speedEnd": 1,
+     "decisions": [
+      {
+       "parcelId": "p029",
+       "limitMs": 5597,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.408,
+       "y": 0.072,
+       "urgency": 70.4,
+       "importance": 53.6,
+       "priority": 60.3,
+       "quadrant": "first",
+       "pTop": 0.536,
+       "confX": 0.408,
+       "confY": 0.072,
+       "conf": 0.408,
+       "sortMs": 5517,
+       "firstMs": 5033,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 85,
+       "combo": 0
+      },
+      {
+       "parcelId": "p026",
+       "limitMs": 5525,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.468,
+       "y": 0.456,
+       "urgency": 73.4,
+       "importance": 72.8,
+       "priority": 73.1,
+       "quadrant": "first",
+       "pTop": 0.728,
+       "confX": 0.468,
+       "confY": 0.456,
+       "conf": 0.468,
+       "sortMs": 4867,
+       "firstMs": 4367,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 93,
+       "combo": 0
+      },
+      {
+       "parcelId": "p013",
+       "limitMs": 5460,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.485,
+       "y": 0.478,
+       "urgency": 74.2,
+       "importance": 73.9,
+       "priority": 74,
+       "quadrant": "first",
+       "pTop": 0.739,
+       "confX": 0.485,
+       "confY": 0.478,
+       "conf": 0.485,
+       "sortMs": 3967,
+       "firstMs": 3417,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 100,
+       "combo": 0
+      },
+      {
+       "parcelId": "p039",
+       "limitMs": 5405,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.474,
+       "y": 0.546,
+       "urgency": 26.3,
+       "importance": 77.3,
+       "priority": 56.9,
+       "quadrant": "schedule",
+       "pTop": 0.737,
+       "confX": 0.474,
+       "confY": 0.546,
+       "conf": 0.546,
+       "sortMs": 3767,
+       "firstMs": 1883,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 110,
+       "combo": 1
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "limitMs": 5353,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.534,
+       "y": -0.192,
+       "urgency": 23.3,
+       "importance": 40.4,
+       "priority": 33.6,
+       "quadrant": "deprio",
+       "pTop": 0.596,
+       "confX": 0.534,
+       "confY": 0.192,
+       "conf": 0.534,
+       "sortMs": 3900,
+       "firstMs": 3133,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 113,
+       "combo": 2
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 5299,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.534,
+       "y": 0.631,
+       "urgency": 76.7,
+       "importance": 81.6,
+       "priority": 79.6,
+       "quadrant": "first",
+       "pTop": 0.767,
+       "confX": 0.534,
+       "confY": 0.631,
+       "conf": 0.631,
+       "sortMs": 4600,
+       "firstMs": 2767,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 118,
+       "combo": 3
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "limitMs": 5238,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.617,
+       "y": -0.154,
+       "urgency": 19.1,
+       "importance": 42.3,
+       "priority": 33.1,
+       "quadrant": "deprio",
+       "pTop": 0.577,
+       "confX": 0.617,
+       "confY": 0.154,
+       "conf": 0.617,
+       "sortMs": 4533,
+       "firstMs": 4333,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 122,
+       "combo": 4
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "limitMs": 5177,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.264,
+       "y": 0.264,
+       "urgency": 63.2,
+       "importance": 63.2,
+       "priority": 63.2,
+       "quadrant": "first",
+       "pTop": 0.632,
+       "confX": 0.264,
+       "confY": 0.264,
+       "conf": 0.264,
+       "sortMs": 3350,
+       "firstMs": 3067,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 90,
+       "combo": 4
+      }
+     ],
+     "limitMsEnd": 5152,
+     "partial": 3,
+     "timedOut": 0,
+     "meanConf": 0.494,
+     "roundId": "round-006",
+     "roundNo": 6,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "priority",
+     "axesVersion": "1.0.0",
+     "stage": "priority",
+     "cycle": 1
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 3,
+   "params": {
+    "wave": 3,
+    "waveSpeed": 1,
+    "durationMs": 40000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T20:00:24.513Z",
+   "endedAt": "2026-10-31T20:01:07.879Z",
+   "durationMs": 43366,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 43366,
+    "score": 998,
+    "actions": 8,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2713,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-07",
+     "limitMs": 5597,
+     "repeat": false
+    },
+    {
+     "t": 7713,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-07",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 7980,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-07",
+     "x": 1,
+     "y": 1,
+     "conf": 1,
+     "sortMs": 5250,
+     "timedOut": false
+    },
+    {
+     "t": 8863,
+     "type": "spawn",
+     "parcelId": "p010",
+     "limitMs": 5528,
+     "repeat": false
+    },
+    {
+     "t": 13830,
+     "type": "zone",
+     "parcelId": "p010",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 13914,
+     "type": "sort",
+     "parcelId": "p010",
+     "x": 0.375,
+     "y": 0.332,
+     "conf": 0.375,
+     "sortMs": 5033,
+     "timedOut": false
+    },
+    {
+     "t": 14813,
+     "type": "spawn",
+     "parcelId": "p030",
+     "limitMs": 5461,
+     "repeat": false
+    },
+    {
+     "t": 19330,
+     "type": "zone",
+     "parcelId": "p030",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 19564,
+     "type": "sort",
+     "parcelId": "p030",
+     "x": 0.821,
+     "y": 0.846,
+     "conf": 0.846,
+     "sortMs": 4733,
+     "timedOut": false
+    },
+    {
+     "t": 20447,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-02",
+     "limitMs": 5398,
+     "repeat": false
+    },
+    {
+     "t": 23947,
+     "type": "zone",
+     "parcelId": "r003-llama323b-02",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 24648,
+     "type": "sort",
+     "parcelId": "r003-llama323b-02",
+     "x": 1,
+     "y": 0.929,
+     "conf": 1,
+     "sortMs": 4183,
+     "timedOut": false
+    },
+    {
+     "t": 25531,
+     "type": "spawn",
+     "parcelId": "p011",
+     "limitMs": 5341,
+     "repeat": false
+    },
+    {
+     "t": 28514,
+     "type": "zone",
+     "parcelId": "p011",
+     "bin": "autoCheap"
+    },
+    {
+     "t": 29248,
+     "type": "sort",
+     "parcelId": "p011",
+     "x": -0.804,
+     "y": -0.938,
+     "conf": 0.938,
+     "sortMs": 3700,
+     "timedOut": false
+    },
+    {
+     "t": 30131,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 5290,
+     "repeat": false
+    },
+    {
+     "t": 32248,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 32798,
+     "type": "sort",
+     "parcelId": "p039",
+     "x": 0.601,
+     "y": 0.589,
+     "conf": 0.601,
+     "sortMs": 2650,
+     "timedOut": false
+    },
+    {
+     "t": 33681,
+     "type": "spawn",
+     "parcelId": "r003-qwen2515b-02",
+     "limitMs": 5250,
+     "repeat": false
+    },
+    {
+     "t": 37915,
+     "type": "zone",
+     "parcelId": "r003-qwen2515b-02",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 38098,
+     "type": "sort",
+     "parcelId": "r003-qwen2515b-02",
+     "x": 0.562,
+     "y": 0.494,
+     "conf": 0.562,
+     "sortMs": 4400,
+     "timedOut": false
+    },
+    {
+     "t": 38998,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-05",
+     "limitMs": 5190,
+     "repeat": false
+    },
+    {
+     "t": 43265,
+     "type": "zone",
+     "parcelId": "r002-llama323b-05",
+     "bin": "autoPremium"
+    },
+    {
+     "t": 43365,
+     "type": "sort",
+     "parcelId": "r002-llama323b-05",
+     "x": -0.397,
+     "y": 0.477,
+     "conf": 0.477,
+     "sortMs": 4350,
+     "timedOut": false
+    },
+    {
+     "t": 43366,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 3,
+     "parcelsShown": 8,
+     "sorted": 8,
+     "misses": 0,
+     "changedMind": 0,
+     "bestCombo": 6,
+     "scoreWave": 998,
+     "speedEnd": 1,
+     "decisions": [
+      {
+       "parcelId": "r002-qwen2515b-07",
+       "limitMs": 5597,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 1,
+       "y": 1,
+       "manual": 100,
+       "automation": 0,
+       "spend": 100,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 1,
+       "confX": 1,
+       "confY": 1,
+       "conf": 1,
+       "sortMs": 5250,
+       "firstMs": 4767,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 127,
+       "combo": 1
+      },
+      {
+       "parcelId": "p010",
+       "limitMs": 5528,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.375,
+       "y": 0.332,
+       "manual": 68.7,
+       "automation": 31.3,
+       "spend": 66.6,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.666,
+       "confX": 0.375,
+       "confY": 0.332,
+       "conf": 0.375,
+       "sortMs": 5033,
+       "firstMs": 4683,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 86,
+       "combo": 1
+      },
+      {
+       "parcelId": "p030",
+       "limitMs": 5461,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.821,
+       "y": 0.846,
+       "manual": 91,
+       "automation": 9,
+       "spend": 92.3,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.91,
+       "confX": 0.821,
+       "confY": 0.846,
+       "conf": 0.846,
+       "sortMs": 4733,
+       "firstMs": 4367,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 126,
+       "combo": 2
+      },
+      {
+       "parcelId": "r003-llama323b-02",
+       "limitMs": 5398,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 1,
+       "y": 0.929,
+       "manual": 100,
+       "automation": 0,
+       "spend": 96.5,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.965,
+       "confX": 1,
+       "confY": 0.929,
+       "conf": 1,
+       "sortMs": 4183,
+       "firstMs": 3367,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 144,
+       "combo": 3
+      },
+      {
+       "parcelId": "p011",
+       "limitMs": 5341,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.804,
+       "y": -0.938,
+       "manual": 9.8,
+       "automation": 90.2,
+       "spend": 3.1,
+       "tier": "ollama",
+       "quadrant": "autoCheap",
+       "pTop": 0.902,
+       "confX": 0.804,
+       "confY": 0.938,
+       "conf": 0.938,
+       "sortMs": 3700,
+       "firstMs": 2800,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 149,
+       "combo": 4
+      },
+      {
+       "parcelId": "p039",
+       "limitMs": 5290,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.601,
+       "y": 0.589,
+       "manual": 80,
+       "automation": 20,
+       "spend": 79.5,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.795,
+       "confX": 0.601,
+       "confY": 0.589,
+       "conf": 0.601,
+       "sortMs": 2650,
+       "firstMs": 1967,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 141,
+       "combo": 5
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "limitMs": 5250,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.562,
+       "y": 0.494,
+       "manual": 78.1,
+       "automation": 21.9,
+       "spend": 74.7,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.747,
+       "confX": 0.562,
+       "confY": 0.494,
+       "conf": 0.562,
+       "sortMs": 4400,
+       "firstMs": 4100,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 130,
+       "combo": 6
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "limitMs": 5190,
+       "speed": 1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.397,
+       "y": 0.477,
+       "manual": 30.2,
+       "automation": 69.8,
+       "spend": 73.9,
+       "tier": "codex",
+       "quadrant": "autoPremium",
+       "pTop": 0.698,
+       "confX": 0.397,
+       "confY": 0.477,
+       "conf": 0.477,
+       "sortMs": 4350,
+       "firstMs": 4117,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 95,
+       "combo": 6
+      }
+     ],
+     "limitMsEnd": 5152,
+     "partial": 0,
+     "timedOut": 0,
+     "meanConf": 0.725,
+     "roundId": "round-006",
+     "roundNo": 6,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "handling",
+     "axesVersion": "1.0.0",
+     "stage": "handling",
+     "cycle": 1
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 4,
+   "params": {
+    "stage": "cluster",
+    "cycle": 1,
+    "clusters": [
+     "round-005-c002",
+     "round-005-c001",
+     "round-006-c001"
+    ]
+   },
+   "startedAt": "2026-10-31T20:01:07.880Z",
+   "endedAt": "2026-10-31T20:02:08.992Z",
+   "durationMs": 61112,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 61112,
+    "actions": 27,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 5288,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r003-qwen2515b-01",
+     "belongs": true
+    },
+    {
+     "t": 7091,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r003-qwen2515b-04",
+     "belongs": true
+    },
+    {
+     "t": 11057,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-03",
+     "belongs": true
+    },
+    {
+     "t": 13491,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-08",
+     "belongs": false
+    },
+    {
+     "t": 14789,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-09",
+     "belongs": false
+    },
+    {
+     "t": 15723,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-01",
+     "belongs": false
+    },
+    {
+     "t": 16709,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-03",
+     "belongs": false
+    },
+    {
+     "t": 17505,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-06",
+     "belongs": false
+    },
+    {
+     "t": 19508,
+     "type": "cluster_merge",
+     "a": "round-005-c002",
+     "b": "round-005-c001",
+     "merge": false
+    },
+    {
+     "t": 21455,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r004-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 22489,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r004-qwen2515b-01",
+     "belongs": true
+    },
+    {
+     "t": 24858,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r002-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 26075,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-01",
+     "belongs": false
+    },
+    {
+     "t": 27374,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-02",
+     "belongs": false
+    },
+    {
+     "t": 28692,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-03",
+     "belongs": false
+    },
+    {
+     "t": 30159,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 31354,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-05",
+     "belongs": false
+    },
+    {
+     "t": 35588,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-06",
+     "belongs": false
+    },
+    {
+     "t": 39259,
+     "type": "cluster_merge",
+     "a": "round-005-c001",
+     "b": "round-006-c001",
+     "merge": false
+    },
+    {
+     "t": 47360,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "p029",
+     "belongs": false
+    },
+    {
+     "t": 48909,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "p026",
+     "belongs": false
+    },
+    {
+     "t": 50323,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r003-qwen2515b-04",
+     "belongs": true
+    },
+    {
+     "t": 51894,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-llama323b-06",
+     "belongs": true
+    },
+    {
+     "t": 58241,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-llama323b-09",
+     "belongs": false
+    },
+    {
+     "t": 59242,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-qwen2515b-01",
+     "belongs": false
+    },
+    {
+     "t": 60307,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r003-llama323b-05",
+     "belongs": false
+    },
+    {
+     "t": 61111,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r005-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 61112,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "cluster": {
+     "stage": "cluster",
+     "cycle": 1,
+     "clusters": [
+      {
+       "id": "round-005-c002",
+       "label": "Invoice and Payment",
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "members": [
+        "r003-qwen2515b-01",
+        "r003-qwen2515b-04",
+        "r002-llama323b-03",
+        "r002-llama323b-08",
+        "r002-llama323b-09",
+        "r002-qwen2515b-01",
+        "r002-qwen2515b-03",
+        "r002-qwen2515b-06"
+       ]
+      },
+      {
+       "id": "round-005-c001",
+       "label": "Project Updates",
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "members": [
+        "r004-llama323b-04",
+        "r004-qwen2515b-01",
+        "r002-llama323b-04",
+        "r005-llama323b-01",
+        "r005-llama323b-02",
+        "r005-llama323b-03",
+        "r005-llama323b-04",
+        "r005-llama323b-05",
+        "r005-llama323b-06"
+       ]
+      },
+      {
+       "id": "round-006-c001",
+       "label": "Overdue Payments",
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "members": [
+        "p029",
+        "p026",
+        "r003-qwen2515b-04",
+        "r002-llama323b-06",
+        "r002-llama323b-09",
+        "r002-qwen2515b-01",
+        "r003-llama323b-05",
+        "r005-llama323b-04"
+       ]
+      }
+     ],
+     "decisions": [
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r003-qwen2515b-01",
+       "belongs": true,
+       "ms": 5288,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r003-qwen2515b-04",
+       "belongs": true,
+       "ms": 1803,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-03",
+       "belongs": true,
+       "ms": 3965,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-08",
+       "belongs": false,
+       "ms": 2434,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-09",
+       "belongs": false,
+       "ms": 1298,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-01",
+       "belongs": false,
+       "ms": 935,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-03",
+       "belongs": false,
+       "ms": 986,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-06",
+       "belongs": false,
+       "ms": 796,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r004-llama323b-04",
+       "belongs": false,
+       "ms": 1948,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r004-qwen2515b-01",
+       "belongs": true,
+       "ms": 1033,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r002-llama323b-04",
+       "belongs": false,
+       "ms": 2369,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-01",
+       "belongs": false,
+       "ms": 1217,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-02",
+       "belongs": false,
+       "ms": 1299,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-03",
+       "belongs": false,
+       "ms": 1318,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-04",
+       "belongs": false,
+       "ms": 1467,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-05",
+       "belongs": false,
+       "ms": 1195,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-06",
+       "belongs": false,
+       "ms": 4234,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "p029",
+       "belongs": false,
+       "ms": 8101,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "p026",
+       "belongs": false,
+       "ms": 1549,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r003-qwen2515b-04",
+       "belongs": true,
+       "ms": 1414,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-llama323b-06",
+       "belongs": true,
+       "ms": 1571,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-llama323b-09",
+       "belongs": false,
+       "ms": 6347,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-qwen2515b-01",
+       "belongs": false,
+       "ms": 1000,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r003-llama323b-05",
+       "belongs": false,
+       "ms": 1065,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r005-llama323b-04",
+       "belongs": false,
+       "ms": 804,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      }
+     ],
+     "merges": [
+      {
+       "a": "round-005-c002",
+       "b": "round-005-c001",
+       "merge": false,
+       "ms": 2002
+      },
+      {
+       "a": "round-005-c001",
+       "b": "round-006-c001",
+       "merge": false,
+       "ms": 3671
+      }
+     ],
+     "durationMs": 61110
+    }
+   },
+   "segment": "cluster"
+  },
+  {
+   "level": 5,
+   "params": {
+    "wave": 4,
+    "waveSpeed": 1.1,
+    "durationMs": 40000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T20:02:10.200Z",
+   "endedAt": "2026-10-31T20:02:55.269Z",
+   "durationMs": 45069,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 45069,
+    "score": 1175,
+    "actions": 9,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2715,
+     "type": "spawn",
+     "parcelId": "p039",
+     "limitMs": 5088,
+     "repeat": false
+    },
+    {
+     "t": 6798,
+     "type": "zone",
+     "parcelId": "p039",
+     "bin": "schedule"
+    },
+    {
+     "t": 6999,
+     "type": "sort",
+     "parcelId": "p039",
+     "x": 0.601,
+     "y": 0.448,
+     "priority": 51.4,
+     "conf": 0.601,
+     "sortMs": 4267,
+     "timedOut": false
+    },
+    {
+     "t": 7882,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-06",
+     "limitMs": 5035,
+     "repeat": false
+    },
+    {
+     "t": 11482,
+     "type": "zone",
+     "parcelId": "r003-llama323b-06",
+     "bin": "deprio"
+    },
+    {
+     "t": 11616,
+     "type": "sort",
+     "parcelId": "r003-llama323b-06",
+     "x": 0.534,
+     "y": -0.498,
+     "priority": 24.4,
+     "conf": 0.534,
+     "sortMs": 3717,
+     "timedOut": false
+    },
+    {
+     "t": 12515,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 4988,
+     "repeat": false
+    },
+    {
+     "t": 16282,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "first"
+    },
+    {
+     "t": 16516,
+     "type": "sort",
+     "parcelId": "p008",
+     "x": -0.545,
+     "y": 0.631,
+     "priority": 79.8,
+     "conf": 0.631,
+     "sortMs": 3983,
+     "timedOut": false
+    },
+    {
+     "t": 17416,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-01",
+     "limitMs": 4938,
+     "repeat": false
+    },
+    {
+     "t": 21599,
+     "type": "zone",
+     "parcelId": "r003-llama323b-01",
+     "bin": "skim"
+    },
+    {
+     "t": 21733,
+     "type": "sort",
+     "parcelId": "r003-llama323b-01",
+     "x": -0.617,
+     "y": -0.444,
+     "priority": 49,
+     "conf": 0.617,
+     "sortMs": 4300,
+     "timedOut": false
+    },
+    {
+     "t": 22616,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-01",
+     "limitMs": 4885,
+     "repeat": false
+    },
+    {
+     "t": 26550,
+     "type": "zone",
+     "parcelId": "r002-llama323b-01",
+     "bin": "first"
+    },
+    {
+     "t": 26667,
+     "type": "sort",
+     "parcelId": "r002-llama323b-01",
+     "x": -0.512,
+     "y": 0.556,
+     "priority": 76.9,
+     "conf": 0.556,
+     "sortMs": 4033,
+     "timedOut": false
+    },
+    {
+     "t": 27550,
+     "type": "spawn",
+     "parcelId": "r003-llama323b-03",
+     "limitMs": 4835,
+     "repeat": false
+    },
+    {
+     "t": 30717,
+     "type": "zone",
+     "parcelId": "r003-llama323b-03",
+     "bin": "deprio"
+    },
+    {
+     "t": 30850,
+     "type": "sort",
+     "parcelId": "r003-llama323b-03",
+     "x": 0.623,
+     "y": -0.531,
+     "priority": 21.6,
+     "conf": 0.623,
+     "sortMs": 3283,
+     "timedOut": false
+    },
+    {
+     "t": 31733,
+     "type": "spawn",
+     "parcelId": "r003-qwen2515b-02",
+     "limitMs": 4792,
+     "repeat": false
+    },
+    {
+     "t": 34417,
+     "type": "zone",
+     "parcelId": "r003-qwen2515b-02",
+     "bin": "schedule"
+    },
+    {
+     "t": 35767,
+     "type": "zone",
+     "parcelId": "r003-qwen2515b-02",
+     "bin": "first"
+    },
+    {
+     "t": 36051,
+     "type": "sort",
+     "parcelId": "r003-qwen2515b-02",
+     "x": -0.397,
+     "y": 0.581,
+     "priority": 75.4,
+     "conf": 0.581,
+     "sortMs": 4300,
+     "timedOut": false
+    },
+    {
+     "t": 36950,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-04",
+     "limitMs": 4739,
+     "repeat": false
+    },
+    {
+     "t": 41034,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-04",
+     "x": -0.782,
+     "y": -0.195,
+     "priority": 59.8,
+     "conf": 0.782,
+     "sortMs": 4067,
+     "timedOut": false
+    },
+    {
+     "t": 41934,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-03",
+     "limitMs": 4689,
+     "repeat": false
+    },
+    {
+     "t": 44701,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-03",
+     "bin": "deprio"
+    },
+    {
+     "t": 45068,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-03",
+     "x": 0.672,
+     "y": -0.506,
+     "priority": 21.4,
+     "conf": 0.672,
+     "sortMs": 3117,
+     "timedOut": false
+    },
+    {
+     "t": 45069,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 4,
+     "parcelsShown": 9,
+     "sorted": 9,
+     "misses": 0,
+     "changedMind": 1,
+     "bestCombo": 9,
+     "scoreWave": 1175,
+     "speedEnd": 1.1,
+     "decisions": [
+      {
+       "parcelId": "p039",
+       "limitMs": 5088,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.601,
+       "y": 0.448,
+       "urgency": 20,
+       "importance": 72.4,
+       "priority": 51.4,
+       "quadrant": "schedule",
+       "pTop": 0.724,
+       "confX": 0.601,
+       "confY": 0.448,
+       "conf": 0.601,
+       "sortMs": 4267,
+       "firstMs": 3950,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 108,
+       "combo": 1
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "limitMs": 5035,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.534,
+       "y": -0.498,
+       "urgency": 23.3,
+       "importance": 25.1,
+       "priority": 24.4,
+       "quadrant": "deprio",
+       "pTop": 0.749,
+       "confX": 0.534,
+       "confY": 0.498,
+       "conf": 0.534,
+       "sortMs": 3717,
+       "firstMs": 3467,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 113,
+       "combo": 2
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 4988,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.545,
+       "y": 0.631,
+       "urgency": 77.3,
+       "importance": 81.5,
+       "priority": 79.8,
+       "quadrant": "first",
+       "pTop": 0.773,
+       "confX": 0.545,
+       "confY": 0.631,
+       "conf": 0.631,
+       "sortMs": 3983,
+       "firstMs": 3617,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 121,
+       "combo": 3
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "limitMs": 4938,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.617,
+       "y": -0.444,
+       "urgency": 80.9,
+       "importance": 27.8,
+       "priority": 49,
+       "quadrant": "skim",
+       "pTop": 0.722,
+       "confX": 0.617,
+       "confY": 0.444,
+       "conf": 0.617,
+       "sortMs": 4300,
+       "firstMs": 4050,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 122,
+       "combo": 4
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "limitMs": 4885,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.512,
+       "y": 0.556,
+       "urgency": 75.6,
+       "importance": 77.8,
+       "priority": 76.9,
+       "quadrant": "first",
+       "pTop": 0.756,
+       "confX": 0.512,
+       "confY": 0.556,
+       "conf": 0.556,
+       "sortMs": 4033,
+       "firstMs": 3800,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 125,
+       "combo": 5
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "limitMs": 4835,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.623,
+       "y": -0.531,
+       "urgency": 18.9,
+       "importance": 23.4,
+       "priority": 21.6,
+       "quadrant": "deprio",
+       "pTop": 0.766,
+       "confX": 0.623,
+       "confY": 0.531,
+       "conf": 0.623,
+       "sortMs": 3283,
+       "firstMs": 3033,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 140,
+       "combo": 6
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "limitMs": 4792,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.397,
+       "y": 0.581,
+       "urgency": 69.8,
+       "importance": 79,
+       "priority": 75.4,
+       "quadrant": "first",
+       "pTop": 0.698,
+       "confX": 0.397,
+       "confY": 0.581,
+       "conf": 0.581,
+       "sortMs": 4300,
+       "firstMs": 2567,
+       "changedMind": true,
+       "zoneChanges": 2,
+       "points": 134,
+       "combo": 7
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "limitMs": 4739,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.782,
+       "y": -0.195,
+       "urgency": 89.1,
+       "importance": 40.2,
+       "priority": 59.8,
+       "quadrant": "skim",
+       "pTop": 0.598,
+       "confX": 0.782,
+       "confY": 0.195,
+       "conf": 0.782,
+       "sortMs": 4067,
+       "firstMs": 3850,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 153,
+       "combo": 8
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "limitMs": 4689,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.672,
+       "y": -0.506,
+       "urgency": 16.4,
+       "importance": 24.7,
+       "priority": 21.4,
+       "quadrant": "deprio",
+       "pTop": 0.753,
+       "confX": 0.672,
+       "confY": 0.506,
+       "conf": 0.672,
+       "sortMs": 3117,
+       "firstMs": 2583,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 159,
+       "combo": 9
+      }
+     ],
+     "limitMsEnd": 4684,
+     "partial": 1,
+     "timedOut": 0,
+     "meanConf": 0.622,
+     "roundId": "round-006",
+     "roundNo": 6,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "priority",
+     "axesVersion": "1.0.0",
+     "stage": "priority",
+     "cycle": 2
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 6,
+   "params": {
+    "wave": 5,
+    "waveSpeed": 1.1,
+    "durationMs": 40000,
+    "bins": [
+     "reply",
+     "archive",
+     "later",
+     "info",
+     "spam"
+    ]
+   },
+   "startedAt": "2026-10-31T20:02:56.471Z",
+   "endedAt": "2026-10-31T20:03:39.021Z",
+   "durationMs": 42550,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 42550,
+    "score": 812,
+    "actions": 8,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2714,
+     "type": "spawn",
+     "parcelId": "r003-qwen2515b-02",
+     "limitMs": 5088,
+     "repeat": false
+    },
+    {
+     "t": 7431,
+     "type": "sort",
+     "parcelId": "r003-qwen2515b-02",
+     "x": 0.678,
+     "y": -0.095,
+     "conf": 0.678,
+     "sortMs": 4700,
+     "timedOut": false
+    },
+    {
+     "t": 8314,
+     "type": "spawn",
+     "parcelId": "r002-llama323b-05",
+     "limitMs": 5031,
+     "repeat": false
+    },
+    {
+     "t": 12480,
+     "type": "zone",
+     "parcelId": "r002-llama323b-05",
+     "bin": "autoPremium"
+    },
+    {
+     "t": 12581,
+     "type": "sort",
+     "parcelId": "r002-llama323b-05",
+     "x": -0.507,
+     "y": 0.349,
+     "conf": 0.507,
+     "sortMs": 4250,
+     "timedOut": false
+    },
+    {
+     "t": 13481,
+     "type": "spawn",
+     "parcelId": "r002-qwen2515b-06",
+     "limitMs": 4978,
+     "repeat": false
+    },
+    {
+     "t": 17747,
+     "type": "zone",
+     "parcelId": "r002-qwen2515b-06",
+     "bin": "autoCheap"
+    },
+    {
+     "t": 17948,
+     "type": "sort",
+     "parcelId": "r002-qwen2515b-06",
+     "x": -0.782,
+     "y": -0.842,
+     "conf": 0.842,
+     "sortMs": 4450,
+     "timedOut": false
+    },
+    {
+     "t": 18847,
+     "type": "spawn",
+     "parcelId": "p028",
+     "limitMs": 4924,
+     "repeat": false
+    },
+    {
+     "t": 22281,
+     "type": "sort",
+     "parcelId": "p028",
+     "x": -0.193,
+     "y": 0.253,
+     "conf": 0.253,
+     "sortMs": 3417,
+     "timedOut": false
+    },
+    {
+     "t": 23164,
+     "type": "spawn",
+     "parcelId": "p034",
+     "limitMs": 4880,
+     "repeat": false
+    },
+    {
+     "t": 27631,
+     "type": "sort",
+     "parcelId": "p034",
+     "x": -0.259,
+     "y": 0.17,
+     "conf": 0.259,
+     "sortMs": 4450,
+     "timedOut": false
+    },
+    {
+     "t": 28515,
+     "type": "spawn",
+     "parcelId": "p008",
+     "limitMs": 4825,
+     "repeat": false
+    },
+    {
+     "t": 32732,
+     "type": "zone",
+     "parcelId": "p008",
+     "bin": "reviewReserve"
+    },
+    {
+     "t": 32865,
+     "type": "sort",
+     "parcelId": "p008",
+     "x": 0.744,
+     "y": 0.697,
+     "conf": 0.744,
+     "sortMs": 4333,
+     "timedOut": false
+    },
+    {
+     "t": 33748,
+     "type": "spawn",
+     "parcelId": "p013",
+     "limitMs": 4772,
+     "repeat": false
+    },
+    {
+     "t": 37765,
+     "type": "zone",
+     "parcelId": "p013",
+     "bin": "autoPremium"
+    },
+    {
+     "t": 37800,
+     "type": "sort",
+     "parcelId": "p013",
+     "x": -0.287,
+     "y": 0.224,
+     "conf": 0.287,
+     "sortMs": 4033,
+     "timedOut": false
+    },
+    {
+     "t": 38698,
+     "type": "spawn",
+     "parcelId": "p023",
+     "limitMs": 4722,
+     "repeat": false
+    },
+    {
+     "t": 42549,
+     "type": "sort",
+     "parcelId": "p023",
+     "x": 0.336,
+     "y": 0.137,
+     "conf": 0.336,
+     "sortMs": 3833,
+     "timedOut": false
+    },
+    {
+     "t": 42550,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "parcels": {
+     "wave": 5,
+     "parcelsShown": 8,
+     "sorted": 8,
+     "misses": 0,
+     "changedMind": 0,
+     "bestCombo": 4,
+     "scoreWave": 812,
+     "speedEnd": 1.1,
+     "decisions": [
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "limitMs": 5088,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.678,
+       "y": -0.095,
+       "manual": 83.9,
+       "automation": 16.1,
+       "spend": 45.2,
+       "tier": "manual",
+       "quadrant": "reviewLight",
+       "pTop": 0.548,
+       "confX": 0.678,
+       "confY": 0.095,
+       "conf": 0.678,
+       "sortMs": 4700,
+       "firstMs": 4500,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 109,
+       "combo": 1
+      },
+      {
+       "parcelId": "r002-llama323b-05",
+       "limitMs": 5031,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.507,
+       "y": 0.349,
+       "manual": 24.7,
+       "automation": 75.3,
+       "spend": 67.4,
+       "tier": "codex",
+       "quadrant": "autoPremium",
+       "pTop": 0.674,
+       "confX": 0.507,
+       "confY": 0.349,
+       "conf": 0.507,
+       "sortMs": 4250,
+       "firstMs": 4033,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 107,
+       "combo": 2
+      },
+      {
+       "parcelId": "r002-qwen2515b-06",
+       "limitMs": 4978,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.782,
+       "y": -0.842,
+       "manual": 10.9,
+       "automation": 89.1,
+       "spend": 7.9,
+       "tier": "ollama",
+       "quadrant": "autoCheap",
+       "pTop": 0.891,
+       "confX": 0.782,
+       "confY": 0.842,
+       "conf": 0.842,
+       "sortMs": 4450,
+       "firstMs": 4150,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 130,
+       "combo": 3
+      },
+      {
+       "parcelId": "p028",
+       "limitMs": 4924,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.193,
+       "y": 0.253,
+       "manual": 40.4,
+       "automation": 59.6,
+       "spend": 62.7,
+       "tier": "hybrid-codex",
+       "quadrant": "autoPremium",
+       "pTop": 0.596,
+       "confX": 0.193,
+       "confY": 0.253,
+       "conf": 0.253,
+       "sortMs": 3417,
+       "firstMs": 3217,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 87,
+       "combo": 3
+      },
+      {
+       "parcelId": "p034",
+       "limitMs": 4880,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.259,
+       "y": 0.17,
+       "manual": 37.1,
+       "automation": 62.9,
+       "spend": 58.5,
+       "tier": "codex",
+       "quadrant": "autoPremium",
+       "pTop": 0.585,
+       "confX": 0.259,
+       "confY": 0.17,
+       "conf": 0.259,
+       "sortMs": 4450,
+       "firstMs": 4300,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 79,
+       "combo": 3
+      },
+      {
+       "parcelId": "p008",
+       "limitMs": 4825,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.744,
+       "y": 0.697,
+       "manual": 87.2,
+       "automation": 12.8,
+       "spend": 84.9,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.849,
+       "confX": 0.744,
+       "confY": 0.697,
+       "conf": 0.744,
+       "sortMs": 4333,
+       "firstMs": 4133,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 129,
+       "combo": 4
+      },
+      {
+       "parcelId": "p013",
+       "limitMs": 4772,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": -0.287,
+       "y": 0.224,
+       "manual": 35.7,
+       "automation": 64.3,
+       "spend": 61.2,
+       "tier": "codex",
+       "quadrant": "autoPremium",
+       "pTop": 0.612,
+       "confX": 0.287,
+       "confY": 0.224,
+       "conf": 0.287,
+       "sortMs": 4033,
+       "firstMs": 3733,
+       "changedMind": false,
+       "zoneChanges": 0,
+       "points": 83,
+       "combo": 4
+      },
+      {
+       "parcelId": "p023",
+       "limitMs": 4722,
+       "speed": 1.1,
+       "missed": false,
+       "timedOut": false,
+       "x": 0.336,
+       "y": 0.137,
+       "manual": 66.8,
+       "automation": 33.2,
+       "spend": 56.8,
+       "tier": "manual",
+       "quadrant": "reviewReserve",
+       "pTop": 0.568,
+       "confX": 0.336,
+       "confY": 0.137,
+       "conf": 0.336,
+       "sortMs": 3833,
+       "firstMs": 3667,
+       "changedMind": false,
+       "zoneChanges": 1,
+       "points": 88,
+       "combo": 4
+      }
+     ],
+     "limitMsEnd": 4684,
+     "partial": 2,
+     "timedOut": 0,
+     "meanConf": 0.488,
+     "roundId": "round-006",
+     "roundNo": 6,
+     "roundVersion": "1.0.0",
+     "synthetic": true,
+     "sim": false,
+     "mode": "handling",
+     "axesVersion": "1.0.0",
+     "stage": "handling",
+     "cycle": 2
+    }
+   },
+   "segment": "parcels"
+  },
+  {
+   "level": 7,
+   "params": {
+    "stage": "cluster",
+    "cycle": 2,
+    "clusters": [
+     "round-005-c002",
+     "round-005-c001",
+     "round-006-c001"
+    ]
+   },
+   "startedAt": "2026-10-31T20:03:39.022Z",
+   "endedAt": "2026-10-31T20:04:25.132Z",
+   "durationMs": 46110,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 46110,
+    "actions": 27,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 3208,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r003-qwen2515b-01",
+     "belongs": true
+    },
+    {
+     "t": 3988,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r003-qwen2515b-04",
+     "belongs": true
+    },
+    {
+     "t": 5224,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-03",
+     "belongs": false
+    },
+    {
+     "t": 6154,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-08",
+     "belongs": false
+    },
+    {
+     "t": 7326,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-llama323b-09",
+     "belongs": false
+    },
+    {
+     "t": 8205,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-01",
+     "belongs": false
+    },
+    {
+     "t": 9021,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-03",
+     "belongs": false
+    },
+    {
+     "t": 9891,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c002",
+     "parcelId": "r002-qwen2515b-06",
+     "belongs": false
+    },
+    {
+     "t": 11288,
+     "type": "cluster_merge",
+     "a": "round-005-c002",
+     "b": "round-005-c001",
+     "merge": false
+    },
+    {
+     "t": 16458,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r004-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 17290,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r004-qwen2515b-01",
+     "belongs": true
+    },
+    {
+     "t": 18640,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r002-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 19858,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-01",
+     "belongs": false
+    },
+    {
+     "t": 27859,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-02",
+     "belongs": false
+    },
+    {
+     "t": 29259,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-03",
+     "belongs": false
+    },
+    {
+     "t": 30826,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 32374,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-05",
+     "belongs": false
+    },
+    {
+     "t": 33557,
+     "type": "cluster_belongs",
+     "clusterId": "round-005-c001",
+     "parcelId": "r005-llama323b-06",
+     "belongs": false
+    },
+    {
+     "t": 34792,
+     "type": "cluster_merge",
+     "a": "round-005-c001",
+     "b": "round-006-c001",
+     "merge": false
+    },
+    {
+     "t": 37388,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "p029",
+     "belongs": false
+    },
+    {
+     "t": 38492,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "p026",
+     "belongs": false
+    },
+    {
+     "t": 40973,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r003-qwen2515b-04",
+     "belongs": true
+    },
+    {
+     "t": 42007,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-llama323b-06",
+     "belongs": true
+    },
+    {
+     "t": 43110,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-llama323b-09",
+     "belongs": false
+    },
+    {
+     "t": 44359,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r002-qwen2515b-01",
+     "belongs": false
+    },
+    {
+     "t": 45208,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r003-llama323b-05",
+     "belongs": false
+    },
+    {
+     "t": 46110,
+     "type": "cluster_belongs",
+     "clusterId": "round-006-c001",
+     "parcelId": "r005-llama323b-04",
+     "belongs": false
+    },
+    {
+     "t": 46110,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "cluster": {
+     "stage": "cluster",
+     "cycle": 2,
+     "clusters": [
+      {
+       "id": "round-005-c002",
+       "label": "Invoice and Payment",
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "members": [
+        "r003-qwen2515b-01",
+        "r003-qwen2515b-04",
+        "r002-llama323b-03",
+        "r002-llama323b-08",
+        "r002-llama323b-09",
+        "r002-qwen2515b-01",
+        "r002-qwen2515b-03",
+        "r002-qwen2515b-06"
+       ]
+      },
+      {
+       "id": "round-005-c001",
+       "label": "Project Updates",
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "members": [
+        "r004-llama323b-04",
+        "r004-qwen2515b-01",
+        "r002-llama323b-04",
+        "r005-llama323b-01",
+        "r005-llama323b-02",
+        "r005-llama323b-03",
+        "r005-llama323b-04",
+        "r005-llama323b-05",
+        "r005-llama323b-06"
+       ]
+      },
+      {
+       "id": "round-006-c001",
+       "label": "Overdue Payments",
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "members": [
+        "p029",
+        "p026",
+        "r003-qwen2515b-04",
+        "r002-llama323b-06",
+        "r002-llama323b-09",
+        "r002-qwen2515b-01",
+        "r003-llama323b-05",
+        "r005-llama323b-04"
+       ]
+      }
+     ],
+     "decisions": [
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r003-qwen2515b-01",
+       "belongs": true,
+       "ms": 3208,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r003-qwen2515b-04",
+       "belongs": true,
+       "ms": 780,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-03",
+       "belongs": false,
+       "ms": 1236,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-08",
+       "belongs": false,
+       "ms": 930,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-llama323b-09",
+       "belongs": false,
+       "ms": 1172,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-01",
+       "belongs": false,
+       "ms": 879,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-03",
+       "belongs": false,
+       "ms": 816,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c002",
+       "parcelId": "r002-qwen2515b-06",
+       "belongs": false,
+       "ms": 870,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r004-llama323b-04",
+       "belongs": false,
+       "ms": 5169,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r004-qwen2515b-01",
+       "belongs": true,
+       "ms": 832,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r002-llama323b-04",
+       "belongs": false,
+       "ms": 1350,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-01",
+       "belongs": false,
+       "ms": 1218,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-02",
+       "belongs": false,
+       "ms": 8000,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-03",
+       "belongs": false,
+       "ms": 1400,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-04",
+       "belongs": false,
+       "ms": 1568,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-05",
+       "belongs": false,
+       "ms": 1547,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-005-c001",
+       "parcelId": "r005-llama323b-06",
+       "belongs": false,
+       "ms": 1183,
+       "proposedBy": [
+        "qwen2.5:1.5b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "p029",
+       "belongs": false,
+       "ms": 2596,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "p026",
+       "belongs": false,
+       "ms": 1103,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r003-qwen2515b-04",
+       "belongs": true,
+       "ms": 2482,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-llama323b-06",
+       "belongs": true,
+       "ms": 1033,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-llama323b-09",
+       "belongs": false,
+       "ms": 1103,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r002-qwen2515b-01",
+       "belongs": false,
+       "ms": 1249,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r003-llama323b-05",
+       "belongs": false,
+       "ms": 850,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      },
+      {
+       "clusterId": "round-006-c001",
+       "parcelId": "r005-llama323b-04",
+       "belongs": false,
+       "ms": 901,
+       "proposedBy": [
+        "llama3.2:3b"
+       ],
+       "by": "human"
+      }
+     ],
+     "merges": [
+      {
+       "a": "round-005-c002",
+       "b": "round-005-c001",
+       "merge": false,
+       "ms": 1397
+      },
+      {
+       "a": "round-005-c001",
+       "b": "round-006-c001",
+       "merge": false,
+       "ms": 1234
+      }
+     ],
+     "durationMs": 46109
+    }
+   },
+   "segment": "cluster"
+  },
+  {
+   "level": 8,
+   "params": {
+    "setId": "round-006-phrasing",
+    "pairs": 1,
+    "kind": "phrasing"
+   },
+   "startedAt": "2026-10-31T20:04:25.143Z",
+   "endedAt": "2026-10-31T20:04:40.849Z",
+   "durationMs": 15706,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 15706,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 15706,
+     "type": "ab_decision",
+     "pairId": "round-005-c002-ph1",
+     "choice": "A"
+    },
+    {
+     "t": 15706,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-006-phrasing",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "phrasing",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-006",
+     "batch": "round-005-c002",
+     "decisions": [
+      {
+       "pairId": "round-005-c002-ph1",
+       "itemA": "round-005-c002:llama323b:guided",
+       "itemB": "round-005-c002:llama323b:terse",
+       "choice": "A",
+       "winner": "round-005-c002:llama323b:guided",
+       "strength": 2,
+       "decisionTimeMs": 15705,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "round-005-c002",
+       "modelA": "llama3.2:3b",
+       "modelB": "llama3.2:3b",
+       "winnerModel": "llama3.2:3b",
+       "batch": "round-005-c002",
+       "kind": "phrasing",
+       "lane": "low",
+       "dimsA": {
+        "brevity": 0,
+        "directness": 0
+       },
+       "dimsB": {
+        "brevity": 1,
+        "directness": 1
+       }
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 9,
+   "params": {
+    "setId": "round-006-codepass",
+    "pairs": 1,
+    "kind": "codepass"
+   },
+   "startedAt": "2026-10-31T20:04:40.850Z",
+   "endedAt": "2026-10-31T20:05:15.804Z",
+   "durationMs": 34954,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 34954,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 34954,
+     "type": "ab_decision",
+     "pairId": "round-005-c002-cp1",
+     "choice": "A"
+    },
+    {
+     "t": 34954,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-006-codepass",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "codepass",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-006",
+     "batch": "round-005-c002",
+     "decisions": [
+      {
+       "pairId": "round-005-c002-cp1",
+       "itemA": "round-005-c002:llama323b:plan",
+       "itemB": "round-005-c002:qwen2515b:plan",
+       "choice": "A",
+       "winner": "round-005-c002:llama323b:plan",
+       "strength": 2,
+       "decisionTimeMs": 34954,
+       "swapped": false,
+       "undone": false,
+       "source": "human",
+       "parcelId": "round-005-c002",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "llama3.2:3b",
+       "batch": "round-005-c002",
+       "kind": "codepass",
+       "lane": "low"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 10,
+   "params": {
+    "setId": "round-006-phrasing",
+    "pairs": 1,
+    "kind": "phrasing"
+   },
+   "startedAt": "2026-10-31T20:05:15.804Z",
+   "endedAt": "2026-10-31T20:05:18.697Z",
+   "durationMs": 2893,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 2893,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 2893,
+     "type": "ab_decision",
+     "pairId": "round-006-c001-ph1",
+     "choice": "A"
+    },
+    {
+     "t": 2893,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-006-phrasing",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "phrasing",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-006",
+     "batch": "round-006-c001",
+     "decisions": [
+      {
+       "pairId": "round-006-c001-ph1",
+       "itemA": "round-006-c001:llama323b:guided",
+       "itemB": "round-006-c001:llama323b:terse",
+       "choice": "A",
+       "winner": "round-006-c001:llama323b:guided",
+       "strength": 2,
+       "decisionTimeMs": 2893,
+       "swapped": true,
+       "undone": false,
+       "source": "human",
+       "parcelId": "round-006-c001",
+       "modelA": "llama3.2:3b",
+       "modelB": "llama3.2:3b",
+       "winnerModel": "llama3.2:3b",
+       "batch": "round-006-c001",
+       "kind": "phrasing",
+       "lane": "low",
+       "dimsA": {
+        "brevity": 0,
+        "directness": 0
+       },
+       "dimsB": {
+        "brevity": 1,
+        "directness": 1
+       }
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  },
+  {
+   "level": 11,
+   "params": {
+    "setId": "round-006-codepass",
+    "pairs": 1,
+    "kind": "codepass"
+   },
+   "startedAt": "2026-10-31T20:05:18.697Z",
+   "endedAt": "2026-10-31T20:05:57.651Z",
+   "durationMs": 38954,
+   "outcome": "complete",
+   "metrics": {
+    "durationMs": 38954,
+    "actions": 1,
+    "misplays": 0,
+    "progress": 1
+   },
+   "events": [
+    {
+     "t": 0,
+     "type": "level_start"
+    },
+    {
+     "t": 38954,
+     "type": "ab_decision",
+     "pairId": "round-006-c001-cp1",
+     "choice": "B"
+    },
+    {
+     "t": 38954,
+     "type": "level_complete"
+    }
+   ],
+   "ext": {
+    "pairwise": {
+     "setId": "round-006-codepass",
+     "setVersion": "1.0.0",
+     "demo": false,
+     "setKind": "codepass",
+     "pairsShown": 1,
+     "decisionsMade": 1,
+     "undos": 0,
+     "timing": "decisionTimeMs from question shown",
+     "roundId": "round-006",
+     "batch": "round-006-c001",
+     "decisions": [
+      {
+       "pairId": "round-006-c001-cp1",
+       "itemA": "round-006-c001:llama323b:plan",
+       "itemB": "round-006-c001:qwen2515b:plan",
+       "choice": "B",
+       "winner": "round-006-c001:qwen2515b:plan",
+       "strength": 2,
+       "decisionTimeMs": 38953,
+       "swapped": false,
+       "undone": false,
+       "source": "human",
+       "parcelId": "round-006-c001",
+       "modelA": "llama3.2:3b",
+       "modelB": "qwen2.5:1.5b",
+       "winnerModel": "qwen2.5:1.5b",
+       "batch": "round-006-c001",
+       "kind": "codepass",
+       "lane": "low"
+      }
+     ]
+    }
+   },
+   "segment": "pairwise"
+  }
+ ],
+ "transitions": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T19:59:39.746Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 1,
+     "to": 2
+    },
+    {
+     "param": "waveSpeed",
+     "from": 0.8,
+     "to": 1
+    },
+    {
+     "param": "durationMs",
+     "from": 45000,
+     "to": 40000
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:00:24.513Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 2,
+     "to": 3
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:01:07.880Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 3,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 40000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "stage",
+     "from": null,
+     "to": "cluster"
+    },
+    {
+     "param": "cycle",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "clusters",
+     "from": null,
+     "to": [
+      "round-005-c002",
+      "round-005-c001",
+      "round-006-c001"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:02:10.200Z",
+   "changes": [
+    {
+     "param": "stage",
+     "from": "cluster",
+     "to": null
+    },
+    {
+     "param": "cycle",
+     "from": 1,
+     "to": null
+    },
+    {
+     "param": "clusters",
+     "from": [
+      "round-005-c002",
+      "round-005-c001",
+      "round-006-c001"
+     ],
+     "to": null
+    },
+    {
+     "param": "wave",
+     "from": null,
+     "to": 4
+    },
+    {
+     "param": "waveSpeed",
+     "from": null,
+     "to": 1.1
+    },
+    {
+     "param": "durationMs",
+     "from": null,
+     "to": 40000
+    },
+    {
+     "param": "bins",
+     "from": null,
+     "to": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 5,
+   "to": 6,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:02:56.471Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 4,
+     "to": 5
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:03:39.022Z",
+   "changes": [
+    {
+     "param": "wave",
+     "from": 5,
+     "to": null
+    },
+    {
+     "param": "waveSpeed",
+     "from": 1.1,
+     "to": null
+    },
+    {
+     "param": "durationMs",
+     "from": 40000,
+     "to": null
+    },
+    {
+     "param": "bins",
+     "from": [
+      "reply",
+      "archive",
+      "later",
+      "info",
+      "spam"
+     ],
+     "to": null
+    },
+    {
+     "param": "stage",
+     "from": null,
+     "to": "cluster"
+    },
+    {
+     "param": "cycle",
+     "from": null,
+     "to": 2
+    },
+    {
+     "param": "clusters",
+     "from": null,
+     "to": [
+      "round-005-c002",
+      "round-005-c001",
+      "round-006-c001"
+     ]
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:04:25.143Z",
+   "changes": [
+    {
+     "param": "stage",
+     "from": "cluster",
+     "to": null
+    },
+    {
+     "param": "cycle",
+     "from": 2,
+     "to": null
+    },
+    {
+     "param": "clusters",
+     "from": [
+      "round-005-c002",
+      "round-005-c001",
+      "round-006-c001"
+     ],
+     "to": null
+    },
+    {
+     "param": "setId",
+     "from": null,
+     "to": "round-006-phrasing"
+    },
+    {
+     "param": "pairs",
+     "from": null,
+     "to": 1
+    },
+    {
+     "param": "kind",
+     "from": null,
+     "to": "phrasing"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:04:40.850Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-006-phrasing",
+     "to": "round-006-codepass"
+    },
+    {
+     "param": "kind",
+     "from": "phrasing",
+     "to": "codepass"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:05:15.804Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-006-codepass",
+     "to": "round-006-phrasing"
+    },
+    {
+     "param": "kind",
+     "from": "codepass",
+     "to": "phrasing"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  },
+  {
+   "from": 10,
+   "to": 11,
+   "fromOutcome": "complete",
+   "at": "2026-10-31T20:05:18.697Z",
+   "changes": [
+    {
+     "param": "setId",
+     "from": "round-006-phrasing",
+     "to": "round-006-codepass"
+    },
+    {
+     "param": "kind",
+     "from": "phrasing",
+     "to": "codepass"
+    }
+   ],
+   "mechanicsAdded": [],
+   "mechanicsRemoved": []
+  }
+ ],
+ "summary": {
+  "levelsCompleted": 11,
+  "highestLevel": 11,
+  "totalDurationMs": 423602,
+  "parcels": {
+   "roundId": "round-006",
+   "roundNo": 6,
+   "roundVersion": "1.0.0",
+   "synthetic": true,
+   "sim": false,
+   "mode": "session",
+   "axesVersion": "1.0.0",
+   "chain": [
+    "priority",
+    "handling",
+    "cluster"
+   ],
+   "cycles": 2,
+   "stageResults": [
+    {
+     "stage": "warmup",
+     "cycle": 0,
+     "mode": "priority",
+     "shown": 8,
+     "placed": 8,
+     "misses": 0,
+     "score": 932,
+     "meanConf": 0.67
+    },
+    {
+     "stage": "priority",
+     "cycle": 1,
+     "mode": "priority",
+     "shown": 8,
+     "placed": 8,
+     "misses": 0,
+     "score": 831,
+     "meanConf": 0.49
+    },
+    {
+     "stage": "handling",
+     "cycle": 1,
+     "mode": "handling",
+     "shown": 8,
+     "placed": 8,
+     "misses": 0,
+     "score": 998,
+     "meanConf": 0.72
+    },
+    {
+     "stage": "cluster",
+     "cycle": 1,
+     "answered": 25,
+     "belongs": 6,
+     "merges": 0
+    },
+    {
+     "stage": "priority",
+     "cycle": 2,
+     "mode": "priority",
+     "shown": 9,
+     "placed": 9,
+     "misses": 0,
+     "score": 1175,
+     "meanConf": 0.62
+    },
+    {
+     "stage": "handling",
+     "cycle": 2,
+     "mode": "handling",
+     "shown": 8,
+     "placed": 8,
+     "misses": 0,
+     "score": 812,
+     "meanConf": 0.49
+    },
+    {
+     "stage": "cluster",
+     "cycle": 2,
+     "answered": 25,
+     "belongs": 5,
+     "merges": 0
+    }
+   ],
+   "priority": {
+    "queue": [
+     {
+      "parcelId": "p008",
+      "priority": 99.3,
+      "urgency": 98.2,
+      "importance": 100,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "r003-qwen2515b-02",
+      "priority": 75.4,
+      "urgency": 69.8,
+      "importance": 79,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "p026",
+      "priority": 73.1,
+      "urgency": 72.6,
+      "importance": 73.5,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "p013",
+      "priority": 72.5,
+      "urgency": 71.8,
+      "importance": 73,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "p029",
+      "priority": 66.9,
+      "urgency": 85,
+      "importance": 54.9,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "p012",
+      "priority": 63.5,
+      "urgency": 91.3,
+      "importance": 44.9,
+      "quadrant": "skim"
+     },
+     {
+      "parcelId": "r002-llama323b-01",
+      "priority": 63.2,
+      "urgency": 63.2,
+      "importance": 63.2,
+      "quadrant": "first"
+     },
+     {
+      "parcelId": "r002-qwen2515b-04",
+      "priority": 59.8,
+      "urgency": 89.1,
+      "importance": 40.2,
+      "quadrant": "skim"
+     },
+     {
+      "parcelId": "p039",
+      "priority": 56,
+      "urgency": 29.9,
+      "importance": 73.5,
+      "quadrant": "schedule"
+     },
+     {
+      "parcelId": "r003-llama323b-06",
+      "priority": 45.4,
+      "urgency": 27.7,
+      "importance": 57.2,
+      "quadrant": "schedule"
+     },
+     {
+      "parcelId": "r003-llama323b-01",
+      "priority": 33.1,
+      "urgency": 19.1,
+      "importance": 42.3,
+      "quadrant": "deprio"
+     },
+     {
+      "parcelId": "r003-llama323b-03",
+      "priority": 21.6,
+      "urgency": 18.9,
+      "importance": 23.4,
+      "quadrant": "deprio"
+     },
+     {
+      "parcelId": "r002-qwen2515b-03",
+      "priority": 21.4,
+      "urgency": 16.4,
+      "importance": 24.7,
+      "quadrant": "deprio"
+     },
+     {
+      "parcelId": "p020",
+      "priority": 3.9,
+      "urgency": 1.5,
+      "importance": 5.4,
+      "quadrant": "deprio"
+     }
+    ],
+    "quadrants": {
+     "skim": 3,
+     "first": 12,
+     "deprio": 6,
+     "schedule": 4
+    },
+    "meanConf": 0.596
+   },
+   "handling": {
+    "plan": [
+     {
+      "parcelId": "r002-qwen2515b-07",
+      "automation": 0,
+      "manual": 100,
+      "spend": 100,
+      "budgetShare": 10.9,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "r003-llama323b-02",
+      "automation": 0,
+      "manual": 100,
+      "spend": 96.5,
+      "budgetShare": 10.5,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "p030",
+      "automation": 9,
+      "manual": 91,
+      "spend": 92.3,
+      "budgetShare": 10,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "p008",
+      "automation": 12.8,
+      "manual": 87.2,
+      "spend": 84.9,
+      "budgetShare": 9.2,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "p039",
+      "automation": 20,
+      "manual": 80,
+      "spend": 79.5,
+      "budgetShare": 8.7,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "r003-qwen2515b-02",
+      "automation": 21.9,
+      "manual": 78.1,
+      "spend": 74.7,
+      "budgetShare": 8.1,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "r002-llama323b-05",
+      "automation": 69.8,
+      "manual": 30.2,
+      "spend": 73.9,
+      "budgetShare": 8,
+      "tier": "codex",
+      "quadrant": "autoPremium"
+     },
+     {
+      "parcelId": "p010",
+      "automation": 31.3,
+      "manual": 68.7,
+      "spend": 66.6,
+      "budgetShare": 7.3,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "p028",
+      "automation": 59.6,
+      "manual": 40.4,
+      "spend": 62.7,
+      "budgetShare": 6.8,
+      "tier": "hybrid-codex",
+      "quadrant": "autoPremium"
+     },
+     {
+      "parcelId": "p013",
+      "automation": 64.3,
+      "manual": 35.7,
+      "spend": 61.2,
+      "budgetShare": 6.7,
+      "tier": "codex",
+      "quadrant": "autoPremium"
+     },
+     {
+      "parcelId": "p034",
+      "automation": 62.9,
+      "manual": 37.1,
+      "spend": 58.5,
+      "budgetShare": 6.4,
+      "tier": "codex",
+      "quadrant": "autoPremium"
+     },
+     {
+      "parcelId": "p023",
+      "automation": 33.2,
+      "manual": 66.8,
+      "spend": 56.8,
+      "budgetShare": 6.2,
+      "tier": "manual",
+      "quadrant": "reviewReserve"
+     },
+     {
+      "parcelId": "r002-qwen2515b-06",
+      "automation": 89.1,
+      "manual": 10.9,
+      "spend": 7.9,
+      "budgetShare": 0.9,
+      "tier": "ollama",
+      "quadrant": "autoCheap"
+     },
+     {
+      "parcelId": "p011",
+      "automation": 90.2,
+      "manual": 9.8,
+      "spend": 3.1,
+      "budgetShare": 0.3,
+      "tier": "ollama",
+      "quadrant": "autoCheap"
+     }
+    ],
+    "budgetPool": {
+     "automatedShare": 29.1,
+     "manualReserveShare": 70.9
+    },
+    "tiers": {
+     "manual": 8,
+     "ollama": 2,
+     "codex": 3,
+     "hybrid-codex": 1
+    }
+   },
+   "ledgerPreview": {
+    "before": {
+     "priority": {
+      "new": 13,
+      "open": 31,
+      "settled": 17,
+      "manual-review": 0,
+      "streak": {
+       "0": 7,
+       "1": 21,
+       "2": 3,
+       "3": 17
+      }
+     },
+     "handling": {
+      "new": 44,
+      "open": 14,
+      "settled": 2,
+      "manual-review": 1,
+      "streak": {
+       "0": 2,
+       "1": 8,
+       "2": 5,
+       "3": 2
+      }
+     }
+    },
+    "after": {
+     "priority": {
+      "new": 13,
+      "open": 23,
+      "settled": 22,
+      "manual-review": 3,
+      "streak": {
+       "0": 7,
+       "1": 12,
+       "2": 7,
+       "3": 22
+      }
+     },
+     "handling": {
+      "new": 42,
+      "open": 8,
+      "settled": 6,
+      "manual-review": 5,
+      "streak": {
+       "0": 0,
+       "1": 9,
+       "2": 4,
+       "3": 6
+      }
+     }
+    }
+   },
+   "clusterAnswers": 3,
+   "merges": [
+    {
+     "a": "round-005-c002",
+     "b": "round-005-c001",
+     "merge": false,
+     "ms": 2002
+    },
+    {
+     "a": "round-005-c001",
+     "b": "round-006-c001",
+     "merge": false,
+     "ms": 3671
+    },
+    {
+     "a": "round-005-c002",
+     "b": "round-005-c001",
+     "merge": false,
+     "ms": 1397
+    },
+    {
+     "a": "round-005-c001",
+     "b": "round-006-c001",
+     "merge": false,
+     "ms": 1234
+    }
+   ],
+   "batches": [
+    {
+     "clusterId": "round-005-c002",
+     "unlocked": true,
+     "lane": "low",
+     "confirmed": 2,
+     "settledHighShare": 0,
+     "combinedPriority": 122,
+     "threshold": 140,
+     "why": []
+    },
+    {
+     "clusterId": "round-005-c001",
+     "unlocked": false,
+     "lane": null,
+     "confirmed": 1,
+     "settledHighShare": 0,
+     "combinedPriority": 30,
+     "threshold": 140,
+     "why": [
+      "needs 2 confirmed members (has 1)"
+     ]
+    },
+    {
+     "clusterId": "round-006-c001",
+     "unlocked": true,
+     "lane": "low",
+     "confirmed": 2,
+     "settledHighShare": 0,
+     "combinedPriority": 114,
+     "threshold": 140,
+     "why": []
+    }
+   ],
+   "outputs": [
+    {
+     "kind": "phrasing",
+     "batch": "round-005-c002",
+     "lane": "low",
+     "pairId": "round-005-c002-ph1",
+     "winner": "round-005-c002:llama323b:guided",
+     "winnerModel": "llama3.2:3b",
+     "text": "Dear valued customers,\n\nWe are writing to inform you that your invoices are overdue. Please make payment by next Friday to avoid any further action. For invoice 1234, the amount due is $500. For invoice 9876, the amount due is $400. If you have any questions or concerns, please don't hesitate to reach out.\n\nBest regards, Engineer"
+    },
+    {
+     "kind": "codepass",
+     "batch": "round-005-c002",
+     "lane": "low",
+     "pairId": "round-005-c002-cp1",
+     "winner": "round-005-c002:llama323b:plan",
+     "winnerModel": "llama3.2:3b",
+     "text": "1. Parse JSON data to extract relevant information → 2. Categorize and prioritize tasks based on urgency and importance → 3. Implement a notification system for overdue invoices and system downtime → 4. Create a follow-up system for recruiter tasks → 5. Integrate job posting and new job posting into the system → 6. Schedule and send meeting requests and service requests"
+    },
+    {
+     "kind": "phrasing",
+     "batch": "round-006-c001",
+     "lane": "low",
+     "pairId": "round-006-c001-ph1",
+     "winner": "round-006-c001:llama323b:guided",
+     "winnerModel": "llama3.2:3b",
+     "text": "Dear valued customers and collaborators,\n\nWe are writing to inform you of the following overdue payments:\n\n- Invoice #9876: Payment due by next Friday.\n- Invoice #1234: Payment is overdue.\n\nPlease make the necessary payments to avoid any further action.\n\nBest regards, [Engineer's Name]"
+    },
+    {
+     "kind": "codepass",
+     "batch": "round-006-c001",
+     "lane": "low",
+     "pairId": "round-006-c001-cp1",
+     "winner": "round-006-c001:qwen2515b:plan",
+     "winnerModel": "qwen2.5:1.5b",
+     "text": "Retrieve the missing VAT number and billing address from the Finance team. → Locate the bug in the tone pit and reproduce the steps to ensure it's a genuine issue. → Update the invoice system to include the VAT number and billing address. → Submit the updated invoice to the Finance team for processing. → Check the invoice system for any overdue payments and ensure they are marked as overdue."
+    }
+   ],
+   "seededUnlock": false,
+   "score": 4748,
+   "sorted": 41,
+   "misses": 0
+  }
+ },
+ "session": {
+  "id": "20261031195848-kmdgh",
+  "kind": "parcels+pairwise",
+  "segments": [
+   {
+    "index": 0,
+    "levelIndex": 0,
+    "kind": "parcels",
+    "wave": 1,
+    "roundId": "round-006",
+    "outcome": "complete",
+    "durationMs": 49324
+   },
+   {
+    "index": 1,
+    "levelIndex": 1,
+    "kind": "parcels",
+    "wave": 2,
+    "roundId": "round-006",
+    "outcome": "complete",
+    "durationMs": 43564
+   },
+   {
+    "index": 2,
+    "levelIndex": 2,
+    "kind": "parcels",
+    "wave": 3,
+    "roundId": "round-006",
+    "outcome": "complete",
+    "durationMs": 43366
+   },
+   {
+    "index": 3,
+    "levelIndex": 3,
+    "kind": "cluster",
+    "roundId": "round-006",
+    "cycle": 1,
+    "outcome": "complete",
+    "durationMs": 61112
+   },
+   {
+    "index": 4,
+    "levelIndex": 4,
+    "kind": "parcels",
+    "wave": 4,
+    "roundId": "round-006",
+    "outcome": "complete",
+    "durationMs": 45069
+   },
+   {
+    "index": 5,
+    "levelIndex": 5,
+    "kind": "parcels",
+    "wave": 5,
+    "roundId": "round-006",
+    "outcome": "complete",
+    "durationMs": 42550
+   },
+   {
+    "index": 6,
+    "levelIndex": 6,
+    "kind": "cluster",
+    "roundId": "round-006",
+    "cycle": 2,
+    "outcome": "complete",
+    "durationMs": 46110
+   },
+   {
+    "index": 7,
+    "levelIndex": 7,
+    "kind": "pairwise",
+    "roundId": "round-006",
+    "pairId": "round-005-c002-ph1",
+    "batch": "round-005-c002",
+    "outcome": "complete",
+    "durationMs": 15706
+   },
+   {
+    "index": 8,
+    "levelIndex": 8,
+    "kind": "pairwise",
+    "roundId": "round-006",
+    "pairId": "round-005-c002-cp1",
+    "batch": "round-005-c002",
+    "outcome": "complete",
+    "durationMs": 34954
+   },
+   {
+    "index": 9,
+    "levelIndex": 9,
+    "kind": "pairwise",
+    "roundId": "round-006",
+    "pairId": "round-006-c001-ph1",
+    "batch": "round-006-c001",
+    "outcome": "complete",
+    "durationMs": 2893
+   },
+   {
+    "index": 10,
+    "levelIndex": 10,
+    "kind": "pairwise",
+    "roundId": "round-006",
+    "pairId": "round-006-c001-cp1",
+    "batch": "round-006-c001",
+    "outcome": "complete",
+    "durationMs": 38954
+   }
+  ]
+ },
+ "qualities": {
+  "modelVersion": "1.3.0",
+  "computedAt": "2026-10-31T20:05:57.671Z",
+  "runType": "human",
+  "adapters": [
+   "parcels",
+   "pairwise"
+  ],
+  "items": {
+   "focus": {
+    "score": 99,
+    "confidence": 0.62,
+    "label": "estimate",
+    "evidence": [
+     "parcels: parcels missed 0/41, changed mind 1"
+    ]
+   },
+   "reaction": {
+    "score": 22,
+    "confidence": 0.62,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median first touch 3.85 s after a parcel appears"
+    ]
+   },
+   "consistency": {
+    "score": 93,
+    "confidence": 0.56,
+    "label": "estimate",
+    "evidence": [
+     "parcels: wave focus sd 2.5 over 5 waves"
+    ]
+   },
+   "endurance": {
+    "score": 46,
+    "confidence": 0.5,
+    "label": "estimate",
+    "evidence": [
+     "parcels: wave focus trend -0.6 pts/wave (speed rises each wave)"
+    ]
+   },
+   "decisionSpeed": {
+    "score": 35,
+    "confidence": 0.62,
+    "label": "estimate",
+    "evidence": [
+     "parcels: median sort 4.30 s",
+     "pairwise: median 25.3 s per pick (n=4)"
+    ]
+   },
+   "decisiveness": {
+    "score": 64,
+    "confidence": 0.56,
+    "label": "estimate",
+    "evidence": [
+     "parcels: mean axis confidence urgency 0.57, importance 0.43",
+     "pairwise: mean strength 2.00 of 3; tie/neither 0/4"
+    ]
+   }
+  },
+  "note": "Rough gameplay estimates for choosing a game; not an assessment of the person. \"rough\" = confidence < 0.5."
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r007-prio-004",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:12:19.907Z",
+ "ms": 8729,
+ "promptSha256": "aa90989deff2a1335f69ec173b0ba4fee9d24c89319d7c32de0a60a7dff78f2c",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Prioritize tasks with a clear deadline or time-sensitive action.\n* Give higher importance to tasks that require a direct response or action.\n* Prioritize tasks from collaborators and service providers over others, as they often require more attention and effort.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\np011 | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\nr002-llama323b-06 | Invoice · TechHub | Invoice #1234: Payment Overdue | Your payment is overdue.\nr003-llama323b-05 | Job-Board · DevFolio | New Job Opening: Senior Software Engineer | We are seeking a Senior Software Engineer to join our team.\np023 | Calendar | Invitation: Sprint review (Tue 10:00) | Organizer asks you to accept or decline. Agenda not attached yet.\nr002-qwen2515b-08 | Job Board · TechJobs | New Job Posting: Full Stack Developer | We are seeking a Full Stack Developer with experience in both frontend and backend.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p011\",\"urgency\":0,\"importance\":70,\"summary\":\"Application viewed, recruiter interest\"},{\"id\":\"r002-llama323b-06\",\"urgency\":100,\"importance\":30,\"summary\":\"Overdue payment\"},{\"id\":\"r003-llama323b-05\",\"urgency\":0,\"importance\":90,\"summary\":\"New job opening\"},{\"id\":\"p023\",\"urgency\":0,\"importance\":60,\"summary\":\"Sprint review invitation\"},{\"id\":\"r002-qwen2515b-08\",\"urgency\":0,\"importance\":40,\"summary\":\"New job posting\"}]}",
+ "parseError": null,
+ "evalCount": 134,
+ "promptEvalCount": 441
+}

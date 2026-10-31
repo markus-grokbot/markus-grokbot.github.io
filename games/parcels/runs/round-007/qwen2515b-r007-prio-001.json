@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r007-prio-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:13:10.016Z",
+ "ms": 9350,
+ "promptSha256": "61181f54106dc4728792ca4126ed9e372c278b2b6142413e3f28a9308154d3d5",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Consider the context of the email, not just the subject line.\n* Use a numerical scale of 0-100 for urgency and importance, not just percentages.\n* Prioritize based on the sender's role and company, not just the urgency and importance scores.\n* Use a clear and concise subject line, not just a snippet of the body.\n* Prioritize based on the sender's role and company, not just the urgency and importance scores.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr002-qwen2515b-04 | Invoice · TechCorp | Membership Invoice | Please pay the membership invoice by the end of the week.\nr003-llama323b-03 | Marketing · DevNews | New Software Engineer Course | Learn the latest software engineering techniques.\nr003-qwen2515b-02 | Collaborator · MyCompany | Meeting Request | We have a meeting scheduled for 10:00 AM on Tuesday. Please confirm your availability.\nr002-llama323b-01 | Job-Board · TechHub | New Job Opening: Junior DevOps Engineer | We are looking for a talented Junior DevOps Engineer to join our team.\nr002-qwen2515b-03 | Collaborator · MyProject | Meeting Request: AI Workshop | Please join the AI Workshop on Monday at 10 AM.\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[\n  {\"id\":\"r002-qwen2515b-04\",\"urgency\":100,\"importance\":80,\"summary\":\"Membership Invoice, urgent and important\"},\n  {\"id\":\"r003-llama323b-03\",\"urgency\":50,\"importance\":90,\"summary\":\"Software Engineer Course, important but not urgent\"},\n  {\"id\":\"r003-qwen2515b-02\",\"urgency\":20,\"importance\":60,\"summary\":\"Meeting Request, not urgent but important\"},\n  {\"id\":\"r002-llama323b-01\",\"urgency\":70,\"importance\":85,\"summary\":\"Job Opening, urgent and important\"},\n  {\"id\":\"r002-qwen2515b-03\",\"urgency\":30,\"importance\":90,\"summary\":\"AI Workshop, important but not urgent\"}\n]}",
+ "parseError": null,
+ "evalCount": 211,
+ "promptEvalCount": 535
+}

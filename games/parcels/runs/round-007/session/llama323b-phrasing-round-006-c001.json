@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "phrasing-round-006-c001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:25:20.766Z",
+ "ms": 14248,
+ "promptSha256": "de8875cafcbd89f9cb8ab8c41fc24a6dfd4ed99f5cfe0d9a67bad9ebc60f13a2",
+ "prompt": "Write a short fictional reply email that answers ALL of these related inbox items in one message (they form the batch \"Overdue Payments\"). Write it as the engineer. Write two variants: \"guided\" follows this style guide, \"terse\" is deliberately shorter and more direct.\n## Style guide for a writing model\n\n- Strongly prefer **serious, dry** (humor -1 ± 1.111, n=2, low confidence)\n- Prefer **assertive, confident** (confidence 0.52 ± 0.559, n=3, low confidence)\n- Prefer **plain-language, explanatory** (technicality -0.462 ± 0.508, n=4, low confidence)\n- Prefer **expansive, explanatory** (brevity -0.417 ± 0.439, n=5, low confidence)\n- Prefer **formal** (formality 0.294 ± 0.488, n=6, low confidence)\n- No clear lean on **directness** (directness 0.067 ± 0.547, n=4, low confidence)\n- No clear lean on **warmth** (warmth -0.048 ± 0.48, n=6, low confidence)\n- No clear lean on **personal** (personal -0.033 ± 0.449, n=6, low confidence)\n\nTreat low-confidence lines as hints only. Content is fictional; only the voice is signal.\n\n| dim | pref | se | n | beta | conf |\n|---|---|---|---|---|---|\n| formality | 0.294 | 0.488 | 6 | 0.376 | low |\n| warmth | -0.048 | 0.48 | 6 | -0.019 | low |\n| brevity | -0.417 | 0.439 | 5 | -0.774 | low |\n| humor | -1 | 1.111 | 2 | -0.418 | low |\n| confidence | 0.52 | 0.559 | 3 | 0.505 | low |\n| technicality | -0.462 | 0.508 | 4 | -0.428 | low |\n| directness | 0.067 | 0.547 | 4 | 0.164 | low |\n| emoji | 0 |  | 0 | 0 | none |\n| personal | -0.033 | 0.449 | 6 | -0.241 | low |\nItems:\np029 | invoice | Finance · co-working space | Membership invoice – missing VAT number | To issue the invoice to your company we need your VAT number and billing address.\np026 | collaborator | Collaborator · bot tester | Found a bug in the tone pit | Undo after 'neither' skips a pair. Repro steps below. Want me to file it?\nr003-qwen2515b-04 | service | Service Notice · MyCompany | Invoice 9876 - Payment Due | Your invoice for $400 is overdue. Please make payment by next Friday.\nr002-llama323b-06 | invoice | Invoice · TechHub | Invoice #1234: Payment Overdue | Your payment is overdue.\nr002-llama323b-09 | job-board | Job-Board · TechHub | Job Opening: Senior DevOps Engineer | We are looking for a senior DevOps engineer to join our team.\nr002-qwen2515b-01 | job-board | Job Board · TechJobs | New Job Posting: Senior Software Engineer | We are seeking a Senior Software Engineer with experience in React and Node.js.\nr003-llama323b-05 | job-board | Job-Board · DevFolio | New Job Opening: Senior Software Engineer | We are seeking a Senior Software Engineer to join our team.\nr005-llama323b-04 | job-board | Job-Board · TechHub | New Job Posting: Senior Software Engineer | We are looking for a senior software engineer to join our team.\nMax 70 words each. No real names, emails or addresses; use the fictional senders above. Return JSON only: {\"guided\":\"...\",\"terse\":\"...\"}",
+ "raw": "{ \"guided\":\n\"Dear valued customers and collaborators,\\n\\nWe are writing to inform you that the following payments are overdue:\\n\\n* Invoice #9876: Payment Due (r003-llama323b-04)\\n\\nPlease make payment by next Friday to avoid any late fees.\\n\\nBest regards,\\n[Engineer's Name]\\n[Company Name]\\n\",\n\"terse\":\n\"Overdue Payments:\\n\\n* r003-llama323b-04: Invoice #9876 - Payment Due\\n\\nPlease make payment by next Friday.\\n\\nBest,\\n[Engineer's Name]\" }",
+ "parseError": null,
+ "evalCount": 131,
+ "promptEvalCount": 910
+}

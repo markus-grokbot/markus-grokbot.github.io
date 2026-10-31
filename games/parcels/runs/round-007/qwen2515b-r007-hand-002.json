@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r007-hand-002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:22:58.980Z",
+ "ms": 3477,
+ "promptSha256": "f9b7dfa8bcc2d66562bf1a75f28927747187410e2810d056a67285a3e030ac4d",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np034 | Collaborator · podcast host | Guest slot – topic? | Happy to have you on in December. What would you like to talk about: games or LLM tooling?\np023 | Calendar | Invitation: Sprint review (Tue 10:00) | Organizer asks you to accept or decline. Agenda not attached yet.\nr002-qwen2515b-08 | Job Board · TechJobs | New Job Posting: Full Stack Developer | We are seeking a Full Stack Developer with experience in both frontend and backend.\np029 | Finance · co-working space | Membership invoice – missing VAT number | To issue the invoice to your company we need your VAT number and billing address.\nr004-llama323b-01 | Job Board · TechHub | New Job Posting: Junior Software Engineer | We are seeking a junior software engineer to join our team.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"p034\",\"manual\":10,\"spend\":50},\n    {\"id\":\"p023\",\"manual\":50,\"spend\":50},\n    {\"id\":\"r002-qwen2515b-08\",\"manual\":80,\"spend\":70},\n    {\"id\":\"p029\",\"manual\":60,\"spend\":60},\n    {\"id\":\"r004-llama323b-01\",\"manual\":90,\"spend\":80}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 130,
+ "promptEvalCount": 422
+}

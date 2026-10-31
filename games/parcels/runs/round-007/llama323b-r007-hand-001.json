@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "r007-hand-001",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:12:50.741Z",
+ "ms": 5985,
+ "promptSha256": "8d0797e7987af7895bc3cb124ba8861ce047eb40e9aae43d82bcc586bc5c0e8e",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\np008 | Recruiter · Vinterberg Search | Exciting opportunity!!! (urgent) | I came across your profile and think you'd be a perfect fit for a role I can't name yet.\nr002-llama323b-01 | Job-Board · TechHub | New Job Opening: Junior DevOps Engineer | We are looking for a talented Junior DevOps Engineer to join our team.\np013 | Code host notifications | [games] New issue: runner lags on old Android | Frame drops after 20 s on a 2019 phone. Which browser version do you support?\nr002-qwen2515b-06 | Service · MyProject | Service Request: Network Issue | We noticed a network issue with your project. Please check the logs.\np028 | Code host notifications | [games] PR #14 review requested | 'Add hold piece to Tetris' – 6 files changed, +212 −40. You are a requested reviewer.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\"items\":[{\"id\":\"p008\",\"manual\":50,\"spend\":30},{\"id\":\"r002-llama323b-01\",\"manual\":10,\"spend\":80},{\"id\":\"p013\",\"manual\":0,\"spend\":0},{\"id\":\"r002-qwen2515b-06\",\"manual\":40,\"spend\":40},{\"id\":\"p028\",\"manual\":0,\"spend\":0}]}",
+ "parseError": null,
+ "evalCount": 89,
+ "promptEvalCount": 412
+}

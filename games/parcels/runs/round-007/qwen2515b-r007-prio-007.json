@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r007-prio-007",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:22:52.636Z",
+ "ms": 2373,
+ "promptSha256": "f38ae0fb71615ade87777e1f7cef6a0a2beabc3811fecf63f417998ade36689e",
+ "prompt": "You help a busy software engineer (job hunting, runs small open-source game projects) PRIORITISE his inbox. Do not decide what to do with an item; only estimate its priority on two scales:\n- urgency 0-100: how soon he must look at it (100 = right now, 0 = can wait weeks)\n- importance 0-100: how much it matters to him (100 = career/project critical, 0 = noise)\nYour own prioritising rubric from last round:\n* Consider the context of the email, not just the subject line.\n* Use a numerical scale of 0-100 for urgency and importance, not just percentages.\n* Prioritize based on the sender's role and company, not just the urgency and importance scores.\n* Use a clear and concise subject line, not just a snippet of the body.\n* Prioritize based on the sender's role and company, not just the urgency and importance scores.\nAlso write a summary badge of at most 6 words that would help him prioritise it at a glance.\nItems (id | sender | subject | snippet):\nr007-qwen2515b-03 | Newsletter · TechNews | Tech News: New Tech Trends | Stay ahead of the curve with the latest tech trends. Don't miss out!\nr007-qwen2515b-04 | Job Board · TechJobs | New Job Posting: Full Stack Developer | We are looking for a Full Stack Developer with experience in both front-end and back-end technologies. Apply now!\nurgency and importance must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"urgency\":30,\"importance\":70,\"summary\":\"Interview prep notes, this week\"}\nReturn JSON only: {\"items\":[ one object per item above, 2 objects, same ids ]}",
+ "raw": "{\"items\":[ {\"id\":\"r007-qwen2515b-03\",\"urgency\":10,\"importance\":80,\"summary\":\"Tech News: Stay ahead of the curve\"}, {\"id\":\"r007-qwen2515b-04\",\"urgency\":50,\"importance\":90,\"summary\":\"Job Posting: Full Stack Developer\"} ]}",
+ "parseError": null,
+ "evalCount": 86,
+ "promptEvalCount": 431
+}

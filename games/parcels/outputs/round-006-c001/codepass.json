@@ -1,0 +1,86 @@
+{
+ "schema": "parcels-output",
+ "kind": "codepass",
+ "version": "1.0.0",
+ "lane": "low",
+ "queue": "night",
+ "allowedTiers": [
+  "ollama",
+  "opencode"
+ ],
+ "laneNote": "night queue, free tools only; plan limited to free-tier steps",
+ "sim": false,
+ "seededUnlock": false,
+ "status": "plan-only: nothing sent or executed; for later agentic use if it becomes relevant",
+ "batch": {
+  "id": "round-006-c001",
+  "label": "Overdue Payments",
+  "rationale": "Multiple invoices and payments are overdue",
+  "work": "reply",
+  "members": [
+   "p029",
+   "p026",
+   "r003-qwen2515b-04",
+   "r002-llama323b-06",
+   "r002-llama323b-09",
+   "r002-qwen2515b-01",
+   "r003-llama323b-05",
+   "r005-llama323b-04"
+  ],
+  "proposedBy": [
+   "llama3.2:3b"
+  ]
+ },
+ "round": "round-006",
+ "fromLog": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+ "picks": [
+  {
+   "pairId": "round-006-c001-cp1",
+   "a": "round-006-c001:llama323b:plan",
+   "b": "round-006-c001:qwen2515b:plan",
+   "choice": "B",
+   "winner": "round-006-c001:qwen2515b:plan",
+   "winnerModel": "qwen2.5:1.5b",
+   "ms": 38953
+  }
+ ],
+ "preferred": {
+  "id": "round-006-c001:qwen2515b:plan",
+  "model": "qwen2.5:1.5b",
+  "steps": [
+   "Retrieve the missing VAT number and billing address from the Finance team.",
+   "Locate the bug in the tone pit and reproduce the steps to ensure it's a genuine issue.",
+   "Update the invoice system to include the VAT number and billing address.",
+   "Submit the updated invoice to the Finance team for processing.",
+   "Check the invoice system for any overdue payments and ensure they are marked as overdue."
+  ],
+  "risk": "There is a risk of missing the deadline for payment due to the project being small and open-source."
+ },
+ "candidates": [
+  {
+   "id": "round-006-c001:llama323b:plan",
+   "model": "llama3.2:3b",
+   "steps": [
+    "Create a database schema to store overdue payment and invoice information",
+    "Implement a payment reminder system for overdue invoices",
+    "Develop a function to check for missing VAT numbers and billing addresses",
+    "Create a notification system for collaborators and users",
+    "Integrate the payment reminder system with the job board and service notice",
+    "Test the payment reminder system for all related inbox items"
+   ],
+   "risk": "Incorrect implementation of payment reminder system may lead to missed payments"
+  },
+  {
+   "id": "round-006-c001:qwen2515b:plan",
+   "model": "qwen2.5:1.5b",
+   "steps": [
+    "Retrieve the missing VAT number and billing address from the Finance team.",
+    "Locate the bug in the tone pit and reproduce the steps to ensure it's a genuine issue.",
+    "Update the invoice system to include the VAT number and billing address.",
+    "Submit the updated invoice to the Finance team for processing.",
+    "Check the invoice system for any overdue payments and ensure they are marked as overdue."
+   ],
+   "risk": "There is a risk of missing the deadline for payment due to the project being small and open-source."
+  }
+ ]
+}

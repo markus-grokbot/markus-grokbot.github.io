@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "phrasing-round-005-c002",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:25:52.794Z",
+ "ms": 13771,
+ "promptSha256": "11cd504a40f82815a7b02fe334ec4a7c34db969ffafcc549b2e45a8533268e88",
+ "prompt": "Write a short fictional reply email that answers ALL of these related inbox items in one message (they form the batch \"Invoice and Payment\"). Write it as the engineer. Write two variants: \"guided\" follows this style guide, \"terse\" is deliberately shorter and more direct.\n## Style guide for a writing model\n\n- Strongly prefer **serious, dry** (humor -1 ± 1.111, n=2, low confidence)\n- Prefer **assertive, confident** (confidence 0.52 ± 0.559, n=3, low confidence)\n- Prefer **plain-language, explanatory** (technicality -0.462 ± 0.508, n=4, low confidence)\n- Prefer **expansive, explanatory** (brevity -0.417 ± 0.439, n=5, low confidence)\n- Prefer **formal** (formality 0.294 ± 0.488, n=6, low confidence)\n- No clear lean on **directness** (directness 0.067 ± 0.547, n=4, low confidence)\n- No clear lean on **warmth** (warmth -0.048 ± 0.48, n=6, low confidence)\n- No clear lean on **personal** (personal -0.033 ± 0.449, n=6, low confidence)\n\nTreat low-confidence lines as hints only. Content is fictional; only the voice is signal.\n\n| dim | pref | se | n | beta | conf |\n|---|---|---|---|---|---|\n| formality | 0.294 | 0.488 | 6 | 0.376 | low |\n| warmth | -0.048 | 0.48 | 6 | -0.019 | low |\n| brevity | -0.417 | 0.439 | 5 | -0.774 | low |\n| humor | -1 | 1.111 | 2 | -0.418 | low |\n| confidence | 0.52 | 0.559 | 3 | 0.505 | low |\n| technicality | -0.462 | 0.508 | 4 | -0.428 | low |\n| directness | 0.067 | 0.547 | 4 | 0.164 | low |\n| emoji | 0 |  | 0 | 0 | none |\n| personal | -0.033 | 0.449 | 6 | -0.241 | low |\nItems:\nr003-qwen2515b-01 | service | Service Notice · MyCompany | Invoice 1234 - Payment Due | Your invoice for $500 is overdue. Please make payment by next Friday.\nr003-qwen2515b-04 | service | Service Notice · MyCompany | Invoice 9876 - Payment Due | Your invoice for $400 is overdue. Please make payment by next Friday.\nr002-llama323b-03 | service | Service · TechCorp | System Downtime Notification | Our system is currently experiencing downtime.\nMax 70 words each. No real names, emails or addresses; use the fictional senders above. Return JSON only: {\"guided\":\"...\",\"terse\":\"...\"}",
+ "raw": "{ \"guided\":\n\"Investigating all outstanding invoices and payments. For Invoice 1234, payment is due by next Friday. For Invoice 9876, payment is also due by next Friday. Please make timely payments to avoid any further action. Our system is currently experiencing downtime, but we are working to resolve the issue as soon as possible. If you have any questions or concerns, please don't hesitate to reach out. Thank you for your prompt attention to this matter.\",\n\"terse\":\n\"Invoices 1234 and 9876 are overdue. Payment is due by next Friday. System is currently down, but being worked on. Please make timely payments. If you have questions, contact us.\" }",
+ "parseError": null,
+ "evalCount": 145,
+ "promptEvalCount": 709
+}

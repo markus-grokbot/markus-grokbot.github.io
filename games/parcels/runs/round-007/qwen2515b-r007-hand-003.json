@@ -1,0 +1,19 @@
+{
+ "model": "qwen2.5:1.5b",
+ "step": "r007-hand-003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:23:02.458Z",
+ "ms": 4028,
+ "promptSha256": "951cf992e98050405b79246c92105b74a3d50abeaf917dd0bd851ec71a141a8a",
+ "prompt": "You help a busy software engineer decide HOW his important inbox items should be handled (assessment only, nothing is executed). For each item estimate two numbers:\n- manual 0-100: 0 = best handled fully automatically (an AI coding/agent model prepares or does it), 100 = best manually reviewed by him\n- spend 0-100: relative budget this item deserves compared with the other items (automated side: compute/model tier, cheap local model < free hosted coding model < paid coding agent < premium build agent; manual side: a reserve for possible later agent work if it becomes relevant)\nItems (id | sender | subject | snippet):\nr002-llama323b-09 | Job-Board · TechHub | Job Opening: Senior DevOps Engineer | We are looking for a senior DevOps engineer to join our team.\nr003-llama323b-05 | Job-Board · DevFolio | New Job Opening: Senior Software Engineer | We are seeking a Senior Software Engineer to join our team.\nr002-qwen2515b-01 | Job Board · TechJobs | New Job Posting: Senior Software Engineer | We are seeking a Senior Software Engineer with experience in React and Node.js.\nr002-llama323b-06 | Invoice · TechHub | Invoice #1234: Payment Overdue | Your payment is overdue.\np014 | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\nmanual and spend must be whole numbers 0-100. Example of the format for one item: {\"id\":\"x01\",\"manual\":20,\"spend\":60}\nReturn JSON only: {\"items\":[ one object per item above, 5 objects, same ids ]}",
+ "raw": "{\n  \"items\": [\n    {\"id\":\"r002-llama323b-09\",\"manual\":10,\"spend\":50},\n    {\"id\":\"r003-llama323b-05\",\"manual\":20,\"spend\":70},\n    {\"id\":\"r002-qwen2515b-01\",\"manual\":30,\"spend\":80},\n    {\"id\":\"r002-llama323b-06\",\"manual\":40,\"spend\":90},\n    {\"id\":\"p014\",\"manual\":50,\"spend\":100}\n  ]\n}",
+ "parseError": null,
+ "evalCount": 151,
+ "promptEvalCount": 435
+}

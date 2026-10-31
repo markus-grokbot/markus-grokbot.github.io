@@ -3,8 +3,8 @@
  "version": "1.0.0",
  "sim": false,
  "status": "assessment/plan only: nothing executes; not wired to the real night routines",
- "builtAt": "2026-10-31T19:55:12.491Z",
- "round": "round-006",
+ "builtAt": "2026-10-31T20:32:53.520Z",
+ "round": "round-007",
  "rule": "lanes: any cluster with >= minMembers confirmed members unlocks; lane high if settled high-priority share >= minSettledHighShare AND combined priority >= combinedPriorityThreshold, else lane low",
  "lanes": {
   "high": {
@@ -39,30 +39,22 @@
    "batch": "round-005-c002",
    "label": "Invoice and Payment",
    "work": "reply",
-   "members": 8,
-   "status": "pending",
+   "members": 3,
+   "status": "unlocked",
    "lane": "low",
-   "confirmed": 0,
-   "pendingConfirmations": [
-    {
-     "parcelId": "r003-qwen2515b-01",
-     "streak": 2
-    },
-    {
-     "parcelId": "r003-qwen2515b-04",
-     "streak": 2
-    }
-   ],
+   "confirmed": 2,
+   "pendingConfirmations": [],
    "combinedPriority": 122,
    "settledHighShare": 0,
-   "why": [
-    "unlocks after one more consistent \"belongs\" answer for 2 member(s)"
-   ],
+   "why": [],
    "highLaneWhy": [
     "settled high-priority share 0% < 50%",
     "combined priority 122 < 140"
    ],
-   "outputs": [],
+   "outputs": [
+    "games/parcels/outputs/round-005-c002/phrasing.json",
+    "games/parcels/outputs/round-005-c002/codepass.json"
+   ],
    "position": 1,
    "queue": "night",
    "precedence": 99,
@@ -72,37 +64,51 @@
    ],
    "freeOnly": true,
    "budgetShare": 0,
-   "freeComputeShare": 1,
+   "freeComputeShare": 0.517,
    "runWhen": "night queue, only when it has no higher-priority work left"
   },
   {
-   "batch": "round-005-c001",
-   "label": "Project Updates",
+   "batch": "round-006-c001",
+   "label": "Overdue Payments",
    "work": "reply",
-   "members": 9,
+   "members": 8,
    "status": "pending",
-   "lane": null,
+   "lane": "low",
    "confirmed": 0,
    "pendingConfirmations": [
     {
-     "parcelId": "r004-qwen2515b-01",
+     "parcelId": "r003-qwen2515b-04",
+     "streak": 2
+    },
+    {
+     "parcelId": "r002-llama323b-06",
      "streak": 2
     }
    ],
-   "combinedPriority": 30,
+   "combinedPriority": 114,
    "settledHighShare": 0,
    "why": [
-    "needs 2 confirmed members (has 0)"
+    "unlocks after one more consistent \"belongs\" answer for 2 member(s)"
    ],
    "highLaneWhy": [
     "settled high-priority share 0% < 50%",
-    "combined priority 30 < 140"
+    "combined priority 114 < 140"
    ],
-   "outputs": [],
+   "outputs": [
+    "games/parcels/outputs/round-006-c001/phrasing.json",
+    "games/parcels/outputs/round-006-c001/codepass.json"
+   ],
    "position": 2,
-   "queue": null,
-   "allowedTiers": [],
-   "budgetShare": 0
+   "queue": "night",
+   "precedence": 99,
+   "allowedTiers": [
+    "ollama",
+    "opencode"
+   ],
+   "freeOnly": true,
+   "budgetShare": 0,
+   "freeComputeShare": 0.483,
+   "runWhen": "night queue, only when it has no higher-priority work left"
   }
  ]
 }

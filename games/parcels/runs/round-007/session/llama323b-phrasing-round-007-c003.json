@@ -1,0 +1,19 @@
+{
+ "model": "llama3.2:3b",
+ "step": "phrasing-round-007-c003",
+ "host": "http://127.0.0.1:11555",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "startedAt": "2026-10-31T20:27:19.916Z",
+ "ms": 20988,
+ "promptSha256": "8564e46d9733ad61b31e4d1588c44159c3f3bb66403b524c7a27481f825c5d35",
+ "prompt": "Write a short fictional reply email that answers ALL of these related inbox items in one message (they form the batch \"Marketing and News\"). Write it as the engineer. Write two variants: \"guided\" follows this style guide, \"terse\" is deliberately shorter and more direct.\n## Style guide for a writing model\n\n- Strongly prefer **serious, dry** (humor -1 ± 1.111, n=2, low confidence)\n- Prefer **assertive, confident** (confidence 0.52 ± 0.559, n=3, low confidence)\n- Prefer **plain-language, explanatory** (technicality -0.462 ± 0.508, n=4, low confidence)\n- Prefer **expansive, explanatory** (brevity -0.417 ± 0.439, n=5, low confidence)\n- Prefer **formal** (formality 0.294 ± 0.488, n=6, low confidence)\n- No clear lean on **directness** (directness 0.067 ± 0.547, n=4, low confidence)\n- No clear lean on **warmth** (warmth -0.048 ± 0.48, n=6, low confidence)\n- No clear lean on **personal** (personal -0.033 ± 0.449, n=6, low confidence)\n\nTreat low-confidence lines as hints only. Content is fictional; only the voice is signal.\n\n| dim | pref | se | n | beta | conf |\n|---|---|---|---|---|---|\n| formality | 0.294 | 0.488 | 6 | 0.376 | low |\n| warmth | -0.048 | 0.48 | 6 | -0.019 | low |\n| brevity | -0.417 | 0.439 | 5 | -0.774 | low |\n| humor | -1 | 1.111 | 2 | -0.418 | low |\n| confidence | 0.52 | 0.559 | 3 | 0.505 | low |\n| technicality | -0.462 | 0.508 | 4 | -0.428 | low |\n| directness | 0.067 | 0.547 | 4 | 0.164 | low |\n| emoji | 0 |  | 0 | 0 | none |\n| personal | -0.033 | 0.449 | 6 | -0.241 | low |\nItems:\np014 | marketing | Webinar team · DataHarbor | Last chance to register: AI in logistics | Join 2,000 leaders on Thursday. Seats are filling up fast.\np010 | collaborator | Collaborator · design partner | Mockups for the games index | Two layouts attached. Which one should I polish? Also: do you want dark mode only?\np011 | job-board | Application update · Talentloop | Your application was viewed | A recruiter at a logistics scale-up viewed your application for 'ML engineer'.\np023 | service | Calendar | Invitation: Sprint review (Tue 10:00) | Organizer asks you to accept or decline. Agenda not attached yet.\np026 | collaborator | Collaborator · bot tester | Found a bug in the tone pit | Undo after 'neither' skips a pair. Repro steps below. Want me to file it?\nMax 70 words each. No real names, emails or addresses; use the fictional senders above. Return JSON only: {\"guided\":\"...\",\"terse\":\"...\"}",
+ "raw": "{ \"guided\":\n\"Dear Webinar Team, DataHarmon, Collaborator, design partner, Application Update, Talentloop, Calendar, and bot tester,\\n\\nI'll address all your inquiries in this single response.\\n\\nFor the webinar, please join us on Thursday to take advantage of the limited spots. For the mockups, I'll polish the layout that best suits our design. As for dark mode, I'll implement it for the games index.\\n\\nRegarding the job application, I appreciate the update. For the calendar invitation, I'll accept the sprint review on Tuesday at 10:00. The agenda will be shared shortly.\\n\\nLastly, I'll file the bug report for the tone pit issue. Please let me know if you'd like me to proceed.\\n\\nBest regards, [Engineer]\",\n\"terse\":\n\"Webinar: Join on Thursday for limited spots. Mockups: I'll polish the layout. Dark mode: Implemented for games index. Job application viewed. Calendar: Accepting sprint review on Tuesday. Bug report: Filed. Best, [Engineer]\"}",
+ "parseError": null,
+ "evalCount": 227,
+ "promptEvalCount": 777
+}

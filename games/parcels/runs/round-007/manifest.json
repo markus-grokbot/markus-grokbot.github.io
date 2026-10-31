@@ -1,0 +1,769 @@
+{
+ "pipeline": "parcels next-round",
+ "version": "1.0.0",
+ "sim": false,
+ "fromRound": "round-006",
+ "toRound": "round-007",
+ "log": "games/parcels/logs/human/human-parcels-round-006-session-20261031195848-kmdgh.json",
+ "startedAt": "2026-10-31T20:08:34.893Z",
+ "options": {
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 4096,
+  "num_predict": 1800
+ },
+ "models": [
+  "llama3.2:3b",
+  "qwen2.5:1.5b"
+ ],
+ "steps": {
+  "grade": {
+   "decisions": 25,
+   "medianSortMs": 4267,
+   "roundFocus": 99,
+   "ab": 0,
+   "weighting": "changed mind x0.4; slower than median -> median/t (floor 0.3); x wave focus (floor 0.3); x (0.5+0.5*round focus/100)",
+   "grades": {
+    "llama3.2:3b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.623,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 8,
+     "authoredClarity": 0.926,
+     "authoredMeanConf": 0.524,
+     "priority": {
+      "graded": 14,
+      "agreement": 0.623,
+      "urgency": 0.578,
+      "importance": 0.689,
+      "meanAbsPriorityError": 41,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.661,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "0/0",
+       "his": "89/40",
+       "agreement": 0.207,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "0/0",
+       "his": "73/74",
+       "agreement": 0.269,
+       "weight": 0.755
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.138,
+       "weight": 0.63
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "0/0",
+       "his": "72/73",
+       "agreement": 0.276,
+       "weight": 0.725
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "0/0",
+       "his": "85/55",
+       "agreement": 0.187,
+       "weight": 0.593
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "0/0",
+       "his": "30/74",
+       "agreement": 0.466,
+       "weight": 0.712
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "100/0",
+       "his": "28/57",
+       "agreement": 0.314,
+       "weight": 0.431
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "subject": "Meeting Request",
+       "yours": "0/0",
+       "his": "70/79",
+       "agreement": 0.247,
+       "weight": 0.364
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "0/70",
+       "his": "63/63",
+       "agreement": 0.65,
+       "weight": 0.525
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "0/0",
+       "his": "89/40",
+       "agreement": 0.207,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "p026",
+       "subject": "Found a bug in the tone pit",
+       "yours": "0/0",
+       "his": "73/74",
+       "agreement": 0.269,
+       "weight": 0.755
+      },
+      {
+       "parcelId": "p012",
+       "subject": "Invoice 3391 – payment overdue",
+       "yours": "0/0",
+       "his": "91/45",
+       "agreement": 0.138,
+       "weight": 0.63
+      },
+      {
+       "parcelId": "p013",
+       "subject": "[games] New issue: runner lags on old Android",
+       "yours": "0/0",
+       "his": "72/73",
+       "agreement": 0.276,
+       "weight": 0.725
+      },
+      {
+       "parcelId": "p029",
+       "subject": "Membership invoice – missing VAT number",
+       "yours": "0/0",
+       "his": "85/55",
+       "agreement": 0.187,
+       "weight": 0.593
+      },
+      {
+       "parcelId": "p039",
+       "subject": "Coffee next week?",
+       "yours": "0/0",
+       "his": "30/74",
+       "agreement": 0.466,
+       "weight": 0.712
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "100/0",
+       "his": "28/57",
+       "agreement": 0.314,
+       "weight": 0.431
+      },
+      {
+       "parcelId": "r003-qwen2515b-02",
+       "subject": "Meeting Request",
+       "yours": "0/0",
+       "his": "70/79",
+       "agreement": 0.247,
+       "weight": 0.364
+      },
+      {
+       "parcelId": "r002-llama323b-01",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "yours": "0/70",
+       "his": "63/63",
+       "agreement": 0.65,
+       "weight": 0.525
+      }
+     ],
+     "handling": {
+      "graded": 11,
+      "agreement": 0.655,
+      "manualAxis": 0.582,
+      "spendAxis": 0.73,
+      "sameTier": 0.182,
+      "misses": [
+       {
+        "parcelId": "p010",
+        "yours": "0/0",
+        "his": "69/67",
+        "agreement": 0.323
+       },
+       {
+        "parcelId": "p023",
+        "yours": "0/0",
+        "his": "67/57",
+        "agreement": 0.361
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "10/20",
+        "his": "78/75",
+        "agreement": 0.382
+       },
+       {
+        "parcelId": "p028",
+        "yours": "0/0",
+        "his": "40/63",
+        "agreement": 0.47
+       },
+       {
+        "parcelId": "p008",
+        "yours": "0/80",
+        "his": "87/85",
+        "agreement": 0.526
+       },
+       {
+        "parcelId": "r002-llama323b-05",
+        "yours": "80/40",
+        "his": "30/74",
+        "agreement": 0.589
+       },
+       {
+        "parcelId": "p039",
+        "yours": "50/30",
+        "his": "80/80",
+        "agreement": 0.603
+       }
+      ]
+     },
+     "scoreWithHandling": 0.659
+    },
+    "qwen2.5:1.5b": {
+     "graded": 0,
+     "rawAgreement": null,
+     "weightedAgreement": 0.707,
+     "abShown": 0,
+     "abWins": 0,
+     "abWinRate": null,
+     "authoredSorted": 3,
+     "authoredClarity": 0.75,
+     "authoredMeanConf": 0.678,
+     "priority": {
+      "graded": 14,
+      "agreement": 0.707,
+      "urgency": 0.724,
+      "importance": 0.684,
+      "meanAbsPriorityError": 23.1,
+      "source": "model positions"
+     },
+     "binAgreement": null,
+     "axisX": null,
+     "axisY": null,
+     "score": 0.712,
+     "confusion": {},
+     "misses": [
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "50/80",
+       "his": "2/5",
+       "agreement": 0.39,
+       "weight": 1.853
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "70/90",
+       "his": "16/25",
+       "agreement": 0.414,
+       "weight": 1.106
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/50",
+       "his": "89/40",
+       "agreement": 0.428,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "10/80",
+       "his": "19/23",
+       "agreement": 0.691,
+       "weight": 1.084
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/100",
+       "his": "19/42",
+       "agreement": 0.732,
+       "weight": 0.723
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "50/20",
+       "his": "28/57",
+       "agreement": 0.741,
+       "weight": 0.431
+      }
+     ],
+     "priorityMisses": [
+      {
+       "parcelId": "p020",
+       "subject": "You've earned 0 points this month",
+       "yours": "50/80",
+       "his": "2/5",
+       "agreement": 0.39,
+       "weight": 1.853
+      },
+      {
+       "parcelId": "r002-qwen2515b-03",
+       "subject": "Meeting Request: AI Workshop",
+       "yours": "70/90",
+       "his": "16/25",
+       "agreement": 0.414,
+       "weight": 1.106
+      },
+      {
+       "parcelId": "r002-qwen2515b-04",
+       "subject": "Membership Invoice",
+       "yours": "20/50",
+       "his": "89/40",
+       "agreement": 0.428,
+       "weight": 0.918
+      },
+      {
+       "parcelId": "r003-llama323b-03",
+       "subject": "New Software Engineer Course",
+       "yours": "10/80",
+       "his": "19/23",
+       "agreement": 0.691,
+       "weight": 1.084
+      },
+      {
+       "parcelId": "r003-llama323b-01",
+       "subject": "CI/PR/Issue: Resolved",
+       "yours": "0/100",
+       "his": "19/42",
+       "agreement": 0.732,
+       "weight": 0.723
+      },
+      {
+       "parcelId": "r003-llama323b-06",
+       "subject": "Server Maintenance",
+       "yours": "50/20",
+       "his": "28/57",
+       "agreement": 0.741,
+       "weight": 0.431
+      }
+     ],
+     "handling": {
+      "graded": 14,
+      "agreement": 0.532,
+      "manualAxis": 0.476,
+      "spendAxis": 0.589,
+      "sameTier": 0.214,
+      "misses": [
+       {
+        "parcelId": "p011",
+        "yours": "90/80",
+        "his": "10/3",
+        "agreement": 0.216
+       },
+       {
+        "parcelId": "r002-qwen2515b-06",
+        "yours": "80/80",
+        "his": "11/8",
+        "agreement": 0.293
+       },
+       {
+        "parcelId": "r002-qwen2515b-07",
+        "yours": "10/50",
+        "his": "100/100",
+        "agreement": 0.3
+       },
+       {
+        "parcelId": "p039",
+        "yours": "10/20",
+        "his": "80/80",
+        "agreement": 0.352
+       },
+       {
+        "parcelId": "r003-llama323b-02",
+        "yours": "30/40",
+        "his": "100/97",
+        "agreement": 0.365
+       },
+       {
+        "parcelId": "p028",
+        "yours": "90/90",
+        "his": "40/63",
+        "agreement": 0.631
+       },
+       {
+        "parcelId": "p008",
+        "yours": "50/50",
+        "his": "87/85",
+        "agreement": 0.639
+       },
+       {
+        "parcelId": "p023",
+        "yours": "30/50",
+        "his": "67/57",
+        "agreement": 0.719
+       },
+       {
+        "parcelId": "r003-qwen2515b-02",
+        "yours": "50/50",
+        "his": "78/75",
+        "agreement": 0.735
+       }
+      ]
+     },
+     "scoreWithHandling": 0.667
+    }
+   }
+  },
+  "generate": {
+   "llama3.2:3b": {
+    "attempts": 2,
+    "valid": 8,
+    "rejected": 13,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "job-board",
+       "sender": "Job-Board · DevJobs",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "Join our team as a Junior DevOps Engineer and work on cutting-edge projects.",
+       "urgency": 60,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · GitLab",
+       "subject": "CI/PR/Issue Notification: runner lags on old Android",
+       "snippet": "The runner is experiencing lag on old Android devices. Please update to the latest version to resolve the issue.",
+       "urgency": 90,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · CloudHost",
+       "subject": "Server Maintenance",
+       "snippet": "Our servers will be undergoing maintenance on Friday at 2 PM EST. Please plan accordingly.",
+       "urgency": 100,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · PayNow",
+       "subject": "Invoice 3391 – payment overdue",
+       "snippet": "Payment for invoice 3391 is overdue. Please settle the amount within the next 7 days.",
+       "urgency": 90,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · GitLab",
+       "subject": "CI/PR/Issue Notification: runner lags on old Android",
+       "snippet": "The runner is experiencing lag on old Android devices. Please update to the latest version to resolve the issue.",
+       "urgency": 90,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "New Job Opening: Junior DevOps Engineer",
+       "snippet": "We're looking for a talented Junior DevOps Engineer to join our team.",
+       "urgency": 70,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code host notifications · GitHub",
+       "subject": "CI/PR/Issue Notification",
+       "snippet": "Your pull request has been merged.",
+       "urgency": 90,
+       "importance": 30,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Cloud Services",
+       "subject": "Server Maintenance",
+       "snippet": "Our servers will be undergoing maintenance on Friday.",
+       "urgency": 100,
+       "importance": 20,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · Payment Services",
+       "subject": "Payment Overdue",
+       "snippet": "Your payment is overdue and needs to be settled.",
+       "urgency": 90,
+       "importance": 40,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Follow-up on Application",
+       "snippet": "We'd like to schedule a call to discuss your application.",
+       "urgency": 80,
+       "importance": 70,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "Code host notifications · GitHub",
+       "subject": "PR Review",
+       "snippet": "Your pull request is being reviewed.",
+       "urgency": 70,
+       "importance": 60,
+       "bin": "later"
+      },
+      "problems": [
+       "pattern#6 /\\b(aws|amazon|github|gitlab|google|gmail|microsoft|outlook|linkedin|apple|meta|facebook|openai|slack)\\b/i"
+      ]
+     }
+    ],
+    "rubric": [
+     "Prioritize tasks with a clear deadline or time-sensitive action.",
+     "Give higher importance to tasks that require a direct response or action.",
+     "Prioritize tasks from collaborators and service providers over others, as they often require more attention and effort."
+    ]
+   },
+   "qwen2.5:1.5b": {
+    "attempts": 2,
+    "valid": 4,
+    "rejected": 6,
+    "rejects": [
+     {
+      "parcel": {
+       "senderType": "recruiter",
+       "sender": "Recruiter · Pinewood Talent",
+       "subject": "Re: Backend role, quick follow-up",
+       "snippet": "Thanks for applying. Are you open to a 20 minute call on Thursday or Friday?",
+       "badge": "call request",
+       "urgency": 80,
+       "importance": 75,
+       "bin": "later"
+      },
+      "problems": [
+       "copied the prompt example"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "github",
+       "sender": "GitHub · MyProject",
+       "subject": "CI/PR/Issue: Resolved",
+       "snippet": "Your pull request has been merged and is now live. Thank you for your contribution!",
+       "badge": "CI/PR/issue",
+       "urgency": 20,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Support Team",
+       "subject": "Server Maintenance",
+       "snippet": "Your server is experiencing issues. Please check your logs for more information.",
+       "badge": "server maintenance",
+       "urgency": 50,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "collaborator",
+       "sender": "Collaborator · Jane Doe",
+       "subject": "Meeting Request: AI Workshop",
+       "snippet": "We're planning an AI workshop next week. Would you like to join?",
+       "badge": "meeting request",
+       "urgency": 60,
+       "importance": 80,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "invoice",
+       "sender": "Invoice · Pinewood Talent",
+       "subject": "Membership Invoice",
+       "snippet": "Your membership has expired. Please renew your membership before the end of the month.",
+       "badge": "invoice",
+       "urgency": 20,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     },
+     {
+      "parcel": {
+       "senderType": "service",
+       "sender": "Service · Support Team",
+       "subject": "Server Maintenance",
+       "snippet": "Your server is experiencing issues. Please check your logs for more information.",
+       "badge": "server maintenance",
+       "urgency": 50,
+       "importance": 10,
+       "bin": "later"
+      },
+      "problems": [
+       "duplicate subject"
+      ]
+     }
+    ],
+    "rubric": [
+     "Consider the context of the email, not just the subject line.",
+     "Use a numerical scale of 0-100 for urgency and importance, not just percentages.",
+     "Prioritize based on the sender's role and company, not just the urgency and importance scores.",
+     "Use a clear and concise subject line, not just a snippet of the body.",
+     "Prioritize based on the sender's role and company, not just the urgency and importance scores."
+    ]
+   }
+  },
+  "label": {
+   "llama3.2:3b": {
+    "calls": 8,
+    "ms": 78708,
+    "invalid": 9,
+    "retries": 1,
+    "wallMs": 98086
+   },
+   "qwen2.5:1.5b": {
+    "calls": 8,
+    "ms": 584984,
+    "invalid": 0,
+    "retries": 1,
+    "wallMs": 596471
+   }
+  }
+ },
+ "roundWeight": 1,
+ "note": "Full weight. Second chained session; first low-lane unlock.",
+ "endedAt": "2026-10-31T20:23:06.499Z",
+ "wallMs": 871606,
+ "output": {
+  "round": "rounds/round-007.json",
+  "parcels": 32,
+  "carried": 20,
+  "handling": 15,
+  "ab": 3
+ }
+}
