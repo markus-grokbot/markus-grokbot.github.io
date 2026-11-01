@@ -27,3 +27,11 @@ KJV (public domain) verse data driving Bible Tetris → seed → Bible Tycoon (�
 ## Tools
 - `tools/test-bible-tetris.js [scheme]`: headless play-test that forces a real 4-line clear through engine + verse layer (asserts events, conjunction, effect, achievements, seed).
 - `tools/sim-bible-tetris.js [scheme] [pieces] [out]`: bot-played round → full log with seed (generates `games/bible-tycoon/sample-seed.json`).
+
+## Bible Shooter (`/games/bible-shooter/`)
+A pixel-conveyor puzzle. A pixel field is surrounded by a belt, and 5 lanes of colored shooters wait below. Tapping a lane's top shooter puts it on the belt. It travels up the right side, left along the top, down the left side and back along the bottom. On every tick it shoots the first pixel in its straight inward line if the color matches, and its counter decrements (it is removed at 0). After one lap, a shooter with count left parks in one of 5 slots (tap a parked shooter to re-enter it). A shooter that needs to park when all 5 slots are full loses the level. Clearing every pixel wins (for each color, the shooter counts sum to the pixel count).
+- `engine.js`: deterministic rules (shared by UI, bots, generator). `bots.js`: greedy / random / lookahead policies.
+- `generator.js`: color ratios → symmetric motif (rings, diamonds, mandala, tiles, waves, starburst, squares) with regions assigned to alternate colors and rebalanced to the ratios; shooters are split per color and dealt into lanes (higher difficulty = more and smaller shooters, more "inside-out" lane order). `generateValidated` rejects unsolvable and trivial levels.
+- `sim.js`: `node games/bible-shooter/sim.js --levels` (win rates), `--gen '{"father":.5,"son":.3,"spirit":.2}' --difficulty 3`, `--seed-log <tetris log>`, `--build-levels` (rebuilds `starter-levels.json`).
+- Tetris seed path (experimental): `?seed=1` shows a file picker or "Use sample seed". It reads the log's `seed.colors.counts` → ratios → generator, with its palette from `seed.scheme`. The knobs live in `seed-mappings.json` → `pixel_shooter`.
+- Log: per level, the taps (source, color, count, parking snapshot), parks, depletions, outcome/loseReason, ticks, maxParkingUsed and shotsByColor; downloadable, stored in `bible-shooter.logs.v1`.
