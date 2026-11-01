@@ -1,0 +1,34 @@
+# Typology and numerology mechanic ideas
+
+- 3: Trinity, three-day patterns, and triads become three-lane objectives.
+- 7: Creation week and sevenfold cycles become a seven-step combo.
+- 12: Tribes, apostles, and twelve-gate imagery become a roster or grid.
+- 40: Wilderness, flood, and preparation become a timed endurance phase.
+- 1: Unity and the first command become a single-anchor bonus.
+- 5: Torah books, loaves, and wise virgins become a hand-management limit.
+- 10: Commandments, talents, and minas become a ten-slot economy.
+- Joseph to Christ: rejection, descent, faithful service, exaltation unlock a comeback chain.
+- Moses to Christ: deliverance from bondage maps to a staged escape sequence.
+- Exodus to salvation: Passover, sea, wilderness, covenant, and entry become checkpoints.
+- Noah: warning, ark, flood, and renewed covenant become a forecast-and-shelter mechanic.
+- Isaac: promised birth and near-sacrifice become a delayed reward with a mercy save.
+- David: anointing before kingship becomes hidden-potential progression.
+- Jonah: descent, turning, and mission become a failed-route recovery loop.
+- Ruth: gleaning and loyal kindness become adjacency bonuses for vulnerable tiles.
+- Daniel: faithful practice under pressure becomes a streak protected by a resolve token.
+- Esther: hidden identity and timely courage become a reveal-at-risk action.
+- Passover: marked homes become safe zones during a sweeping hazard.
+- Manna: daily provision becomes a capped gather action with no hoarding bonus.
+- Tabernacle: approach through ordered spaces becomes a layered unlock path.
+- Temple: sacred rooms become escalating access costs and reward tiers.
+- Sabbath: six actions followed by rest becomes a cycle that refreshes resources.
+- Wilderness testing: scarcity choices become a risk/reward supply track.
+- Exile and return: loss, lament, rebuilding become a damaged-board restoration mode.
+- Prophetic watchman: warning before danger becomes a forecast card.
+- Seed and soil: hearing quality becomes a 30/60/100 growth multiplier.
+- Vine and branches: remaining connected becomes a chain-maintenance bonus.
+- Good shepherd: lost sheep recovery becomes a rescue objective worth extra points.
+- Good Samaritan: costly mercy becomes a detour action that improves another lane.
+- Prodigal son: repentance and welcome become a comeback multiplier.
+- Beatitudes: reversals make low-score states eligible for special bonuses.
+- Cross and resurrection: sacrifice followed by victory becomes a reset-and-rise mechanic.

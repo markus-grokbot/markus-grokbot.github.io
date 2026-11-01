@@ -1,0 +1,1596 @@
+{
+ "schema": "gameplay-log",
+ "game": {
+  "id": "bible-tetris",
+  "version": "sim"
+ },
+ "run": {
+  "id": "sim-trinity3-150",
+  "type": "sim",
+  "startedAt": "1970-01-01T00:00:00.000Z"
+ },
+ "scheme": "trinity3",
+ "verse_events": [
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-244",
+   "piece_index": 1,
+   "t": 0,
+   "event": "spawned",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-244",
+   "piece_index": 1,
+   "t": 1000,
+   "event": "placed",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-244",
+   "piece_index": 6,
+   "t": 6000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 18:31",
+   "id": "alg-071",
+   "piece_index": 12,
+   "t": 11000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 18:31",
+   "id": "alg-071",
+   "piece_index": 12,
+   "t": 12000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 18:31",
+   "id": "alg-071",
+   "piece_index": 12,
+   "t": 12000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Gen 18:31",
+   "id": "alg-071",
+   "piece_index": 14,
+   "t": 14000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 17,
+   "t": 16000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 17,
+   "t": 17000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 18:31",
+   "id": "alg-071",
+   "piece_index": 18,
+   "t": 18000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 18,
+   "t": 18000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 22,
+   "t": 22000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 23,
+   "t": 23000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ps 136:1",
+   "id": "alg-218",
+   "piece_index": 26,
+   "t": 25000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Ps 136:1",
+   "id": "alg-218",
+   "piece_index": 26,
+   "t": 26000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:15",
+   "id": "alg-150",
+   "piece_index": 26,
+   "t": 26000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ps 136:1",
+   "id": "alg-218",
+   "piece_index": 26,
+   "t": 26000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ps 136:1",
+   "id": "alg-218",
+   "piece_index": 28,
+   "t": 28000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ps 136:1",
+   "id": "alg-218",
+   "piece_index": 31,
+   "t": 31000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Num 2:12",
+   "id": "alg-147",
+   "piece_index": 33,
+   "t": 32000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:12",
+   "id": "alg-147",
+   "piece_index": 33,
+   "t": 33000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:12",
+   "id": "alg-147",
+   "piece_index": 38,
+   "t": 38000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 42,
+   "t": 41000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 42,
+   "t": 42000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 43,
+   "t": 43000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Luke 6:38",
+   "id": "alg-275",
+   "piece_index": 44,
+   "t": 43000,
+   "event": "spawned",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Luke 6:38",
+   "id": "alg-275",
+   "piece_index": 44,
+   "t": 44000,
+   "event": "placed",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 45,
+   "t": 45000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 46,
+   "t": 46000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 1:37",
+   "id": "alg-126",
+   "piece_index": 50,
+   "t": 49000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 1:37",
+   "id": "alg-126",
+   "piece_index": 50,
+   "t": 50000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 1:37",
+   "id": "alg-126",
+   "piece_index": 53,
+   "t": 53000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Luke 6:38",
+   "id": "alg-275",
+   "piece_index": 53,
+   "t": 53000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 2
+  },
+  {
+   "ref": "Num 2:5",
+   "id": "alg-140",
+   "piece_index": 54,
+   "t": 54000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 1:37",
+   "id": "alg-126",
+   "piece_index": 56,
+   "t": 56000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 61,
+   "t": 60000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 61,
+   "t": 61000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 66,
+   "t": 65000,
+   "event": "spawned",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 66,
+   "t": 66000,
+   "event": "placed",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Num 1:37",
+   "id": "alg-126",
+   "piece_index": 66,
+   "t": 66000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 66,
+   "t": 66000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 68,
+   "t": 68000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 68,
+   "t": 68000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 70,
+   "t": 70000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 70,
+   "t": 70000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 77,
+   "t": 76000,
+   "event": "spawned",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 77,
+   "t": 77000,
+   "event": "placed",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 77,
+   "t": 77000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 77,
+   "t": 77000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 1:29",
+   "id": "alg-029",
+   "piece_index": 78,
+   "t": 77000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 1:29",
+   "id": "alg-029",
+   "piece_index": 78,
+   "t": 78000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 78,
+   "t": 78000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 1:29",
+   "id": "alg-029",
+   "piece_index": 78,
+   "t": 78000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 80,
+   "t": 80000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 88,
+   "t": 88000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 90,
+   "t": 89000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 90,
+   "t": 90000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 90,
+   "t": 90000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 25:15",
+   "id": "alg-243",
+   "piece_index": 90,
+   "t": 90000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 90,
+   "t": 90000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 94,
+   "t": 94000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 98,
+   "t": 97000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 98,
+   "t": 98000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 98,
+   "t": 98000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 5:26",
+   "id": "alg-055",
+   "piece_index": 105,
+   "t": 104000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:26",
+   "id": "alg-055",
+   "piece_index": 105,
+   "t": 105000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:26",
+   "id": "alg-055",
+   "piece_index": 105,
+   "t": 105000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 105,
+   "t": 105000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Ezek 40:5",
+   "id": "alg-220",
+   "piece_index": 108,
+   "t": 107000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Ezek 40:5",
+   "id": "alg-220",
+   "piece_index": 108,
+   "t": 108000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:26",
+   "id": "alg-055",
+   "piece_index": 108,
+   "t": 108000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ezek 40:5",
+   "id": "alg-220",
+   "piece_index": 108,
+   "t": 108000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ezek 40:5",
+   "id": "alg-220",
+   "piece_index": 110,
+   "t": 110000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 5:26",
+   "id": "alg-055",
+   "piece_index": 111,
+   "t": 111000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Ezek 40:5",
+   "id": "alg-220",
+   "piece_index": 111,
+   "t": 111000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 2:34",
+   "id": "alg-169",
+   "piece_index": 111,
+   "t": 111000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 114,
+   "t": 113000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 114,
+   "t": 114000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Prov 21:20",
+   "id": "alg-283",
+   "piece_index": 116,
+   "t": 116000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Num 7:30",
+   "id": "alg-188",
+   "piece_index": 126,
+   "t": 125000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 7:30",
+   "id": "alg-188",
+   "piece_index": 126,
+   "t": 126000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 7:30",
+   "id": "alg-188",
+   "piece_index": 126,
+   "t": 126000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 1:13",
+   "id": "alg-013",
+   "piece_index": 127,
+   "t": 126000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 1:13",
+   "id": "alg-013",
+   "piece_index": 127,
+   "t": 127000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Num 7:30",
+   "id": "alg-188",
+   "piece_index": 127,
+   "t": 127000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 1:13",
+   "id": "alg-013",
+   "piece_index": 127,
+   "t": 127000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 140,
+   "t": 139000,
+   "event": "spawned",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 140,
+   "t": 140000,
+   "event": "placed",
+   "category": "son",
+   "color": "#f4f4f4"
+  },
+  {
+   "ref": "Num 7:30",
+   "id": "alg-188",
+   "piece_index": 143,
+   "t": 143000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Gen 5:17",
+   "id": "alg-046",
+   "piece_index": 145,
+   "t": 144000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:17",
+   "id": "alg-046",
+   "piece_index": 145,
+   "t": 145000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:17",
+   "id": "alg-046",
+   "piece_index": 147,
+   "t": 147000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 1
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 147,
+   "t": 147000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 1
+  },
+  {
+   "ref": "Gen 5:4",
+   "id": "alg-033",
+   "piece_index": 150,
+   "t": 149000,
+   "event": "spawned",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:4",
+   "id": "alg-033",
+   "piece_index": 150,
+   "t": 150000,
+   "event": "placed",
+   "category": "father",
+   "color": "#2e9e4f"
+  },
+  {
+   "ref": "Gen 5:4",
+   "id": "alg-033",
+   "piece_index": 150,
+   "t": 150000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Gen 5:17",
+   "id": "alg-046",
+   "piece_index": 150,
+   "t": 150000,
+   "event": "cleared",
+   "category": "father",
+   "color": "#2e9e4f",
+   "lines": 2
+  },
+  {
+   "ref": "Matt 13:18-23",
+   "id": "alg-281",
+   "piece_index": 150,
+   "t": 150000,
+   "event": "cleared",
+   "category": "son",
+   "color": "#f4f4f4",
+   "lines": 2
+  }
+ ],
+ "conjunctions": [
+  {
+   "refs": [
+    "Num 1:37",
+    "Luke 6:38"
+   ],
+   "ids": [
+    "alg-126",
+    "alg-275"
+   ],
+   "categories": [
+    "father",
+    "son"
+   ],
+   "lines": 2,
+   "time": 53000,
+   "flag_for_analysis": true
+  },
+  {
+   "refs": [
+    "Gen 5:26",
+    "Num 2:34"
+   ],
+   "ids": [
+    "alg-055",
+    "alg-169"
+   ],
+   "categories": [
+    "father",
+    "father"
+   ],
+   "lines": 2,
+   "time": 105000,
+   "flag_for_analysis": true
+  },
+  {
+   "refs": [
+    "Gen 5:4",
+    "Gen 5:17",
+    "Matt 13:18-23"
+   ],
+   "ids": [
+    "alg-033",
+    "alg-046",
+    "alg-281"
+   ],
+   "categories": [
+    "father",
+    "father",
+    "son"
+   ],
+   "lines": 2,
+   "time": 150000,
+   "flag_for_analysis": true
+  }
+ ],
+ "effects_applied": [
+  {
+   "id": "alg-244",
+   "ref": "Matt 25:15",
+   "kind": "multiplier",
+   "trigger": "line_clear",
+   "game_value": 1.25,
+   "score_delta": 25,
+   "condition": "clear after investing two units",
+   "t": 6000,
+   "ctx": {
+    "lines": 1
+   }
+  },
+  {
+   "id": "alg-275",
+   "ref": "Luke 6:38",
+   "kind": "multiplier",
+   "trigger": "line_clear",
+   "game_value": 1.15,
+   "score_delta": 15,
+   "condition": "generous measure returns pressed down",
+   "t": 45000,
+   "ctx": {
+    "lines": 1
+   }
+  },
+  {
+   "id": "alg-243",
+   "ref": "Matt 25:15",
+   "kind": "multiplier",
+   "trigger": "line_clear",
+   "game_value": 1.58,
+   "score_delta": 58,
+   "condition": "clear after investing five units",
+   "t": 66000,
+   "ctx": {
+    "lines": 1
+   }
+  },
+  {
+   "id": "alg-283",
+   "ref": "Prov 21:20",
+   "kind": "bonus",
+   "trigger": "level_complete",
+   "game_value": 50,
+   "score_delta": 50,
+   "condition": "precious reserve is retained",
+   "t": 150000,
+   "ctx": null
+  },
+  {
+   "id": "alg-283",
+   "ref": "Prov 21:20",
+   "kind": "bonus",
+   "trigger": "level_complete",
+   "game_value": 50,
+   "score_delta": 50,
+   "condition": "precious reserve is retained",
+   "t": 150000,
+   "ctx": null
+  }
+ ],
+ "achievements": [
+  {
+   "key": "faithful",
+   "title": "Faithful steward: multiplier earned",
+   "id": "alg-244",
+   "ref": "Matt 25:15",
+   "text": "And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey.",
+   "t": 6000
+  },
+  {
+   "key": "conjunction",
+   "title": "Conjunction: verses cleared together",
+   "id": "alg-275",
+   "ref": "Luke 6:38",
+   "text": "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom. For with the same measure that ye mete withal it shall be measured to you again.",
+   "t": 53000
+  },
+  {
+   "key": "bonus",
+   "title": "Well done: steward bonus",
+   "id": "alg-283",
+   "ref": "Prov 21:20",
+   "text": "There is treasure to be desired and oil in the dwelling of the wise; but a foolish man spendeth it up.",
+   "t": 150000
+  }
+ ],
+ "noteworthy_algorithmic": [
+  {
+   "id": "alg-244",
+   "ref": "Matt 25:15",
+   "pattern_type": "stewardship",
+   "note": "Quantified stewardship pattern.",
+   "game_uses": [
+    "multiplier 2 when: clear after investing two units"
+   ],
+   "events": {
+    "spawned": 1,
+    "placed": 1,
+    "cleared": 1
+   }
+  },
+  {
+   "id": "alg-275",
+   "ref": "Luke 6:38",
+   "pattern_type": "stewardship",
+   "note": "Quantified stewardship pattern.",
+   "game_uses": [
+    "multiplier 1 when: generous measure returns pressed down"
+   ],
+   "events": {
+    "spawned": 1,
+    "placed": 1,
+    "cleared": 1
+   }
+  },
+  {
+   "id": "alg-283",
+   "ref": "Prov 21:20",
+   "pattern_type": "stewardship",
+   "note": "Quantified stewardship pattern.",
+   "game_uses": [
+    "bonus 1 when: precious reserve is retained"
+   ],
+   "events": {
+    "spawned": 2,
+    "placed": 2,
+    "cleared": 5
+   }
+  },
+  {
+   "id": "alg-243",
+   "ref": "Matt 25:15",
+   "pattern_type": "stewardship",
+   "note": "Quantified stewardship pattern.",
+   "game_uses": [
+    "multiplier 5 when: clear after investing five units"
+   ],
+   "events": {
+    "spawned": 1,
+    "placed": 1,
+    "cleared": 4
+   }
+  },
+  {
+   "id": "alg-281",
+   "ref": "Matt 13:18-23",
+   "pattern_type": "stewardship",
+   "note": "Quantified stewardship pattern.",
+   "game_uses": [
+    "multiplier 60 when: fruitful hearing reaches sixtyfold"
+   ],
+   "events": {
+    "spawned": 2,
+    "placed": 2,
+    "cleared": 6
+   }
+  },
+  {
+   "id": "alg-029",
+   "ref": "Gen 1:29",
+   "pattern_type": "sequence",
+   "note": "Strong structural pattern for mechanics.",
+   "game_uses": [
+    "play stages in order",
+    "unlock only after recall"
+   ],
+   "events": {
+    "spawned": 1,
+    "placed": 1,
+    "cleared": 1
+   }
+  },
+  {
+   "id": "alg-013",
+   "ref": "Gen 1:13",
+   "pattern_type": "sequence",
+   "note": "Strong structural pattern for mechanics.",
+   "game_uses": [
+    "play stages in order",
+    "unlock only after recall"
+   ],
+   "events": {
+    "spawned": 1,
+    "placed": 1,
+    "cleared": 1
+   }
+  }
+ ],
+ "seed": {
+  "schema": "bible-seed",
+  "version": 1,
+  "scheme": "trinity3",
+  "colors": {
+   "counts": {
+    "son": 5,
+    "father": 17
+   },
+   "sequence": [
+    {
+     "i": 0,
+     "category": "son",
+     "color": "#f4f4f4",
+     "id": "alg-244",
+     "ref": "Matt 25:15",
+     "event": "placed"
+    },
+    {
+     "i": 1,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-071",
+     "ref": "Gen 18:31",
+     "event": "placed"
+    },
+    {
+     "i": 2,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-150",
+     "ref": "Num 2:15",
+     "event": "placed"
+    },
+    {
+     "i": 3,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-218",
+     "ref": "Ps 136:1",
+     "event": "placed"
+    },
+    {
+     "i": 4,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-147",
+     "ref": "Num 2:12",
+     "event": "placed"
+    },
+    {
+     "i": 5,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-140",
+     "ref": "Num 2:5",
+     "event": "placed"
+    },
+    {
+     "i": 6,
+     "category": "son",
+     "color": "#f4f4f4",
+     "id": "alg-275",
+     "ref": "Luke 6:38",
+     "event": "placed"
+    },
+    {
+     "i": 7,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-126",
+     "ref": "Num 1:37",
+     "event": "placed"
+    },
+    {
+     "i": 8,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-283",
+     "ref": "Prov 21:20",
+     "event": "placed"
+    },
+    {
+     "i": 9,
+     "category": "son",
+     "color": "#f4f4f4",
+     "id": "alg-243",
+     "ref": "Matt 25:15",
+     "event": "placed"
+    },
+    {
+     "i": 10,
+     "category": "son",
+     "color": "#f4f4f4",
+     "id": "alg-281",
+     "ref": "Matt 13:18-23",
+     "event": "placed"
+    },
+    {
+     "i": 11,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-029",
+     "ref": "Gen 1:29",
+     "event": "placed"
+    },
+    {
+     "i": 12,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-169",
+     "ref": "Num 2:34",
+     "event": "placed"
+    },
+    {
+     "i": 13,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-169",
+     "ref": "Num 2:34",
+     "event": "placed"
+    },
+    {
+     "i": 14,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-055",
+     "ref": "Gen 5:26",
+     "event": "placed"
+    },
+    {
+     "i": 15,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-220",
+     "ref": "Ezek 40:5",
+     "event": "placed"
+    },
+    {
+     "i": 16,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-283",
+     "ref": "Prov 21:20",
+     "event": "placed"
+    },
+    {
+     "i": 17,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-188",
+     "ref": "Num 7:30",
+     "event": "placed"
+    },
+    {
+     "i": 18,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-013",
+     "ref": "Gen 1:13",
+     "event": "placed"
+    },
+    {
+     "i": 19,
+     "category": "son",
+     "color": "#f4f4f4",
+     "id": "alg-281",
+     "ref": "Matt 13:18-23",
+     "event": "placed"
+    },
+    {
+     "i": 20,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-046",
+     "ref": "Gen 5:17",
+     "event": "placed"
+    },
+    {
+     "i": 21,
+     "category": "father",
+     "color": "#2e9e4f",
+     "id": "alg-033",
+     "ref": "Gen 5:4",
+     "event": "placed"
+    }
+   ]
+  },
+  "effects": [
+   {
+    "id": "alg-244",
+    "ref": "Matt 25:15",
+    "kind": "multiplier",
+    "trigger": "line_clear",
+    "game_value": 1.25,
+    "applied": true
+   },
+   {
+    "id": "alg-275",
+    "ref": "Luke 6:38",
+    "kind": "multiplier",
+    "trigger": "line_clear",
+    "game_value": 1.15,
+    "applied": true
+   },
+   {
+    "id": "alg-243",
+    "ref": "Matt 25:15",
+    "kind": "multiplier",
+    "trigger": "line_clear",
+    "game_value": 1.58,
+    "applied": true
+   },
+   {
+    "id": "alg-283",
+    "ref": "Prov 21:20",
+    "kind": "bonus",
+    "trigger": "level_complete",
+    "game_value": 50,
+    "applied": true
+   },
+   {
+    "id": "alg-283",
+    "ref": "Prov 21:20",
+    "kind": "bonus",
+    "trigger": "level_complete",
+    "game_value": 50,
+    "applied": true
+   }
+  ],
+  "achievements": [
+   {
+    "key": "faithful",
+    "title": "Faithful steward: multiplier earned",
+    "id": "alg-244",
+    "ref": "Matt 25:15",
+    "text": "And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey."
+   },
+   {
+    "key": "conjunction",
+    "title": "Conjunction: verses cleared together",
+    "id": "alg-275",
+    "ref": "Luke 6:38",
+    "text": "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom. For with the same measure that ye mete withal it shall be measured to you again."
+   },
+   {
+    "key": "bonus",
+    "title": "Well done: steward bonus",
+    "id": "alg-283",
+    "ref": "Prov 21:20",
+    "text": "There is treasure to be desired and oil in the dwelling of the wise; but a foolish man spendeth it up."
+   }
+  ],
+  "features": [
+   {
+    "id": "alg-244",
+    "ref": "Matt 25:15",
+    "pattern_type": "stewardship",
+    "feature": "multiplier 2 when: clear after investing two units",
+    "magnitude": 2
+   },
+   {
+    "id": "alg-071",
+    "ref": "Gen 18:31",
+    "pattern_type": "loop",
+    "feature": "repeat while decrementing",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-150",
+    "ref": "Num 2:15",
+    "pattern_type": "grid",
+    "feature": "place in rows and columns",
+    "magnitude": 5
+   },
+   {
+    "id": "alg-218",
+    "ref": "Ps 136:1",
+    "pattern_type": "repetition",
+    "feature": "repeat event per item",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-147",
+    "ref": "Num 2:12",
+    "pattern_type": "grid",
+    "feature": "place in rows and columns",
+    "magnitude": 2
+   },
+   {
+    "id": "alg-140",
+    "ref": "Num 2:5",
+    "pattern_type": "grid",
+    "feature": "place in rows and columns",
+    "magnitude": 5
+   },
+   {
+    "id": "alg-275",
+    "ref": "Luke 6:38",
+    "pattern_type": "stewardship",
+    "feature": "multiplier 1 when: generous measure returns pressed down",
+    "magnitude": 2
+   },
+   {
+    "id": "alg-126",
+    "ref": "Num 1:37",
+    "pattern_type": "census",
+    "feature": "spawn numbered units",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-283",
+    "ref": "Prov 21:20",
+    "pattern_type": "stewardship",
+    "feature": "bonus 1 when: precious reserve is retained",
+    "magnitude": 7
+   },
+   {
+    "id": "alg-243",
+    "ref": "Matt 25:15",
+    "pattern_type": "stewardship",
+    "feature": "multiplier 5 when: clear after investing five units",
+    "magnitude": 5
+   },
+   {
+    "id": "alg-281",
+    "ref": "Matt 13:18-23",
+    "pattern_type": "stewardship",
+    "feature": "multiplier 60 when: fruitful hearing reaches sixtyfold",
+    "magnitude": 8
+   },
+   {
+    "id": "alg-029",
+    "ref": "Gen 1:29",
+    "pattern_type": "sequence",
+    "feature": "play stages in order",
+    "magnitude": 2
+   },
+   {
+    "id": "alg-169",
+    "ref": "Num 2:34",
+    "pattern_type": "grid",
+    "feature": "place in rows and columns",
+    "magnitude": 7
+   },
+   {
+    "id": "alg-055",
+    "ref": "Gen 5:26",
+    "pattern_type": "genealogy",
+    "feature": "advance through each generation",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-220",
+    "ref": "Ezek 40:5",
+    "pattern_type": "measurement",
+    "feature": "scale a board from dimensions",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-188",
+    "ref": "Num 7:30",
+    "pattern_type": "repetition",
+    "feature": "repeat event per item",
+    "magnitude": 4
+   },
+   {
+    "id": "alg-013",
+    "ref": "Gen 1:13",
+    "pattern_type": "sequence",
+    "feature": "play stages in order",
+    "magnitude": 2
+   },
+   {
+    "id": "alg-046",
+    "ref": "Gen 5:17",
+    "pattern_type": "genealogy",
+    "feature": "advance through each generation",
+    "magnitude": 3
+   },
+   {
+    "id": "alg-033",
+    "ref": "Gen 5:4",
+    "pattern_type": "genealogy",
+    "feature": "advance through each generation",
+    "magnitude": 2
+   }
+  ],
+  "stats": {
+   "lines": 57,
+   "tetrises": 0,
+   "score": 12016,
+   "pieces": 150,
+   "holes_end": 3,
+   "outcome": "complete",
+   "run_id": "sim-trinity3-150"
+  }
+ }
+}

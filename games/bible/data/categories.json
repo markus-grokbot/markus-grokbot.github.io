@@ -1,0 +1,383 @@
+{
+ "version": 1,
+ "default_scheme": "trinity3",
+ "schemes": {
+  "trinity3": {
+   "label": "Trinity",
+   "group_size": 3,
+   "categories": {
+    "father": {
+     "color": "#2e9e4f",
+     "label": "Father",
+     "description": "God, creation, authority, covenant, provision, kingship, judgment.",
+     "keywords": [
+      "god",
+      "lord god",
+      "father",
+      "almighty",
+      "created",
+      "creator",
+      "covenant",
+      "commanded",
+      "king",
+      "heaven"
+     ],
+     "book_bias": {}
+    },
+    "son": {
+     "color": "#f4f4f4",
+     "label": "Son / Jesus",
+     "description": "Jesus, Messiah, incarnation, teaching, cross, resurrection, salvation.",
+     "keywords": [
+      "jesus",
+      "christ",
+      "son of man",
+      "son of god",
+      "lamb",
+      "disciples",
+      "parable",
+      "kingdom of heaven",
+      "talent",
+      "servant",
+      "lord said",
+      "cross"
+     ],
+     "book_bias": {
+      "gospels": 2,
+      "NT": 0.5
+     }
+    },
+    "spirit": {
+     "color": "#d22",
+     "label": "Holy Spirit",
+     "description": "Spirit, breath, wind, fire, gifts, guidance, holiness, renewal.",
+     "keywords": [
+      "spirit",
+      "holy ghost",
+      "ghost",
+      "breath",
+      "wind",
+      "fire",
+      "tongues",
+      "anoint",
+      "gift",
+      "prophes"
+     ],
+     "book_bias": {
+      "Acts": 1
+     }
+    }
+   },
+   "fallback": "father",
+   "min_score": 1
+  },
+  "liturgical": {
+   "label": "Liturgical colors and themes",
+   "group_size": 9,
+   "categories": {
+    "white": {
+     "color": "#f5f0e0",
+     "label": "White",
+     "description": "Christ, feasts, purity, resurrection, light, victory.",
+     "keywords": [
+      "jesus",
+      "christ",
+      "risen",
+      "light",
+      "feast",
+      "pure",
+      "glory of the lord",
+      "lamb"
+     ]
+    },
+    "gold": {
+     "color": "#d4af37",
+     "label": "Gold",
+     "description": "Glory, kingship, celebration, abundance, holiness.",
+     "keywords": [
+      "gold",
+      "glory",
+      "king",
+      "crown",
+      "throne",
+      "abundance",
+      "treasure",
+      "talent",
+      "silver",
+      "riches"
+     ]
+    },
+    "red": {
+     "color": "#d22",
+     "label": "Red",
+     "description": "Spirit, fire, martyrs, blood, sacrifice, zeal.",
+     "keywords": [
+      "blood",
+      "fire",
+      "spirit",
+      "sacrifice",
+      "burnt offering",
+      "slain",
+      "martyr",
+      "ghost"
+     ]
+    },
+    "green": {
+     "color": "#2e9e4f",
+     "label": "Green",
+     "description": "Growth, ordinary time, creation, stewardship, fruitfulness.",
+     "keywords": [
+      "seed",
+      "sow",
+      "fruit",
+      "grow",
+      "tree",
+      "grass",
+      "field",
+      "harvest",
+      "increase",
+      "plant",
+      "reap",
+      "steward",
+      "faithful"
+     ]
+    },
+    "violet": {
+     "color": "#7040a0",
+     "label": "Violet",
+     "description": "Penitence, preparation, waiting, repentance.",
+     "keywords": [
+      "repent",
+      "fast",
+      "sackcloth",
+      "wilderness",
+      "forty",
+      "wait",
+      "prepare",
+      "sin"
+     ]
+    },
+    "rose": {
+     "color": "#e7a0b0",
+     "label": "Rose",
+     "description": "Joy amid penitence, encouragement, hope.",
+     "keywords": [
+      "rejoice",
+      "joy",
+      "comfort",
+      "glad"
+     ]
+    },
+    "black": {
+     "color": "#111",
+     "label": "Black",
+     "description": "Death, judgment, mourning, lament.",
+     "keywords": [
+      "death",
+      "died",
+      "dead",
+      "mourn",
+      "judgment",
+      "destroy",
+      "wrath",
+      "darkness",
+      "perish",
+      "grave"
+     ]
+    },
+    "blue": {
+     "color": "#3574c8",
+     "label": "Blue",
+     "description": "Hope, Mary, heaven, waters, promise.",
+     "keywords": [
+      "water",
+      "sea",
+      "river",
+      "heaven",
+      "rain",
+      "flood",
+      "fountain",
+      "promise"
+     ]
+    },
+    "grey": {
+     "color": "#888",
+     "label": "Grey",
+     "description": "Filler when no strong liturgical theme is present."
+    },
+    "covenant": {
+     "color": "#c8a2ff",
+     "label": "Covenant",
+     "description": "Covenant, oath, promise, faithfulness, relationship.",
+     "keywords": [
+      "covenant",
+      "oath",
+      "sware",
+      "promise",
+      "token",
+      "circumcis"
+     ]
+    },
+    "law_order": {
+     "color": "#8b5a2b",
+     "label": "Law / Order",
+     "description": "Law, commandments, justice, wisdom's order, discipline.",
+     "keywords": [
+      "law",
+      "commandment",
+      "statute",
+      "judge",
+      "number",
+      "numbered",
+      "according to",
+      "ordinance",
+      "census",
+      "tribe"
+     ]
+    },
+    "wisdom": {
+     "color": "#168c8c",
+     "label": "Wisdom",
+     "description": "Wisdom, discernment, prudence, counsel, understanding.",
+     "keywords": [
+      "wisdom",
+      "wise",
+      "understanding",
+      "prudent",
+      "knowledge",
+      "counsel",
+      "instruction"
+     ]
+    }
+   },
+   "fallback": "grey",
+   "min_score": 1
+  },
+  "sevens": {
+   "label": "Sevenfold biblical themes",
+   "group_size": 7,
+   "categories": {
+    "creation": {
+     "color": "#4aa3df",
+     "label": "Creation",
+     "description": "Beginning, making, earth, creatures, image, new creation.",
+     "keywords": [
+      "created",
+      "made",
+      "earth",
+      "beginning",
+      "day",
+      "firmament",
+      "beast",
+      "fowl",
+      "image"
+     ]
+    },
+    "rest": {
+     "color": "#9b7ede",
+     "label": "Rest",
+     "description": "Sabbath, stillness, completion of labor, peace.",
+     "keywords": [
+      "sabbath",
+      "rest",
+      "seventh day",
+      "peace",
+      "jubile"
+     ]
+    },
+    "covenant": {
+     "color": "#c8a2ff",
+     "label": "Covenant",
+     "description": "Promise, oath, signs, faithfulness, belonging.",
+     "keywords": [
+      "covenant",
+      "oath",
+      "promise",
+      "sware",
+      "token",
+      "tribe",
+      "generations",
+      "begat"
+     ]
+    },
+    "cleansing": {
+     "color": "#f4f4f4",
+     "label": "Cleansing",
+     "description": "Water, washing, forgiveness, purification, renewal.",
+     "keywords": [
+      "wash",
+      "clean",
+      "water",
+      "purif",
+      "forgive",
+      "unclean",
+      "leper"
+     ]
+    },
+    "judgment": {
+     "color": "#d22",
+     "label": "Judgment",
+     "description": "Testing, wrath, separation, accountability, consequences.",
+     "keywords": [
+      "judgment",
+      "wrath",
+      "destroy",
+      "punish",
+      "account",
+      "reckon",
+      "cast",
+      "stripes",
+      "smite"
+     ]
+    },
+    "completion": {
+     "color": "#d4af37",
+     "label": "Completion",
+     "description": "Fullness, harvest, perfection, fulfillment, victory.",
+     "keywords": [
+      "seven",
+      "twelve",
+      "fulfil",
+      "finished",
+      "harvest",
+      "perfect",
+      "full",
+      "hundredfold",
+      "thousand"
+     ]
+    },
+    "worship": {
+     "color": "#e7a0b0",
+     "label": "Worship",
+     "description": "Praise, prayer, sacrifice, temple, song, thanksgiving.",
+     "keywords": [
+      "praise",
+      "pray",
+      "sing",
+      "song",
+      "offering",
+      "altar",
+      "temple",
+      "tabernacle",
+      "thanks",
+      "worship",
+      "incense"
+     ]
+    }
+   },
+   "fallback": "creation"
+  }
+ },
+ "numeric_groupings": {
+  "3": [
+   "trinity3"
+  ],
+  "7": [
+   "sevens"
+  ],
+  "9": [
+   "liturgical"
+  ]
+ },
+ "_howto": "Edit keywords/book_bias/pattern_types/color per category, then: node tools/tag-verses.js && node tools/validate-verses.js. Games read color by scheme; ?scheme=<name> selects."
+}

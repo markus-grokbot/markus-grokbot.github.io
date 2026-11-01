@@ -1,0 +1,48 @@
+{
+ "version": 1,
+ "_howto": "Games consuming a Bible Tetris log read log.seed (schema bible-seed v1). Tweak numbers here; no code changes needed.",
+ "seed_schema": {
+  "scheme": "category scheme used (categories.json)",
+  "colors": "{counts:{category:n}, sequence:[{i, category, color, id, ref, event}]}",
+  "effects": "[{id, ref, kind, trigger, game_value, applied}]",
+  "achievements": "[{key, title, id, ref, text}]",
+  "features": "[{id, ref, pattern_type, feature, magnitude}]",
+  "stats": "{lines, tetrises, score, pieces, holes_end, outcome}"
+ },
+ "tycoon": {
+  "grid": { "w": 12, "h": 8 },
+  "starting": { "coins": 50, "workers": 2 },
+  "obstacles": { "per_color_count": 1, "max": 40, "clear_cost_work": 10, "clear_reward_coins": 5,
+    "by_category_hardness": { "default": 1, "grey": 0.5, "black": 2, "red": 1.5, "violet": 1.5 } },
+  "factories": { "from": "cleared obstacle tiles", "build_cost": 30, "base_output_per_sec": 1, "upgrade_cost_mult": 1.8,
+    "category_products": { "father": "grain", "son": "bread", "spirit": "oil", "green": "grain", "gold": "gold", "white": "linen", "red": "wine", "blue": "fish", "default": "goods" } },
+  "features_by_pattern_type": {
+   "multiplication": { "feature": "production_multiplier", "per_entry": 0.15 },
+   "census":         { "feature": "worker_count",          "per_entry": 1 },
+   "genealogy":      { "feature": "worker_count",          "per_entry": 0.5 },
+   "measurement":    { "feature": "building_size",         "per_entry": 1 },
+   "grid":           { "feature": "building_size",         "per_entry": 0.5 },
+   "sequence":       { "feature": "worker_efficiency",     "per_entry": 0.05 },
+   "loop":           { "feature": "worker_efficiency",     "per_entry": 0.08 },
+   "repetition":     { "feature": "worker_efficiency",     "per_entry": 0.03 },
+   "stewardship":    { "feature": "reinvest",              "per_entry": 0 },
+   "seven":          { "feature": "sabbath_cycle",         "per_entry": 1 },
+   "forty":          { "feature": "sabbath_cycle",         "per_entry": 1 }
+  },
+  "effects": {
+   "multiplier": { "applies_to": "production", "scale": 1.0 },
+   "bonus":      { "applies_to": "coins_once", "scale": 1.0 },
+   "penalty":    { "applies_to": "coins_once", "scale": 0.5, "floor": 0 }
+  },
+  "sabbath_cycle": { "work_ticks": 6, "rest_ticks": 1, "rest_bonus_eff": 0.1 }
+ },
+ "pixel_shooter": {
+  "_status": "stub, not built yet",
+  "stage_from": "colors.sequence chunked into stages of stage_len",
+  "stage_len": 8,
+  "enemy_by_category": { "black": "heavy", "red": "fast", "violet": "shielded", "grey": "swarm", "default": "basic" },
+  "boss_from": "achievements (one boss per achievement)",
+  "powerups_from_effects": { "multiplier": "damage_up", "bonus": "extra_life", "penalty": "hazard" },
+  "features_by_pattern_type": { "multiplication": "split_shot", "census": "wingmen", "measurement": "bigger_hitbox_enemies", "seven": "7-wave rush" }
+ }
+}

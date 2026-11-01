@@ -11,7 +11,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-002",
@@ -25,7 +34,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "red",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-003",
@@ -39,7 +57,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-004",
@@ -53,7 +80,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-005",
@@ -67,7 +103,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-006",
@@ -81,7 +126,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "cleansing"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-007",
@@ -95,7 +149,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-008",
@@ -109,7 +172,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-009",
@@ -123,7 +195,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "cleansing"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-010",
@@ -137,7 +218,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-011",
@@ -151,7 +241,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-012",
@@ -165,7 +264,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-013",
@@ -179,7 +287,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-014",
@@ -193,7 +310,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-015",
@@ -207,7 +333,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-016",
@@ -221,7 +356,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-017",
@@ -235,7 +379,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-018",
@@ -249,7 +402,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-019",
@@ -263,7 +425,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-020",
@@ -277,7 +448,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-021",
@@ -291,7 +471,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-022",
@@ -305,7 +494,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-023",
@@ -319,7 +517,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-024",
@@ -333,7 +540,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-025",
@@ -347,7 +563,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-026",
@@ -361,7 +586,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-027",
@@ -375,7 +609,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-028",
@@ -389,7 +632,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-029",
@@ -403,7 +655,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-030",
@@ -417,7 +678,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-031",
@@ -431,7 +701,16 @@
   "game_uses": [
    "play stages in order",
    "unlock only after recall"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Strong structural pattern for mechanics."
+  }
  },
  {
   "id": "alg-032",
@@ -445,7 +724,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-033",
@@ -459,7 +747,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-034",
@@ -473,7 +770,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-035",
@@ -487,7 +793,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-036",
@@ -501,7 +816,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-037",
@@ -515,7 +839,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-038",
@@ -529,7 +862,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-039",
@@ -543,7 +885,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-040",
@@ -557,7 +908,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-041",
@@ -571,7 +931,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-042",
@@ -585,7 +954,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-043",
@@ -599,7 +977,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-044",
@@ -613,7 +1000,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-045",
@@ -627,7 +1023,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-046",
@@ -641,7 +1046,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-047",
@@ -655,7 +1069,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-048",
@@ -669,7 +1092,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-049",
@@ -683,7 +1115,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-050",
@@ -697,7 +1138,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-051",
@@ -711,7 +1161,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-052",
@@ -725,7 +1184,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-053",
@@ -739,7 +1207,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-054",
@@ -753,7 +1230,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-055",
@@ -767,7 +1253,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-056",
@@ -781,7 +1276,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-057",
@@ -795,7 +1299,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-058",
@@ -809,7 +1322,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "rose",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-059",
@@ -823,7 +1345,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-060",
@@ -837,7 +1368,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-061",
@@ -851,7 +1391,16 @@
   "game_uses": [
    "advance through each generation",
    "render age as a score"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-062",
@@ -865,7 +1414,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-063",
@@ -879,7 +1437,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-064",
@@ -893,7 +1460,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-065",
@@ -907,7 +1483,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-066",
@@ -921,7 +1506,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-067",
@@ -935,7 +1529,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-068",
@@ -949,7 +1552,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-069",
@@ -963,7 +1575,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-070",
@@ -977,7 +1598,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-071",
@@ -991,7 +1621,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-072",
@@ -1005,7 +1644,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-073",
@@ -1019,7 +1667,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-074",
@@ -1033,7 +1690,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-075",
@@ -1047,7 +1713,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-076",
@@ -1061,7 +1736,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-077",
@@ -1075,7 +1759,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-078",
@@ -1089,7 +1782,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-079",
@@ -1103,7 +1805,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-080",
@@ -1117,7 +1828,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-081",
@@ -1131,7 +1851,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-082",
@@ -1145,7 +1874,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-083",
@@ -1159,7 +1897,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-084",
@@ -1173,7 +1920,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-085",
@@ -1187,7 +1943,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-086",
@@ -1201,7 +1966,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-087",
@@ -1215,7 +1989,16 @@
   "game_uses": [
    "branch on the rule",
    "show success when true"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-088",
@@ -1229,7 +2012,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-089",
@@ -1243,7 +2035,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-090",
@@ -1257,7 +2058,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-091",
@@ -1271,7 +2081,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-092",
@@ -1285,7 +2104,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-093",
@@ -1299,7 +2127,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-094",
@@ -1313,7 +2150,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-095",
@@ -1327,7 +2173,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-096",
@@ -1341,7 +2196,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-097",
@@ -1355,7 +2219,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-098",
@@ -1369,7 +2242,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-099",
@@ -1383,7 +2265,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-100",
@@ -1397,7 +2288,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-101",
@@ -1411,7 +2311,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-102",
@@ -1425,7 +2334,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-103",
@@ -1439,7 +2357,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-104",
@@ -1453,7 +2380,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-105",
@@ -1467,7 +2403,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-106",
@@ -1481,7 +2426,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-107",
@@ -1495,7 +2449,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-108",
@@ -1509,7 +2472,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "rest"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-109",
@@ -1523,7 +2495,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-110",
@@ -1537,7 +2518,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-111",
@@ -1551,7 +2541,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-112",
@@ -1565,7 +2564,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-113",
@@ -1579,7 +2587,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-114",
@@ -1593,7 +2610,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-115",
@@ -1607,7 +2633,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-116",
@@ -1621,7 +2656,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-117",
@@ -1635,7 +2679,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-118",
@@ -1649,7 +2702,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-119",
@@ -1663,7 +2725,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-120",
@@ -1677,7 +2748,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-121",
@@ -1691,7 +2771,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-122",
@@ -1705,7 +2794,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-123",
@@ -1719,7 +2817,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-124",
@@ -1733,7 +2840,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-125",
@@ -1747,7 +2863,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-126",
@@ -1761,7 +2886,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-127",
@@ -1775,7 +2909,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-128",
@@ -1789,7 +2932,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-129",
@@ -1803,7 +2955,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-130",
@@ -1817,7 +2978,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-131",
@@ -1831,7 +3001,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-132",
@@ -1845,7 +3024,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-133",
@@ -1859,7 +3047,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-134",
@@ -1873,7 +3070,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-135",
@@ -1887,7 +3093,16 @@
   "game_uses": [
    "spawn numbered units",
    "verify exact totals"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-136",
@@ -1901,7 +3116,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-137",
@@ -1915,7 +3139,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-138",
@@ -1929,7 +3162,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-139",
@@ -1943,7 +3185,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-140",
@@ -1957,7 +3208,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-141",
@@ -1971,7 +3231,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-142",
@@ -1985,7 +3254,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-143",
@@ -1999,7 +3277,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-144",
@@ -2013,7 +3300,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-145",
@@ -2027,7 +3323,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-146",
@@ -2041,7 +3346,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-147",
@@ -2055,7 +3369,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-148",
@@ -2069,7 +3392,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-149",
@@ -2083,7 +3415,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-150",
@@ -2097,7 +3438,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-151",
@@ -2111,7 +3461,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-152",
@@ -2125,7 +3484,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-153",
@@ -2139,7 +3507,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-154",
@@ -2153,7 +3530,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-155",
@@ -2167,7 +3553,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-156",
@@ -2181,7 +3576,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-157",
@@ -2195,7 +3599,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-158",
@@ -2209,7 +3622,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-159",
@@ -2223,7 +3645,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-160",
@@ -2237,7 +3668,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-161",
@@ -2251,7 +3691,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-162",
@@ -2265,7 +3714,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-163",
@@ -2279,7 +3737,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-164",
@@ -2293,7 +3760,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-165",
@@ -2307,7 +3783,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-166",
@@ -2321,7 +3806,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-167",
@@ -2335,7 +3829,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-168",
@@ -2349,7 +3852,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-169",
@@ -2363,7 +3875,16 @@
   "game_uses": [
    "place in rows and columns",
    "navigate by coordinates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-170",
@@ -2377,7 +3898,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-171",
@@ -2391,7 +3921,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-172",
@@ -2405,7 +3944,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-173",
@@ -2419,7 +3967,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-174",
@@ -2433,7 +3990,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-175",
@@ -2447,7 +4013,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-176",
@@ -2461,7 +4036,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-177",
@@ -2475,7 +4059,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-178",
@@ -2489,7 +4082,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-179",
@@ -2503,7 +4105,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-180",
@@ -2517,7 +4128,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-181",
@@ -2531,7 +4151,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-182",
@@ -2545,7 +4174,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-183",
@@ -2559,7 +4197,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-184",
@@ -2573,7 +4220,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-185",
@@ -2587,7 +4243,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-186",
@@ -2601,7 +4266,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-187",
@@ -2615,7 +4289,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-188",
@@ -2629,7 +4312,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-189",
@@ -2643,7 +4335,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-190",
@@ -2657,7 +4358,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-191",
@@ -2671,7 +4381,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-192",
@@ -2685,7 +4404,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-193",
@@ -2699,7 +4427,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-194",
@@ -2713,7 +4450,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-195",
@@ -2727,7 +4473,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-196",
@@ -2741,7 +4496,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-197",
@@ -2755,7 +4519,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-198",
@@ -2769,7 +4542,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-199",
@@ -2783,7 +4565,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-200",
@@ -2797,7 +4588,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-201",
@@ -2811,7 +4611,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-202",
@@ -2825,7 +4634,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-203",
@@ -2839,7 +4657,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-204",
@@ -2853,7 +4680,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-205",
@@ -2867,7 +4703,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-206",
@@ -2881,7 +4726,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "rest"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-207",
@@ -2895,7 +4749,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-208",
@@ -2909,7 +4772,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-209",
@@ -2923,7 +4795,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-210",
@@ -2937,7 +4818,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-211",
@@ -2951,7 +4841,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-212",
@@ -2965,7 +4864,16 @@
   "game_uses": [
    "spawn numbered tokens",
    "score each item once"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-213",
@@ -2979,7 +4887,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-214",
@@ -2993,7 +4910,16 @@
   "game_uses": [
    "repeat while decrementing",
    "stop at terminal value"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-215",
@@ -3007,7 +4933,16 @@
   "game_uses": [
    "remove failed candidates",
    "show survivors"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-216",
@@ -3021,7 +4956,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-217",
@@ -3035,7 +4979,16 @@
   "game_uses": [
    "reveal ordered symbols",
    "use ordering as mnemonic"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-218",
@@ -3049,7 +5002,16 @@
   "game_uses": [
    "repeat event per item",
    "match payload to slot"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-219",
@@ -3063,7 +5025,16 @@
   "game_uses": [
    "match opposite pairs",
    "toggle paired states"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-220",
@@ -3077,7 +5048,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-221",
@@ -3091,7 +5071,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "violet",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-222",
@@ -3105,7 +5094,16 @@
   "game_uses": [
    "partition into groups",
    "score each group"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-223",
@@ -3119,7 +5117,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "violet",
+   "sevens": "cleansing"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-224",
@@ -3133,7 +5140,16 @@
   "game_uses": [
    "distribute resources",
    "verify no duplicates"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-225",
@@ -3147,7 +5163,16 @@
   "game_uses": [
    "spawn numbered tokens",
    "score each item once"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-226",
@@ -3161,7 +5186,16 @@
   "game_uses": [
    "generate multiplied total",
    "use factor as difficulty"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-227",
@@ -3175,7 +5209,16 @@
   "game_uses": [
    "trigger at cutoff",
    "reject outside threshold"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-228",
@@ -3189,7 +5232,16 @@
   "game_uses": [
    "scale a board from dimensions",
    "validate boundary placement"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-229",
@@ -3203,7 +5255,16 @@
   "game_uses": [
    "forgiveness counter: 70x7=490 retries",
    "multiplier combo"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-230",
@@ -3217,7 +5278,16 @@
   "game_uses": [
    "3 stages of 14 levels",
    "bucket generations into 3x14"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-231",
@@ -3231,7 +5301,16 @@
   "game_uses": [
    "catch exactly 153 items",
    "triangular-number bonus (T17=153)"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-232",
@@ -3244,7 +5323,16 @@
   "pattern_type": "threshold",
   "game_uses": [
    "hidden 666 score trigger"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-233",
@@ -3257,7 +5345,16 @@
   "pattern_type": "multiplication",
   "game_uses": [
    "12 tribes x 12000 grid fill"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-234",
@@ -3270,7 +5367,16 @@
   "pattern_type": "measurement",
   "game_uses": [
    "cube level with equal length/width/height"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-235",
@@ -3283,7 +5389,16 @@
   "pattern_type": "division",
   "game_uses": [
    "split 5+2 items among many; 12 leftover baskets"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-236",
@@ -3296,7 +5411,16 @@
   "pattern_type": "sequence",
   "game_uses": [
    "70 weeks countdown timer split 7/62/1"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-237",
@@ -3309,7 +5433,16 @@
   "pattern_type": "repetition",
   "game_uses": [
    "refrain loop every line"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-238",
@@ -3322,7 +5455,16 @@
   "pattern_type": "pairs",
   "game_uses": [
    "14 opposite pairs as matching game"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-239",
@@ -3335,7 +5477,16 @@
   "pattern_type": "seven",
   "game_uses": [
    "7x7+1 jubilee reset at 50"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "violet",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-240",
@@ -3348,7 +5499,16 @@
   "pattern_type": "loop",
   "game_uses": [
    "circle 7 times on day 7 then trigger"
-  ]
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
  },
  {
   "id": "alg-241",
@@ -3361,6 +5521,1728 @@
   "pattern_type": "filtering",
   "game_uses": [
    "filter units by drinking style to 300"
-  ]
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "blue",
+   "sevens": "cleansing"
+  },
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": "Theme supports a repeatable recall pattern."
+  }
+ },
+ {
+  "id": "alg-242",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Matt 25:14",
+  "pattern_type": "talent allocation",
+  "game_uses": [
+   "bonus 5 when: starting talent pool"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 5,
+   "condition": "starting talent pool",
+   "trigger": "level_complete",
+   "game_value": 250
+  }
+ },
+ {
+  "id": "alg-243",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Matt 25:15",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 5 when: clear after investing five units"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 5,
+   "condition": "clear after investing five units",
+   "trigger": "line_clear",
+   "game_value": 1.58
+  }
+ },
+ {
+  "id": "alg-244",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Matt 25:15",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: clear after investing two units"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "clear after investing two units",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-245",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Matt 25:15",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: clear after faithful use of one unit"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "clear after faithful use of one unit",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-246",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 20,
+  "verse_end": 23,
+  "ref": "Matt 25:20-23",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: clear after doubling entrusted resources"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "clear after doubling entrusted resources",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-247",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 24,
+  "verse_end": 30,
+  "ref": "Matt 25:24-30",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: unused or buried slots remain"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "unused or buried slots remain",
+   "trigger": "holes_at_end",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-248",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 19,
+  "verse_start": 11,
+  "verse_end": 13,
+  "ref": "Luke 19:11-13",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 10 when: tenfold return on entrusted mina"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 10,
+   "condition": "tenfold return on entrusted mina",
+   "trigger": "line_clear",
+   "game_value": 1.83
+  }
+ },
+ {
+  "id": "alg-249",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 19,
+  "verse_start": 16,
+  "verse_end": 19,
+  "ref": "Luke 19:16-19",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 5 when: fivefold return on entrusted mina"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 5,
+   "condition": "fivefold return on entrusted mina",
+   "trigger": "line_clear",
+   "game_value": 1.58
+  }
+ },
+ {
+  "id": "alg-250",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 19,
+  "verse_start": 20,
+  "verse_end": 26,
+  "ref": "Luke 19:20-26",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: mina is kept in a napkin"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "mina is kept in a napkin",
+   "trigger": "holes_at_end",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-251",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 12,
+  "verse_start": 42,
+  "verse_end": 44,
+  "ref": "Luke 12:42-44",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: faithful steward completes assigned work"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "faithful steward completes assigned work",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-252",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 12,
+  "verse_start": 47,
+  "verse_end": 48,
+  "ref": "Luke 12:47-48",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 2 when: knowledge ignored; many stripes outcome"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "law_order",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 2,
+   "condition": "knowledge ignored; many stripes outcome",
+   "trigger": "topout",
+   "game_value": -200
+  }
+ },
+ {
+  "id": "alg-253",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 16,
+  "verse_start": 5,
+  "verse_end": 7,
+  "ref": "Luke 16:5-7",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 50 when: oil debt reduced from 100 to 50"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 50,
+   "condition": "oil debt reduced from 100 to 50",
+   "trigger": "level_complete",
+   "game_value": 500
+  }
+ },
+ {
+  "id": "alg-254",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 16,
+  "verse_start": 5,
+  "verse_end": 7,
+  "ref": "Luke 16:5-7",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 80 when: wheat debt reduced from 100 to 80"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 80,
+   "condition": "wheat debt reduced from 100 to 80",
+   "trigger": "level_complete",
+   "game_value": 500
+  }
+ },
+ {
+  "id": "alg-255",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 16,
+  "verse_start": 10,
+  "verse_end": 12,
+  "ref": "Luke 16:10-12",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: faithful in least unlocks greater trust"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "faithful in least unlocks greater trust",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-256",
+  "book": "1 Corinthians",
+  "osis": "1Cor",
+  "chapter": 4,
+  "verse_start": 2,
+  "verse_end": 2,
+  "ref": "1Cor 4:2",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: steward is found faithful"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "steward is found faithful",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-257",
+  "book": "Malachi",
+  "osis": "Mal",
+  "chapter": 3,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Mal 3:10",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 10 when: ten percent reinvested"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 10,
+   "condition": "ten percent reinvested",
+   "trigger": "level_complete",
+   "game_value": 500
+  }
+ },
+ {
+  "id": "alg-258",
+  "book": "2 Corinthians",
+  "osis": "2Cor",
+  "chapter": 9,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "2Cor 9:6",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: bountiful sowing produces bountiful clear"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "bountiful sowing produces bountiful clear",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-259",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 13,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Matt 13:8",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 30 when: fruitful seed yields thirtyfold"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 30,
+   "condition": "fruitful seed yields thirtyfold",
+   "trigger": "tetris",
+   "game_value": 2.23
+  }
+ },
+ {
+  "id": "alg-260",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 13,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Matt 13:23",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 100 when: good ground yields hundredfold"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 100,
+   "condition": "good ground yields hundredfold",
+   "trigger": "tetris",
+   "game_value": 2.66
+  }
+ },
+ {
+  "id": "alg-261",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 41,
+  "verse_start": 34,
+  "verse_end": 34,
+  "ref": "Gen 41:34",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 20 when: one fifth stored during abundance"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 20,
+   "condition": "one fifth stored during abundance",
+   "trigger": "level_complete",
+   "game_value": 500
+  }
+ },
+ {
+  "id": "alg-262",
+  "book": "Proverbs",
+  "osis": "Prov",
+  "chapter": 13,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Prov 13:11",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: gathered little by little"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "gathered little by little",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-263",
+  "book": "Proverbs",
+  "osis": "Prov",
+  "chapter": 6,
+  "verse_start": 6,
+  "verse_end": 8,
+  "ref": "Prov 6:6-8",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: ant-like preparation completed"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "ant-like preparation completed",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-264",
+  "book": "Ecclesiastes",
+  "osis": "Eccl",
+  "chapter": 11,
+  "verse_start": 1,
+  "verse_end": 2,
+  "ref": "Eccl 11:1-2",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 7 when: portions distributed across seven or eight"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "blue",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 7,
+   "condition": "portions distributed across seven or eight",
+   "trigger": "level_complete",
+   "game_value": 350
+  }
+ },
+ {
+  "id": "alg-265",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 26,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Gen 26:12",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 100 when: sowing produces hundredfold"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 100,
+   "condition": "sowing produces hundredfold",
+   "trigger": "tetris",
+   "game_value": 2.66
+  }
+ },
+ {
+  "id": "alg-266",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 1,
+  "verse_end": 13,
+  "ref": "Matt 25:1-13",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: wise lamps are ready when the bridegroom arrives"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "wisdom",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "wise lamps are ready when the bridegroom arrives",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-267",
+  "book": "Deuteronomy",
+  "osis": "Deut",
+  "chapter": 8,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Deut 8:18",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: power to get wealth is remembered"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "covenant",
+   "sevens": "covenant"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "power to get wealth is remembered",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-268",
+  "book": "Proverbs",
+  "osis": "Prov",
+  "chapter": 3,
+  "verse_start": 9,
+  "verse_end": 10,
+  "ref": "Prov 3:9-10",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: firstfruits are honored"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "firstfruits are honored",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-269",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 14,
+  "verse_start": 28,
+  "verse_end": 30,
+  "ref": "Luke 14:28-30",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: building is started without counting cost"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "building is started without counting cost",
+   "trigger": "topout",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-270",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 6,
+  "verse_start": 19,
+  "verse_end": 21,
+  "ref": "Matt 6:19-21",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: treasure is stored in heaven"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "treasure is stored in heaven",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-271",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 4,
+  "verse_start": 34,
+  "verse_end": 35,
+  "ref": "Acts 4:34-35",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: resources are shared so none lacks"
+  ],
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "resources are shared so none lacks",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-272",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 16,
+  "verse_end": 18,
+  "ref": "Exod 16:16-18",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: each gathers according to need"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "law_order",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "each gathers according to need",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-273",
+  "book": "2 Thessalonians",
+  "osis": "2Thess",
+  "chapter": 3,
+  "verse_start": 10,
+  "verse_end": 12,
+  "ref": "2Thess 3:10-12",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: refusing to work leaves no share"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "white",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "refusing to work leaves no share",
+   "trigger": "topout",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-274",
+  "book": "Proverbs",
+  "osis": "Prov",
+  "chapter": 21,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Prov 21:5",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: diligent planning reaches abundance"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "diligent planning reaches abundance",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-275",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 6,
+  "verse_start": 38,
+  "verse_end": 38,
+  "ref": "Luke 6:38",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 1 when: generous measure returns pressed down"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 1,
+   "condition": "generous measure returns pressed down",
+   "trigger": "line_clear",
+   "game_value": 1.15
+  }
+ },
+ {
+  "id": "alg-276",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 16,
+  "verse_end": 17,
+  "ref": "Matt 25:16-17",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 2 when: traded talents produce gain"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 2,
+   "condition": "traded talents produce gain",
+   "trigger": "line_clear",
+   "game_value": 1.25
+  }
+ },
+ {
+  "id": "alg-277",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 25,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Matt 25:18",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: talent is hidden in the earth"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "talent is hidden in the earth",
+   "trigger": "holes_at_end",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-278",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 19,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Luke 19:15",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: accounts are settled after faithful trading"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "accounts are settled after faithful trading",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-279",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 12,
+  "verse_start": 45,
+  "verse_end": 46,
+  "ref": "Luke 12:45-46",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: steward abuses servants while waiting"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "grey",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "steward abuses servants while waiting",
+   "trigger": "topout",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-280",
+  "book": "2 Corinthians",
+  "osis": "2Cor",
+  "chapter": 9,
+  "verse_start": 10,
+  "verse_end": 11,
+  "ref": "2Cor 9:10-11",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: seed is supplied for generosity"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "worship"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "seed is supplied for generosity",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-281",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 13,
+  "verse_start": 18,
+  "verse_end": 23,
+  "ref": "Matt 13:18-23",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "multiplier 60 when: fruitful hearing reaches sixtyfold"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "multiplier",
+   "value": 60,
+   "condition": "fruitful hearing reaches sixtyfold",
+   "trigger": "tetris",
+   "game_value": 2.48
+  }
+ },
+ {
+  "id": "alg-282",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 41,
+  "verse_start": 35,
+  "verse_end": 36,
+  "ref": "Gen 41:35-36",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: stored grain preserves the land through famine"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "black",
+   "sevens": "completion"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "stored grain preserves the land through famine",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-283",
+  "book": "Proverbs",
+  "osis": "Prov",
+  "chapter": 21,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Prov 21:20",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: precious reserve is retained"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "gold",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "precious reserve is retained",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-284",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 6,
+  "verse_start": 25,
+  "verse_end": 34,
+  "ref": "Matt 6:25-34",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "bonus 1 when: seek first the kingdom instead of anxious hoarding"
+  ],
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "green",
+   "sevens": "creation"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "bonus",
+   "value": 1,
+   "condition": "seek first the kingdom instead of anxious hoarding",
+   "trigger": "level_complete",
+   "game_value": 50
+  }
+ },
+ {
+  "id": "alg-285",
+  "book": "Luke",
+  "osis": "Luke",
+  "chapter": 16,
+  "verse_start": 1,
+  "verse_end": 4,
+  "ref": "Luke 16:1-4",
+  "pattern_type": "stewardship",
+  "game_uses": [
+   "penalty 1 when: wasteful management is discovered"
+  ],
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "green",
+   "sevens": "judgment"
+  },
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Quantified stewardship pattern."
+  },
+  "effect": {
+   "kind": "penalty",
+   "value": 1,
+   "condition": "wasteful management is discovered",
+   "trigger": "topout",
+   "game_value": -100
+  }
+ },
+ {
+  "id": "alg-286",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 2,
+  "verse_start": 1,
+  "verse_end": 4,
+  "ref": "Acts 2:1-4",
+  "pattern_type": "counting",
+  "game_uses": [
+   "Pentecost = 50th day: unlock at 50 lines"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Pentecost = 50th day: unlock at 50 lines"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-287",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 2,
+  "verse_start": 41,
+  "verse_end": 41,
+  "ref": "Acts 2:41",
+  "pattern_type": "counting",
+  "game_uses": [
+   "3000 added: spawn wave of 3000/100 units"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "3000 added: spawn wave of 3000/100 units"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "rose",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-288",
+  "book": "Galatians",
+  "osis": "Gal",
+  "chapter": 5,
+  "verse_start": 22,
+  "verse_end": 23,
+  "ref": "Gal 5:22-23",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "9 fruits of the Spirit: 9-color set collection"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "9 fruits of the Spirit: 9-color set collection"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "rest"
+  }
+ },
+ {
+  "id": "alg-289",
+  "book": "1 Corinthians",
+  "osis": "1Cor",
+  "chapter": 12,
+  "verse_start": 8,
+  "verse_end": 10,
+  "ref": "1Cor 12:8-10",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "9 gifts: 9 ability slots"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "9 gifts: 9 ability slots"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-290",
+  "book": "Isaiah",
+  "osis": "Isa",
+  "chapter": 11,
+  "verse_start": 2,
+  "verse_end": 2,
+  "ref": "Isa 11:2",
+  "pattern_type": "seven",
+  "game_uses": [
+   "7-fold spirit: 7 upgrade tiers"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "7-fold spirit: 7 upgrade tiers"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "rest"
+  }
+ },
+ {
+  "id": "alg-291",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 1,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Rev 1:4",
+  "pattern_type": "seven",
+  "game_uses": [
+   "seven Spirits before the throne"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "gold",
+   "sevens": "completion"
+  }
+ },
+ {
+  "id": "alg-292",
+  "book": "Joel",
+  "osis": "Joel",
+  "chapter": 2,
+  "verse_start": 28,
+  "verse_end": 29,
+  "ref": "Joel 2:28-29",
+  "pattern_type": "condition",
+  "game_uses": [
+   "pour out on all flesh: board-wide buff"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-293",
+  "book": "John",
+  "osis": "John",
+  "chapter": 3,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "John 3:8",
+  "pattern_type": "condition",
+  "game_uses": [
+   "wind blows where it listeth: random direction gust"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "son",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-294",
+  "book": "Ezekiel",
+  "osis": "Ezek",
+  "chapter": 37,
+  "verse_start": 9,
+  "verse_end": 10,
+  "ref": "Ezek 37:9-10",
+  "pattern_type": "grid",
+  "game_uses": [
+   "four winds: 4-direction spawn"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "four winds: 4-direction spawn"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-295",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 1,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Acts 1:8",
+  "pattern_type": "ordering",
+  "game_uses": [
+   "Jerusalem→Judaea→Samaria→ends: 4 expanding rings"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "Jerusalem→Judaea→Samaria→ends: 4 expanding rings"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-296",
+  "book": "Zechariah",
+  "osis": "Zech",
+  "chapter": 4,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "Zech 4:6",
+  "pattern_type": "condition",
+  "game_uses": [
+   "not by might: bonus without power-ups"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-297",
+  "book": "1 Samuel",
+  "osis": "1Sam",
+  "chapter": 16,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "1Sam 16:13",
+  "pattern_type": "condition",
+  "game_uses": [
+   "anointing: from that day forward buff"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-298",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 4,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Acts 4:31",
+  "pattern_type": "condition",
+  "game_uses": [
+   "place shaken: screen shake on clear"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "worship"
+  }
+ },
+ {
+  "id": "alg-299",
+  "book": "Ephesians",
+  "osis": "Eph",
+  "chapter": 4,
+  "verse_start": 4,
+  "verse_end": 6,
+  "ref": "Eph 4:4-6",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "one x7: seven unities"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "one x7: seven unities"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "father",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-300",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 28,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Matt 28:19",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "three names: 3-color grouping"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "three names: 3-color grouping"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-301",
+  "book": "1 John",
+  "osis": "1John",
+  "chapter": 5,
+  "verse_start": 7,
+  "verse_end": 8,
+  "ref": "1John 5:7-8",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "three bear record: triple match"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": true,
+   "note": "three bear record: triple match"
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-302",
+  "book": "Romans",
+  "osis": "Rom",
+  "chapter": 8,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Rom 8:26",
+  "pattern_type": "condition",
+  "game_uses": [
+   "intercession: auto-assist when stuck"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "worship"
+  }
+ },
+ {
+  "id": "alg-303",
+  "book": "Judges",
+  "osis": "Judg",
+  "chapter": 6,
+  "verse_start": 34,
+  "verse_end": 34,
+  "ref": "Judg 6:34",
+  "pattern_type": "condition",
+  "game_uses": [
+   "trumpet call gathers units"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
+ },
+ {
+  "id": "alg-304",
+  "book": "Acts",
+  "osis": "Acts",
+  "chapter": 2,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Acts 2:3",
+  "pattern_type": "grid",
+  "game_uses": [
+   "cloven tongues of fire on each: per-cell flame"
+  ],
+  "noteworthy_algorithmic": {
+   "flag": false,
+   "note": ""
+  },
+  "set": "spirit-v2",
+  "categories": {
+   "trinity3": "spirit",
+   "liturgical": "red",
+   "sevens": "creation"
+  }
  }
 ]

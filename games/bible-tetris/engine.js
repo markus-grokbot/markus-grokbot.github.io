@@ -63,10 +63,10 @@
     opts = opts || {};
     var p = Object.assign({ goal: 'lines', dropsTarget: 0, gravityMs: 800, linesToClear: 10, lockDelayMs: 500, scoreTable: [0, 100, 300, 500, 800] }, opts.params || {});
     var level = opts.level || 1, rng = mulberry32(opts.seed == null ? Date.now() : opts.seed);
-    var board = emptyBoard(), boardVerses = emptyBoard().map(function (r) { return r.map(function () { return null; }); }), bag = [], cur = null, next, score = 0, lines = 0, pieces = 0, over = false, misplays = 0;
+    var board = opts.initialBoard ? cloneBoard(opts.initialBoard) : emptyBoard(), boardVerses = opts.initialBoardVerses ? cloneBoard(opts.initialBoardVerses) : emptyBoard().map(function (r) { return r.map(function () { return null; }); }), bag = [], cur = null, next, score = 0, lines = 0, pieces = 0, over = false, misplays = 0;
     var softUsed = false, gAcc = 0, lockAcc = 0, onLock = opts.onLock || null, maxHeightSeen = 0, holesSum = 0;
     function draw() { if (!bag.length) { bag = [1, 2, 3, 4, 5, 6, 7]; for (var i = 6; i > 0; i--) { var j = Math.floor(rng() * (i + 1)); var t = bag[i]; bag[i] = bag[j]; bag[j] = t; } } return bag.pop(); }
-    function spawn() { var t = next || draw(); next = draw(); cur = { type: t, rot: 0, x: 3, y: t === 1 ? -1 : 0, verse: t === 1 && opts.versePicker ? opts.versePicker() : null }; softUsed = false; if (opts.onSpawn) opts.onSpawn({ pieceType: NAMES[t], verse: cur.verse, pieceNo: pieces + 1 }); if (!fits(board, cells())) over = true; gAcc = 0; lockAcc = 0; }
+    function spawn() { var t = opts.forcePieces && opts.forcePieces.length ? opts.forcePieces.shift() : (next || draw()); next = draw(); cur = { type: t, rot: 0, x: 3, y: t === 1 ? -1 : 0, verse: t === 1 && opts.versePicker ? opts.versePicker() : null }; softUsed = false; if (opts.onSpawn) opts.onSpawn({ pieceType: NAMES[t], verse: cur.verse, pieceNo: pieces + 1 }); if (!fits(board, cells())) over = true; gAcc = 0; lockAcc = 0; }
     function cells() { return cellsOf(cur.type, cur.rot, cur.x, cur.y); }
     function tryMove(dx, dy, dr) { if (over || !cur) return false; var c = cellsOf(cur.type, cur.rot + (dr || 0), cur.x + dx, cur.y + dy); if (fits(board, c)) { cur.x += dx; cur.y += dy; cur.rot = (cur.rot + (dr || 0)) & 3; return true; } return false; }
     function grounded() { return !fits(board, cellsOf(cur.type, cur.rot, cur.x, cur.y + 1)); }
@@ -82,6 +82,7 @@
     }
     var g = {
       params: p, level: level,
+      addScore: function (n) { score = Math.max(0, score + Math.round(n)); return score; },
       moveLeft: function () { var ok = tryMove(-1, 0); if (ok) lockAcc = 0; return ok; },
       moveRight: function () { var ok = tryMove(1, 0); if (ok) lockAcc = 0; return ok; },
       rotate: function (dir) {
