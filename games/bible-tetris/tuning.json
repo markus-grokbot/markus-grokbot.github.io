@@ -1,0 +1,123 @@
+{
+ "game": "tetris",
+ "forIteration": 1,
+ "generatedAt": "2026-10-31T14:00:00Z",
+ "rule": "human-overrides-sim-per-level",
+ "note": "Iteration 1 ships the hand-set defaults. Regenerate with node games/tetris/sim/tune.js",
+ "levels": [
+  {
+   "level": 1,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 6,
+    "gravityMs": 900,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 2,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 10,
+    "gravityMs": 720,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 3,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 12,
+    "gravityMs": 576,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 4,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 14,
+    "gravityMs": 461,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 5,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 16,
+    "gravityMs": 369,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 6,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 18,
+    "gravityMs": 295,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 7,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 20,
+    "gravityMs": 236,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 8,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 22,
+    "gravityMs": 189,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 9,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 24,
+    "gravityMs": 151,
+    "lockDelayMs": 500
+   }
+  },
+  {
+   "level": 10,
+   "source": "defaults",
+   "n": 0,
+   "params": {
+    "linesToClear": 26,
+    "gravityMs": 121,
+    "lockDelayMs": 500
+   }
+  }
+ ],
+ "dropTarget": {
+  "source": "human:combo",
+  "n": 1,
+  "estimates": [
+   9.45
+  ],
+  "params": {
+   "wordsPerDrop": 9,
+   "minDrops": 8,
+   "maxDrops": 60,
+   "assumedWpm": 225
+  },
+  "note": "dropsTarget = clamp(round(totalWords / wordsPerDrop), minDrops, maxDrops). See games/tetris/droptarget.js"
+ }
+}

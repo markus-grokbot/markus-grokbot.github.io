@@ -1,0 +1,3366 @@
+[
+ {
+  "id": "alg-001",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Gen 1:1",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-002",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 2,
+  "verse_end": 2,
+  "ref": "Gen 1:2",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-003",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Gen 1:3",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-004",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Gen 1:4",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-005",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Gen 1:5",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-006",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "Gen 1:6",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-007",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 7,
+  "verse_end": 7,
+  "ref": "Gen 1:7",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-008",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Gen 1:8",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-009",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 9,
+  "verse_end": 9,
+  "ref": "Gen 1:9",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-010",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Gen 1:10",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-011",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Gen 1:11",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-012",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Gen 1:12",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-013",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Gen 1:13",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-014",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Gen 1:14",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-015",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Gen 1:15",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-016",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Gen 1:16",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-017",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Gen 1:17",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-018",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Gen 1:18",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-019",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Gen 1:19",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-020",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Gen 1:20",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-021",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Gen 1:21",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-022",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Gen 1:22",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-023",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Gen 1:23",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-024",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Gen 1:24",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-025",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Gen 1:25",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-026",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Gen 1:26",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-027",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Gen 1:27",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-028",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Gen 1:28",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-029",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Gen 1:29",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-030",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Gen 1:30",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-031",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 1,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Gen 1:31",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "play stages in order",
+   "unlock only after recall"
+  ]
+ },
+ {
+  "id": "alg-032",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Gen 5:3",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-033",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Gen 5:4",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-034",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Gen 5:5",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-035",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "Gen 5:6",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-036",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 7,
+  "verse_end": 7,
+  "ref": "Gen 5:7",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-037",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Gen 5:8",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-038",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 9,
+  "verse_end": 9,
+  "ref": "Gen 5:9",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-039",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Gen 5:10",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-040",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Gen 5:11",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-041",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Gen 5:12",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-042",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Gen 5:13",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-043",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Gen 5:14",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-044",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Gen 5:15",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-045",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Gen 5:16",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-046",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Gen 5:17",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-047",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Gen 5:18",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-048",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Gen 5:19",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-049",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Gen 5:20",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-050",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Gen 5:21",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-051",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Gen 5:22",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-052",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Gen 5:23",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-053",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Gen 5:24",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-054",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Gen 5:25",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-055",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Gen 5:26",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-056",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Gen 5:27",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-057",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Gen 5:28",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-058",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Gen 5:29",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-059",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Gen 5:30",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-060",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Gen 5:31",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-061",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 5,
+  "verse_start": 32,
+  "verse_end": 32,
+  "ref": "Gen 5:32",
+  "pattern_type": "genealogy",
+  "game_uses": [
+   "advance through each generation",
+   "render age as a score"
+  ]
+ },
+ {
+  "id": "alg-062",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 6,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Gen 6:15",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-063",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 6,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Gen 6:16",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-064",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Gen 18:24",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-065",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Gen 18:25",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-066",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Gen 18:26",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-067",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Gen 18:27",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-068",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Gen 18:28",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-069",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Gen 18:29",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-070",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Gen 18:30",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-071",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Gen 18:31",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-072",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 18,
+  "verse_start": 32,
+  "verse_end": 32,
+  "ref": "Gen 18:32",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-073",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Exod 16:4",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-074",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Exod 16:5",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-075",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "Exod 16:6",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-076",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 7,
+  "verse_end": 7,
+  "ref": "Exod 16:7",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-077",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Exod 16:8",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-078",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 9,
+  "verse_end": 9,
+  "ref": "Exod 16:9",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-079",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Exod 16:10",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-080",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Exod 16:11",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-081",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Exod 16:12",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-082",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Exod 16:13",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-083",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Exod 16:14",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-084",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Exod 16:15",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-085",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Exod 16:16",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-086",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Exod 16:17",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-087",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 16,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Exod 16:18",
+  "pattern_type": "condition",
+  "game_uses": [
+   "branch on the rule",
+   "show success when true"
+  ]
+ },
+ {
+  "id": "alg-088",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Exod 25:10",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-089",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Exod 25:11",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-090",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Exod 25:12",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-091",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Exod 25:13",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-092",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Exod 25:14",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-093",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Exod 25:15",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-094",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Exod 25:16",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-095",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Exod 25:17",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-096",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Exod 25:18",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-097",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Exod 25:19",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-098",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Exod 25:20",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-099",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Exod 25:21",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-100",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Exod 25:22",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-101",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Exod 25:23",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-102",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Exod 25:24",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-103",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Exod 25:25",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-104",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Exod 25:26",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-105",
+  "book": "Exodus",
+  "osis": "Exod",
+  "chapter": 25,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Exod 25:27",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-106",
+  "book": "Leviticus",
+  "osis": "Lev",
+  "chapter": 25,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Lev 25:8",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-107",
+  "book": "Leviticus",
+  "osis": "Lev",
+  "chapter": 25,
+  "verse_start": 9,
+  "verse_end": 9,
+  "ref": "Lev 25:9",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-108",
+  "book": "Leviticus",
+  "osis": "Lev",
+  "chapter": 25,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Lev 25:10",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-109",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Num 1:20",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-110",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Num 1:21",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-111",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Num 1:22",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-112",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Num 1:23",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-113",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Num 1:24",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-114",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Num 1:25",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-115",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Num 1:26",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-116",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Num 1:27",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-117",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Num 1:28",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-118",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Num 1:29",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-119",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Num 1:30",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-120",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Num 1:31",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-121",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 32,
+  "verse_end": 32,
+  "ref": "Num 1:32",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-122",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 33,
+  "verse_end": 33,
+  "ref": "Num 1:33",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-123",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 34,
+  "verse_end": 34,
+  "ref": "Num 1:34",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-124",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 35,
+  "verse_end": 35,
+  "ref": "Num 1:35",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-125",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 36,
+  "verse_end": 36,
+  "ref": "Num 1:36",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-126",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 37,
+  "verse_end": 37,
+  "ref": "Num 1:37",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-127",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 38,
+  "verse_end": 38,
+  "ref": "Num 1:38",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-128",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 39,
+  "verse_end": 39,
+  "ref": "Num 1:39",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-129",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 40,
+  "verse_end": 40,
+  "ref": "Num 1:40",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-130",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 41,
+  "verse_end": 41,
+  "ref": "Num 1:41",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-131",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 42,
+  "verse_end": 42,
+  "ref": "Num 1:42",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-132",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 43,
+  "verse_end": 43,
+  "ref": "Num 1:43",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-133",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 44,
+  "verse_end": 44,
+  "ref": "Num 1:44",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-134",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 45,
+  "verse_end": 45,
+  "ref": "Num 1:45",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-135",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 1,
+  "verse_start": 46,
+  "verse_end": 46,
+  "ref": "Num 1:46",
+  "pattern_type": "census",
+  "game_uses": [
+   "spawn numbered units",
+   "verify exact totals"
+  ]
+ },
+ {
+  "id": "alg-136",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Num 2:1",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-137",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 2,
+  "verse_end": 2,
+  "ref": "Num 2:2",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-138",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Num 2:3",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-139",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Num 2:4",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-140",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Num 2:5",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-141",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "Num 2:6",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-142",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 7,
+  "verse_end": 7,
+  "ref": "Num 2:7",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-143",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 8,
+  "verse_end": 8,
+  "ref": "Num 2:8",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-144",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 9,
+  "verse_end": 9,
+  "ref": "Num 2:9",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-145",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 10,
+  "verse_end": 10,
+  "ref": "Num 2:10",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-146",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "Num 2:11",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-147",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Num 2:12",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-148",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Num 2:13",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-149",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Num 2:14",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-150",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Num 2:15",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-151",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Num 2:16",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-152",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Num 2:17",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-153",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Num 2:18",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-154",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Num 2:19",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-155",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Num 2:20",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-156",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Num 2:21",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-157",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Num 2:22",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-158",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Num 2:23",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-159",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Num 2:24",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-160",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Num 2:25",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-161",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Num 2:26",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-162",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Num 2:27",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-163",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Num 2:28",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-164",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Num 2:29",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-165",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Num 2:30",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-166",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Num 2:31",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-167",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 32,
+  "verse_end": 32,
+  "ref": "Num 2:32",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-168",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 33,
+  "verse_end": 33,
+  "ref": "Num 2:33",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-169",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 2,
+  "verse_start": 34,
+  "verse_end": 34,
+  "ref": "Num 2:34",
+  "pattern_type": "grid",
+  "game_uses": [
+   "place in rows and columns",
+   "navigate by coordinates"
+  ]
+ },
+ {
+  "id": "alg-170",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Num 7:12",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-171",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 13,
+  "verse_end": 13,
+  "ref": "Num 7:13",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-172",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 14,
+  "verse_end": 14,
+  "ref": "Num 7:14",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-173",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Num 7:15",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-174",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Num 7:16",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-175",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Num 7:17",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-176",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Num 7:18",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-177",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 19,
+  "verse_end": 19,
+  "ref": "Num 7:19",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-178",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 20,
+  "verse_end": 20,
+  "ref": "Num 7:20",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-179",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Num 7:21",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-180",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 22,
+  "verse_end": 22,
+  "ref": "Num 7:22",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-181",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 23,
+  "verse_end": 23,
+  "ref": "Num 7:23",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-182",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Num 7:24",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-183",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 25,
+  "verse_end": 25,
+  "ref": "Num 7:25",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-184",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 26,
+  "verse_end": 26,
+  "ref": "Num 7:26",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-185",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 27,
+  "verse_end": 27,
+  "ref": "Num 7:27",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-186",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 28,
+  "verse_end": 28,
+  "ref": "Num 7:28",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-187",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 29,
+  "verse_end": 29,
+  "ref": "Num 7:29",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-188",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 30,
+  "verse_end": 30,
+  "ref": "Num 7:30",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-189",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 31,
+  "verse_end": 31,
+  "ref": "Num 7:31",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-190",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 32,
+  "verse_end": 32,
+  "ref": "Num 7:32",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-191",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 33,
+  "verse_end": 33,
+  "ref": "Num 7:33",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-192",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 34,
+  "verse_end": 34,
+  "ref": "Num 7:34",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-193",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 35,
+  "verse_end": 35,
+  "ref": "Num 7:35",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-194",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 36,
+  "verse_end": 36,
+  "ref": "Num 7:36",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-195",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 37,
+  "verse_end": 37,
+  "ref": "Num 7:37",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-196",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 38,
+  "verse_end": 38,
+  "ref": "Num 7:38",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-197",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 39,
+  "verse_end": 39,
+  "ref": "Num 7:39",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-198",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 40,
+  "verse_end": 40,
+  "ref": "Num 7:40",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-199",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 41,
+  "verse_end": 41,
+  "ref": "Num 7:41",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-200",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 42,
+  "verse_end": 42,
+  "ref": "Num 7:42",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-201",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 43,
+  "verse_end": 43,
+  "ref": "Num 7:43",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-202",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 44,
+  "verse_end": 44,
+  "ref": "Num 7:44",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-203",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 45,
+  "verse_end": 45,
+  "ref": "Num 7:45",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-204",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 46,
+  "verse_end": 46,
+  "ref": "Num 7:46",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-205",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 47,
+  "verse_end": 47,
+  "ref": "Num 7:47",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-206",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 48,
+  "verse_end": 48,
+  "ref": "Num 7:48",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-207",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 49,
+  "verse_end": 49,
+  "ref": "Num 7:49",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-208",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 50,
+  "verse_end": 50,
+  "ref": "Num 7:50",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-209",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 51,
+  "verse_end": 51,
+  "ref": "Num 7:51",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-210",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 52,
+  "verse_end": 52,
+  "ref": "Num 7:52",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-211",
+  "book": "Numbers",
+  "osis": "Num",
+  "chapter": 7,
+  "verse_start": 53,
+  "verse_end": 53,
+  "ref": "Num 7:53",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-212",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 7,
+  "verse_start": 12,
+  "verse_end": 12,
+  "ref": "Gen 7:12",
+  "pattern_type": "counting",
+  "game_uses": [
+   "spawn numbered tokens",
+   "score each item once"
+  ]
+ },
+ {
+  "id": "alg-213",
+  "book": "Genesis",
+  "osis": "Gen",
+  "chapter": 41,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Gen 41:1",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-214",
+  "book": "Joshua",
+  "osis": "Josh",
+  "chapter": 6,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Josh 6:3",
+  "pattern_type": "loop",
+  "game_uses": [
+   "repeat while decrementing",
+   "stop at terminal value"
+  ]
+ },
+ {
+  "id": "alg-215",
+  "book": "Judges",
+  "osis": "Judg",
+  "chapter": 7,
+  "verse_start": 3,
+  "verse_end": 3,
+  "ref": "Judg 7:3",
+  "pattern_type": "filtering",
+  "game_uses": [
+   "remove failed candidates",
+   "show survivors"
+  ]
+ },
+ {
+  "id": "alg-216",
+  "book": "1 Kings",
+  "osis": "1Kgs",
+  "chapter": 6,
+  "verse_start": 2,
+  "verse_end": 2,
+  "ref": "1Kgs 6:2",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-217",
+  "book": "Psalms",
+  "osis": "Ps",
+  "chapter": 119,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Ps 119:1",
+  "pattern_type": "acrostic",
+  "game_uses": [
+   "reveal ordered symbols",
+   "use ordering as mnemonic"
+  ]
+ },
+ {
+  "id": "alg-218",
+  "book": "Psalms",
+  "osis": "Ps",
+  "chapter": 136,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Ps 136:1",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "repeat event per item",
+   "match payload to slot"
+  ]
+ },
+ {
+  "id": "alg-219",
+  "book": "Ecclesiastes",
+  "osis": "Eccl",
+  "chapter": 3,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Eccl 3:1",
+  "pattern_type": "pairs",
+  "game_uses": [
+   "match opposite pairs",
+   "toggle paired states"
+  ]
+ },
+ {
+  "id": "alg-220",
+  "book": "Ezekiel",
+  "osis": "Ezek",
+  "chapter": 40,
+  "verse_start": 5,
+  "verse_end": 5,
+  "ref": "Ezek 40:5",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-221",
+  "book": "Daniel",
+  "osis": "Dan",
+  "chapter": 9,
+  "verse_start": 24,
+  "verse_end": 24,
+  "ref": "Dan 9:24",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-222",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 1,
+  "verse_start": 1,
+  "verse_end": 1,
+  "ref": "Matt 1:1",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "partition into groups",
+   "score each group"
+  ]
+ },
+ {
+  "id": "alg-223",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 18,
+  "verse_start": 21,
+  "verse_end": 21,
+  "ref": "Matt 18:21",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-224",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 14,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Matt 14:17",
+  "pattern_type": "allocation",
+  "game_uses": [
+   "distribute resources",
+   "verify no duplicates"
+  ]
+ },
+ {
+  "id": "alg-225",
+  "book": "John",
+  "osis": "John",
+  "chapter": 21,
+  "verse_start": 6,
+  "verse_end": 6,
+  "ref": "John 21:6",
+  "pattern_type": "counting",
+  "game_uses": [
+   "spawn numbered tokens",
+   "score each item once"
+  ]
+ },
+ {
+  "id": "alg-226",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 7,
+  "verse_start": 4,
+  "verse_end": 4,
+  "ref": "Rev 7:4",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "generate multiplied total",
+   "use factor as difficulty"
+  ]
+ },
+ {
+  "id": "alg-227",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 13,
+  "verse_start": 16,
+  "verse_end": 16,
+  "ref": "Rev 13:16",
+  "pattern_type": "threshold",
+  "game_uses": [
+   "trigger at cutoff",
+   "reject outside threshold"
+  ]
+ },
+ {
+  "id": "alg-228",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 21,
+  "verse_start": 15,
+  "verse_end": 15,
+  "ref": "Rev 21:15",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "scale a board from dimensions",
+   "validate boundary placement"
+  ]
+ },
+ {
+  "id": "alg-229",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 18,
+  "verse_start": 21,
+  "verse_end": 22,
+  "ref": "Matt 18:21-22",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "forgiveness counter: 70x7=490 retries",
+   "multiplier combo"
+  ]
+ },
+ {
+  "id": "alg-230",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 1,
+  "verse_start": 17,
+  "verse_end": 17,
+  "ref": "Matt 1:17",
+  "pattern_type": "grouping",
+  "game_uses": [
+   "3 stages of 14 levels",
+   "bucket generations into 3x14"
+  ]
+ },
+ {
+  "id": "alg-231",
+  "book": "John",
+  "osis": "John",
+  "chapter": 21,
+  "verse_start": 11,
+  "verse_end": 11,
+  "ref": "John 21:11",
+  "pattern_type": "counting",
+  "game_uses": [
+   "catch exactly 153 items",
+   "triangular-number bonus (T17=153)"
+  ]
+ },
+ {
+  "id": "alg-232",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 13,
+  "verse_start": 18,
+  "verse_end": 18,
+  "ref": "Rev 13:18",
+  "pattern_type": "threshold",
+  "game_uses": [
+   "hidden 666 score trigger"
+  ]
+ },
+ {
+  "id": "alg-233",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 7,
+  "verse_start": 4,
+  "verse_end": 8,
+  "ref": "Rev 7:4-8",
+  "pattern_type": "multiplication",
+  "game_uses": [
+   "12 tribes x 12000 grid fill"
+  ]
+ },
+ {
+  "id": "alg-234",
+  "book": "Revelation",
+  "osis": "Rev",
+  "chapter": 21,
+  "verse_start": 16,
+  "verse_end": 17,
+  "ref": "Rev 21:16-17",
+  "pattern_type": "measurement",
+  "game_uses": [
+   "cube level with equal length/width/height"
+  ]
+ },
+ {
+  "id": "alg-235",
+  "book": "Matthew",
+  "osis": "Matt",
+  "chapter": 14,
+  "verse_start": 17,
+  "verse_end": 21,
+  "ref": "Matt 14:17-21",
+  "pattern_type": "division",
+  "game_uses": [
+   "split 5+2 items among many; 12 leftover baskets"
+  ]
+ },
+ {
+  "id": "alg-236",
+  "book": "Daniel",
+  "osis": "Dan",
+  "chapter": 9,
+  "verse_start": 24,
+  "verse_end": 27,
+  "ref": "Dan 9:24-27",
+  "pattern_type": "sequence",
+  "game_uses": [
+   "70 weeks countdown timer split 7/62/1"
+  ]
+ },
+ {
+  "id": "alg-237",
+  "book": "Psalms",
+  "osis": "Ps",
+  "chapter": 136,
+  "verse_start": 1,
+  "verse_end": 26,
+  "ref": "Ps 136:1-26",
+  "pattern_type": "repetition",
+  "game_uses": [
+   "refrain loop every line"
+  ]
+ },
+ {
+  "id": "alg-238",
+  "book": "Ecclesiastes",
+  "osis": "Eccl",
+  "chapter": 3,
+  "verse_start": 1,
+  "verse_end": 8,
+  "ref": "Eccl 3:1-8",
+  "pattern_type": "pairs",
+  "game_uses": [
+   "14 opposite pairs as matching game"
+  ]
+ },
+ {
+  "id": "alg-239",
+  "book": "Leviticus",
+  "osis": "Lev",
+  "chapter": 25,
+  "verse_start": 8,
+  "verse_end": 10,
+  "ref": "Lev 25:8-10",
+  "pattern_type": "seven",
+  "game_uses": [
+   "7x7+1 jubilee reset at 50"
+  ]
+ },
+ {
+  "id": "alg-240",
+  "book": "Joshua",
+  "osis": "Josh",
+  "chapter": 6,
+  "verse_start": 15,
+  "verse_end": 16,
+  "ref": "Josh 6:15-16",
+  "pattern_type": "loop",
+  "game_uses": [
+   "circle 7 times on day 7 then trigger"
+  ]
+ },
+ {
+  "id": "alg-241",
+  "book": "Judges",
+  "osis": "Judg",
+  "chapter": 7,
+  "verse_start": 4,
+  "verse_end": 7,
+  "ref": "Judg 7:4-7",
+  "pattern_type": "filtering",
+  "game_uses": [
+   "filter units by drinking style to 300"
+  ]
+ }
+]
