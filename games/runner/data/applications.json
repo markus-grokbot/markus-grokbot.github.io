@@ -1,0 +1,2098 @@
+{
+ "generated": "2026-11-02",
+ "source": "Markus job-applications tracker (status awaiting-review / ready-to-send / backup; nothing sent)",
+ "rule": "Stockholm/Uppsala (or remote) only; open deadlines only",
+ "apps": [
+  {
+   "id": "etraveli-applied-ai-engineer",
+   "company": "Etraveli Group AB",
+   "role": "Applied AI Engineer",
+   "location": "Uppsala office, hybrid",
+   "deadline": "2026-11-04",
+   "status": "backup",
+   "channel": "Teamtailor form",
+   "link": null,
+   "lang": "en",
+   "fit": [
+    "Applied AI role; letter offers a demo; showcase agent-trace-evals (+ staged supervisor harness), llm-json-fixer, ops-pack-demo."
+   ],
+   "gaps": [
+    "Hard ask: 3+ years software engineering + Ragas/DeepEval/LangSmith – stated plainly.",
+    "Status in tracker: backup (use only if under 20 sent)."
+   ],
+   "days_left": 2,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Applied AI role; letter offers a demo; showcase agent-trace-evals (+ staged supervisor harness), llm-json-fixer, ops-pack-demo."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Hard ask: 3+ years software engineering + Ragas/DeepEval/LangSmith – stated plainly."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Uppsala office, hybrid"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-04 (2 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor form."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Dear AI Optimization team,"
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If you want to see more than the attachments, reply to my agent-run address with a task or a question, and I will return a tested solution and walk you through it in a live demo.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Best regards,\nMarkus Isaksson",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ericsson-ai-researcher",
+   "company": "Ericsson AB",
+   "role": "AI Researcher (Ericsson Research, AI for 6G RAN)",
+   "location": "Stockholm (Kista), Ericsson Research",
+   "deadline": "2026-11-05",
+   "status": "awaiting-review",
+   "channel": "Ericsson",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31659406",
+   "lang": "en",
+   "fit": [
+    "Early-career framing (\"recent master's graduate or someone with a few years of experience\"), \"you don't need to meet every preferred qualification\", personal projects count, AI-assisted development tools named, Docker a plus, telecom learnable on the job.",
+    "New staged showcase targets the domain directly: ran-link-adaptation-bandits (toy RAN link adaptation, OLLA vs bandits, paired seeded evaluation, honest negative finding). Backed by public ai-data-flywheel (research-style simulation, reproducibility)."
+   ],
+   "gaps": [
+    "MSc \"preferred\" – none; no publications; deep/RL at scale (PyTorch/JAX) none; telecom none. Stated plainly. Long shot, but the ad invites it.",
+    "Showcase repo + companion page are staged locally only (verkstad renditions/2026-10-29-application-night/staging) – publish (Markus approval) before sending, or drop the two links.",
+    "Eightfold portal may need an account / email verification."
+   ],
+   "days_left": 3,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Early-career framing (\"recent master's graduate or someone with a few years of experience\"), \"you don't need to meet every preferred qualification\", personal projects count, AI-assisted development tools named, Docker a plus, telecom learnable on the job."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "MSc \"preferred\" – none; no publications; deep/RL at scale (PyTorch/JAX) none; telecom none. Stated plainly. Long shot, but the ad invites it."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm (Kista), Ericsson Research"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-05 (3 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Ericsson. Pack flags something to publish first. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "What draws me is the combination you describe: AI/ML concepts for future radio access networks, developed with simulation frameworks and modern AI-assisted tools, and turned into prototypes."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the AI Researcher role at Ericsson Research. What draws me is the combination you describe: AI/ML concepts for future radio access networks, developed with simulation frameworks and modern AI-assisted tools, and turned into prototypes.",
+      "I am applying for the AI Researcher role at Ericsson Research.",
+      "What draws me is the combination you describe: AI/ML concepts for future radio access networks, developed with simulation frameworks and modern AI-assisted tools, and turned into prototypes."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If it helps, reply to my agent-run address with a small research question – for example adding a learned channel predictor to the simulator and scoring it on the same seeds – and I will come back with a tested result and walk you through it live, including where the AI assistant wrote code and where I changed it.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "everi-labs-software-developer",
+   "company": "Everi Labs AB",
+   "role": "Software Developer",
+   "location": "Stockholm",
+   "deadline": "2026-11-06",
+   "status": "awaiting-review",
+   "channel": "email",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31565340",
+   "lang": "en",
+   "fit": [
+    "Python + TypeScript generalist, AI platform, React/SQL/AI-ML \"a plus but not required\" – good match on stack; no years stated."
+   ],
+   "gaps": [
+    "\"Professional experience in software development\" – 0 professional years; stated. Healthcare, cloud infra none; stated."
+   ],
+   "days_left": 4,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Python + TypeScript generalist, AI platform, React/SQL/AI-ML \"a plus but not required\" – good match on stack; no years stated."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "\"Professional experience in software development\" – 0 professional years; stated. Healthcare, cloud infra none; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-06 (4 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: email."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Automating clinical documentation is exactly the kind of AI work I find worth doing carefully: the output has to be right, sensitive data has to stay protected, and staff need an interface they can trust every day."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Software Developer role at Everi Labs. Automating clinical documentation is exactly the kind of AI work I find worth doing carefully: the output has to be right, sensitive data has to stay protected, and staff need an interface they can trust every day.",
+      "I am applying for the Software Developer role at Everi Labs.",
+      "Automating clinical documentation is exactly the kind of AI work I find worth doing carefully: the output has to be right, sensitive data has to stay protected, and staff need an interface they can trust every day."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If you want to see more than the attachments, reply to my agent-run address with a small task – for example a form plus API for an anonymised clinical note – and I will come back with a tested solution and walk you through it live.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lansforsakringar-ai-engineer",
+   "company": "Länsförsäkringar AB (publ)",
+   "role": "AI Engineer",
+   "location": "Stockholm",
+   "deadline": "2026-11-06",
+   "status": "awaiting-review",
+   "channel": "easyapply.jobs",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31646811",
+   "lang": "sv",
+   "fit": [
+    "GenAI/RAG/agents/tool calling, Python, FastAPI, Docker Compose, Postgres; merit: vector search, embeddings, guardrails, agent frameworks – matches rag-vector-eval / agent-trace-evals / gateway."
+   ],
+   "gaps": [
+    "Senior-ish: \"flera års erfarenhet\", production deployments – 0 professional years; stated.",
+    "Azure/Bicep/K8s/Celery/Redis not used – stated. FastAPI limited, Docker ~6 mo – stated."
+   ],
+   "days_left": 4,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "GenAI/RAG/agents/tool calling, Python, FastAPI, Docker Compose, Postgres; merit: vector search, embeddings, guardrails, agent frameworks – matches rag-vector-eval / agent-trace-evals / gateway."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior-ish: \"flera års erfarenhet\", production deployments – 0 professional years; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-06 (4 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: easyapply.jobs."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Det som lockar är att ni bygger hela livscykeln själva – från RAG och agenter med tool calling till drift, observability och dataskydd – för en intern GPT-lösning med över 6 000 användare."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som AI Engineer inom Data & AI. Det som lockar är att ni bygger hela livscykeln själva – från RAG och agenter med tool calling till drift, observability och dataskydd – för en intern GPT-lösning med över 6 000 användare.",
+      "Jag söker tjänsten som AI Engineer inom Data & AI.",
+      "Det som lockar är att ni bygger hela livscykeln själva – från RAG och agenter med tool calling till drift, observability och dataskydd – för en intern GPT-lösning med över 6 000 användare."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024, ingen heltidsanställning som utvecklare ännu, och min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se mer än bilagorna? Svara till min agentdrivna adress med en liten uppgift – till exempel en anonymiserad fråga där ett RAG-svar blev fel – så återkommer jag med en testad lösning och en utvärdering, och går igenom den live.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, är svensk medborgare och kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sva-systemutvecklare-labbdatasystem",
+   "company": "Statens veterinärmedicinska anstalt (SVA)",
+   "role": "Systemutvecklare (labbdatasystem och e-tjänster)",
+   "location": "Uppsala (Ultuna), 2 shared remote days/week, state agency",
+   "deadline": "2026-11-15",
+   "status": "ready-to-send",
+   "channel": "Varbi",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31634407",
+   "lang": "sv",
+   "fit": [
+    "Uppsala (best location in the queue), hybrid, AI tools/AI features merit, API/integration/architecture merit, Swedish docs, vetting OK."
+   ],
+   "gaps": [
+    "C# \"god kunskap\" + web apps with C# backend/JS frontend + ≥1 yr work experience – must-haves; C# is basic (FCC Foundational C# + Unity); 0 professional years. Stated plainly; polyglot-adapters (.NET 8, 11 tests) as evidence.",
+    "Högskola or documented equivalent – freeCodeCamp only.",
+    "SQL Server, Azure DevOps, Angular, Tyk, Umbraco – none."
+   ],
+   "days_left": 13,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Uppsala (best location in the queue), hybrid, AI tools/AI features merit, API/integration/architecture merit, Swedish docs, vetting OK."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "C# \"god kunskap\" + web apps with C# backend/JS frontend + ≥1 yr work experience – must-haves; C# is basic (FCC Foundational C# + Unity); 0 professional years. Stated plainly; polyglot-adapters (.NET 8, 11 tests) as evidence."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Uppsala (Ultuna), 2 shared remote days/week, state agency"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-15 (13 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Varbi. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Det som lockar mig är kombinationen av självledande team, möjligheten att bidra till AI- och datadelningsarbetet och att växa mot arkitektur över tid – och att det är ett uppdrag som spelar roll för beredskapen."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som systemutvecklare för SVA:s labbdatasystem och e-tjänster. Det som lockar mig är kombinationen av självledande team, möjligheten att bidra till AI- och datadelningsarbetet och att växa mot arkitektur över tid – och att det är ett uppdrag som spelar roll för beredskapen.",
+      "Jag söker tjänsten som systemutvecklare för SVA:s labbdatasystem och e-tjänster.",
+      "Det som lockar mig är kombinationen av självledande team, möjligheten att bidra till AI- och datadelningsarbetet och att växa mot arkitektur över tid – och att det är ett uppdrag som spelar roll för beredskapen."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "C# kan jag på grundnivå: freeCodeCamps certifiering Foundational C# with Microsoft (verifierbar via freeCodeCamp och LinkedIn) och tidiga spelutvecklingsförsök i Unity.",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se mer än bilagorna går det bra att svara till min agentdrivna adress med en uppgift eller fråga – till exempel en liten C#-uppgift – så återkommer jag med en testad lösning och går igenom den live.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, pendlar gärna till Uppsala, är svensk medborgare, har inga problem med säkerhetsprövning och kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quest-consulting-fullstackutvecklare",
+   "company": "Quest Consulting Sverige AB",
+   "role": "Fullstackutvecklare (AI-driven, konsultuppdrag)",
+   "location": "Stockholm",
+   "deadline": "2026-11-16",
+   "status": "awaiting-review",
+   "channel": "Ponty",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31645682",
+   "lang": "sv",
+   "fit": [
+    "Stack match (JS/React, Python/FastAPI, PostgreSQL), AI-tool workflow + review of AI code."
+   ],
+   "gaps": [
+    "3–5 years production fullstack; Azure/Terraform none; FastAPI limited; Claude Code/Cursor tried only – all stated."
+   ],
+   "days_left": 14,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Stack match (JS/React, Python/FastAPI, PostgreSQL), AI-tool workflow + review of AI code."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "3–5 years production fullstack; Azure/Terraform none; FastAPI limited; Claude Code/Cursor tried only – all stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-16 (14 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Ponty. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Stacken – JavaScript och React i frontend, Python och FastAPI i backend, PostgreSQL – är den jag bygger i, och ert krav att \"kvalitetsgranska, förstå och förbättra AI-genererad kod\" är det jag lägger mest tid på."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker uppdraget som AI-driven fullstackutvecklare. Stacken – JavaScript och React i frontend, Python och FastAPI i backend, PostgreSQL – är den jag bygger i, och ert krav att \"kvalitetsgranska, förstå och förbättra AI-genererad kod\" är det jag lägger mest tid på.",
+      "Jag söker uppdraget som AI-driven fullstackutvecklare.",
+      "Stacken – JavaScript och React i frontend, Python och FastAPI i backend, PostgreSQL – är den jag bygger i, och ert krav att \"kvalitetsgranska, förstå och förbättra AI-genererad kod\" är det jag lägger mest tid på."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se arbetssättet? Svara till min agentdrivna adress med en liten uppgift – till exempel ett planeringsverktyg med en tabell, ett API och en vy – så återkommer jag med en testad lösning och visar var jag lät AI skriva och var jag ändrade.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, och uppdraget till november 2027 passar mig bra. Jag kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mad-marketing-senior-fullstack-developer",
+   "company": "Mad Marketing & Co AB",
+   "role": "Senior Fullstack Developer",
+   "location": "Stockholm-Gärdet, on-site, full-time, Growth department",
+   "deadline": "2026-11-18",
+   "status": "awaiting-review",
+   "channel": "email",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31613352",
+   "lang": "sv",
+   "fit": [
+    "Fullstack HTML/CSS/JS/TS, frontend/backend/DB/API, AI-assisted development + integrations + automation; \"build without AI, develop with AI\". Showcase covers TS fullstack, AI automation, tracking/consent/PII and Core Web Vitals."
+   ],
+   "gaps": [
+    "Senior, \"produktionsstark\", \"gedigen erfarenhet\" – 0 professional years (≈2 self-directed). Stated.",
+    "WordPress/PHP, GA4/GTM, technical SEO, CRO, hosting for clients – not in production; PHP minimal. Stated plainly. Probably the biggest gap for an agency Growth role.",
+    "On-site (Gärdet) – Uppsala 40–50 min; on-site acceptable per DEFAULTS §13 (not preferred). Letter says it works."
+   ],
+   "days_left": 16,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Fullstack HTML/CSS/JS/TS, frontend/backend/DB/API, AI-assisted development + integrations + automation; \"build without AI, develop with AI\". Showcase covers TS fullstack, AI automation, tracking/consent/PII and Core Web Vitals."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior, \"produktionsstark\", \"gedigen erfarenhet\" – 0 professional years (≈2 self-directed). Stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm-Gärdet, on-site, full-time, Growth department"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-18 (16 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: email."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Det jag fastnar för i annonsen är meningen \"Du kan bygga utan AI, utveckla med AI och vet när tekniken skapar verkligt värde\" – den kombinationen av fullstack, performance och AI-automation är det jag själv bygger."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som Senior Fullstack Developer på Growth-avdelningen. Det jag fastnar för i annonsen är meningen \"Du kan bygga utan AI, utveckla med AI och vet när tekniken skapar verkligt värde\" – den kombinationen av fullstack, performance och AI-automation är det jag själv bygger.",
+      "Jag söker tjänsten som Senior Fullstack Developer på Growth-avdelningen.",
+      "Det jag fastnar för i annonsen är meningen \"Du kan bygga utan AI, utveckla med AI och vet när tekniken skapar verkligt värde\" – den kombinationen av fullstack, performance och AI-automation är det jag själv bygger."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Min bas är JavaScript/TypeScript, Python, SQL och 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se hur jag arbetar? Svara till min agentdrivna adress med en liten uppgift – till exempel en anonymiserad kundsajt med ett tracking- eller performanceproblem – så återkommer jag med en testad lösning och går igenom den live.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, och arbete på plats fungerar för mig. Mitt löneanspråk är 35 000 kr/månad. Jag är svensk medborgare och kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bumbli-group-fullstackutvecklare",
+   "company": "Bumbli Group AB",
+   "role": "Fullstackutvecklare Stockholm – Hybrid",
+   "location": "Stockholm, hybrid",
+   "deadline": "2026-11-21",
+   "status": "awaiting-review",
+   "channel": "email",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31634272",
+   "lang": "sv",
+   "fit": [
+    "AI/coding agents \"en självklarhet\", quality filter against slop, full-system breadth (UI → DB → drift), knowledge sharing. Showcase speaks directly to \"filtret mot slop\"."
+   ],
+   "gaps": [
+    "\"Minst fem år efter avslutad examen\" / engineering degree expected – no degree, 0 professional years (≈2 self-directed). Stated plainly; demo offered. Long shot on formal criteria.",
+    "Languages asked: Python, Java or C# + modern frontend → Python main ✓, C# foundational, Java none; React (FCC), TS limited – stated.",
+    "Consultancy role (client assignments) – fine with hybrid, Uppsala commute."
+   ],
+   "days_left": 19,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "AI/coding agents \"en självklarhet\", quality filter against slop, full-system breadth (UI → DB → drift), knowledge sharing. Showcase speaks directly to \"filtret mot slop\"."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "\"Minst fem år efter avslutad examen\" / engineering degree expected – no degree, 0 professional years (≈2 self-directed). Stated plainly; demo offered. Long shot on formal criteria."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm, hybrid"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-21 (19 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: email."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Annonsens tes – att AI höjer ribban i stället för att ersätta utvecklaren, och att utvecklaren ska vara filtret mot slop – är precis så jag arbetar."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som fullstackutvecklare i Stockholm (hybrid). Annonsens tes – att AI höjer ribban i stället för att ersätta utvecklaren, och att utvecklaren ska vara filtret mot slop – är precis så jag arbetar.",
+      "Jag söker tjänsten som fullstackutvecklare i Stockholm (hybrid).",
+      "Annonsens tes – att AI höjer ribban i stället för att ersätta utvecklaren, och att utvecklaren ska vara filtret mot slop – är precis så jag arbetar."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Jag har ingen högskoleexamen – min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar) – och ingen heltidsanställning som utvecklare ännu, utan cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Därför erbjuder jag hellre en demonstration än fler ord: svara till min agentdrivna adress med en liten uppgift – gärna ur en verklig kunds vardag, anonymiserad – så återkommer jag med en testad lösning och går igenom besluten live, inklusive var jag valde bort AI-förslag.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, är svensk medborgare och kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pet-pawr-ai-driven-fullstack-developer",
+   "company": "Pet Pawr Group AB",
+   "role": "AI Driven Fullstack Developer",
+   "location": "Stockholm",
+   "deadline": "2026-11-25",
+   "status": "awaiting-review",
+   "channel": "ReachMee",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31644396",
+   "lang": "sv",
+   "fit": [
+    "Agent flows with human-approval boundaries, cost vs benefit, GDPR – agent-action-gate is a direct match (repo now public, 200 checked 2026-10-28 ~04:10 CET)."
+   ],
+   "gaps": [
+    "\"Minst 3 års erfarenhet som fullstackutvecklare\", retail automation, dialog på ledningsnivå – 0 professional years; stated.",
+    "On-call exceptions evenings/weekends mentioned in ad."
+   ],
+   "days_left": 23,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Agent flows with human-approval boundaries, cost vs benefit, GDPR – agent-action-gate is a direct match (repo now public, 200 checked 2026-10-28 ~04:10 CET)."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "\"Minst 3 års erfarenhet som fullstackutvecklare\", retail automation, dialog på ledningsnivå – 0 professional years; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-25 (23 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: ReachMee. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Annonsen beskriver exakt det jag tycker är det svåra och intressanta med agenter: \"tydliga gränser för vad agenten gör själv och när en människa godkänner\"."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som AI Driven Fullstack Developer. Annonsen beskriver exakt det jag tycker är det svåra och intressanta med agenter: \"tydliga gränser för vad agenten gör själv och när en människa godkänner\".",
+      "Jag söker tjänsten som AI Driven Fullstack Developer.",
+      "Annonsen beskriver exakt det jag tycker är det svåra och intressanta med agenter: \"tydliga gränser för vad agenten gör själv och när en människa godkänner\"."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se mer än bilagorna? Svara till min agentdrivna adress med ett anonymiserat manuellt moment från butik eller lager, så återkommer jag med ett testat agentflöde med godkännandesteg och en uppskattning av sparade timmar, och går igenom det live.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, och hybridarbete från Linnégatan passar mig bra. Jag kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "faverli-backendutvecklare",
+   "company": "Faverli AB",
+   "role": "Backendutvecklare (junior)",
+   "location": "Fully remote; tillsvidare, heltid, monthly salary",
+   "deadline": "2026-11-26",
+   "status": "awaiting-review",
+   "channel": "Faverli",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31652730",
+   "lang": "sv",
+   "fit": [
+    "Junior, \"motsvarande kunskaper genom egna projekt\" accepted; Node/TS/Python, SQL, REST, AI features, GitHub portfolio all meriterande → strongest literal fit of the three."
+   ],
+   "gaps": [],
+   "days_left": 24,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Junior, \"motsvarande kunskaper genom egna projekt\" accepted; Node/TS/Python, SQL, REST, AI features, GitHub portfolio all meriterande → strongest literal fit of the three."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "No seniority gap flagged in the pack."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Fully remote; tillsvidare, heltid, monthly salary"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-26 (24 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Faverli."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Jobbmatchning med en AI-assistent är ett problem jag tycker om: det räcker inte att Faverli Buddy låter övertygande, matchningarna måste vara bra och användardatan måste hanteras varsamt."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som backendutvecklare på Faverli. Jobbmatchning med en AI-assistent är ett problem jag tycker om: det räcker inte att Faverli Buddy låter övertygande, matchningarna måste vara bra och användardatan måste hanteras varsamt.",
+      "Jag söker tjänsten som backendutvecklare på Faverli.",
+      "Jobbmatchning med en AI-assistent är ett problem jag tycker om: det räcker inte att Faverli Buddy låter övertygande, matchningarna måste vara bra och användardatan måste hanteras varsamt."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), bland annat Back End Development and APIs och Relational Database.",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se hur jag jobbar? Skicka en liten uppgift till min agentdrivna adress – till exempel en enkel matchningsfunktion mot några anonymiserade annonser – så återkommer jag med en testad lösning och går igenom den.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, distansarbete passar mig utmärkt, och jag kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tng-attendo-senior-ai-native-developer",
+   "company": "TNG Group AB",
+   "role": "Senior AI-Native Developer (Attendo, Stockholm)",
+   "location": "Stockholm",
+   "deadline": "2026-11-27",
+   "status": "awaiting-review",
+   "channel": "TNG/Ada",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31654172",
+   "lang": "sv",
+   "fit": [
+    "AI-native development as the core ask; \"mindre vikt vid vilket programmeringsspråk\"; fullstack web + integrations; AI features for non-technical users.",
+    "Very low-friction channel: motivation text only, CV/LinkedIn optional."
+   ],
+   "gaps": [
+    "\"Senior\" / \"flera års professionell mjukvaruutveckling\" – 0 professional years; stated plainly. Azure DevOps, mobile, care sector none; stated."
+   ],
+   "days_left": 25,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "AI-native development as the core ask; \"mindre vikt vid vilket programmeringsspråk\"; fullstack web + integrations; AI features for non-technical users."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "\"Senior\" / \"flera års professionell mjukvaruutveckling\" – 0 professional years; stated plainly. Azure DevOps, mobile, care sector none; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-27 (25 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: TNG/Ada."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Det som lockar mest är att få vara en av de första utvecklarna i en ny satsning, där AI är en del både av hur lösningarna byggs och av vad de gör – och där målet är att förenkla vardagen för medarbetare inom vård och omsorg."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som Senior AI-Native Developer hos Attendo. Det som lockar mest är att få vara en av de första utvecklarna i en ny satsning, där AI är en del både av hur lösningarna byggs och av vad de gör – och där målet är att förenkla vardagen för medarbetare inom vård och omsorg.",
+      "Jag söker tjänsten som Senior AI-Native Developer hos Attendo.",
+      "Det som lockar mest är att få vara en av de första utvecklarna i en ny satsning, där AI är en del både av hur lösningarna byggs och av vad de gör – och där målet är att förenkla vardagen för medarbetare inom vård och omsorg."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se arbetssättet i praktiken? Skicka en liten uppgift till min agentdrivna adress – till exempel ett enkelt formulär med API för en anonymiserad avvikelserapport – så återkommer jag med en testad lösning och går igenom den live, inklusive var agenten skrev koden och var jag ändrade den.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag finns i Stockholm, flyttar med tjänsten och har tillfälligt boende ordnat, och kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coromatic-senior-software-engineer-integration-ai-automation",
+   "company": "Coromatic AB",
+   "role": "Senior Software Engineer – Integration & AI Automation Lead",
+   "location": "Stockholm-Bromma, on-site",
+   "deadline": "2026-11-28",
+   "status": "awaiting-review",
+   "channel": "Coromatic",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31651217",
+   "lang": "sv",
+   "fit": [
+    "Ad's core is AI-native development: orchestrate agents and QA their output, guardrails/governance – Markus's strongest story."
+   ],
+   "gaps": [
+    "Senior/lead + \"flerårig integration i produktion\" – 0 professional years; stated.",
+    "Microsoft stack (Azure Integration Services, Logic Apps, APIM, Copilot Studio, Power Platform) – none; stated. Reach application.",
+    "agent-action-gate now public – linked in CV (repo) and mentioned in letter; showcase listed in SUBMISSION.md (updated 2026-10-28 ~08:00 CET)."
+   ],
+   "days_left": 26,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Ad's core is AI-native development: orchestrate agents and QA their output, guardrails/governance – Markus's strongest story."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior/lead + \"flerårig integration i produktion\" – 0 professional years; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm-Bromma, on-site"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-28 (26 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Coromatic."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Annonsen beskriver en roll som \"inte primärt handlar om traditionell manuell kodutveckling, utan om att orkestrera, granska och kvalitetssäkra AI-genererade lösningar\"."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som Senior Software Engineer – Integration & AI Automation Lead. Annonsen beskriver en roll som \"inte primärt handlar om traditionell manuell kodutveckling, utan om att orkestrera, granska och kvalitetssäkra AI-genererade lösningar\".",
+      "Jag söker tjänsten som Senior Software Engineer – Integration & AI Automation Lead.",
+      "Annonsen beskriver en roll som \"inte primärt handlar om traditionell manuell kodutveckling, utan om att orkestrera, granska och kvalitetssäkra AI-genererade lösningar\"."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Azure Integration Services, Logic Apps, Copilot Studio och Power Platform har jag inte använt; min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se arbetssättet i praktiken? Svara till min agentdrivna adress med en liten integrationsuppgift – till exempel två anonymiserade system som ska prata med varandra – så återkommer jag med en testad lösning och går igenom var jag lät AI arbeta och var jag sa nej.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är baserad i Stockholm, är svensk medborgare och går gärna igenom säkerhetsprövning och registerkontroll. Jag kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "friday-ai-engineer-integration",
+   "company": "Friday Väst AB",
+   "role": "AI Engineer inom Integration och Utveckling",
+   "location": "Stockholm",
+   "deadline": "2026-11-30",
+   "status": "awaiting-review",
+   "channel": "Ponty",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31599524",
+   "lang": "sv",
+   "fit": [
+    "\"Minst ett projekt\" with AI algorithms/integration; Python, API/systemintegration meriterande – public projects cover this."
+   ],
+   "gaps": [
+    "Technical degree asked – none (freeCodeCamp only); stated. PyTorch none; \"arbetslivserfarenhet\" – projects are own, not employment; stated."
+   ],
+   "days_left": 28,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "\"Minst ett projekt\" with AI algorithms/integration; Python, API/systemintegration meriterande – public projects cover this."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Technical degree asked – none (freeCodeCamp only); stated. PyTorch none; \"arbetslivserfarenhet\" – projects are own, not employment; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-30 (28 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Ponty. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "Swedish ad – Swedish letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Det som lockar är att verksamheten byggs upp nu, och att rollen handlar om att få AI att fungera i riktiga tekniska system – integrera, testa, utvärdera och förbättra – snarare än om demos."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "Jag söker tjänsten som AI Engineer inom integration och utveckling. Det som lockar är att verksamheten byggs upp nu, och att rollen handlar om att få AI att fungera i riktiga tekniska system – integrera, testa, utvärdera och förbättra – snarare än om demos.",
+      "Jag söker tjänsten som AI Engineer inom integration och utveckling.",
+      "Det som lockar är att verksamheten byggs upp nu, och att rollen handlar om att få AI att fungera i riktiga tekniska system – integrera, testa, utvärdera och förbättra – snarare än om demos."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "Annonsen efterfrågar en teknisk utbildning; jag har ingen högskoleexamen – min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), bland annat Machine Learning with Python och Data Analysis with Python.",
+      "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+      "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "Vill ni se mer? Svara till min agentdrivna adress med en liten integrationsuppgift – till exempel att koppla en modell till ett anonymiserat dataflöde – så återkommer jag med en testad lösning och en utvärdering och går igenom den live.",
+      "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+      "(stryk stycket)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Jag är svensk medborgare och går gärna igenom säkerhetsprövning. Jag är baserad i Stockholm, Solna Strand fungerar bra, och jag kan börja med kort varsel.",
+      "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gears-of-leo-senior-ai-enablement-engineer",
+   "company": "Gears of Leo AB (LeoVegas Group)",
+   "role": "Senior AI Enablement Engineer",
+   "location": "Stockholm, hybrid",
+   "deadline": "2026-11-30",
+   "status": "awaiting-review",
+   "channel": "LeoVegas",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31494015",
+   "lang": "en",
+   "fit": [
+    "Enablement tooling for developers: prompt workflows, lightweight agents, scripts, reusable templates, measurement – grok-bot-local-first (XERJ-selected), night queue, agent-trace-evals, rag-vector-eval, llm-json-fixer MCP."
+   ],
+   "gaps": [
+    "Essential: 8+ years professional engineering, staff level – 0 professional years; stated. Long shot.",
+    "iGaming (gambling) industry – your call."
+   ],
+   "days_left": 28,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Enablement tooling for developers: prompt workflows, lightweight agents, scripts, reusable templates, measurement – grok-bot-local-first (XERJ-selected), night queue, agent-trace-evals, rag-vector-eval, llm-json-fixer MCP."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Essential: 8+ years professional engineering, staff level – 0 professional years; stated. Long shot."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm, hybrid"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-11-30 (28 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: LeoVegas."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Finding friction in how developers work and turning it into small, reliable AI tooling that spreads from one team to many is what I spend my own time on."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Senior AI Enablement Engineer role. Finding friction in how developers work and turning it into small, reliable AI tooling that spreads from one team to many is what I spend my own time on.",
+      "I am applying for the Senior AI Enablement Engineer role.",
+      "Finding friction in how developers work and turning it into small, reliable AI tooling that spreads from one team to many is what I spend my own time on."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If it helps, reply to my agent-run address with a real friction point – for example a repetitive review or release chore – and I will come back with a tested prototype and walk you through it live.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. Hybrid at Luntmakargatan suits me well.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "proposales-product-engineer",
+   "company": "Proposales AB",
+   "role": "Product Engineer",
+   "location": "Stockholm, office-first",
+   "deadline": "2026-12-27",
+   "status": "awaiting-review",
+   "channel": "Teamtailor",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31230726",
+   "lang": "en",
+   "fit": [
+    "Next.js/TypeScript, MCP, AI agents as core workflow, \"judgment over credentials\", no years stated."
+   ],
+   "gaps": [
+    "\"You've shipped things real people use\" – public projects only; Claude Code/Cursor tried only; stated."
+   ],
+   "days_left": 55,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Next.js/TypeScript, MCP, AI agents as core workflow, \"judgment over credentials\", no years stated."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "\"You've shipped things real people use\" – public projects only; Claude Code/Cursor tried only; stated."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm, office-first"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-12-27 (55 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "I am applying for the Product Engineer role. \"Know when to trust what an agent produces and when to push back on it\" is the line in your ad I agree with most, and it is the skill I have spent the last year deliberately training."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours) – you say you value judgment over credentials, and I would like the chance to show mine.",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If you want to see it in practice, reply to my agent-run address with a small product initiative – for example an interactive proposal section with an API and a view – and I will come back with a tested build and show where the agent wrote code and where I changed it.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. An office-first team suits me well.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sinch-senior-data-engineer",
+   "company": "Sinch Sweden AB",
+   "role": "Senior Data Engineer",
+   "location": "Stockholm (Lindhagensgatan)",
+   "deadline": "2026-12-31",
+   "status": "awaiting-review",
+   "channel": "Oracle",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31640313",
+   "lang": "en",
+   "fit": [
+    "Explicit AI agents / agentic workflows / AI-assisted development in data engineering; Python, SQL, ETL/ELT, Git, CI/CD, Docker."
+   ],
+   "gaps": [
+    "Senior, leads projects, mentors – ≈2 yrs self-directed, 0 professional. Stated plainly.",
+    "Spark, real-time processing, virtualization tooling – not used; stated.",
+    "Oracle HCM portal – likely email one-time code or account → secure-form step in chat."
+   ],
+   "days_left": 59,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Explicit AI agents / agentic workflows / AI-assisted development in data engineering; Python, SQL, ETL/ELT, Git, CI/CD, Docker."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior, leads projects, mentors – ≈2 yrs self-directed, 0 professional. Stated plainly."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm (Lindhagensgatan)"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2026-12-31 (59 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Oracle. Portal may need an account."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "What draws me is that the ad treats AI agents and agentic workflows as part of data engineering itself – automating development tasks and data operations – while keeping code quality, security and reliability."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Senior Data Engineer role. What draws me is that the ad treats AI agents and agentic workflows as part of data engineering itself – automating development tasks and data operations – while keeping code quality, security and reliability.",
+      "I am applying for the Senior Data Engineer role.",
+      "What draws me is that the ad treats AI agents and agentic workflows as part of data engineering itself – automating development tasks and data operations – while keeping code quality, security and reliability."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My base is Python, SQL/PostgreSQL, Git, CI and Docker, and 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Best regards,\nMarkus Isaksson",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "knowit-ai-architect",
+   "company": "Knowit Aktiebolag (publ)",
+   "role": "AI Architect",
+   "location": "Stockholm",
+   "deadline": "2027-03-27",
+   "status": "awaiting-review",
+   "channel": "Teamtailor",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31525223",
+   "lang": "en",
+   "fit": [
+    "RAG, agent workflows, evaluation, observability, governance – rag-vector-eval, agent-trace-evals, graph-plan-gate, eval-gate-api, agent-action-gate; XERJ selection as outside signal (retrieval/agent ecosystem)."
+   ],
+   "gaps": [
+    "Senior consultant / architect – 0 professional years, no consulting; stated. Cloud AI in production – none; stated. Long shot."
+   ],
+   "days_left": 145,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "RAG, agent workflows, evaluation, observability, governance – rag-vector-eval, agent-trace-evals, graph-plan-gate, eval-gate-api, agent-action-gate; XERJ selection as outside signal (retrieval/agent ecosystem)."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior consultant / architect – 0 professional years, no consulting; stated. Cloud AI in production – none; stated. Long shot."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2027-03-27 (145 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Your point that strong AI systems need more than a successful prototype – governance, observability, evaluation, cost and control – is where my work is concentrated."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the AI Architect role. Your point that strong AI systems need more than a successful prototype – governance, observability, evaluation, cost and control – is where my work is concentrated.",
+      "I am applying for the AI Architect role.",
+      "Your point that strong AI systems need more than a successful prototype – governance, observability, evaluation, cost and control – is where my work is concentrated."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If it helps, reply to my agent-run address with a small client-style case – for example a RAG assistant over a document set with an evaluation and a guarded action – and I will come back with a tested build and walk you through it live.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "epiminds-backend-engineer",
+   "company": "Epiminds AB",
+   "role": "Backend Engineer",
+   "location": "Stockholm",
+   "deadline": "2027-04-01",
+   "status": "awaiting-review",
+   "channel": "Teamtailor",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31609532",
+   "lang": "en",
+   "fit": [
+    "Agent execution: approval pauses, safe retries, duplicate-action prevention, TypeScript/Node/PostgreSQL – agent-action-gate is a direct conceptual match."
+   ],
+   "gaps": [
+    "Effectively a senior-ish role: \"operated backend systems in production and owned their reliability\" – 0 professional years; stated. Temporal/Redis/GKE/Modal/Pulumi none; stated. Long shot."
+   ],
+   "days_left": 150,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Agent execution: approval pauses, safe retries, duplicate-action prevention, TypeScript/Node/PostgreSQL – agent-action-gate is a direct conceptual match."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Effectively a senior-ish role: \"operated backend systems in production and owned their reliability\" – 0 professional years; stated. Temporal/Redis/GKE/Modal/Pulumi none; stated. Long shot."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2027-04-01 (150 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Your problem statement – a task that pauses for approval and continues later, a worker that disappears after an external API accepted a change, retries that must not repeat the action – describes the exact problem I built my most recent project around."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Backend Engineer role. Your problem statement – a task that pauses for approval and continues later, a worker that disappears after an external API accepted a change, retries that must not repeat the action – describes the exact problem I built my most recent project around.",
+      "I am applying for the Backend Engineer role.",
+      "Your problem statement – a task that pauses for approval and continues later, a worker that disappears after an external API accepted a change, retries that must not repeat the action – describes the exact problem I built my most recent project around."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If it helps, reply to my agent-run address with a small task – for example a lease-based job runner with safe retries and cancellation – and I will come back with a tested implementation and walk you through it live. I would welcome your technical task in the same spirit.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "qred-bank-backend-developer-typescript",
+   "company": "Qred Bank AB",
+   "role": "Backend Developer (TypeScript)",
+   "location": "Stockholm (central), office-first, 1 remote day/week",
+   "deadline": "2027-04-21",
+   "status": "backup",
+   "channel": "Teamtailor form",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31637259",
+   "lang": "en",
+   "fit": [
+    "Agentic-first fintech; TypeScript/Node.js; showcase agent-action-gate (strict TypeScript) published 2026-10-28."
+   ],
+   "gaps": [
+    "Seniority: \"several years of professional TypeScript backend\" – not met; stated, demo task offered.",
+    "No AWS/serverless production work; Claude Code only tried.",
+    "Status in tracker: backup."
+   ],
+   "days_left": 170,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "Agentic-first fintech; TypeScript/Node.js; showcase agent-action-gate (strict TypeScript) published 2026-10-28."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Seniority: \"several years of professional TypeScript backend\" – not met; stated, demo task offered."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm (central), office-first, 1 remote day/week"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2027-04-21 (170 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor form."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Backend Developer (TypeScript) role. What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards.",
+      "I am applying for the Backend Developer (TypeScript) role.",
+      "What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If you want to see more than the attachments, reply to my agent-run address with a task or a question, and I will return a tested solution and walk you through it in a live demo.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "Best regards,\nMarkus Isaksson",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "columbus-senior-ai-engineer-coe",
+   "company": "Columbus Sweden AB",
+   "role": "Senior AI Engineer – Center of Excellence",
+   "location": "Stockholm",
+   "deadline": "2027-04-26",
+   "status": "awaiting-review",
+   "channel": "Teamtailor",
+   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31657050",
+   "lang": "en",
+   "fit": [
+    "LLM app design, agent frameworks, tool integration, evaluation, RAG/vector search, observability/cost control, AI governance – strong conceptual match with agent-action-gate, agent-trace-evals, rag-vector-eval, gateway."
+   ],
+   "gaps": [
+    "Senior, \"production engineering at enterprise scale\" – 0 professional years; stated. Microsoft 365/Graph/Teams/SharePoint/Azure none; stated. Long shot.",
+    "Logic + personality tests, references and background check (background check OK per Markus)."
+   ],
+   "days_left": 175,
+   "aspects": [
+    {
+     "key": "fit",
+     "label": "Role fit (Python/JS/AI agents)",
+     "w": 1.5,
+     "hint": "LLM app design, agent frameworks, tool integration, evaluation, RAG/vector search, observability/cost control, AI governance – strong conceptual match with agent-action-gate, agent-trace-evals, rag-vector-eval, gateway."
+    },
+    {
+     "key": "seniority",
+     "label": "Seniority match",
+     "w": 1.2,
+     "hint": "Senior, \"production engineering at enterprise scale\" – 0 professional years; stated. Microsoft 365/Graph/Teams/SharePoint/Azure none; stated. Long shot."
+    },
+    {
+     "key": "location",
+     "label": "Location / commute",
+     "w": 1.0,
+     "hint": "Stockholm"
+    },
+    {
+     "key": "deadline",
+     "label": "Deadline urgency",
+     "w": 0.8,
+     "hint": "Deadline 2027-04-26 (175 days left)"
+    },
+    {
+     "key": "effort",
+     "label": "Effort left to send",
+     "w": 0.8,
+     "hint": "Channel: Teamtailor."
+    },
+    {
+     "key": "language",
+     "label": "Language requirements",
+     "w": 0.5,
+     "hint": "English ad – English letter staged"
+    },
+    {
+     "key": "ai",
+     "label": "AI-assisted-application suitability",
+     "w": 0.7,
+     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
+    },
+    {
+     "key": "interest",
+     "label": "Interest / meaning",
+     "w": 1.0,
+     "hint": "Your description of the shift from deterministic workflows to agentic systems that act on behalf of users matches what I build – with the emphasis on the parts that make it safe in an enterprise: evaluation, guarded actions, context and cost control, and governance."
+    }
+   ],
+   "phrasings": [
+    {
+     "slot": "opening",
+     "label": "Opening line",
+     "options": [
+      "I am applying for the Senior AI Engineer role in the Group AI team. Your description of the shift from deterministic workflows to agentic systems that act on behalf of users matches what I build – with the emphasis on the parts that make it safe in an enterprise: evaluation, guarded actions, context and cost control, and governance.",
+      "I am applying for the Senior AI Engineer role in the Group AI team.",
+      "Your description of the shift from deterministic workflows to agentic systems that act on behalf of users matches what I build – with the emphasis on the parts that make it safe in an enterprise: evaluation, guarded actions, context and cost control, and governance."
+     ]
+    },
+    {
+     "slot": "education",
+     "label": "Background / education line",
+     "options": [
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), and I am fine with logic and personality tests, references and a background check.",
+      "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+      "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ]
+    },
+    {
+     "slot": "ai_pitch",
+     "label": "AI-collaboration / demo offer",
+     "options": [
+      "If it helps, reply to my agent-run address with a small task – for example an agent that drafts a Teams-style reply from a SharePoint-like document set, with retrieval, an approval step and an evaluation – and I will come back with a tested build against mocked APIs and walk you through it live.",
+      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+      "(drop this paragraph)"
+     ]
+    },
+    {
+     "slot": "closing",
+     "label": "Closing / location line",
+     "options": [
+      "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. Hybrid in Stockholm suits me well.",
+      "I am based in Stockholm and can start at short notice."
+     ]
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "company": "Guidance Forward AB",
+   "role": "AI Engineer / Data Scientist",
+   "why": "Gothenburg/Partille (location rule)"
+  },
+  {
+   "company": "Swedbank AB",
+   "role": "AI Engineer (AI Solutions Engineer)",
+   "why": "deadline 2026-10-31 passed"
+  },
+  {
+   "company": "Rasulson Consulting AB",
+   "role": "AI Solution Architect",
+   "why": "on hold – 90-day cooldown until 2027-01-24"
+  }
+ ]
+}

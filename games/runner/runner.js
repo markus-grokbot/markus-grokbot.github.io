@@ -3,9 +3,10 @@
 (function () {
   'use strict';
   var E = RunnerEngine, $ = function (id) { return document.getElementById(id); }, Q = new URLSearchParams(location.search);
+  var APPS = Q.get('mode') === 'apps', AM = null, APPDATA = null;
   var SIM = Q.get('sim') === '1', FAST = Math.max(1, Math.min(32, +(Q.get('fast') || (SIM ? 8 : 1)))), LS = SIM ? 'runner.simlogs.v1' : 'runner.logs.v1', SEEN = 'runner.seenPairs.v1';
   var cv = $('cv'), cx = cv.getContext('2d'), P, set, qset, round, S, g, bot, rng, phase = 'menu', segT = 0, qi = 0, streak = 0, bestStreak = 0, bonusTotal = 0, input = { jump: false, duck: false }, acc = 0, last = 0, flash = [], dlData = null;
-  $('pwcss').textContent = PairwisePit.CSS;
+  $('pwcss').textContent = PairwisePit.CSS + (APPS ? AppsMode.CSS : '');
   function device() { return { ua: navigator.userAgent, screen: screen.width + 'x' + screen.height, dpr: devicePixelRatio, touch: 'ontouchstart' in window, lang: navigator.language, viewport: innerWidth + 'x' + innerHeight }; }
   function show(h) { $('ovbox').innerHTML = h; $('ov').classList.remove('hide'); } function hide() { $('ov').classList.add('hide'); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -39,7 +40,8 @@
     var seen = []; try { seen = JSON.parse(localStorage.getItem(SEEN) || '[]'); } catch (e) { }
     rng = E.rng((Date.now() % 1e9) | 0); var seed = (Date.now() % 1e9) | 0;
     S = RunnerSession.create({ runType: SIM ? 'sim' : 'human', seed: seed, device: device(), player: SIM ? { kind: 'bot', skill: Q.get('skill') || 'good', chooser: Q.get('chooser') || 'random', inPage: true, fast: FAST } : { kind: 'human', handle: 'markus' }, tuningSource: SRC });
-    qset = Object.assign({}, set, { pairs: RunnerSession.pickPairs(set, P.questions, rng, seen) }); round = PairwisePit.createRound(qset, { rng: rng });
+    if (APPS) { AM = AppsMode.create(APPDATA, rng); S.event('apps_mode', { apps: APPDATA.apps.length, generated: APPDATA.generated }); }
+    else { qset = Object.assign({}, set, { pairs: RunnerSession.pickPairs(set, P.questions, rng, seen) }); round = PairwisePit.createRound(qset, { rng: rng }); }
     g = E.create({ params: P, seed: seed, onEvent: onEv }); if (SIM) bot = RunnerBot.create(Q.get('skill') || 'good', rng);
     qi = 0; streak = 0; bestStreak = 0; bonusTotal = 0; $('qt').textContent = P.questions; hide(); $('game').classList.remove('hide'); resize(); beginRun();
   }
@@ -56,6 +58,7 @@
   }
   function ask(st, b) {
     phase = 'question'; input.jump = input.duck = false; $('game').classList.add('hide'); var el = $('pw'); el.classList.remove('hide');
+    if (APPS) return askApp(st, b);
     var pair = round.current().pair; S.startQuestion(qset, pair, qi);
     var head = '<div style="text-align:center;padding:6px 0;font-size:13px;color:#aaa">' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Segment ' + (qi + 1) + ' done · ' + (st.clean ? '<span class="k">clean run! streak ' + streak + ' +' + b + '</span>' : st.crashes + ' crash' + (st.crashes === 1 ? '' : 'es')) + ' · ' + Math.round(st.distance / 10) + 'm</div>';
     var holder = document.createElement('div'); el.innerHTML = head; el.appendChild(holder);
@@ -69,7 +72,23 @@
       if (c.choice === 'A' || c.choice === 'B') { var sel = holder.querySelector('.pw-str[data-s="' + c.strength + '"]'); if (sel) sel.click(); holder.querySelector('.pw-item[data-k="' + c.choice + '"]').click(); }
       else holder.querySelector(c.choice === 'tie' ? '.pw-tie' : '.pw-nth').click(); }, Math.round(PairwiseSim.thinkMs(pair, rng) / FAST)); }
   }
+  function askApp(st, b) {
+    var el = $('pw'), card = AM.next(), holder = document.createElement('div');
+    el.innerHTML = '<div style="text-align:center;padding:6px 0;font-size:13px;color:#aaa">' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Segment ' + (qi + 1) + ' done · ' + (st.clean ? '<span class="k">clean run! +' + b + '</span>' : st.crashes + ' crash' + (st.crashes === 1 ? '' : 'es')) + '</div>'; el.appendChild(holder);
+    AppsMode.render(holder, card, function (c) { var e = AM.answer(card, c); S.event('apps_choice', e); qi++; g.afterQuestion(); if (qi >= P.questions) summary(); else beginRun(); });
+    if (SIM) setTimeout(function () { var bs = holder.querySelectorAll('button[data-c]'); bs[Math.floor(rng() * bs.length)].click(); }, Math.round(1500 / FAST));
+  }
+  function summaryApps() {
+    var s = g.state(), sum = { distance: Math.round(s.dist), bestRunDistance: Math.round(s.bestRunDist), score: Math.round(s.score), coins: s.coins, knockouts: s.knockouts, bestStreak: bestStreak, cleanBonusTotal: bonusTotal, cardsAnswered: qi };
+    var d = S.finish(sum); d.mode = 'apps'; d.apps = AM.result(); try { d.qualities = Qualities.compute(d, FOC); } catch (e) { } dlData = d; window.__runnerLog = d;
+    try { var all = JSON.parse(localStorage.getItem('runner.appslogs.v1') || '{}'); all[d.run.id] = d; localStorage.setItem('runner.appslogs.v1', JSON.stringify(all)); } catch (e) { }
+    show('<h2>' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Round done</h2><table><tr><td>Distance</td><td class="k">' + Math.round(sum.distance / 10) + ' m</td></tr><tr><td>Score</td><td>' + sum.score + '</td></tr><tr><td>Coins</td><td>' + sum.coins + '</td></tr><tr><td>Cards answered</td><td>' + qi + '</td></tr></table>' + AM.summaryHTML() +
+      '<p style="font-size:11px;color:#999">' + esc(d.apps.scoring) + '. Saved in this browser only.</p><button id="dl">⬇ Download log</button><button id="again">↻ Play again</button>');
+    $('dl').onclick = function () { var bl = new Blob([JSON.stringify(dlData, null, 1)], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(bl); a.download = (SIM ? 'sim' : 'human') + '-apps-' + dlData.run.id + '.json'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); };
+    $('again').onclick = function () { location.reload(); };
+  }
   function summary() {
+    if (APPS) { phase = 'summary'; $('game').classList.add('hide'); $('pw').classList.add('hide'); return summaryApps(); }
     phase = 'summary'; $('game').classList.add('hide'); $('pw').classList.add('hide'); var s = g.state(), dec = round.decisions().filter(function (d) { return !d.undone; }), tone = RunnerSession.toneMini(qset, dec);
     var sum = { distance: Math.round(s.dist), bestRunDistance: Math.round(s.bestRunDist), score: Math.round(s.score), coins: s.coins, knockouts: s.knockouts, bestStreak: bestStreak, cleanBonusTotal: bonusTotal, questionsAnswered: dec.length, tone: tone };
     var d = S.finish(sum); d.qualities = Qualities.compute(d, FOC); dlData = d; var F = d.qualities.runnerFocus; try { var all = JSON.parse(localStorage.getItem(LS) || '{}'); all[d.run.id] = d; localStorage.setItem(LS, JSON.stringify(all)); } catch (e) { }
@@ -103,10 +122,12 @@
   // ---------- boot ----------
   var setId = (Q.get('set') || 'tone-001').replace(/[^\w-]/g, '');
   function j(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
-  Promise.all([j('../pairwise/sets/' + setId + '.json'), j('tuning.json')]).then(function (r) {
-    set = r[0]; var tn = r[1]; if (!set) { show('<h2>Set not found</h2><p>' + esc(setId) + '</p>'); return; }
-    P = E.merge(tn); FOC = Object.assign({ weights: Qualities.DEFAULT_WEIGHTS }, (tn && tn.focus) || {}); SRC = tn ? 'tuning.json@' + tn.generatedAt : 'defaults'; if (Q.get('q')) P.questions = Math.max(1, Math.min(set.pairs.length, +Q.get('q')));
+  Promise.all([APPS ? j('data/applications.json') : j('../pairwise/sets/' + setId + '.json'), j('tuning.json')]).then(function (r) {
+    set = r[0]; var tn = r[1]; if (APPS) { APPDATA = set; set = { pairs: [] }; if (!APPDATA) { show('<h2>applications.json not found</h2>'); return; } }
+    if (!set) { show('<h2>Set not found</h2><p>' + esc(setId) + '</p>'); return; }
+    P = E.merge(tn); FOC = Object.assign({ weights: Qualities.DEFAULT_WEIGHTS }, (tn && tn.focus) || {}); SRC = tn ? 'tuning.json@' + tn.generatedAt : 'defaults'; if (APPS) P.questions = Math.max(1, Math.min(60, +(Q.get('q') || 12))); else if (Q.get('q')) P.questions = Math.max(1, Math.min(set.pairs.length, +Q.get('q')));
     requestAnimationFrame(function (t) { last = t; loop(t); });
+    if (APPS) { show('<h2>🐾 Lynx Dash · Applications</h2><p>Run with Lo. Every <span class="k">' + P.segmentMs / 1000 + ' s</span> the game pauses for one card about an <span class="k">unsent job application</span> (' + APPDATA.apps.length + ' in the pile): up/down-prioritise it, rate one aspect (−− … ++), or pick a phrasing. Tap or use number keys. ' + P.questions + ' cards per round (~' + Math.round(P.questions * (P.segmentMs + 8000) / 60000) + ' min).</p><p style="font-size:12px;color:#aaa">Choices stay in this browser; download the log at the end.' + (SIM ? ' <span class="sim">SIM MODE</span>' : '') + '</p><button id="go">▶ Run</button>'); $('go').onclick = start; if (SIM) setTimeout(start, 50); return; }
     show('<h2>🐾 Lynx Dash</h2><p>Run with Lo the lynx. Every <span class="k">' + P.segmentMs / 1000 + ' s</span> of running, the game pauses for one quick <span class="k">tone question</span>: which version sounds more like how <i>you</i> would write? ' + P.questions + ' questions per round (~' + Math.round(P.questions * (P.segmentMs + 15000) / 60000) + ' min).</p>' +
       '<p style="font-size:12px;color:#aaa">' + P.lives + ' lives; losing them all just resets your distance. Clean 30 s = streak bonus. Texts are fictional; only your taste in voice is recorded.' + (SIM ? ' <span class="sim">SIM MODE</span>' : '') + '</p><button id="go">▶ Run</button>');
     $('go').onclick = start; if (SIM) setTimeout(start, 50);
