@@ -139,9 +139,9 @@
     "onsite"
    ],
    "ref": "platsbanken:31659406",
-   "score": 3.15,
+   "score": 5.85,
    "channelKind": "ch_account",
-   "automatable": false
+   "automatable": true
   },
   {
    "id": "everi-labs-software-developer",
@@ -274,7 +274,7 @@
     "onsite"
    ],
    "ref": "platsbanken:31565340",
-   "score": 6.4,
+   "score": 13.1,
    "channelKind": "ch_email",
    "automatable": true
   },
@@ -412,7 +412,7 @@
     "years3"
    ],
    "ref": "platsbanken:31646811",
-   "score": 4.1,
+   "score": 2.6,
    "channelKind": "ch_form_unverified",
    "automatable": true
   },
@@ -549,9 +549,9 @@
     "uppsala"
    ],
    "ref": "platsbanken:31634407",
-   "score": 3.35,
+   "score": 5.55,
    "channelKind": "ch_account",
-   "automatable": false
+   "automatable": true
   },
   {
    "id": "quest-consulting-fullstackutvecklare",
@@ -686,7 +686,7 @@
     "years5"
    ],
    "ref": "platsbanken:31645682",
-   "score": 2.1,
+   "score": 5.4,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -822,7 +822,7 @@
     "senior"
    ],
    "ref": "platsbanken:31613352",
-   "score": 3.1,
+   "score": 4.1,
    "channelKind": "ch_email",
    "automatable": true
   },
@@ -960,7 +960,7 @@
     "years5"
    ],
    "ref": "platsbanken:31634272",
-   "score": 0.45,
+   "score": 1.45,
    "channelKind": "ch_email",
    "automatable": true
   },
@@ -1096,7 +1096,7 @@
     "years3"
    ],
    "ref": "platsbanken:31644396",
-   "score": 2.35,
+   "score": 5.65,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -1225,10 +1225,11 @@
     "junior",
     "lang_sv",
     "phone_app_only",
+    "phone_app_only",
     "remote"
    ],
    "ref": "platsbanken:31652730",
-   "score": 3.4,
+   "score": 5.6,
    "channelKind": "phone_app_only",
    "automatable": false
   },
@@ -1365,7 +1366,7 @@
     "years3"
    ],
    "ref": "platsbanken:31654172",
-   "score": 2.25,
+   "score": 5.55,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -1503,7 +1504,7 @@
     "years3"
    ],
    "ref": "platsbanken:31651217",
-   "score": 2.2,
+   "score": 5.5,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -1639,7 +1640,7 @@
     "onsite"
    ],
    "ref": "platsbanken:31599524",
-   "score": 5.7,
+   "score": 11.2,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -1897,7 +1898,7 @@
     "onsite"
    ],
    "ref": "platsbanken:31230726",
-   "score": 2.5,
+   "score": 7.8,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -2019,9 +2020,9 @@
     "senior"
    ],
    "ref": "platsbanken:31640313",
-   "score": 0.5,
+   "score": 2.0,
    "channelKind": "ch_account",
-   "automatable": false
+   "automatable": true
   },
   {
    "id": "knowit-ai-architect",
@@ -2155,7 +2156,7 @@
     "senior"
    ],
    "ref": "platsbanken:31525223",
-   "score": 0.5,
+   "score": 2.8,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -2289,7 +2290,7 @@
     "senior"
    ],
    "ref": "platsbanken:31609532",
-   "score": 0.5,
+   "score": 2.8,
    "channelKind": "ch_form",
    "automatable": true
   },
@@ -2425,7 +2426,7 @@
     "senior"
    ],
    "ref": "platsbanken:31657050",
-   "score": 0.5,
+   "score": 2.8,
    "channelKind": "ch_form",
    "automatable": true
   }
@@ -2448,7 +2449,7 @@
   }
  ],
  "round2": {
-  "seedFrom": "verkstad applications/2026-11/contributions.json (rounds 1–2 + rules.json)",
+  "seedFrom": "verkstad applications/2026-11/contributions.json (rounds 1–3 + rules.json)",
   "appliedCompanies": [
    "Antrino Labs AB",
    "Cambio Healthcare Systems AB",
@@ -2490,7 +2491,7 @@
    "phone_app_only": "phone app only (manual)",
    "ch_form": "web form (no login)",
    "ch_form_unverified": "web form (fields not verified)",
-   "ch_account": "portal account / login needed"
+   "ch_account": "portal account (bot can create)"
   },
   "round1Rules": [
    {
@@ -2559,45 +2560,95 @@
      "feature": "near_deadline"
     },
     {
+     "round": 2,
      "v": 0.8,
      "what": "effort +",
      "src": "Everi Labs AB",
      "pct": 100,
-     "own": true,
-     "round": 2
+     "own": true
     },
     {
+     "round": 2,
      "v": 1,
      "what": "preferred over Statens veterinärmedicinska anstalt (SVA)",
      "src": "pair",
      "pct": 100,
-     "own": true,
-     "round": 2
+     "own": true
     },
     {
+     "round": 2,
      "v": 0.5,
      "what": "office / on-site (not remote)",
      "feature": "onsite",
      "src": "Ericsson AB",
      "pct": 50,
-     "own": false,
-     "round": 2
+     "own": false
     },
     {
+     "round": 2,
      "v": -1,
      "what": "lost to Friday Väst AB",
      "src": "pair",
      "pct": 100,
-     "own": true,
-     "round": 2
+     "own": true
     },
     {
+     "round": 2,
      "v": 1,
      "what": "preferred over Ericsson AB",
      "src": "pair",
      "pct": 100,
+     "own": true
+    },
+    {
+     "v": 1,
+     "what": "preferred over Friday Väst AB",
+     "src": "pair",
+     "pct": 100,
      "own": true,
-     "round": 2
+     "round": 3
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Länsförsäkringar AB (publ)",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1.2,
+     "what": "junior / early-career",
+     "feature": "junior",
+     "src": "Proposales AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Länsförsäkringar AB (publ)",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Länsförsäkringar AB (publ)",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
     }
    ],
    "friday-ai-engineer-integration": [
@@ -2628,6 +2679,172 @@
      "feature": "lang_sv"
     },
     {
+     "round": 2,
+     "v": -1,
+     "what": "lost to Faverli AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "round": 2,
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false
+    },
+    {
+     "round": 2,
+     "v": 1,
+     "what": "preferred over Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "round": 2,
+     "v": 1,
+     "what": "language ++",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Mad Marketing & Co AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1.2,
+     "what": "junior / early-career",
+     "feature": "junior",
+     "src": "Proposales AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Mad Marketing & Co AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "web form (no login)",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    }
+   ],
+   "proposales-product-engineer": [
+    {
+     "round": 1,
+     "v": 2,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "round": 2,
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.2,
+     "what": "seniority +",
+     "src": "Proposales AB",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1.6,
+     "what": "effort ++",
+     "src": "Proposales AB",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "preferred over Länsförsäkringar AB (publ)",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    }
+   ],
+   "ericsson-ai-researcher": [
+    {
+     "round": 1,
+     "v": 2,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "round": 1,
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    },
+    {
      "v": -1,
      "what": "lost to Faverli AB",
      "src": "pair",
@@ -2636,41 +2853,41 @@
      "round": 2
     },
     {
-     "v": 0.5,
-     "what": "office / on-site (not remote)",
-     "feature": "onsite",
+     "v": 1,
+     "what": "location +",
      "src": "Ericsson AB",
-     "pct": 50,
-     "own": false,
+     "pct": 100,
+     "own": true,
      "round": 2
     },
     {
-     "v": 1,
-     "what": "preferred over Everi Labs AB",
+     "v": -1,
+     "what": "lost to Everi Labs AB",
      "src": "pair",
      "pct": 100,
      "own": true,
      "round": 2
     },
     {
-     "v": 1,
-     "what": "language ++",
-     "src": "Friday Väst AB",
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.2,
+     "what": "junior / early-career",
+     "feature": "junior",
+     "src": "Proposales AB",
      "pct": 100,
-     "own": true,
-     "round": 2
+     "own": false,
+     "round": 3
     }
    ],
-   "lansforsakringar-ai-engineer": [
-    {
-     "v": 0.8,
-     "what": "deadline ≤ 7 days",
-     "src": "Etraveli Group AB",
-     "pct": 50,
-     "own": false,
-     "feature": "near_deadline",
-     "round": 1
-    },
+   "pet-pawr-ai-driven-fullstack-developer": [
     {
      "v": 0.5,
      "what": "Swedish ad",
@@ -2697,6 +2914,33 @@
      "pct": 100,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
    "faverli-backendutvecklare": [
@@ -2752,6 +2996,24 @@
      "round": 2
     },
     {
+     "v": 1.2,
+     "what": "junior / early-career",
+     "feature": "junior",
+     "src": "Proposales AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    },
+    {
      "v": -4.0,
      "what": "phone app only (manual)",
      "feature": "phone_app_only",
@@ -2796,137 +3058,24 @@
      "pct": 100,
      "own": false,
      "round": 2
-    }
-   ],
-   "ericsson-ai-researcher": [
+    },
     {
-     "round": 1,
-     "v": 2,
+     "v": 1.2,
      "what": "junior / early-career",
-     "src": "Everi Labs AB",
-     "pct": 100,
-     "own": false,
-     "feature": "junior"
-    },
-    {
-     "round": 1,
-     "v": 0.8,
-     "what": "deadline ≤ 7 days",
-     "src": "Etraveli Group AB",
-     "pct": 50,
-     "own": false,
-     "feature": "near_deadline"
-    },
-    {
-     "v": -1,
-     "what": "lost to Faverli AB",
-     "src": "pair",
-     "pct": 100,
-     "own": true,
-     "round": 2
-    },
-    {
-     "v": 1,
-     "what": "location +",
-     "src": "Ericsson AB",
-     "pct": 100,
-     "own": true,
-     "round": 2
-    },
-    {
-     "v": -1,
-     "what": "lost to Everi Labs AB",
-     "src": "pair",
-     "pct": 100,
-     "own": true,
-     "round": 2
-    }
-   ],
-   "mad-marketing-senior-fullstack-developer": [
-    {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv",
-     "round": 1
-    },
-    {
-     "v": 0.4,
-     "what": "email channel",
-     "feature": "ch_email",
-     "src": "Everi Labs AB",
-     "pct": 50,
-     "own": false,
-     "round": 2
-    },
-    {
-     "v": 0.5,
-     "what": "office / on-site (not remote)",
-     "feature": "onsite",
-     "src": "Ericsson AB",
-     "pct": 50,
-     "own": false,
-     "round": 2
-    },
-    {
-     "v": 1.0,
-     "what": "Swedish ad",
-     "feature": "lang_sv",
-     "src": "Friday Väst AB",
-     "pct": 100,
-     "own": false,
-     "round": 2
-    }
-   ],
-   "proposales-product-engineer": [
-    {
-     "v": 2.0,
-     "what": "junior / early-career",
-     "src": "Everi Labs AB",
-     "pct": 100,
-     "own": false,
      "feature": "junior",
-     "round": 1
-    },
-    {
-     "v": 0.5,
-     "what": "office / on-site (not remote)",
-     "feature": "onsite",
-     "src": "Ericsson AB",
-     "pct": 50,
+     "src": "Proposales AB",
+     "pct": 100,
      "own": false,
-     "round": 2
-    }
-   ],
-   "pet-pawr-ai-driven-fullstack-developer": [
-    {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv",
-     "round": 1
-    },
-    {
-     "v": 0.5,
-     "what": "office / on-site (not remote)",
-     "feature": "onsite",
-     "src": "Ericsson AB",
-     "pct": 50,
-     "own": false,
-     "round": 2
+     "round": 3
     },
     {
      "v": 1.0,
      "what": "Swedish ad",
      "feature": "lang_sv",
-     "src": "Friday Väst AB",
+     "src": "Mad Marketing & Co AB",
      "pct": 100,
      "own": false,
-     "round": 2
+     "round": 3
     }
    ],
    "tng-attendo-senior-ai-native-developer": [
@@ -2956,6 +3105,33 @@
      "pct": 100,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
    "coromatic-senior-software-engineer-integration-ai-automation": [
@@ -2985,6 +3161,33 @@
      "pct": 100,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
    "quest-consulting-fullstackutvecklare": [
@@ -3031,17 +3234,103 @@
      "pct": 100,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
-   "sinch-senior-data-engineer": [
+   "mad-marketing-senior-fullstack-developer": [
     {
+     "round": 1,
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    },
+    {
+     "round": 2,
+     "v": 0.4,
+     "what": "email channel",
+     "feature": "ch_email",
+     "src": "Everi Labs AB",
+     "pct": 50,
+     "own": false
+    },
+    {
+     "round": 2,
      "v": 0.5,
      "what": "office / on-site (not remote)",
      "feature": "onsite",
      "src": "Ericsson AB",
      "pct": 50,
-     "own": false,
-     "round": 2
+     "own": false
+    },
+    {
+     "round": 2,
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false
+    },
+    {
+     "v": 2,
+     "what": "location ++",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Friday Väst AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Friday Väst AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "language ++",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": true,
+     "round": 3
     }
    ],
    "knowit-ai-architect": [
@@ -3053,6 +3342,24 @@
      "pct": 50,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
     }
    ],
    "epiminds-backend-engineer": [
@@ -3064,6 +3371,24 @@
      "pct": 50,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
     }
    ],
    "columbus-senior-ai-engineer-coe": [
@@ -3075,6 +3400,132 @@
      "pct": 50,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": 0.8,
+     "what": "effort",
+     "feature": "ch_form",
+     "src": "Proposales AB",
+     "pct": 50,
+     "own": false,
+     "round": 3
+    }
+   ],
+   "lansforsakringar-ai-engineer": [
+    {
+     "round": 1,
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    },
+    {
+     "round": 1,
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    },
+    {
+     "round": 2,
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false
+    },
+    {
+     "round": 2,
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Proposales AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 3
+    },
+    {
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
+    }
+   ],
+   "sinch-senior-data-engineer": [
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Mad Marketing & Co AB",
+     "pct": 75,
+     "own": false,
+     "round": 3
     }
    ],
    "bumbli-group-fullstackutvecklare": [
@@ -3112,6 +3563,15 @@
      "pct": 100,
      "own": false,
      "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Mad Marketing & Co AB",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
    "gears-of-leo-senior-ai-enablement-engineer": [
@@ -3181,12 +3641,12 @@
   "pool": [
    "everi-labs-software-developer",
    "friday-ai-engineer-integration",
-   "lansforsakringar-ai-engineer",
-   "mad-marketing-senior-fullstack-developer",
-   "proposales-product-engineer"
+   "proposales-product-engineer",
+   "ericsson-ai-researcher",
+   "pet-pawr-ai-driven-fullstack-developer"
   ],
   "scoring": "score = Σ own ratings (100%) + Σ propagated feature ratings × factor + deadline urgency + rules (phone_app_only −4 @100%)",
-  "round": 3
+  "round": 4
  },
  "blocks": [
   {
@@ -3359,11 +3819,11 @@
    "shown": 1
   },
   {
-   "id": "fit_junior-en-e79bc0",
+   "id": "fit_junior-en-01b009",
    "version": 1,
    "slot": "fit_junior",
    "lang": "en",
-   "text": "That is why an early-career role in a small team suits me well. Python is my main language and Node.js a strong second.",
+   "text": "That is why I am looking for a role where I can grow with the team. Python is my main language and Node.js a strong second.",
    "tags": [
     "english",
     "generic"
@@ -3372,11 +3832,11 @@
    "shown": 0
   },
   {
-   "id": "fit_junior-sv-14d316",
+   "id": "fit_junior-sv-c71886",
    "version": 1,
    "slot": "fit_junior",
    "lang": "sv",
-   "text": "Därför passar en juniorroll i ett litet team mig bra. Python är mitt huvudspråk och Node.js mitt andra.",
+   "text": "Därför söker jag en roll där jag kan växa tillsammans med teamet. Python är mitt huvudspråk och Node.js mitt andra.",
    "tags": [
     "generic",
     "swedish"
