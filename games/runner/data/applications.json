@@ -89,6 +89,15 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "ch_teamtailor",
+    "hybrid",
+    "lang_en",
+    "near_deadline",
+    "uppsala",
+    "years3"
    ]
   },
   {
@@ -197,6 +206,14 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "degree",
+    "junior",
+    "lang_en",
+    "near_deadline",
+    "onsite"
    ]
   },
   {
@@ -302,6 +319,13 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ch_email",
+    "junior",
+    "lang_en",
+    "near_deadline",
+    "onsite"
    ]
   },
   {
@@ -408,6 +432,14 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "lang_sv",
+    "near_deadline",
+    "onsite",
+    "senior",
+    "years3"
    ]
   },
   {
@@ -515,6 +547,12 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "hybrid",
+    "junior",
+    "lang_sv",
+    "uppsala"
    ]
   },
   {
@@ -620,6 +658,15 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "ch_ponty",
+    "consulting",
+    "lang_sv",
+    "onsite",
+    "years3",
+    "years5"
    ]
   },
   {
@@ -727,6 +774,12 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ch_email",
+    "lang_sv",
+    "onsite",
+    "senior"
    ]
   },
   {
@@ -834,6 +887,14 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ch_email",
+    "degree",
+    "hybrid",
+    "lang_sv",
+    "years3",
+    "years5"
    ]
   },
   {
@@ -940,6 +1001,12 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "lang_sv",
+    "onsite",
+    "years3"
    ]
   },
   {
@@ -1043,6 +1110,11 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "junior",
+    "lang_sv",
+    "remote"
    ]
   },
   {
@@ -1149,6 +1221,13 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "lang_sv",
+    "onsite",
+    "senior",
+    "years3"
    ]
   },
   {
@@ -1256,6 +1335,13 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "lang_sv",
+    "onsite",
+    "senior",
+    "years3"
    ]
   },
   {
@@ -1361,6 +1447,14 @@
       "Jag är baserad i Stockholm och kan börja med kort varsel."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "ch_ponty",
+    "degree",
+    "junior",
+    "lang_sv",
+    "onsite"
    ]
   },
   {
@@ -1467,6 +1561,14 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "hybrid",
+    "lang_en",
+    "senior",
+    "years3",
+    "years5"
    ]
   },
   {
@@ -1563,6 +1665,12 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ch_teamtailor",
+    "junior",
+    "lang_en",
+    "onsite"
    ]
   },
   {
@@ -1661,6 +1769,11 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "lang_en",
+    "onsite",
+    "senior"
    ]
   },
   {
@@ -1766,6 +1879,14 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "ch_teamtailor",
+    "consulting",
+    "lang_en",
+    "onsite",
+    "senior"
    ]
   },
   {
@@ -1871,6 +1992,12 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ch_teamtailor",
+    "lang_en",
+    "onsite",
+    "senior"
    ]
   },
   {
@@ -1969,6 +2096,13 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ch_teamtailor",
+    "hybrid",
+    "lang_en",
+    "senior",
+    "years3"
    ]
   },
   {
@@ -2075,6 +2209,13 @@
       "I am based in Stockholm and can start at short notice."
      ]
     }
+   ],
+   "features": [
+    "ai_role",
+    "ch_teamtailor",
+    "lang_en",
+    "onsite",
+    "senior"
    ]
   }
  ],
@@ -2094,5 +2235,377 @@
    "role": "AI Solution Architect",
    "why": "on hold – 90-day cooldown until 2027-01-24"
   }
- ]
+ ],
+ "round2": {
+  "seedFrom": "runner-apps-20261102 (round 1, 12 cards)",
+  "appliedCompanies": [
+   "Antrino Labs AB",
+   "Cambio Healthcare Systems AB",
+   "ChopChop",
+   "Finna",
+   "Happy Group AB",
+   "Iver Accelerate AB",
+   "Lovable",
+   "Prover Technology",
+   "Rasulson Consulting AB",
+   "RebTel Networks AB",
+   "SAVR AB",
+   "Spiich Labs",
+   "Sveaviken PM AB",
+   "Umain AB",
+   "Veritaz AB",
+   "Workday Sweden AB (Sana)",
+   "Xensam"
+  ],
+  "removedApplied": [],
+  "featureLabels": {
+   "junior": "junior / early-career",
+   "senior": "senior role",
+   "years3": "3+ years required",
+   "years5": "5+ years required",
+   "degree": "degree asked",
+   "lang_sv": "Swedish ad",
+   "lang_en": "English ad",
+   "remote": "fully remote",
+   "hybrid": "hybrid",
+   "onsite": "office / on-site (not remote)",
+   "uppsala": "Uppsala",
+   "ai_role": "AI role",
+   "consulting": "consulting",
+   "near_deadline": "deadline ≤ 7 days",
+   "ch_email": "email channel",
+   "ch_ponty": "Ponty portal",
+   "ch_teamtailor": "Teamtailor"
+  },
+  "round1Rules": [
+   {
+    "feature": "junior",
+    "label": "junior / early-career",
+    "value": 2,
+    "pct": 100,
+    "src": "Everi Labs AB",
+    "card": 1,
+    "why": "Markus: upvoted because junior"
+   },
+   {
+    "feature": "near_deadline",
+    "label": "deadline ≤ 7 days",
+    "value": 1.6,
+    "pct": 50,
+    "src": "Etraveli Group AB",
+    "card": 2,
+    "why": "deadline rating, default 50%"
+   },
+   {
+    "feature": "lang_sv",
+    "label": "Swedish ad",
+    "value": 1.0,
+    "pct": 50,
+    "src": "Quest Consulting Sverige AB",
+    "card": 5,
+    "why": "language rating, default 50%"
+   },
+   {
+    "feature": "years5",
+    "label": "5+ years required",
+    "value": -2,
+    "pct": 100,
+    "src": "Bumbli Group AB",
+    "card": 10,
+    "why": "Markus: downvoted for 5+ years"
+   },
+   {
+    "feature": "ch_ponty",
+    "label": "Ponty portal",
+    "value": 1.6,
+    "pct": 50,
+    "src": "Friday Väst AB",
+    "card": 11,
+    "why": "effort rating, default 50%"
+   }
+  ],
+  "seed": {
+   "etraveli-applied-ai-engineer": [
+    {
+     "v": 1.6,
+     "what": "deadline ++",
+     "src": "Etraveli Group AB",
+     "pct": 100,
+     "own": true
+    }
+   ],
+   "ericsson-ai-researcher": [
+    {
+     "v": 2.0,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    }
+   ],
+   "everi-labs-software-developer": [
+    {
+     "v": 2,
+     "what": "vote up",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    }
+   ],
+   "lansforsakringar-ai-engineer": [
+    {
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "sva-systemutvecklare-labbdatasystem": [
+    {
+     "v": 2.0,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "quest-consulting-fullstackutvecklare": [
+    {
+     "v": 1.0,
+     "what": "language ++",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": -2.0,
+     "what": "5+ years required",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": false,
+     "feature": "years5"
+    },
+    {
+     "v": 0.8,
+     "what": "Ponty portal",
+     "src": "Friday Väst AB",
+     "pct": 50,
+     "own": false,
+     "feature": "ch_ponty"
+    }
+   ],
+   "mad-marketing-senior-fullstack-developer": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "bumbli-group-fullstackutvecklare": [
+    {
+     "v": -2,
+     "what": "vote down",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "pet-pawr-ai-driven-fullstack-developer": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "faverli-backendutvecklare": [
+    {
+     "v": 1.6,
+     "what": "effort ++",
+     "src": "Faverli AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": 2.0,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "tng-attendo-senior-ai-native-developer": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "coromatic-senior-software-engineer-integration-ai-automation": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "friday-ai-engineer-integration": [
+    {
+     "v": 1.6,
+     "what": "effort ++",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "v": 2.0,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    }
+   ],
+   "gears-of-leo-senior-ai-enablement-engineer": [
+    {
+     "v": -2.0,
+     "what": "5+ years required",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": false,
+     "feature": "years5"
+    }
+   ],
+   "proposales-product-engineer": [
+    {
+     "v": 2.0,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    }
+   ],
+   "sinch-senior-data-engineer": [],
+   "knowit-ai-architect": [],
+   "epiminds-backend-engineer": [],
+   "qred-bank-backend-developer-typescript": [],
+   "columbus-senior-ai-engineer-coe": []
+  },
+  "urgency": {
+   "etraveli-applied-ai-engineer": 1.4,
+   "ericsson-ai-researcher": 1.35,
+   "everi-labs-software-developer": 1.3,
+   "lansforsakringar-ai-engineer": 1.3,
+   "sva-systemutvecklare-labbdatasystem": 0.85,
+   "quest-consulting-fullstackutvecklare": 0.8,
+   "mad-marketing-senior-fullstack-developer": 0.7,
+   "bumbli-group-fullstackutvecklare": 0.55,
+   "pet-pawr-ai-driven-fullstack-developer": 0.35,
+   "faverli-backendutvecklare": 0.3,
+   "tng-attendo-senior-ai-native-developer": 0.25,
+   "coromatic-senior-software-engineer-integration-ai-automation": 0.2,
+   "friday-ai-engineer-integration": 0.1,
+   "gears-of-leo-senior-ai-enablement-engineer": 0.1,
+   "proposales-product-engineer": 0.0,
+   "sinch-senior-data-engineer": 0.0,
+   "knowit-ai-architect": 0.0,
+   "epiminds-backend-engineer": 0.0,
+   "qred-bank-backend-developer-typescript": 0.0,
+   "columbus-senior-ai-engineer-coe": 0.0
+  },
+  "decided": {
+   "education": {
+    "choice": 2,
+    "pct": 100,
+    "src": "Ericsson AB, TNG Group AB, Gears of Leo AB (LeoVegas Group)",
+    "note": "Markus picked option 3 3× (Ericsson, TNG, Gears of Leo) – applies to every letter with this slot"
+   },
+   "ai_pitch": {
+    "choice": 0,
+    "pct": 50,
+    "src": "Mad Marketing & Co AB",
+    "note": "Markus picked option 1 once – applies to every letter with this slot"
+   }
+  },
+  "pool": [
+   "faverli-backendutvecklare",
+   "friday-ai-engineer-integration",
+   "ericsson-ai-researcher",
+   "everi-labs-software-developer",
+   "sva-systemutvecklare-labbdatasystem"
+  ],
+  "scoring": "score = Σ own ratings (100%) + Σ propagated feature ratings × factor + deadline urgency 1.5×max(0,1−days/30)"
+ }
 }

@@ -76,7 +76,7 @@
     var el = $('pw'), card = AM.next(), holder = document.createElement('div');
     el.innerHTML = '<div style="text-align:center;padding:6px 0;font-size:13px;color:#aaa">' + (SIM ? '<span class="sim">SIM</span> ' : '') + 'Segment ' + (qi + 1) + ' done · ' + (st.clean ? '<span class="k">clean run! +' + b + '</span>' : st.crashes + ' crash' + (st.crashes === 1 ? '' : 'es')) + '</div>'; el.appendChild(holder);
     AppsMode.render(holder, card, function (c) { var e = AM.answer(card, c); S.event('apps_choice', e); qi++; g.afterQuestion(); if (qi >= P.questions) summary(); else beginRun(); });
-    if (SIM) setTimeout(function () { var bs = holder.querySelectorAll('button[data-c]'); bs[Math.floor(rng() * bs.length)].click(); }, Math.round(1500 / FAST));
+    if (SIM) { var simClick = function () { var bs = holder.querySelectorAll('button[data-c],button[data-p]'); if (!bs.length) return; bs[Math.floor(rng() * bs.length)].click(); if (holder.querySelector('button[data-p]')) setTimeout(simClick, Math.round(800 / FAST)); }; setTimeout(simClick, Math.round(1500 / FAST)); }
   }
   function summaryApps() {
     var s = g.state(), sum = { distance: Math.round(s.dist), bestRunDistance: Math.round(s.bestRunDist), score: Math.round(s.score), coins: s.coins, knockouts: s.knockouts, bestStreak: bestStreak, cleanBonusTotal: bonusTotal, cardsAnswered: qi };
