@@ -21,7 +21,7 @@
       s.shown++; n++;
       if (card.type === 'updown' && choice !== 'skip') s.votes += choice === 'up' ? 1 : -1;
       if (card.type === 'aspect') { e.aspect = card.aspect.key; e.weight = card.aspect.w; if (choice !== 'skip') s.aspects[card.aspect.key] = choice; }
-      if (card.type === 'phrasing') { e.slot = card.phr.slot; if (choice !== 'skip') { s.phrasings[card.phr.slot] = choice; e.text = card.phr.options[choice]; } }
+      if (card.type === 'phrasing') { e.slot = card.phr.slot; if (choice !== 'skip') { s.phrasings[card.phr.slot] = choice; e.text = card.phr.options[choice]; if (card.phr.blockIds) e.blockId = card.phr.blockIds[choice]; } }
       e.scoreAfter = score(card.app); log.push(e); return e;
     }
     function result() {
@@ -89,7 +89,7 @@
       if (card.type === 'pair') { e.a = card.a.id; e.b = card.b.id; shown[card.b.id]++; if (choice === 'a' || choice === 'b') { var w = choice === 'a' ? card.a : card.b, l = choice === 'a' ? card.b : card.a; e.winner = w.company; contrib[w.id].push({ v: 1, what: 'preferred over ' + l.company, src: 'pair', pct: 100, own: true, round: 2 }); contrib[l.id].push({ v: -1, what: 'lost to ' + w.company, src: 'pair', pct: 100, own: true, round: 2 }); } }
       if (card.type === 'aspect') { e.aspect = card.aspect.key; e.weight = card.aspect.w; e.features = card.feats; if (choice !== 'skip') { var pct = choice.pct == null ? DEF_PCT : choice.pct; e.choice = choice.r; e.pct = pct; e.pctDefaulted = choice.pct == null; rated[card.app.id][card.aspect.key] = choice.r;
         e.propagatedTo = propagate(card.app, card.feats, choice.r * card.aspect.w, pct, card.aspect.key + ' ' + SCALE[choice.r + 2].k); } }
-      if (card.type === 'phrasing') { e.slot = card.phr.slot; if (choice !== 'skip') { decided[card.phr.slot] = { choice: choice, pct: 100, src: card.app.company, round: 2, auto: false }; e.text = card.phr.options[choice]; } }
+      if (card.type === 'phrasing') { e.slot = card.phr.slot; if (choice !== 'skip') { decided[card.phr.slot] = { choice: choice, pct: 100, src: card.app.company, round: 2, auto: false }; e.text = card.phr.options[choice]; if (card.phr.blockIds) e.blockId = card.phr.blockIds[choice]; } }
       if (card.type === 'final') { pick = choice; e.top = card.top.map(function (a) { return a.id; }); e.company = choice === 'none' ? 'none' : byId[choice].company; }
       if (card.app) e.scoreAfter = score(card.app.id); log.push(e); return e;
     }

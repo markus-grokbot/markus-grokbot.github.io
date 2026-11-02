@@ -4,103 +4,6 @@
  "rule": "Stockholm/Uppsala (or remote) only; open deadlines only",
  "apps": [
   {
-   "id": "etraveli-applied-ai-engineer",
-   "company": "Etraveli Group AB",
-   "role": "Applied AI Engineer",
-   "location": "Uppsala office, hybrid",
-   "deadline": "2026-11-04",
-   "status": "backup",
-   "channel": "Teamtailor form",
-   "link": null,
-   "lang": "en",
-   "fit": [
-    "Applied AI role; letter offers a demo; showcase agent-trace-evals (+ staged supervisor harness), llm-json-fixer, ops-pack-demo."
-   ],
-   "gaps": [
-    "Hard ask: 3+ years software engineering + Ragas/DeepEval/LangSmith – stated plainly.",
-    "Status in tracker: backup (use only if under 20 sent)."
-   ],
-   "days_left": 2,
-   "aspects": [
-    {
-     "key": "fit",
-     "label": "Role fit (Python/JS/AI agents)",
-     "w": 1.5,
-     "hint": "Applied AI role; letter offers a demo; showcase agent-trace-evals (+ staged supervisor harness), llm-json-fixer, ops-pack-demo."
-    },
-    {
-     "key": "seniority",
-     "label": "Seniority match",
-     "w": 1.2,
-     "hint": "Hard ask: 3+ years software engineering + Ragas/DeepEval/LangSmith – stated plainly."
-    },
-    {
-     "key": "location",
-     "label": "Location / commute",
-     "w": 1.0,
-     "hint": "Uppsala office, hybrid"
-    },
-    {
-     "key": "deadline",
-     "label": "Deadline urgency",
-     "w": 0.8,
-     "hint": "Deadline 2026-11-04 (2 days left)"
-    },
-    {
-     "key": "effort",
-     "label": "Effort left to send",
-     "w": 0.8,
-     "hint": "Channel: Teamtailor form."
-    },
-    {
-     "key": "language",
-     "label": "Language requirements",
-     "w": 0.5,
-     "hint": "English ad – English letter staged"
-    },
-    {
-     "key": "ai",
-     "label": "AI-assisted-application suitability",
-     "w": 0.7,
-     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
-    },
-    {
-     "key": "interest",
-     "label": "Interest / meaning",
-     "w": 1.0,
-     "hint": "Dear AI Optimization team,"
-    }
-   ],
-   "phrasings": [
-    {
-     "slot": "ai_pitch",
-     "label": "AI-collaboration / demo offer",
-     "options": [
-      "If you want to see more than the attachments, reply to my agent-run address with a task or a question, and I will return a tested solution and walk you through it in a live demo.",
-      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
-      "(drop this paragraph)"
-     ]
-    },
-    {
-     "slot": "closing",
-     "label": "Closing / location line",
-     "options": [
-      "Best regards,\nMarkus Isaksson",
-      "I am based in Stockholm and can start at short notice."
-     ]
-    }
-   ],
-   "features": [
-    "ai_role",
-    "ch_teamtailor",
-    "hybrid",
-    "lang_en",
-    "near_deadline",
-    "uppsala",
-    "years3"
-   ]
-  },
-  {
    "id": "ericsson-ai-researcher",
    "company": "Ericsson AB",
    "role": "AI Researcher (Ericsson Research, AI for 6G RAN)",
@@ -178,6 +81,11 @@
       "I am applying for the AI Researcher role at Ericsson Research. What draws me is the combination you describe: AI/ML concepts for future radio access networks, developed with simulation frameworks and modern AI-assisted tools, and turned into prototypes.",
       "I am applying for the AI Researcher role at Ericsson Research.",
       "What draws me is the combination you describe: AI/ML concepts for future radio access networks, developed with simulation frameworks and modern AI-assisted tools, and turned into prototypes."
+     ],
+     "blockIds": [
+      "opening-en-44fd5c",
+      "opening-en-b888d5",
+      "opening-en-98e9b2"
      ]
     },
     {
@@ -187,6 +95,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-5957a7",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -196,6 +109,11 @@
       "If it helps, reply to my agent-run address with a small research question – for example adding a learned channel predictor to the simulator and scoring it on the same seeds – and I will come back with a tested result and walk you through it live, including where the AI assistant wrote code and where I changed it.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-4033aa",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -204,6 +122,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-c0e98a",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -214,7 +136,9 @@
     "lang_en",
     "near_deadline",
     "onsite"
-   ]
+   ],
+   "ref": "platsbanken:31659406",
+   "score": 3.15
   },
   {
    "id": "everi-labs-software-developer",
@@ -291,6 +215,11 @@
       "I am applying for the Software Developer role at Everi Labs. Automating clinical documentation is exactly the kind of AI work I find worth doing carefully: the output has to be right, sensitive data has to stay protected, and staff need an interface they can trust every day.",
       "I am applying for the Software Developer role at Everi Labs.",
       "Automating clinical documentation is exactly the kind of AI work I find worth doing carefully: the output has to be right, sensitive data has to stay protected, and staff need an interface they can trust every day."
+     ],
+     "blockIds": [
+      "opening-en-423b40",
+      "opening-en-5283ff",
+      "opening-en-840e69"
      ]
     },
     {
@@ -300,6 +229,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-5957a7",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -309,6 +243,11 @@
       "If you want to see more than the attachments, reply to my agent-run address with a small task – for example a form plus API for an anonymised clinical note – and I will come back with a tested solution and walk you through it live.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-eebcb6",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -317,6 +256,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-c0e98a",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -326,7 +269,9 @@
     "lang_en",
     "near_deadline",
     "onsite"
-   ]
+   ],
+   "ref": "platsbanken:31565340",
+   "score": 6.4
   },
   {
    "id": "lansforsakringar-ai-engineer",
@@ -404,6 +349,11 @@
       "Jag söker tjänsten som AI Engineer inom Data & AI. Det som lockar är att ni bygger hela livscykeln själva – från RAG och agenter med tool calling till drift, observability och dataskydd – för en intern GPT-lösning med över 6 000 användare.",
       "Jag söker tjänsten som AI Engineer inom Data & AI.",
       "Det som lockar är att ni bygger hela livscykeln själva – från RAG och agenter med tool calling till drift, observability och dataskydd – för en intern GPT-lösning med över 6 000 användare."
+     ],
+     "blockIds": [
+      "opening-sv-3d68e6",
+      "opening-sv-c982e4",
+      "opening-sv-2a73d5"
      ]
     },
     {
@@ -413,6 +363,11 @@
       "Jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024, ingen heltidsanställning som utvecklare ännu, och min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-946121",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -422,6 +377,11 @@
       "Vill ni se mer än bilagorna? Svara till min agentdrivna adress med en liten uppgift – till exempel en anonymiserad fråga där ett RAG-svar blev fel – så återkommer jag med en testad lösning och en utvärdering, och går igenom den live.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-68dc87",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -430,6 +390,10 @@
      "options": [
       "Jag är baserad i Stockholm, är svensk medborgare och kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-b5e892",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -440,7 +404,9 @@
     "onsite",
     "senior",
     "years3"
-   ]
+   ],
+   "ref": "platsbanken:31646811",
+   "score": 4.1
   },
   {
    "id": "sva-systemutvecklare-labbdatasystem",
@@ -519,6 +485,11 @@
       "Jag söker tjänsten som systemutvecklare för SVA:s labbdatasystem och e-tjänster. Det som lockar mig är kombinationen av självledande team, möjligheten att bidra till AI- och datadelningsarbetet och att växa mot arkitektur över tid – och att det är ett uppdrag som spelar roll för beredskapen.",
       "Jag söker tjänsten som systemutvecklare för SVA:s labbdatasystem och e-tjänster.",
       "Det som lockar mig är kombinationen av självledande team, möjligheten att bidra till AI- och datadelningsarbetet och att växa mot arkitektur över tid – och att det är ett uppdrag som spelar roll för beredskapen."
+     ],
+     "blockIds": [
+      "opening-sv-f8fdc5",
+      "opening-sv-2a7285",
+      "opening-sv-002e04"
      ]
     },
     {
@@ -528,6 +499,11 @@
       "C# kan jag på grundnivå: freeCodeCamps certifiering Foundational C# with Microsoft (verifierbar via freeCodeCamp och LinkedIn) och tidiga spelutvecklingsförsök i Unity.",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-97e871",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -537,6 +513,11 @@
       "Vill ni se mer än bilagorna går det bra att svara till min agentdrivna adress med en uppgift eller fråga – till exempel en liten C#-uppgift – så återkommer jag med en testad lösning och går igenom den live.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-c17301",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -545,6 +526,10 @@
      "options": [
       "Jag är baserad i Stockholm, pendlar gärna till Uppsala, är svensk medborgare, har inga problem med säkerhetsprövning och kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-1a76e9",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -553,7 +538,9 @@
     "junior",
     "lang_sv",
     "uppsala"
-   ]
+   ],
+   "ref": "platsbanken:31634407",
+   "score": 3.35
   },
   {
    "id": "quest-consulting-fullstackutvecklare",
@@ -630,6 +617,11 @@
       "Jag söker uppdraget som AI-driven fullstackutvecklare. Stacken – JavaScript och React i frontend, Python och FastAPI i backend, PostgreSQL – är den jag bygger i, och ert krav att \"kvalitetsgranska, förstå och förbättra AI-genererad kod\" är det jag lägger mest tid på.",
       "Jag söker uppdraget som AI-driven fullstackutvecklare.",
       "Stacken – JavaScript och React i frontend, Python och FastAPI i backend, PostgreSQL – är den jag bygger i, och ert krav att \"kvalitetsgranska, förstå och förbättra AI-genererad kod\" är det jag lägger mest tid på."
+     ],
+     "blockIds": [
+      "opening-sv-af98d6",
+      "opening-sv-65e4fe",
+      "opening-sv-bb2fe3"
      ]
     },
     {
@@ -639,6 +631,11 @@
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-0fd956",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -648,6 +645,11 @@
       "Vill ni se arbetssättet? Svara till min agentdrivna adress med en liten uppgift – till exempel ett planeringsverktyg med en tabell, ett API och en vy – så återkommer jag med en testad lösning och visar var jag lät AI skriva och var jag ändrade.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-ae7b49",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -656,6 +658,10 @@
      "options": [
       "Jag är baserad i Stockholm, och uppdraget till november 2027 passar mig bra. Jag kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-c3017e",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -667,7 +673,9 @@
     "onsite",
     "years3",
     "years5"
-   ]
+   ],
+   "ref": "platsbanken:31645682",
+   "score": 2.1
   },
   {
    "id": "mad-marketing-senior-fullstack-developer",
@@ -746,6 +754,11 @@
       "Jag söker tjänsten som Senior Fullstack Developer på Growth-avdelningen. Det jag fastnar för i annonsen är meningen \"Du kan bygga utan AI, utveckla med AI och vet när tekniken skapar verkligt värde\" – den kombinationen av fullstack, performance och AI-automation är det jag själv bygger.",
       "Jag söker tjänsten som Senior Fullstack Developer på Growth-avdelningen.",
       "Det jag fastnar för i annonsen är meningen \"Du kan bygga utan AI, utveckla med AI och vet när tekniken skapar verkligt värde\" – den kombinationen av fullstack, performance och AI-automation är det jag själv bygger."
+     ],
+     "blockIds": [
+      "opening-sv-b4a5e4",
+      "opening-sv-452e83",
+      "opening-sv-f08adc"
      ]
     },
     {
@@ -755,6 +768,11 @@
       "Min bas är JavaScript/TypeScript, Python, SQL och 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-7515ee",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -764,6 +782,11 @@
       "Vill ni se hur jag arbetar? Svara till min agentdrivna adress med en liten uppgift – till exempel en anonymiserad kundsajt med ett tracking- eller performanceproblem – så återkommer jag med en testad lösning och går igenom den live.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-f92154",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -772,6 +795,10 @@
      "options": [
       "Jag är baserad i Stockholm, och arbete på plats fungerar för mig. Mitt löneanspråk är 35 000 kr/månad. Jag är svensk medborgare och kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-cb6962",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -780,7 +807,9 @@
     "lang_sv",
     "onsite",
     "senior"
-   ]
+   ],
+   "ref": "platsbanken:31613352",
+   "score": 3.1
   },
   {
    "id": "bumbli-group-fullstackutvecklare",
@@ -859,6 +888,11 @@
       "Jag söker tjänsten som fullstackutvecklare i Stockholm (hybrid). Annonsens tes – att AI höjer ribban i stället för att ersätta utvecklaren, och att utvecklaren ska vara filtret mot slop – är precis så jag arbetar.",
       "Jag söker tjänsten som fullstackutvecklare i Stockholm (hybrid).",
       "Annonsens tes – att AI höjer ribban i stället för att ersätta utvecklaren, och att utvecklaren ska vara filtret mot slop – är precis så jag arbetar."
+     ],
+     "blockIds": [
+      "opening-sv-cc71b2",
+      "opening-sv-d3e335",
+      "opening-sv-e640c2"
      ]
     },
     {
@@ -868,6 +902,11 @@
       "Jag har ingen högskoleexamen – min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar) – och ingen heltidsanställning som utvecklare ännu, utan cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-db09ac",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -877,6 +916,11 @@
       "Därför erbjuder jag hellre en demonstration än fler ord: svara till min agentdrivna adress med en liten uppgift – gärna ur en verklig kunds vardag, anonymiserad – så återkommer jag med en testad lösning och går igenom besluten live, inklusive var jag valde bort AI-förslag.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-779328",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -885,6 +929,10 @@
      "options": [
       "Jag är baserad i Stockholm, är svensk medborgare och kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-b5e892",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -895,7 +943,9 @@
     "lang_sv",
     "years3",
     "years5"
-   ]
+   ],
+   "ref": "platsbanken:31634272",
+   "score": 0.45
   },
   {
    "id": "pet-pawr-ai-driven-fullstack-developer",
@@ -973,6 +1023,11 @@
       "Jag söker tjänsten som AI Driven Fullstack Developer. Annonsen beskriver exakt det jag tycker är det svåra och intressanta med agenter: \"tydliga gränser för vad agenten gör själv och när en människa godkänner\".",
       "Jag söker tjänsten som AI Driven Fullstack Developer.",
       "Annonsen beskriver exakt det jag tycker är det svåra och intressanta med agenter: \"tydliga gränser för vad agenten gör själv och när en människa godkänner\"."
+     ],
+     "blockIds": [
+      "opening-sv-13f611",
+      "opening-sv-218027",
+      "opening-sv-463c85"
      ]
     },
     {
@@ -982,6 +1037,11 @@
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-0fd956",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -991,6 +1051,11 @@
       "Vill ni se mer än bilagorna? Svara till min agentdrivna adress med ett anonymiserat manuellt moment från butik eller lager, så återkommer jag med ett testat agentflöde med godkännandesteg och en uppskattning av sparade timmar, och går igenom det live.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-defe91",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -999,6 +1064,10 @@
      "options": [
       "Jag är baserad i Stockholm, och hybridarbete från Linnégatan passar mig bra. Jag kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-b89ccc",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -1007,7 +1076,9 @@
     "lang_sv",
     "onsite",
     "years3"
-   ]
+   ],
+   "ref": "platsbanken:31644396",
+   "score": 2.35
   },
   {
    "id": "faverli-backendutvecklare",
@@ -1082,6 +1153,11 @@
       "Jag söker tjänsten som backendutvecklare på Faverli. Jobbmatchning med en AI-assistent är ett problem jag tycker om: det räcker inte att Faverli Buddy låter övertygande, matchningarna måste vara bra och användardatan måste hanteras varsamt.",
       "Jag söker tjänsten som backendutvecklare på Faverli.",
       "Jobbmatchning med en AI-assistent är ett problem jag tycker om: det räcker inte att Faverli Buddy låter övertygande, matchningarna måste vara bra och användardatan måste hanteras varsamt."
+     ],
+     "blockIds": [
+      "opening-sv-e79649",
+      "opening-sv-7b7119",
+      "opening-sv-447f4e"
      ]
     },
     {
@@ -1091,6 +1167,11 @@
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), bland annat Back End Development and APIs och Relational Database.",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-6b119f",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -1100,6 +1181,11 @@
       "Vill ni se hur jag jobbar? Skicka en liten uppgift till min agentdrivna adress – till exempel en enkel matchningsfunktion mot några anonymiserade annonser – så återkommer jag med en testad lösning och går igenom den.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-95c326",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -1108,6 +1194,10 @@
      "options": [
       "Jag är baserad i Stockholm, distansarbete passar mig utmärkt, och jag kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-c2d617",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -1115,7 +1205,9 @@
     "junior",
     "lang_sv",
     "remote"
-   ]
+   ],
+   "ref": "platsbanken:31652730",
+   "score": 7.4
   },
   {
    "id": "tng-attendo-senior-ai-native-developer",
@@ -1193,6 +1285,11 @@
       "Jag söker tjänsten som Senior AI-Native Developer hos Attendo. Det som lockar mest är att få vara en av de första utvecklarna i en ny satsning, där AI är en del både av hur lösningarna byggs och av vad de gör – och där målet är att förenkla vardagen för medarbetare inom vård och omsorg.",
       "Jag söker tjänsten som Senior AI-Native Developer hos Attendo.",
       "Det som lockar mest är att få vara en av de första utvecklarna i en ny satsning, där AI är en del både av hur lösningarna byggs och av vad de gör – och där målet är att förenkla vardagen för medarbetare inom vård och omsorg."
+     ],
+     "blockIds": [
+      "opening-sv-8573d8",
+      "opening-sv-1cf62c",
+      "opening-sv-ca4bf5"
      ]
     },
     {
@@ -1202,6 +1299,11 @@
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-0fd956",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -1211,6 +1313,11 @@
       "Vill ni se arbetssättet i praktiken? Skicka en liten uppgift till min agentdrivna adress – till exempel ett enkelt formulär med API för en anonymiserad avvikelserapport – så återkommer jag med en testad lösning och går igenom den live, inklusive var agenten skrev koden och var jag ändrade den.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-2c8c5c",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -1219,6 +1326,10 @@
      "options": [
       "Jag finns i Stockholm, flyttar med tjänsten och har tillfälligt boende ordnat, och kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-71ede4",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -1228,7 +1339,9 @@
     "onsite",
     "senior",
     "years3"
-   ]
+   ],
+   "ref": "platsbanken:31654172",
+   "score": 2.25
   },
   {
    "id": "coromatic-senior-software-engineer-integration-ai-automation",
@@ -1307,6 +1420,11 @@
       "Jag söker tjänsten som Senior Software Engineer – Integration & AI Automation Lead. Annonsen beskriver en roll som \"inte primärt handlar om traditionell manuell kodutveckling, utan om att orkestrera, granska och kvalitetssäkra AI-genererade lösningar\".",
       "Jag söker tjänsten som Senior Software Engineer – Integration & AI Automation Lead.",
       "Annonsen beskriver en roll som \"inte primärt handlar om traditionell manuell kodutveckling, utan om att orkestrera, granska och kvalitetssäkra AI-genererade lösningar\"."
+     ],
+     "blockIds": [
+      "opening-sv-3f4bb0",
+      "opening-sv-ca8132",
+      "opening-sv-8e1ae6"
      ]
     },
     {
@@ -1316,6 +1434,11 @@
       "Azure Integration Services, Logic Apps, Copilot Studio och Power Platform har jag inte använt; min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-c1abb4",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -1325,6 +1448,11 @@
       "Vill ni se arbetssättet i praktiken? Svara till min agentdrivna adress med en liten integrationsuppgift – till exempel två anonymiserade system som ska prata med varandra – så återkommer jag med en testad lösning och går igenom var jag lät AI arbeta och var jag sa nej.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-236627",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -1333,6 +1461,10 @@
      "options": [
       "Jag är baserad i Stockholm, är svensk medborgare och går gärna igenom säkerhetsprövning och registerkontroll. Jag kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-471515",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -1342,7 +1474,9 @@
     "onsite",
     "senior",
     "years3"
-   ]
+   ],
+   "ref": "platsbanken:31651217",
+   "score": 2.2
   },
   {
    "id": "friday-ai-engineer-integration",
@@ -1419,6 +1553,11 @@
       "Jag söker tjänsten som AI Engineer inom integration och utveckling. Det som lockar är att verksamheten byggs upp nu, och att rollen handlar om att få AI att fungera i riktiga tekniska system – integrera, testa, utvärdera och förbättra – snarare än om demos.",
       "Jag söker tjänsten som AI Engineer inom integration och utveckling.",
       "Det som lockar är att verksamheten byggs upp nu, och att rollen handlar om att få AI att fungera i riktiga tekniska system – integrera, testa, utvärdera och förbättra – snarare än om demos."
+     ],
+     "blockIds": [
+      "opening-sv-41f881",
+      "opening-sv-b91aa6",
+      "opening-sv-959191"
      ]
     },
     {
@@ -1428,6 +1567,11 @@
       "Annonsen efterfrågar en teknisk utbildning; jag har ingen högskoleexamen – min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), bland annat Machine Learning with Python och Data Analysis with Python.",
       "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
       "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare."
+     ],
+     "blockIds": [
+      "education-sv-f46c7e",
+      "education-sv-fb7484",
+      "education-sv-c89640"
      ]
     },
     {
@@ -1437,6 +1581,11 @@
       "Vill ni se mer? Svara till min agentdrivna adress med en liten integrationsuppgift – till exempel att koppla en modell till ett anonymiserat dataflöde – så återkommer jag med en testad lösning och en utvärdering och går igenom den live.",
       "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
       "(stryk stycket)"
+     ],
+     "blockIds": [
+      "ai_pitch-sv-a12bff",
+      "ai_pitch-sv-d1b7fd",
+      null
      ]
     },
     {
@@ -1445,6 +1594,10 @@
      "options": [
       "Jag är svensk medborgare och går gärna igenom säkerhetsprövning. Jag är baserad i Stockholm, Solna Strand fungerar bra, och jag kan börja med kort varsel.",
       "Jag är baserad i Stockholm och kan börja med kort varsel."
+     ],
+     "blockIds": [
+      "closing-sv-c40b07",
+      "closing-sv-ff14ae"
      ]
     }
    ],
@@ -1455,7 +1608,9 @@
     "junior",
     "lang_sv",
     "onsite"
-   ]
+   ],
+   "ref": "platsbanken:31599524",
+   "score": 5.7
   },
   {
    "id": "gears-of-leo-senior-ai-enablement-engineer",
@@ -1533,6 +1688,11 @@
       "I am applying for the Senior AI Enablement Engineer role. Finding friction in how developers work and turning it into small, reliable AI tooling that spreads from one team to many is what I spend my own time on.",
       "I am applying for the Senior AI Enablement Engineer role.",
       "Finding friction in how developers work and turning it into small, reliable AI tooling that spreads from one team to many is what I spend my own time on."
+     ],
+     "blockIds": [
+      "opening-en-3a82db",
+      "opening-en-727b65",
+      "opening-en-5a1abd"
      ]
     },
     {
@@ -1542,6 +1702,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-5957a7",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -1551,6 +1716,11 @@
       "If it helps, reply to my agent-run address with a real friction point – for example a repetitive review or release chore – and I will come back with a tested prototype and walk you through it live.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-1cb69d",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -1559,6 +1729,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. Hybrid at Luntmakargatan suits me well.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-d3345f",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -1569,7 +1743,9 @@
     "senior",
     "years3",
     "years5"
-   ]
+   ],
+   "ref": "platsbanken:31494015",
+   "score": -1.9
   },
   {
    "id": "proposales-product-engineer",
@@ -1646,6 +1822,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours) – you say you value judgment over credentials, and I would like the chance to show mine.",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-0fc7bf",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -1655,6 +1836,11 @@
       "If you want to see it in practice, reply to my agent-run address with a small product initiative – for example an interactive proposal section with an API and a view – and I will come back with a tested build and show where the agent wrote code and where I changed it.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-745898",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -1663,6 +1849,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. An office-first team suits me well.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-3ab595",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -1671,7 +1861,9 @@
     "junior",
     "lang_en",
     "onsite"
-   ]
+   ],
+   "ref": "platsbanken:31230726",
+   "score": 2.5
   },
   {
    "id": "sinch-senior-data-engineer",
@@ -1750,6 +1942,11 @@
       "I am applying for the Senior Data Engineer role. What draws me is that the ad treats AI agents and agentic workflows as part of data engineering itself – automating development tasks and data operations – while keeping code quality, security and reliability.",
       "I am applying for the Senior Data Engineer role.",
       "What draws me is that the ad treats AI agents and agentic workflows as part of data engineering itself – automating development tasks and data operations – while keeping code quality, security and reliability."
+     ],
+     "blockIds": [
+      "opening-en-6de582",
+      "opening-en-178398",
+      "opening-en-0571f4"
      ]
     },
     {
@@ -1759,6 +1956,11 @@
       "My base is Python, SQL/PostgreSQL, Git, CI and Docker, and 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-4ac5a4",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -1767,6 +1969,10 @@
      "options": [
       "Best regards,\nMarkus Isaksson",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-fe1943",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -1774,7 +1980,9 @@
     "lang_en",
     "onsite",
     "senior"
-   ]
+   ],
+   "ref": "platsbanken:31640313",
+   "score": 0.5
   },
   {
    "id": "knowit-ai-architect",
@@ -1851,6 +2059,11 @@
       "I am applying for the AI Architect role. Your point that strong AI systems need more than a successful prototype – governance, observability, evaluation, cost and control – is where my work is concentrated.",
       "I am applying for the AI Architect role.",
       "Your point that strong AI systems need more than a successful prototype – governance, observability, evaluation, cost and control – is where my work is concentrated."
+     ],
+     "blockIds": [
+      "opening-en-13d804",
+      "opening-en-016aef",
+      "opening-en-72b376"
      ]
     },
     {
@@ -1860,6 +2073,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-5957a7",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -1869,6 +2087,11 @@
       "If it helps, reply to my agent-run address with a small client-style case – for example a RAG assistant over a document set with an evaluation and a guarded action – and I will come back with a tested build and walk you through it live.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-ed9b50",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -1877,6 +2100,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-c0e98a",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -1887,7 +2114,9 @@
     "lang_en",
     "onsite",
     "senior"
-   ]
+   ],
+   "ref": "platsbanken:31525223",
+   "score": 0.5
   },
   {
    "id": "epiminds-backend-engineer",
@@ -1964,6 +2193,11 @@
       "I am applying for the Backend Engineer role. Your problem statement – a task that pauses for approval and continues later, a worker that disappears after an external API accepted a change, retries that must not repeat the action – describes the exact problem I built my most recent project around.",
       "I am applying for the Backend Engineer role.",
       "Your problem statement – a task that pauses for approval and continues later, a worker that disappears after an external API accepted a change, retries that must not repeat the action – describes the exact problem I built my most recent project around."
+     ],
+     "blockIds": [
+      "opening-en-1fa523",
+      "opening-en-21f603",
+      "opening-en-67b74e"
      ]
     },
     {
@@ -1973,6 +2207,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours).",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-5957a7",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -1982,6 +2221,11 @@
       "If it helps, reply to my agent-run address with a small task – for example a lease-based job runner with safe retries and cancellation – and I will come back with a tested implementation and walk you through it live. I would welcome your technical task in the same spirit.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-49c729",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -1990,6 +2234,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-c0e98a",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -1998,112 +2246,9 @@
     "lang_en",
     "onsite",
     "senior"
-   ]
-  },
-  {
-   "id": "qred-bank-backend-developer-typescript",
-   "company": "Qred Bank AB",
-   "role": "Backend Developer (TypeScript)",
-   "location": "Stockholm (central), office-first, 1 remote day/week",
-   "deadline": "2027-04-21",
-   "status": "backup",
-   "channel": "Teamtailor form",
-   "link": "https://arbetsformedlingen.se/platsbanken/annonser/31637259",
-   "lang": "en",
-   "fit": [
-    "Agentic-first fintech; TypeScript/Node.js; showcase agent-action-gate (strict TypeScript) published 2026-10-28."
    ],
-   "gaps": [
-    "Seniority: \"several years of professional TypeScript backend\" – not met; stated, demo task offered.",
-    "No AWS/serverless production work; Claude Code only tried.",
-    "Status in tracker: backup."
-   ],
-   "days_left": 170,
-   "aspects": [
-    {
-     "key": "fit",
-     "label": "Role fit (Python/JS/AI agents)",
-     "w": 1.5,
-     "hint": "Agentic-first fintech; TypeScript/Node.js; showcase agent-action-gate (strict TypeScript) published 2026-10-28."
-    },
-    {
-     "key": "seniority",
-     "label": "Seniority match",
-     "w": 1.2,
-     "hint": "Seniority: \"several years of professional TypeScript backend\" – not met; stated, demo task offered."
-    },
-    {
-     "key": "location",
-     "label": "Location / commute",
-     "w": 1.0,
-     "hint": "Stockholm (central), office-first, 1 remote day/week"
-    },
-    {
-     "key": "deadline",
-     "label": "Deadline urgency",
-     "w": 0.8,
-     "hint": "Deadline 2027-04-21 (170 days left)"
-    },
-    {
-     "key": "effort",
-     "label": "Effort left to send",
-     "w": 0.8,
-     "hint": "Channel: Teamtailor form."
-    },
-    {
-     "key": "language",
-     "label": "Language requirements",
-     "w": 0.5,
-     "hint": "English ad – English letter staged"
-    },
-    {
-     "key": "ai",
-     "label": "AI-assisted-application suitability",
-     "w": 0.7,
-     "hint": "Does an openly AI-assisted application (agent-run follow-up address, demo offer) suit this employer?"
-    },
-    {
-     "key": "interest",
-     "label": "Interest / meaning",
-     "w": 1.0,
-     "hint": "What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards."
-    }
-   ],
-   "phrasings": [
-    {
-     "slot": "opening",
-     "label": "Opening line",
-     "options": [
-      "I am applying for the Backend Developer (TypeScript) role. What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards.",
-      "I am applying for the Backend Developer (TypeScript) role.",
-      "What caught my attention is your move toward an agentic-first operating model: once agents act on a bank's systems, the hard part is not the prompt but the deterministic layer around it – which actions an agent may propose, what is validated, what needs a human, and what can be proven afterwards."
-     ]
-    },
-    {
-     "slot": "ai_pitch",
-     "label": "AI-collaboration / demo offer",
-     "options": [
-      "If you want to see more than the attachments, reply to my agent-run address with a task or a question, and I will return a tested solution and walk you through it in a live demo.",
-      "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
-      "(drop this paragraph)"
-     ]
-    },
-    {
-     "slot": "closing",
-     "label": "Closing / location line",
-     "options": [
-      "Best regards,\nMarkus Isaksson",
-      "I am based in Stockholm and can start at short notice."
-     ]
-    }
-   ],
-   "features": [
-    "ch_teamtailor",
-    "hybrid",
-    "lang_en",
-    "senior",
-    "years3"
-   ]
+   "ref": "platsbanken:31609532",
+   "score": 0.5
   },
   {
    "id": "columbus-senior-ai-engineer-coe",
@@ -2181,6 +2326,11 @@
       "I am applying for the Senior AI Engineer role in the Group AI team. Your description of the shift from deterministic workflows to agentic systems that act on behalf of users matches what I build – with the emphasis on the parts that make it safe in an enterprise: evaluation, guarded actions, context and cost control, and governance.",
       "I am applying for the Senior AI Engineer role in the Group AI team.",
       "Your description of the shift from deterministic workflows to agentic systems that act on behalf of users matches what I build – with the emphasis on the parts that make it safe in an enterprise: evaluation, guarded actions, context and cost control, and governance."
+     ],
+     "blockIds": [
+      "opening-en-c00fb2",
+      "opening-en-affa60",
+      "opening-en-0a5351"
      ]
     },
     {
@@ -2190,6 +2340,11 @@
       "My education is 16 freeCodeCamp certifications (3,600+ hours), and I am fine with logic and personality tests, references and a background check.",
       "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
       "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet."
+     ],
+     "blockIds": [
+      "education-en-2c7899",
+      "education-en-28817e",
+      "education-en-ac446a"
      ]
     },
     {
@@ -2199,6 +2354,11 @@
       "If it helps, reply to my agent-run address with a small task – for example an agent that drafts a Teams-style reply from a SharePoint-like document set, with retrieval, an approval step and an evaluation – and I will come back with a tested build against mocked APIs and walk you through it live.",
       "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
       "(drop this paragraph)"
+     ],
+     "blockIds": [
+      "ai_pitch-en-5e504e",
+      "ai_pitch-en-93a286",
+      null
      ]
     },
     {
@@ -2207,6 +2367,10 @@
      "options": [
       "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice. Hybrid in Stockholm suits me well.",
       "I am based in Stockholm and can start at short notice."
+     ],
+     "blockIds": [
+      "closing-en-4886bb",
+      "closing-en-7773de"
      ]
     }
    ],
@@ -2216,7 +2380,9 @@
     "lang_en",
     "onsite",
     "senior"
-   ]
+   ],
+   "ref": "platsbanken:31657050",
+   "score": 0.5
   }
  ],
  "excluded": [
@@ -2590,13 +2756,29 @@
     "choice": 2,
     "pct": 100,
     "src": "Ericsson AB, TNG Group AB, Gears of Leo AB (LeoVegas Group)",
-    "note": "Markus picked option 3 3× (Ericsson, TNG, Gears of Leo) – applies to every letter with this slot"
+    "round": 1,
+    "note": "Markus picked option 3 (Ericsson AB, TNG Group AB, Gears of Leo AB (LeoVegas Group)) – template 2026-11"
    },
    "ai_pitch": {
     "choice": 0,
     "pct": 50,
     "src": "Mad Marketing & Co AB",
-    "note": "Markus picked option 1 once – applies to every letter with this slot"
+    "round": 1,
+    "note": "Markus picked option 1 (Mad Marketing & Co AB) – template 2026-11"
+   },
+   "opening": {
+    "choice": 1,
+    "pct": 100,
+    "src": "Faverli AB",
+    "round": 2,
+    "note": "Markus picked option 2 (Faverli AB) – template 2026-11"
+   },
+   "closing": {
+    "choice": 0,
+    "pct": 100,
+    "src": "Faverli AB",
+    "round": 2,
+    "note": "Markus picked option 1 (Faverli AB) – template 2026-11"
    }
   },
   "pool": [
@@ -2607,5 +2789,286 @@
    "sva-systemutvecklare-labbdatasystem"
   ],
   "scoring": "score = Σ own ratings (100%) + Σ propagated feature ratings × factor + deadline urgency 1.5×max(0,1−days/30)"
+ },
+ "blocks": [
+  {
+   "id": "ai_pitch-en-93a286",
+   "version": 1,
+   "slot": "ai_pitch",
+   "lang": "en",
+   "text": "Rather than more words: send me a small task and I will come back with a tested solution and show you live where the AI assistant wrote code and where I changed it.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "ai_pitch-sv-d1b7fd",
+   "version": 1,
+   "slot": "ai_pitch",
+   "lang": "sv",
+   "text": "Hellre en demonstration än fler ord: skicka en liten uppgift så återkommer jag med en testad lösning och visar live var AI-assistenten skrev kod och var jag ändrade den.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 1
+  },
+  {
+   "id": "closing-en-7773de",
+   "version": 1,
+   "slot": "closing",
+   "lang": "en",
+   "text": "I am based in Stockholm and can start at short notice.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "closing-en-c0e98a",
+   "version": 1,
+   "slot": "closing",
+   "lang": "en",
+   "text": "I am based in Stockholm, would relocate with the position if needed and have temporary housing available, and I can start at short notice.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "closing-en-fe1943",
+   "version": 1,
+   "slot": "closing",
+   "lang": "en",
+   "text": "Best regards,\nMarkus Isaksson",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "closing-sv-b5e892",
+   "version": 1,
+   "slot": "closing",
+   "lang": "sv",
+   "text": "Jag är baserad i Stockholm, är svensk medborgare och kan börja med kort varsel.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "closing-sv-ff14ae",
+   "version": 1,
+   "slot": "closing",
+   "lang": "sv",
+   "text": "Jag är baserad i Stockholm och kan börja med kort varsel.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 1
+  },
+  {
+   "id": "education-en-28817e",
+   "version": 1,
+   "slot": "education",
+   "lang": "en",
+   "text": "My education is 16 freeCodeCamp certifications (3,600+ hours), plus about two years of self-directed development and open source since October 2024.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 2
+  },
+  {
+   "id": "education-en-5957a7",
+   "version": 1,
+   "slot": "education",
+   "lang": "en",
+   "text": "My education is 16 freeCodeCamp certifications (3,600+ hours).",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 2
+  },
+  {
+   "id": "education-en-ac446a",
+   "version": 1,
+   "slot": "education",
+   "lang": "en",
+   "text": "Self-taught: 16 freeCodeCamp certifications, 3,600+ hours and two years of open-source work since October 2024 – no full-time developer job yet.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 2,
+   "shown": 2
+  },
+  {
+   "id": "education-sv-0fd956",
+   "version": 1,
+   "slot": "education",
+   "lang": "sv",
+   "text": "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar).",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 1
+  },
+  {
+   "id": "education-sv-c89640",
+   "version": 1,
+   "slot": "education",
+   "lang": "sv",
+   "text": "Självlärd: 16 freeCodeCamp-certifieringar, 3 600+ timmar och två år av öppen källkod sedan oktober 2024 – ännu ingen heltidsanställning som utvecklare.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 1,
+   "shown": 1
+  },
+  {
+   "id": "education-sv-fb7484",
+   "version": 1,
+   "slot": "education",
+   "lang": "sv",
+   "text": "Min utbildning är 16 certifieringar från freeCodeCamp (3 600+ timmar), och jag har cirka två års självstyrd utveckling och öppen källkod sedan oktober 2024.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 1
+  },
+  {
+   "id": "fit_junior-en-e79bc0",
+   "version": 1,
+   "slot": "fit_junior",
+   "lang": "en",
+   "text": "That is why an early-career role in a small team suits me well. Python is my main language and Node.js a strong second.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "fit_junior-sv-14d316",
+   "version": 1,
+   "slot": "fit_junior",
+   "lang": "sv",
+   "text": "Därför passar en juniorroll i ett litet team mig bra. Python är mitt huvudspråk och Node.js mitt andra.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "greeting-en-3b312b",
+   "version": 1,
+   "slot": "greeting",
+   "lang": "en",
+   "text": "Dear {team} team,",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "greeting-sv-2649fd",
+   "version": 1,
+   "slot": "greeting",
+   "lang": "sv",
+   "text": "Hej,",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "language-en-7e20d4",
+   "version": 1,
+   "slot": "language",
+   "lang": "en",
+   "text": "I speak Swedish natively and work comfortably in English.",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "language-sv-da9a35",
+   "version": 1,
+   "slot": "language",
+   "lang": "sv",
+   "text": "Svenska är mitt modersmål och jag arbetar obehindrat på engelska.",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "signoff-en-fe1943",
+   "version": 1,
+   "slot": "signoff",
+   "lang": "en",
+   "text": "Best regards,\nMarkus Isaksson",
+   "tags": [
+    "english",
+    "generic"
+   ],
+   "picked": 0,
+   "shown": 0
+  },
+  {
+   "id": "signoff-sv-1bc60a",
+   "version": 1,
+   "slot": "signoff",
+   "lang": "sv",
+   "text": "Med vänliga hälsningar,\nMarkus Isaksson",
+   "tags": [
+    "generic",
+    "swedish"
+   ],
+   "picked": 0,
+   "shown": 0
+  }
+ ],
+ "tracking": {
+  "source": "markus-grok-verkstad applications/2026-11/tracker.json",
+  "threshold": 7.4,
+  "exported": "2026-11-02",
+  "expires": "weekly cleanup"
  }
 }
