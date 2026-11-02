@@ -131,6 +131,7 @@
    ],
    "features": [
     "ai_role",
+    "ch_account",
     "degree",
     "junior",
     "lang_en",
@@ -138,7 +139,9 @@
     "onsite"
    ],
    "ref": "platsbanken:31659406",
-   "score": 3.15
+   "score": 3.15,
+   "channelKind": "ch_account",
+   "automatable": false
   },
   {
    "id": "everi-labs-software-developer",
@@ -271,7 +274,9 @@
     "onsite"
    ],
    "ref": "platsbanken:31565340",
-   "score": 6.4
+   "score": 6.4,
+   "channelKind": "ch_email",
+   "automatable": true
   },
   {
    "id": "lansforsakringar-ai-engineer",
@@ -399,6 +404,7 @@
    ],
    "features": [
     "ai_role",
+    "ch_form_unverified",
     "lang_sv",
     "near_deadline",
     "onsite",
@@ -406,7 +412,9 @@
     "years3"
    ],
    "ref": "platsbanken:31646811",
-   "score": 4.1
+   "score": 4.1,
+   "channelKind": "ch_form_unverified",
+   "automatable": true
   },
   {
    "id": "sva-systemutvecklare-labbdatasystem",
@@ -534,13 +542,16 @@
     }
    ],
    "features": [
+    "ch_account",
     "hybrid",
     "junior",
     "lang_sv",
     "uppsala"
    ],
    "ref": "platsbanken:31634407",
-   "score": 3.35
+   "score": 3.35,
+   "channelKind": "ch_account",
+   "automatable": false
   },
   {
    "id": "quest-consulting-fullstackutvecklare",
@@ -667,7 +678,7 @@
    ],
    "features": [
     "ai_role",
-    "ch_ponty",
+    "ch_form",
     "consulting",
     "lang_sv",
     "onsite",
@@ -675,7 +686,9 @@
     "years5"
    ],
    "ref": "platsbanken:31645682",
-   "score": 2.1
+   "score": 2.1,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "mad-marketing-senior-fullstack-developer",
@@ -809,7 +822,9 @@
     "senior"
    ],
    "ref": "platsbanken:31613352",
-   "score": 3.1
+   "score": 3.1,
+   "channelKind": "ch_email",
+   "automatable": true
   },
   {
    "id": "bumbli-group-fullstackutvecklare",
@@ -945,7 +960,9 @@
     "years5"
    ],
    "ref": "platsbanken:31634272",
-   "score": 0.45
+   "score": 0.45,
+   "channelKind": "ch_email",
+   "automatable": true
   },
   {
    "id": "pet-pawr-ai-driven-fullstack-developer",
@@ -1073,12 +1090,15 @@
    ],
    "features": [
     "ai_role",
+    "ch_form",
     "lang_sv",
     "onsite",
     "years3"
    ],
    "ref": "platsbanken:31644396",
-   "score": 2.35
+   "score": 2.35,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "faverli-backendutvecklare",
@@ -1204,10 +1224,13 @@
    "features": [
     "junior",
     "lang_sv",
+    "phone_app_only",
     "remote"
    ],
    "ref": "platsbanken:31652730",
-   "score": 7.4
+   "score": 3.4,
+   "channelKind": "phone_app_only",
+   "automatable": false
   },
   {
    "id": "tng-attendo-senior-ai-native-developer",
@@ -1335,13 +1358,16 @@
    ],
    "features": [
     "ai_role",
+    "ch_form",
     "lang_sv",
     "onsite",
     "senior",
     "years3"
    ],
    "ref": "platsbanken:31654172",
-   "score": 2.25
+   "score": 2.25,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "coromatic-senior-software-engineer-integration-ai-automation",
@@ -1470,13 +1496,16 @@
    ],
    "features": [
     "ai_role",
+    "ch_form",
     "lang_sv",
     "onsite",
     "senior",
     "years3"
    ],
    "ref": "platsbanken:31651217",
-   "score": 2.2
+   "score": 2.2,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "friday-ai-engineer-integration",
@@ -1603,14 +1632,16 @@
    ],
    "features": [
     "ai_role",
-    "ch_ponty",
+    "ch_form",
     "degree",
     "junior",
     "lang_sv",
     "onsite"
    ],
    "ref": "platsbanken:31599524",
-   "score": 5.7
+   "score": 5.7,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "gears-of-leo-senior-ai-enablement-engineer",
@@ -1738,6 +1769,7 @@
    ],
    "features": [
     "ai_role",
+    "ch_form_unverified",
     "hybrid",
     "lang_en",
     "senior",
@@ -1745,7 +1777,9 @@
     "years5"
    ],
    "ref": "platsbanken:31494015",
-   "score": -1.9
+   "score": -1.9,
+   "channelKind": "ch_form_unverified",
+   "automatable": true
   },
   {
    "id": "proposales-product-engineer",
@@ -1857,13 +1891,15 @@
     }
    ],
    "features": [
-    "ch_teamtailor",
+    "ch_form",
     "junior",
     "lang_en",
     "onsite"
    ],
    "ref": "platsbanken:31230726",
-   "score": 2.5
+   "score": 2.5,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "sinch-senior-data-engineer",
@@ -1977,12 +2013,15 @@
     }
    ],
    "features": [
+    "ch_account",
     "lang_en",
     "onsite",
     "senior"
    ],
    "ref": "platsbanken:31640313",
-   "score": 0.5
+   "score": 0.5,
+   "channelKind": "ch_account",
+   "automatable": false
   },
   {
    "id": "knowit-ai-architect",
@@ -2109,14 +2148,16 @@
    ],
    "features": [
     "ai_role",
-    "ch_teamtailor",
+    "ch_form",
     "consulting",
     "lang_en",
     "onsite",
     "senior"
    ],
    "ref": "platsbanken:31525223",
-   "score": 0.5
+   "score": 0.5,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "epiminds-backend-engineer",
@@ -2242,13 +2283,15 @@
     }
    ],
    "features": [
-    "ch_teamtailor",
+    "ch_form",
     "lang_en",
     "onsite",
     "senior"
    ],
    "ref": "platsbanken:31609532",
-   "score": 0.5
+   "score": 0.5,
+   "channelKind": "ch_form",
+   "automatable": true
   },
   {
    "id": "columbus-senior-ai-engineer-coe",
@@ -2376,13 +2419,15 @@
    ],
    "features": [
     "ai_role",
-    "ch_teamtailor",
+    "ch_form",
     "lang_en",
     "onsite",
     "senior"
    ],
    "ref": "platsbanken:31657050",
-   "score": 0.5
+   "score": 0.5,
+   "channelKind": "ch_form",
+   "automatable": true
   }
  ],
  "excluded": [
@@ -2403,7 +2448,7 @@
   }
  ],
  "round2": {
-  "seedFrom": "runner-apps-20261102 (round 1, 12 cards)",
+  "seedFrom": "verkstad applications/2026-11/contributions.json (rounds 1–2 + rules.json)",
   "appliedCompanies": [
    "Antrino Labs AB",
    "Cambio Healthcare Systems AB",
@@ -2439,9 +2484,13 @@
    "ai_role": "AI role",
    "consulting": "consulting",
    "near_deadline": "deadline ≤ 7 days",
-   "ch_email": "email channel",
+   "ch_email": "email",
    "ch_ponty": "Ponty portal",
-   "ch_teamtailor": "Teamtailor"
+   "ch_teamtailor": "Teamtailor",
+   "phone_app_only": "phone app only (manual)",
+   "ch_form": "web form (no login)",
+   "ch_form_unverified": "web form (fields not verified)",
+   "ch_account": "portal account / login needed"
   },
   "round1Rules": [
    {
@@ -2491,35 +2540,9 @@
    }
   ],
   "seed": {
-   "etraveli-applied-ai-engineer": [
-    {
-     "v": 1.6,
-     "what": "deadline ++",
-     "src": "Etraveli Group AB",
-     "pct": 100,
-     "own": true
-    }
-   ],
-   "ericsson-ai-researcher": [
-    {
-     "v": 2.0,
-     "what": "junior / early-career",
-     "src": "Everi Labs AB",
-     "pct": 100,
-     "own": false,
-     "feature": "junior"
-    },
-    {
-     "v": 0.8,
-     "what": "deadline ≤ 7 days",
-     "src": "Etraveli Group AB",
-     "pct": 50,
-     "own": false,
-     "feature": "near_deadline"
-    }
-   ],
    "everi-labs-software-developer": [
     {
+     "round": 1,
      "v": 2,
      "what": "vote up",
      "src": "Everi Labs AB",
@@ -2527,12 +2550,115 @@
      "own": true
     },
     {
+     "round": 1,
      "v": 0.8,
      "what": "deadline ≤ 7 days",
      "src": "Etraveli Group AB",
      "pct": 50,
      "own": false,
      "feature": "near_deadline"
+    },
+    {
+     "v": 0.8,
+     "what": "effort +",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "preferred over Statens veterinärmedicinska anstalt (SVA)",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": -1,
+     "what": "lost to Friday Väst AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "preferred over Ericsson AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    }
+   ],
+   "friday-ai-engineer-integration": [
+    {
+     "round": 1,
+     "v": 1.6,
+     "what": "effort ++",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "round": 1,
+     "v": 2,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "round": 1,
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv"
+    },
+    {
+     "v": -1,
+     "what": "lost to Faverli AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "preferred over Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "language ++",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": true,
+     "round": 2
     }
    ],
    "lansforsakringar-ai-engineer": [
@@ -2542,7 +2668,8 @@
      "src": "Etraveli Group AB",
      "pct": 50,
      "own": false,
-     "feature": "near_deadline"
+     "feature": "near_deadline",
+     "round": 1
     },
     {
      "v": 0.5,
@@ -2550,12 +2677,40 @@
      "src": "Quest Consulting Sverige AB",
      "pct": 50,
      "own": false,
-     "feature": "lang_sv"
+     "feature": "lang_sv",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
     }
    ],
-   "sva-systemutvecklare-labbdatasystem": [
+   "faverli-backendutvecklare": [
     {
-     "v": 2.0,
+     "round": 1,
+     "v": 1.6,
+     "what": "effort ++",
+     "src": "Faverli AB",
+     "pct": 100,
+     "own": true
+    },
+    {
+     "round": 1,
+     "v": 2,
      "what": "junior / early-career",
      "src": "Everi Labs AB",
      "pct": 100,
@@ -2563,37 +2718,128 @@
      "feature": "junior"
     },
     {
+     "round": 1,
      "v": 0.5,
      "what": "Swedish ad",
      "src": "Quest Consulting Sverige AB",
      "pct": 50,
      "own": false,
      "feature": "lang_sv"
+    },
+    {
+     "v": 1,
+     "what": "preferred over Friday Väst AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "preferred over Ericsson AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": -4.0,
+     "what": "phone app only (manual)",
+     "feature": "phone_app_only",
+     "src": "rule",
+     "pct": 100,
+     "own": false,
+     "round": 3
     }
    ],
-   "quest-consulting-fullstackutvecklare": [
+   "sva-systemutvecklare-labbdatasystem": [
     {
-     "v": 1.0,
-     "what": "language ++",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 100,
-     "own": true
-    },
-    {
-     "v": -2.0,
-     "what": "5+ years required",
-     "src": "Bumbli Group AB",
+     "round": 1,
+     "v": 2,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
      "pct": 100,
      "own": false,
-     "feature": "years5"
+     "feature": "junior"
     },
     {
-     "v": 0.8,
-     "what": "Ponty portal",
-     "src": "Friday Väst AB",
+     "round": 1,
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
      "pct": 50,
      "own": false,
-     "feature": "ch_ponty"
+     "feature": "lang_sv"
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "ericsson-ai-researcher": [
+    {
+     "round": 1,
+     "v": 2,
+     "what": "junior / early-career",
+     "src": "Everi Labs AB",
+     "pct": 100,
+     "own": false,
+     "feature": "junior"
+    },
+    {
+     "round": 1,
+     "v": 0.8,
+     "what": "deadline ≤ 7 days",
+     "src": "Etraveli Group AB",
+     "pct": 50,
+     "own": false,
+     "feature": "near_deadline"
+    },
+    {
+     "v": -1,
+     "what": "lost to Faverli AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": 1,
+     "what": "location +",
+     "src": "Ericsson AB",
+     "pct": 100,
+     "own": true,
+     "round": 2
+    },
+    {
+     "v": -1,
+     "what": "lost to Everi Labs AB",
+     "src": "pair",
+     "pct": 100,
+     "own": true,
+     "round": 2
     }
    ],
    "mad-marketing-senior-fullstack-developer": [
@@ -2603,114 +2849,35 @@
      "src": "Quest Consulting Sverige AB",
      "pct": 50,
      "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "bumbli-group-fullstackutvecklare": [
-    {
-     "v": -2,
-     "what": "vote down",
-     "src": "Bumbli Group AB",
-     "pct": 100,
-     "own": true
+     "feature": "lang_sv",
+     "round": 1
     },
     {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "pet-pawr-ai-driven-fullstack-developer": [
-    {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "faverli-backendutvecklare": [
-    {
-     "v": 1.6,
-     "what": "effort ++",
-     "src": "Faverli AB",
-     "pct": 100,
-     "own": true
-    },
-    {
-     "v": 2.0,
-     "what": "junior / early-career",
+     "v": 0.4,
+     "what": "email channel",
+     "feature": "ch_email",
      "src": "Everi Labs AB",
-     "pct": 100,
+     "pct": 50,
      "own": false,
-     "feature": "junior"
+     "round": 2
     },
     {
      "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
      "pct": 50,
      "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "tng-attendo-senior-ai-native-developer": [
+     "round": 2
+    },
     {
-     "v": 0.5,
+     "v": 1.0,
      "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "coromatic-senior-software-engineer-integration-ai-automation": [
-    {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "friday-ai-engineer-integration": [
-    {
-     "v": 1.6,
-     "what": "effort ++",
+     "feature": "lang_sv",
      "src": "Friday Väst AB",
      "pct": 100,
-     "own": true
-    },
-    {
-     "v": 2.0,
-     "what": "junior / early-career",
-     "src": "Everi Labs AB",
-     "pct": 100,
      "own": false,
-     "feature": "junior"
-    },
-    {
-     "v": 0.5,
-     "what": "Swedish ad",
-     "src": "Quest Consulting Sverige AB",
-     "pct": 50,
-     "own": false,
-     "feature": "lang_sv"
-    }
-   ],
-   "gears-of-leo-senior-ai-enablement-engineer": [
-    {
-     "v": -2.0,
-     "what": "5+ years required",
-     "src": "Bumbli Group AB",
-     "pct": 100,
-     "own": false,
-     "feature": "years5"
+     "round": 2
     }
    ],
    "proposales-product-engineer": [
@@ -2720,14 +2887,244 @@
      "src": "Everi Labs AB",
      "pct": 100,
      "own": false,
-     "feature": "junior"
+     "feature": "junior",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
     }
    ],
-   "sinch-senior-data-engineer": [],
-   "knowit-ai-architect": [],
-   "epiminds-backend-engineer": [],
-   "qred-bank-backend-developer-typescript": [],
-   "columbus-senior-ai-engineer-coe": []
+   "pet-pawr-ai-driven-fullstack-developer": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "tng-attendo-senior-ai-native-developer": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "coromatic-senior-software-engineer-integration-ai-automation": [
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "quest-consulting-fullstackutvecklare": [
+    {
+     "v": 1.0,
+     "what": "language ++",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 100,
+     "own": true,
+     "round": 1
+    },
+    {
+     "v": -2.0,
+     "what": "5+ years required",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": false,
+     "feature": "years5",
+     "round": 1
+    },
+    {
+     "v": 0.8,
+     "what": "Ponty portal",
+     "src": "Friday Väst AB",
+     "pct": 50,
+     "own": false,
+     "feature": "ch_ponty",
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "sinch-senior-data-engineer": [
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "knowit-ai-architect": [
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "epiminds-backend-engineer": [
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "columbus-senior-ai-engineer-coe": [
+    {
+     "v": 0.5,
+     "what": "office / on-site (not remote)",
+     "feature": "onsite",
+     "src": "Ericsson AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "bumbli-group-fullstackutvecklare": [
+    {
+     "v": -2,
+     "what": "vote down",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": true,
+     "round": 1
+    },
+    {
+     "v": 0.5,
+     "what": "Swedish ad",
+     "src": "Quest Consulting Sverige AB",
+     "pct": 50,
+     "own": false,
+     "feature": "lang_sv",
+     "round": 1
+    },
+    {
+     "v": 0.4,
+     "what": "email channel",
+     "feature": "ch_email",
+     "src": "Everi Labs AB",
+     "pct": 50,
+     "own": false,
+     "round": 2
+    },
+    {
+     "v": 1.0,
+     "what": "Swedish ad",
+     "feature": "lang_sv",
+     "src": "Friday Väst AB",
+     "pct": 100,
+     "own": false,
+     "round": 2
+    }
+   ],
+   "gears-of-leo-senior-ai-enablement-engineer": [
+    {
+     "v": -2.0,
+     "what": "5+ years required",
+     "src": "Bumbli Group AB",
+     "pct": 100,
+     "own": false,
+     "feature": "years5",
+     "round": 1
+    }
+   ]
   },
   "urgency": {
    "etraveli-applied-ai-engineer": 1.4,
@@ -2782,13 +3179,14 @@
    }
   },
   "pool": [
-   "faverli-backendutvecklare",
-   "friday-ai-engineer-integration",
-   "ericsson-ai-researcher",
    "everi-labs-software-developer",
-   "sva-systemutvecklare-labbdatasystem"
+   "friday-ai-engineer-integration",
+   "lansforsakringar-ai-engineer",
+   "mad-marketing-senior-fullstack-developer",
+   "proposales-product-engineer"
   ],
-  "scoring": "score = Σ own ratings (100%) + Σ propagated feature ratings × factor + deadline urgency 1.5×max(0,1−days/30)"
+  "scoring": "score = Σ own ratings (100%) + Σ propagated feature ratings × factor + deadline urgency + rules (phone_app_only −4 @100%)",
+  "round": 3
  },
  "blocks": [
   {
