@@ -13,6 +13,15 @@ After the first pass through the deck, cards that can confirm a pending (1/3, 2/
 Setup: tick project areas, pick 5 / 10 / 15 min or custom. Cards = minutes × 60 / 30 (15 min → 30 cards). Settings persist in
 localStorage (`lo-prefs.settings.v1`), last result in `lo-prefs.results.v1`. Export JSON or Markdown at the end.
 
+## Countdown & mobile
+Before every card the game pauses and shows a 3-2-1 countdown (`?countdown=ms` to change); options then ignore taps for 300 ms, so stray jump taps can't pick.
+On phones the jump button fills the lower screen (full width, ≥42% height) and page zoom (pinch / double-tap) is disabled.
+
+## Executors
+Each area row has checkboxes for which executors may act on the choices; the master row above sets one executor for all areas (indeterminate when mixed).
+Executors come from the top-level `executors` array in `data/areas.json` (`{"id","name","defaultOn"}`) — add more there. Default: all on except OpenCode on Lenovo (paused).
+Selections persist in localStorage and are exported as `executors` (JSON) / "Executors per area" (Markdown).
+
 ## Add a project area (no code changes)
 1. In `data/areas.json` add to `areas`: `{"id":"my-area","name":"My area","description":"…","defaultOn":true}`
 2. Add cards to `cards` with `"area":"my-area"`:

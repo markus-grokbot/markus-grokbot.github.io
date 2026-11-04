@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no">
 <title>Lo · Preferences (Lynx Dash)</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;height:100%;background:#14161c;color:#eee;font:14px system-ui,sans-serif}
+*{box-sizing:border-box}html,body,#game,#ctl,button{touch-action:manipulation}#game,#game *{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}html,body{margin:0;height:100%;background:#14161c;color:#eee;font:14px system-ui,sans-serif}
 #app{max-width:560px;margin:0 auto;padding:8px}#hud{display:flex;justify-content:space-between;padding:6px 2px}#hud b{color:#fc0}
 #bar{height:6px;background:#2a2d36;border-radius:3px;overflow:hidden}#fill{height:100%;width:0;background:#5bd}
 canvas{width:100%;aspect-ratio:600/220;background:#1b1e27;border-radius:10px;display:block;margin-top:6px;touch-action:none}
 button{background:#2a2d36;color:#eee;border:1px solid #444a58;border-radius:10px;font-size:15px;padding:10px 14px;margin:4px;cursor:pointer}button:hover{background:#3d4354}
-#ctl{display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:8px}#ctl button{padding:24px 0;font-size:18px}
+#ctl{display:grid;grid-template-columns:1fr 3fr;gap:8px;margin-top:8px}#ctl button{padding:24px 0;font-size:18px;margin:0}
+@media (pointer:coarse),(max-width:700px){#app{padding:4px}#game{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}#ctl{flex:1;min-height:42vh;grid-template-columns:1fr;grid-template-rows:1fr auto;margin:6px -4px 0}#bjump{order:-1;font-size:28px;width:100%}#bduck{padding:16px 0}}
+.cd{font-size:96px;text-align:center;color:#fc0;font-weight:700}.exm{background:#252936;border-radius:8px;padding:6px;margin-bottom:6px}.exm label,.exr label{display:inline-block;margin:2px 8px 2px 0;font-size:12px}.exr{padding:0 0 6px 22px;color:#bbc}.arow{border-bottom:1px solid #2a2d36}
 #ov{position:fixed;inset:0;background:rgba(10,11,15,.92);display:flex;align-items:center;justify-content:center;padding:14px;overflow-y:auto}
 .box{background:#1d2029;border:1px solid #444a58;border-radius:14px;padding:16px;max-width:480px;width:100%;max-height:100%;overflow-y:auto}
 .hide{display:none!important}.k{color:#fc0;font-weight:600}.area{display:block;padding:4px 0;text-align:left}.small{font-size:12px;color:#99a}

@@ -16,6 +16,17 @@
     return key;
   }
   function shuffle(a, rng) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rng() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  // executors: per-area selection map {areaId: [executorId,...]}
+  function defaultExecutors(data) { return (data.executors || []).filter(function (x) { return x.defaultOn !== false; }).map(function (x) { return x.id; }); }
+  function normExec(data, saved) { var all = (data.executors || []).map(function (x) { return x.id; }), out = {};
+    data.areas.forEach(function (a) { var s = saved && saved[a.id]; out[a.id] = s ? s.filter(function (id) { return all.indexOf(id) >= 0; }) : defaultExecutors(data); });
+    // executors added to the data later default per their defaultOn for areas that had a saved list
+    if (saved && saved.__known) (data.executors || []).forEach(function (x) { if (saved.__known.indexOf(x.id) < 0 && x.defaultOn !== false) data.areas.forEach(function (a) { if (out[a.id].indexOf(x.id) < 0) out[a.id].push(x.id); }); });
+    out.__known = all; return out; }
+  function masterState(sel, areaIds, exId) { var n = areaIds.filter(function (a) { return (sel[a] || []).indexOf(exId) >= 0; }).length; return n === 0 ? 'none' : n === areaIds.length ? 'all' : 'mixed'; }
+  function setAll(sel, areaIds, exId, on) { areaIds.forEach(function (a) { var l = sel[a] = sel[a] || [], i = l.indexOf(exId); if (on && i < 0) l.push(exId); if (!on && i >= 0) l.splice(i, 1); }); return sel; }
+  // card gate: countdown (cards hidden, game paused), then options appear but taps ignored for graceMs
+  function gate(countdownMs, graceMs) { var t = 0; return { tick: function (dt) { t += dt; }, count: function () { return t < countdownMs ? Math.ceil((countdownMs - t) / 1000) : 0; }, shown: function () { return t >= countdownMs; }, clickable: function () { return t >= countdownMs + graceMs; } }; }
   function create(data, o) {
     o = o || {}; var rng = o.rng || Math.random, K = data.confirmAt || 3, on = {}; (o.areas || data.areas.map(function (a) { return a.id; })).forEach(function (id) { on[id] = 1; });
     var pool = data.cards.filter(function (c) { return on[c.area]; }), counts = {}, log = [], shown = {}, queue = [];
@@ -37,16 +48,18 @@
     function result() {
       var prefs = Object.keys(counts).map(function (k) { var s = status(k); s.text = prefLabel(data, k); return s; }).sort(function (a, b) { return b.count - a.count; });
       var areas = data.areas.filter(function (a) { return on[a.id]; }).map(function (a) { return { id: a.id, name: a.name, net: (counts[a.id + ':up'] || 0) - (counts[a.id + ':down'] || 0) }; }).sort(function (a, b) { return b.net - a.net; });
-      return { game: 'lo-preferences', version: '1.0.0', at: new Date().toISOString(), confirmAt: K, areasIncluded: Object.keys(on), answered: log.length, strong: prefs.filter(function (p) { return p.strong; }), prefs: prefs, areaRanking: areas, log: log };
+      return { game: 'lo-preferences', version: '1.0.0', at: new Date().toISOString(), confirmAt: K, areasIncluded: Object.keys(on), answered: log.length, strong: prefs.filter(function (p) { return p.strong; }), prefs: prefs, areaRanking: areas, log: log, executors: o.executors ? data.areas.filter(function (a) { return on[a.id]; }).reduce(function (m, a) { m[a.id] = (o.executors[a.id] || []).slice(); return m; }, {}) : undefined };
     }
     function markdown(r) {
       r = r || result(); var L = ['# Lo preferences — ' + r.at, '', 'Cards answered: ' + r.answered + ' · strong = chosen ' + K + '×', '', '## Strong current preferences'];
       if (!r.strong.length) L.push('- (none yet)'); r.strong.forEach(function (p) { L.push('- **' + p.text + '** (' + p.count + '×)'); });
       L.push('', '## Building (not yet confirmed)'); r.prefs.filter(function (p) { return !p.strong; }).forEach(function (p) { L.push('- ' + p.text + ' — ' + p.label); });
       L.push('', '## Area priority (up − down)'); r.areaRanking.forEach(function (a, i) { L.push((i + 1) + '. ' + a.name + ' (' + (a.net > 0 ? '+' : '') + a.net + ')'); });
+      if (r.executors) { var en = {}; (data.executors || []).forEach(function (x) { en[x.id] = x.name; }); L.push('', '## Executors per area');
+        data.areas.forEach(function (a) { if (r.executors[a.id]) L.push('- ' + a.name + ': ' + (r.executors[a.id].map(function (id) { return en[id] || id; }).join(', ') || '(none)')); }); }
       return L.join('\n') + '\n';
     }
     return { pool: pool, next: next, answer: answer, status: status, result: result, markdown: markdown, counts: counts };
   }
-  return { create: create, cardsForMinutes: cardsForMinutes, prefKey: prefKey, prefLabel: prefLabel };
+  return { create: create, defaultExecutors: defaultExecutors, normExec: normExec, masterState: masterState, setAll: setAll, gate: gate, cardsForMinutes: cardsForMinutes, prefKey: prefKey, prefLabel: prefLabel };
 });

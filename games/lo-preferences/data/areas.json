@@ -8,6 +8,34 @@
   2
  ],
  "confirmAt": 3,
+ "executors": [
+  {
+   "id": "free-models",
+   "name": "Free models",
+   "defaultOn": true
+  },
+  {
+   "id": "opencode-lenovo",
+   "name": "OpenCode on Lenovo",
+   "defaultOn": false,
+   "note": "currently paused"
+  },
+  {
+   "id": "opencode-grokbot",
+   "name": "OpenCode on Grok Bot's computer",
+   "defaultOn": true
+  },
+  {
+   "id": "codex",
+   "name": "Codex",
+   "defaultOn": true
+  },
+  {
+   "id": "grok-build",
+   "name": "Grok in Grok Build",
+   "defaultOn": true
+  }
+ ],
  "areas": [
   {
    "id": "bend",

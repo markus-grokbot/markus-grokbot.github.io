@@ -23,4 +23,14 @@ let fired=0;const t=T.create(30000,()=>fired++);t.tick(10000);assert.equal(fired
 t.start();t.tick(29999);assert.equal(fired,1);t.tick(2);assert.equal(fired,2);
 // engine runs a segment
 const g=E.create({seed:3});for(let i=0;i<1800;i++)g.step(1000/60,{jump:i%40<5});assert(g.state().dist>0);
+// executors
+assert.equal(D.executors.length,5);let ex=P.normExec(D,null);assert.deepEqual(ex.bend,['free-models','opencode-grokbot','codex','grok-build']);
+const A=D.areas.map(a=>a.id);assert.equal(P.masterState(ex,A,'codex'),'all');assert.equal(P.masterState(ex,A,'opencode-lenovo'),'none');
+P.setAll(ex,['bend'],'opencode-lenovo',true);assert.equal(P.masterState(ex,A,'opencode-lenovo'),'mixed');P.setAll(ex,A,'opencode-lenovo',true);assert.equal(P.masterState(ex,A,'opencode-lenovo'),'all');
+P.setAll(ex,A,'codex',false);assert.equal(P.masterState(ex,A,'codex'),'none');
+const ex2=P.normExec(D,JSON.parse(JSON.stringify(ex)));assert.deepEqual(ex2.bend,ex.bend,'persist roundtrip');
+s=P.create(D,{areas:['bend'],executors:ex});const rr=s.result();assert(rr.executors.bend.includes('opencode-lenovo'));assert(!rr.executors.pavo);assert(s.markdown().includes('Executors per area'));
+// countdown gate
+const gg=P.gate(3000,300);assert.equal(gg.count(),3);assert(!gg.shown()&&!gg.clickable());gg.tick(1500);assert.equal(gg.count(),2);gg.tick(1499);assert.equal(gg.count(),1);assert(!gg.shown());
+gg.tick(1);assert(gg.shown());assert(!gg.clickable());gg.tick(299);assert(!gg.clickable());gg.tick(1);assert(gg.clickable());
 console.log('all tests passed');
