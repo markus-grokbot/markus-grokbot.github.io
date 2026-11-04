@@ -64,6 +64,7 @@
       if (r.costPlan) { var en2 = {}; (data.executors || []).forEach(function (x) { en2[x.id] = x.name; }); L.push('', '## Cost level ' + r.costPlan.costLevel + ' (max executor cost ' + r.costPlan.maxCost + ')', '- ' + r.costPlan.meaning);
         Object.keys(r.allowedExecutors || {}).forEach(function (a) { L.push('- ' + a + ': allowed ' + (r.allowedExecutors[a].map(function (id) { return en2[id] || id; }).join(', ') || '(none)')); }); }
       if (r.suggested && r.suggested.length) L.push('', '## Suggested project(s)', '- ' + r.suggested.join(', '));
+      var cm = cleanComments(r.comments); if (cm.length || r.reviewSchedule) { L.push('', '## Comments'); if (!cm.length) L.push('- (none)'); cm.forEach(function (c) { L.push('- #' + c.rank + ' ' + c.name + ' (' + c.area + '): ' + c.text.replace(/\n+/g, ' ')); }); if (r.reviewSchedule) L.push('', 'Review schedule: ' + r.reviewSchedule + ' — ' + reviewText(r.reviewSchedule)); }
       return L.join('\n') + '\n';
     }
     return { pool: pool, next: next, answer: answer, status: status, result: result, markdown: markdown, counts: counts };
@@ -73,6 +74,7 @@
   function sessionEntry(data, r) { var w = (data.threshold || {}).rateWeight; w = w == null ? 0.25 : w; var cm = {}; allCards(data).forEach(function (c) { cm[c.id] = c; });
     var e = { at: r.at, mode: r.mode || 'normal', area: r.area, answered: r.answered, delta: {}, up: {} };
     if (r.dataWeight) { e.setting = r.dataWeight.setting; e.weight = r.dataWeight.weight; e.performance = r.dataWeight.performance; e.counted = r.dataWeight.counted; if (r.dataWeight.reason) e.reason = r.dataWeight.reason; }
+    if (r.comments) e.comments = cleanComments(r.comments); if (r.reviewSchedule) e.reviewSchedule = r.reviewSchedule;
     if (e.mode !== 'decision') (r.log || []).forEach(function (l) { var c = cm[l.card]; if (!c || !l.pref) return; var a = l.area, d = 0;
       if (c.type === 'updown' && !c.key) { d = l.choice === 'up' ? 1 : -1; if (d > 0) e.up[a] = (e.up[a] || 0) + 1; }
       else if (c.type === 'rate' && c.priority) d = l.choice > 0 ? w : l.choice < 0 ? -w : 0;
@@ -110,7 +112,13 @@
     var cost = {}; (data.executors || []).forEach(function (x) { cost[x.id] = x.cost || 0; });
     data.areas.forEach(function (a) { var sel = (exec && exec[a.id]) || []; out[a.id] = { allowedExecutors: sel.filter(function (id) { return (cost[id] || 0) <= max; }), overBudget: sel.filter(function (id) { return (cost[id] || 0) > max; }) }; });
     return { costLevel: L, maxCost: max, meaning: C[L - 1] ? C[L - 1].text : '', areas: out }; }
+  // ---- end-screen comments + review schedule ----
+  function topProjects(data, ledger, n) { return standings(data, ledger).slice().sort(function (a, b) { return (b.score - a.score) || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0); }).slice(0, n || 3).map(function (s, i) { return { area: s.id, name: s.name, score: s.score, rank: i + 1 }; }); }
+  var REVIEW = { 'weekly-fri-sat': 'Grok Bot reviews these on Fridays/Saturdays', 'weekly-mon': 'Grok Bot reviews these on Mondays', immediate: 'Grok Bot reviews these as soon as you send the export' };
+  function reviewSchedule(level) { level = level || 3; return level <= 2 ? 'weekly-fri-sat' : level === 3 ? 'weekly-mon' : 'immediate'; }
+  function reviewText(sched) { return REVIEW[sched] || ''; }
+  function cleanComments(list) { return (list || []).filter(function (c) { return c && String(c.text || '').trim(); }).map(function (c) { return { area: c.area, name: c.name, text: String(c.text).trim(), rank: c.rank }; }); }
   function suggested(data, ledger) { return standings(data, ledger).filter(function (s) { return s.crossed; }).map(function (s) { return s.id; }); }
-  return { allCards: allCards, sessionEntry: sessionEntry, emptyLedger: emptyLedger, mergeLedger: mergeLedger, importSessions: importSessions, thresholdFor: thresholdFor, standings: standings, suggested: suggested,
+  return { topProjects: topProjects, reviewSchedule: reviewSchedule, reviewText: reviewText, cleanComments: cleanComments, allCards: allCards, sessionEntry: sessionEntry, emptyLedger: emptyLedger, mergeLedger: mergeLedger, importSessions: importSessions, thresholdFor: thresholdFor, standings: standings, suggested: suggested,
     performance: performance, weighSession: weighSession, sessionWeight: sessionWeight, costPlan: costPlan, dataLevels: dataLevels, create: create, defaultExecutors: defaultExecutors, normExec: normExec, masterState: masterState, setAll: setAll, gate: gate, cardsForMinutes: cardsForMinutes, prefKey: prefKey, prefLabel: prefLabel };
 });

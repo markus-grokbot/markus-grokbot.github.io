@@ -32,6 +32,13 @@ grok-imagine 3). `"costLevels"` maps each level to `maxCost` (0, 1, 1, 3, 3) and
 budget are flagged *over budget* (not unticked). Export: `costLevel`, `costPlan` {maxCost, meaning, areas: {id: {allowedExecutors, overBudget}}} and
 `allowedExecutors` {area: [ticked AND cost ≤ maxCost]}.
 
+## Comments & review schedule (end screen)
+The end screen has a **💬 Comments** section with one optional textarea per current top-3 project by ladder standings score (after this session is applied; ties by
+score, then name). In a decision round there is one textarea for that round's area. Typing autosaves (localStorage: last result + this session's ledger entry);
+the JSON/Markdown export always includes what was typed before clicking download. Export: `comments: [{area, name, text, rank}]` (empty texts are dropped; also stored in the
+ledger entry) and `reviewSchedule` from `dataLevel`: 1–2 → `weekly-fri-sat`, 3 → `weekly-mon`, 4–5 → `immediate`; a line under the comments says when Grok Bot reviews them.
+Markdown has a `## Comments` section plus the review schedule.
+
 ## Countdown & mobile
 Before every card the game pauses and shows a 3-2-1 countdown (`?countdown=ms` to change); options then ignore taps for 300 ms, so stray jump taps can't pick.
 On phones the jump button fills the lower screen (full width, ≥42% height) and page zoom (pinch / double-tap) is disabled.
@@ -64,6 +71,7 @@ Sessions are merged and deduplicated by their `at` timestamp, so re-importing is
 ### How Grok Bot reads an export
 - `dataWeight`: `weight` is how much this session moved the ladder; `counted: false` → treat the preferences as casual/unfocused (don't act on them alone). High-weight (1.5–2), counted sessions are deliberate signals and outweigh casual ones; `performance` < 0.8 means attention was split.
 - `costLevel` / `allowedExecutors[area]`: only use those executors for that area. Levels 1–3 → local models (7B), workers, pre-processing chains, free OpenCode models; only 4–5 permit Codex, Grok Build and Grok Imagine (relatively expensive). `overBudget` executors were ticked but excluded — ask before using them.
+- `comments` / `reviewSchedule`: free-text notes on the top-3 projects (rank 1 = highest score). `weekly-fri-sat` → batch into the Friday/Saturday review, `weekly-mon` → Monday review, `immediate` → act on them as soon as the export is parsed.
 - `mode: "normal"` — `strong` = confirmed preferences, `areaRanking` = this session, `standings` = ladder totals, `suggested` = areas over threshold → propose starting them.
 - `mode: "decision"` + `area` — act on `strong` prefs with `dec:<area>:…` keys (scope, first deliverable, executor, timeline, visibility, metric), using `executors[area]` for who may run it; building (1/3, 2/3) ones are tentative.
 

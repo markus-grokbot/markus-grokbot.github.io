@@ -72,4 +72,12 @@ P.mergeLedger(LW,[eA,eB,eOld]);let sw=P.standings(D,LW).find(x=>x.id==='bend');a
 const exAll=P.normExec(D,null);let cp=P.costPlan(D,1,exAll);assert.deepEqual(cp.areas.bend.allowedExecutors,['free-models']);assert(cp.areas.bend.overBudget.includes('codex'));
 cp=P.costPlan(D,2,exAll);assert.deepEqual(cp.areas.bend.allowedExecutors,['free-models','opencode-lenovo','opencode-grokbot']);
 cp=P.costPlan(D,5,{bend:['codex']});assert.deepEqual(cp.areas.bend.allowedExecutors,['codex']);assert.equal(D.executors.find(x=>x.id==='grok-imagine').cost,3);
+// comments + reviewSchedule
+assert.equal(P.reviewSchedule(1),'weekly-fri-sat');assert.equal(P.reviewSchedule(2),'weekly-fri-sat');assert.equal(P.reviewSchedule(3),'weekly-mon');assert.equal(P.reviewSchedule(4),'immediate');assert.equal(P.reviewSchedule(5),'immediate');
+assert(/Fridays\/Saturdays/.test(P.reviewText('weekly-fri-sat')));assert(/Mondays/.test(P.reviewText('weekly-mon')));assert(/as soon as/.test(P.reviewText('immediate')));
+const tp=P.topProjects(D,LW,3);assert.equal(tp.length,3);assert.equal(tp[0].area,'bend');assert.equal(tp[0].rank,1);assert(tp[1].score>=tp[2].score);
+const zs=tp.slice(1).filter(x=>x.score===0);if(zs.length===2)assert(zs[0].name<=zs[1].name,'ties by name');
+const cr=sess('2026-11-09T09:00:00.000Z',1,0);cr.reviewSchedule='weekly-mon';cr.comments=[{area:'bend',name:'Bend',text:' go ',rank:1},{area:'pavo',name:'Pavo',text:'  ',rank:2}];
+const ce=P.sessionEntry(D,cr);assert.deepEqual(ce.comments,[{area:'bend',name:'Bend',text:'go',rank:1}]);assert.equal(ce.reviewSchedule,'weekly-mon');
+const cmd=P.create(D,{}).markdown(cr);assert(cmd.includes('## Comments')&&cmd.includes('#1 Bend (bend): go')&&cmd.includes('on Mondays'));
 console.log('all tests passed');

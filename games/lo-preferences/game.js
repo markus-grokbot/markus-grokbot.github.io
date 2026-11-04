@@ -76,20 +76,27 @@
     setTimeout(function () { if (e.seq >= planned) return results(); hide(); g.afterQuestion(); idealT *= g.P.speedKeepAfterQuestion; run(); }, 700 / Math.min(FAST, 4));
   }
   function results(r, keepLedger) {
-    phase = 'done'; if (!r) { r = sess.result(); var pf = Prefs.performance(DATA, stats, r.log); r.dataWeight = Prefs.weighSession(DATA, cfg.dataLevel, pf); r.dataWeight.metrics = pf; r.settings = { dataLevel: cfg.dataLevel, costLevel: cfg.costLevel };
+    phase = 'done'; $('box').onchange = null; if (!r) { r = sess.result(); var pf = Prefs.performance(DATA, stats, r.log); r.dataWeight = Prefs.weighSession(DATA, cfg.dataLevel, pf); r.dataWeight.metrics = pf; r.settings = { dataLevel: cfg.dataLevel, costLevel: cfg.costLevel };
       r.costLevel = cfg.costLevel; r.costPlan = Prefs.costPlan(DATA, cfg.costLevel, r.executors); r.allowedExecutors = {}; Object.keys(r.costPlan.areas).forEach(function (a) { if (r.executors && r.executors[a]) r.allowedExecutors[a] = r.costPlan.areas[a].allowedExecutors; }); } var L = ledger(); if (!keepLedger && r.log) { L = Prefs.mergeLedger(L, [Prefs.sessionEntry(DATA, r)]); saveLedger(L); }
+    if (!r.reviewSchedule) r.reviewSchedule = Prefs.reviewSchedule((r.settings || {}).dataLevel || (r.dataWeight || {}).setting || (cfg && cfg.dataLevel));
+    var tops = r.mode === 'decision' ? DATA.areas.filter(function (a) { return a.id === r.area; }).map(function (a) { return { area: a.id, name: a.name, rank: 1 }; }) : Prefs.topProjects(DATA, L, 3), prevC = {}; (r.comments || []).forEach(function (c) { prevC[c.area] = c.text; });
+    r.comments = r.comments || [];
     r.ledger = { version: 1, sessions: L.sessions }; r.suggested = Prefs.suggested(DATA, L); r.standings = Prefs.standings(DATA, L).map(function (s) { return { id: s.id, score: s.score, upSessions: s.upSessions, crossed: s.crossed }; });
-    try { localStorage.setItem(LSR, JSON.stringify(r)); } catch (e) { } var md = sess ? sess.markdown(r) : '';
+    try { localStorage.setItem(LSR, JSON.stringify(r)); } catch (e) { } var md = Prefs.create(DATA, {}).markdown(r);
     var an = function (id) { var a = DATA.areas.find(function (x) { return x.id === id; }); return a ? a.name : id; };
     show('<h2>' + (r.mode === 'decision' ? '🎯 Decision round: ' + esc(an(r.area)) : 'Results') + '</h2><p>' + r.answered + ' cards</p>' + (r.dataWeight ? '<div class="perf' + (r.dataWeight.counted ? '' : ' nc') + '">Performance <b>' + Math.round((r.dataWeight.performance || 0) * 100) + '%</b> <span class="small">(gameplay ' + Math.round(r.dataWeight.metrics.gameplay * 100) + '%, focus ' + Math.round(r.dataWeight.metrics.focus * 100) + '%)</span><br>' +
       (r.dataWeight.counted ? '✅ Counted in ladder ×' + r.dataWeight.weight + ' (setting ' + r.dataWeight.setting + ')' : '⛔ Not counted (weight 0): ' + esc(r.dataWeight.reason)) + '</div>' : '') +
       r.suggested.map(function (id) { return '<div class="sug">⭐ Suggested project: <b>' + esc(an(id)) + '</b> <button class="dr" data-a="' + esc(id) + '">🎯 Start decision round</button></div>'; }).join('') + '<h3>🔥 Strong current preferences</h3><ul>' + (r.strong.map(function (p) { return '<li>' + esc(p.text) + ' (' + p.count + '×)</li>'; }).join('') || '<li>none yet</li>') + '</ul>' +
       '<h3>Building</h3><ul>' + r.prefs.filter(function (p) { return !p.strong; }).map(function (p) { return '<li>' + esc(p.text) + ' <span class="tag">' + p.label + '</span></li>'; }).join('') + '</ul>' +
+      '<h3>💬 Comments <span class="small">(optional)</span></h3><div id="cmts">' + tops.map(function (t) { return '<label class="small" style="display:block;margin-top:6px">#' + t.rank + ' ' + esc(t.name) + (t.score != null ? ' (' + (t.score > 0 ? '+' : '') + t.score + ')' : '') + '</label><textarea class="cmt" data-a="' + esc(t.area) + '" data-n="' + esc(t.name) + '" data-r="' + t.rank + '" rows="2" style="width:100%;background:#252936;color:#eee;border:1px solid #444a58;border-radius:8px">' + esc(prevC[t.area] || '') + '</textarea>'; }).join('') + '</div><p id="rvw" class="small">' + esc(Prefs.reviewText(r.reviewSchedule)) + '</p>' +
       '<button id="xj">⬇ JSON</button><button id="xm">⬇ Markdown</button><button id="again">↻ Setup</button>' + ladderHtml()); bindLadder();
+    function syncComments() { r.comments = Prefs.cleanComments([].slice.call(document.querySelectorAll('.cmt')).map(function (t) { return { area: t.dataset.a, name: t.dataset.n, text: t.value, rank: +t.dataset.r }; }));
+      var LL = ledger(), en = LL.sessions.find(function (x) { return x.at === r.at; }); if (en) { en.comments = r.comments; en.reviewSchedule = r.reviewSchedule; saveLedger(LL); } r.ledger = { version: 1, sessions: LL.sessions };
+      md = Prefs.create(DATA, {}).markdown(r); try { localStorage.setItem(LSR, JSON.stringify(r)); } catch (e) { } window.__LO_RESULT = r; window.__LO_MD = md; }
+    document.querySelectorAll('.cmt').forEach(function (t) { t.oninput = syncComments; }); syncComments();
     function dl(txt, name, type) { var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: type })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
-    var stamp = r.at.replace(/[:.]/g, '-'); $('xj').onclick = function () { dl(JSON.stringify(r, null, 1), 'lo-prefs-' + stamp + '.json', 'application/json'); };
-    $('xm').onclick = function () { dl(md || JSON.stringify(r), 'lo-prefs-' + stamp + '.md', 'text/markdown'); }; $('again').onclick = function () { $('game').classList.add('hide'); setup(); };
-    window.__LO_RESULT = r; window.__LO_MD = md;
+    var stamp = r.at.replace(/[:.]/g, '-'); $('xj').onclick = function () { syncComments(); dl(JSON.stringify(r, null, 1), 'lo-prefs-' + stamp + '.json', 'application/json'); };
+    $('xm').onclick = function () { syncComments(); dl(md || JSON.stringify(r), 'lo-prefs-' + stamp + '.md', 'text/markdown'); }; $('again').onclick = function () { $('game').classList.add('hide'); setup(); };
   }
   function pause() { if (phase !== 'run') return; timer.pause(); phase = 'paused'; show('<h2>Paused</h2><button id="res">▶ Resume</button>'); $('res').onclick = function () { hide(); run(); }; }
   var cx = $('cv').getContext('2d');
@@ -103,7 +110,7 @@
   $('bjump').onpointerdown = function () { jd(true); }; $('bjump').onpointerup = $('bjump').onpointerleave = function () { jd(false); };
   $('bduck').onpointerdown = function () { dd(true); }; $('bduck').onpointerup = $('bduck').onpointerleave = function () { dd(false); };
   $('cv').onpointerdown = function () { jd(true); }; $('cv').onpointerup = function () { jd(false); }; $('bp').onclick = pause;
-  addEventListener('keydown', function (e) { if (phase === 'card') { var n = +e.key; var b = document.querySelectorAll('#box [data-v]')[n - 1]; if (b) b.click(); return; }
+  addEventListener('keydown', function (e) { if (/^(TEXTAREA|INPUT)$/.test((e.target || {}).tagName || '')) return; if (phase === 'card') { var n = +e.key; var b = document.querySelectorAll('#box [data-v]')[n - 1]; if (b) b.click(); return; }
     if ([' ', 'ArrowUp'].indexOf(e.key) >= 0) { e.preventDefault(); jd(true); } else if (e.key === 'ArrowDown') { e.preventDefault(); dd(true); } else if (e.key === 'p' || e.key === 'Escape') pause(); });
   addEventListener('keyup', function (e) { if ([' ', 'ArrowUp'].indexOf(e.key) >= 0) jd(false); if (e.key === 'ArrowDown') dd(false); });
   document.addEventListener('visibilitychange', function () { if (document.hidden) pause(); });
