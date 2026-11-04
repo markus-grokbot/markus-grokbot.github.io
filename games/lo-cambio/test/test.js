@@ -18,4 +18,13 @@ assert.equal(P.reviewSchedule(1),'weekly-fri-sat');assert.equal(P.reviewSchedule
 r.game='lo-cambio';assert.equal(P.importSessions(D,r).length,1);
 // no personnummer-shaped strings outside synthetic tickets flagged; ticket ids map to clean.json
 const src='/tmp/cambio-associate-ai-engineer/prep/synthetic-data/merged/clean.json';if(fs.existsSync(src)){const ids=new Set(JSON.parse(fs.readFileSync(src,'utf8')).tickets.map(t=>t.id));D.cards.filter(c=>c.cambio&&c.cambio.ticket_id).forEach(c=>assert(ids.has(c.cambio.ticket_id),c.cambio.ticket_id));}
+// round 2: talking playable at L1-2 with allowed executors; abbreviation reveal; new scope/talking cards export
+[1,2].forEach(l=>assert(C.levelCards(D,l).filter(c=>c.area==='talking').length>=20,'talking at level '+l));
+const cp=P.costPlan(D,2,P.normExec(D,{talking:P.defaultExecutors(D)}));assert(cp.areas.talking.allowedExecutors.length>0,'talking allowed executors');
+D.cards.filter(c=>c.cambio&&c.cambio.kind==='abbreviation_pick').forEach(c=>{assert(c.reveal&&c.reveal.expansions.length&&c.reveal.example&&c.reveal.example.text,'reveal '+c.id);assert(c.options.some(o=>o.value==='__unknown__'),'dk '+c.id);});
+assert(D.cards.filter(c=>/^sc2-/.test(c.id)).length>=10&&D.cards.filter(c=>/^tp2-/.test(c.id)).length>=10);
+assert(!JSON.stringify(D.cards).match(/\bdegree\b|examen/i),'no degree claims');
+const L2=Object.assign({},D,{cards:C.levelCards(D,2)}),s2=P.create(L2,{});for(let i=0;i<80;i++){const h=s2.next();s2.answer(h,h.card.type==='choice'?h.card.options.length-1:h.card.type==='rate'?0:'up');}
+const x2=C.build(D,s2.result().log,P.weighSession(D,2,{score:1}));assert.equal(x2.schema,'lo-cambio.export.v1');assert(x2.scope_decisions.some(d=>d.decision_id==='backup'||d.decision_id==='fhir-depth'));assert(x2.abbreviation_picks.some(a=>a.dont_know));
+assert(fs.statSync(__dirname+'/../data/core.js').size<80000,'core.js stays small');
 console.log('lo-cambio tests OK',D.cards.length,'cards');

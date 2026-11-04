@@ -882,6 +882,540 @@
    "prompt": "Up-prioritise interview talking-point prep?"
   },
   {
+   "id": "sc2-tb-backup",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Tiebreak (R1 recording vs R2 both): backup if live demo breaks?",
+   "options": [
+    {
+     "label": "3-min recording only",
+     "pref": "cam:scope:backup:recording",
+     "value": "recording"
+    },
+    {
+     "label": "Both: recording + offline/mock mode in the same UI",
+     "pref": "cam:scope:backup:both",
+     "value": "both"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "backup",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-tb-live-fail",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Tiebreak (R1 RAG vs R2 patient data): ONE failure case to show live?",
+   "options": [
+    {
+     "label": "Ungrounded RAG answer → fail closed",
+     "pref": "cam:scope:live-fail:rag-fail-closed",
+     "value": "rag-fail-closed"
+    },
+    {
+     "label": "Patient data → forced human handoff",
+     "pref": "cam:scope:live-fail:patient-handoff",
+     "value": "patient-handoff"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "live-fail",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-fhir-depth",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "FHIR adapter: which mapping to build?",
+   "options": [
+    {
+     "label": "Incident → AdverseEvent only",
+     "pref": "cam:scope:fhir-depth:adverse-event",
+     "value": "adverse-event"
+    },
+    {
+     "label": "Ticket → Task + Communication only",
+     "pref": "cam:scope:fhir-depth:task",
+     "value": "task"
+    },
+    {
+     "label": "Both, each with mapping_status / needs_review",
+     "pref": "cam:scope:fhir-depth:both",
+     "value": "both"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "fhir-depth",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-fhir-validate",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "FHIR output validation for the demo?",
+   "options": [
+    {
+     "label": "JSON Schema + allowlists, fail closed",
+     "pref": "cam:scope:fhir-validate:schema",
+     "value": "schema"
+    },
+    {
+     "label": "Also run the HL7 validator JAR",
+     "pref": "cam:scope:fhir-validate:hl7-jar",
+     "value": "hl7-jar"
+    },
+    {
+     "label": "Schema now; HL7 validator as a talking point",
+     "pref": "cam:scope:fhir-validate:schema-talk",
+     "value": "schema-talk"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "fhir-validate",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-rag-low",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "RAG: retrieval finds no good doc among the ~8. Show?",
+   "options": [
+    {
+     "label": "Abstain → handoff (no draft)",
+     "pref": "cam:scope:rag-low:abstain",
+     "value": "abstain"
+    },
+    {
+     "label": "Draft flagged needs_review, no citation",
+     "pref": "cam:scope:rag-low:flag",
+     "value": "flag"
+    },
+    {
+     "label": "Ask the colleague a clarifying question",
+     "pref": "cam:scope:rag-low:clarify",
+     "value": "clarify"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "rag-low",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-incident-fields",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Incident/avvikelse draft fields?",
+   "options": [
+    {
+     "label": "what / when / where / harm / action",
+     "pref": "cam:scope:incident-fields:full",
+     "value": "full"
+    },
+    {
+     "label": "what + suggested action only",
+     "pref": "cam:scope:incident-fields:minimal",
+     "value": "minimal"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "incident-fields",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-span-gate",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Show the exact-substring PII span gate (\"22-4821\" rejected) live?",
+   "options": [
+    {
+     "label": "Yes, as the local-model moment",
+     "pref": "cam:scope:span-gate:live",
+     "value": "live"
+    },
+    {
+     "label": "In the eval report only",
+     "pref": "cam:scope:span-gate:report",
+     "value": "report"
+    },
+    {
+     "label": "Mention only",
+     "pref": "cam:scope:span-gate:mention",
+     "value": "mention"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "span-gate",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-pii-second",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Local model as PII second opinion (may only ADD masks)?",
+   "options": [
+    {
+     "label": "In the live run",
+     "pref": "cam:scope:pii-second:live",
+     "value": "live"
+    },
+    {
+     "label": "Recorded run + replayed fixtures",
+     "pref": "cam:scope:pii-second:recorded",
+     "value": "recorded"
+    },
+    {
+     "label": "Leave out; regex only",
+     "pref": "cam:scope:pii-second:out",
+     "value": "out"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "pii-second",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-eval-side",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Eval sidebar content?",
+   "options": [
+    {
+     "label": "Handoff rate + valid-output rate",
+     "pref": "cam:scope:eval-side:two",
+     "value": "two"
+    },
+    {
+     "label": "+ citation faithfulness",
+     "pref": "cam:scope:eval-side:faith",
+     "value": "faith"
+    },
+    {
+     "label": "+ flakiness over 3 runs",
+     "pref": "cam:scope:eval-side:flaky",
+     "value": "flaky"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "eval-side",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-glossary",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Abbreviation glossary lookup (before any model) in the demo?",
+   "options": [
+    {
+     "label": "Show it on one ticket",
+     "pref": "cam:scope:glossary:show",
+     "value": "show"
+    },
+    {
+     "label": "Mention only",
+     "pref": "cam:scope:glossary:mention",
+     "value": "mention"
+    },
+    {
+     "label": "Skip",
+     "pref": "cam:scope:glossary:skip",
+     "value": "skip"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "glossary",
+    "round": 2
+   }
+  },
+  {
+   "id": "sc2-openehr",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "openEHR in the demo?",
+   "options": [
+    {
+     "label": "Talking point: ticket ≠ clinical record",
+     "pref": "cam:scope:openehr:talk",
+     "value": "talk"
+    },
+    {
+     "label": "One example composition file",
+     "pref": "cam:scope:openehr:example",
+     "value": "example"
+    },
+    {
+     "label": "Leave out",
+     "pref": "cam:scope:openehr:none",
+     "value": "none"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "openehr",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-ops-pack-vs-this-demo",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "ops-pack-demo: rules-first routing, schema-checked model step, human triage",
+     "pref": "cam:tp:ops-pack",
+     "value": "ops-pack"
+    },
+    {
+     "label": "The Cambio support copilot built for this interview (mask → rules → gate → approve)",
+     "pref": "cam:tp:this-demo",
+     "value": "this-demo"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-agentic-vs-ops-pack",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "My own agentic workflow: tasks by email, night queue on free/local models, every output verified",
+     "pref": "cam:tp:agentic",
+     "value": "agentic"
+    },
+    {
+     "label": "ops-pack-demo: rules-first routing, schema-checked model step, human triage",
+     "pref": "cam:tp:ops-pack",
+     "value": "ops-pack"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-fcc-vs-honest-exp",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "16 freeCodeCamp certifications, 3,600+ documented hours",
+     "pref": "cam:tp:fcc",
+     "value": "fcc"
+    },
+    {
+     "label": "Stated plainly: ~2 years self-directed + <1 year freelance, no full-time role yet",
+     "pref": "cam:tp:honest-exp",
+     "value": "honest-exp"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-fcc-vs-ops-pack",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "16 freeCodeCamp certifications, 3,600+ documented hours",
+     "pref": "cam:tp:fcc",
+     "value": "fcc"
+    },
+    {
+     "label": "ops-pack-demo: rules-first routing, schema-checked model step, human triage",
+     "pref": "cam:tp:ops-pack",
+     "value": "ops-pack"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-agentic-vs-json-fixer",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "My own agentic workflow: tasks by email, night queue on free/local models, every output verified",
+     "pref": "cam:tp:agentic",
+     "value": "agentic"
+    },
+    {
+     "label": "llm-json-fixer: MCP server on Smithery that repairs LLM JSON",
+     "pref": "cam:tp:json-fixer",
+     "value": "json-fixer"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-model-eval-vs-this-demo",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "Compared free, local and paid models on the same tasks",
+     "pref": "cam:tp:model-eval",
+     "value": "model-eval"
+    },
+    {
+     "label": "The Cambio support copilot built for this interview (mask → rules → gate → approve)",
+     "pref": "cam:tp:this-demo",
+     "value": "this-demo"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-bilingual-vs-agentic",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "Swedish native + English: Swedish tickets, English demo",
+     "pref": "cam:tp:bilingual",
+     "value": "bilingual"
+    },
+    {
+     "label": "My own agentic workflow: tasks by email, night queue on free/local models, every output verified",
+     "pref": "cam:tp:agentic",
+     "value": "agentic"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-honest-exp-vs-this-demo",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "Stated plainly: ~2 years self-directed + <1 year freelance, no full-time role yet",
+     "pref": "cam:tp:honest-exp",
+     "value": "honest-exp"
+    },
+    {
+     "label": "The Cambio support copilot built for this interview (mask → rules → gate → approve)",
+     "pref": "cam:tp:this-demo",
+     "value": "this-demo"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-measure-vs-model-eval",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "Measuring impact: handoff rate, valid-output rate, flakiness",
+     "pref": "cam:tp:measure",
+     "value": "measure"
+    },
+    {
+     "label": "Compared free, local and paid models on the same tasks",
+     "pref": "cam:tp:model-eval",
+     "value": "model-eval"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
+   "id": "tp2-nursing-vs-bilingual",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Which point to lead with?",
+   "options": [
+    {
+     "label": "In passing: some nursing exposure → why patient-safety gates matter",
+     "pref": "cam:tp:nursing",
+     "value": "nursing"
+    },
+    {
+     "label": "Swedish native + English: Swedish tickets, English demo",
+     "pref": "cam:tp:bilingual",
+     "value": "bilingual"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 2
+   }
+  },
+  {
    "id": "ec-r-missing-key",
    "area": "edge",
    "level": 2,
@@ -1269,6 +1803,18 @@
     ],
     "ambiguous": false,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "sjuksköterska",
+      "en": "registered nurse"
+     }
+    ],
+    "example": {
+     "text": "Ansvarig ssk på avd 4C har kontrollerat listan.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1312,6 +1858,18 @@
     ],
     "ambiguous": false,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "undersköterska",
+      "en": "assistant nurse"
+     }
+    ],
+    "example": {
+     "text": "usk hjälper patienten med morgonrutinen.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1355,6 +1913,18 @@
     ],
     "ambiguous": true,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "biträdande överläkare",
+      "en": "associate senior physician (employer grade)"
+     }
+    ],
+    "example": {
+     "text": "Roster shorthand.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1400,6 +1970,26 @@
     ],
     "ambiguous": true,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "allmäntjänstgöring",
+      "en": "medical internship before specialist training"
+     },
+     {
+      "sv": "arbetsterapeut",
+      "en": "occupational therapist"
+     },
+     {
+      "sv": "allmäntillstånd",
+      "en": "general condition"
+     }
+    ],
+    "example": {
+     "text": "One of three readings.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1443,6 +2033,18 @@
     ],
     "ambiguous": true,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "underläkare",
+      "en": "junior physician"
+     }
+    ],
+    "example": {
+     "text": "ul ringer om ordinationen efter ronden.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1486,6 +2088,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "ultraljud",
+      "en": "ultrasound"
+     }
+    ],
+    "example": {
+     "text": "Remiss till UL buk skickad, tid om ca två veckor.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1529,6 +2143,18 @@
     ],
     "ambiguous": true,
     "category": "unit"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "hemtjänst",
+      "en": "home-help service"
+     }
+    ],
+    "example": {
+     "text": "Lower case on the delegering list.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1572,6 +2198,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "hypertoni",
+      "en": "hypertension"
+     }
+    ],
+    "example": {
+     "text": "Capitals on the delegering list.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1615,6 +2253,18 @@
     ],
     "ambiguous": false,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "distriktssköterska",
+      "en": "district nurse (specialist nurse)"
+     }
+    ],
+    "example": {
+     "text": "Not distriktsläkare.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1658,6 +2308,18 @@
     ],
     "ambiguous": false,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "medicinskt ansvarig sjuksköterska",
+      "en": "medically responsible nurse in municipal health care"
+     }
+    ],
+    "example": {
+     "text": "Termbank synonym MAS.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1701,6 +2363,18 @@
     ],
     "ambiguous": true,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "medicinskt ansvarig för rehabilitering",
+      "en": "medically responsible rehabilitation lead in municipal care"
+     }
+    ],
+    "example": {
+     "text": "Role cue near SÄBO or kommun.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1745,6 +2419,22 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "infektion",
+      "en": "infection"
+     },
+     {
+      "sv": "inferior",
+      "en": "inferior (anatomical)"
+     }
+    ],
+    "example": {
+     "text": "Misstänkt inf i operationssåret, odling tagen.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1789,6 +2479,22 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "undersökning",
+      "en": "examination"
+     },
+     {
+      "sv": "utskrivningssamtal",
+      "en": "discharge conversation"
+     }
+    ],
+    "example": {
+     "text": "Pat. väntar på us av läkare innan hemgång; us bokat imorgon kl 10.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1833,6 +2539,22 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "cancer",
+      "en": "cancer"
+     },
+     {
+      "sv": "cirka",
+      "en": "approximately"
+     }
+    ],
+    "example": {
+     "text": "Pat. med känd ca mammae, väntar ca 20 min på provsvar.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -1877,6 +2599,22 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "ventrikeltakykardi",
+      "en": "ventricular tachycardia"
+     },
+     {
+      "sv": "vårdtid",
+      "en": "length of stay"
+     }
+    ],
+    "example": {
+     "text": "Värmland lists this beside vårdtid on the same token.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1920,6 +2658,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "blodtryck",
+      "en": "blood pressure"
+     }
+    ],
+    "example": {
+     "text": "Delegering.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -1963,6 +2713,18 @@
     ],
     "ambiguous": true,
     "category": "medication"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "per os, peroralt",
+      "en": "by mouth"
+     }
+    ],
+    "example": {
+     "text": "Värmland.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2006,6 +2768,18 @@
     ],
     "ambiguous": true,
     "category": "unit"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "kirurgisk akutvårdsavdelning",
+      "en": "surgical acute ward"
+     }
+    ],
+    "example": {
+     "text": "Patienten flyttas från akuten till KAVA för observation efter operation.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -2050,6 +2824,22 @@
     ],
     "ambiguous": true,
     "category": "unit"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "sluten vård",
+      "en": "inpatient care"
+     },
+     {
+      "sv": "samverkan vid utskrivning",
+      "en": "coordinated discharge (inpatient to municipality or primary care)"
+     }
+    ],
+    "example": {
+     "text": "Delegering also uses SV for samverkan vid utskrivning.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2093,6 +2883,18 @@
     ],
     "ambiguous": true,
     "category": "role"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "personligt ombud",
+      "en": "personal ombudsman (social-service role)"
+     }
+    ],
+    "example": {
+     "text": "Also per os / peroralt.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2136,6 +2938,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "aktiviteter i dagliga livet",
+      "en": "activities of daily living"
+     }
+    ],
+    "example": {
+     "text": "Bedömning av ADL: klarar påklädning själv, behöver hjälp vid dusch.",
+     "source": "synthetic example (gen.js)"
+    }
    }
   },
   {
@@ -2179,6 +2993,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "andningsfrekvens",
+      "en": "respiratory rate"
+     }
+    ],
+    "example": {
+     "text": "NEWS parameter in Swedish notes.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2222,6 +3048,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "regelbunden rytm",
+      "en": "regular rhythm"
+     }
+    ],
+    "example": {
+     "text": "Delegering.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2265,6 +3103,18 @@
     ],
     "ambiguous": true,
     "category": "clinical"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "oregelbunden rytm",
+      "en": "irregular rhythm"
+     }
+    ],
+    "example": {
+     "text": "Delegering.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2308,6 +3158,18 @@
     ],
     "ambiguous": true,
     "category": "documentation"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "Socialstyrelsen",
+      "en": "National Board of Health and Welfare"
+     }
+    ],
+    "example": {
+     "text": "Easy to read as SOS Alarm.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {
@@ -2351,6 +3213,18 @@
     ],
     "ambiguous": true,
     "category": "unit"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "vuxenpsykiatri",
+      "en": "adult psychiatry"
+     }
+    ],
+    "example": {
+     "text": "Usual parallel to BUP in rotas.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
    }
   },
   {

@@ -36,6 +36,33 @@ let pi = 0; for (let i = 0; i < TP.length; i++) for (let j = i + 1; j < TP.lengt
   ch('tp-' + TP[i][0] + '-vs-' + TP[j][0], 'talking', 1, 'Which talking point matters more for 11 Nov?', [[TP[i][1], 'cam:tp:' + TP[i][0], TP[i][0]], [TP[j][1], 'cam:tp:' + TP[j][0], TP[j][0]]], { cambio: { kind: 'talking_point_pair' } }); }
 ud('tp-ud1', 'talking', 1, 'Up-prioritise interview talking-point prep?');
 
+
+// ---- L1: round-2 scope suggestions (from demo-eval/synthesis.md, health-standards/RESEARCH.md, cambio-tech-stack.md) ----
+// tb-* reuse the round-1 decision_id + pref keys so tiebreak votes merge into the same tally.
+const SCOPE2 = [
+  ['tb-backup', 'backup', 'Tiebreak (R1 recording vs R2 both): backup if live demo breaks?', [['3-min recording only', 'recording'], ['Both: recording + offline/mock mode in the same UI', 'both']]],
+  ['tb-live-fail', 'live-fail', 'Tiebreak (R1 RAG vs R2 patient data): ONE failure case to show live?', [['Ungrounded RAG answer → fail closed', 'rag-fail-closed'], ['Patient data → forced human handoff', 'patient-handoff']]],
+  ['fhir-depth', 'fhir-depth', 'FHIR adapter: which mapping to build?', [['Incident → AdverseEvent only', 'adverse-event'], ['Ticket → Task + Communication only', 'task'], ['Both, each with mapping_status / needs_review', 'both']]],
+  ['fhir-validate', 'fhir-validate', 'FHIR output validation for the demo?', [['JSON Schema + allowlists, fail closed', 'schema'], ['Also run the HL7 validator JAR', 'hl7-jar'], ['Schema now; HL7 validator as a talking point', 'schema-talk']]],
+  ['rag-low', 'rag-low', 'RAG: retrieval finds no good doc among the ~8. Show?', [['Abstain → handoff (no draft)', 'abstain'], ['Draft flagged needs_review, no citation', 'flag'], ['Ask the colleague a clarifying question', 'clarify']]],
+  ['incident-fields', 'incident-fields', 'Incident/avvikelse draft fields?', [['what / when / where / harm / action', 'full'], ['what + suggested action only', 'minimal']]],
+  ['span-gate', 'span-gate', 'Show the exact-substring PII span gate ("22-4821" rejected) live?', [['Yes, as the local-model moment', 'live'], ['In the eval report only', 'report'], ['Mention only', 'mention']]],
+  ['pii-second', 'pii-second', 'Local model as PII second opinion (may only ADD masks)?', [['In the live run', 'live'], ['Recorded run + replayed fixtures', 'recorded'], ['Leave out; regex only', 'out']]],
+  ['eval-side', 'eval-side', 'Eval sidebar content?', [['Handoff rate + valid-output rate', 'two'], ['+ citation faithfulness', 'faith'], ['+ flakiness over 3 runs', 'flaky']]],
+  ['glossary', 'glossary', 'Abbreviation glossary lookup (before any model) in the demo?', [['Show it on one ticket', 'show'], ['Mention only', 'mention'], ['Skip', 'skip']]],
+  ['openehr', 'openehr', 'openEHR in the demo?', [['Talking point: ticket ≠ clinical record', 'talk'], ['One example composition file', 'example'], ['Leave out', 'none']]]
+];
+SCOPE2.forEach(([id, k, q, o]) => { ch('sc2-' + id, 'scope', 1, q, o.map(x => [x[0], 'cam:scope:' + k + ':' + x[1], x[1]]), { cambio: { kind: 'scope_decision', decision_id: k, round: 2 } }); });
+
+// ---- L1: round-2 talking points, "which to lead with" (application/cv.md, form_answers.md). Nursing only in passing; no degree claims. ----
+const TP2 = { 'ops-pack': 'ops-pack-demo: rules-first routing, schema-checked model step, human triage', 'this-demo': 'The Cambio support copilot built for this interview (mask → rules → gate → approve)',
+  'agentic': 'My own agentic workflow: tasks by email, night queue on free/local models, every output verified', 'fcc': '16 freeCodeCamp certifications, 3,600+ documented hours',
+  'honest-exp': 'Stated plainly: ~2 years self-directed + <1 year freelance, no full-time role yet', 'json-fixer': 'llm-json-fixer: MCP server on Smithery that repairs LLM JSON',
+  'model-eval': 'Compared free, local and paid models on the same tasks', 'bilingual': 'Swedish native + English: Swedish tickets, English demo',
+  'measure': 'Measuring impact: handoff rate, valid-output rate, flakiness', 'nursing': 'In passing: some nursing exposure → why patient-safety gates matter' };
+[['ops-pack', 'this-demo'], ['agentic', 'ops-pack'], ['fcc', 'honest-exp'], ['fcc', 'ops-pack'], ['agentic', 'json-fixer'], ['model-eval', 'this-demo'], ['bilingual', 'agentic'], ['honest-exp', 'this-demo'], ['measure', 'model-eval'], ['nursing', 'bilingual']]
+  .forEach(([a, b]) => ch('tp2-' + a + '-vs-' + b, 'talking', 1, 'Which point to lead with?', [[TP2[a], 'cam:tp:' + a, a], [TP2[b], 'cam:tp:' + b, b]], { cambio: { kind: 'talking_point_pair', round: 2 } }));
+
 // ---- L2: local-model edge cases (pairwise + rate -> edge_case_votes) ----
 const EC = [['missing-key', 'Missing required key ({"label":"ovrigt","confidence":0.8}, 3b ×11)'], ['misspelled-key', 'Misspelled key "rationingen", integer confidence'], ['timeout', '7b timeout → abstain → handoff'],
   ['wrong-label', 'Schema-valid but wrong label (why approval exists)'], ['invented-span', '3b invents PII span not in text ("22-4821")'], ['luhn', 'Luhn-invalid personnummer missed by regex, found by model'],
@@ -48,12 +75,20 @@ ud('ec-ud1', 'edge', 2, 'Up-prioritise turning local-model errors into fixtures?
 const by = {}; abbr.forEach(a => (by[a.abbr] = by[a.abbr] || []).push(a));
 const DISTRACT = { 'böl': ['behörig överläkare'], 'ssk': ['specialistsköterska'], 'usk': ['undersökning'], 'ul': ['ultraljud'], 'us': [], 'MAS': ['medicinskt ansvarig specialist'] };
 const PICK = ['ssk', 'usk', 'böl', 'AT', 'ul', 'UL', 'ht', 'HT', 'dsk', 'MAS', 'MAR', 'inf', 'us', 'ca', 'VT', 'BT', 'po', 'KAVA', 'SV', 'PO', 'ADL', 'AF', 'RR', 'OR', 'SoS', 'VUP'];
+const SENT = clean.tickets.flatMap(t => (t.title + '. ' + t.body).split(/(?<=[.!?])\s+/));
+// Synthetic one-liners for abbreviations with no hit in the ticket set (shown in the post-answer reveal).
+const EXAMPLE = { us: 'Pat. väntar på us av läkare innan hemgång; us bokat imorgon kl 10.', KAVA: 'Patienten flyttas från akuten till KAVA för observation efter operation.',
+  ADL: 'Bedömning av ADL: klarar påklädning själv, behöver hjälp vid dusch.', inf: 'Misstänkt inf i operationssåret, odling tagen.', ca: 'Pat. med känd ca mammae, väntar ca 20 min på provsvar.',
+  UL: 'Remiss till UL buk skickad, tid om ca två veckor.', ul: 'ul ringer om ordinationen efter ronden.', ssk: 'Ansvarig ssk på avd 4C har kontrollerat listan.', usk: 'usk hjälper patienten med morgonrutinen.' };
+const example = k => { if (EXAMPLE[k]) return { text: EXAMPLE[k], source: 'synthetic example (gen.js)' }; const re = new RegExp('(^|[^\\wåäöÅÄÖ])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\wåäöÅÄÖ])'); const h = SENT.find(x => re.test(x) && x.length < 160);
+  if (h) return { text: h, source: 'synthetic-data/merged/clean.json' }; const n = by[k].map(a => a.notes).find(x => x && x.length > 30); return n ? { text: n.split(/(?<=\.)\s/)[0], source: 'swedish-medical-abbreviations.json (notes)' } : null; };
 const seen = new Set(); let rngS = 7; const rnd = () => (rngS = (rngS * 16807) % 2147483647) / 2147483647;
 PICK.forEach(k => { if (seen.has(k) || !by[k]) return; seen.add(k); const ex = [...new Set(by[k].map(a => a.expansion_sv))], amb = by[k].some(a => a.ambiguous) || ex.length > 1;
   let opts = ex.slice(); const cat = by[k][0].category; (DISTRACT[k] || []).forEach(d => opts.push(d));
   const pool = abbr.filter(a => a.category === cat && !ex.includes(a.expansion_sv) && a.abbr !== a.expansion_sv); while (opts.length < 3 && pool.length) { const d = pool.splice(Math.floor(rnd() * pool.length), 1)[0].expansion_sv; if (!opts.includes(d)) opts.push(d); }
   opts = opts.slice(0, 4).sort(() => rnd() - 0.5); const o = opts.map(x => [x, 'cam:abbr:' + slug(k) + ':' + slug(x), x]); o.push(['Ambiguous – depends on context', 'cam:abbr:' + slug(k) + ':ambiguous', '__ambiguous__']); o.push(["Don't know", 'cam:abbr:' + slug(k) + ':dk', '__unknown__']);
-  ch('ab-' + slug(k) + (k !== k.toLowerCase() ? '-uc' : ''), 'abbr', 2, 'In a Swedish ticket, what does "' + k + '" mean?', o, { cambio: { kind: 'abbreviation_pick', abbr: k, dataset_expansions: ex, ambiguous: amb, category: cat } }); });
+  ch('ab-' + slug(k) + (k !== k.toLowerCase() ? '-uc' : ''), 'abbr', 2, 'In a Swedish ticket, what does "' + k + '" mean?', o, { cambio: { kind: 'abbreviation_pick', abbr: k, dataset_expansions: ex, ambiguous: amb, category: cat },
+    reveal: { expansions: by[k].map(a => ({ sv: a.expansion_sv, en: a.english })), example: example(k) } }); });
 ud('ab-ud1', 'abbr', 2, 'Up-prioritise the abbreviation glossary (lookup before model)?');
 
 // ---- L3: synthetic ticket judgments (-> golden_label_votes) ----

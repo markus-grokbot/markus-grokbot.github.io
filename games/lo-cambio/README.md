@@ -8,7 +8,7 @@ Regenerate: `node tools/gen.js <cambio-associate-ai-engineer checkout> && node t
 ## Levels (Casual ↔ Data slider)
 | Level | Cards | Weight | Review |
 |---|---|---|---|
-| 1 | scope (14), talking points (16) | ×0.25 | weekend |
+| 1 | scope (25), talking points (26) | ×0.25 | weekend |
 | 2 | + edge cases (21), abbreviations (27) | ×0.5 | weekend |
 | 3 | + synthetic ticket judgments (211: category, route, needs_human, contains_pii, naturalness × 42 tickets + 1) | ×1 | Monday |
 | 4–5 | data creation: **coming later** (Run disabled; `?preview45=1` plays the level 1–3 cards at strict weighting) | ×1.5 / ×2, counted only with ≥80% performance | immediate |
@@ -23,3 +23,8 @@ Card interval: 30 s at levels 1–2, 15 s at levels 3–5.
 - `edge_case_votes[]` + `edge_case_ranking[]`: which `prep/local-models/REPORT.md` failure to feature.
 - `talking_point_ranking[]`: `{id, label, wins, shown, score, rank}`.
 - `level45`: `{status: "coming-later", schemas: {ticket_edit.v1, new_ticket.v1, bulk_label.v1, abbreviation_verification.v1, pii_span_annotation.v1}, records: []}`.
+
+## Round 2 (2026-11-04)
+- +11 scope suggestion cards (`sc2-*`, incl. tiebreaks `sc2-tb-backup`, `sc2-tb-live-fail` that reuse the round-1 decision ids), +10 "which point to lead with" talking cards (`tp2-*`).
+- Abbreviation cards carry `reveal` (expansions + one-line example); shown after every answer, incl. "Don't know" (still exported as `dont_know`).
+- Areas with an empty executor list fall back to defaults, so `costPlan.areas.talking.allowedExecutors` is no longer empty. Cache param `v=c3`.

@@ -20,6 +20,7 @@
     $('impf').onchange = function () { var fs = [].slice.call(this.files), tot = 0, bad = 0, n = fs.length; if (!n) return;
       fs.forEach(function (f) { var rd = new FileReader(); rd.onload = function () { try { var l = Prefs.mergeLedger(ledger(), Prefs.importSessions(DATA, JSON.parse(rd.result))); tot += l.added; saveLedger(l); } catch (e) { bad++; }
         if (--n === 0) { var m = 'Imported ' + tot + ' new session(s)' + (bad ? ', ' + bad + ' file(s) unreadable' : ''); if (phase === 'setup') setup(); else results(window.__LO_RESULT, true); if ($('impm')) $('impm').textContent = m; } }; rd.readAsText(f); }); }; }
+  function fillExec(ex) { var d = Prefs.defaultExecutors(DATA); Object.keys(ex).forEach(function (a) { if (!ex[a] || !ex[a].length) ex[a] = d.slice(); }); return ex; }
   var COST = function () { var c = {}; (DATA.executors || []).forEach(function (x) { c[x.id] = x.cost || 0; }); return c; };
   function sliders() { var nW = Prefs.dataLevels(DATA).length, nC = (DATA.costLevels || []).length || 5;
     return '<div class="sl"><label>Casual <input type="range" id="dl" min="1" max="' + nW + '" step="1" value="' + cfg.dataLevel + '"> Actual data</label><div id="dlx" class="small"></div>' +
@@ -31,7 +32,7 @@
   function decision(id) { if (!l3Ready()) return needL3(function () { decision(id); }); mode = { mode: 'decision', area: id }; cfg = cfg || {}; start(); }
   function setup() {
     mode = null;
-    phase = 'setup'; var s = load(); cfg = { areas: s.areas || DATA.areas.filter(function (a) { return a.defaultOn !== false; }).map(function (a) { return a.id; }), minutes: s.minutes || 10, exec: Prefs.normExec(DATA, s.exec), dataLevel: s.dataLevel || 3, costLevel: s.costLevel || 3 };
+    phase = 'setup'; var s = load(); if (s.areas && !s.talkV2) { if (s.areas.indexOf('talking') < 0) s.areas.push('talking'); s.talkV2 = 1; } cfg = { areas: s.areas || DATA.areas.filter(function (a) { return a.defaultOn !== false; }).map(function (a) { return a.id; }), minutes: s.minutes || 10, exec: fillExec(Prefs.normExec(DATA, s.exec)), dataLevel: s.dataLevel || 3, costLevel: s.costLevel || 3, talkV2: 1 };
     var EX = DATA.executors || [], AIDS = DATA.areas.map(function (a) { return a.id; });
     var cnt = DATA.cardCounts || {}; if (!DATA.cardCounts) DATA.cards.forEach(function (c) { cnt[c.area] = (cnt[c.area] || 0) + 1; }); var lvOf = {}; DATA.areas.forEach(function (a) { lvOf[a.id] = a.level || 1; });
     show('<h2>🐾 Lo · Cambio</h2><p class="small">Synthetic data only · answers export as Cambio support-copilot records (golden-label votes, scope decisions, talking-point ranking).</p><p>Run with Lo. Every <span class="k">30 s (casual 1–2) or 15 s (levels 3–5)</span> of running, one card asks about a project area. Choosing the same preference <span class="k">' + (DATA.confirmAt || 3) + '×</span> marks it a <b>strong current preference</b>.</p>' + sliders() +
@@ -75,7 +76,8 @@
   function pick(v) {
     if (phase !== 'card' || !gt || !gt.clickable()) return; var c = cur.card, ch = v === 'skip' ? 'skip' : c.type === 'updown' ? v : +v, e = sess.answer(cur, ch); phase = 'fb'; $('qn').textContent = e.seq;
     $('fb').innerHTML = e.pref ? (e.becameStrong ? '🔥 <b>Strong current preference!</b>' : e.status.indexOf('/') > 0 ? 'Noted (' + e.status + ')' : 'Still strong (' + e.status + ')') : 'Skipped';
-    setTimeout(function () { if (e.seq >= planned) return results(); hide(); g.afterQuestion(); idealT *= g.P.speedKeepAfterQuestion; run(); }, 700 / Math.min(FAST, 4));
+    var rv = c.reveal; if (rv) { $('fb').innerHTML += '<div class="tk">📘 <b>' + esc(c.cambio && c.cambio.abbr || '') + '</b> = ' + rv.expansions.map(function (x) { return esc(x.sv) + ' <span class="small">(' + esc(x.en) + ')</span>'; }).join(' · ') + (rv.example ? '<br><i>' + esc(rv.example.text) + '</i>' : '') + '</div>'; }
+    setTimeout(function () { if (e.seq >= planned) return results(); hide(); g.afterQuestion(); idealT *= g.P.speedKeepAfterQuestion; run(); }, (rv ? 3500 : 700) / Math.min(FAST, 4));
   }
   function results(r, keepLedger) { if (!l3Ready()) return needL3(function () { results(r, keepLedger); });
     phase = 'done'; $('box').onchange = null; if (!r) { r = sess.result(); var pf = Prefs.performance(DATA, stats, r.log); r.dataWeight = Prefs.weighSession(DATA, cfg.dataLevel, pf); r.dataWeight.metrics = pf; r.settings = { dataLevel: cfg.dataLevel, costLevel: cfg.costLevel };
