@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); }, Q = new URLSearchParams(location.search), LS = 'lo-prefs.settings.v1', LSR = 'lo-prefs.results.v1', LSL = 'lo-prefs.ledger.v1', mode = null;
-  var FAST = Math.max(1, +(Q.get('fast') || 1)), SEG = +(Q.get('segment') || 30) * 1000, DATA, cfg, sess, g, timer, phase = 'setup', planned = 0, cur = null, input = { jump: false, duck: false }, last = 0, acc = 0;
+  var FAST = Math.max(1, +(Q.get('fast') || 1)), QSEG = Q.get('segment'), SEG = +(QSEG || 30) * 1000, DATA, cfg, sess, g, timer, phase = 'setup', planned = 0, cur = null, input = { jump: false, duck: false }, last = 0, acc = 0;
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function show(h) { $('box').innerHTML = h; $('ov').classList.remove('hide'); } function hide() { $('ov').classList.add('hide'); }
   function load() { try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch (e) { return {}; } }
@@ -33,7 +33,7 @@
     phase = 'setup'; var s = load(); cfg = { areas: s.areas || DATA.areas.filter(function (a) { return a.defaultOn !== false; }).map(function (a) { return a.id; }), minutes: s.minutes || 10, exec: Prefs.normExec(DATA, s.exec), dataLevel: s.dataLevel || 3, costLevel: s.costLevel || 3 };
     var EX = DATA.executors || [], AIDS = DATA.areas.map(function (a) { return a.id; });
     var cnt = {}; DATA.cards.forEach(function (c) { cnt[c.area] = (cnt[c.area] || 0) + 1; });
-    show('<h2>🐾 Lo · Preferences</h2><p>Run with Lo. Every <span class="k">' + SEG / 1000 + ' s</span> of running, one card asks about a project area. Choosing the same preference <span class="k">' + (DATA.confirmAt || 3) + '×</span> marks it a <b>strong current preference</b>.</p>' + sliders() +
+    show('<h2>🐾 Lo · Preferences</h2><p>Run with Lo. Every <span class="k">30 s (casual 1–2) or 15 s (levels 3–5)</span> of running, one card asks about a project area. Choosing the same preference <span class="k">' + (DATA.confirmAt || 3) + '×</span> marks it a <b>strong current preference</b>.</p>' + sliders() +
       '<h3>Project areas</h3>' + (EX.length ? '<div class="exm"><span class="small">Executors for all areas:</span> ' + EX.map(function (x) { return '<label><input type="checkbox" class="mx" data-x="' + esc(x.id) + '"> ' + esc(x.name) + '</label>'; }).join(' ') + '</div>' : '') +
       '<div id="areas">' + DATA.areas.map(function (a) { return '<div class="arow"><label class="area"><input type="checkbox" class="ac" value="' + esc(a.id) + '"' + (cfg.areas.indexOf(a.id) >= 0 ? ' checked' : '') + '> ' + esc(a.name) + ' <span class="small">(' + (cnt[a.id] || 0) + ' cards)</span></label><div class="exr">' +
         EX.map(function (x) { return '<label data-ob="over budget"><input type="checkbox" class="ex" data-a="' + esc(a.id) + '" data-x="' + esc(x.id) + '"' + (cfg.exec[a.id].indexOf(x.id) >= 0 ? ' checked' : '') + '> ' + esc(x.name) + '</label>'; }).join('') + '</div></div>'; }).join('') + '</div>' +
@@ -42,7 +42,7 @@
       '<p id="plan" class="small"></p><button id="go">▶ Run</button>' + (localStorage.getItem(LSR) ? ' <button id="prev">Last results</button>' : '') + ladderHtml()); bindLadder();
     function masters() { document.querySelectorAll('.mx').forEach(function (m) { var st = Prefs.masterState(cfg.exec, AIDS, m.dataset.x); m.checked = st === 'all'; m.indeterminate = st === 'mixed'; }); }
     function read() { document.querySelectorAll('.ex').forEach(function (x) { Prefs.setAll(cfg.exec, [x.dataset.a], x.dataset.x, x.checked); }); masters();
-      cfg.areas = [].slice.call(document.querySelectorAll('#areas .ac:checked')).map(function (x) { return x.value; }); cfg.dataLevel = +$('dl').value; cfg.costLevel = +$('cl').value; sliderText(); var r = document.querySelector('input[name=len]:checked').value; cfg.minutes = r === 'custom' ? Math.max(1, Math.min(120, +$('cust').value || 10)) : +r; save();
+      cfg.areas = [].slice.call(document.querySelectorAll('#areas .ac:checked')).map(function (x) { return x.value; }); cfg.dataLevel = +$('dl').value; cfg.costLevel = +$('cl').value; SEG = QSEG ? +QSEG * 1000 : (cfg.dataLevel <= 2 ? 30000 : 15000); sliderText(); var r = document.querySelector('input[name=len]:checked').value; cfg.minutes = r === 'custom' ? Math.max(1, Math.min(120, +$('cust').value || 10)) : +r; save();
       planned = Prefs.cardsForMinutes(cfg.minutes, SEG / 1000); var pool = DATA.cards.filter(function (c) { return cfg.areas.indexOf(c.area) >= 0; }).length;
       $('plan').textContent = planned + ' cards (~' + cfg.minutes + ' min) from ' + pool + ' cards in ' + cfg.areas.length + ' areas' + (planned > pool ? ' — some cards repeat as confirmations' : ''); $('go').disabled = !pool; }
     $('box').onchange = function (e) { if (e.target.classList.contains('mx')) { var on = e.target.checked; document.querySelectorAll('.ex[data-x="' + e.target.dataset.x + '"]').forEach(function (x) { x.checked = on; }); } read(); }; $('dl').oninput = $('cl').oninput = read; $('cust').oninput = function () { document.querySelector('input[value=custom]').checked = true; read(); };
