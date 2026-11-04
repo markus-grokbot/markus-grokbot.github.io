@@ -52,6 +52,7 @@
     $('go').onclick = start; read();
   }
   function start() {
+    SEG = QSEG ? +QSEG * 1000 : ((cfg && cfg.dataLevel || 3) <= 2 ? 30000 : 15000);
     var dm = mode && mode.mode === 'decision'; sess = Prefs.create(DATA, dm ? { mode: 'decision', area: mode.area, executors: cfg.exec } : { areas: cfg.areas, executors: cfg.exec }); if (dm) planned = Math.max(planned, sess.pool.length * 2) || sess.pool.length * 2; g = RunnerEngine.create({ seed: Date.now() & 0xffff, params: { segmentMs: SEG } }); timer = SegTimer.create(SEG, card); stats = { distance: 0, idealDistance: 0, faced: 0, crashes: 0, activeMs: 0 }; idealT = 0;
     $('qt').textContent = planned; $('game').classList.remove('hide'); hide(); run();
   }
