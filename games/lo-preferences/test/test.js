@@ -24,7 +24,7 @@ t.start();t.tick(29999);assert.equal(fired,1);t.tick(2);assert.equal(fired,2);
 // engine runs a segment
 const g=E.create({seed:3});for(let i=0;i<1800;i++)g.step(1000/60,{jump:i%40<5});assert(g.state().dist>0);
 // executors
-assert.equal(D.executors.length,5);let ex=P.normExec(D,null);assert.deepEqual(ex.bend,['free-models','opencode-lenovo','opencode-grokbot','codex','grok-build']);
+assert.equal(D.executors.length,6);let ex=P.normExec(D,null);assert.deepEqual(ex.bend,['free-models','opencode-lenovo','opencode-grokbot','codex','grok-build','grok-imagine']);
 // migration: old saved settings (pre execDefaultsVersion 2) without lenovo get lenovo ticked once; later unticks persist
 let old={bend:['codex'],__known:D.executors.map(x=>x.id)};let mig=P.normExec(D,old);assert(mig.bend.includes('opencode-lenovo'));
 mig.bend=['codex'];assert.deepEqual(P.normExec(D,mig).bend,['codex']);
@@ -56,4 +56,20 @@ const exported={game:'lo-preferences',at:'2026-11-03T10:00:00.000Z',log:[],ledge
 let L2=P.mergeLedger(P.emptyLedger(),[P.sessionEntry(D,sess('2026-11-04T09:00:00.000Z',2,0))]);P.mergeLedger(L2,P.importSessions(D,exported));assert.equal(L2.sessions.length,4);assert.equal(L2.added,3);
 P.mergeLedger(L2,P.importSessions(D,exported));assert.equal(L2.sessions.length,4,'re-import dedupes');assert.equal(L2.added,0);
 const lone=sess('2026-11-05T09:00:00.000Z',1,0);P.mergeLedger(L2,P.importSessions(D,lone));assert.equal(L2.sessions.length,5,'export without ledger imports as one session');
+// data weight + performance
+assert.deepEqual(D.dataWeight,[0.25,0.5,1,1.5,2]);
+const good=P.performance(D,{distance:9000,idealDistance:10000,faced:20,crashes:1},[{choice:'up',ms:2000},{choice:1,ms:1500}]);assert(good.score>=0.8,JSON.stringify(good));
+const bad=P.performance(D,{distance:5000,idealDistance:10000,faced:20,crashes:10},[{choice:'up',ms:200},{choice:'skip',ms:900},{choice:0,ms:300}]);assert(bad.score<0.8);assert.equal(bad.fastAnswers,2);assert.equal(bad.skipped,1);
+let w=P.weighSession(D,1,bad);assert(w.counted);assert.equal(w.weight,0.25);
+w=P.weighSession(D,4,bad);assert(!w.counted);assert.equal(w.weight,0);assert(/performance/.test(w.reason));
+w=P.weighSession(D,5,good);assert(w.counted);assert.equal(w.weight,2);
+// weighted ledger: old sessions w/o weight count 1; weight 0 sessions don't count up-sessions
+let LW=P.emptyLedger();const sA=sess('2026-11-06T09:00:00.000Z',4,0);sA.dataWeight=P.weighSession(D,5,good);const eA=P.sessionEntry(D,sA);assert.equal(eA.weight,2);assert.equal(eA.setting,5);assert(eA.performance>=0.8);
+const sB=sess('2026-11-07T09:00:00.000Z',4,0);sB.dataWeight=P.weighSession(D,4,bad);const eB=P.sessionEntry(D,sB);assert.equal(eB.weight,0);assert.equal(eB.counted,false);
+const eOld=P.sessionEntry(D,sess('2026-11-08T09:00:00.000Z',1,0));assert.equal(eOld.weight,undefined);
+P.mergeLedger(LW,[eA,eB,eOld]);let sw=P.standings(D,LW).find(x=>x.id==='bend');assert.equal(sw.score,9);assert.equal(sw.upSessions,2);assert(sw.crossed);
+// cost plan
+const exAll=P.normExec(D,null);let cp=P.costPlan(D,1,exAll);assert.deepEqual(cp.areas.bend.allowedExecutors,['free-models']);assert(cp.areas.bend.overBudget.includes('codex'));
+cp=P.costPlan(D,2,exAll);assert.deepEqual(cp.areas.bend.allowedExecutors,['free-models','opencode-lenovo','opencode-grokbot']);
+cp=P.costPlan(D,5,{bend:['codex']});assert.deepEqual(cp.areas.bend.allowedExecutors,['codex']);assert.equal(D.executors.find(x=>x.id==='grok-imagine').cost,3);
 console.log('all tests passed');

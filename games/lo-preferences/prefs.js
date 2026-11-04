@@ -60,6 +60,9 @@
       L.push('', '## Area priority (up − down)'); r.areaRanking.forEach(function (a, i) { L.push((i + 1) + '. ' + a.name + ' (' + (a.net > 0 ? '+' : '') + a.net + ')'); });
       if (r.executors) { var en = {}; (data.executors || []).forEach(function (x) { en[x.id] = x.name; }); L.push('', '## Executors per area');
         data.areas.forEach(function (a) { if (r.executors[a.id]) L.push('- ' + a.name + ': ' + (r.executors[a.id].map(function (id) { return en[id] || id; }).join(', ') || '(none)')); }); }
+      if (r.dataWeight) { var dw = r.dataWeight; L.push('', '## Data weight', '- Setting ' + dw.setting + '/' + dataLevels(data).length + ' · performance ' + Math.round((dw.performance || 0) * 100) + '% · ' + (dw.counted ? 'counted ×' + dw.weight : 'NOT counted (' + dw.reason + ')')); }
+      if (r.costPlan) { var en2 = {}; (data.executors || []).forEach(function (x) { en2[x.id] = x.name; }); L.push('', '## Cost level ' + r.costPlan.costLevel + ' (max executor cost ' + r.costPlan.maxCost + ')', '- ' + r.costPlan.meaning);
+        Object.keys(r.allowedExecutors || {}).forEach(function (a) { L.push('- ' + a + ': allowed ' + (r.allowedExecutors[a].map(function (id) { return en2[id] || id; }).join(', ') || '(none)')); }); }
       if (r.suggested && r.suggested.length) L.push('', '## Suggested project(s)', '- ' + r.suggested.join(', '));
       return L.join('\n') + '\n';
     }
@@ -69,6 +72,7 @@
   // ---- cross-session ledger: {version:1, sessions:[{at, mode, area, delta:{areaId:score}, up:{areaId:n}}]} ----
   function sessionEntry(data, r) { var w = (data.threshold || {}).rateWeight; w = w == null ? 0.25 : w; var cm = {}; allCards(data).forEach(function (c) { cm[c.id] = c; });
     var e = { at: r.at, mode: r.mode || 'normal', area: r.area, answered: r.answered, delta: {}, up: {} };
+    if (r.dataWeight) { e.setting = r.dataWeight.setting; e.weight = r.dataWeight.weight; e.performance = r.dataWeight.performance; e.counted = r.dataWeight.counted; if (r.dataWeight.reason) e.reason = r.dataWeight.reason; }
     if (e.mode !== 'decision') (r.log || []).forEach(function (l) { var c = cm[l.card]; if (!c || !l.pref) return; var a = l.area, d = 0;
       if (c.type === 'updown' && !c.key) { d = l.choice === 'up' ? 1 : -1; if (d > 0) e.up[a] = (e.up[a] || 0) + 1; }
       else if (c.type === 'rate' && c.priority) d = l.choice > 0 ? w : l.choice < 0 ? -w : 0;
@@ -82,11 +86,31 @@
     if (obj.game === 'lo-preferences' && obj.log && !out.some(function (s) { return s.at === obj.at; })) out.push(sessionEntry(data, obj)); return out; }
   function thresholdFor(data, a) { var t = data.threshold || {}, o = a.threshold || {}; return { minScore: o.minScore != null ? o.minScore : t.minScore != null ? t.minScore : 5, minUpSessions: o.minUpSessions != null ? o.minUpSessions : t.minUpSessions != null ? t.minUpSessions : 2 }; }
   function standings(data, ledger) { var ss = (ledger && ledger.sessions) || [];
-    return data.areas.map(function (a) { var sc = 0, us = 0, t = thresholdFor(data, a); ss.forEach(function (s) { sc += (s.delta || {})[a.id] || 0; if ((s.up || {})[a.id] > 0) us++; });
+    return data.areas.map(function (a) { var sc = 0, us = 0, t = thresholdFor(data, a); ss.forEach(function (s) { var w = sessionWeight(s); sc += ((s.delta || {})[a.id] || 0) * w; if (w > 0 && (s.up || {})[a.id] > 0) us++; });
       sc = Math.round(sc * 100) / 100; var prog = Math.max(0, Math.min(1, Math.min(t.minScore > 0 ? sc / t.minScore : 1, t.minUpSessions > 0 ? us / t.minUpSessions : 1)));
       return { id: a.id, name: a.name, score: sc, upSessions: us, minScore: t.minScore, minUpSessions: t.minUpSessions, progress: prog, crossed: sc >= t.minScore && us >= t.minUpSessions, decisions: (a.decisions || []).length }; })
       .sort(function (x, y) { return (y.crossed - x.crossed) || (y.progress - x.progress) || (y.score - x.score); }); }
+  // ---- data-weight setting + performance ----
+  // stats: {activeMs, distance, idealDistance, faced, crashes}; log: card answers ({choice, ms})
+  function performance(data, stats, log) { var fast = ((data.dataStrict || {}).fastMs) || 700; stats = stats || {}; log = log || [];
+    var noCrash = stats.faced > 0 ? Math.max(0, 1 - stats.crashes / stats.faced) : 1, dist = stats.idealDistance > 0 ? Math.min(1, stats.distance / stats.idealDistance) : 1, gameplay = 0.6 * noCrash + 0.4 * dist;
+    var n = log.length, ans = log.filter(function (l) { return l.choice !== 'skip'; }), quick = ans.filter(function (l) { return l.ms < fast; }).length;
+    var answered = n ? ans.length / n : 1, sane = ans.length ? 1 - quick / ans.length : 1, focus = answered * sane;
+    var r = function (x) { return Math.round(x * 1000) / 1000; };
+    return { score: r(0.6 * gameplay + 0.4 * focus), gameplay: r(gameplay), focus: r(focus), noCrash: r(noCrash), distance: r(dist), answered: r(answered), sane: r(sane), fastAnswers: quick, skipped: n - ans.length, crashes: stats.crashes || 0, faced: stats.faced || 0 }; }
+  function dataLevels(data) { return data.dataWeight || [0.25, 0.5, 1, 1.5, 2]; }
+  // -> {setting, weight, nominalWeight, counted, performance, reason}
+  function weighSession(data, level, perf) { var W = dataLevels(data), L = Math.max(1, Math.min(W.length, level || 3)), w = W[L - 1], S = data.dataStrict || {}, from = S.fromLevel || W.length - 1, min = S.minPerformance != null ? S.minPerformance : 0.8;
+    var out = { setting: L, nominalWeight: w, weight: w, counted: true, performance: perf ? perf.score : null, strict: L >= from };
+    if (out.strict && (!perf || perf.score < min)) { out.weight = 0; out.counted = false; out.reason = 'performance ' + Math.round((perf ? perf.score : 0) * 100) + '% < ' + Math.round(min * 100) + '% required at setting ' + L; }
+    return out; }
+  function sessionWeight(s) { return s && typeof s.weight === 'number' ? s.weight : 1; }
+  // ---- cost level ----
+  function costPlan(data, level, exec) { var C = data.costLevels || [], L = Math.max(1, Math.min(C.length || 5, level || 3)), max = C[L - 1] ? C[L - 1].maxCost : 3, out = {};
+    var cost = {}; (data.executors || []).forEach(function (x) { cost[x.id] = x.cost || 0; });
+    data.areas.forEach(function (a) { var sel = (exec && exec[a.id]) || []; out[a.id] = { allowedExecutors: sel.filter(function (id) { return (cost[id] || 0) <= max; }), overBudget: sel.filter(function (id) { return (cost[id] || 0) > max; }) }; });
+    return { costLevel: L, maxCost: max, meaning: C[L - 1] ? C[L - 1].text : '', areas: out }; }
   function suggested(data, ledger) { return standings(data, ledger).filter(function (s) { return s.crossed; }).map(function (s) { return s.id; }); }
   return { allCards: allCards, sessionEntry: sessionEntry, emptyLedger: emptyLedger, mergeLedger: mergeLedger, importSessions: importSessions, thresholdFor: thresholdFor, standings: standings, suggested: suggested,
-    create: create, defaultExecutors: defaultExecutors, normExec: normExec, masterState: masterState, setAll: setAll, gate: gate, cardsForMinutes: cardsForMinutes, prefKey: prefKey, prefLabel: prefLabel };
+    performance: performance, weighSession: weighSession, sessionWeight: sessionWeight, costPlan: costPlan, dataLevels: dataLevels, create: create, defaultExecutors: defaultExecutors, normExec: normExec, masterState: masterState, setAll: setAll, gate: gate, cardsForMinutes: cardsForMinutes, prefKey: prefKey, prefLabel: prefLabel };
 });

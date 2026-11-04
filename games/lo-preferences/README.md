@@ -13,13 +13,32 @@ After the first pass through the deck, cards that can confirm a pending (1/3, 2/
 Setup: tick project areas, pick 5 / 10 / 15 min or custom. Cards = minutes × 60 / 30 (15 min → 30 cards). Settings persist in
 localStorage (`lo-prefs.settings.v1`), last result in `lo-prefs.results.v1`. Export JSON or Markdown at the end.
 
+## Data weight & cost level (top of setup)
+Two 5-step sliders, saved in settings (`dataLevel`, `costLevel`) and exported.
+
+**Casual ↔ Actual data** (`dataLevel` 1–5): ladder weight from `data/areas.json` → `"dataWeight": [0.25, 0.5, 1, 1.5, 2]`.
+`"dataStrict": {"fromLevel": 4, "minPerformance": 0.8, "fastMs": 700}`: at level ≥ `fromLevel` a session counts only if performance ≥ 80 %; otherwise it is
+stored in the ledger with `weight: 0`, `counted: false` and a `reason`. Ledger entries store `setting`, `weight`, `performance`, `counted`; sessions without
+`weight` (older ones, imports) count as 1. Ladder score = Σ delta × weight; only sessions with weight > 0 count toward upSessions.
+
+**Performance** (0–1, shown on the end screen with whether/how it counted):
+- gameplay = 0.6 × noCrash + 0.4 × distance, noCrash = 1 − crashes / obstacles faced (cacti + crows), distance = actual distance / ideal distance
+  (the distance a never-crashing run reaches in the same active time, with the same post-card speed carry-over).
+- focus = answered/(answered + skipped) × (1 − fast/answered), fast = answer < `fastMs` (700 ms) after options appeared (after the countdown).
+- performance = 0.6 × gameplay + 0.4 × focus. Details in export `dataWeight.metrics`.
+
+**Cheaper ↔ More expensive** (`costLevel` 1–5): executors carry a `cost` (free-models 0, opencode-lenovo 1, opencode-grokbot 1, codex 3, grok-build 3,
+grok-imagine 3). `"costLevels"` maps each level to `maxCost` (0, 1, 1, 3, 3) and a one-line meaning shown under the slider. Ticked executors above the
+budget are flagged *over budget* (not unticked). Export: `costLevel`, `costPlan` {maxCost, meaning, areas: {id: {allowedExecutors, overBudget}}} and
+`allowedExecutors` {area: [ticked AND cost ≤ maxCost]}.
+
 ## Countdown & mobile
 Before every card the game pauses and shows a 3-2-1 countdown (`?countdown=ms` to change); options then ignore taps for 300 ms, so stray jump taps can't pick.
 On phones the jump button fills the lower screen (full width, ≥42% height) and page zoom (pinch / double-tap) is disabled.
 
 ## Executors
 Each area row has checkboxes for which executors may act on the choices; the master row above sets one executor for all areas (indeterminate when mixed).
-Executors come from the top-level `executors` array in `data/areas.json` (`{"id","name","defaultOn"}`) — add more there. Default: all on, including OpenCode on Lenovo — tick/untick Lenovo depending on whether your Lenovo is available (`execDefaultsVersion` 2 re-ticks it once for older saved settings).
+Executors come from the top-level `executors` array in `data/areas.json` (`{"id","name","defaultOn","cost"}`) — add more there. Default: all on, including OpenCode on Lenovo — tick/untick Lenovo depending on whether your Lenovo is available (`execDefaultsVersion` 2 re-ticks it once for older saved settings).
 Selections persist in localStorage and are exported as `executors` (JSON) / "Executors per area" (Markdown).
 
 ## Project ladder (cross-session ledger)
@@ -43,6 +62,8 @@ Export has `"mode": "decision"`, `"area": "<id>"`.
 Sessions are merged and deduplicated by their `at` timestamp, so re-importing is harmless.
 
 ### How Grok Bot reads an export
+- `dataWeight`: `weight` is how much this session moved the ladder; `counted: false` → treat the preferences as casual/unfocused (don't act on them alone). High-weight (1.5–2), counted sessions are deliberate signals and outweigh casual ones; `performance` < 0.8 means attention was split.
+- `costLevel` / `allowedExecutors[area]`: only use those executors for that area. Levels 1–3 → local models (7B), workers, pre-processing chains, free OpenCode models; only 4–5 permit Codex, Grok Build and Grok Imagine (relatively expensive). `overBudget` executors were ticked but excluded — ask before using them.
 - `mode: "normal"` — `strong` = confirmed preferences, `areaRanking` = this session, `standings` = ladder totals, `suggested` = areas over threshold → propose starting them.
 - `mode: "decision"` + `area` — act on `strong` prefs with `dec:<area>:…` keys (scope, first deliverable, executor, timeline, visibility, metric), using `executors[area]` for who may run it; building (1/3, 2/3) ones are tentative.
 

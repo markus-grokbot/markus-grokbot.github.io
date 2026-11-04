@@ -12,29 +12,42 @@
   {
    "id": "free-models",
    "name": "Free models",
-   "defaultOn": true
+   "defaultOn": true,
+   "cost": 0
   },
   {
    "id": "opencode-lenovo",
    "name": "OpenCode on Lenovo",
    "defaultOn": true,
    "note": "tick when your Lenovo is available",
-   "defaultSince": 2
+   "defaultSince": 2,
+   "cost": 1
   },
   {
    "id": "opencode-grokbot",
    "name": "OpenCode on Grok Bot's computer",
-   "defaultOn": true
+   "defaultOn": true,
+   "cost": 1
   },
   {
    "id": "codex",
    "name": "Codex",
-   "defaultOn": true
+   "defaultOn": true,
+   "cost": 3
   },
   {
    "id": "grok-build",
    "name": "Grok in Grok Build",
-   "defaultOn": true
+   "defaultOn": true,
+   "cost": 3
+  },
+  {
+   "id": "grok-imagine",
+   "name": "Grok Imagine",
+   "defaultOn": true,
+   "defaultSince": 3,
+   "cost": 3,
+   "note": "image/video generation; relatively expensive"
   }
  ],
  "areas": [
@@ -3168,10 +3181,51 @@
    ]
   }
  ],
- "execDefaultsVersion": 2,
+ "execDefaultsVersion": 3,
  "threshold": {
   "minScore": 5,
   "minUpSessions": 2,
   "rateWeight": 0.25
- }
+ },
+ "dataWeight": [
+  0.25,
+  0.5,
+  1,
+  1.5,
+  2
+ ],
+ "dataLevels": [
+  "Casual – just playing around",
+  "Light – half-attention",
+  "Normal",
+  "Actual data – focused",
+  "Actual data – fully focused, strict"
+ ],
+ "dataStrict": {
+  "fromLevel": 4,
+  "minPerformance": 0.8,
+  "fastMs": 700
+ },
+ "costLevels": [
+  {
+   "maxCost": 0,
+   "text": "Cheapest: free models only; heavy pre-processing chains/workers first"
+  },
+  {
+   "maxCost": 1,
+   "text": "Cheap: free + local OpenCode (7B on Lenovo / Grok Bot box), workers and pre-processing chains"
+  },
+  {
+   "maxCost": 1,
+   "text": "Balanced: local/free by default; escalate to Codex/Grok Build only if the user asks"
+  },
+  {
+   "maxCost": 3,
+   "text": "Generous: Codex, Grok Build and Grok Imagine allowed when they clearly help"
+  },
+  {
+   "maxCost": 3,
+   "text": "Most expensive: prefer the strongest executors (Codex, Grok Build/Imagine) for speed and quality"
+  }
+ ]
 }
