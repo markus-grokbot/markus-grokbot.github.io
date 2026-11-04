@@ -85,7 +85,7 @@
     (sessions || []).forEach(function (s) { if (s && s.at && !seen[s.at]) { seen[s.at] = 1; ledger.sessions.push(s); added++; } }); ledger.sessions.sort(function (a, b) { return a.at < b.at ? -1 : 1; }); ledger.added = added; return ledger; }
   // accept an exported result (with .ledger or as single session) or a bare ledger
   function importSessions(data, obj) { if (!obj) return []; if (obj.sessions) return obj.sessions; var out = obj.ledger && obj.ledger.sessions ? obj.ledger.sessions.slice() : [];
-    if (obj.game === 'lo-preferences' && obj.log && !out.some(function (s) { return s.at === obj.at; })) out.push(sessionEntry(data, obj)); return out; }
+    if ((obj.game === 'lo-preferences' || obj.game === 'lo-cambio') && obj.log && !out.some(function (s) { return s.at === obj.at; })) out.push(sessionEntry(data, obj)); return out; }
   function thresholdFor(data, a) { var t = data.threshold || {}, o = a.threshold || {}; return { minScore: o.minScore != null ? o.minScore : t.minScore != null ? t.minScore : 5, minUpSessions: o.minUpSessions != null ? o.minUpSessions : t.minUpSessions != null ? t.minUpSessions : 2 }; }
   function standings(data, ledger) { var ss = (ledger && ledger.sessions) || [];
     return data.areas.map(function (a) { var sc = 0, us = 0, t = thresholdFor(data, a); ss.forEach(function (s) { var w = sessionWeight(s); sc += ((s.delta || {})[a.id] || 0) * w; if (w > 0 && (s.up || {})[a.id] > 0) us++; });
