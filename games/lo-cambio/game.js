@@ -28,12 +28,12 @@
     $('dlx').textContent = L + '/' + W.length + ' ' + (names[L - 1] || '') + ' — counts ×' + W[L - 1] + ' in the ladder' + (L >= from ? '; only if performance ≥ ' + Math.round((S.minPerformance || 0.8) * 100) + '%' : '');
     var C = DATA.costLevels || [], c = C[cfg.costLevel - 1] || {}; $('clx').textContent = cfg.costLevel + '/' + C.length + ' ' + (c.text || '') + ' (executor cost ≤ ' + c.maxCost + ')';
     var cost = COST(); document.querySelectorAll('.ex').forEach(function (x) { var ob = cost[x.dataset.x] > c.maxCost, lb = x.parentNode; lb.classList.toggle('ob', ob); lb.title = ob ? 'over budget at this cost level (still ticked, but not in allowedExecutors)' : ''; }); }
-  function decision(id) { mode = { mode: 'decision', area: id }; cfg = cfg || {}; start(); }
+  function decision(id) { if (!l3Ready()) return needL3(function () { decision(id); }); mode = { mode: 'decision', area: id }; cfg = cfg || {}; start(); }
   function setup() {
     mode = null;
     phase = 'setup'; var s = load(); cfg = { areas: s.areas || DATA.areas.filter(function (a) { return a.defaultOn !== false; }).map(function (a) { return a.id; }), minutes: s.minutes || 10, exec: Prefs.normExec(DATA, s.exec), dataLevel: s.dataLevel || 3, costLevel: s.costLevel || 3 };
     var EX = DATA.executors || [], AIDS = DATA.areas.map(function (a) { return a.id; });
-    var cnt = {}; DATA.cards.forEach(function (c) { cnt[c.area] = (cnt[c.area] || 0) + 1; }); var lvOf = {}; DATA.areas.forEach(function (a) { lvOf[a.id] = a.level || 1; });
+    var cnt = DATA.cardCounts || {}; if (!DATA.cardCounts) DATA.cards.forEach(function (c) { cnt[c.area] = (cnt[c.area] || 0) + 1; }); var lvOf = {}; DATA.areas.forEach(function (a) { lvOf[a.id] = a.level || 1; });
     show('<h2>🐾 Lo · Cambio</h2><p class="small">Synthetic data only · answers export as Cambio support-copilot records (golden-label votes, scope decisions, talking-point ranking).</p><p>Run with Lo. Every <span class="k">30 s (casual 1–2) or 15 s (levels 3–5)</span> of running, one card asks about a project area. Choosing the same preference <span class="k">' + (DATA.confirmAt || 3) + '×</span> marks it a <b>strong current preference</b>.</p>' + sliders() +
       '<h3>Project areas</h3>' + (EX.length ? '<div class="exm"><span class="small">Executors for all areas:</span> ' + EX.map(function (x) { return '<label><input type="checkbox" class="mx" data-x="' + esc(x.id) + '"> ' + esc(x.name) + '</label>'; }).join(' ') + '</div>' : '') +
       '<div id="areas">' + DATA.areas.map(function (a) { return '<div class="arow"><label class="area"><input type="checkbox" class="ac" value="' + esc(a.id) + '"' + (cfg.areas.indexOf(a.id) >= 0 ? ' checked' : '') + '> ' + esc(a.name) + ' <span class="small">(L' + lvOf[a.id] + '+ · ' + (cnt[a.id] || 0) + ' cards)</span></label><div class="exr">' +
@@ -51,9 +51,9 @@
     $('all').onclick = function () { document.querySelectorAll('#areas .ac').forEach(function (x) { x.checked = true; }); read(); };
     $('none').onclick = function () { document.querySelectorAll('#areas .ac').forEach(function (x) { x.checked = false; }); read(); };
     if ($('prev')) $('prev').onclick = function () { results(JSON.parse(localStorage.getItem(LSR))); };
-    $('go').onclick = start; read();
+    $('go').onclick = start; read(); onL3 = read;
   }
-  function start() {
+  function start() { if (!l3Ready()) return needL3(start);
     SEG = QSEG ? +QSEG * 1000 : ((cfg && cfg.dataLevel || 3) <= 2 ? 30000 : 15000);
     var dm = mode && mode.mode === 'decision'; var LD = Object.assign({}, DATA, { cards: Cambio.levelCards(DATA, cfg && cfg.dataLevel) }); sess = Prefs.create(LD, dm ? { mode: 'decision', area: mode.area, executors: cfg.exec } : { areas: cfg.areas, executors: cfg.exec }); if (dm) planned = Math.max(planned, sess.pool.length * 2) || sess.pool.length * 2; g = RunnerEngine.create({ seed: Date.now() & 0xffff, params: { segmentMs: SEG } }); timer = SegTimer.create(SEG, card); stats = { distance: 0, idealDistance: 0, faced: 0, crashes: 0, activeMs: 0 }; idealT = 0;
     $('qt').textContent = planned; $('game').classList.remove('hide'); hide(); run();
@@ -77,7 +77,7 @@
     $('fb').innerHTML = e.pref ? (e.becameStrong ? '🔥 <b>Strong current preference!</b>' : e.status.indexOf('/') > 0 ? 'Noted (' + e.status + ')' : 'Still strong (' + e.status + ')') : 'Skipped';
     setTimeout(function () { if (e.seq >= planned) return results(); hide(); g.afterQuestion(); idealT *= g.P.speedKeepAfterQuestion; run(); }, 700 / Math.min(FAST, 4));
   }
-  function results(r, keepLedger) {
+  function results(r, keepLedger) { if (!l3Ready()) return needL3(function () { results(r, keepLedger); });
     phase = 'done'; $('box').onchange = null; if (!r) { r = sess.result(); var pf = Prefs.performance(DATA, stats, r.log); r.dataWeight = Prefs.weighSession(DATA, cfg.dataLevel, pf); r.dataWeight.metrics = pf; r.settings = { dataLevel: cfg.dataLevel, costLevel: cfg.costLevel };
       r.costLevel = cfg.costLevel; r.costPlan = Prefs.costPlan(DATA, cfg.costLevel, r.executors); r.game = 'lo-cambio'; r.cambio = Cambio.build(DATA, r.log, r.dataWeight); r.allowedExecutors = {}; Object.keys(r.costPlan.areas).forEach(function (a) { if (r.executors && r.executors[a]) r.allowedExecutors[a] = r.costPlan.areas[a].allowedExecutors; }); } var L = ledger(); if (!keepLedger && r.log) { L = Prefs.mergeLedger(L, [Prefs.sessionEntry(DATA, r)]); saveLedger(L); }
     if (!r.reviewSchedule) r.reviewSchedule = Prefs.reviewSchedule((r.settings || {}).dataLevel || (r.dataWeight || {}).setting || (cfg && cfg.dataLevel));
@@ -116,8 +116,11 @@
     if ([' ', 'ArrowUp'].indexOf(e.key) >= 0) { e.preventDefault(); jd(true); } else if (e.key === 'ArrowDown') { e.preventDefault(); dd(true); } else if (e.key === 'p' || e.key === 'Escape') pause(); });
   addEventListener('keyup', function (e) { if ([' ', 'ArrowUp'].indexOf(e.key) >= 0) jd(false); if (e.key === 'ArrowDown') dd(false); });
   document.addEventListener('visibilitychange', function () { if (document.hidden) pause(); });
-  // data: prefer live data/areas.json (served over http), else the packed data/areas.js (file:// / offline)
-  (location.protocol.indexOf('http') === 0 ? fetch('data/areas.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }) : Promise.resolve(null))
-    .then(function (d) { DATA = d || window.LO_DATA; if (!DATA) return show('No data found. Run <code>node tools/pack.js</code>.'); requestAnimationFrame(function (t) { last = t; loop(t); }); setup(); });
+  // data: data/core.js (levels 1-2 + metadata) loads first; level-3 ticket cards (data/cards-l3.js) load in the background
+  var onL3 = null, l3p = null;
+  function l3Ready() { return !!DATA.l3Loaded; }
+  function loadL3() { return l3p || (l3p = new Promise(function (res, rej) { var s = document.createElement('script'); s.src = 'data/cards-l3.js?v=' + (DATA.v || ''); s.onload = function () { if (window.LO_L3 && !DATA.l3Loaded) { var all = DATA.cards.slice(); window.LO_L3.forEach(function (e) { all.splice(e[0], 0, e[1]); }); DATA.cards = all; DATA.l3Loaded = true; } res(); }; s.onerror = function () { l3p = null; rej(); }; document.head.appendChild(s); })); }
+  function needL3(fn) { if (phase === 'setup' && $('go')) { $('go').disabled = true; $('go').textContent = 'Loading cards…'; } loadL3().then(fn, function () { show('Could not load level-3 cards. Check your connection and reload.'); }); }
+  DATA = window.LO_DATA; if (!DATA) show('No data found. Run <code>node tools/pack.js</code>.'); else { requestAnimationFrame(function (t) { last = t; loop(t); }); setup(); setTimeout(function () { loadL3().then(function () { if (phase === 'setup' && onL3) onL3(); }, function () {}); }, 0); }
   window.__LO = { pick: pick, phase: function () { return phase; }, gateTick: gateTick, cfg: function () { return cfg; }, planned: function () { return planned; }, decision: decision, ledger: ledger, stats: function () { return stats; } };
 })();

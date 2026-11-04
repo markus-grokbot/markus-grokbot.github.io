@@ -1,7 +1,7 @@
 # Lo · Cambio (Lynx Dash variant)
 
 This is a variant of `../lo-preferences`. It reuses that folder's `engine.js`, `prefs.js` and `timer.js` unchanged. The only shared change is that `importSessions` also accepts `game: "lo-cambio"`. The cards feed the Cambio support-copilot project, and **all content is synthetic**.
-Its own files are `game.js` (a fork of the lo-preferences page), `cambio.js` (log → Cambio records), `data/areas.json` and the generated `data/areas.js`.
+Its own files are `game.js` (a fork of the lo-preferences page), `cambio.js` (log → Cambio records), `data/areas.json` (source) and the generated `data/core.js` (levels 1–2, loaded first) + `data/cards-l3.js` (level-3 ticket cards, loaded in the background).
 
 Regenerate: `node tools/gen.js <cambio-associate-ai-engineer checkout> && node tools/pack.js`. Test: `node test/test.js`.
 
