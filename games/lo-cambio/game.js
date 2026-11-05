@@ -70,12 +70,18 @@
     else if (c.type === 'rate') h += '</div><div class="scale">' + (DATA.scale || [-2, -1, 0, 1, 2]).map(function (v, i) { return '<button data-v="' + v + '">' + (i + 1) + '<br>' + (v > 0 ? '+'.repeat(v) : v < 0 ? '−'.repeat(-v) : '0') + '</button>'; }).join('') + '</div><p class="small">' +
       ['+', '0', '-'].map(function (s) { var t = sess.status(c.aspect + ':' + s); return t.count ? s + ': ' + t.label : ''; }).filter(Boolean).join(' · ') + '</p><div>';
     else h += c.options.map(function (o, i) { return '<button data-v="' + i + '">' + (i + 1) + ' ' + esc(o.label) + st(o.pref) + '</button>'; }).join('');
-    show(h + '</div><button data-v="skip" class="small">skip</button><p id="fb" class="small"></p>');
+    show(h + '</div><div class="own"><label for="own" class="small">✍ Or write your own (optional — overrides the choice; a picked choice is kept as context)</label><textarea id="own" rows="2" maxlength="1000" autocomplete="off" placeholder="Type your own answer…"></textarea><button id="ownb">✍ Send my own answer</button></div><button data-v="skip" class="small">skip</button><p id="fb" class="small"></p>');
     document.querySelectorAll('#box [data-v]').forEach(function (b) { b.onclick = function () { pick(b.dataset.v); }; });
+    $('ownb').onclick = function () { if (ownText()) pick('manual'); else $('own').focus(); };
+    $('own').onkeydown = function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('ownb').click(); } };
   }
+  function ownText() { var t = $('own'); return t ? t.value.trim().slice(0, 1000) : ''; }
   function pick(v) {
-    if (phase !== 'card' || !gt || !gt.clickable()) return; var c = cur.card, ch = v === 'skip' ? 'skip' : c.type === 'updown' ? v : +v, e = sess.answer(cur, ch); phase = 'fb'; $('qn').textContent = e.seq;
-    $('fb').innerHTML = e.pref ? (e.becameStrong ? '🔥 <b>Strong current preference!</b>' : e.status.indexOf('/') > 0 ? 'Noted (' + e.status + ')' : 'Still strong (' + e.status + ')') : 'Skipped';
+    if (phase !== 'card' || !gt || !gt.clickable()) return; var c = cur.card, mr = ownText(); if (v === 'manual' && !mr) return;
+    // Typed reply overrides: text-only -> logged as choice 'manual' (no preference count); choice + text -> choice kept as context.
+    var ch = v === 'skip' || v === 'manual' ? 'skip' : c.type === 'updown' ? v : +v, e = sess.answer(cur, ch); if (v === 'manual') e.choice = 'manual'; if (mr && v !== 'skip') { e.manualReply = mr; e.overridden = true; } phase = 'fb'; $('qn').textContent = e.seq;
+    $('fb').innerHTML = (e.overridden ? '✍ <b>Your own answer recorded</b> (overrides the choice)' + (e.pref ? ' · ' : '') : '') + (e.pref ? (e.becameStrong ? '🔥 <b>Strong current preference!</b>' : e.status.indexOf('/') > 0 ? 'Noted (' + e.status + ')' : 'Still strong (' + e.status + ')') : e.overridden ? '' : 'Skipped');
+    if ($('own')) { $('own').disabled = true; $('ownb').disabled = true; }
     var rv = c.reveal; if (rv) { $('fb').innerHTML += '<div class="tk">📘 <b>' + esc(c.cambio && c.cambio.abbr || '') + '</b> = ' + rv.expansions.map(function (x) { return esc(x.sv) + ' <span class="small">(' + esc(x.en) + ')</span>'; }).join(' · ') + (rv.example ? '<br><i>' + esc(rv.example.text) + '</i>' : '') + '</div>'; }
     setTimeout(function () { if (e.seq >= planned) return results(); hide(); g.afterQuestion(); idealT *= g.P.speedKeepAfterQuestion; run(); }, (rv ? 3500 : 700) / Math.min(FAST, 4));
   }

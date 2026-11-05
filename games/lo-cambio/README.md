@@ -28,3 +28,11 @@ Card interval: 30 s at levels 1–2, 15 s at levels 3–5.
 - +11 scope suggestion cards (`sc2-*`, incl. tiebreaks `sc2-tb-backup`, `sc2-tb-live-fail` that reuse the round-1 decision ids), +10 "which point to lead with" talking cards (`tp2-*`).
 - Abbreviation cards carry `reveal` (expansions + one-line example); shown after every answer, incl. "Don't know" (still exported as `dont_know`).
 - Areas with an empty executor list fall back to defaults, so `costPlan.areas.talking.allowedExecutors` is no longer empty. Cache param `v=c3`.
+
+## Round 3 (2026-11-05): typed overrides
+Every card now has an optional **"✍ Or write your own"** field (16px, so iOS doesn't zoom). Typing is optional. If you pick a choice with an empty field, nothing changes. If you type text and then pick a choice, the typed text is the authoritative answer and the choice is kept as context. If you type text and press "Send my own answer" (or Enter), it is a text-only reply. Abbreviation reveals still show after a typed reply, and the countdown and card intervals are unchanged. Cache param `v=c4`.
+Export additions are optional fields, so `lo-cambio.export.v1` consumers keep working:
+- In `log[]`: `manualReply` (string) and `overridden: true`. A text-only entry has `choice: "manual"` and `pref: null`, so it adds no preference count.
+- Records in `golden_label_votes`, `scope_decisions`, `abbreviation_picks` and `edge_case_votes` that have a picked choice plus text also get `manualReply` and `overridden: true`.
+- New `manual_replies[]`: `{card, area, kind, ref, field, prompt, manualReply, overridden, selected_choice, selected_label, selected_value, dataset_label, dataset_expansions, ms, at}`. `selected_*` is null for text-only replies. Text-only replies appear **only** here, never as votes.
+- Consumers should treat `manualReply` as the player's stated preference or judgment. It takes precedence over the picked choice. Do not discard it.

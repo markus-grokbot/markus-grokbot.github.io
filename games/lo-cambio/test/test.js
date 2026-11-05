@@ -28,3 +28,9 @@ const L2=Object.assign({},D,{cards:C.levelCards(D,2)}),s2=P.create(L2,{});for(le
 const x2=C.build(D,s2.result().log,P.weighSession(D,2,{score:1}));assert.equal(x2.schema,'lo-cambio.export.v1');assert(x2.scope_decisions.some(d=>d.decision_id==='backup'||d.decision_id==='fhir-depth'));assert(x2.abbreviation_picks.some(a=>a.dont_know));
 assert(fs.statSync(__dirname+'/../data/core.js').size<80000,'core.js stays small');
 console.log('lo-cambio tests OK',D.cards.length,'cards');
+// round 3: typed overrides (manualReply/overridden), choice+text and text-only
+{const s3=P.create(Object.assign({},D,{cards:C.levelCards(D,3)}),{});let n=0,t=0;for(let i=0;i<60;i++){const h=s3.next(),c=h.card;if(c.type!=='choice')continue;if(n<3){const e=s3.answer(h,0);e.manualReply='typed '+n;e.overridden=true;n++;}else if(t<3){const e=s3.answer(h,'skip');e.choice='manual';e.manualReply='only '+t;e.overridden=true;t++;}else s3.answer(h,0);}
+const x3=C.build(D,s3.result().log,P.weighSession(D,3,{score:1}));assert.equal(x3.manual_replies.length,6);assert.equal(x3.manual_replies.filter(m=>m.selected_choice===null).length,3);
+const tagged=[].concat(x3.golden_label_votes,x3.scope_decisions,x3.abbreviation_picks,x3.edge_case_votes).filter(r=>r.overridden);assert(tagged.length>=1&&tagged.every(r=>/^typed /.test(r.manualReply)));
+assert(!JSON.stringify(x3.golden_label_votes).includes('"only '));assert(C.markdown(x3).includes('Typed replies'));assert.equal(P.performance(D,{},s3.result().log).skipped,s3.result().log.filter(l=>l.choice==='skip').length);
+console.log('override tests OK');}

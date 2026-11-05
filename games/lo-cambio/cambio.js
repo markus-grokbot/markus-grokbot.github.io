@@ -15,7 +15,15 @@
     var cm = cardMap(data), w = dw ? dw.weight : 1, counted = dw ? dw.counted !== false : true;
     var out = { schema: SCHEMA, synthetic_only: true, sources: data.sources, weight: w, counted: counted, golden_label_votes: [], naturalness: [], scope_decisions: [], abbreviation_picks: [], edge_case_votes: [], talking_point_ranking: [], level45: { status: 'coming-later', schemas: LEVEL45_SCHEMAS, records: [] } };
     var tp = {}, ec = {};
-    (log || []).forEach(function (l) { var c = cm[l.card]; if (!c || !c.cambio || l.choice === 'skip' || l.choice == null) return; var k = c.cambio, o = c.type === 'choice' ? c.options[l.choice] : null, base = { card: c.id, ms: l.ms, at: l.t };
+    out.manual_replies = [];
+    (log || []).forEach(function (l) { var c = cm[l.card]; if (!c || !c.cambio || l.choice === 'skip' || l.choice == null) return; var k = c.cambio, mr = l.manualReply ? String(l.manualReply) : null;
+      // Typed override (optional fields, v1-compatible): every typed reply lands in manual_replies[]; a reply WITH a picked choice also
+      // tags the normal record with manualReply/overridden (the choice stays as context). Text-only replies (choice 'manual') appear only here.
+      if (mr) out.manual_replies.push({ card: c.id, area: c.area, kind: k.kind, ref: k.ticket_id || k.decision_id || k.abbr || k.edge_case || null, field: k.field, prompt: c.prompt, manualReply: mr, overridden: true,
+        selected_choice: l.choice === 'manual' ? null : l.choice, selected_label: l.choice === 'manual' ? null : c.type === 'choice' ? c.options[l.choice].label : String(l.choice), selected_value: l.choice === 'manual' ? null : c.type === 'choice' ? c.options[l.choice].value : l.choice,
+        dataset_label: k.dataset_label, dataset_expansions: k.dataset_expansions, ms: l.ms, at: l.t });
+      if (l.choice === 'manual') return;
+      var o = c.type === 'choice' ? c.options[l.choice] : null, base = { card: c.id, ms: l.ms, at: l.t }; if (mr) { base.manualReply = mr; base.overridden = true; }
       if (k.kind === 'label_vote') out.golden_label_votes.push(Object.assign({ ticket_id: k.ticket_id, field: k.field, vote: o.value, dataset_label: k.dataset_label, agrees: o.value === k.dataset_label, weight: w }, base));
       else if (k.kind === 'naturalness') out.naturalness.push(Object.assign({ ticket_id: k.ticket_id, rating: l.choice }, base));
       else if (k.kind === 'scope_decision') out.scope_decisions.push(Object.assign({ decision_id: k.decision_id, choice: o.value, label: o.label }, base));
@@ -35,6 +43,7 @@
     if (x.scope_decisions.length) { L.push('- Scope decisions:'); x.scope_decisions.forEach(function (d) { L.push('  - ' + d.decision_id + ' → ' + d.label); }); }
     if (x.talking_point_ranking.length) { L.push('- Talking points:'); x.talking_point_ranking.forEach(function (t) { L.push('  ' + t.rank + '. ' + t.label + ' (' + t.wins + '/' + t.shown + ')'); }); }
     if (x.edge_case_ranking.length) L.push('- Edge cases: ' + x.edge_case_ranking.map(function (e) { return e.edge_case + ' ' + (e.score > 0 ? '+' : '') + e.score; }).join(', '));
+    if (x.manual_replies && x.manual_replies.length) { L.push('- Typed replies (override the choice):'); x.manual_replies.forEach(function (m) { L.push('  - ' + m.card + (m.ref ? ' [' + m.ref + ']' : '') + ': "' + m.manualReply + '"' + (m.selected_label != null ? ' (picked: ' + m.selected_label + ')' : '')); }); }
     if (x.abbreviation_picks.length) L.push('- Abbreviations: ' + x.abbreviation_picks.map(function (a) { return a.abbr + '=' + (a.picked_ambiguous ? 'ambiguous' : a.dont_know ? '?' : a.picked) + (a.in_dataset ? '' : ' ✗'); }).join(', '));
     return L.join('\n') + '\n'; }
   function levelCards(data, level) { var max = Math.min(level || 3, data.playableMaxLevel || 3); return data.cards.filter(function (c) { return (c.level || 1) <= max; }); }
