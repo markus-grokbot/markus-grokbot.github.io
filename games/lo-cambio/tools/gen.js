@@ -21,7 +21,7 @@ const SCOPE = [
   ['lang', 'Demo language?', [['Swedish first, then English', 'sv-en'], ['English with Swedish tickets', 'en'], ['All Swedish', 'sv']]],
   ['metric', 'Headline metric on the eval sidebar?', [['Handoff / abstain rate', 'handoff-rate'], ['Valid-output (schema pass) rate', 'schema-pass'], ['Citation faithfulness', 'faithfulness'], ['Time saved per ticket (estimate)', 'time-saved']]],
   ['rag', 'RAG source for the demo?', [['~8 fake internal docs, local vector index', 'local-docs'], ['SharePoint/Graph-shaped mock', 'graph-mock'], ['No RAG: templates only', 'none']]],
-  ['tickets', 'How many tickets in the live run?', [['2 happy paths + 2 failures', '4'], ['One batch of ~10 with the eval report', '10'], ['Full 42 offline, show the report', '42']]],
+  ['tickets', 'How many tickets in the live run?', [['2 happy paths + 2 failures', '4'], ['One batch of ~10 with the eval report', '10'], ['Full 56 offline, show the report', '56']]],
   ['paid', 'The one paid session (Nov 7): spend it on?', [['Citation faithfulness gate', 'faithfulness'], ['Schema repair / llm-json-fixer', 'schema-repair'], ['Save it; stay free', 'none']]],
   ['backup', 'Backup if live demo breaks?', [['3-min recording', 'recording'], ['Offline/mock mode in the same UI', 'mock-mode'], ['Both', 'both']]]
 ];
@@ -63,6 +63,34 @@ const TP2 = { 'ops-pack': 'ops-pack-demo: rules-first routing, schema-checked mo
 [['ops-pack', 'this-demo'], ['agentic', 'ops-pack'], ['fcc', 'honest-exp'], ['fcc', 'ops-pack'], ['agentic', 'json-fixer'], ['model-eval', 'this-demo'], ['bilingual', 'agentic'], ['honest-exp', 'this-demo'], ['measure', 'model-eval'], ['nursing', 'bilingual']]
   .forEach(([a, b]) => ch('tp2-' + a + '-vs-' + b, 'talking', 1, 'Which point to lead with?', [[TP2[a], 'cam:tp:' + a, a], [TP2[b], 'cam:tp:' + b, b]], { cambio: { kind: 'talking_point_pair', round: 2 } }));
 
+
+// ---- L1: round-5 Friday 6 Nov — rules + golden labels (G-003 gap, G-008/G-009 open) ----
+// Locked already (do not re-ask as open): backup=both, live-fail=patient-handoff. Talking lead: human-gate.
+// New decision_ids only. Synthetic tickets: grok-build-gaps-2026-11-05:G-* / local-qwen2.5-7b-2026-11-05:L-*.
+const SCOPE5 = [
+  ['g003-fix', 'g003-fix', 'Fri rules: how to fix G-003 (Linnea Berg + Luhn-invalid samordningsnummer 19850372-6614 + behörighet → today awaiting_approval)?', [['Detect samordningsnummer shapes + force human_handoff', 'detect-samord-handoff'], ['Any name + access-request with PII-shaped number → handoff (even if Luhn fails)', 'name-access-shape'], ['Local-model PII second opinion must ADD the mask, then hand off', 'local-second'], ['All three: shape detect + name/access heuristic + local second opinion', 'all-three']]],
+  ['luhn-invalid-policy', 'luhn-invalid-policy', 'Fri rules: Luhn-invalid personnummer / samordningsnummer policy?', [['Fail closed: mask + human_handoff whenever the shape matches', 'fail-closed'], ['Mask if shape matches; hand off only when needs_human rules also fire', 'mask-then-rules'], ['Ignore if Luhn fails (regex/Luhn only)', 'ignore-invalid']]],
+  ['name-access-no-valid-pnr', 'name-access-no-valid-pnr', 'Fri rules: fake name + access/behörighet request WITHOUT a Luhn-valid personnummer — enough to force a person?', [['Yes → immediate human_handoff', 'handoff'], ['Route to awaiting_approval (draft OK, no auto-send)', 'awaiting'], ['Only hand off if a PII-shaped number is also present', 'need-shape']]],
+  ['rules-pii-second', 'rules-pii-second', 'Fri rules: local model as PII second opinion (may only ADD masks)?', [['In the live rules path', 'live'], ['Recorded fixtures + replay only', 'recorded'], ['Out — regex/Luhn only for Friday', 'out']]],
+  ['g003-interview-example', 'g003-interview-example', 'Use G-003 as the interview example of why Luhn-only masking needs a second opinion?', [['Yes — primary live/interview example', 'primary'], ['Secondary mention only', 'secondary'], ['No — use a cleaner Luhn-invalid fixture instead', 'other-fixture']]],
+  ['golden-label-source', 'golden-label-source', 'Fri golden labels: source of truth when labeling the 14 new gap tickets?', [['Markus L3 play is source of truth', 'markus-l3'], ['Adopt Codex when it agrees with the dataset; play only the leftovers', 'codex-when-agrees'], ['Keep dataset label unless Markus votes otherwise', 'dataset-unless-vote']]],
+  ['pii-shape-luhn-fail', 'pii-shape-luhn-fail', 'Fri rules: PII shape present but Luhn fails — how strict is handoff?', [['Always human_handoff (never awaiting_approval)', 'always-handoff'], ['awaiting_approval OK if no other needs_human signal', 'awaiting-ok'], ['human_handoff only for access/behörighet + patient identity', 'access-only']]],
+  ['personnummer-shapes', 'personnummer-shapes', 'Fri rules: which personnummer shapes must the detector cover?', [['12-digit, 10-digit, space-separated, samordningsnummer (incl. Luhn-invalid)', 'all-shapes'], ['Luhn-valid only (12/10 + hyphen/space)', 'luhn-valid-only'], ['All shapes in lint; live rules start with samordningsnummer + space-separated', 'samord-space-first']]]
+];
+SCOPE5.forEach(([id, k, q, o]) => { ch('sc5-' + id, 'scope', 1, q, o.map(x => [x[0], 'cam:scope:' + k + ':' + x[1], x[1]]), { cambio: { kind: 'scope_decision', decision_id: k, round: 5 } }); });
+ud('sc5-ud1', 'scope', 1, 'Up-prioritise Friday rules work (G-003 + personnummer shapes)?');
+ud('sc5-ud2', 'scope', 1, 'Up-prioritise Friday golden labels on the 14 new gap tickets?');
+
+// Talking pairs for Friday — do not re-open the locked human-gate lead (18:09 export 2/3).
+const TP5 = {
+  'g003-luhn-story': 'G-003 as interview example: Luhn-only masking needs a local-model second opinion',
+  'fail-closed-pii': 'Fail closed on PII-shaped text even when Luhn fails',
+  'golden-gap-set': 'Golden-labelling the 14 new gap tickets (G-* / L-*) before Saturday RAG',
+  'local-second-add': 'Local model may only ADD masks (never remove) as PII second opinion'
+};
+[['g003-luhn-story', 'fail-closed-pii'], ['g003-luhn-story', 'golden-gap-set'], ['fail-closed-pii', 'local-second-add'], ['golden-gap-set', 'local-second-add']]
+  .forEach(([a, b]) => ch('tp5-' + a + '-vs-' + b, 'talking', 1, 'Friday focus — which matters more (human-gate lead stays locked)?', [[TP5[a], 'cam:tp:' + a, a], [TP5[b], 'cam:tp:' + b, b]], { cambio: { kind: 'talking_point_pair', round: 5 } }));
+
 // ---- L2: local-model edge cases (pairwise + rate -> edge_case_votes) ----
 const EC = [['missing-key', 'Missing required key ({"label":"ovrigt","confidence":0.8}, 3b ×11)'], ['misspelled-key', 'Misspelled key "rationingen", integer confidence'], ['timeout', '7b timeout → abstain → handoff'],
   ['wrong-label', 'Schema-valid but wrong label (why approval exists)'], ['invented-span', '3b invents PII span not in text ("22-4821")'], ['luhn', 'Luhn-invalid personnummer missed by regex, found by model'],
@@ -70,6 +98,21 @@ const EC = [['missing-key', 'Missing required key ({"label":"ovrigt","confidence
 for (let i = 0; i < EC.length; i++) { rate('ec-r-' + EC[i][0], 'edge', 2, 'How strong as a live demo moment: ' + EC[i][1] + '?', 'cam:edge:' + EC[i][0], { cambio: { kind: 'edge_case_rating', edge_case: EC[i][0] } });
   const j = (i + 3) % EC.length; ch('ec-p-' + EC[i][0] + '-vs-' + EC[j][0], 'edge', 2, 'Feature which edge case?', [[EC[i][1], 'cam:ecp:' + EC[i][0], EC[i][0]], [EC[j][1], 'cam:ecp:' + EC[j][0], EC[j][0]]], { cambio: { kind: 'edge_case_pair' } }); }
 ud('ec-ud1', 'edge', 2, 'Up-prioritise turning local-model errors into fixtures?');
+
+
+// ---- L2: round-5 Friday edge cases (G-003 samordningsnummer, space-PNR, awaiting_approval miss) ----
+const EC5 = [
+  ['samordningsnummer', 'G-003: Luhn-invalid samordningsnummer (19850372-6614) missed by regex'],
+  ['g003-handoff', 'G-003: name + access/behörighet → awaiting_approval instead of a person'],
+  ['space-pnr', 'Space-separated personnummer (19621105 7743) — lint catches; rules must too'],
+  ['luhn-invalid-shapes', 'Luhn-invalid 12-/10-digit / samordningsnummer still force mask + handoff']
+];
+for (let i = 0; i < EC5.length; i++) {
+  rate('ec5-r-' + EC5[i][0], 'edge', 2, 'Friday rules priority: ' + EC5[i][1] + '?', 'cam:edge:' + EC5[i][0], { cambio: { kind: 'edge_case_rating', edge_case: EC5[i][0], round: 5 } });
+  const j = (i + 1) % EC5.length;
+  ch('ec5-p-' + EC5[i][0] + '-vs-' + EC5[j][0], 'edge', 2, 'Friday: feature which failure first?', [[EC5[i][1], 'cam:ecp:' + EC5[i][0], EC5[i][0]], [EC5[j][1], 'cam:ecp:' + EC5[j][0], EC5[j][0]]], { cambio: { kind: 'edge_case_pair', round: 5 } });
+}
+ud('ec5-ud1', 'edge', 2, 'Up-prioritise Friday fixtures for G-003 / Luhn-invalid / space-PNR?');
 
 // ---- L2: abbreviation meaning picks (-> abbreviation_picks) ----
 const by = {}; abbr.forEach(a => (by[a.abbr] = by[a.abbr] || []).push(a));
@@ -218,10 +261,10 @@ const areas = [
   { id: 'abbr', name: 'Swedish abbreviations', description: 'From prep/swedish-medical-abbreviations.json', level: 2, defaultOn: true,
     decisions: [{ id: 'abbr-d-mask', type: 'updown', key: 'dec:abbr-mask-cues', area: 'abbr', prompt: 'Add more role abbreviations as masking name cues?' }] },
   { id: 'tickets', name: 'Synthetic ticket judgments', description: 'Golden-label votes for merged/clean.json (synthetic)', level: 3, defaultOn: true,
-    decisions: [{ id: 'tickets-d-n', type: 'choice', area: 'tickets', prompt: 'Golden set size before the demo?', options: [{ label: '20 tickets', pref: 'dec:tickets:n:20' }, { label: 'All 42', pref: 'dec:tickets:n:42' }, { label: '42 + copilot 30', pref: 'dec:tickets:n:72' }] }] }
+    decisions: [{ id: 'tickets-d-n', type: 'choice', area: 'tickets', prompt: 'Golden set size before the demo?', options: [{ label: '20 tickets', pref: 'dec:tickets:n:20' }, { label: 'All 56 (incl. 14 gap)', pref: 'dec:tickets:n:56' }, { label: '56 + copilot gap set', pref: 'dec:tickets:n:70' }] }] }
 ];
 const out = Object.assign({}, base, { game: 'lo-cambio', version: 1, areas, cards,
-  dataLevels: ['Casual – scope & talking points', 'Light – + edge cases & abbreviations', 'Normal – + ticket judgments (golden-label votes)', 'Data creation – rewrite, bulk-label, verify abbreviations', 'Data creation – new tickets from scratch (coming later)'],
+  dataLevels: ['Casual – scope & talking points', 'Light – + edge cases & abbreviations', 'Normal – + ticket judgments (golden-label votes; 56 synthetic tickets incl. G-*/L-* gap set)', 'Data creation – rewrite, bulk-label, verify abbreviations', 'Data creation – new tickets from scratch (coming later)'],
   playableMaxLevel: 4,
   comingLater: [
     { level: 5, id: 'new-ticket', name: 'Author new synthetic Swedish tickets from scratch', schema: 'new_ticket.v1' },

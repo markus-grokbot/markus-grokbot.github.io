@@ -166,12 +166,12 @@
        "pref": "dec:tickets:n:20"
       },
       {
-       "label": "All 42",
-       "pref": "dec:tickets:n:42"
+       "label": "All 56 (incl. 14 gap)",
+       "pref": "dec:tickets:n:56"
       },
       {
-       "label": "42 + copilot 30",
-       "pref": "dec:tickets:n:72"
+       "label": "56 + copilot gap set",
+       "pref": "dec:tickets:n:70"
       }
      ]
     }
@@ -464,9 +464,9 @@
      "value": "10"
     },
     {
-     "label": "Full 42 offline, show the report",
-     "pref": "cam:scope:tickets:42",
-     "value": "42"
+     "label": "Full 56 offline, show the report",
+     "pref": "cam:scope:tickets:56",
+     "value": "56"
     }
    ],
    "cambio": {
@@ -1416,6 +1416,349 @@
    }
   },
   {
+   "id": "sc5-g003-fix",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: how to fix G-003 (Linnea Berg + Luhn-invalid samordningsnummer 19850372-6614 + behörighet → today awaiting_approval)?",
+   "options": [
+    {
+     "label": "Detect samordningsnummer shapes + force human_handoff",
+     "pref": "cam:scope:g003-fix:detect-samord-handoff",
+     "value": "detect-samord-handoff"
+    },
+    {
+     "label": "Any name + access-request with PII-shaped number → handoff (even if Luhn fails)",
+     "pref": "cam:scope:g003-fix:name-access-shape",
+     "value": "name-access-shape"
+    },
+    {
+     "label": "Local-model PII second opinion must ADD the mask, then hand off",
+     "pref": "cam:scope:g003-fix:local-second",
+     "value": "local-second"
+    },
+    {
+     "label": "All three: shape detect + name/access heuristic + local second opinion",
+     "pref": "cam:scope:g003-fix:all-three",
+     "value": "all-three"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "g003-fix",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-luhn-invalid-policy",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: Luhn-invalid personnummer / samordningsnummer policy?",
+   "options": [
+    {
+     "label": "Fail closed: mask + human_handoff whenever the shape matches",
+     "pref": "cam:scope:luhn-invalid-policy:fail-closed",
+     "value": "fail-closed"
+    },
+    {
+     "label": "Mask if shape matches; hand off only when needs_human rules also fire",
+     "pref": "cam:scope:luhn-invalid-policy:mask-then-rules",
+     "value": "mask-then-rules"
+    },
+    {
+     "label": "Ignore if Luhn fails (regex/Luhn only)",
+     "pref": "cam:scope:luhn-invalid-policy:ignore-invalid",
+     "value": "ignore-invalid"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "luhn-invalid-policy",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-name-access-no-valid-pnr",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: fake name + access/behörighet request WITHOUT a Luhn-valid personnummer — enough to force a person?",
+   "options": [
+    {
+     "label": "Yes → immediate human_handoff",
+     "pref": "cam:scope:name-access-no-valid-pnr:handoff",
+     "value": "handoff"
+    },
+    {
+     "label": "Route to awaiting_approval (draft OK, no auto-send)",
+     "pref": "cam:scope:name-access-no-valid-pnr:awaiting",
+     "value": "awaiting"
+    },
+    {
+     "label": "Only hand off if a PII-shaped number is also present",
+     "pref": "cam:scope:name-access-no-valid-pnr:need-shape",
+     "value": "need-shape"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "name-access-no-valid-pnr",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-rules-pii-second",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: local model as PII second opinion (may only ADD masks)?",
+   "options": [
+    {
+     "label": "In the live rules path",
+     "pref": "cam:scope:rules-pii-second:live",
+     "value": "live"
+    },
+    {
+     "label": "Recorded fixtures + replay only",
+     "pref": "cam:scope:rules-pii-second:recorded",
+     "value": "recorded"
+    },
+    {
+     "label": "Out — regex/Luhn only for Friday",
+     "pref": "cam:scope:rules-pii-second:out",
+     "value": "out"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "rules-pii-second",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-g003-interview-example",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Use G-003 as the interview example of why Luhn-only masking needs a second opinion?",
+   "options": [
+    {
+     "label": "Yes — primary live/interview example",
+     "pref": "cam:scope:g003-interview-example:primary",
+     "value": "primary"
+    },
+    {
+     "label": "Secondary mention only",
+     "pref": "cam:scope:g003-interview-example:secondary",
+     "value": "secondary"
+    },
+    {
+     "label": "No — use a cleaner Luhn-invalid fixture instead",
+     "pref": "cam:scope:g003-interview-example:other-fixture",
+     "value": "other-fixture"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "g003-interview-example",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-golden-label-source",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri golden labels: source of truth when labeling the 14 new gap tickets?",
+   "options": [
+    {
+     "label": "Markus L3 play is source of truth",
+     "pref": "cam:scope:golden-label-source:markus-l3",
+     "value": "markus-l3"
+    },
+    {
+     "label": "Adopt Codex when it agrees with the dataset; play only the leftovers",
+     "pref": "cam:scope:golden-label-source:codex-when-agrees",
+     "value": "codex-when-agrees"
+    },
+    {
+     "label": "Keep dataset label unless Markus votes otherwise",
+     "pref": "cam:scope:golden-label-source:dataset-unless-vote",
+     "value": "dataset-unless-vote"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "golden-label-source",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-pii-shape-luhn-fail",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: PII shape present but Luhn fails — how strict is handoff?",
+   "options": [
+    {
+     "label": "Always human_handoff (never awaiting_approval)",
+     "pref": "cam:scope:pii-shape-luhn-fail:always-handoff",
+     "value": "always-handoff"
+    },
+    {
+     "label": "awaiting_approval OK if no other needs_human signal",
+     "pref": "cam:scope:pii-shape-luhn-fail:awaiting-ok",
+     "value": "awaiting-ok"
+    },
+    {
+     "label": "human_handoff only for access/behörighet + patient identity",
+     "pref": "cam:scope:pii-shape-luhn-fail:access-only",
+     "value": "access-only"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "pii-shape-luhn-fail",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-personnummer-shapes",
+   "area": "scope",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Fri rules: which personnummer shapes must the detector cover?",
+   "options": [
+    {
+     "label": "12-digit, 10-digit, space-separated, samordningsnummer (incl. Luhn-invalid)",
+     "pref": "cam:scope:personnummer-shapes:all-shapes",
+     "value": "all-shapes"
+    },
+    {
+     "label": "Luhn-valid only (12/10 + hyphen/space)",
+     "pref": "cam:scope:personnummer-shapes:luhn-valid-only",
+     "value": "luhn-valid-only"
+    },
+    {
+     "label": "All shapes in lint; live rules start with samordningsnummer + space-separated",
+     "pref": "cam:scope:personnummer-shapes:samord-space-first",
+     "value": "samord-space-first"
+    }
+   ],
+   "cambio": {
+    "kind": "scope_decision",
+    "decision_id": "personnummer-shapes",
+    "round": 5
+   }
+  },
+  {
+   "id": "sc5-ud1",
+   "area": "scope",
+   "level": 1,
+   "type": "updown",
+   "prompt": "Up-prioritise Friday rules work (G-003 + personnummer shapes)?"
+  },
+  {
+   "id": "sc5-ud2",
+   "area": "scope",
+   "level": 1,
+   "type": "updown",
+   "prompt": "Up-prioritise Friday golden labels on the 14 new gap tickets?"
+  },
+  {
+   "id": "tp5-g003-luhn-story-vs-fail-closed-pii",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Friday focus — which matters more (human-gate lead stays locked)?",
+   "options": [
+    {
+     "label": "G-003 as interview example: Luhn-only masking needs a local-model second opinion",
+     "pref": "cam:tp:g003-luhn-story",
+     "value": "g003-luhn-story"
+    },
+    {
+     "label": "Fail closed on PII-shaped text even when Luhn fails",
+     "pref": "cam:tp:fail-closed-pii",
+     "value": "fail-closed-pii"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "tp5-g003-luhn-story-vs-golden-gap-set",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Friday focus — which matters more (human-gate lead stays locked)?",
+   "options": [
+    {
+     "label": "G-003 as interview example: Luhn-only masking needs a local-model second opinion",
+     "pref": "cam:tp:g003-luhn-story",
+     "value": "g003-luhn-story"
+    },
+    {
+     "label": "Golden-labelling the 14 new gap tickets (G-* / L-*) before Saturday RAG",
+     "pref": "cam:tp:golden-gap-set",
+     "value": "golden-gap-set"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "tp5-fail-closed-pii-vs-local-second-add",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Friday focus — which matters more (human-gate lead stays locked)?",
+   "options": [
+    {
+     "label": "Fail closed on PII-shaped text even when Luhn fails",
+     "pref": "cam:tp:fail-closed-pii",
+     "value": "fail-closed-pii"
+    },
+    {
+     "label": "Local model may only ADD masks (never remove) as PII second opinion",
+     "pref": "cam:tp:local-second-add",
+     "value": "local-second-add"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "tp5-golden-gap-set-vs-local-second-add",
+   "area": "talking",
+   "level": 1,
+   "type": "choice",
+   "prompt": "Friday focus — which matters more (human-gate lead stays locked)?",
+   "options": [
+    {
+     "label": "Golden-labelling the 14 new gap tickets (G-* / L-*) before Saturday RAG",
+     "pref": "cam:tp:golden-gap-set",
+     "value": "golden-gap-set"
+    },
+    {
+     "label": "Local model may only ADD masks (never remove) as PII second opinion",
+     "pref": "cam:tp:local-second-add",
+     "value": "local-second-add"
+    }
+   ],
+   "cambio": {
+    "kind": "talking_point_pair",
+    "round": 5
+   }
+  },
+  {
    "id": "ec-r-missing-key",
    "area": "edge",
    "level": 2,
@@ -1761,6 +2104,157 @@
    "level": 2,
    "type": "updown",
    "prompt": "Up-prioritise turning local-model errors into fixtures?"
+  },
+  {
+   "id": "ec5-r-samordningsnummer",
+   "area": "edge",
+   "level": 2,
+   "type": "rate",
+   "prompt": "Friday rules priority: G-003: Luhn-invalid samordningsnummer (19850372-6614) missed by regex?",
+   "aspect": "cam:edge:samordningsnummer",
+   "cambio": {
+    "kind": "edge_case_rating",
+    "edge_case": "samordningsnummer",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-p-samordningsnummer-vs-g003-handoff",
+   "area": "edge",
+   "level": 2,
+   "type": "choice",
+   "prompt": "Friday: feature which failure first?",
+   "options": [
+    {
+     "label": "G-003: Luhn-invalid samordningsnummer (19850372-6614) missed by regex",
+     "pref": "cam:ecp:samordningsnummer",
+     "value": "samordningsnummer"
+    },
+    {
+     "label": "G-003: name + access/behörighet → awaiting_approval instead of a person",
+     "pref": "cam:ecp:g003-handoff",
+     "value": "g003-handoff"
+    }
+   ],
+   "cambio": {
+    "kind": "edge_case_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-r-g003-handoff",
+   "area": "edge",
+   "level": 2,
+   "type": "rate",
+   "prompt": "Friday rules priority: G-003: name + access/behörighet → awaiting_approval instead of a person?",
+   "aspect": "cam:edge:g003-handoff",
+   "cambio": {
+    "kind": "edge_case_rating",
+    "edge_case": "g003-handoff",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-p-g003-handoff-vs-space-pnr",
+   "area": "edge",
+   "level": 2,
+   "type": "choice",
+   "prompt": "Friday: feature which failure first?",
+   "options": [
+    {
+     "label": "G-003: name + access/behörighet → awaiting_approval instead of a person",
+     "pref": "cam:ecp:g003-handoff",
+     "value": "g003-handoff"
+    },
+    {
+     "label": "Space-separated personnummer (19621105 7743) — lint catches; rules must too",
+     "pref": "cam:ecp:space-pnr",
+     "value": "space-pnr"
+    }
+   ],
+   "cambio": {
+    "kind": "edge_case_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-r-space-pnr",
+   "area": "edge",
+   "level": 2,
+   "type": "rate",
+   "prompt": "Friday rules priority: Space-separated personnummer (19621105 7743) — lint catches; rules must too?",
+   "aspect": "cam:edge:space-pnr",
+   "cambio": {
+    "kind": "edge_case_rating",
+    "edge_case": "space-pnr",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-p-space-pnr-vs-luhn-invalid-shapes",
+   "area": "edge",
+   "level": 2,
+   "type": "choice",
+   "prompt": "Friday: feature which failure first?",
+   "options": [
+    {
+     "label": "Space-separated personnummer (19621105 7743) — lint catches; rules must too",
+     "pref": "cam:ecp:space-pnr",
+     "value": "space-pnr"
+    },
+    {
+     "label": "Luhn-invalid 12-/10-digit / samordningsnummer still force mask + handoff",
+     "pref": "cam:ecp:luhn-invalid-shapes",
+     "value": "luhn-invalid-shapes"
+    }
+   ],
+   "cambio": {
+    "kind": "edge_case_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-r-luhn-invalid-shapes",
+   "area": "edge",
+   "level": 2,
+   "type": "rate",
+   "prompt": "Friday rules priority: Luhn-invalid 12-/10-digit / samordningsnummer still force mask + handoff?",
+   "aspect": "cam:edge:luhn-invalid-shapes",
+   "cambio": {
+    "kind": "edge_case_rating",
+    "edge_case": "luhn-invalid-shapes",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-p-luhn-invalid-shapes-vs-samordningsnummer",
+   "area": "edge",
+   "level": 2,
+   "type": "choice",
+   "prompt": "Friday: feature which failure first?",
+   "options": [
+    {
+     "label": "Luhn-invalid 12-/10-digit / samordningsnummer still force mask + handoff",
+     "pref": "cam:ecp:luhn-invalid-shapes",
+     "value": "luhn-invalid-shapes"
+    },
+    {
+     "label": "G-003: Luhn-invalid samordningsnummer (19850372-6614) missed by regex",
+     "pref": "cam:ecp:samordningsnummer",
+     "value": "samordningsnummer"
+    }
+   ],
+   "cambio": {
+    "kind": "edge_case_pair",
+    "round": 5
+   }
+  },
+  {
+   "id": "ec5-ud1",
+   "area": "edge",
+   "level": 2,
+   "type": "updown",
+   "prompt": "Up-prioritise Friday fixtures for G-003 / Luhn-invalid / space-PNR?"
   },
   {
    "id": "ab-ssk",
@@ -2317,8 +2811,8 @@
      }
     ],
     "example": {
-     "text": "Termbank synonym MAS.",
-     "source": "swedish-medical-abbreviations.json (notes)"
+     "text": "Finns det en tillfällig behörighet eller måste MAS godkänna?",
+     "source": "synthetic-data/merged/clean.json"
     }
    }
   },
@@ -4691,6 +5185,1826 @@
    }
   },
   {
+   "id": "tk-grok-build-gaps-2026-11-05-g-001-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Titta i journalen för patient som inte kommer upp i sök",
+    "body": "Hej, jag är ssk på Demoklinik Norr och behöver hjälp att titta i journalen för Astrid Holmgren 19121212-1212. Hon syns inte när jag söker på namn i EHR, men vi hade henne på UL igår. Kan ni kolla vad som ligger i journalen och om det finns en spärr? Vi behöver anteckningen från gårdagens us inför ronden."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-001",
+    "field": "category",
+    "dataset_label": "ehr_module_bug"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-001-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Titta i journalen för patient som inte kommer upp i sök",
+    "body": "Hej, jag är ssk på Demoklinik Norr och behöver hjälp att titta i journalen för Astrid Holmgren 19121212-1212. Hon syns inte när jag söker på namn i EHR, men vi hade henne på UL igår. Kan ni kolla vad som ligger i journalen och om det finns en spärr? Vi behöver anteckningen från gårdagens us inför ronden."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-001",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-001-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Titta i journalen för patient som inte kommer upp i sök",
+    "body": "Hej, jag är ssk på Demoklinik Norr och behöver hjälp att titta i journalen för Astrid Holmgren 19121212-1212. Hon syns inte när jag söker på namn i EHR, men vi hade henne på UL igår. Kan ni kolla vad som ligger i journalen och om det finns en spärr? Vi behöver anteckningen från gårdagens us inför ronden."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-001",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-001-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-001:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Titta i journalen för patient som inte kommer upp i sök",
+    "body": "Hej, jag är ssk på Demoklinik Norr och behöver hjälp att titta i journalen för Astrid Holmgren 19121212-1212. Hon syns inte när jag söker på namn i EHR, men vi hade henne på UL igår. Kan ni kolla vad som ligger i journalen och om det finns en spärr? Vi behöver anteckningen från gårdagens us inför ronden."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-001",
+    "field": "contains_pii",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-001-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-001",
+   "context": {
+    "title": "Titta i journalen för patient som inte kommer upp i sök",
+    "body": "Hej, jag är ssk på Demoklinik Norr och behöver hjälp att titta i journalen för Astrid Holmgren 19121212-1212. Hon syns inte när jag söker på namn i EHR, men vi hade henne på UL igår. Kan ni kolla vad som ligger i journalen och om det finns en spärr? Vi behöver anteckningen från gårdagens us inför ronden."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-001"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-002-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Flytta felaktig anteckning till rätt patient",
+    "body": "Hej support. Jag skrev en ADL-anteckning på fel patient i journalsystemet. Anteckningen ligger på Gunnar Ek 540918-3392 men ska tillhör hans bror som också är inskriven hos oss. Kan ni flytta notatet till rätt journal? Jag vågar inte radera själv. Tack, usk avd 3."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-002",
+    "field": "category",
+    "dataset_label": "ehr_module_bug"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-002-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Flytta felaktig anteckning till rätt patient",
+    "body": "Hej support. Jag skrev en ADL-anteckning på fel patient i journalsystemet. Anteckningen ligger på Gunnar Ek 540918-3392 men ska tillhör hans bror som också är inskriven hos oss. Kan ni flytta notatet till rätt journal? Jag vågar inte radera själv. Tack, usk avd 3."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-002",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-002-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Flytta felaktig anteckning till rätt patient",
+    "body": "Hej support. Jag skrev en ADL-anteckning på fel patient i journalsystemet. Anteckningen ligger på Gunnar Ek 540918-3392 men ska tillhör hans bror som också är inskriven hos oss. Kan ni flytta notatet till rätt journal? Jag vågar inte radera själv. Tack, usk avd 3."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-002",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-002-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-002:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Flytta felaktig anteckning till rätt patient",
+    "body": "Hej support. Jag skrev en ADL-anteckning på fel patient i journalsystemet. Anteckningen ligger på Gunnar Ek 540918-3392 men ska tillhör hans bror som också är inskriven hos oss. Kan ni flytta notatet till rätt journal? Jag vågar inte radera själv. Tack, usk avd 3."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-002",
+    "field": "contains_pii",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-002-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-002",
+   "context": {
+    "title": "Flytta felaktig anteckning till rätt patient",
+    "body": "Hej support. Jag skrev en ADL-anteckning på fel patient i journalsystemet. Anteckningen ligger på Gunnar Ek 540918-3392 men ska tillhör hans bror som också är inskriven hos oss. Kan ni flytta notatet till rätt journal? Jag vågar inte radera själv. Tack, usk avd 3."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-002"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-003-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Behörighet att se patient från annan enhet",
+    "body": "Systemförvaltare här. En ssk på KAVA frågar om hon får öppna journalen för Linnea Berg 19850372-6614 som ligger på medicin, inte på KAVA. Hon behöver se inf-ordination inför överflytt. Finns det en tillfällig behörighet eller måste MAS godkänna? Patienten har samordningsnummer. Återkoppla gärna hur vi ska göra."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-003",
+    "field": "category",
+    "dataset_label": "login_access"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-003-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Behörighet att se patient från annan enhet",
+    "body": "Systemförvaltare här. En ssk på KAVA frågar om hon får öppna journalen för Linnea Berg 19850372-6614 som ligger på medicin, inte på KAVA. Hon behöver se inf-ordination inför överflytt. Finns det en tillfällig behörighet eller måste MAS godkänna? Patienten har samordningsnummer. Återkoppla gärna hur vi ska göra."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-003",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-003-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Behörighet att se patient från annan enhet",
+    "body": "Systemförvaltare här. En ssk på KAVA frågar om hon får öppna journalen för Linnea Berg 19850372-6614 som ligger på medicin, inte på KAVA. Hon behöver se inf-ordination inför överflytt. Finns det en tillfällig behörighet eller måste MAS godkänna? Patienten har samordningsnummer. Återkoppla gärna hur vi ska göra."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-003",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-003-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-003:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Behörighet att se patient från annan enhet",
+    "body": "Systemförvaltare här. En ssk på KAVA frågar om hon får öppna journalen för Linnea Berg 19850372-6614 som ligger på medicin, inte på KAVA. Hon behöver se inf-ordination inför överflytt. Finns det en tillfällig behörighet eller måste MAS godkänna? Patienten har samordningsnummer. Återkoppla gärna hur vi ska göra."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-003",
+    "field": "contains_pii",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-003-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-003",
+   "context": {
+    "title": "Behörighet att se patient från annan enhet",
+    "body": "Systemförvaltare här. En ssk på KAVA frågar om hon får öppna journalen för Linnea Berg 19850372-6614 som ligger på medicin, inte på KAVA. Hon behöver se inf-ordination inför överflytt. Finns det en tillfällig behörighet eller måste MAS godkänna? Patienten har samordningsnummer. Återkoppla gärna hur vi ska göra."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-003"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-004-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Bifogar remissuppgifter i ärendet – journal saknas",
+    "body": "Hej. Remiss inkommen för Olof Svanberg 19621105 7743 men journalen öppnas inte från remissvyn. Bifogar här det vi har: frågeställning UL buk, avsändare vårdcentral Demo Norr, ssk Anna på mottagningen. Kan ni titta i journalen och se om remissen fastnat? Vi kan inte slutföra us utan journal."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-004",
+    "field": "category",
+    "dataset_label": "ehr_module_bug"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-004-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Bifogar remissuppgifter i ärendet – journal saknas",
+    "body": "Hej. Remiss inkommen för Olof Svanberg 19621105 7743 men journalen öppnas inte från remissvyn. Bifogar här det vi har: frågeställning UL buk, avsändare vårdcentral Demo Norr, ssk Anna på mottagningen. Kan ni titta i journalen och se om remissen fastnat? Vi kan inte slutföra us utan journal."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-004",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-004-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Bifogar remissuppgifter i ärendet – journal saknas",
+    "body": "Hej. Remiss inkommen för Olof Svanberg 19621105 7743 men journalen öppnas inte från remissvyn. Bifogar här det vi har: frågeställning UL buk, avsändare vårdcentral Demo Norr, ssk Anna på mottagningen. Kan ni titta i journalen och se om remissen fastnat? Vi kan inte slutföra us utan journal."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-004",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-004-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-004:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Bifogar remissuppgifter i ärendet – journal saknas",
+    "body": "Hej. Remiss inkommen för Olof Svanberg 19621105 7743 men journalen öppnas inte från remissvyn. Bifogar här det vi har: frågeställning UL buk, avsändare vårdcentral Demo Norr, ssk Anna på mottagningen. Kan ni titta i journalen och se om remissen fastnat? Vi kan inte slutföra us utan journal."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-004",
+    "field": "contains_pii",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-004-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-004",
+   "context": {
+    "title": "Bifogar remissuppgifter i ärendet – journal saknas",
+    "body": "Hej. Remiss inkommen för Olof Svanberg 19621105 7743 men journalen öppnas inte från remissvyn. Bifogar här det vi har: frågeställning UL buk, avsändare vårdcentral Demo Norr, ssk Anna på mottagningen. Kan ni titta i journalen och se om remissen fastnat? Vi kan inte slutföra us utan journal."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-004"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-005-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Fel dos i läkemedelslistan efter uppdatering",
+    "body": "Efter nattens uppdatering visades fel dos i läkemedelslistan för flera patienter på avd 2. En ssk upptäckte att tablettstyrkan som visades inte stämde med ordinationen vi skrev in igår. Vi har stoppat utdelning tills vidare. Detta är en läkemedelsavvikelse, behöver incidentprocess. Inga personnummer i ärendet, vi har intern lista. Prioritera."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-005",
+    "field": "category",
+    "dataset_label": "incident"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-005-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Fel dos i läkemedelslistan efter uppdatering",
+    "body": "Efter nattens uppdatering visades fel dos i läkemedelslistan för flera patienter på avd 2. En ssk upptäckte att tablettstyrkan som visades inte stämde med ordinationen vi skrev in igår. Vi har stoppat utdelning tills vidare. Detta är en läkemedelsavvikelse, behöver incidentprocess. Inga personnummer i ärendet, vi har intern lista. Prioritera."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-005",
+    "field": "route",
+    "dataset_label": "incident_process"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-005-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Fel dos i läkemedelslistan efter uppdatering",
+    "body": "Efter nattens uppdatering visades fel dos i läkemedelslistan för flera patienter på avd 2. En ssk upptäckte att tablettstyrkan som visades inte stämde med ordinationen vi skrev in igår. Vi har stoppat utdelning tills vidare. Detta är en läkemedelsavvikelse, behöver incidentprocess. Inga personnummer i ärendet, vi har intern lista. Prioritera."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-005",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-005-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-005:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Fel dos i läkemedelslistan efter uppdatering",
+    "body": "Efter nattens uppdatering visades fel dos i läkemedelslistan för flera patienter på avd 2. En ssk upptäckte att tablettstyrkan som visades inte stämde med ordinationen vi skrev in igår. Vi har stoppat utdelning tills vidare. Detta är en läkemedelsavvikelse, behöver incidentprocess. Inga personnummer i ärendet, vi har intern lista. Prioritera."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-005",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-005-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-005",
+   "context": {
+    "title": "Fel dos i läkemedelslistan efter uppdatering",
+    "body": "Efter nattens uppdatering visades fel dos i läkemedelslistan för flera patienter på avd 2. En ssk upptäckte att tablettstyrkan som visades inte stämde med ordinationen vi skrev in igår. Vi har stoppat utdelning tills vidare. Detta är en läkemedelsavvikelse, behöver incidentprocess. Inga personnummer i ärendet, vi har intern lista. Prioritera."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-005"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-006-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Inf-pump-ordination dubblerades i listan",
+    "body": "Hej, ssk på Demoklinik Norr. Inf-pump-ordinationen för Märta Lindqvist 19481203-2198 dubblerades efter att vi justerade hastigheten. I läkemedelslistan ligger nu två identiska inf-rader och pumpen larmade. Vi har pausat infusionen. Rapporterar som avvikelse, behöver att ni tar det i incidentprocessen omgående."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-006",
+    "field": "category",
+    "dataset_label": "incident"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-006-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Inf-pump-ordination dubblerades i listan",
+    "body": "Hej, ssk på Demoklinik Norr. Inf-pump-ordinationen för Märta Lindqvist 19481203-2198 dubblerades efter att vi justerade hastigheten. I läkemedelslistan ligger nu två identiska inf-rader och pumpen larmade. Vi har pausat infusionen. Rapporterar som avvikelse, behöver att ni tar det i incidentprocessen omgående."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-006",
+    "field": "route",
+    "dataset_label": "incident_process"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-006-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Inf-pump-ordination dubblerades i listan",
+    "body": "Hej, ssk på Demoklinik Norr. Inf-pump-ordinationen för Märta Lindqvist 19481203-2198 dubblerades efter att vi justerade hastigheten. I läkemedelslistan ligger nu två identiska inf-rader och pumpen larmade. Vi har pausat infusionen. Rapporterar som avvikelse, behöver att ni tar det i incidentprocessen omgående."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-006",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-006-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-006:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Inf-pump-ordination dubblerades i listan",
+    "body": "Hej, ssk på Demoklinik Norr. Inf-pump-ordinationen för Märta Lindqvist 19481203-2198 dubblerades efter att vi justerade hastigheten. I läkemedelslistan ligger nu två identiska inf-rader och pumpen larmade. Vi har pausat infusionen. Rapporterar som avvikelse, behöver att ni tar det i incidentprocessen omgående."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-006",
+    "field": "contains_pii",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-006-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-006",
+   "context": {
+    "title": "Inf-pump-ordination dubblerades i listan",
+    "body": "Hej, ssk på Demoklinik Norr. Inf-pump-ordinationen för Märta Lindqvist 19481203-2198 dubblerades efter att vi justerade hastigheten. I läkemedelslistan ligger nu två identiska inf-rader och pumpen larmade. Vi har pausat infusionen. Rapporterar som avvikelse, behöver att ni tar det i incidentprocessen omgående."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-006"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-007-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Juridisk fråga om journalgranskning efter klagomål",
+    "body": "Hej. MAS har fått ett klagomål och undrar vem som får granska en kollegas journalanteckningar i efterhand. Gäller det bara verksamhetschef eller får ssk-chef också gå in? Detta finns inte i vår kunskapsbas och vi vill inte gissa. Behöver ett juridiskt svar innan vi öppnar granskning. Återkom gärna skriftligt."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-007",
+    "field": "category",
+    "dataset_label": "other"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-007-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Juridisk fråga om journalgranskning efter klagomål",
+    "body": "Hej. MAS har fått ett klagomål och undrar vem som får granska en kollegas journalanteckningar i efterhand. Gäller det bara verksamhetschef eller får ssk-chef också gå in? Detta finns inte i vår kunskapsbas och vi vill inte gissa. Behöver ett juridiskt svar innan vi öppnar granskning. Återkom gärna skriftligt."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-007",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-007-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Juridisk fråga om journalgranskning efter klagomål",
+    "body": "Hej. MAS har fått ett klagomål och undrar vem som får granska en kollegas journalanteckningar i efterhand. Gäller det bara verksamhetschef eller får ssk-chef också gå in? Detta finns inte i vår kunskapsbas och vi vill inte gissa. Behöver ett juridiskt svar innan vi öppnar granskning. Återkom gärna skriftligt."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-007",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-007-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-007:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Juridisk fråga om journalgranskning efter klagomål",
+    "body": "Hej. MAS har fått ett klagomål och undrar vem som får granska en kollegas journalanteckningar i efterhand. Gäller det bara verksamhetschef eller får ssk-chef också gå in? Detta finns inte i vår kunskapsbas och vi vill inte gissa. Behöver ett juridiskt svar innan vi öppnar granskning. Återkom gärna skriftligt."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-007",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-007-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-007",
+   "context": {
+    "title": "Juridisk fråga om journalgranskning efter klagomål",
+    "body": "Hej. MAS har fått ett klagomål och undrar vem som får granska en kollegas journalanteckningar i efterhand. Gäller det bara verksamhetschef eller får ssk-chef också gå in? Detta finns inte i vår kunskapsbas och vi vill inte gissa. Behöver ett juridiskt svar innan vi öppnar granskning. Återkom gärna skriftligt."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-007"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-008-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Saknar funktion för att jämföra två vårdtillfällen sida vid sida",
+    "body": "Hej support. Vi saknar en funktion att lägga två vårdtillfällen bredvid varandra när vi går igenom ADL-status. Finns det någon dold vy eller är det något som inte finns i produkten alls? Systemförvaltare på Demoklinik Norr, vi behöver veta om vi ska sluta leta eller om det kommer. Inte bråttom men vi får frågan varje vecka från usk."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-008",
+    "field": "category",
+    "dataset_label": "other"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-008-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Saknar funktion för att jämföra två vårdtillfällen sida vid sida",
+    "body": "Hej support. Vi saknar en funktion att lägga två vårdtillfällen bredvid varandra när vi går igenom ADL-status. Finns det någon dold vy eller är det något som inte finns i produkten alls? Systemförvaltare på Demoklinik Norr, vi behöver veta om vi ska sluta leta eller om det kommer. Inte bråttom men vi får frågan varje vecka från usk."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-008",
+    "field": "route",
+    "dataset_label": "human_handoff"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-008-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Saknar funktion för att jämföra två vårdtillfällen sida vid sida",
+    "body": "Hej support. Vi saknar en funktion att lägga två vårdtillfällen bredvid varandra när vi går igenom ADL-status. Finns det någon dold vy eller är det något som inte finns i produkten alls? Systemförvaltare på Demoklinik Norr, vi behöver veta om vi ska sluta leta eller om det kommer. Inte bråttom men vi får frågan varje vecka från usk."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-008",
+    "field": "needs_human",
+    "dataset_label": true
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-008-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-008:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Saknar funktion för att jämföra två vårdtillfällen sida vid sida",
+    "body": "Hej support. Vi saknar en funktion att lägga två vårdtillfällen bredvid varandra när vi går igenom ADL-status. Finns det någon dold vy eller är det något som inte finns i produkten alls? Systemförvaltare på Demoklinik Norr, vi behöver veta om vi ska sluta leta eller om det kommer. Inte bråttom men vi får frågan varje vecka från usk."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-008",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-008-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-008",
+   "context": {
+    "title": "Saknar funktion för att jämföra två vårdtillfällen sida vid sida",
+    "body": "Hej support. Vi saknar en funktion att lägga två vårdtillfällen bredvid varandra när vi går igenom ADL-status. Finns det någon dold vy eller är det något som inte finns i produkten alls? Systemförvaltare på Demoklinik Norr, vi behöver veta om vi ska sluta leta eller om det kommer. Inte bråttom men vi får frågan varje vecka från usk."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-008"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-009-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Beställning av avvikelsestatistik per enhet",
+    "body": "Hej. MAS på Demoklinik Norr vill ha en uttagning av avvikelsestatistik per enhet för Q3, uppdelat på KAVA, medicin och mottagning. Inte den vanliga skärmrapporten utan en körning vi kan få som fil. Behöver antal per kategori och allvarlighetsgrad. Inga personuppgifter. Kan ni ta fram det?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-009",
+    "field": "category",
+    "dataset_label": "report_request"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-009-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Beställning av avvikelsestatistik per enhet",
+    "body": "Hej. MAS på Demoklinik Norr vill ha en uttagning av avvikelsestatistik per enhet för Q3, uppdelat på KAVA, medicin och mottagning. Inte den vanliga skärmrapporten utan en körning vi kan få som fil. Behöver antal per kategori och allvarlighetsgrad. Inga personuppgifter. Kan ni ta fram det?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-009",
+    "field": "route",
+    "dataset_label": "dev_team"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-009-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Beställning av avvikelsestatistik per enhet",
+    "body": "Hej. MAS på Demoklinik Norr vill ha en uttagning av avvikelsestatistik per enhet för Q3, uppdelat på KAVA, medicin och mottagning. Inte den vanliga skärmrapporten utan en körning vi kan få som fil. Behöver antal per kategori och allvarlighetsgrad. Inga personuppgifter. Kan ni ta fram det?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-009",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-009-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-009:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Beställning av avvikelsestatistik per enhet",
+    "body": "Hej. MAS på Demoklinik Norr vill ha en uttagning av avvikelsestatistik per enhet för Q3, uppdelat på KAVA, medicin och mottagning. Inte den vanliga skärmrapporten utan en körning vi kan få som fil. Behöver antal per kategori och allvarlighetsgrad. Inga personuppgifter. Kan ni ta fram det?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-009",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-009-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-009",
+   "context": {
+    "title": "Beställning av avvikelsestatistik per enhet",
+    "body": "Hej. MAS på Demoklinik Norr vill ha en uttagning av avvikelsestatistik per enhet för Q3, uppdelat på KAVA, medicin och mottagning. Inte den vanliga skärmrapporten utan en körning vi kan få som fil. Behöver antal per kategori och allvarlighetsgrad. Inga personuppgifter. Kan ni ta fram det?"
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-009"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-010-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Hur tar man själv ut ADL-sammanställning?",
+    "body": "Hej, ssk på avd 3. Jag vill veta hur man själv tar ut ADL-sammanställning för enheten utan att skicka ärende varje månad. Finns det en rapport under statistikmenyn? Vi behöver den inför APT. Inga patientnamn i uttaget, bara aggregerat. Tack på förhand."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-010",
+    "field": "category",
+    "dataset_label": "report_request"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-010-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Hur tar man själv ut ADL-sammanställning?",
+    "body": "Hej, ssk på avd 3. Jag vill veta hur man själv tar ut ADL-sammanställning för enheten utan att skicka ärende varje månad. Finns det en rapport under statistikmenyn? Vi behöver den inför APT. Inga patientnamn i uttaget, bara aggregerat. Tack på förhand."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-010",
+    "field": "route",
+    "dataset_label": "kb_answer"
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-010-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Hur tar man själv ut ADL-sammanställning?",
+    "body": "Hej, ssk på avd 3. Jag vill veta hur man själv tar ut ADL-sammanställning för enheten utan att skicka ärende varje månad. Finns det en rapport under statistikmenyn? Vi behöver den inför APT. Inga patientnamn i uttaget, bara aggregerat. Tack på förhand."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-010",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-010-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:grok-build-gaps-2026-11-05:G-010:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Hur tar man själv ut ADL-sammanställning?",
+    "body": "Hej, ssk på avd 3. Jag vill veta hur man själv tar ut ADL-sammanställning för enheten utan att skicka ärende varje månad. Finns det en rapport under statistikmenyn? Vi behöver den inför APT. Inga patientnamn i uttaget, bara aggregerat. Tack på förhand."
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-010",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-grok-build-gaps-2026-11-05-g-010-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:grok-build-gaps-2026-11-05:G-010",
+   "context": {
+    "title": "Hur tar man själv ut ADL-sammanställning?",
+    "body": "Hej, ssk på avd 3. Jag vill veta hur man själv tar ut ADL-sammanställning för enheten utan att skicka ärende varje månad. Finns det en rapport under statistikmenyn? Vi behöver den inför APT. Inga patientnamn i uttaget, bara aggregerat. Tack på förhand."
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "grok-build-gaps-2026-11-05:G-010"
+   }
+  },
+  {
    "id": "tk-grok-build-t-001-cat",
    "area": "tickets",
    "level": 3,
@@ -6144,6 +8458,734 @@
    "cambio": {
     "kind": "naturalness",
     "ticket_id": "grok-build:T-008"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-001-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "KAVA-remissetiketter skrivs ut förskjutna",
+    "body": "När jag försöker skriva ut KAVA-remissetiketter blir utskriften förskjuten. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-001",
+    "field": "category",
+    "dataset_label": "printing"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-001-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "KAVA-remissetiketter skrivs ut förskjutna",
+    "body": "När jag försöker skriva ut KAVA-remissetiketter blir utskriften förskjuten. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-001",
+    "field": "route",
+    "dataset_label": "it_support"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-001-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "KAVA-remissetiketter skrivs ut förskjutna",
+    "body": "När jag försöker skriva ut KAVA-remissetiketter blir utskriften förskjuten. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-001",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-001-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-001:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "KAVA-remissetiketter skrivs ut förskjutna",
+    "body": "När jag försöker skriva ut KAVA-remissetiketter blir utskriften förskjuten. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-001",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-001-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:local-qwen2.5-7b-2026-11-05:L-001",
+   "context": {
+    "title": "KAVA-remissetiketter skrivs ut förskjutna",
+    "body": "När jag försöker skriva ut KAVA-remissetiketter blir utskriften förskjuten. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-001"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-002-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "SITHS-kortet fungerar inte efter datorbyte",
+    "body": "Efter att jag bytte dator fungerar inte mitt SITHS-kort. Jag kan därför inte logga in i systemet. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-002",
+    "field": "category",
+    "dataset_label": "login_access"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-002-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "SITHS-kortet fungerar inte efter datorbyte",
+    "body": "Efter att jag bytte dator fungerar inte mitt SITHS-kort. Jag kan därför inte logga in i systemet. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-002",
+    "field": "route",
+    "dataset_label": "it_support"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-002-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "SITHS-kortet fungerar inte efter datorbyte",
+    "body": "Efter att jag bytte dator fungerar inte mitt SITHS-kort. Jag kan därför inte logga in i systemet. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-002",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-002-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-002:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "SITHS-kortet fungerar inte efter datorbyte",
+    "body": "Efter att jag bytte dator fungerar inte mitt SITHS-kort. Jag kan därför inte logga in i systemet. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-002",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-002-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:local-qwen2.5-7b-2026-11-05:L-002",
+   "context": {
+    "title": "SITHS-kortet fungerar inte efter datorbyte",
+    "body": "Efter att jag bytte dator fungerar inte mitt SITHS-kort. Jag kan därför inte logga in i systemet. Kan ni hjälpa mig att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-002"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-003-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Labbsvar från integrationen försenas med två timmar",
+    "body": "Labbsvaren från labbintegrationen kommer fram med två timmars fördröjning. Kan ni undersöka vad som orsakar förseningen?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-003",
+    "field": "category",
+    "dataset_label": "integration"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-003-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Labbsvar från integrationen försenas med två timmar",
+    "body": "Labbsvaren från labbintegrationen kommer fram med två timmars fördröjning. Kan ni undersöka vad som orsakar förseningen?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-003",
+    "field": "route",
+    "dataset_label": "integration_team"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-003-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Labbsvar från integrationen försenas med två timmar",
+    "body": "Labbsvaren från labbintegrationen kommer fram med två timmars fördröjning. Kan ni undersöka vad som orsakar förseningen?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-003",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-003-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-003:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Labbsvar från integrationen försenas med två timmar",
+    "body": "Labbsvaren från labbintegrationen kommer fram med två timmars fördröjning. Kan ni undersöka vad som orsakar förseningen?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-003",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-003-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:local-qwen2.5-7b-2026-11-05:L-003",
+   "context": {
+    "title": "Labbsvar från integrationen försenas med två timmar",
+    "body": "Labbsvaren från labbintegrationen kommer fram med två timmars fördröjning. Kan ni undersöka vad som orsakar förseningen?"
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-003"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-004-cat",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Category?",
+   "options": [
+    {
+     "label": "Journalmodul-bugg",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:ehr_module_bug",
+     "value": "ehr_module_bug"
+    },
+    {
+     "label": "Avvikelse/incident",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:incident",
+     "value": "incident"
+    },
+    {
+     "label": "Integration",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:integration",
+     "value": "integration"
+    },
+    {
+     "label": "Inloggning/behörighet",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:login_access",
+     "value": "login_access"
+    },
+    {
+     "label": "Övrigt",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:other",
+     "value": "other"
+    },
+    {
+     "label": "Recept/läkemedel",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:prescription",
+     "value": "prescription"
+    },
+    {
+     "label": "Utskrift",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:printing",
+     "value": "printing"
+    },
+    {
+     "label": "Rapportbeställning",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:category:report_request",
+     "value": "report_request"
+    }
+   ],
+   "context": {
+    "title": "Knappen ”Signera” är gråmarkerad i journalmodulen",
+    "body": "Efter en systemuppdatering är knappen ”Signera” gråmarkerad för en användare med sjuksköterskebehörighet. Kan ni hjälpa till att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-004",
+    "field": "category",
+    "dataset_label": "ehr_module_bug"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-004-route",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Route?",
+   "options": [
+    {
+     "label": "Dev team",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:dev_team",
+     "value": "dev_team"
+    },
+    {
+     "label": "Human handoff",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:human_handoff",
+     "value": "human_handoff"
+    },
+    {
+     "label": "Avvikelseprocess",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:incident_process",
+     "value": "incident_process"
+    },
+    {
+     "label": "Integrationsteam",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:integration_team",
+     "value": "integration_team"
+    },
+    {
+     "label": "IT-support",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:it_support",
+     "value": "it_support"
+    },
+    {
+     "label": "KB-svar (auto draft)",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:route:kb_answer",
+     "value": "kb_answer"
+    }
+   ],
+   "context": {
+    "title": "Knappen ”Signera” är gråmarkerad i journalmodulen",
+    "body": "Efter en systemuppdatering är knappen ”Signera” gråmarkerad för en användare med sjuksköterskebehörighet. Kan ni hjälpa till att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-004",
+    "field": "route",
+    "dataset_label": "dev_team"
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-004-hum",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Needs a human before any reply?",
+   "options": [
+    {
+     "label": "Yes – hand off",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:needs_human:true",
+     "value": true
+    },
+    {
+     "label": "No – a draft may go to approval",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:needs_human:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Knappen ”Signera” är gråmarkerad i journalmodulen",
+    "body": "Efter en systemuppdatering är knappen ”Signera” gråmarkerad för en användare med sjuksköterskebehörighet. Kan ni hjälpa till att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-004",
+    "field": "needs_human",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-004-pii",
+   "area": "tickets",
+   "level": 3,
+   "type": "choice",
+   "prompt": "Contains PII (name, personnummer, patient detail)?",
+   "options": [
+    {
+     "label": "Yes",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:contains_pii:true",
+     "value": true
+    },
+    {
+     "label": "No",
+     "pref": "cam:tk:local-qwen2.5-7b-2026-11-05:L-004:contains_pii:false",
+     "value": false
+    }
+   ],
+   "context": {
+    "title": "Knappen ”Signera” är gråmarkerad i journalmodulen",
+    "body": "Efter en systemuppdatering är knappen ”Signera” gråmarkerad för en användare med sjuksköterskebehörighet. Kan ni hjälpa till att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "label_vote",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-004",
+    "field": "contains_pii",
+    "dataset_label": false
+   }
+  },
+  {
+   "id": "tk-local-qwen2-5-7b-2026-11-05-l-004-nat",
+   "area": "tickets",
+   "level": 3,
+   "type": "rate",
+   "prompt": "Does the Swedish sound natural?",
+   "aspect": "cam:nat:local-qwen2.5-7b-2026-11-05:L-004",
+   "context": {
+    "title": "Knappen ”Signera” är gråmarkerad i journalmodulen",
+    "body": "Efter en systemuppdatering är knappen ”Signera” gråmarkerad för en användare med sjuksköterskebehörighet. Kan ni hjälpa till att lösa problemet?"
+   },
+   "cambio": {
+    "kind": "naturalness",
+    "ticket_id": "local-qwen2.5-7b-2026-11-05:L-004"
    }
   },
   {
@@ -12277,8 +15319,8 @@
      }
     ],
     "example": {
-     "text": "Termbank synonym MAS.",
-     "source": "swedish-medical-abbreviations.json (notes)"
+     "text": "Finns det en tillfällig behörighet eller måste MAS godkänna?",
+     "source": "synthetic-data/merged/clean.json"
     }
    }
   },
@@ -12748,7 +15790,7 @@
  "dataLevels": [
   "Casual – scope & talking points",
   "Light – + edge cases & abbreviations",
-  "Normal – + ticket judgments (golden-label votes)",
+  "Normal – + ticket judgments (golden-label votes; 56 synthetic tickets incl. G-*/L-* gap set)",
   "Data creation – rewrite, bulk-label, verify abbreviations",
   "Data creation – new tickets from scratch (coming later)"
  ],

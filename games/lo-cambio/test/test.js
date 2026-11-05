@@ -17,7 +17,7 @@ assert.equal(P.reviewSchedule(1),'weekly-fri-sat');assert.equal(P.reviewSchedule
 // import accepts lo-cambio exports
 r.game='lo-cambio';assert.equal(P.importSessions(D,r).length,1);
 // no personnummer-shaped strings outside synthetic tickets flagged; ticket ids map to clean.json
-const src='/tmp/cambio-associate-ai-engineer/prep/synthetic-data/merged/clean.json';if(fs.existsSync(src)){const ids=new Set(JSON.parse(fs.readFileSync(src,'utf8')).tickets.map(t=>t.id));D.cards.filter(c=>c.cambio&&c.cambio.ticket_id).forEach(c=>assert(ids.has(c.cambio.ticket_id),c.cambio.ticket_id));}
+const srcs=['/workspace/cambio-associate-ai-engineer/prep/synthetic-data/merged/clean.json','/tmp/cambio-associate-ai-engineer/prep/synthetic-data/merged/clean.json'];const src=srcs.find(p=>fs.existsSync(p));if(src){const clean=JSON.parse(fs.readFileSync(src,'utf8'));const ids=new Set(clean.tickets.map(t=>t.id));assert.equal(clean.tickets.length,56,'clean.json has 56 tickets');D.cards.filter(c=>c.cambio&&c.cambio.ticket_id).forEach(c=>assert(ids.has(c.cambio.ticket_id),c.cambio.ticket_id));['grok-build-gaps-2026-11-05:G-003','grok-build-gaps-2026-11-05:G-008','grok-build-gaps-2026-11-05:G-009','local-qwen2.5-7b-2026-11-05:L-001'].forEach(id=>assert(ids.has(id)&&D.cards.some(c=>c.cambio&&c.cambio.ticket_id===id&&c.cambio.kind==='label_vote'),'L3 labels for '+id));}
 // round 2: talking playable at L1-2 with allowed executors; abbreviation reveal; new scope/talking cards export
 [1,2].forEach(l=>assert(C.levelCards(D,l).filter(c=>c.area==='talking').length>=20,'talking at level '+l));
 const cp=P.costPlan(D,2,P.normExec(D,{talking:P.defaultExecutors(D)}));assert(cp.areas.talking.allowedExecutors.length>0,'talking allowed executors');
@@ -59,3 +59,19 @@ console.log('override tests OK');}
   assert.equal(D.playableMaxLevel,4);
   console.log('level4 tests OK',rec.length,'records',got);
 }
+
+// round 5: Friday rules + golden-label cards (G-003 / G-008 / G-009); 56-ticket L3
+{assert(D.cards.filter(c=>/^sc5-/.test(c.id)).length>=8,'friday scope cards');
+assert(D.cards.filter(c=>/^tp5-/.test(c.id)).length>=4,'friday talking cards');
+assert(D.cards.filter(c=>/^ec5-/.test(c.id)).length>=8,'friday edge cards');
+['g003-fix','luhn-invalid-policy','name-access-no-valid-pnr','rules-pii-second','g003-interview-example','golden-label-source','pii-shape-luhn-fail','personnummer-shapes']
+  .forEach(id=>assert(D.cards.some(c=>c.cambio&&c.cambio.kind==='scope_decision'&&c.cambio.decision_id===id&&c.cambio.round===5),'decision '+id));
+['samordningsnummer','g003-handoff','space-pnr','luhn-invalid-shapes'].forEach(e=>assert(D.cards.some(c=>c.cambio&&c.cambio.kind==='edge_case_rating'&&c.cambio.edge_case===e),'edge '+e));
+const L3t=D.cards.filter(c=>c.level===3&&c.area==='tickets'&&c.cambio&&c.cambio.kind==='label_vote');
+const tids=new Set(L3t.map(c=>c.cambio.ticket_id));assert.equal(tids.size,56,'56 tickets have label votes');
+const L5=Object.assign({},D,{cards:C.levelCards(D,1)}),s5=P.create(L5,{});
+for(let i=0;i<40;i++){const h=s5.next();s5.answer(h,h.card.type==='choice'?0:h.card.type==='rate'?1:'up');}
+const x5=C.build(D,s5.result().log,P.weighSession(D,1,{score:1}));
+assert(x5.scope_decisions.some(d=>d.decision_id==='g003-fix'||d.decision_id==='golden-label-source'));
+assert.equal(D.playableMaxLevel,4);assert.equal(x5.schema,'lo-cambio.export.v1');
+console.log('friday round5 tests OK',D.cards.filter(c=>c.cambio&&c.cambio.round===5).length,'round5-tagged');}
