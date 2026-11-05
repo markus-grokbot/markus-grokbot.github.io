@@ -10884,6 +10884,1852 @@
    "level": 3,
    "type": "updown",
    "prompt": "Up-prioritise golden labels on the synthetic tickets?"
+  },
+  {
+   "id": "te-opencode-glm-5-3-flash-free-t-006-title",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the title in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:title:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:title:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:title:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:title:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:title:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Etikettskrivaren för provburkar skriver kvist",
+    "body": "Hej! Etikettskrivaren i provtagningsrummet (den lilla Zebra-n) skriver bara halva etiketten, sen slutar den mitt i streckkoden. Papperet är rätt isatt, har bytt rulle och dammsugit. När jag skriver testetikett från hjälp-sidan funkar den däremot finfint. Ser ut som att texten bara inte kommer med journalen. Kan ni titta på detta? Tack på förhand! / Biobanksassistenten"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-006",
+    "field": "title",
+    "original": "Etikettskrivaren för provburkar skriver kvist",
+    "hint_reason": "unnatural"
+   }
+  },
+  {
+   "id": "te-opencode-glm-5-3-flash-free-t-006-body",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the body in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:body:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:body:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:body:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:body:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-006:body:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Etikettskrivaren för provburkar skriver kvist",
+    "body": "Hej! Etikettskrivaren i provtagningsrummet (den lilla Zebra-n) skriver bara halva etiketten, sen slutar den mitt i streckkoden. Papperet är rätt isatt, har bytt rulle och dammsugit. När jag skriver testetikett från hjälp-sidan funkar den däremot finfint. Ser ut som att texten bara inte kommer med journalen. Kan ni titta på detta? Tack på förhand! / Biobanksassistenten"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-006",
+    "field": "body",
+    "original": "Hej! Etikettskrivaren i provtagningsrummet (den lilla Zebra-n) skriver bara halva etiketten, sen slutar den mitt i streckkoden. Papperet är rätt isatt, har bytt rulle och dammsugit. När jag skriver testetikett från hjälp-sidan funkar den däremot finfint. Ser ut som att texten bara inte kommer med journalen. Kan ni titta på detta? Tack på förhand! / Biobanksassistenten",
+    "hint_reason": "unnatural"
+   }
+  },
+  {
+   "id": "te-opencode-glm-5-3-flash-free-t-009-title",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the title in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-009:title:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-009:title:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-009:title:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-009:title:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-009:title:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Kan inte stänga journal - dörrläsening dyker upp",
+    "body": "Hej. När jag försöker stänga journalen för en patient finns en ruta 'Jour har en oläst ändring - stäng ändå?'. Även om jag trycker ja kommer rutan tillbaka gång på gång. Det händer bara på patienter där vi precis lagt in en anteckning från mobila klienten. Kollegor på avdelning 5A har samma beteende. Känns som en bugg i samtidighetslogiken? Kram / undersköterskan på 5A"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-009",
+    "field": "title",
+    "original": "Kan inte stänga journal - dörrläsening dyker upp",
+    "hint_reason": "unnatural"
+   }
+  },
+  {
+   "id": "te-opencode-glm-5-3-flash-free-t-011-title",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the title in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-011:title:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-011:title:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-011:title:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-011:title:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-011:title:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Fundering kring vilka labsvärden vi får lägga in exterior - medicinsk bedömning",
+    "body": "Hej. Vi har diskuterat på avdelningen om vi får kopiera ev labsvärden från en remiss till patientens journalanteckning eller om de alltid ska ligga i labbmodulen, och vem ansvarar för dem om de ligget i anteckningen när labbet sen ändrar något. Vi hittar inget tydligt i riktlinjerna och vill inte gissa, eftersom det rör patientens journaluppgifter. Kan någon med koll på riktlinjerna prata med oss? / Leg. läkare,VC"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-011",
+    "field": "title",
+    "original": "Fundering kring vilka labsvärden vi får lägga in exterior - medicinsk bedömning",
+    "hint_reason": "wrong-register"
+   }
+  },
+  {
+   "id": "te-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the body in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-002:body:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-002:body:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-002:body:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-002:body:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-002:body:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Bugg i EHR-modul vid läkemedelsorder",
+    "body": "När jag skapar en ny läkemedelsorder i EHR:n fryses gränssnittet efter 5 minuter. Uppdateringen syns inte förrän jag startar om sessolen. Detta påverkar vår workflow avsevärt."
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-002",
+    "field": "body",
+    "original": "När jag skapar en ny läkemedelsorder i EHR:n fryses gränssnittet efter 5 minuter. Uppdateringen syns inte förrän jag startar om sessolen. Detta påverkar vår workflow avsevärt.",
+    "hint_reason": "wrong-register"
+   }
+  },
+  {
+   "id": "te-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the body in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-008:body:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-008:body:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-008:body:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-008:body:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-008:body:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Anmälan angående patient med misstänkt biverkan",
+    "body": "Kollegan rapporterade att patient X med personnummer 240101-1234 har uppvisat ovanliga symtom efter ny behandling. Vi behöver rådgivning hur vi ska hantera this situationet fortsättningsvis."
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-008",
+    "field": "body",
+    "original": "Kollegan rapporterade att patient X med personnummer 240101-1234 har uppvisat ovanliga symtom efter ny behandling. Vi behöver rådgivning hur vi ska hantera this situationet fortsättningsvis.",
+    "hint_reason": "abbr-fix"
+   }
+  },
+  {
+   "id": "te-opencode-glm-5-3-flash-free-t-001-title",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the title in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-001:title:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-001:title:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-001:title:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-001:title:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-glm-5.3-flash-free:T-001:title:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Kan inte logga in efter lösenordsbyte i tjockis-klienten",
+    "body": "Hej! Jag bytte lösenord igår som det sa att jag skulle, men nu kommer jag inte in i journalsystemet alls. Det står 'Kontot är tillfälligt spärrat, testa igen om 15 min' varje gång. Är säker på att jag skriver rätt, jag har dubbelkollat på ett papper. Finns det någon karantän efter man bytt lösenord? Det brådskar inte akut men jag har morgonsamtal imorgon bitti. // Ssk, avd 2B"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-001",
+    "field": "title",
+    "original": "Kan inte logga in efter lösenordsbyte i tjockis-klienten",
+    "hint_reason": "unnatural"
+   }
+  },
+  {
+   "id": "te-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Rewrite the body in more natural Swedish (type it below). Why does it need a rewrite?",
+   "options": [
+    {
+     "label": "Unnatural Swedish",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-003:body:unnatural",
+     "value": "unnatural"
+    },
+    {
+     "label": "Wrong register / tone",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-003:body:wrong-register",
+     "value": "wrong-register"
+    },
+    {
+     "label": "Abbreviation mess",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-003:body:abbr-fix",
+     "value": "abbr-fix"
+    },
+    {
+     "label": "Other",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-003:body:other",
+     "value": "other"
+    },
+    {
+     "label": "Looks fine — keep as-is",
+     "pref": "cam:te:opencode-nemotron-3.5-lightning-free:T-003:body:__keep__",
+     "value": "__keep__"
+    }
+   ],
+   "context": {
+    "title": "Integration med labbsystemet levererar fel data",
+    "body": "Vi märker att resultaten från labbsystemet inte matchar patienternas identifiering korrekt. HL7-meddelandena innehåller fel patient-ID vid certain tester. Kan detta krävas granskas av integrationsteamet?"
+   },
+   "editField": true,
+   "cambio": {
+    "kind": "ticket_edit",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-003",
+    "field": "body",
+    "original": "Vi märker att resultaten från labbsystemet inte matchar patienternas identifiering korrekt. HL7-meddelandena innehåller fel patient-ID vid certain tester. Kan detta krävas granskas av integrationsteamet?",
+    "hint_reason": "wrong-register"
+   }
+  },
+  {
+   "id": "bl-codex-t-004",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Utskrift · KB-svar (auto draft) · low · PII no · human no (confidence 4)",
+     "pref": "cam:bl:codex:T-004:a",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "kb_answer",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Utskrift · Human handoff · low · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:codex:T-004:b",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "human_handoff",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Utskrift · KB-svar (auto draft) · medium · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:codex:T-004:c",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "kb_answer",
+       "priority": "medium",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:codex:T-004:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Utskrift blir tom från journalen",
+    "body": "Vi får tomma sidor när vi skriver ut journalöversikten från en viss arbetsstation. Förhandsgranskningen ser också tom ut, men andra dokument går att skriva ut. Något tips på vad vi kan felsöka?"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "codex:T-004",
+    "dataset_labels": {
+     "category": "printing",
+     "expected_route": "kb_answer",
+     "priority": "low",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-codex-t-007",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Avvikelse/incident · Avvikelseprocess · critical · PII no · human yes (confidence 4)",
+     "pref": "cam:bl:codex:T-007:a",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "incident_process",
+       "priority": "critical",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Avvikelse/incident · KB-svar (auto draft) · critical · PII no · human no (confidence 3)",
+     "pref": "cam:bl:codex:T-007:b",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "kb_answer",
+       "priority": "critical",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Avvikelse/incident · Avvikelseprocess · low · PII yes · human yes (confidence 2)",
+     "pref": "cam:bl:codex:T-007:c",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "incident_process",
+       "priority": "low",
+       "contains_pii": true,
+       "needs_human": true
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:codex:T-007:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Fel patient verkar ha visats i journalen",
+    "body": "Jag öppnade en journal via arbetslistan och fick först upp en annan patients uppgifter innan sidan laddades om. Jag stängde vyn direkt och har inte gjort några ändringar. Behöver detta rapporteras någonstans?"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "codex:T-007",
+    "dataset_labels": {
+     "category": "incident",
+     "expected_route": "incident_process",
+     "priority": "critical",
+     "contains_pii": false,
+     "needs_human": true
+    }
+   }
+  },
+  {
+   "id": "bl-grok-build-t-001",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Inloggning/behörighet · KB-svar (auto draft) · medium · PII no · human no (confidence 4)",
+     "pref": "cam:bl:grok-build:T-001:a",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "kb_answer",
+       "priority": "medium",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Inloggning/behörighet · Human handoff · medium · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:grok-build:T-001:b",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "human_handoff",
+       "priority": "medium",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Inloggning/behörighet · KB-svar (auto draft) · high · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:grok-build:T-001:c",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "kb_answer",
+       "priority": "high",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:grok-build:T-001:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Kan inte logga in efter lösenordsbyte",
+    "body": "Hej, jag bytte lösenord i går efter att det gamla gått ut men kommer inte in i NovaJournal nu på morgonen. Jag får meddelandet 'kontot är tillfälligt låst' trots att jag är säker på att jag skrivit rätt tre gånger. SITHS-kortet fungerar på grannens dator. Jag jobbar på vårdcentralen Ekorren i testmiljön och behöver komma åt tidboken innan klockan nio. Kan ni låsa upp kontot eller säga vilket runbook-steg jag ska följa?"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "grok-build:T-001",
+    "dataset_labels": {
+     "category": "login_access",
+     "expected_route": "kb_answer",
+     "priority": "medium",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-grok-build-t-004",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Utskrift · IT-support · low · PII no · human no (confidence 4)",
+     "pref": "cam:bl:grok-build:T-004:a",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "it_support",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Utskrift · Human handoff · low · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:grok-build:T-004:b",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "human_handoff",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Utskrift · IT-support · medium · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:grok-build:T-004:c",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "it_support",
+       "priority": "medium",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:grok-build:T-004:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Etikettskrivaren på expeditionen skriver bara halva raden",
+    "body": "Skrivaren ZP-04 på expeditionen i testhuset skriver läkemedelsetiketter där högra halvan saknas. Vanlig A4-utskrift av en tom mall från kunskapsbanken fungerar. Vi har startat om kön och bytt papper. Ingen patientutskrift har gjorts, vi testar med övningsmallen 'Etikett-DEMO'. Behöver vi en ny drivrutin eller är det en inställning i utskriftsprofilen för 50 mm etikett?"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "grok-build:T-004",
+    "dataset_labels": {
+     "category": "printing",
+     "expected_route": "it_support",
+     "priority": "low",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-opencode-deepseek-v4-1-flash-free-t-006",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Rapportbeställning · IT-support · low · PII no · human no (confidence 4)",
+     "pref": "cam:bl:opencode-deepseek-v4.1-flash-free:T-006:a",
+     "value": {
+      "labels": {
+       "category": "report_request",
+       "expected_route": "it_support",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Rapportbeställning · Human handoff · low · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:opencode-deepseek-v4.1-flash-free:T-006:b",
+     "value": {
+      "labels": {
+       "category": "report_request",
+       "expected_route": "human_handoff",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Rapportbeställning · IT-support · medium · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:opencode-deepseek-v4.1-flash-free:T-006:c",
+     "value": {
+      "labels": {
+       "category": "report_request",
+       "expected_route": "it_support",
+       "priority": "medium",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:opencode-deepseek-v4.1-flash-free:T-006:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Beställning av månadsrapport för diabetesmottagningen",
+    "body": "Hej! Vi skulle behöva en månadsrapport för diabetesmottagningen som visar antal besök, andel patienter med HbA1c över 70 mmol/mol och antal uteblivna besök. Rapporten behövs inför verksamhetsuppföljningen den 15:e. Vi har tidigare fått en liknande rapport men hittar inte beställningsformuläret. Kan ni skicka instruktioner eller lägga beställningen åt oss? /Pernilla, verksamhetsutvecklare"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "opencode-deepseek-v4.1-flash-free:T-006",
+    "dataset_labels": {
+     "category": "report_request",
+     "expected_route": "it_support",
+     "priority": "low",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-opencode-glm-5-3-flash-free-t-002",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Inloggning/behörighet · IT-support · medium · PII no · human no (confidence 4)",
+     "pref": "cam:bl:opencode-glm-5.3-flash-free:T-002:a",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "it_support",
+       "priority": "medium",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Inloggning/behörighet · Human handoff · medium · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:opencode-glm-5.3-flash-free:T-002:b",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "human_handoff",
+       "priority": "medium",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Inloggning/behörighet · IT-support · high · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:opencode-glm-5.3-flash-free:T-002:c",
+     "value": {
+      "labels": {
+       "category": "login_access",
+       "expected_route": "it_support",
+       "priority": "high",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:opencode-glm-5.3-flash-free:T-002:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Behörighet till ny avdelning saknas",
+    "body": "Hej, jag heter Anna Vikström och har börjat arbeta på avdelning 3A och har fortfarande bara behörighet till 2B i journalsystemet. Jag kan inte öppna patientlistan för min nya avdelning alls, det står bara 'otillräcklig behörighet'. Lösenordet funkar finfint så det är inte inloggningsrelaterat. Min närmaste chef har skrivit på mitt systemvittne om att jag ska ha tillgång. Kan nån fixa detta vänligt? Tack på förhand! // Anna, ssk"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "opencode-glm-5.3-flash-free:T-002",
+    "dataset_labels": {
+     "category": "login_access",
+     "expected_route": "it_support",
+     "priority": "medium",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Utskrift · IT-support · low · PII no · human no (confidence 4)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-004:a",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "it_support",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Utskrift · Human handoff · low · PII no · human yes (confidence 3)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-004:b",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "human_handoff",
+       "priority": "low",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Utskrift · IT-support · medium · PII yes · human no (confidence 2)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-004:c",
+     "value": {
+      "labels": {
+       "category": "printing",
+       "expected_route": "it_support",
+       "priority": "medium",
+       "contains_pii": true,
+       "needs_human": false
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-004:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Utskrifter från journalsystemet blir tomma",
+    "body": "När jag försöker skriva ut patientjournaler blir utskrifterna tomma pga felaktig konfiguration av skrivardrivrutin. Kan någon hjälpa mig med att återställa skrivarinställningarna?"
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-004",
+    "dataset_labels": {
+     "category": "printing",
+     "expected_route": "it_support",
+     "priority": "low",
+     "contains_pii": false,
+     "needs_human": false
+    }
+   }
+  },
+  {
+   "id": "bl-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Bulk-label this synthetic ticket (all fields). Typed override still wins.",
+   "options": [
+    {
+     "label": "Avvikelse/incident · Avvikelseprocess · critical · PII no · human yes (confidence 4)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-007:a",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "incident_process",
+       "priority": "critical",
+       "contains_pii": false,
+       "needs_human": true
+      },
+      "confidence": 4
+     }
+    },
+    {
+     "label": "Avvikelse/incident · KB-svar (auto draft) · critical · PII no · human no (confidence 3)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-007:b",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "kb_answer",
+       "priority": "critical",
+       "contains_pii": false,
+       "needs_human": false
+      },
+      "confidence": 3
+     }
+    },
+    {
+     "label": "Avvikelse/incident · Avvikelseprocess · low · PII yes · human yes (confidence 2)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-007:c",
+     "value": {
+      "labels": {
+       "category": "incident",
+       "expected_route": "incident_process",
+       "priority": "low",
+       "contains_pii": true,
+       "needs_human": true
+      },
+      "confidence": 2
+     }
+    },
+    {
+     "label": "Custom — write labels in the box (category/route/priority/PII/human)",
+     "pref": "cam:bl:opencode-nemotron-3.5-lightning-free:T-007:manual",
+     "value": {
+      "labels": null,
+      "confidence": 3
+     }
+    }
+   ],
+   "context": {
+    "title": "Patientsäkerhetsincident - fel dos läkemedel",
+    "body": "Critical incident rapporteras på avdelning 3: patienten fick fel dos av läkemedel på natten. Allvarlig händelse som kräver omedelbar analys och åtgärder för att undvika upprepning."
+   },
+   "cambio": {
+    "kind": "bulk_label",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-007",
+    "dataset_labels": {
+     "category": "incident",
+     "expected_route": "incident_process",
+     "priority": "critical",
+     "contains_pii": false,
+     "needs_human": true
+    }
+   }
+  },
+  {
+   "id": "av-us",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"us\" → \"undersökning\" (also: utskrivningssamtal). Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:us:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:us:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:us:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:us:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "us",
+    "expansion_sv": "undersökning",
+    "expansions": [
+     "undersökning",
+     "utskrivningssamtal"
+    ],
+    "ambiguous": true,
+    "suggested_source": null
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "undersökning",
+      "en": "examination"
+     },
+     {
+      "sv": "utskrivningssamtal",
+      "en": "discharge conversation"
+     }
+    ],
+    "example": {
+     "text": "Pat. väntar på us av läkare innan hemgång; us bokat imorgon kl 10.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-kava-uc",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"KAVA\" → \"kirurgisk akutvårdsavdelning\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:kava:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:kava:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:kava:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:kava:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://www.1177.se/hitta-vard/kontaktkort/Kirurgisk-akutvardsavdelning-KAVA-Sundsvall/",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "KAVA",
+    "expansion_sv": "kirurgisk akutvårdsavdelning",
+    "expansions": [
+     "kirurgisk akutvårdsavdelning"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://www.1177.se/hitta-vard/kontaktkort/Kirurgisk-akutvardsavdelning-KAVA-Sundsvall/"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "kirurgisk akutvårdsavdelning",
+      "en": "surgical acute ward"
+     }
+    ],
+    "example": {
+     "text": "Patienten flyttas från akuten till KAVA för observation efter operation.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-adl-uc",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"ADL\" → \"aktiviteter i dagliga livet\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:adl:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:adl:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:adl:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:adl:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://sv.wikipedia.org/wiki/Aktiviteter_i_dagliga_livet",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "ADL",
+    "expansion_sv": "aktiviteter i dagliga livet",
+    "expansions": [
+     "aktiviteter i dagliga livet"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://sv.wikipedia.org/wiki/Aktiviteter_i_dagliga_livet"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "aktiviteter i dagliga livet",
+      "en": "activities of daily living"
+     }
+    ],
+    "example": {
+     "text": "Bedömning av ADL: klarar påklädning själv, behöver hjälp vid dusch.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-inf",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"inf\" → \"infektion\" (also: inferior). Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:inf:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:inf:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:inf:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:inf:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "inf",
+    "expansion_sv": "infektion",
+    "expansions": [
+     "infektion",
+     "inferior"
+    ],
+    "ambiguous": true,
+    "suggested_source": null
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "infektion",
+      "en": "infection"
+     },
+     {
+      "sv": "inferior",
+      "en": "inferior (anatomical)"
+     }
+    ],
+    "example": {
+     "text": "Misstänkt inf i operationssåret, odling tagen.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-ca",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"ca\" → \"cancer\" (also: cirka). Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:ca:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:ca:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:ca:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:ca:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://www.1177.se/riktlinjer-och-material/sprakliga-riktlinjer/stavning-skrivregler-stil/forkortningar/",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "ca",
+    "expansion_sv": "cancer",
+    "expansions": [
+     "cancer",
+     "cirka"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://www.1177.se/riktlinjer-och-material/sprakliga-riktlinjer/stavning-skrivregler-stil/forkortningar/"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "cancer",
+      "en": "cancer"
+     },
+     {
+      "sv": "cirka",
+      "en": "approximately"
+     }
+    ],
+    "example": {
+     "text": "Pat. med känd ca mammae, väntar ca 20 min på provsvar.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-ul-uc",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"UL\" → \"ultraljud\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:ul:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:ul:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:ul:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:ul:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "UL",
+    "expansion_sv": "ultraljud",
+    "expansions": [
+     "ultraljud"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "ultraljud",
+      "en": "ultrasound"
+     }
+    ],
+    "example": {
+     "text": "Remiss till UL buk skickad, tid om ca två veckor.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-ul",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"ul\" → \"underläkare\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:ul:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:ul:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:ul:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:ul:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "ul",
+    "expansion_sv": "underläkare",
+    "expansions": [
+     "underläkare"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "underläkare",
+      "en": "junior physician"
+     }
+    ],
+    "example": {
+     "text": "ul ringer om ordinationen efter ronden.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "av-mas-uc",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"MAS\" → \"medicinskt ansvarig sjuksköterska\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:mas:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:mas:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:mas:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:mas:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://termbank.socialstyrelsen.se/?query=medicinskt+ansvarig+sjuksk%C3%B6terska&src_lang=swe",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "MAS",
+    "expansion_sv": "medicinskt ansvarig sjuksköterska",
+    "expansions": [
+     "medicinskt ansvarig sjuksköterska"
+    ],
+    "ambiguous": false,
+    "suggested_source": "https://termbank.socialstyrelsen.se/?query=medicinskt+ansvarig+sjuksk%C3%B6terska&src_lang=swe"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "medicinskt ansvarig sjuksköterska",
+      "en": "medically responsible nurse in municipal health care"
+     }
+    ],
+    "example": {
+     "text": "Termbank synonym MAS.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
+   }
+  },
+  {
+   "id": "av-mar-uc",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"MAR\" → \"medicinskt ansvarig för rehabilitering\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:mar:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:mar:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:mar:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:mar:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "suggestedSource": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/vem-far-gora-vad/styrning-och-arbetsfordelning/medicinskt-ansvarig-sjukskoterska-mas-och-medicinskt-ansvarig-for-rehabilitering-mar/",
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "MAR",
+    "expansion_sv": "medicinskt ansvarig för rehabilitering",
+    "expansions": [
+     "medicinskt ansvarig för rehabilitering"
+    ],
+    "ambiguous": true,
+    "suggested_source": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/vem-far-gora-vad/styrning-och-arbetsfordelning/medicinskt-ansvarig-sjukskoterska-mas-och-medicinskt-ansvarig-for-rehabilitering-mar/"
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "medicinskt ansvarig för rehabilitering",
+      "en": "medically responsible rehabilitation lead in municipal care"
+     }
+    ],
+    "example": {
+     "text": "Role cue near SÄBO or kommun.",
+     "source": "swedish-medical-abbreviations.json (notes)"
+    }
+   }
+  },
+  {
+   "id": "av-ssk",
+   "area": "abbr",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Verify \"ssk\" → \"sjuksköterska\". Add a source URL below if you have one.",
+   "options": [
+    {
+     "label": "Correct as shown",
+     "pref": "cam:av:ssk:correct",
+     "value": "correct"
+    },
+    {
+     "label": "Wrong",
+     "pref": "cam:av:ssk:wrong",
+     "value": "wrong"
+    },
+    {
+     "label": "Ambiguous – depends on context",
+     "pref": "cam:av:ssk:ambiguous",
+     "value": "ambiguous"
+    },
+    {
+     "label": "Missing reading (glossary incomplete)",
+     "pref": "cam:av:ssk:missing",
+     "value": "missing-reading"
+    }
+   ],
+   "sourceField": true,
+   "cambio": {
+    "kind": "abbreviation_verification",
+    "abbr": "ssk",
+    "expansion_sv": "sjuksköterska",
+    "expansions": [
+     "sjuksköterska"
+    ],
+    "ambiguous": false,
+    "suggested_source": null
+   },
+   "reveal": {
+    "expansions": [
+     {
+      "sv": "sjuksköterska",
+      "en": "registered nurse"
+     }
+    ],
+    "example": {
+     "text": "Ansvarig ssk på avd 4C har kontrollerat listan.",
+     "source": "synthetic example (gen.js)"
+    }
+   }
+  },
+  {
+   "id": "ps-codex-t-003",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Which exact PII spans should the masker catch? (synthetic only). Candidates: \"Tova Näckros\", \"810417-2846\"",
+   "options": [
+    {
+     "label": "All listed spans",
+     "pref": "cam:ps:codex-t-003:all",
+     "value": [
+      {
+       "start": 221,
+       "end": 233,
+       "text": "Tova Näckros",
+       "kind": "name"
+      },
+      {
+       "start": 235,
+       "end": 246,
+       "text": "810417-2846",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Personnummer only",
+     "pref": "cam:ps:codex-t-003:pnr",
+     "value": [
+      {
+       "start": 235,
+       "end": 246,
+       "text": "810417-2846",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Names only",
+     "pref": "cam:ps:codex-t-003:name",
+     "value": [
+      {
+       "start": 221,
+       "end": 233,
+       "text": "Tova Näckros",
+       "kind": "name"
+      }
+     ]
+    },
+    {
+     "label": "No PII spans",
+     "pref": "cam:ps:codex-t-003:none",
+     "value": []
+    },
+    {
+     "label": "Custom — type exact substring(s) in the box",
+     "pref": "cam:ps:codex-t-003:manual",
+     "value": null
+    }
+   ],
+   "context": {
+    "title": "Provsvar kommer inte in från labbet",
+    "body": "Hej, vi saknar labsvar från det fiktiva laboratoriet Nordprov sedan kl. 09. HL7-meddelandena verkar ligga kvar i kön. Kan ni kontrollera integrationen och återköra dem? Exempelpatient: Tova Näckros, 810417-2846."
+   },
+   "cambio": {
+    "kind": "pii_span_annotation",
+    "ticket_id": "codex:T-003",
+    "candidates": [
+     {
+      "start": 221,
+      "end": 233,
+      "text": "Tova Näckros",
+      "kind": "name"
+     },
+     {
+      "start": 235,
+      "end": 246,
+      "text": "810417-2846",
+      "kind": "personnummer"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ps-grok-build-t-005",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Which exact PII spans should the masker catch? (synthetic only). Candidates: \"Astrid Holmgren\", \"19740312-4821\", \"Solbacken\"",
+   "options": [
+    {
+     "label": "All listed spans",
+     "pref": "cam:ps:grok-build-t-005:all",
+     "value": [
+      {
+       "start": 189,
+       "end": 204,
+       "text": "Astrid Holmgren",
+       "kind": "name"
+      },
+      {
+       "start": 206,
+       "end": 219,
+       "text": "19740312-4821",
+       "kind": "personnummer"
+      },
+      {
+       "start": 236,
+       "end": 245,
+       "text": "Solbacken",
+       "kind": "address"
+      }
+     ]
+    },
+    {
+     "label": "Personnummer only",
+     "pref": "cam:ps:grok-build-t-005:pnr",
+     "value": [
+      {
+       "start": 206,
+       "end": 219,
+       "text": "19740312-4821",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Names only",
+     "pref": "cam:ps:grok-build-t-005:name",
+     "value": [
+      {
+       "start": 189,
+       "end": 204,
+       "text": "Astrid Holmgren",
+       "kind": "name"
+      }
+     ]
+    },
+    {
+     "label": "No PII spans",
+     "pref": "cam:ps:grok-build-t-005:none",
+     "value": []
+    },
+    {
+     "label": "Custom — type exact substring(s) in the box",
+     "pref": "cam:ps:grok-build-t-005:manual",
+     "value": null
+    }
+   ],
+   "context": {
+    "title": "Ordination visar fel styrka efter spara",
+    "body": "I förskrivningsmodulen sparar jag en ordination och när vyn laddas om står det 50 mg i stället för 5 mg på beredningsraden. Det gäller testpatienten Astrid Holmgren, 19740312-4821, i demokliniken Solbacken. Receptet är inte skickat till något apotek, det ligger bara som utkast i test. Samma sak hände med tabletter men inte med mixtur. Kan ni återskapa och skicka till utveckling?"
+   },
+   "cambio": {
+    "kind": "pii_span_annotation",
+    "ticket_id": "grok-build:T-005",
+    "candidates": [
+     {
+      "start": 189,
+      "end": 204,
+      "text": "Astrid Holmgren",
+      "kind": "name"
+     },
+     {
+      "start": 206,
+      "end": 219,
+      "text": "19740312-4821",
+      "kind": "personnummer"
+     },
+     {
+      "start": 236,
+      "end": 245,
+      "text": "Solbacken",
+      "kind": "address"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ps-opencode-nemotron-3-5-lightning-free-t-0",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Which exact PII spans should the masker catch? (synthetic only). Candidates: \"240101-1234\", \"patient X\"",
+   "options": [
+    {
+     "label": "All listed spans",
+     "pref": "cam:ps:opencode-nemotron-3-5-lightning-free-t-0:all",
+     "value": [
+      {
+       "start": 101,
+       "end": 112,
+       "text": "240101-1234",
+       "kind": "personnummer"
+      },
+      {
+       "start": 74,
+       "end": 83,
+       "text": "patient X",
+       "kind": "name"
+      }
+     ]
+    },
+    {
+     "label": "Personnummer only",
+     "pref": "cam:ps:opencode-nemotron-3-5-lightning-free-t-0:pnr",
+     "value": [
+      {
+       "start": 101,
+       "end": 112,
+       "text": "240101-1234",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Names only",
+     "pref": "cam:ps:opencode-nemotron-3-5-lightning-free-t-0:name",
+     "value": [
+      {
+       "start": 74,
+       "end": 83,
+       "text": "patient X",
+       "kind": "name"
+      }
+     ]
+    },
+    {
+     "label": "No PII spans",
+     "pref": "cam:ps:opencode-nemotron-3-5-lightning-free-t-0:none",
+     "value": []
+    },
+    {
+     "label": "Custom — type exact substring(s) in the box",
+     "pref": "cam:ps:opencode-nemotron-3-5-lightning-free-t-0:manual",
+     "value": null
+    }
+   ],
+   "context": {
+    "title": "Anmälan angående patient med misstänkt biverkan",
+    "body": "Kollegan rapporterade att patient X med personnummer 240101-1234 har uppvisat ovanliga symtom efter ny behandling. Vi behöver rådgivning hur vi ska hantera this situationet fortsättningsvis."
+   },
+   "cambio": {
+    "kind": "pii_span_annotation",
+    "ticket_id": "opencode-nemotron-3.5-lightning-free:T-008",
+    "candidates": [
+     {
+      "start": 101,
+      "end": 112,
+      "text": "240101-1234",
+      "kind": "personnummer"
+     },
+     {
+      "start": 74,
+      "end": 83,
+      "text": "patient X",
+      "kind": "name"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ps-grok-build-t-006",
+   "area": "tickets",
+   "level": 4,
+   "type": "choice",
+   "prompt": "Which exact PII spans should the masker catch? (synthetic only). Candidates: \"Bengt Lövström\", \"19881105-7394\"",
+   "options": [
+    {
+     "label": "All listed spans",
+     "pref": "cam:ps:grok-build-t-006:all",
+     "value": [
+      {
+       "start": 154,
+       "end": 168,
+       "text": "Bengt Lövström",
+       "kind": "name"
+      },
+      {
+       "start": 169,
+       "end": 182,
+       "text": "19881105-7394",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Personnummer only",
+     "pref": "cam:ps:grok-build-t-006:pnr",
+     "value": [
+      {
+       "start": 169,
+       "end": 182,
+       "text": "19881105-7394",
+       "kind": "personnummer"
+      }
+     ]
+    },
+    {
+     "label": "Names only",
+     "pref": "cam:ps:grok-build-t-006:name",
+     "value": [
+      {
+       "start": 154,
+       "end": 168,
+       "text": "Bengt Lövström",
+       "kind": "name"
+      }
+     ]
+    },
+    {
+     "label": "No PII spans",
+     "pref": "cam:ps:grok-build-t-006:none",
+     "value": []
+    },
+    {
+     "label": "Custom — type exact substring(s) in the box",
+     "pref": "cam:ps:grok-build-t-006:manual",
+     "value": null
+    }
+   ],
+   "context": {
+    "title": "Beställning av vårdtillfällen för en namngiven person",
+    "body": "Hej, verksamhetschefen bad mig ta ut en lista på alla vårdtillfällen och läkemedelsordinationer för Bengt Lövström 19881105-7394 mellan januari och mars så att de kan jämföra med en extern papperspärm. Jag är osäker på om det här ska gå via rapportmotorn, via journalöppning eller om jag ens får göra uttaget. Personen finns bara i testdatabasen men jag vill inte gissa. Kan en människa säga hur beställningen ska hanteras?"
+   },
+   "cambio": {
+    "kind": "pii_span_annotation",
+    "ticket_id": "grok-build:T-006",
+    "candidates": [
+     {
+      "start": 154,
+      "end": 168,
+      "text": "Bengt Lövström",
+      "kind": "name"
+     },
+     {
+      "start": 169,
+      "end": 182,
+      "text": "19881105-7394",
+      "kind": "personnummer"
+     }
+    ]
+   }
   }
  ],
  "execDefaultsVersion": 3,
@@ -10903,8 +12749,8 @@
   "Casual – scope & talking points",
   "Light – + edge cases & abbreviations",
   "Normal – + ticket judgments (golden-label votes)",
-  "Data creation – write/edit Swedish tickets (coming later)",
-  "Data creation – volume labeling & verification (coming later)"
+  "Data creation – rewrite, bulk-label, verify abbreviations",
+  "Data creation – new tickets from scratch (coming later)"
  ],
  "dataStrict": {
   "fromLevel": 4,
@@ -10934,31 +12780,19 @@
   }
  ],
  "game": "lo-cambio",
- "playableMaxLevel": 3,
+ "playableMaxLevel": 4,
  "comingLater": [
   {
-   "level": 4,
-   "id": "ticket-authoring",
-   "name": "Write / edit Swedish ticket text",
-   "schema": "ticket_edit.v1 + new_ticket.v1"
-  },
-  {
-   "level": 4,
-   "id": "abbr-verify",
-   "name": "Verify abbreviations (expansion, ambiguity, source)",
-   "schema": "abbreviation_verification.v1"
+   "level": 5,
+   "id": "new-ticket",
+   "name": "Author new synthetic Swedish tickets from scratch",
+   "schema": "new_ticket.v1"
   },
   {
    "level": 5,
-   "id": "volume-labeling",
-   "name": "Label at volume (all fields, strict focus)",
-   "schema": "bulk_label.v1"
-  },
-  {
-   "level": 5,
-   "id": "pii-spans",
-   "name": "Mark exact PII spans for masking fixtures",
-   "schema": "pii_span_annotation.v1"
+   "id": "volume-more",
+   "name": "Higher-volume labeling & span passes",
+   "schema": "bulk_label.v1 + pii_span_annotation.v1"
   }
  ],
  "sources": {

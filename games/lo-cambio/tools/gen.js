@@ -103,6 +103,110 @@ T.forEach(t => { const ctx = { title: t.title, body: t.body }, tid = t.id, s = s
   rate('tk-' + s + '-nat', 'tickets', 3, 'Does the Swedish sound natural?', 'cam:nat:' + tid, { context: ctx, cambio: { kind: 'naturalness', ticket_id: tid } }); });
 ud('tk-ud1', 'tickets', 3, 'Up-prioritise golden labels on the synthetic tickets?');
 
+
+// ---- L4: data creation against EXISTING synthetic tickets & abbreviations (no new_ticket from scratch) ----
+// ticket_edit.v1 — rewrite clunky synthetic tickets (typed override = edit field)
+const EDIT_TICKETS = [
+  ['opencode-glm-5.3-flash-free:T-006', 'title', 'unnatural'],
+  ['opencode-glm-5.3-flash-free:T-006', 'body', 'unnatural'],
+  ['opencode-glm-5.3-flash-free:T-009', 'title', 'unnatural'],
+  ['opencode-glm-5.3-flash-free:T-011', 'title', 'wrong-register'],
+  ['opencode-nemotron-3.5-lightning-free:T-002', 'body', 'wrong-register'],
+  ['opencode-nemotron-3.5-lightning-free:T-008', 'body', 'abbr-fix'],
+  ['opencode-glm-5.3-flash-free:T-001', 'title', 'unnatural'],
+  ['opencode-nemotron-3.5-lightning-free:T-003', 'body', 'wrong-register']
+];
+const REASON_OPTS = [['Unnatural Swedish', 'unnatural'], ['Wrong register / tone', 'wrong-register'], ['Abbreviation mess', 'abbr-fix'], ['Other', 'other'], ['Looks fine — keep as-is', '__keep__']];
+EDIT_TICKETS.forEach(([tid, field, hint]) => {
+  const t = T.find(x => x.id === tid); if (!t) return;
+  const original = t[field], s = slug(tid + '-' + field);
+  ch('te-' + s, 'tickets', 4, 'Rewrite the ' + field + ' in more natural Swedish (type it below). Why does it need a rewrite?',
+    REASON_OPTS.map(x => [x[0], 'cam:te:' + tid + ':' + field + ':' + x[1], x[1]]),
+    { context: { title: t.title, body: t.body }, editField: true, cambio: { kind: 'ticket_edit', ticket_id: tid, field, original, hint_reason: hint } });
+});
+
+// bulk_label.v1 — label existing tickets (combined package as choice value)
+const BULK = [
+  'codex:T-004', 'codex:T-007', 'grok-build:T-001', 'grok-build:T-004',
+  'opencode-deepseek-v4.1-flash-free:T-006', 'opencode-glm-5.3-flash-free:T-002',
+  'opencode-nemotron-3.5-lightning-free:T-004', 'opencode-nemotron-3.5-lightning-free:T-007'
+];
+const PRI = ['low', 'medium', 'high', 'critical'];
+BULK.forEach(tid => {
+  const t = T.find(x => x.id === tid); if (!t) return;
+  const s = slug(tid), lab = { category: t.category, expected_route: t.expected_route, priority: t.priority, contains_pii: t.contains_pii, needs_human: t.needs_human };
+  const alt1 = Object.assign({}, lab, { needs_human: !lab.needs_human, expected_route: lab.needs_human ? 'kb_answer' : 'human_handoff' });
+  const alt2 = Object.assign({}, lab, { contains_pii: !lab.contains_pii, priority: PRI[(PRI.indexOf(lab.priority) + 1) % PRI.length] });
+  const fmt = L => (CAT_SV[L.category] || L.category) + ' · ' + (ROUTE_SV[L.expected_route] || L.expected_route) + ' · ' + L.priority + ' · PII ' + (L.contains_pii ? 'yes' : 'no') + ' · human ' + (L.needs_human ? 'yes' : 'no');
+  const opts = [
+    [fmt(lab) + ' (confidence 4)', 'cam:bl:' + tid + ':a', { labels: lab, confidence: 4 }],
+    [fmt(alt1) + ' (confidence 3)', 'cam:bl:' + tid + ':b', { labels: alt1, confidence: 3 }],
+    [fmt(alt2) + ' (confidence 2)', 'cam:bl:' + tid + ':c', { labels: alt2, confidence: 2 }],
+    ['Custom — write labels in the box (category/route/priority/PII/human)', 'cam:bl:' + tid + ':manual', { labels: null, confidence: 3 }]
+  ];
+  ch('bl-' + s, 'tickets', 4, 'Bulk-label this synthetic ticket (all fields). Typed override still wins.',
+    opts.map(o => [o[0], o[1], o[2]]),
+    { context: { title: t.title, body: t.body }, cambio: { kind: 'bulk_label', ticket_id: tid, dataset_labels: lab } });
+});
+
+// abbreviation_verification.v1 — verify expansions; optional source_url from player (suggested sources are real URLs from the glossary when present)
+const VERIFY = ['us', 'KAVA', 'ADL', 'inf', 'ca', 'UL', 'ul', 'MAS', 'MAR', 'ssk'];
+const CHECKED_SOURCES = {
+  MAS: 'https://termbank.socialstyrelsen.se/?query=medicinskt+ansvarig+sjuksk%C3%B6terska&src_lang=swe',
+  MAR: 'https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/vem-far-gora-vad/styrning-och-arbetsfordelning/medicinskt-ansvarig-sjukskoterska-mas-och-medicinskt-ansvarig-for-rehabilitering-mar/',
+  ca: 'https://www.1177.se/riktlinjer-och-material/sprakliga-riktlinjer/stavning-skrivregler-stil/forkortningar/',
+  ADL: 'https://sv.wikipedia.org/wiki/Aktiviteter_i_dagliga_livet',
+  KAVA: 'https://www.1177.se/hitta-vard/kontaktkort/Kirurgisk-akutvardsavdelning-KAVA-Sundsvall/',
+  UL: 'https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal',
+  ul: 'https://www.regionvarmland.se/vardgivarwebben/administration/sprakrad-for-dig-som-skriver-journal'
+};
+VERIFY.forEach(k => {
+  if (!by[k]) return;
+  const ex = [...new Set(by[k].map(a => a.expansion_sv))];
+  const amb = by[k].some(a => a.ambiguous) || ex.length > 1;
+  const expansion_sv = ex[0];
+  const suggested = CHECKED_SOURCES[k] || null; // only sources we actually checked / know are real public pages
+  const opts = [
+    ['Correct as shown', 'cam:av:' + slug(k) + ':correct', 'correct'],
+    ['Wrong', 'cam:av:' + slug(k) + ':wrong', 'wrong'],
+    ['Ambiguous – depends on context', 'cam:av:' + slug(k) + ':ambiguous', 'ambiguous'],
+    ['Missing reading (glossary incomplete)', 'cam:av:' + slug(k) + ':missing', 'missing-reading']
+  ];
+  ch('av-' + slug(k) + (k !== k.toLowerCase() ? '-uc' : ''), 'abbr', 4,
+    'Verify "' + k + '" → "' + expansion_sv + '"' + (ex.length > 1 ? ' (also: ' + ex.slice(1).join(', ') + ')' : '') + '. Add a source URL below if you have one.',
+    opts, { sourceField: true, suggestedSource: suggested || undefined,
+      cambio: { kind: 'abbreviation_verification', abbr: k, expansion_sv, expansions: ex, ambiguous: amb, suggested_source: suggested || null },
+      reveal: { expansions: by[k].map(a => ({ sv: a.expansion_sv, en: a.english })), example: example(k) } });
+});
+
+// pii_span_annotation.v1 — pick exact substring spans on synthetic tickets (MC + typed override)
+const PII_CARDS = [
+  ['codex:T-003', [['Tova Näckros', 'name'], ['810417-2846', 'personnummer']]],
+  ['grok-build:T-005', [['Astrid Holmgren', 'name'], ['19740312-4821', 'personnummer'], ['Solbacken', 'address']]],
+  ['opencode-nemotron-3.5-lightning-free:T-008', [['240101-1234', 'personnummer'], ['patient X', 'name']]],
+  ['grok-build:T-006', [['Bengt Lövström', 'name'], ['19881105-7394', 'personnummer']]]
+];
+PII_CARDS.forEach(([tid, cands]) => {
+  const t = T.find(x => x.id === tid); if (!t) return;
+  const text = t.title + '\n' + t.body;
+  const mk = (snippet, kind) => {
+    const start = text.indexOf(snippet); return start < 0 ? null : { start, end: start + snippet.length, text: snippet, kind };
+  };
+  const spans = cands.map(([s, k]) => mk(s, k)).filter(Boolean);
+  if (!spans.length) return;
+  const none = [];
+  const opts = [
+    ['All listed spans', 'cam:ps:' + slug(tid) + ':all', spans],
+    ['Personnummer only', 'cam:ps:' + slug(tid) + ':pnr', spans.filter(x => x.kind === 'personnummer')],
+    ['Names only', 'cam:ps:' + slug(tid) + ':name', spans.filter(x => x.kind === 'name')],
+    ['No PII spans', 'cam:ps:' + slug(tid) + ':none', none],
+    ['Custom — type exact substring(s) in the box', 'cam:ps:' + slug(tid) + ':manual', null]
+  ];
+  ch('ps-' + slug(tid), 'tickets', 4, 'Which exact PII spans should the masker catch? (synthetic only). Candidates: ' + cands.map(c => '"' + c[0] + '"').join(', '),
+    opts.map(o => [o[0], o[1], o[2]]),
+    { context: { title: t.title, body: t.body }, cambio: { kind: 'pii_span_annotation', ticket_id: tid, candidates: spans } });
+});
+
 const areas = [
   { id: 'scope', name: 'Demo scope & features', description: 'Feeds README scope freeze (cambio-support-copilot)', level: 1, defaultOn: true,
     decisions: [{ id: 'scope-d-cut', type: 'choice', area: 'scope', prompt: 'If Nov 7 slips, cut first?', options: [{ label: 'Incident intent', pref: 'dec:scope:cut:incident' }, { label: 'RAG citations', pref: 'dec:scope:cut:rag' }, { label: 'UI polish', pref: 'dec:scope:cut:ui' }] },
@@ -117,13 +221,11 @@ const areas = [
     decisions: [{ id: 'tickets-d-n', type: 'choice', area: 'tickets', prompt: 'Golden set size before the demo?', options: [{ label: '20 tickets', pref: 'dec:tickets:n:20' }, { label: 'All 42', pref: 'dec:tickets:n:42' }, { label: '42 + copilot 30', pref: 'dec:tickets:n:72' }] }] }
 ];
 const out = Object.assign({}, base, { game: 'lo-cambio', version: 1, areas, cards,
-  dataLevels: ['Casual – scope & talking points', 'Light – + edge cases & abbreviations', 'Normal – + ticket judgments (golden-label votes)', 'Data creation – write/edit Swedish tickets (coming later)', 'Data creation – volume labeling & verification (coming later)'],
-  playableMaxLevel: 3,
+  dataLevels: ['Casual – scope & talking points', 'Light – + edge cases & abbreviations', 'Normal – + ticket judgments (golden-label votes)', 'Data creation – rewrite, bulk-label, verify abbreviations', 'Data creation – new tickets from scratch (coming later)'],
+  playableMaxLevel: 4,
   comingLater: [
-    { level: 4, id: 'ticket-authoring', name: 'Write / edit Swedish ticket text', schema: 'ticket_edit.v1 + new_ticket.v1' },
-    { level: 4, id: 'abbr-verify', name: 'Verify abbreviations (expansion, ambiguity, source)', schema: 'abbreviation_verification.v1' },
-    { level: 5, id: 'volume-labeling', name: 'Label at volume (all fields, strict focus)', schema: 'bulk_label.v1' },
-    { level: 5, id: 'pii-spans', name: 'Mark exact PII spans for masking fixtures', schema: 'pii_span_annotation.v1' }],
+    { level: 5, id: 'new-ticket', name: 'Author new synthetic Swedish tickets from scratch', schema: 'new_ticket.v1' },
+    { level: 5, id: 'volume-more', name: 'Higher-volume labeling & span passes', schema: 'bulk_label.v1 + pii_span_annotation.v1' }],
   sources: { tickets: 'cambio-associate-ai-engineer/prep/synthetic-data/merged/clean.json', abbreviations: 'cambio-associate-ai-engineer/prep/swedish-medical-abbreviations.json', edge_cases: 'cambio-associate-ai-engineer/prep/local-models/REPORT.md', scope: 'cambio-associate-ai-engineer/prep/demo-eval/synthesis.md + health-standards/RESEARCH.md + cambio-tech-stack.md' },
   syntheticOnly: true });
 fs.writeFileSync(__dirname + '/../data/areas.json', JSON.stringify(out, null, 1));

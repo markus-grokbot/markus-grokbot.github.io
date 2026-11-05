@@ -11,7 +11,8 @@ Regenerate: `node tools/gen.js <cambio-associate-ai-engineer checkout> && node t
 | 1 | scope (25), talking points (26) | ×0.25 | weekend |
 | 2 | + edge cases (21), abbreviations (27) | ×0.5 | weekend |
 | 3 | + synthetic ticket judgments (211: category, route, needs_human, contains_pii, naturalness × 42 tickets + 1) | ×1 | Monday |
-| 4–5 | data creation: **coming later** (Run disabled; `?preview45=1` plays the level 1–3 cards at strict weighting) | ×1.5 / ×2, counted only with ≥80% performance | immediate |
+| 4 | data creation on **existing** synthetic tickets/abbreviations: ticket rewrite (`ticket_edit.v1`), bulk label (`bulk_label.v1`), abbreviation verification + optional source (`abbreviation_verification.v1`), optional PII spans (`pii_span_annotation.v1`) | ×1.5, counted only with ≥80% performance | immediate |
+| 5 | new-ticket authoring from scratch (`new_ticket.v1`) + higher-volume passes: **coming later** (Run disabled; `?preview45=1` still replays lower-level cards at strict weighting) | ×2, counted only with ≥80% performance | immediate |
 
 Card interval: 30 s at levels 1–2, 15 s at levels 3–5.
 
@@ -22,7 +23,7 @@ Card interval: 30 s at levels 1–2, 15 s at levels 3–5.
 - `abbreviation_picks[]`: `{abbr, picked, picked_ambiguous, dont_know, dataset_expansions, dataset_ambiguous, in_dataset}`. A pick with `in_dataset: false` needs checking against `prep/swedish-medical-abbreviations.json`.
 - `edge_case_votes[]` + `edge_case_ranking[]`: which `prep/local-models/REPORT.md` failure to feature.
 - `talking_point_ranking[]`: `{id, label, wins, shown, score, rank}`.
-- `level45`: `{status: "coming-later", schemas: {ticket_edit.v1, new_ticket.v1, bulk_label.v1, abbreviation_verification.v1, pii_span_annotation.v1}, records: []}`.
+- `level45`: `{status: "level-4-playable", level5: "coming-later", schemas: {ticket_edit.v1, new_ticket.v1, bulk_label.v1, abbreviation_verification.v1, pii_span_annotation.v1}, records: [...]}`. Level-4 answers fill `records` with the matching schema. `new_ticket.v1` stays unused until level 5. Low `naturalness[]` ratings still mark tickets to rewrite at level 4.
 
 ## Round 2 (2026-11-04)
 - +11 scope suggestion cards (`sc2-*`, incl. tiebreaks `sc2-tb-backup`, `sc2-tb-live-fail` that reuse the round-1 decision ids), +10 "which point to lead with" talking cards (`tp2-*`).
@@ -36,3 +37,7 @@ Export additions are optional fields, so `lo-cambio.export.v1` consumers keep wo
 - Records in `golden_label_votes`, `scope_decisions`, `abbreviation_picks` and `edge_case_votes` that have a picked choice plus text also get `manualReply` and `overridden: true`.
 - New `manual_replies[]`: `{card, area, kind, ref, field, prompt, manualReply, overridden, selected_choice, selected_label, selected_value, dataset_label, dataset_expansions, ms, at}`. `selected_*` is null for text-only replies. Text-only replies appear **only** here, never as votes.
 - Consumers should treat `manualReply` as the player's stated preference or judgment. It takes precedence over the picked choice. Do not discard it.
+
+## Round 4 (2026-11-05): data-creation level 4
+Level 4 is playable. Slide Casual ↔ Data to **4**, keep the tickets / abbreviations areas on, ▶ Run. Interval stays 15 s; 3-second countdown unchanged. Typed override still works; for rewrite cards the **"Or write your own"** box **is** the edit field (larger textarea). Abbreviation-verification cards add an optional **Source URL** field (16px); suggested sources are real public pages (e.g. Socialstyrelsens termbank, 1177) when checked — otherwise leave blank and paste your own. Do not invent citations.
+Export: `cambio.level45.records[]` entries use `ticket_edit.v1`, `bulk_label.v1`, `abbreviation_verification.v1` (with `source_url` when provided), and `pii_span_annotation.v1`. Level 5 (author new tickets from scratch) stays gated. Cache param `v=c5`.
