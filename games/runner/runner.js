@@ -123,7 +123,7 @@
   var setId = (Q.get('set') || 'tone-001').replace(/[^\w-]/g, '');
   function j(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
   Promise.all([APPS ? j('data/applications.json') : j('../pairwise/sets/' + setId + '.json'), j('tuning.json')]).then(function (r) {
-    set = r[0]; var tn = r[1]; if (APPS) { APPDATA = set; set = { pairs: [] }; if (!APPDATA) { show('<h2>applications.json not found</h2>'); return; } }
+    set = r[0]; var tn = r[1]; if (APPS) { APPDATA = set; set = { pairs: [] }; if (!APPDATA) { show('<h2>applications.json not found</h2>'); return; } if (!APPDATA.apps || !APPDATA.apps.length) { show('<h2>🐾 Lynx Dash · Applications</h2><p>No application data in the public build.</p><p><a href="./">▶ Play Lynx Dash</a></p>'); return; } }
     if (!set) { show('<h2>Set not found</h2><p>' + esc(setId) + '</p>'); return; }
     P = E.merge(tn); FOC = Object.assign({ weights: Qualities.DEFAULT_WEIGHTS }, (tn && tn.focus) || {}); SRC = tn ? 'tuning.json@' + tn.generatedAt : 'defaults'; if (APPS) P.questions = Math.max(1, Math.min(60, +(Q.get('q') || 12))); else if (Q.get('q')) P.questions = Math.max(1, Math.min(set.pairs.length, +Q.get('q')));
     requestAnimationFrame(function (t) { last = t; loop(t); });
