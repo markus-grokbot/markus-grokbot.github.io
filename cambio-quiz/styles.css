@@ -236,3 +236,29 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+.level-card.boss { border-color: #c9a24a; background: linear-gradient(180deg, #1a2418 0%, var(--card) 70%); }
+.level-card.boss .badge { background: var(--gold-soft); color: var(--gold); }
+.bossbar { margin: 0 0 0.8rem; display: grid; gap: 0.45rem; }
+.meters { display: grid; gap: 0.35rem; }
+.meter { display: grid; gap: 0.15rem; }
+.meter span { font-size: 0.75rem; color: var(--muted); font-weight: 650; }
+.metertrack { height: 8px; border-radius: 99px; background: var(--card); border: 1px solid var(--line); overflow: hidden; }
+.metertrack i { display: block; height: 100%; border-radius: 99px; }
+.metertrack.conf i { background: linear-gradient(90deg, #1a6f66, var(--teal)); }
+.metertrack.stress i { background: linear-gradient(90deg, var(--gold), var(--bad)); }
+.storyhead { font-weight: 750; margin: 0 0 0.55rem; color: var(--teal); }
+.beats { display: grid; gap: 0.4rem; margin: 0 0 0.85rem; }
+.beat { background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; padding: 0.55rem 0.7rem; }
+.beatlab { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); }
+.orderrow { display: flex; flex-wrap: wrap; gap: 0.4rem; min-height: 2.6rem; margin: 0 0 0.7rem; padding: 0.4rem; border: 1px dashed var(--line); border-radius: 12px; background: var(--bg-2); }
+.ochip {
+  border: 1px solid var(--line);
+  background: var(--card-2);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  font-weight: 650;
+  min-height: 40px;
+}
+.ochip.ok { background: var(--ok-bg); border-color: #2d7a55; }
+.ochip.bad { background: var(--bad-bg); border-color: #8a3a3a; }
