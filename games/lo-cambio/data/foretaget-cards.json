@@ -1,0 +1,1533 @@
+{
+ "version": 1,
+ "note": "Scored company-research cards for Lo Cambio. Facts from research/00–06 and SOURCES.md only.",
+ "areas": [
+  {
+   "id": "foretaget",
+   "name": "Cambio · företaget",
+   "description": "Company, products, customers, regulation and the public job ad — facts from the cited research pack (00–06 / SOURCES.md).",
+   "level": 1,
+   "defaultOn": true,
+   "decisions": []
+  }
+ ],
+ "cards": [
+  {
+   "id": "cf-founded",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "När och var grundades Cambio?",
+   "options": [
+    {
+     "label": "1993 i Linköping",
+     "pref": "cam:cf:cf-founded:ok",
+     "value": "ok"
+    },
+    {
+     "label": "1998 i Stockholm",
+     "pref": "cam:cf:cf-founded:1998-sthlm",
+     "value": "1998-sthlm"
+    },
+    {
+     "label": "1993 i Colombo",
+     "pref": "cam:cf:cf-founded:1993-cmb",
+     "value": "1993-cmb"
+    },
+    {
+     "label": "2019 i Stockholm, när Sanolium bildades",
+     "pref": "cam:cf:cf-founded:2019-sanolium",
+     "value": "2019-sanolium"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Två studenter, tidigt 90-tal, Östergötland.",
+   "reword": "Cambio was founded in which year and city?",
+   "explain": "Cambio’s history page: founded in Linköping in 1993 by two students. The first assignment was a journal system for private clinics in Stockholm County. [S2]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-hq",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Where does the 2025 annual report place Cambio’s head office?",
+   "options": [
+    {
+     "label": "Stockholm",
+     "pref": "cam:cf:cf-hq:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Linköping",
+     "pref": "cam:cf:cf-hq:linkoping",
+     "value": "linkoping"
+    },
+    {
+     "label": "Colombo",
+     "pref": "cam:cf:cf-hq:colombo",
+     "value": "colombo"
+    },
+    {
+     "label": "Reading",
+     "pref": "cam:cf:cf-hq:reading",
+     "value": "reading"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Årsredovisningens rubrik anger huvudkontoret i huvudstaden.",
+   "reword": "Var ligger huvudkontoret enligt årsredovisningen 2025?",
+   "explain": "The 2025 annual report headline places the head office in Stockholm. The founding story and the MDR manufacturer address are Linköping — HQ versus historic/legal manufacturing site. [S4, S2, S37]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-cosmic-what",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad är Cambio COSMIC?",
+   "options": [
+    {
+     "label": "Ett journalsystem (EHR) för regional hälso- och sjukvård",
+     "pref": "cam:cf:cf-cosmic-what:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Ett kommunalt omsorgssystem",
+     "pref": "cam:cf:cf-cosmic-what:viva",
+     "value": "viva"
+    },
+    {
+     "label": "En öppen hälsodataplattform enligt openEHR",
+     "pref": "cam:cf:cf-cosmic-what:platform",
+     "value": "platform"
+    },
+    {
+     "label": "Ett intensivvårdssystem (PDMS)",
+     "pref": "cam:cf:cf-cosmic-what:cis",
+     "value": "cis"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Det system vårdpersonalen journalför i.",
+   "reword": "What kind of product is COSMIC?",
+   "explain": "COSMIC is positioned as the leading electronic health record system in the Nordics: a coordinated regional EHR so bookings, results, medications and treatments share one patient view. [S9]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-regions-19",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Hur många av Sveriges 21 regioner använder eller ska använda COSMIC enligt årsredovisningen 2025?",
+   "options": [
+    {
+     "label": "19 av 21",
+     "pref": "cam:cf:cf-regions-19:ok",
+     "value": "ok"
+    },
+    {
+     "label": "17 av 21",
+     "pref": "cam:cf:cf-regions-19:seventeen",
+     "value": "seventeen"
+    },
+    {
+     "label": "21 av 21",
+     "pref": "cam:cf:cf-regions-19:all",
+     "value": "all"
+    },
+    {
+     "label": "14 av 21",
+     "pref": "cam:cf:cf-regions-19:mittvaccin",
+     "value": "mittvaccin"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Inte alla, men nästan alla — två saknas.",
+   "reword": "According to the 2025 annual report, COSMIC is contracted in how many of 21 regions?",
+   "explain": "The 2025 annual report and the Swedish about-page: 19 of 21 regions use or will use COSMIC. The English about-page’s “17 of 21” is the older live count, before Stockholm and Gotland. 14 of 21 is MittVaccin’s contracted figure. [S4, S1, S5, S18]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-viva",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "What is Cambio Viva for?",
+   "options": [
+    {
+     "label": "Municipal social services, healthcare and care",
+     "pref": "cam:cf:cf-viva:ok",
+     "value": "ok"
+    },
+    {
+     "label": "The regional main electronic health record",
+     "pref": "cam:cf:cf-viva:ehr",
+     "value": "ehr"
+    },
+    {
+     "label": "Ambient clinical documentation inside COSMIC",
+     "pref": "cam:cf:cf-viva:companion",
+     "value": "companion"
+    },
+    {
+     "label": "A national vaccination record",
+     "pref": "cam:cf:cf-viva:mittvaccin",
+     "value": "mittvaccin"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Kommun, inte region.",
+   "reword": "Vad används Cambio Viva till?",
+   "explain": "Viva is a process system for municipal social services, healthcare and care, with published modules such as Viva HSL, IFO, UTF and ÄO. [S14]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-role-internal",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad handlar Associate AI Engineer-annonsen främst om?",
+   "options": [
+    {
+     "label": "Att hjälpa kollegor internt att arbeta smartare med AI",
+     "pref": "cam:cf:cf-role-internal:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Att sitta i Companion-produktteamet och skriva i patientens journal",
+     "pref": "cam:cf:cf-role-internal:companion-team",
+     "value": "companion-team"
+    },
+    {
+     "label": "Att sälja COSMIC till nya regioner",
+     "pref": "cam:cf:cf-role-internal:sales",
+     "value": "sales"
+    },
+    {
+     "label": "Att träna egna grundmodeller på patientdata",
+     "pref": "cam:cf:cf-role-internal:train-phi",
+     "value": "train-phi"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Annonsens nyckelmening: helping hundreds of colleagues work smarter through AI.",
+   "reword": "On the face of the job ad, who are the main users of what this associate would build?",
+   "explain": "The public ad (DevJobs mirror) leads with helping hundreds of colleagues work smarter through AI: discover pain points, prototype agents and automations, measure impact. That is an internal-enablement role, not a job description for shipping COSMIC Companion. [S51]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-hybrid",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "What office pattern does the Associate AI Engineer ad state?",
+   "options": [
+    {
+     "label": "Hybrid, three days per week in the office",
+     "pref": "cam:cf:cf-hybrid:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Fully remote",
+     "pref": "cam:cf:cf-hybrid:remote",
+     "value": "remote"
+    },
+    {
+     "label": "Five days a week on-site",
+     "pref": "cam:cf:cf-hybrid:five",
+     "value": "five"
+    },
+    {
+     "label": "Two weeks in Stockholm and two in Linköping",
+     "pref": "cam:cf:cf-hybrid:split",
+     "value": "split"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Ett visst antal kontorsdagar i veckan stod i annonsen.",
+   "reword": "Hur mycket kontorstid nämner annonsen?",
+   "explain": "The ad: hybrid, three days per week in-office. Place: Stockholm or Linköping. [S51]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-takecare",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilket journalsystem ska COSMIC ersätta i Region Stockholm?",
+   "options": [
+    {
+     "label": "TakeCare",
+     "pref": "cam:cf:cf-takecare:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Millennium",
+     "pref": "cam:cf:cf-takecare:millennium",
+     "value": "millennium"
+    },
+    {
+     "label": "Epic",
+     "pref": "cam:cf:cf-takecare:epic",
+     "value": "epic"
+    },
+    {
+     "label": "Viva",
+     "pref": "cam:cf:cf-takecare:viva",
+     "value": "viva"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Systemet som använts i Stockholm sedan 1995.",
+   "reword": "Which incumbent EHR will Cosmic replace in Region Stockholm?",
+   "explain": "Region Stockholm awarded Cosmic to replace TakeCare (in use since 1995), with Cosmic targeted in place by December 2029. [S26]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-headcount",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vilket personalantal ska du föredra om någon frågar hur stort Cambio är?",
+   "options": [
+    {
+     "label": "1 100 i headcount vid utgången av 2025, enligt den reviderade årsredovisningen",
+     "pref": "cam:cf:cf-headcount:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Around 900, som på den engelska about-sidan",
+     "pref": "cam:cf:cf-headcount:stale-900",
+     "value": "stale-900"
+    },
+    {
+     "label": "Cirka 170 000 — det är koncernens anställda",
+     "pref": "cam:cf:cf-headcount:users",
+     "value": "users"
+    },
+    {
+     "label": "Cirka 250, som i Stockholms upphandlingsprojekt",
+     "pref": "cam:cf:cf-headcount:sthlm-staff",
+     "value": "sthlm-staff"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Svenska about-sidan säger «runt 1 100»; lita på 2025 års tabell framför den engelska sidan.",
+   "reword": "Which headcount figure is the one to quote from the 2025 annual report?",
+   "explain": "Year-end 2025 sustainability KPIs: 1,100 headcount / 1,081 FTE / average FTE 1,021. The English about-page still says “around 900” and should be treated as stale. “More than 170,000 users” is a usage figure, not staff. [S4, S1, S5, S6]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-offices-eng",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Stockholm, Linköping and Colombo all appear in Cambio’s office list. What is Colombo described as?",
+   "options": [
+    {
+     "label": "A software-engineering location, not a published customer market",
+     "pref": "cam:cf:cf-offices-eng:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Cambio’s head office",
+     "pref": "cam:cf:cf-offices-eng:hq",
+     "value": "hq"
+    },
+    {
+     "label": "The group’s main Nordic sales market",
+     "pref": "cam:cf:cf-offices-eng:sales",
+     "value": "sales"
+    },
+    {
+     "label": "A regional EHR customer",
+     "pref": "cam:cf:cf-offices-eng:customer",
+     "value": "customer"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Sri Lanka i årsredovisningen är utveckling, inte en säljmarknad.",
+   "reword": "Vad är kontoret i Colombo enligt källorna?",
+   "explain": "The contact page lists Cambio Software Engineering in Colombo. The 2025 report treats Sri Lanka as engineering headcount (353 average employees / 376 headcount), not as a customer geography. [S3, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-ownership",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vem äger Cambio-koncernen i grova drag enligt årsredovisningen 2025?",
+   "options": [
+    {
+     "label": "Ungefär 80 % Investcorp via holdingbolag, ungefär 20 % medarbetare och nyckelpersoner",
+     "pref": "cam:cf:cf-ownership:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Börsnoterat med spritt aktieägarägande",
+     "pref": "cam:cf:cf-ownership:listed",
+     "value": "listed"
+    },
+    {
+     "label": "Helägt av Region Stockholm",
+     "pref": "cam:cf:cf-ownership:region",
+     "value": "region"
+    },
+    {
+     "label": "Helägt av grundarna utan extern ägare",
+     "pref": "cam:cf:cf-ownership:founders",
+     "value": "founders"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Ett investmentbolag har majoriteten; personal har en minoritetspost.",
+   "reword": "Who is the majority owner described in the 2025 annual report?",
+   "explain": "Sanolium Group Holding AB is owned approximately 80% by Investcorp and approximately 20% by employees and other key individuals. The reporting parent is Sanolium AB (publ). Prefer that picture rather than inventing a cleaner registry diagram. [S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-platform",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "What sits at the heart of Cambio Platform as publicly described?",
+   "options": [
+    {
+     "label": "A Clinical Data Repository fully based on openEHR",
+     "pref": "cam:cf:cf-platform:ok",
+     "value": "ok"
+    },
+    {
+     "label": "A FHIR-only integration bus with no data store",
+     "pref": "cam:cf:cf-platform:fhir-bus",
+     "value": "fhir-bus"
+    },
+    {
+     "label": "Ambient speech-to-text",
+     "pref": "cam:cf:cf-platform:scribe",
+     "value": "scribe"
+    },
+    {
+     "label": "A municipal case-management module",
+     "pref": "cam:cf:cf-platform:viva",
+     "value": "viva"
+    }
+   ],
+   "correct": "ok",
+   "hint": "En CDR enligt en öppen journaldatamodell.",
+   "reword": "Vad är kärnan i Cambio Platform?",
+   "explain": "Cambio Platform is publicly “the future health data platform”. At its heart is a Clinical Data Repository fully based on openEHR, plus Core Services (patient register mapped to an openEHR EHR id, SNOMED CT) and openEHR-forms. [S10]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-open-services",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad är standarden Cambio Open Services främst exponerar?",
+   "options": [
+    {
+     "label": "FHIR-profiler, plus några REST-API:er som de vill fasa mot FHIR",
+     "pref": "cam:cf:cf-open-services:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Enbart HL7 v2-meddelanden",
+     "pref": "cam:cf:cf-open-services:hl7v2",
+     "value": "hl7v2"
+    },
+    {
+     "label": "Enbart openEHR AQL utåt",
+     "pref": "cam:cf:cf-open-services:aql",
+     "value": "aql"
+    },
+    {
+     "label": "GraphQL som enda offentliga gränssnitt",
+     "pref": "cam:cf:cf-open-services:graphql",
+     "value": "graphql"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Default för integrationer och partners, enligt FHIR Demo 2024 och utvecklarportalen.",
+   "reword": "What API style is default in Cambio Open Services?",
+   "explain": "Most Open Services APIs are FHIR profiles adapted to COSMIC; remaining REST APIs are intended to be replaced with FHIR over time. At FHIR Demo 2024 Cambio wrote that FHIR is its default standard for integrations and partners. The developer portal is powered by Azure API Management — that is the portal, not a claim about COSMIC production hosting. [S22, S35]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-companion",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad är första steget i COSMIC Companion?",
+   "options": [
+    {
+     "label": "En inbyggd ambient scribe som skriver journalutkast från samtalet, som klinikern ska granska",
+     "pref": "cam:cf:cf-companion:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Ett regelbaserat strokelarm (CHA2DS2-VASc)",
+     "pref": "cam:cf:cf-companion:cds",
+     "value": "cds"
+    },
+    {
+     "label": "Ett fristående fönster utanför COSMIC",
+     "pref": "cam:cf:cf-companion:standalone",
+     "value": "standalone"
+    },
+    {
+     "label": "Automatiska beställningar som skickas utan godkännande",
+     "pref": "cam:cf:cf-companion:auto-order",
+     "value": "auto-order"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Digital kollega inuti COSMIC: utkast, inte autoskick.",
+   "reword": "What does COSMIC Companion do first, according to the product page?",
+   "explain": "Companion’s first step is Ambient Scribe: it listens to the clinician–patient conversation and creates structured draft notes in real time, following COSMIC’s patient context. Upcoming “smarta beställningar” are suggestions for the clinician to review and approve — not silent send. [S13]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-leapscribe",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "What is Cambio’s published direction for LeapScribe?",
+   "options": [
+    {
+     "label": "Acquired in 2025, folded into COSMIC Companion; standalone LeapScribe is being wound down",
+     "pref": "cam:cf:cf-leapscribe:ok",
+     "value": "ok"
+    },
+    {
+     "label": "It remains the main standalone AI product",
+     "pref": "cam:cf:cf-leapscribe:standalone",
+     "value": "standalone"
+    },
+    {
+     "label": "It was never acquired",
+     "pref": "cam:cf:cf-leapscribe:never",
+     "value": "never"
+    },
+    {
+     "label": "It replaced COSMIC as the regional EHR",
+     "pref": "cam:cf:cf-leapscribe:replaced",
+     "value": "replaced"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Köpt 27 juni 2025; den 2 november 2026 sade de att fristående LeapScribe fasas ut på tre månader.",
+   "reword": "Vad hände med LeapScribe enligt Cambio?",
+   "explain": "LeapScribe Sverige AB was acquired on 27 June 2025. On 13 October 2025 the ambient scribe was renamed Cambio COSMIC Companion. On 2 November 2026 Cambio said it will wind down standalone LeapScribe over three months and put AI directly into COSMIC and the wider portfolio. [S4, S20, S21]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-seventeen",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur räknas «19 av 21 regioner» ihop?",
+   "options": [
+    {
+     "label": "17 regioner kör redan COSMIC; Stockholm och Gotland är kontrakterade utöver det",
+     "pref": "cam:cf:cf-seventeen:ok",
+     "value": "ok"
+    },
+    {
+     "label": "19 regioner är redan live",
+     "pref": "cam:cf:cf-seventeen:all-live",
+     "value": "all-live"
+    },
+    {
+     "label": "Alla 21 regioner plus två sjukhus",
+     "pref": "cam:cf:cf-seventeen:21-plus",
+     "value": "21-plus"
+    },
+    {
+     "label": "Bara de nio Sussa-regionerna",
+     "pref": "cam:cf:cf-seventeen:sussa-only",
+     "value": "sussa-only"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Live-siffran på Sussa-sidan är 17; två stora avtal tillkom 2025.",
+   "reword": "Why do some pages say 17 regions and others say 19?",
+   "explain": "Cambio’s Sussa page: COSMIC is used in 17 regions plus Capio S:t Göran. Stockholm and Gotland take the contracted total to 19 of 21. [S24, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-sussa",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "What is Sussa Samverkan in Cambio’s telling?",
+   "options": [
+    {
+     "label": "Nine regions that jointly procured COSMIC, now all live, delivered as a managed service",
+     "pref": "cam:cf:cf-sussa:ok",
+     "value": "ok"
+    },
+    {
+     "label": "The eight long-standing KGC regions plus Capio S:t Göran",
+     "pref": "cam:cf:cf-sussa:kgc",
+     "value": "kgc"
+    },
+    {
+     "label": "Stockholm and Gotland’s shared implementation office",
+     "pref": "cam:cf:cf-sussa:sthlm",
+     "value": "sthlm"
+    },
+    {
+     "label": "A Danish intensive-care network",
+     "pref": "cam:cf:cf-sussa:dk",
+     "value": "dk"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Nio regioner, live 2024–2025, managed service.",
+   "reword": "Vad är Sussa i Cambio-sammanhang?",
+   "explain": "Sussa’s nine regions: Blekinge, Dalarna, Gävleborg, Halland, Norrbotten, Sörmland, Västerbotten, Västernorrland and Örebro län. Joint procurement awarded in 2018; Cambio says all nine are now live, implemented as a managed service. [S24, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-sthlm-deal",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad stämmer om Region Stockholm och Region Gotlands COSMIC-avtal?",
+   "options": [
+    {
+     "label": "Tilldelning 18 feb 2025, kontrakt 18 nov 2025, införande sikte december 2029, ersätter TakeCare",
+     "pref": "cam:cf:cf-sthlm-deal:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Kontrakt 2018 som redan är live i hela regionen",
+     "pref": "cam:cf:cf-sthlm-deal:2018",
+     "value": "2018"
+    },
+    {
+     "label": "Införande redan klart under 2025",
+     "pref": "cam:cf:cf-sthlm-deal:done-2025",
+     "value": "done-2025"
+    },
+    {
+     "label": "Ersätter Viva i Stockholms stad",
+     "pref": "cam:cf:cf-sthlm-deal:stad",
+     "value": "stad"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Överklaganden efter tilldelningen; påskrift i november 2025.",
+   "reword": "When was the Stockholm/Gotland Cosmic contract signed, and when is go-live targeted?",
+   "explain": "Regionstyrelsen awarded the main EHR contract to Cambio / Cosmic on 18 February 2025, jointly with Gotland. After appeals the contract was signed on 18 November 2025. TakeCare remains until the new system is in place, estimated December 2029. [S26, S27, S28]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-cds-vs-companion",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "How should you tell CDS apart from Companion?",
+   "options": [
+    {
+     "label": "CDS is published as rules-and-guidelines decision support; Companion is generative/ambient documentation with human review",
+     "pref": "cam:cf:cf-cds-vs-companion:ok",
+     "value": "ok"
+    },
+    {
+     "label": "They are two names for the same generative model",
+     "pref": "cam:cf:cf-cds-vs-companion:same",
+     "value": "same"
+    },
+    {
+     "label": "CDS drafts notes from the consultation; Companion computes CHA2DS2-VASc",
+     "pref": "cam:cf:cf-cds-vs-companion:swapped",
+     "value": "swapped"
+    },
+    {
+     "label": "Companion is only for municipalities; CDS is only for vaccination",
+     "pref": "cam:cf:cf-cds-vs-companion:domains",
+     "value": "domains"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Det ena är riktlinjer och regler; det andra skriver utkast från samtalet.",
+   "reword": "Vad är skillnaden mellan Cambio CDS och COSMIC Companion?",
+   "explain": "CDS combines patient-specific data with evidence-based rules (the published Stroke Prevention App adapts Socialstyrelsen guidelines and computes CHA2DS2-VASc). Recommendations are described as non-intrusive; the clinician decides. Companion is an in-COSMIC ambient scribe first, later suggested actions with explicit review. Don’t blur the two. [S11, S13]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-same-cosmic",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Finns det ett «nytt» och ett «gammalt» Cosmic enligt Cambio?",
+   "options": [
+    {
+     "label": "Nej — alla svenska kunder använder samma Cosmic, men konfigurationen skiljer sig åt",
+     "pref": "cam:cf:cf-same-cosmic:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Ja, Sussa kör en ny produkt och KGC en gammal",
+     "pref": "cam:cf:cf-same-cosmic:two-products",
+     "value": "two-products"
+    },
+    {
+     "label": "Ja, Stockholm får en moln-only-variant som ingen annan har",
+     "pref": "cam:cf:cf-same-cosmic:cloud-only",
+     "value": "cloud-only"
+    },
+    {
+     "label": "Ja, Companion ersätter Cosmic som journalsystem",
+     "pref": "cam:cf:cf-same-cosmic:replaced",
+     "value": "replaced"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Samma produkt i versioner; den kan se olika ut i två regioner.",
+   "reword": "Is there a separate “new Cosmic” and “old Cosmic”?",
+   "explain": "Cambio says there is not a new and an old Cosmic: all Swedish customers use the same Cosmic, released in versions, but configuration differs by customer — which is why it can look different in two regions. [S24, S27]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-openehr-fhir",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "openEHR eller FHIR — vad använder Cambio enligt de publika sidorna?",
+   "options": [
+    {
+     "label": "Båda, till olika jobb: openEHR i Platforms datalager, FHIR som default för integrationer",
+     "pref": "cam:cf:cf-openehr-fhir:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Bara openEHR, aldrig FHIR",
+     "pref": "cam:cf:cf-openehr-fhir:only-openehr",
+     "value": "only-openehr"
+    },
+    {
+     "label": "Bara FHIR, ingen datalagring",
+     "pref": "cam:cf:cf-openehr-fhir:only-fhir",
+     "value": "only-fhir"
+    },
+    {
+     "label": "De har bytt till en egen sluten modell",
+     "pref": "cam:cf:cf-openehr-fhir:closed",
+     "value": "closed"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Inte antingen-eller.",
+   "reword": "Do Cambio’s public pages treat openEHR and FHIR as an either/or choice?",
+   "explain": "openEHR is how Platform describes the CDR and forms. FHIR is how they say they want to expose and integrate — default for new interfaces and partners, plus Open Services. They solve different jobs. [S10, S22, S35]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-controller",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "In IMY’s general description, who is the controller when a vendor runs a journal system for a region?",
+   "options": [
+    {
+     "label": "The care provider (vårdgivaren) is controller; the supplier is typically a processor",
+     "pref": "cam:cf:cf-controller:ok",
+     "value": "ok"
+    },
+    {
+     "label": "The EHR vendor is always the controller",
+     "pref": "cam:cf:cf-controller:vendor",
+     "value": "vendor"
+    },
+    {
+     "label": "The patient is the controller for the whole record",
+     "pref": "cam:cf:cf-controller:patient",
+     "value": "patient"
+    },
+    {
+     "label": "The group’s majority owner is the controller",
+     "pref": "cam:cf:cf-controller:owner",
+     "value": "owner"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Vårdgivaren är personuppgiftsansvarig; leverantören är typiskt biträde.",
+   "reword": "Vem är personuppgiftsansvarig när en leverantör kör ett journalsystem åt en region?",
+   "explain": "IMY’s general description of an IT journal-system vendor — not a Cambio-specific legal opinion: the care provider remains controller (personuppgiftsansvarig); the supplier is typically a processor (biträde). Health data are a special category under GDPR; Swedish complements include patientdatalagen (2008:355). [S39, S40, S38]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-epic",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Är Epic ett regionalt huvudjournalsystem i Sverige enligt källorna i research-packen?",
+   "options": [
+    {
+     "label": "Nej — den levande nordiska jämförelsen är Danmark (Köpenhamn); svenska jätteupphandlingar har gällt Cosmic, TakeCare, Systematic och Millennium",
+     "pref": "cam:cf:cf-epic:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Ja, Epic vann Stockholm 2025",
+     "pref": "cam:cf:cf-epic:won-sthlm",
+     "value": "won-sthlm"
+    },
+    {
+     "label": "Ja, Skåne kör Epic live som huvudjournal",
+     "pref": "cam:cf:cf-epic:skane",
+     "value": "skane"
+    },
+    {
+     "label": "Ja, alla regioner utanför Sussa kör Epic",
+     "pref": "cam:cf:cf-epic:outside-sussa",
+     "value": "outside-sussa"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Sundhedsplatformen, inte en svensk regionvinnare i de här källorna.",
+   "reword": "What do the cited sources say about Epic in Sweden versus Denmark?",
+   "explain": "SVT refers to Epic in Copenhagen (Sundhedsplatformen). No source in this pack names Epic as a live main EHR in a Swedish region. Recent Swedish mega-procurements have been Cosmic versus TakeCare/CGM, Systematic and Millennium. [S49, S26]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-safety-how",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Om de frågar om den offentliga kritiken mot Cosmic och patientsäkerhet — vad är den mest rimliga hållningen?",
+   "options": [
+    {
+     "label": "Erkänn att det finns offentlig rapportering och en pågående regionsgranskning; diagnostisera inte enskilda fall du inte har läst",
+     "pref": "cam:cf:cf-safety-how:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Lista detaljer från granskningen som om du själv utrett fallen",
+     "pref": "cam:cf:cf-safety-how:recite",
+     "value": "recite"
+    },
+    {
+     "label": "Avfärda journalistiken som påhitt utan att ha läst underlaget",
+     "pref": "cam:cf:cf-safety-how:dismiss",
+     "value": "dismiss"
+    },
+    {
+     "label": "Påstå att du känner den medicinska orsaken i varje omtalat fall",
+     "pref": "cam:cf:cf-safety-how:diagnose",
+     "value": "diagnose"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Acknowledge, don’t litigate.",
+   "reword": "If asked about public Cosmic patient-safety coverage, what should you do?",
+   "explain": "The research pack’s advice: acknowledge the public reporting and that regions have commissioned a review; do not invent clinical conclusions; do not attack journalists or defend case facts you have not read. Large EHR go-lives are socio-technical — product, configuration, training and workflow all show up in deviations. [S47, S48, S24]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-stale-english",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "The English about-page still says “around 900” staff and “17 of 21 regions”. What should you do with that?",
+   "options": [
+    {
+     "label": "Treat it as stale; prefer the Swedish about-page and the 2025 annual report",
+     "pref": "cam:cf:cf-stale-english:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Prefer the English page because it is written for international readers",
+     "pref": "cam:cf:cf-stale-english:prefer-en",
+     "value": "prefer-en"
+    },
+    {
+     "label": "Average the two headcounts and say about 1 000 without a source",
+     "pref": "cam:cf:cf-stale-english:average",
+     "value": "average"
+    },
+    {
+     "label": "Ignore the annual report when it disagrees with the website",
+     "pref": "cam:cf:cf-stale-english:ignore-ar",
+     "value": "ignore-ar"
+    }
+   ],
+   "correct": "ok",
+   "hint": "SOURCES.md säger uttryckligen att den engelska sidan släpar efter [S1] och [S4].",
+   "reword": "Vilka siffror ska du inte citera från cambiogroup.com/about-us utan reservation?",
+   "explain": "The English about-page ([S5]) still says “around 900” and “17 of 21 regions”, which conflict with the Swedish about-page and the 2025 annual report (about 1,100 staff; 19 of 21 regions). Prefer [S1] and [S4]. [S5, S1, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-sanolium",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad är Sanolium AB i förhållande till Cambio?",
+   "options": [
+    {
+     "label": "Moderbolaget i årsredovisningen 2025; publikt obligationsemittent, inte ett noterat aktiebolag",
+     "pref": "cam:cf:cf-sanolium:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Det danska säljbolaget",
+     "pref": "cam:cf:cf-sanolium:denmark",
+     "value": "denmark"
+    },
+    {
+     "label": "Ett regionägt holdingbolag",
+     "pref": "cam:cf:cf-sanolium:region-owned",
+     "value": "region-owned"
+    },
+    {
+     "label": "Namnet på journalsystemet före COSMIC",
+     "pref": "cam:cf:cf-sanolium:old-name",
+     "value": "old-name"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Org.nr 559176-1423; ägs uppåt via Sanolium Holding / Group Holding.",
+   "reword": "What is Sanolium AB (publ)?",
+   "explain": "The 2025 annual and sustainability report is issued by Sanolium AB (publ). The group issued a corporate bond in 2019 and is therefore a public bond issuer, not listed equity. The employer on the Associate AI Engineer ad is Cambio Healthcare Systems AB. [S4, S51]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-two-left",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vilka två regioner saknar Cosmic-avtal enligt rapportering i augusti 2026?",
+   "options": [
+    {
+     "label": "Skåne och Västra Götaland, som gått Millennium-vägar som båda senare övergavs",
+     "pref": "cam:cf:cf-two-left:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Stockholm och Gotland",
+     "pref": "cam:cf:cf-two-left:sthlm-gotland",
+     "value": "sthlm-gotland"
+    },
+    {
+     "label": "Uppsala och Östergötland",
+     "pref": "cam:cf:cf-two-left:kgc-pair",
+     "value": "kgc-pair"
+    },
+    {
+     "label": "Halland och Blekinge",
+     "pref": "cam:cf:cf-two-left:sussa-pair",
+     "value": "sussa-pair"
+    }
+   ],
+   "correct": "ok",
+   "hint": "De två storregionerna i söder och väst.",
+   "reword": "Which two regions were reported as being outside a Cosmic contract in August 2026?",
+   "explain": "Svensk Farmaci (20 August 2026): only Skåne and Västra Götaland had chosen Millennium. In April 2026 Region Skåne decided to stop its Millennium variant (SDV) and compare alternatives; VGR decided the same month to scrap Millennium and pursue a modular system. [S48]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-kgc",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "What is KGC — Kundgrupp Cosmic?",
+   "options": [
+    {
+     "label": "Eight long-standing regions plus privately owned Capio S:t Göran",
+     "pref": "cam:cf:cf-kgc:ok",
+     "value": "ok"
+    },
+    {
+     "label": "The nine Sussa regions that went live in 2024–2025",
+     "pref": "cam:cf:cf-kgc:sussa",
+     "value": "sussa"
+    },
+    {
+     "label": "Stockholm City’s municipal IT board",
+     "pref": "cam:cf:cf-kgc:stad",
+     "value": "stad"
+    },
+    {
+     "label": "Cambio’s Sri Lanka engineering organisation",
+     "pref": "cam:cf:cf-kgc:lk",
+     "value": "lk"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Bildad 2007; åtta regioner plus ett sjukhus.",
+   "reword": "Vad ingår i KGC utöver åtta regioner?",
+   "explain": "KGC (formed 2007) is eight long-standing regions — Jämtland Härjedalen, Jönköping, Kalmar, Kronoberg, Uppsala, Värmland, Västmanland and Östergötland — plus Capio S:t Göran. Their support and maintenance agreement was extended from 1 January 2024 for five years, with a possible further three. [S25]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-stad-vs-region",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Varför ska du inte blanda ihop Region Stockholm och Stockholms stad här?",
+   "options": [
+    {
+     "label": "Regionen upphandlar Cosmic (ersätter TakeCare); staden skrev 2026 avtal med Tieto Caretech Lifecare för kommunala utförare",
+     "pref": "cam:cf:cf-stad-vs-region:ok",
+     "value": "ok"
+    },
+    {
+     "label": "De är samma kund och samma system",
+     "pref": "cam:cf:cf-stad-vs-region:same",
+     "value": "same"
+    },
+    {
+     "label": "Staden kör COSMIC som huvudjournal",
+     "pref": "cam:cf:cf-stad-vs-region:stad-cosmic",
+     "value": "stad-cosmic"
+    },
+    {
+     "label": "Regionen valde Lifecare som huvudjournalsystem",
+     "pref": "cam:cf:cf-stad-vs-region:region-lifecare",
+     "value": "region-lifecare"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Hälso- och sjukvård kontra kommunal omsorg.",
+   "reword": "How is Stockholms stad’s March 2026 system choice different from Region Stockholm’s EHR deal?",
+   "explain": "Region Stockholm is healthcare: Cosmic replacing TakeCare by about 2029. On 25 March 2026 Stockholms stad signed Tieto Caretech Lifecare for executors in social services, elderly care and municipal healthcare, for up to 13 years. Different customer, different product. [S26, S53]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-ai-act",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "What should you not claim about Companion and the EU AI Act?",
+   "options": [
+    {
+     "label": "That Companion is formally classified as a high-risk AI system — Cambio has not published that classification here",
+     "pref": "cam:cf:cf-ai-act:ok",
+     "value": "ok"
+    },
+    {
+     "label": "That the AI Act can never apply alongside GDPR or patientdatalagen",
+     "pref": "cam:cf:cf-ai-act:never-parallel",
+     "value": "never-parallel"
+    },
+    {
+     "label": "That IMY has stated Companion is outside the AI Act",
+     "pref": "cam:cf:cf-ai-act:imy-exempt",
+     "value": "imy-exempt"
+    },
+    {
+     "label": "That NIS2 replaced the AI Act for all EHR vendors",
+     "pref": "cam:cf:cf-ai-act:nis2-replaced",
+     "value": "nis2-replaced"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Förordningen kan gälla parallellt med GDPR/PDL; Companion-klassningen är inte publicerad i packen.",
+   "reword": "Vad ska du inte hitta på om COSMIC Companion och AI-förordningen?",
+   "explain": "The AI Act is Regulation (EU) 2024/1689. IMY states that if personal data are processed when an organisation develops or uses AI, the AI Act may apply in parallel with GDPR/PDL. Do not tell an interviewer that Companion is formally classified as a high-risk AI system — that classification is not published on the pages fetched for this pack. [S39, S42]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-no-cloud",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vilket påstående om hosting ska du undvika?",
+   "options": [
+    {
+     "label": "Att produktionen av COSMIC körs hos en namngiven molnleverantör",
+     "pref": "cam:cf:cf-no-cloud:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Att Open Services-portalen anges som powered by Azure API Management",
+     "pref": "cam:cf:cf-no-cloud:apim",
+     "value": "apim"
+    },
+    {
+     "label": "Att MittVaccin beskrivs som svensk SaaS med lagring och bearbetning i Sverige",
+     "pref": "cam:cf:cf-no-cloud:mittvaccin",
+     "value": "mittvaccin"
+    },
+    {
+     "label": "Att Sussa-COSMIC levereras som managed service",
+     "pref": "cam:cf:cf-no-cloud:managed",
+     "value": "managed"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Ingen publik uppgift namnger molnleverantören för kärn-EHR:n.",
+   "reword": "What cloud claim is not supported by the cited sources?",
+   "explain": "No public statement was found naming the cloud vendor that hosts production COSMIC. Azure API Management is stated only for the Open Services developer portal. MittVaccin is described as Swedish SaaS with storage and processing in Sweden at a procured partner. Sussa COSMIC is delivered as a managed service without a named host. [S22, S18, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-role-terms",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Which set of terms matches the public Associate AI Engineer ad?",
+   "options": [
+    {
+     "label": "Stockholm or Linköping; permanent with a 6-month trial; Swedish and English; background check; not described as the Companion product team",
+     "pref": "cam:cf:cf-role-terms:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Remote-only from Colombo; English only",
+     "pref": "cam:cf:cf-role-terms:colombo",
+     "value": "colombo"
+    },
+    {
+     "label": "Fixed-term three months as Companion product owner in Reading",
+     "pref": "cam:cf:cf-role-terms:reading",
+     "value": "reading"
+    },
+    {
+     "label": "No screening, because the posting says the work is unsensitive",
+     "pref": "cam:cf:cf-role-terms:no-check",
+     "value": "no-check"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Plats, språk, prövotid och bakgrundskontroll står i annonsen; teamplacering på Companion gör det inte.",
+   "reword": "Vad stämmer om den utannonserade associate-rollen?",
+   "explain": "Employer: Cambio Healthcare Systems AB. Place: Stockholm or Linköping. Full-time, permanent, six-month trial period. Hybrid, three office days. Swedish and English. Background check on the final candidate because the role involves access to sensitive information. The ad is internal enablement on its face, not a Companion team placement. [S51]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-mdr",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Which MDR class are COSMIC and CDS certified under?",
+   "options": [
+    {
+     "label": "Class IIa",
+     "pref": "cam:cf:cf-mdr:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Class I, same as MittVaccin",
+     "pref": "cam:cf:cf-mdr:class-i",
+     "value": "class-i"
+    },
+    {
+     "label": "Class III only",
+     "pref": "cam:cf:cf-mdr:class-iii",
+     "value": "class-iii"
+    },
+    {
+     "label": "They are not medical devices",
+     "pref": "cam:cf:cf-mdr:not-devices",
+     "value": "not-devices"
+    }
+   ],
+   "correct": "ok",
+   "hint": "BSI-certifikat för både journalsystemet och beslutsstödet.",
+   "reword": "Vilken MDR-klass har COSMIC och CDS enligt certifikatet Cambio publicerar?",
+   "explain": "Compliance page and BSI certificate MDR 771804 R000: Cambio COSMIC EHR — Class IIa and Cambio CDS — Class IIa. First issued 13 August 2024, expires 12 August 2029. MittVaccin is separately described as CE-marked under MDR Class I. [S36, S37, S18]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-sthlm-value",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilket avtalsvärde anger Region Stockholm för första perioden?",
+   "options": [
+    {
+     "label": "2 375 miljoner kronor över tolv år",
+     "pref": "cam:cf:cf-sthlm-value:ok",
+     "value": "ok"
+    },
+    {
+     "label": "331,3 MSEK — det är Q1 2026-koncernintäkten",
+     "pref": "cam:cf:cf-sthlm-value:q1",
+     "value": "q1"
+    },
+    {
+     "label": "85 miljoner euro, som i en pressuppgift om Åland",
+     "pref": "cam:cf:cf-sthlm-value:aland",
+     "value": "aland"
+    },
+    {
+     "label": "1 000 MSEK, som obligationsramen",
+     "pref": "cam:cf:cf-sthlm-value:bond",
+     "value": "bond"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Första perioden, kvalitet plus pris, tolvårigt.",
+   "reword": "What first-term contract value did Region Stockholm state for Cosmic?",
+   "explain": "Region Stockholm states a first-term contract value of 2,375 million SEK over twelve years, chosen on a mix of price and quality. Cosmic is targeted in place by December 2029. The EUR 85 million over 18 years figure is press-reported for Åland, not Stockholm, and is not in Cambio’s award text. [S26, S33]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-mittvaccin",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "How does MittVaccin differ from COSMIC and CDS on MDR class, as published?",
+   "options": [
+    {
+     "label": "MittVaccin is CE-marked under MDR Class I; COSMIC and CDS are Class IIa",
+     "pref": "cam:cf:cf-mittvaccin:ok",
+     "value": "ok"
+    },
+    {
+     "label": "All three are Class IIa",
+     "pref": "cam:cf:cf-mittvaccin:all-iia",
+     "value": "all-iia"
+    },
+    {
+     "label": "MittVaccin is Class III; the others are Class I",
+     "pref": "cam:cf:cf-mittvaccin:swapped",
+     "value": "swapped"
+    },
+    {
+     "label": "None of them are described as medical devices",
+     "pref": "cam:cf:cf-mittvaccin:none",
+     "value": "none"
+    }
+   ],
+   "correct": "ok",
+   "hint": "En lättare klass än journalsystemet och CDS.",
+   "reword": "Vilken MDR-klass anger MittVaccins produktsida?",
+   "explain": "MittVaccin’s product page: CE-marked under MDR Class I. COSMIC and CDS are Class IIa. The annual report: MittVaccin contracted by 14 of 21 regions plus private providers at year-end 2025. [S18, S37, S4]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-nis2",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Hur är NIS2 infört i svensk rätt enligt research-packen?",
+   "options": [
+    {
+     "label": "Delvis genom cybersäkerhetslagen (2025:1506), som trädde i kraft 15 januari 2026",
+     "pref": "cam:cf:cf-nis2:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Genom patientdatalagen (2008:355)",
+     "pref": "cam:cf:cf-nis2:pdl",
+     "value": "pdl"
+    },
+    {
+     "label": "Genom MDR (EU) 2017/745",
+     "pref": "cam:cf:cf-nis2:mdr",
+     "value": "mdr"
+    },
+    {
+     "label": "Det är inte infört och gäller bara banker",
+     "pref": "cam:cf:cf-nis2:not-se",
+     "value": "not-se"
+    }
+   ],
+   "correct": "ok",
+   "hint": "En svensk lag från december 2025, i kraft i januari 2026.",
+   "reword": "When did Sweden’s NIS2-related cybersäkerhetslag enter into force?",
+   "explain": "NIS2 is Directive (EU) 2022/2555. Sweden implemented it in part through cybersäkerhetslagen (2025:1506), issued 11 December 2025 and in force 15 January 2026. Healthcare is an in-scope sector. The pack does not classify whether Cambio itself is a direct operator under the Act; customers who are regions will still pass supply-chain expectations to a core EHR vendor. [S43, S44]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-iso27001",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "What does the published ISO/IEC 27001 certificate for Cambio Healthcare Systems AB say?",
+   "options": [
+    {
+     "label": "ISO/IEC 27001:2022, valid until 11 January 2027, covering development, maintenance and sales of EHR applications and related services",
+     "pref": "cam:cf:cf-iso27001:ok",
+     "value": "ok"
+    },
+    {
+     "label": "It expired in 2024 and was not renewed",
+     "pref": "cam:cf:cf-iso27001:expired",
+     "value": "expired"
+    },
+    {
+     "label": "It certifies only the Colombo office",
+     "pref": "cam:cf:cf-iso27001:colombo-only",
+     "value": "colombo-only"
+    },
+    {
+     "label": "It is the MDR Class IIa device certificate",
+     "pref": "cam:cf:cf-iso27001:mdr",
+     "value": "mdr"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Intertek 0164637, utfärdat 6 november 2024.",
+   "reword": "Vad gäller Cambio:s publicerade ISO 27001-certifikat?",
+   "explain": "Intertek certificate 0164637 for Cambio Healthcare Systems AB, ISO/IEC 27001:2022, issued 6 November 2024 and valid until 11 January 2027. Scope: development, maintenance and sales of EHR applications and related implementation and support services. Additional certified sites include Linköping, Reading, Colombo and Aarhus. [S7]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-pdl-retention",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad gäller som huvudregel för hur länge journaluppgifter och åtkomstloggar ska sparas, enligt PDL/IMY-materialet i packen?",
+   "options": [
+    {
+     "label": "Journalhandlingar minst tio år efter sista anteckningen; åtkomstloggar minst fem år",
+     "pref": "cam:cf:cf-pdl-retention:ok",
+     "value": "ok"
+    },
+    {
+     "label": "Allt får raderas efter 30 dagar",
+     "pref": "cam:cf:cf-pdl-retention:30d",
+     "value": "30d"
+    },
+    {
+     "label": "Journaler två år, loggar tio år",
+     "pref": "cam:cf:cf-pdl-retention:swapped",
+     "value": "swapped"
+    },
+    {
+     "label": "Inget bevarandekrav finns i svensk rätt",
+     "pref": "cam:cf:cf-pdl-retention:none",
+     "value": "none"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Journal längre än logg.",
+   "reword": "Under the Swedish record-keeping rules cited via IMY, how long must records and access logs generally be kept?",
+   "explain": "Journal documents must as a rule be retained at least ten years after the last entry (patientdatalagen 3 kap. 17 §). Access logs must be stored at least five years (HSLF-FS 2016:40 4 kap. 9 b §). [S38, S39]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-cis-cdc",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "How do Cambio CIS and CDC relate?",
+   "options": [
+    {
+     "label": "CIS is a PDMS for anaesthesia and intensive care; CDC connects medical devices and translates their data",
+     "pref": "cam:cf:cf-cis-cdc:ok",
+     "value": "ok"
+    },
+    {
+     "label": "CDC is the regional EHR and CIS is the municipal system",
+     "pref": "cam:cf:cf-cis-cdc:swapped",
+     "value": "swapped"
+    },
+    {
+     "label": "Both are names for COSMIC Companion",
+     "pref": "cam:cf:cf-cis-cdc:companion",
+     "value": "companion"
+    },
+    {
+     "label": "CIS is only the FHIR sandbox",
+     "pref": "cam:cf:cf-cis-cdc:sandbox",
+     "value": "sandbox"
+    }
+   ],
+   "correct": "ok",
+   "hint": "IVA och anestesi kontra koppling av mer än 900 medicintekniska produkter.",
+   "reword": "Vad är skillnaden mellan Cambio CIS och CDC?",
+   "explain": "CIS is a patient data management system for anaesthesia and intensive care (modules CIS IVA & NEO and CIS AN), described as integrated with COSMIC. CDC (Cambio Device Connectivity) connects more than 900 medical devices onto one platform and translates the data into a uniform language. [S15, S16]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-systematic",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilken roll hade Systematic i Stockholm/Gotland-upphandlingen enligt presskällorna?",
+   "options": [
+    {
+     "label": "De tävlade om avtalet och överklagade tilldelningen; kammarrätten meddelade inte prövningstillstånd",
+     "pref": "cam:cf:cf-systematic:ok",
+     "value": "ok"
+    },
+    {
+     "label": "De vann och levererar TakeCare",
+     "pref": "cam:cf:cf-systematic:won",
+     "value": "won"
+    },
+    {
+     "label": "De är Epic-återförsäljare i Sverige",
+     "pref": "cam:cf:cf-systematic:epic",
+     "value": "epic"
+    },
+    {
+     "label": "De äger Cambio",
+     "pref": "cam:cf:cf-systematic:owns",
+     "value": "owns"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Dansk leverantör; nämns tillsammans med CGM i överklaganden.",
+   "reword": "What do cited sources say Systematic did in the Stockholm/Gotland EHR procurement?",
+   "explain": "Systematic competed for Stockholm/Gotland and appealed the award. Läkartidningen reported that the Administrative Court of Appeal refused leave (27 October 2025). [S29]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  },
+  {
+   "id": "cf-millennium",
+   "area": "foretaget",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "What happened to Oracle Health / Cerner Millennium in the cited Swedish stories?",
+   "options": [
+    {
+     "label": "Excluded from the Stockholm/Gotland qualification; Skåne and VGR later abandoned their Millennium paths in April 2026",
+     "pref": "cam:cf:cf-millennium:ok",
+     "value": "ok"
+    },
+    {
+     "label": "It won Stockholm and goes live in 2026",
+     "pref": "cam:cf:cf-millennium:won",
+     "value": "won"
+    },
+    {
+     "label": "It is Cambio’s partner for Companion",
+     "pref": "cam:cf:cf-millennium:partner",
+     "value": "partner"
+    },
+    {
+     "label": "It replaced Cosmic in the Sussa regions",
+     "pref": "cam:cf:cf-millennium:sussa",
+     "value": "sussa"
+    }
+   ],
+   "correct": "ok",
+   "hint": "Diskvalificerad i Stockholm; två storregioner backade 2026.",
+   "reword": "Vad säger källorna om Millennium i Sverige?",
+   "explain": "Millennium was excluded from the Stockholm/Gotland procurement at qualification; the appeal was lost. Svensk Farmaci reported that both Skåne and Västra Götaland decided in April 2026 to abandon their Millennium paths. [S26, S48]",
+   "scored": true,
+   "adaptive": true,
+   "source": "research-2026-11-10"
+  }
+ ]
+}

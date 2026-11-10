@@ -8,7 +8,7 @@ const P = require('../../lo-preferences/prefs.js');
 function loadMerged() {
   const root = path.join(__dirname, '../data');
   const D = JSON.parse(fs.readFileSync(path.join(root, 'areas.json'), 'utf8'));
-  ['intervju-cards.json', 'glossary-cards.json'].forEach(name => {
+  ['intervju-cards.json', 'glossary-cards.json', 'foretaget-cards.json'].forEach(name => {
     const extraP = path.join(root, name);
     if (!fs.existsSync(extraP)) return;
     const extra = JSON.parse(fs.readFileSync(extraP, 'utf8'));
@@ -50,6 +50,17 @@ gl.forEach(c => { gdb[c.difficulty] = (gdb[c.difficulty] || 0) + 1; });
 [1, 2, 3, 4, 5].forEach(l => assert((gdb[l] || 0) >= 15, 'glossary difficulty ' + l + ' got ' + gdb[l]));
 assert(!JSON.stringify(gl).match(/Martin Rehn|@cambio\.se/i), 'glossary names');
 console.log('glossary OK', gdb);
+const ft = D.cards.filter(c => c.area === 'foretaget');
+assert(ft.length >= 38 && ft.length <= 45, 'foretaget size ' + ft.length);
+assert(D.areas.some(a => a.id === 'foretaget' && a.name === 'Cambio · företaget' && a.defaultOn !== false));
+assert(ft.every(c => A.isScored(c) && c.adaptive && c.level === 1 && c.hint && c.reword && c.explain && c.options.length >= 3 && c.correct));
+const fdb = {};
+ft.forEach(c => { fdb[c.difficulty] = (fdb[c.difficulty] || 0) + 1; });
+[1, 2, 3, 4, 5].forEach(l => assert((fdb[l] || 0) >= 6, 'foretaget difficulty ' + l + ' got ' + fdb[l]));
+assert(!JSON.stringify(ft).match(/Martin Rehn|@cambio\.se|sju dödsfall|seven deaths/i), 'foretaget names/safety-specifics');
+assert(ft.some(c => c.id === 'cf-safety-how'), 'neutral safety-response card');
+console.log('foretaget OK', ft.length, fdb);
+
 
 
 // --- retire after 3 cumulative correct ---

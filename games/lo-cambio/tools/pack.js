@@ -1,7 +1,7 @@
 // Regenerates data/core.js + data/cards-l3.js from data/areas.json. Run: node tools/pack.js
 const fs=require('fs'),p=__dirname+'/../data/';
 function loadData(){const d=JSON.parse(fs.readFileSync(p+'areas.json','utf8'));
-['intervju-cards.json','glossary-cards.json'].forEach(function(name){const extraP=p+name;if(!fs.existsSync(extraP))return;
+['intervju-cards.json','glossary-cards.json','foretaget-cards.json'].forEach(function(name){const extraP=p+name;if(!fs.existsSync(extraP))return;
 const extra=JSON.parse(fs.readFileSync(extraP,'utf8'));(extra.areas||[]).forEach(a=>{if(!d.areas.some(x=>x.id===a.id))d.areas.push(a);});d.cards=d.cards.concat(extra.cards||[]);});
 return d;}
 const d=loadData();
