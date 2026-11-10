@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#071315">
+  <title>Cambio-quiz · intervjuövning</title>
+  <meta name="description" content="Privat övningsquiz inför en intervju. Bara offentliga demo-fakta.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <p class="kicker">Associate AI Engineer</p>
+        <h1>Cambio-quiz</h1>
+        <p class="sub" id="subtitle">Övning inför intervjun 11 nov 2026, 15:00 Europe/Stockholm</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </header>
+    <div class="xpwrap" id="xpwrap">
+      <div class="xpbar" aria-hidden="true"><div class="xpfill" id="xpfill"></div></div>
+      <div class="xplabel"><span id="xplabel">0 XP</span><span id="streaklabel"></span></div>
+    </div>
+    <main id="main"></main>
+    <footer class="foot">
+      <p>Privat övning. Bara offentliga demo-fakta från <a href="https://github.com/MarkusIsaksson1982/cambio-support-copilot">cambio-support-copilot</a>. Inga medarbetarnamn, inget auto-skickas, sidan är noindex.</p>
+      <p>Framsteg sparas i den här webbläsaren (localStorage). Blandar svenska och engelska, som intervjun troligen också gör.</p>
+    </footer>
+  </div>
+  <div class="sr-only" id="live" aria-live="polite"></div>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
