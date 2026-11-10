@@ -24,11 +24,23 @@ const calib = D.cards.filter(c => A.isCalibration(c));
 const by = {};
 scored.forEach(c => { by[c.difficulty] = (by[c.difficulty] || 0) + 1; });
 [1, 2, 3, 4, 5].forEach(l => assert((by[l] || 0) >= 15, 'need 15+ scored at difficulty ' + l + ' got ' + by[l]));
-assert(calib.length >= 10, 'calibration cards');
+assert(calib.length >= 38, 'calibration cards');
 assert(scored.every(c => c.level === 1 && c.hint && c.reword && c.explain && c.options.length >= 3));
 assert(calib.every(c => c.scored === false && c.cambio && c.cambio.kind === 'calibration' && !c.correct));
 assert(!JSON.stringify(scored.concat(calib)).match(/Martin Rehn|@cambio\.se/i), 'no employee names');
 console.log('bank OK', scored.length, 'scored', by, 'calib', calib.length);
+const followIds = ['cal-motivation-onesentence','cal-opening-two-sentences','cal-unwatched-ask-first','cal-coaching-spoken','cal-tools-spoken','cal-salary','cal-availability','cal-remote-office','cal-dont-know','cal-failure','cal-priorities','cal-learn-y1','cal-why-not-dev','cal-ask-two','cal-close','cal-motivation-reask','cal-coaching-reask','cal-opening-reask','cal-demo-after-invite','cal-loyalty-framing'];
+followIds.forEach(id => {
+  const c = calib.find(x => x.id === id);
+  assert(c, 'missing ' + id);
+  assert(c.options.length >= 2 && c.options.length <= 4, id + ' stances');
+  assert(c.tip && /Så här kan det låta/.test(c.tip), id + ' tip');
+});
+assert.equal(calib.find(c => c.id === 'cal-motivation-reask').cambio.theme, 'motivation');
+assert.equal(calib.find(c => c.id === 'cal-motivation-reask').cambio.consistencyOf, 'cal-motivation');
+assert.equal(calib.find(c => c.id === 'cal-coaching-reask').cambio.consistencyOf, 'cal-coaching');
+assert.equal(calib.find(c => c.id === 'cal-opening-reask').cambio.consistencyOf, 'cal-lead-with');
+
 const gl = D.cards.filter(c => c.area === 'ordlista');
 assert.equal(gl.length, 505, 'glossary size');
 assert(D.areas.some(a => a.id === 'ordlista' && a.name === 'Ordlista · tech' && a.defaultOn !== false));
@@ -204,6 +216,19 @@ const x3 = C.build(D, s3.result().log, P.weighSession(D, 3, { score: 1 }));
 assert.equal(x3.schema, 'lo-cambio.export.v1');
 assert(x3.golden_label_votes.length + x3.scope_decisions.length + x3.abbreviation_picks.length + x3.calibration.length >= 1);
 
+
+// --- consistencyOf looks up an earlier answer on the original theme card ---
+{
+  const reask = calib.find(c => c.id === 'cal-motivation-reask');
+  const stCons = A.empty();
+  stCons.calibration['cal-motivation'] = { value: null, label: null, manualReply: 'long original motivation', at: '2026-11-10T20:32:52.126Z' };
+  const recCons = A.record(stCons, reask, { calibration: true }, { manualReply: 'short spoken motivation', value: null, label: null });
+  assert.equal(recCons.changed, true);
+  assert(recCons.previous && recCons.previous.manualReply === 'long original motivation');
+  assert.equal(stCons.calibration['cal-motivation'].manualReply, 'long original motivation');
+  assert.equal(stCons.calibration[reask.id].manualReply, 'short spoken motivation');
+  assert.equal(stCons.calibration[reask.id].theme, 'motivation');
+}
 const hud = A.hud(A.empty());
 assert.equal(hud.level, 1);
 assert.equal(hud.floor, 1);

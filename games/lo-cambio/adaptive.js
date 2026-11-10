@@ -173,12 +173,21 @@
     var now = extra.at || new Date().toISOString();
     if (isCalibration(card)) {
       if (ev.skip) return { changed: false, calibration: true };
+      var theme = (card.cambio && card.cambio.theme) || null;
       var prev = state.calibration[card.id] || null;
+      if (!prev && card.cambio && card.cambio.consistencyOf) prev = state.calibration[card.cambio.consistencyOf] || null;
+      if (!prev && theme) {
+        var ids = Object.keys(state.calibration);
+        for (var i = 0; i < ids.length; i++) {
+          var e = state.calibration[ids[i]];
+          if (e && e.theme === theme) { prev = e; break; }
+        }
+      }
       var label = extra.label != null ? extra.label : null;
       var value = extra.value != null ? extra.value : null;
       var mr = extra.manualReply ? String(extra.manualReply) : null;
       var changed = !!(prev && ((value != null && prev.value != null && value !== prev.value) || (mr && prev.manualReply && mr !== prev.manualReply)));
-      state.calibration[card.id] = { value: value, label: label, manualReply: mr, at: now, previous: prev ? { value: prev.value, label: prev.label, manualReply: prev.manualReply } : null };
+      state.calibration[card.id] = { value: value, label: label, manualReply: mr, at: now, theme: theme, previous: prev ? { value: prev.value, label: prev.label, manualReply: prev.manualReply } : null };
       return { changed: changed, previous: prev, calibration: true };
     }
     if (!isScored(card)) return { changed: false };

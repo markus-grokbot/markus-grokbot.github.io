@@ -4586,6 +4586,694 @@
     "theme": "tools_mention"
    },
    "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-motivation-onesentence",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Säg din motivation i en mening, och börja meningen med Cambio — inte med dig själv.",
+   "options": [
+    {
+     "label": "Leda med samhällsnytta och vård: Cambio bygger teknik som används i vården, och det väger extra för mig utöver att jag vill in i tech.",
+     "pref": "cam:cal:cal-motivation-onesentence:lead-care",
+     "value": "lead-care"
+    },
+    {
+     "label": "Leda med foten i tech: jag vill få in en fot ordentligt i tech, och Cambio är extra intressant för att det är samhällsnytta.",
+     "pref": "cam:cal:cal-motivation-onesentence:lead-foothold",
+     "value": "lead-foothold"
+    },
+    {
+     "label": "Nämn lojalitet: när villkoren är bra tenderar jag att stanna; Cambio lockar för samhällsnytta och vård, inte bara för att det är tech.",
+     "pref": "cam:cal:cal-motivation-onesentence:mention-loyalty",
+     "value": "mention-loyalty"
+    }
+   ],
+   "tip": "Så här kan det låta: »Cambio lockar för att ni bygger samhällsnyttig teknik i vården, och jag vill få en ordentlig fot i tech i ett sammanhang jag kan bli långsiktigt lojal mot.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "motivation_onesentence"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-opening-two-sentences",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Din öppning på exakt två meningar. Vad säger du när du sätter dig?",
+   "options": [
+    {
+     "label": "Mest demot: jag byggde det efter intervjuinbjudan för att visa hur jag använder AI-verktyg på något konkret.",
+     "pref": "cam:cal:cal-opening-two-sentences:lead-demo",
+     "value": "lead-demo"
+    },
+    {
+     "label": "Mest anpassning: jag utgick från offentliga uppgifter, och ju tydligare krav jag får desto mer specifikt kan jag bygga vidare.",
+     "pref": "cam:cal:cal-opening-two-sentences:lead-adapt",
+     "value": "lead-adapt"
+    },
+    {
+     "label": "Båda: en mening om att demot kom efter inbjudan, en om att det bygger på publika fakta och att jag gärna går djupare om de vill.",
+     "pref": "cam:cal:cal-opening-two-sentences:both",
+     "value": "both"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag byggde demot efter att jag fick frågan om intervju, utifrån offentliga uppgifter om Cambio, för att visa hur jag använder AI-verktyg konkret. Ju tydligare krav jag får, desto mer specifikt kan jag bygga vidare.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "opening_spoken"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-unwatched-ask-first",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "De har inte tittat på demot. Formulera i en mening hur du frågar hur mycket du ska utgå från det.",
+   "options": [
+    {
+     "label": "Fråga rakt: vill ni att jag utgår mycket, lite eller mittemellan från demot?",
+     "pref": "cam:cal:cal-unwatched-ask-first:ask-scale",
+     "value": "ask-scale"
+    },
+    {
+     "label": "Erbjud valet: jag kan visa ett fall på en minut, berätta mönstret, eller lämna demot.",
+     "pref": "cam:cal:cal-unwatched-ask-first:offer-menu",
+     "value": "offer-menu"
+    },
+    {
+     "label": "Kort check: hur mycket har ni sett, så anpassar jag mängden?",
+     "pref": "cam:cal:cal-unwatched-ask-first:how-much-seen",
+     "value": "how-much-seen"
+    }
+   ],
+   "tip": "Så här kan det låta: »Hur mycket vill ni att jag utgår från demot — mycket, lite eller mittemellan? Jag anpassar mig efter det.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "unwatched_spoken"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-coaching-spoken",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Säg i två korta meningar hur du vill ha coaching kontra eget utrymme.",
+   "options": [
+    {
+     "label": "Lyssna först: seniorernas input är huvudspåret, och jag utgår från den.",
+     "pref": "cam:cal:cal-coaching-spoken:seniors-first",
+     "value": "seniors-first"
+    },
+    {
+     "label": "Fråga efter utrymme: jag följer rutinerna, men ber om plats att testa verktyg och metoder som jag ser fungerar.",
+     "pref": "cam:cal:cal-coaching-spoken:ask-space",
+     "value": "ask-space"
+    },
+    {
+     "label": "Båda i samma andetag: uppmärksam på seniorerna, och tydlig med när jag vill få prova själv.",
+     "pref": "cam:cal:cal-coaching-spoken:both",
+     "value": "both"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag räknar med att lyssna noga på seniorerna och utgå från era rutiner. Samtidigt vill jag fråga efter utrymme att testa verktyg och metoder som jag ser fungerar.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "coaching_spoken"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-tools-spoken",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "De frågar vilka AI-verktyg du använder. Hur håller du svaret till en eller två meningar?",
+   "options": [
+    {
+     "label": "Räkna snabbt upp setet, sen säg att bredden över modellfamiljer och harnesses är det mer relevanta.",
+     "pref": "cam:cal:cal-tools-spoken:list-then-pivot",
+     "value": "list-then-pivot"
+    },
+    {
+     "label": "Börja med harnesses och verifiering, nämn verktygsnamn bara om de ber om dem.",
+     "pref": "cam:cal:cal-tools-spoken:harness-first",
+     "value": "harness-first"
+    },
+    {
+     "label": "Svara ärligt på namn om de frågar, och säg att du håller dig till deras stack om de vill det.",
+     "pref": "cam:cal:cal-tools-spoken:follow-their-stack",
+     "value": "follow-their-stack"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag kan räkna upp verktygen jag använder, men det mer relevanta är att jag är van vid flera modellfamiljer och harnesses. Om ni vill att jag håller mig till ett visst verktyg gör jag det.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "tools_spoken"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-salary",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur vill du prata lön och förväntningar, om det kommer upp?",
+   "options": [
+    {
+     "label": "Be först om deras spann för associate-rollen, och utgå från det.",
+     "pref": "cam:cal:cal-salary:ask-band-first",
+     "value": "ask-band-first"
+    },
+    {
+     "label": "Säg att du söker en schysst ingång på associate-nivå och vill veta hur lönen ses över efter en tid, utan att låsa ett tal först.",
+     "pref": "cam:cal:cal-salary:fair-start-review",
+     "value": "fair-start-review"
+    },
+    {
+     "label": "Om de pressar på en siffra: du har tidigare utgått från cirka 25 000 kr/mån som bas, och omkring 35 000 när spannet tydligt ligger högre, med att det kan ses över efter några månader.",
+     "pref": "cam:cal:cal-salary:documented-range",
+     "value": "documented-range"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag är mer intresserad av en schysst ingång på associate-nivå och hur lönen ses över än att låsa ett tal nu. Om ni har ett spann för rollen hör jag gärna det först.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "salary"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-availability",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om de frågar när du kan börja, och om du har uppsägningstid — vad säger du?",
+   "options": [
+    {
+     "label": "Kort varsel: tillgänglig från den 15 november 2026, med reservation för enstaka korta pass som kan flytta startdatumet någon dag.",
+     "pref": "cam:cal:cal-availability:from-15-nov",
+     "value": "from-15-nov"
+    },
+    {
+     "label": "Betona att du inte har uppsägningstid från en heltidsanställning, så start är mer en kalenderfråga än en uppsägningsfråga.",
+     "pref": "cam:cal:cal-availability:no-notice",
+     "value": "no-notice"
+    },
+    {
+     "label": "Fråga vad som passar dem, och säg att du i regel kan börja med kort varsel.",
+     "pref": "cam:cal:cal-availability:ask-their-date",
+     "value": "ask-their-date"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag har ingen uppsägningstid från en heltidsroll, så jag kan i regel börja med kort varsel — från den 15 november, med reservation för enstaka korta pass som kan flytta datumet någon dag.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "availability"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-remote-office",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur vill du beskriva distans kontra kontor, i en eller två meningar?",
+   "options": [
+    {
+     "label": "Hybrid: kontor när teamet behöver det, distans när arbetet tillåter. Du föredrar den flexibiliteten.",
+     "pref": "cam:cal:cal-remote-office:hybrid-flex",
+     "value": "hybrid-flex"
+    },
+    {
+     "label": "Tre kontorsdagar fungerar, och pendlingen Uppsala–Stockholm på ungefär 40–50 minuter är redan tänkbar.",
+     "pref": "cam:cal:cal-remote-office:three-days",
+     "value": "three-days"
+    },
+    {
+     "label": "Du sökte Stockholm och kan tänka dig mer kontorstid om rollen är långsiktig, utan att lova ett flyttdatum.",
+     "pref": "cam:cal:cal-remote-office:office-ok-longterm",
+     "value": "office-ok-longterm"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag sökte Stockholm och bor i Uppsala, ungefär 40–50 minuter dit. Hybrid passar mig — kontor när det behövs, och jag är öppen för den kontorsrytm ni har i teamet.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "remote_office"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-dont-know",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om du inte vet svaret på en fråga i rummet — vad gör du?",
+   "options": [
+    {
+     "label": "Säg att du inte vet, säg vad du skulle kolla, och håll dig till det du faktiskt har sett.",
+     "pref": "cam:cal:cal-dont-know:admit-then-lookup",
+     "value": "admit-then-lookup"
+    },
+    {
+     "label": "Avgränsa: det här har jag inte gjort hos er / inte mätt, så jag vill inte hitta på.",
+     "pref": "cam:cal:cal-dont-know:dont-invent",
+     "value": "dont-invent"
+    },
+    {
+     "label": "Erbjud en hypotes märkt som hypotes, och fråga om de vill att du tänker högt.",
+     "pref": "cam:cal:cal-dont-know:mark-hypothesis",
+     "value": "mark-hypothesis"
+    }
+   ],
+   "tip": "Så här kan det låta: »Det vet jag inte säkert, och jag vill inte hitta på. Det jag skulle göra är att kolla X, och återkomma med det jag faktiskt ser.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "unknown_answer"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-failure",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "De ber om ett tillfälle då något gick snett. Vilken historia vill du berätta — utan att hitta på ett uppdrag?",
+   "options": [
+    {
+     "label": "False friend: retrieval matchade fel ärende (ticket-008), och evallen visade det.",
+     "pref": "cam:cal:cal-failure:false-friend",
+     "value": "false-friend"
+    },
+    {
+     "label": "Maskering: ett bart förnamn utan extra ledtråd kan slinka igenom.",
+     "pref": "cam:cal:cal-failure:name-slip",
+     "value": "name-slip"
+    },
+    {
+     "label": "En promptändring gjorde evalen sämre: rulla tillbaka, jämför fall, ändra en sak i taget.",
+     "pref": "cam:cal:cal-failure:eval-worse",
+     "value": "eval-worse"
+    }
+   ],
+   "tip": "Så här kan det låta: »I demot matchade enkel token-retrieval fel ärende — en false friend. Evallen fångade det, och nästa steg vore att förbättra retrieval och behålla den mänskliga grinden.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "failure_story"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-priorities",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Två saker krockar: till exempel en senior vill ha tempo, du vill ha eval och godkännande på plats först. Hur tar du det?",
+   "options": [
+    {
+     "label": "Förklara risken kort, föreslå minsta mätbara steg, och följ sen teamets beslut om de äger risken.",
+     "pref": "cam:cal:cal-priorities:explain-then-follow",
+     "value": "explain-then-follow"
+    },
+    {
+     "label": "Föreslå att mäta båda vägarna på syntetiska fall innan ni väljer.",
+     "pref": "cam:cal:cal-priorities:measure-both",
+     "value": "measure-both"
+    },
+    {
+     "label": "I patientdata-liknande fall stå kvar vid fail-closed; utanför det, var mer flexibel.",
+     "pref": "cam:cal:cal-priorities:fail-closed-when-needed",
+     "value": "fail-closed-when-needed"
+    }
+   ],
+   "tip": "Så här kan det låta: »Då skulle jag säga vilken risk jag ser, föreslå minsta sättet att mäta det, och följa teamets beslut om de äger risken. I fall med patientdata skulle jag inte släppa fail-closed.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "conflicting_priorities"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-learn-y1",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Vad vill du lära dig det första året om du får rollen?",
+   "options": [
+    {
+     "label": "Era rutiner: hur ni granskar AI-genererad kod, var ni drar handoff-linjen, och hur evallen får leva i vardagen.",
+     "pref": "cam:cal:cal-learn-y1:their-routines",
+     "value": "their-routines"
+    },
+    {
+     "label": "Domänen: tillräckligt mycket av det interna stödflödet och vårdsammanhanget för att inte gissa.",
+     "pref": "cam:cal:cal-learn-y1:domain",
+     "value": "domain"
+    },
+    {
+     "label": "Eget ägande: en liten prototyp från idé till något kollegor faktiskt använder, med coaching runt det.",
+     "pref": "cam:cal:cal-learn-y1:own-slice",
+     "value": "own-slice"
+    }
+   ],
+   "tip": "Så här kan det låta: »Först era rutiner — hur ni granskar AI-genererad kod och var ni drar linjen för mänsklig handoff. Samtidigt vill jag lära mig tillräckligt av flödet för att äga en liten prototyp med eval från start.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "first_year_learn"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-why-not-dev",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "En rekryterare frågar: varför söker du inte en utvecklarroll i stället?",
+   "options": [
+    {
+     "label": "Associate med coaching passar min nivå just nu; jag har ingen heltidsroll som utvecklare bakom mig och vill inte låtsas annorlunda.",
+     "pref": "cam:cal:cal-why-not-dev:level-fit",
+     "value": "level-fit"
+    },
+    {
+     "label": "Den här rollen ligger närmare det jag faktiskt har övat: eval, grindar och syntetisk data — inte en erfaren utvecklarstol från dag ett.",
+     "pref": "cam:cal:cal-why-not-dev:role-fit",
+     "value": "role-fit"
+    },
+    {
+     "label": "Jag stänger inte dörren till mer kod senare, men jag söker inte en roll där ni förväntar er en etablerad utvecklare nu.",
+     "pref": "cam:cal:cal-why-not-dev:door-open",
+     "value": "door-open"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag söker associate-rollen för att den passar min nivå: jag har ingen heltidsroll som utvecklare bakom mig, och jag vill lära mig era rutiner med coaching. Jag stänger inte dörren till mer kod senare, men jag söker inte en erfaren utvecklarroll nu.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "why_not_developer"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-ask-two",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Vilka två frågor vill du hinna ställa till dem?",
+   "options": [
+    {
+     "label": "En om handoff- och audit-linjen, och en om hur första månaderna ser ut för en associate.",
+     "pref": "cam:cal:cal-ask-two:handoff-and-onboard",
+     "value": "handoff-and-onboard"
+    },
+    {
+     "label": "En om vilken evidens de vill se innan en intern pilot, och en om false friends.",
+     "pref": "cam:cal:cal-ask-two:evidence-and-friends",
+     "value": "evidence-and-friends"
+    },
+    {
+     "label": "En teknisk och en om coaching: var ni drar gränsen, och hur mycket lotsning som faktiskt följer med.",
+     "pref": "cam:cal:cal-ask-two:tech-and-coaching",
+     "value": "tech-and-coaching"
+    },
+    {
+     "label": "Två frågor du faktiskt är nyfiken på just nu — skriv dem hellre själv än att lära in en lista.",
+     "pref": "cam:cal:cal-ask-two:write-your-own",
+     "value": "write-your-own"
+    }
+   ],
+   "tip": "Så här kan det låta: »Var drar ni linjen för mänsklig handoff i ett internt stödflöde? Och hur ser de första månaderna ut för en associate — hur mycket coaching följer med?« Namnge ingen person.",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "questions_to_them"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-close",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur vill du runda av intervjun de sista trettio sekunderna?",
+   "options": [
+    {
+     "label": "Tacka kort, säg att du är intresserad, och fråga vad nästa steg är.",
+     "pref": "cam:cal:cal-close:thanks-next",
+     "value": "thanks-next"
+    },
+    {
+     "label": "Knyt ihop: en mening om varför rollen passar, sen fråga om process.",
+     "pref": "cam:cal:cal-close:fit-then-process",
+     "value": "fit-then-process"
+    },
+    {
+     "label": "Lämna en konkret öppning: du kan fördjupa demot eller ett fall om de vill se mer, utan att kräva att de har tittat.",
+     "pref": "cam:cal:cal-close:offer-followup",
+     "value": "offer-followup"
+    }
+   ],
+   "tip": "Så här kan det låta: »Tack, jag är intresserad av rollen. Hör gärna av er om ni vill att jag visar ett fall eller fördjupar något — vad är nästa steg?«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "close"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-motivation-reask",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om de frågar rakt: varför just vi, och varför den här rollen — inte en annan arbetsgivare?",
+   "options": [
+    {
+     "label": "Var ärlig: foten i tech är huvudmålet, och det avgörande är inte bara vilken arbetsgivare — men samhällsnytta och vård väger extra här.",
+     "pref": "cam:cal:cal-motivation-reask:honest-foothold",
+     "value": "honest-foothold"
+    },
+    {
+     "label": "Lyft samhällsnytta och vård som skälet att det är just Cambio, utöver att du vill in i tech.",
+     "pref": "cam:cal:cal-motivation-reask:why-these-people",
+     "value": "why-these-people"
+    },
+    {
+     "label": "Nämn att du tenderar att vara lojal när villkoren är bra, och att det här sammanhanget lockar av den anledningen.",
+     "pref": "cam:cal:cal-motivation-reask:loyalty",
+     "value": "loyalty"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag vill få in en fot ordentligt i tech, och det behöver inte bara vara här — men jag uppskattar påtagligt att ni gör samhällsnyttig teknik, med vård som extra plus. När villkoren är bra tenderar jag att stanna.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "motivation",
+    "consistencyOf": "cal-motivation"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-coaching-reask",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Första månaderna: hur mycket vill du bli lotsad, och när vill du få testa själv?",
+   "options": [
+    {
+     "label": "Lotsning är huvudspåret i början; jag utgår från seniorernas rutiner.",
+     "pref": "cam:cal:cal-coaching-reask:guided",
+     "value": "guided"
+    },
+    {
+     "label": "Jag ber aktivt om utrymme att testa verktyg och metoder som jag ser fungerar, när det inte krockar med era ramar.",
+     "pref": "cam:cal:cal-coaching-reask:ask-room",
+     "value": "ask-room"
+    },
+    {
+     "label": "Först titta på hur ni granskar ett utkast tillsammans, sen iterera mer själv.",
+     "pref": "cam:cal:cal-coaching-reask:together-then-solo",
+     "value": "together-then-solo"
+    }
+   ],
+   "tip": "Så här kan det låta: »I början utgår jag från seniorernas input och era rutiner. Där jag ser verktyg eller metoder som fungerar vill jag fråga efter utrymme att testa mer fritt.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "coaching",
+    "consistencyOf": "cal-coaching"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-opening-reask",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "På trettio sekunder när du sätter dig: vad tar du upp först?",
+   "options": [
+    {
+     "label": "Att jag byggde ett demo efter intervjuinbjudan för att visa hur jag använder AI-verktyg på något relevant.",
+     "pref": "cam:cal:cal-opening-reask:demo-after-invite",
+     "value": "demo-after-invite"
+    },
+    {
+     "label": "Att demot bygger på publika uppgifter om Cambio, inte på intern information.",
+     "pref": "cam:cal:cal-opening-reask:public-data",
+     "value": "public-data"
+    },
+    {
+     "label": "Mönstret i korthet, och sen fråga vad de vill att du fördjupar.",
+     "pref": "cam:cal:cal-opening-reask:pattern-then-ask",
+     "value": "pattern-then-ask"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag byggde ett demo efter att jag fick frågan om intervju, utifrån publika uppgifter om Cambio, för att visa hur jag använder AI-verktyg. Vad vill ni att jag fördjupar?«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "opening",
+    "consistencyOf": "cal-lead-with"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-demo-after-invite",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "De frågar om du byggde demot just för den här intervjun. Vad säger du?",
+   "options": [
+    {
+     "label": "Ja: det var inte planerat innan jag fick frågan om intervju. Jag ville visa förmågan konkret.",
+     "pref": "cam:cal:cal-demo-after-invite:yes-after",
+     "value": "yes-after"
+    },
+    {
+     "label": "Ja, och betona att underlaget var offentliga uppgifter om Cambio — inte intern information.",
+     "pref": "cam:cal:cal-demo-after-invite:yes-public",
+     "value": "yes-public"
+    },
+    {
+     "label": "Ja, och att du gärna bygger mer specifikt om de ger tydligare krav.",
+     "pref": "cam:cal:cal-demo-after-invite:yes-and-more",
+     "value": "yes-and-more"
+    }
+   ],
+   "tip": "Så här kan det låta: »Ja — det var inte planerat innan jag fick frågan om intervju. Jag utgick från offentliga uppgifter om Cambio, och jag bygger gärna mer specifikt om jag får tydligare krav.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "demo_origin"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-loyalty-framing",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Du har sagt att du tenderar att vara lojal när villkoren är bra. Hur säger du det utan att det låter som att det är likgiltigt var du hamnar?",
+   "options": [
+    {
+     "label": "Säg lojaliteten som en styrka, och koppla den till samhällsnytta och vård så att Cambio ändå får en tydlig plats.",
+     "pref": "cam:cal:cal-loyalty-framing:loyalty-plus-why-here",
+     "value": "loyalty-plus-why-here"
+    },
+    {
+     "label": "Var ärlig men kort: foten i tech är målet, och just det här sammanhanget lockar extra.",
+     "pref": "cam:cal:cal-loyalty-framing:honest-short",
+     "value": "honest-short"
+    },
+    {
+     "label": "Lämna villkors-bisatsen om den gör meningen för lång; nämn den bara om de frågar om långsiktighet.",
+     "pref": "cam:cal:cal-loyalty-framing:skip-conditions",
+     "value": "skip-conditions"
+    }
+   ],
+   "tip": "Så här kan det låta: »När förutsättningarna är bra tenderar jag att stanna. Det som gör just Cambio intressant är samhällsnyttan och vårdinriktningen, inte bara att det är tech.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "loyalty_framing"
+   },
+   "source": "interview-prep-2026-11-10"
   }
  ]
 }

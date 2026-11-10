@@ -57,9 +57,12 @@ def scored(cid, difficulty, prompt, choices, correct, hint, reword, explain, ali
     }
 
 
-def cal(cid, theme, prompt, choices, tip):
+def cal(cid, theme, prompt, choices, tip, consistency_of=None):
     if not (2 <= len(choices) <= 4):
         raise SystemExit("%s: calibration needs 2-4 stances, got %d" % (cid, len(choices)))
+    cambio = {"kind": "calibration", "theme": theme}
+    if consistency_of:
+        cambio["consistencyOf"] = consistency_of
     return {
         "id": cid,
         "area": "kalibrering",
@@ -72,7 +75,7 @@ def cal(cid, theme, prompt, choices, tip):
         "tip": tip,
         "scored": False,
         "adaptive": True,
-        "cambio": {"kind": "calibration", "theme": theme},
+        "cambio": cambio,
         "source": "interview-prep-2026-11-10",
     }
 
