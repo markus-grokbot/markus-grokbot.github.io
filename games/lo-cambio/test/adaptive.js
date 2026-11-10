@@ -8,12 +8,13 @@ const P = require('../../lo-preferences/prefs.js');
 function loadMerged() {
   const root = path.join(__dirname, '../data');
   const D = JSON.parse(fs.readFileSync(path.join(root, 'areas.json'), 'utf8'));
-  const extraP = path.join(root, 'intervju-cards.json');
-  if (fs.existsSync(extraP)) {
+  ['intervju-cards.json', 'glossary-cards.json'].forEach(name => {
+    const extraP = path.join(root, name);
+    if (!fs.existsSync(extraP)) return;
     const extra = JSON.parse(fs.readFileSync(extraP, 'utf8'));
     (extra.areas || []).forEach(a => { if (!D.areas.some(x => x.id === a.id)) D.areas.push(a); });
     D.cards = D.cards.concat(extra.cards || []);
-  }
+  });
   return D;
 }
 
@@ -28,6 +29,16 @@ assert(scored.every(c => c.level === 1 && c.hint && c.reword && c.explain && c.o
 assert(calib.every(c => c.scored === false && c.cambio && c.cambio.kind === 'calibration' && !c.correct));
 assert(!JSON.stringify(scored.concat(calib)).match(/Martin Rehn|@cambio\.se/i), 'no employee names');
 console.log('bank OK', scored.length, 'scored', by, 'calib', calib.length);
+const gl = D.cards.filter(c => c.area === 'ordlista');
+assert.equal(gl.length, 505, 'glossary size');
+assert(D.areas.some(a => a.id === 'ordlista' && a.name === 'Ordlista · tech' && a.defaultOn !== false));
+assert(gl.every(c => A.isScored(c) && c.adaptive && c.level === 1 && c.hint && c.options.length >= 4));
+const gdb = {};
+gl.forEach(c => { gdb[c.difficulty] = (gdb[c.difficulty] || 0) + 1; });
+[1, 2, 3, 4, 5].forEach(l => assert((gdb[l] || 0) >= 15, 'glossary difficulty ' + l + ' got ' + gdb[l]));
+assert(!JSON.stringify(gl).match(/Martin Rehn|@cambio\.se/i), 'glossary names');
+console.log('glossary OK', gdb);
+
 
 // --- retire after 3 cumulative correct ---
 const q = scored.find(c => c.id === 'iq-fail-closed');

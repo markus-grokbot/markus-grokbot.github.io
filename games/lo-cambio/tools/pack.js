@@ -1,7 +1,8 @@
 // Regenerates data/core.js + data/cards-l3.js from data/areas.json. Run: node tools/pack.js
 const fs=require('fs'),p=__dirname+'/../data/';
-function loadData(){const d=JSON.parse(fs.readFileSync(p+'areas.json','utf8'));const extraP=p+'intervju-cards.json';
-if(fs.existsSync(extraP)){const extra=JSON.parse(fs.readFileSync(extraP,'utf8'));(extra.areas||[]).forEach(a=>{if(!d.areas.some(x=>x.id===a.id))d.areas.push(a);});d.cards=d.cards.concat(extra.cards||[]);}
+function loadData(){const d=JSON.parse(fs.readFileSync(p+'areas.json','utf8'));
+['intervju-cards.json','glossary-cards.json'].forEach(function(name){const extraP=p+name;if(!fs.existsSync(extraP))return;
+const extra=JSON.parse(fs.readFileSync(extraP,'utf8'));(extra.areas||[]).forEach(a=>{if(!d.areas.some(x=>x.id===a.id))d.areas.push(a);});d.cards=d.cards.concat(extra.cards||[]);});
 return d;}
 const d=loadData();
 const ids=new Set(d.areas.map(a=>a.id));for(const c of d.cards){if(!ids.has(c.area))throw Error('card '+c.id+' has unknown area '+c.area);if(!['updown','rate','choice'].includes(c.type))throw Error('bad type '+c.id);if(c.type==='choice'&&!(c.options&&c.options.length>1))throw Error('choice needs options '+c.id);}
