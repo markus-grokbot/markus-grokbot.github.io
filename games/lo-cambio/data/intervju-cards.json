@@ -1,0 +1,4591 @@
+{
+ "version": 1,
+ "note": "Interview-prep cards for Lo Cambio adaptive rounds. Factual cards are scored; calibration cards are not.",
+ "areas": [
+  {
+   "id": "intervju",
+   "name": "Intervju · fakta",
+   "description": "Scored mock-interview questions (adaptive difficulty). Facts from the public demo and the redacted briefing.",
+   "level": 1,
+   "defaultOn": true,
+   "decisions": []
+  },
+  {
+   "id": "kalibrering",
+   "name": "Intervju · kalibrering",
+   "description": "Open personal questions: no correct answer. Picks and free text export as calibration cues.",
+   "level": 1,
+   "defaultOn": true,
+   "decisions": []
+  }
+ ],
+ "cards": [
+  {
+   "id": "iq-pipeline-order",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "I vilken ordning går support-copilot-pipelinen?",
+   "options": [
+    {
+     "label": "Rått ärende → maskera personuppgifter → regelstyrd rutt → högst ett smalt modellsteg → validera (fail closed) → mänskligt godkännande/handoff → audit (JSONL, redan maskerat)",
+     "pref": "cam:iq:iq-pipeline-order:mask-rules-model-validate-human-audit",
+     "value": "mask-rules-model-validate-human-audit"
+    },
+    {
+     "label": "Rått ärende → modellsteg → maskering efteråt → en människa godkänner om det ser fel ut",
+     "pref": "cam:iq:iq-pipeline-order:model-then-mask",
+     "value": "model-then-mask"
+    },
+    {
+     "label": "Rått ärende → skicka automatiskt → audit om någon klagar",
+     "pref": "cam:iq:iq-pipeline-order:auto-send",
+     "value": "auto-send"
+    },
+    {
+     "label": "RAG först → modell skriver svaret → skicka till journalsystemet",
+     "pref": "cam:iq:iq-pipeline-order:rag-send-ehr",
+     "value": "rag-send-ehr"
+    }
+   ],
+   "correct": "mask-rules-model-validate-human-audit",
+   "hint": "Maskering och flera handoff-regler körs före eller oberoende av modellen.",
+   "reword": "What is the support-copilot pipeline order?",
+   "explain": "Rått ärende → maskera PII → regelstyrd rutt → högst ett smalt modellsteg → validera fail closed → mänskligt godkännande eller handoff → audit i JSONL som redan är maskerat.",
+   "aliases": [
+    "maskera",
+    "regelstyrd",
+    "fail closed",
+    "raw ticket",
+    "mask PII"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-synthetic-only",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad gäller för datan i demot?",
+   "options": [
+    {
+     "label": "All data är syntetisk. Inget skickas automatiskt.",
+     "pref": "cam:iq:iq-synthetic-only:synthetic-no-auto",
+     "value": "synthetic-no-auto"
+    },
+    {
+     "label": "Det är anonymiserade riktiga patientärenden från en region.",
+     "pref": "cam:iq:iq-synthetic-only:real-anonymised",
+     "value": "real-anonymised"
+    },
+    {
+     "label": "Det är live-ärenden men utan namn.",
+     "pref": "cam:iq:iq-synthetic-only:live-no-names",
+     "value": "live-no-names"
+    },
+    {
+     "label": "Modellsvaret går rakt in i journalsystemet.",
+     "pref": "cam:iq:iq-synthetic-only:into-ehr",
+     "value": "into-ehr"
+    }
+   ],
+   "correct": "synthetic-no-auto",
+   "hint": "Inga riktiga patienter eller användare ingår.",
+   "reword": "What kind of data does the demo use, and is anything auto-sent?",
+   "explain": "All data is synthetic. Nothing is ever auto-sent.",
+   "aliases": [
+    "syntetisk",
+    "synthetic",
+    "inget skickas",
+    "nothing is ever auto-sent"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-awaiting-meaning",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad betyder statusen awaiting_approval?",
+   "options": [
+    {
+     "label": "Ett utkast väntar. Det betyder inte att godkännandet redan har börjat. En människa måste fortfarande godkänna.",
+     "pref": "cam:iq:iq-awaiting-meaning:draft-waiting",
+     "value": "draft-waiting"
+    },
+    {
+     "label": "Ärendet är redan godkänt och på väg ut.",
+     "pref": "cam:iq:iq-awaiting-meaning:already-approved",
+     "value": "already-approved"
+    },
+    {
+     "label": "Modellen har skickat svaret och väntar på kvitto.",
+     "pref": "cam:iq:iq-awaiting-meaning:model-sent",
+     "value": "model-sent"
+    },
+    {
+     "label": "Handoff har startat till en jourhavande läkare.",
+     "pref": "cam:iq:iq-awaiting-meaning:clinician-handoff",
+     "value": "clinician-handoff"
+    }
+   ],
+   "correct": "draft-waiting",
+   "hint": "Godkänn är avstängt om ärendet inte är awaiting_approval.",
+   "reword": "What does awaiting_approval mean?",
+   "explain": "A draft is waiting. It does not mean approval has already started. A human still has to approve.",
+   "aliases": [
+    "utkast väntar",
+    "draft is waiting",
+    "not that approval has already started"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-sent-meaning",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad betyder sent i demot?",
+   "options": [
+    {
+     "label": "Lokal, auditerad etikett för godkänn eller redigera. Inte leverans till ett externt ärendesystem — det finns ingen ärendeintegration.",
+     "pref": "cam:iq:iq-sent-meaning:local-label",
+     "value": "local-label"
+    },
+    {
+     "label": "Meddelandet har skickats till regionens ticketing.",
+     "pref": "cam:iq:iq-sent-meaning:external-ticket",
+     "value": "external-ticket"
+    },
+    {
+     "label": "Patienten har fått svaret.",
+     "pref": "cam:iq:iq-sent-meaning:patient-got-it",
+     "value": "patient-got-it"
+    },
+    {
+     "label": "Utkastet ligger i utkorgen och går iväg om 30 sekunder.",
+     "pref": "cam:iq:iq-sent-meaning:outbox",
+     "value": "outbox"
+    }
+   ],
+   "correct": "local-label",
+   "hint": "Det finns ingen ticketing-integration i demot.",
+   "reword": "What does sent mean in the demo?",
+   "explain": "The local audited label for approve or edit. It is not delivery to an external ticketing system.",
+   "aliases": [
+    "lokal",
+    "auditerad",
+    "not delivery",
+    "no ticketing"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-handoff-approve",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Kan en handoff godkännas som den är?",
+   "options": [
+    {
+     "label": "Nej. En handoff kan inte godkännas som den är. Godkänn är avstängt om ärendet inte är awaiting_approval.",
+     "pref": "cam:iq:iq-handoff-approve:no",
+     "value": "no"
+    },
+    {
+     "label": "Ja, om confidence är hög.",
+     "pref": "cam:iq:iq-handoff-approve:yes-high-conf",
+     "value": "yes-high-conf"
+    },
+    {
+     "label": "Ja, Godkänn är alltid klickbart.",
+     "pref": "cam:iq:iq-handoff-approve:always",
+     "value": "always"
+    },
+    {
+     "label": "Bara om det är en avvikelse.",
+     "pref": "cam:iq:iq-handoff-approve:if-incident",
+     "value": "if-incident"
+    }
+   ],
+   "correct": "no",
+   "hint": "Tänk på knappen Godkänn.",
+   "reword": "Can a handoff be approved as-is?",
+   "explain": "No. Godkänn stays disabled unless the case is awaiting_approval.",
+   "aliases": [
+    "nej",
+    "kan inte",
+    "godkänn är avstängt",
+    "cannot be approved"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-adapter-none",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilken modelladapter använder demosidan?",
+   "options": [
+    {
+     "label": "Adapter none — samma offline-väg som eval-paketet.",
+     "pref": "cam:iq:iq-adapter-none:none",
+     "value": "none"
+    },
+    {
+     "label": "En live molnmodell-adapter.",
+     "pref": "cam:iq:iq-adapter-none:cloud",
+     "value": "cloud"
+    },
+    {
+     "label": "--adapter fake, samma som CLI-stubben.",
+     "pref": "cam:iq:iq-adapter-none:fake",
+     "value": "fake"
+    },
+    {
+     "label": "En FHIR-adapter mot journalsystemet.",
+     "pref": "cam:iq:iq-adapter-none:fhir",
+     "value": "fhir"
+    }
+   ],
+   "correct": "none",
+   "hint": "En live-modell ingår inte i eval-siffrorna, och sidan går samma väg.",
+   "reword": "Which model adapter does the live demo page use?",
+   "explain": "Adapter none — the same offline path as the evaluation pack. --adapter fake exists on the CLI as a deterministic stub and is not used by the demo page.",
+   "aliases": [
+    "adapter none",
+    "none",
+    "offline"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-inspelat",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad gör Inspelat-läget?",
+   "options": [
+    {
+     "label": "Visar frysta exempel och postar inget beslut.",
+     "pref": "cam:iq:iq-inspelat:frozen-no-post",
+     "value": "frozen-no-post"
+    },
+    {
+     "label": "Spelar in samtalet med rekryteraren.",
+     "pref": "cam:iq:iq-inspelat:records-interview",
+     "value": "records-interview"
+    },
+    {
+     "label": "Kör samma ärende live mot en modell tre gånger.",
+     "pref": "cam:iq:iq-inspelat:live-repeats",
+     "value": "live-repeats"
+    },
+    {
+     "label": "Skickar utkastet till auditen som sent.",
+     "pref": "cam:iq:iq-inspelat:marks-sent",
+     "value": "marks-sent"
+    }
+   ],
+   "correct": "frozen-no-post",
+   "hint": "Det är backup om livesidan strular.",
+   "reword": "What is Inspelat mode?",
+   "explain": "It shows frozen examples and does not post a decision.",
+   "aliases": [
+    "frysta exempel",
+    "frozen examples",
+    "postar inget",
+    "does not post"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-tools-name",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilka AI-kodverktyg kan du nämna (utan att påstå att ett av dem är huvudverktyget)?",
+   "options": [
+    {
+     "label": "Codex, OpenCode, Grok Build, Cursor och lokala modeller via Ollama. Grok Bot orkestrerade support-copilot-demot (står i README).",
+     "pref": "cam:iq:iq-tools-name:named-set",
+     "value": "named-set"
+    },
+    {
+     "label": "Främst Claude Code, plus lite ChatGPT.",
+     "pref": "cam:iq:iq-tools-name:claude-main",
+     "value": "claude-main"
+    },
+    {
+     "label": "Bara Copilot Studio mot journalsystemet.",
+     "pref": "cam:iq:iq-tools-name:copilot-studio",
+     "value": "copilot-studio"
+    },
+    {
+     "label": "Inga namngivna verktyg — jag skrev allt för hand.",
+     "pref": "cam:iq:iq-tools-name:hand-only",
+     "value": "hand-only"
+    }
+   ],
+   "correct": "named-set",
+   "hint": "Säg inte att du mest använder Claude Code.",
+   "reword": "Which coding tools can you name?",
+   "explain": "Codex, OpenCode, Grok Build, Cursor and local models (Ollama). Grok Bot orchestrated the demo.",
+   "aliases": [
+    "codex",
+    "opencode",
+    "grok build",
+    "cursor",
+    "ollama"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-languages",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilka programspråk och talade språk stämmer för dig?",
+   "options": [
+    {
+     "label": "Python är huvudspråket, Node.js ett starkt andraspråk. Svenska är modersmål, engelska fungerar obehindrat.",
+     "pref": "cam:iq:iq-languages:py-node-sv-en",
+     "value": "py-node-sv-en"
+    },
+    {
+     "label": "TypeScript är huvudspråket sedan flera år, och jag är svag på svenska.",
+     "pref": "cam:iq:iq-languages:ts-main",
+     "value": "ts-main"
+    },
+    {
+     "label": "Jag jobbar bara i C# mot journalsystem.",
+     "pref": "cam:iq:iq-languages:csharp-only",
+     "value": "csharp-only"
+    },
+    {
+     "label": "Python bara; jag tar intervjun enbart på svenska.",
+     "pref": "cam:iq:iq-languages:py-sv-only",
+     "value": "py-sv-only"
+    }
+   ],
+   "correct": "py-node-sv-en",
+   "hint": "Intervjun är tänkt på engelska; ärendetexten i demot är svenska.",
+   "reword": "What languages do you work in, spoken and written?",
+   "explain": "Python is the main language; Node.js is a strong second. Swedish native; works comfortably in English.",
+   "aliases": [
+    "python",
+    "node",
+    "svenska",
+    "engelska"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-location",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Var sökte du, och var bor du?",
+   "options": [
+    {
+     "label": "Jag sökte Stockholm. Jag bor i Uppsala, ungefär 40–50 minuter dit. Hybrid med tre kontorsdagar passar; jag föredrar Stockholm och är öppen för att flytta för en långsiktig roll.",
+     "pref": "cam:iq:iq-location:sthlm-uppsala",
+     "value": "sthlm-uppsala"
+    },
+    {
+     "label": "Jag sökte Göteborg och tänker pendla från Umeå.",
+     "pref": "cam:iq:iq-location:gbg",
+     "value": "gbg"
+    },
+    {
+     "label": "Jag bor redan i Stockholm och vill bara jobba remote.",
+     "pref": "cam:iq:iq-location:remote-only",
+     "value": "remote-only"
+    },
+    {
+     "label": "Jag behöver visum innan jag kan börja i Sverige.",
+     "pref": "cam:iq:iq-location:visa",
+     "value": "visa"
+    }
+   ],
+   "correct": "sthlm-uppsala",
+   "hint": "Du är svensk medborgare och behöver inget visum.",
+   "reword": "Where do you live, and which location did you apply for?",
+   "explain": "Applied for Stockholm. Lives in Uppsala, about 40–50 minutes away. Hybrid with three office days suits him.",
+   "aliases": [
+    "uppsala",
+    "stockholm",
+    "40-50",
+    "40–50"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-start-date",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "När kan du börja?",
+   "options": [
+    {
+     "label": "Från 15 november 2026. Ett kort inbokat pass kan förskjuta det några dagar, men i övrigt med kort varsel.",
+     "pref": "cam:iq:iq-start-date:15-nov",
+     "value": "15-nov"
+    },
+    {
+     "label": "19 oktober 2026, som det stod i ansökan — det datumet gäller fortfarande.",
+     "pref": "cam:iq:iq-start-date:19-oct",
+     "value": "19-oct"
+    },
+    {
+     "label": "Tidigast om sex månader.",
+     "pref": "cam:iq:iq-start-date:six-months",
+     "value": "six-months"
+    },
+    {
+     "label": "Jag kan inte säga något datum.",
+     "pref": "cam:iq:iq-start-date:unknown",
+     "value": "unknown"
+    }
+   ],
+   "correct": "15-nov",
+   "hint": "Ansökan (15 oktober) sa 19 oktober; det datumet har passerat.",
+   "reword": "When are you available to start?",
+   "explain": "From 15 November 2026. A short booked shift might move that by a few days.",
+   "aliases": [
+    "15 november",
+    "15 november 2026"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-fail-closed",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad betyder fail closed här?",
+   "options": [
+    {
+     "label": "Om valideringen misslyckas stängs steget ner, i stället för att ett osäkert utkast släpps igenom.",
+     "pref": "cam:iq:iq-fail-closed:stop",
+     "value": "stop"
+    },
+    {
+     "label": "Systemet gissar vidare och märker svaret som osäkert.",
+     "pref": "cam:iq:iq-fail-closed:guess",
+     "value": "guess"
+    },
+    {
+     "label": "Modellen skickar ändå, men auditen flaggar det.",
+     "pref": "cam:iq:iq-fail-closed:send-and-flag",
+     "value": "send-and-flag"
+    },
+    {
+     "label": "Användaren får välja om utkastet ska släppas trots felet.",
+     "pref": "cam:iq:iq-fail-closed:user-chooses",
+     "value": "user-chooses"
+    }
+   ],
+   "correct": "stop",
+   "hint": "Motsatsen vore fail open: släppa igenom vid osäkerhet.",
+   "reword": "What does fail closed mean in this demo?",
+   "explain": "If validation fails, the step shuts down instead of letting an uncertain draft through.",
+   "aliases": [
+    "stängs",
+    "fail closed",
+    "inte släppa igenom",
+    "shut"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-human-always",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Behöver även en lyckad väg (awaiting_approval) en människa?",
+   "options": [
+    {
+     "label": "Ja. Inget skickas automatiskt. En människa måste fortfarande godkänna utkastet.",
+     "pref": "cam:iq:iq-human-always:yes",
+     "value": "yes"
+    },
+    {
+     "label": "Nej, awaiting_approval skickas av sig självt efter 10 sekunder.",
+     "pref": "cam:iq:iq-human-always:auto-after",
+     "value": "auto-after"
+    },
+    {
+     "label": "Bara om confidence är under 0,5.",
+     "pref": "cam:iq:iq-human-always:only-low",
+     "value": "only-low"
+    },
+    {
+     "label": "Bara patientdata-fall behöver en människa.",
+     "pref": "cam:iq:iq-human-always:only-pii",
+     "value": "only-pii"
+    }
+   ],
+   "correct": "yes",
+   "hint": "Human approval gate sitter efter valideringen, och tidigare vid handoff.",
+   "reword": "Does a happy-path draft still need a person?",
+   "explain": "Yes. Nothing is auto-sent. A human still has to approve.",
+   "aliases": [
+    "ja",
+    "människa",
+    "inget skickas automatiskt"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-interview-lang",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilket språk är intervjun tänkt på, och vilket språk har demo-ärendena?",
+   "options": [
+    {
+     "label": "Intervjun på engelska; ärendetexten i demot på svenska. All demo-data är syntetisk.",
+     "pref": "cam:iq:iq-interview-lang:en-sv",
+     "value": "en-sv"
+    },
+    {
+     "label": "Allt på svenska, inklusive tekniska termer.",
+     "pref": "cam:iq:iq-interview-lang:all-sv",
+     "value": "all-sv"
+    },
+    {
+     "label": "Allt på engelska, även ärendetexten.",
+     "pref": "cam:iq:iq-interview-lang:all-en",
+     "value": "all-en"
+    },
+    {
+     "label": "Intervjun på svenska, demot bara på engelska.",
+     "pref": "cam:iq:iq-interview-lang:sv-en-flip",
+     "value": "sv-en-flip"
+    }
+   ],
+   "correct": "en-sv",
+   "hint": "Du kan byta till svenska om de gör det, men planen är engelska.",
+   "reword": "What language is the interview in, and what language are the demo tickets in?",
+   "explain": "Speak English; demo ticket text is Swedish; all demo data is synthetic.",
+   "aliases": [
+    "engelska",
+    "svenska",
+    "english",
+    "swedish"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-two-plugins",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilka två plugins finns i demot?",
+   "options": [
+    {
+     "label": "support_ticket och incident_report (avvikelse). En incident lämnas alltid över.",
+     "pref": "cam:iq:iq-two-plugins:both",
+     "value": "both"
+    },
+    {
+     "label": "Bara en FHIR AdverseEvent-plugin.",
+     "pref": "cam:iq:iq-two-plugins:fhir-only",
+     "value": "fhir-only"
+    },
+    {
+     "label": "support_ticket och en journal-skrivar-plugin.",
+     "pref": "cam:iq:iq-two-plugins:ehr-write",
+     "value": "ehr-write"
+    },
+    {
+     "label": "Inga plugins — allt är en enda prompt.",
+     "pref": "cam:iq:iq-two-plugins:no-plugins",
+     "value": "no-plugins"
+    }
+   ],
+   "correct": "both",
+   "hint": "På demosidan är de fyra knapparna ändå support_ticket.",
+   "reword": "Which plugins are implemented?",
+   "explain": "support_ticket and incident_report (avvikelse). An incident always hands off.",
+   "aliases": [
+    "support_ticket",
+    "incident_report",
+    "avvikelse"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-who-for",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vem är verktyget till för?",
+   "options": [
+    {
+     "label": "Supportpersonal i vårdsystem. Det ger inte kliniska råd och skriver inte i journalen.",
+     "pref": "cam:iq:iq-who-for:support",
+     "value": "support"
+    },
+    {
+     "label": "Patienter som chatttar om sina provsvar.",
+     "pref": "cam:iq:iq-who-for:patients",
+     "value": "patients"
+    },
+    {
+     "label": "Sjuksköterskor som ska få automatiska ordinationer.",
+     "pref": "cam:iq:iq-who-for:nurses-orders",
+     "value": "nurses-orders"
+    },
+    {
+     "label": "Ett öppet kundchat-fönster på företagets webbplats.",
+     "pref": "cam:iq:iq-who-for:public-chat",
+     "value": "public-chat"
+    }
+   ],
+   "correct": "support",
+   "hint": "Swedish support copilot for healthcare-software support staff.",
+   "reword": "Who is the copilot for?",
+   "explain": "Healthcare-software support staff. Not clinical advice, not live journal access.",
+   "aliases": [
+    "supportpersonal",
+    "support staff",
+    "inte kliniska råd"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-audit-form",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Hur ser auditen ut?",
+   "options": [
+    {
+     "label": "JSONL, redan maskerat, över vad som beslutades.",
+     "pref": "cam:iq:iq-audit-form:jsonl-masked",
+     "value": "jsonl-masked"
+    },
+    {
+     "label": "En omaskerad video av operatören.",
+     "pref": "cam:iq:iq-audit-form:video",
+     "value": "video"
+    },
+    {
+     "label": "Ett mejl till patienten.",
+     "pref": "cam:iq:iq-audit-form:email",
+     "value": "email"
+    },
+    {
+     "label": "En FHIR AuditEvent mot den riktiga journalen.",
+     "pref": "cam:iq:iq-audit-form:fhir-audit",
+     "value": "fhir-audit"
+    }
+   ],
+   "correct": "jsonl-masked",
+   "hint": "Spårbarhet utan att skicka vidare personuppgifter.",
+   "reword": "What does the audit trail look like?",
+   "explain": "JSONL, already masked, of what was decided.",
+   "aliases": [
+    "jsonl",
+    "maskerat",
+    "masked"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-pattern",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vilket mönster vill du leda med?",
+   "options": [
+    {
+     "label": "Regler först, modellen gör ett smalt jobb, schema-koll, och en människa beslutar.",
+     "pref": "cam:iq:iq-pattern:rules-model-schema-human",
+     "value": "rules-model-schema-human"
+    },
+    {
+     "label": "En generell chattbot som får hela ärendet och svarar fritt.",
+     "pref": "cam:iq:iq-pattern:chatbot",
+     "value": "chatbot"
+    },
+    {
+     "label": "Modellen skriver koden och svaret; du granskar efteråt om tid finns.",
+     "pref": "cam:iq:iq-pattern:model-first",
+     "value": "model-first"
+    },
+    {
+     "label": "Regelmotor utan någon modell och utan eval.",
+     "pref": "cam:iq:iq-pattern:rules-only-no-eval",
+     "value": "rules-only-no-eval"
+    }
+   ],
+   "correct": "rules-model-schema-human",
+   "hint": "Samma mönster som i ops-pack-demo och support-copiloten.",
+   "reword": "What pattern do you lead with?",
+   "explain": "Rules first, the model does one narrow job, a schema check, and a person decides.",
+   "aliases": [
+    "regler först",
+    "rules first",
+    "schema",
+    "människa"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-citizen",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Behöver du visum för att jobba i Sverige?",
+   "options": [
+    {
+     "label": "Nej. Svensk medborgare, rätt att arbeta i Sverige, inget visum behövs.",
+     "pref": "cam:iq:iq-citizen:no-visa",
+     "value": "no-visa"
+    },
+    {
+     "label": "Ja, ett uppehållstillstånd måste sökas först.",
+     "pref": "cam:iq:iq-citizen:yes-visa",
+     "value": "yes-visa"
+    },
+    {
+     "label": "Bara om rollen är i Stockholm.",
+     "pref": "cam:iq:iq-citizen:sthlm-visa",
+     "value": "sthlm-visa"
+    },
+    {
+     "label": "Det är oklart; ta inte upp det.",
+     "pref": "cam:iq:iq-citizen:unclear",
+     "value": "unclear"
+    }
+   ],
+   "correct": "no-visa",
+   "hint": "Kort faktapunkt, inget att brodera ut.",
+   "reword": "Do you need a visa to work in Sweden?",
+   "explain": "Swedish citizen; right to work in Sweden; no visa needed.",
+   "aliases": [
+    "svensk medborgare",
+    "inget visum",
+    "no visa"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-vocab-masking",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad betyder maskering i det här demot?",
+   "options": [
+    {
+     "label": "Känsliga värden byts mot platshållare innan modellen ser texten.",
+     "pref": "cam:iq:iq-vocab-masking:placeholders",
+     "value": "placeholders"
+    },
+    {
+     "label": "Texten raderas helt ur auditen.",
+     "pref": "cam:iq:iq-vocab-masking:delete",
+     "value": "delete"
+    },
+    {
+     "label": "Patienten godkänner att raw-texten skickas till en molnmodell.",
+     "pref": "cam:iq:iq-vocab-masking:consent-send",
+     "value": "consent-send"
+    },
+    {
+     "label": "Bara e-postadresser döljs, identifierare får synas.",
+     "pref": "cam:iq:iq-vocab-masking:email-only",
+     "value": "email-only"
+    }
+   ],
+   "correct": "placeholders",
+   "hint": "I hero-fallet blir numret [personnummer-maskat] och namnet [namn-maskat].",
+   "reword": "What does masking mean here?",
+   "explain": "Sensitive values are replaced with placeholders before the model sees the text.",
+   "aliases": [
+    "platshållare",
+    "placeholders",
+    "före modellen",
+    "before the model"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-vocab-handoff",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad betyder handoff / överlämning här?",
+   "options": [
+    {
+     "label": "Ärendet lämnas till en människa; Godkänn förblir avstängt.",
+     "pref": "cam:iq:iq-vocab-handoff:to-human",
+     "value": "to-human"
+    },
+    {
+     "label": "Ärendet skickas automatiskt till patienten.",
+     "pref": "cam:iq:iq-vocab-handoff:to-patient",
+     "value": "to-patient"
+    },
+    {
+     "label": "Modellen tar över från reglerna och svarar klart.",
+     "pref": "cam:iq:iq-vocab-handoff:model-takes-over",
+     "value": "model-takes-over"
+    },
+    {
+     "label": "En FHIR-remiss skapas i journalsystemet.",
+     "pref": "cam:iq:iq-vocab-handoff:fhir-referral",
+     "value": "fhir-referral"
+    }
+   ],
+   "correct": "to-human",
+   "hint": "Handoff är inte samma sak som awaiting_approval.",
+   "reword": "What does handoff mean here?",
+   "explain": "The case is left to a human; Godkänn stays disabled.",
+   "aliases": [
+    "lämnas till en människa",
+    "godkänn förblir avstängt",
+    "left to a human"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-vocab-golden",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad är golden labels i evallen?",
+   "options": [
+    {
+     "label": "Fast facit som evallen mäts mot.",
+     "pref": "cam:iq:iq-vocab-golden:fixed-ref",
+     "value": "fixed-ref"
+    },
+    {
+     "label": "Modellens första gissning, sparad som sanning.",
+     "pref": "cam:iq:iq-vocab-golden:model-guess",
+     "value": "model-guess"
+    },
+    {
+     "label": "En guldstjärna i UI:t när confidence är hög.",
+     "pref": "cam:iq:iq-vocab-golden:ui-star",
+     "value": "ui-star"
+    },
+    {
+     "label": "Produktionsetiketter från riktiga patientärenden.",
+     "pref": "cam:iq:iq-vocab-golden:prod-labels",
+     "value": "prod-labels"
+    }
+   ],
+   "correct": "fixed-ref",
+   "hint": "Du verifierar bland annat med tester, scheman, golden labels och upprepade eval.",
+   "reword": "What are golden labels in the eval?",
+   "explain": "Fixed reference answers that the evaluation is measured against.",
+   "aliases": [
+    "fast facit",
+    "fixed",
+    "facit",
+    "reference"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-vocab-gdpr-pseudo",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "prompt": "Vad är skillnaden mellan anonymisering och pseudonymisering (GDPR)?",
+   "options": [
+    {
+     "label": "Anonymiserat går inte att koppla tillbaka. Pseudonymiserat kan kopplas tillbaka med en nyckel, och räknas fortfarande som personuppgifter.",
+     "pref": "cam:iq:iq-vocab-gdpr-pseudo:anon-vs-pseudo",
+     "value": "anon-vs-pseudo"
+    },
+    {
+     "label": "De betyder samma sak i GDPR.",
+     "pref": "cam:iq:iq-vocab-gdpr-pseudo:same",
+     "value": "same"
+    },
+    {
+     "label": "Pseudonymiserat är alltid undantaget från GDPR.",
+     "pref": "cam:iq:iq-vocab-gdpr-pseudo:pseudo-exempt",
+     "value": "pseudo-exempt"
+    },
+    {
+     "label": "Anonymiserat kan kopplas tillbaka om man har nyckeln.",
+     "pref": "cam:iq:iq-vocab-gdpr-pseudo:anon-has-key",
+     "value": "anon-has-key"
+    }
+   ],
+   "correct": "anon-vs-pseudo",
+   "hint": "Demo-datan är syntetisk — påhittad — inte anonymiserad produktionsdata.",
+   "reword": "Anonymisation vs pseudonymisation under GDPR?",
+   "explain": "Anonymised cannot be linked back. Pseudonymised can be linked back with a key, so it is still personal data.",
+   "aliases": [
+    "anonymiserat går inte",
+    "pseudonymiserat kan kopplas",
+    "still personal data"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-wrote-self",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur mycket av demot skrev du själv?",
+   "options": [
+    {
+     "label": "Jag styrde arbetet: scope, säkerhetsgrindar, eval, granskade diffs, valde vad som skulle behållas, verifierade tester och de fyra frysta exemplen. Jag skrev inte merparten av koden för hand.",
+     "pref": "cam:iq:iq-wrote-self:directed",
+     "value": "directed"
+    },
+    {
+     "label": "Jag skrev i princip all produktionskod för hand och lät agenter bara kommentera.",
+     "pref": "cam:iq:iq-wrote-self:hand-wrote",
+     "value": "hand-wrote"
+    },
+    {
+     "label": "Grok Bot gjorde allt; jag tittade inte på testerna.",
+     "pref": "cam:iq:iq-wrote-self:bot-only",
+     "value": "bot-only"
+    },
+    {
+     "label": "Jag copy-pastade ett färdigt företagsrepo.",
+     "pref": "cam:iq:iq-wrote-self:copied",
+     "value": "copied"
+    }
+   ],
+   "correct": "directed",
+   "hint": "Kodagenter skrev det mesta: Codex, OpenCode, Grok Build, Cursor, lokala modeller, med Grok Bot som orkestrerade.",
+   "reword": "How much of the demo did you write yourself?",
+   "explain": "I directed the work: scope, safety gates, evaluations, reviewed diffs, decided what to keep, verified the test suite and the four frozen examples. I did not hand-write most of the code.",
+   "aliases": [
+    "styrde",
+    "directed",
+    "skrev inte merparten",
+    "did not hand-write"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-verify-how",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur verifierar du det en agent tar fram?",
+   "options": [
+    {
+     "label": "Först tester, JSON-scheman, golden labels och upprepade eval. Sedan en mänsklig grind för allt som liknar ett beslut.",
+     "pref": "cam:iq:iq-verify-how:tests-then-gate",
+     "value": "tests-then-gate"
+    },
+    {
+     "label": "Jag läser igenom koden snabbt och släpper om den kompilerar.",
+     "pref": "cam:iq:iq-verify-how:skim",
+     "value": "skim"
+    },
+    {
+     "label": "Jag litar på modellens confidence-score.",
+     "pref": "cam:iq:iq-verify-how:confidence",
+     "value": "confidence"
+    },
+    {
+     "label": "Jag kör bara i produktion och tittar på klagomål.",
+     "pref": "cam:iq:iq-verify-how:prod-feedback",
+     "value": "prod-feedback"
+    }
+   ],
+   "correct": "tests-then-gate",
+   "hint": "Samma anda som i demot: mät först, människa på beslut.",
+   "reword": "How do you verify what an agent produces?",
+   "explain": "Tests, JSON schemas, golden labels and eval repeats first; then a human gate for anything that looks like a decision.",
+   "aliases": [
+    "tester",
+    "scheman",
+    "golden",
+    "eval",
+    "mänsklig grind"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-work-if-joined",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur skulle du jobba om du började på Cambio?",
+   "options": [
+    {
+     "label": "Sätta mig med kollegor, välja ett jobbigt internt flöde, göra en liten prototyp, och lägga in eval och godkännande redan i första versionen.",
+     "pref": "cam:iq:iq-work-if-joined:sit-prototype-eval",
+     "value": "sit-prototype-eval"
+    },
+    {
+     "label": "Bygga en stor plattform först, sen fråga användarna.",
+     "pref": "cam:iq:iq-work-if-joined:platform-first",
+     "value": "platform-first"
+    },
+    {
+     "label": "Koppla en generell chattbot direkt mot patientjournaler.",
+     "pref": "cam:iq:iq-work-if-joined:chat-vs-ehr",
+     "value": "chat-vs-ehr"
+    },
+    {
+     "label": "Vänta på en färdig kravspec från arkitektur innan något byggs.",
+     "pref": "cam:iq:iq-work-if-joined:wait-spec",
+     "value": "wait-spec"
+    }
+   ],
+   "correct": "sit-prototype-eval",
+   "hint": "Litet, mätbart, med människa i loopen från start.",
+   "reword": "How would you work if you joined Cambio?",
+   "explain": "Sit with colleagues, pick a painful internal workflow, prototype a small tool, and put evaluation and approval in from the first version.",
+   "aliases": [
+    "sätta mig med kollegor",
+    "jobbigt internt flöde",
+    "eval och godkännande"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-claude-code",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Om de frågar om Claude Code?",
+   "options": [
+    {
+     "label": "Lätt hands-on-vana med Claude Code och Claude Desktop. Tillsammans med liknande verktyg är jag trygg med att använda det på riktigt. Jag använder det inte som mitt huvudverktyg.",
+     "pref": "cam:iq:iq-claude-code:light",
+     "value": "light"
+    },
+    {
+     "label": "Det är mitt huvudverktyg sedan länge.",
+     "pref": "cam:iq:iq-claude-code:main",
+     "value": "main"
+    },
+    {
+     "label": "Jag har aldrig hört talas om det.",
+     "pref": "cam:iq:iq-claude-code:never",
+     "value": "never"
+    },
+    {
+     "label": "Jag vägrar använda det verktyget.",
+     "pref": "cam:iq:iq-claude-code:refuse",
+     "value": "refuse"
+    }
+   ],
+   "correct": "light",
+   "hint": "Säg inte att du mest använder Claude Code.",
+   "reword": "What if they ask about Claude Code?",
+   "explain": "Light hands-on familiarity with Claude Code and Claude Desktop. Do not say you mainly use Claude Code.",
+   "aliases": [
+    "lätt hands-on",
+    "light hands-on",
+    "inte som mitt huvudverktyg"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g001",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad händer i G-001, det låsta hero-fallet?",
+   "options": [
+    {
+     "label": "Patientdata i ärendet leder till handoff. Modellen ser aldrig numret eller namnet. Godkänn förblir avstängt.",
+     "pref": "cam:iq:iq-g001:handoff-masked",
+     "value": "handoff-masked"
+    },
+    {
+     "label": "Modellen skriver ett vårdsvar och skickar det.",
+     "pref": "cam:iq:iq-g001:model-sends",
+     "value": "model-sends"
+    },
+    {
+     "label": "Ärendet blir awaiting_approval med en KB-citation.",
+     "pref": "cam:iq:iq-g001:awaiting",
+     "value": "awaiting"
+    },
+    {
+     "label": "Numret skickas till en molnmodell för kontroll.",
+     "pref": "cam:iq:iq-g001:cloud-check",
+     "value": "cloud-check"
+    }
+   ],
+   "correct": "handoff-masked",
+   "hint": "Maskeringen är Luhn-strikt.",
+   "reword": "What should you show with G-001?",
+   "explain": "Patient data in the ticket → handoff. The model never sees the number or the name. Godkänn stays disabled.",
+   "aliases": [
+    "patientdata",
+    "handoff",
+    "ser aldrig",
+    "godkänn förblir avstängt"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g001-masks",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad händer med Skatteverkets publicerade testnummer och det syntetiska namnet i G-001?",
+   "options": [
+    {
+     "label": "Numret blir [personnummer-maskat], namnet blir [namn-maskat].",
+     "pref": "cam:iq:iq-g001-masks:both-masked",
+     "value": "both-masked"
+    },
+    {
+     "label": "Numret syns, namnet maskeras.",
+     "pref": "cam:iq:iq-g001-masks:pnr-visible",
+     "value": "pnr-visible"
+    },
+    {
+     "label": "Inget maskeras eftersom det är testdata.",
+     "pref": "cam:iq:iq-g001-masks:nothing",
+     "value": "nothing"
+    },
+    {
+     "label": "Bara e-post maskeras.",
+     "pref": "cam:iq:iq-g001-masks:email",
+     "value": "email"
+    }
+   ],
+   "correct": "both-masked",
+   "hint": "Det är ett publicerat testnummer, inte en riktig person.",
+   "reword": "What do the G-001 masks look like?",
+   "explain": "The published test number becomes [personnummer-maskat]; the synthetic name becomes [namn-maskat].",
+   "aliases": [
+    "personnummer-maskat",
+    "namn-maskat"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-t001",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad händer i ticket-001 (happy path)?",
+   "options": [
+    {
+     "label": "Kan inte logga in på SITHS → awaiting_approval, citation opencode-deepseek-v4.1-flash-free:KB-001. En människa måste fortfarande godkänna.",
+     "pref": "cam:iq:iq-t001:siths-awaiting",
+     "value": "siths-awaiting"
+    },
+    {
+     "label": "Patientdata → handoff.",
+     "pref": "cam:iq:iq-t001:g001-mixup",
+     "value": "g001-mixup"
+    },
+    {
+     "label": "Spara-knapp kraschar och fel artikel hämtas.",
+     "pref": "cam:iq:iq-t001:t008-mixup",
+     "value": "t008-mixup"
+    },
+    {
+     "label": "Ärendet skickas automatiskt som sent.",
+     "pref": "cam:iq:iq-t001:auto-sent",
+     "value": "auto-sent"
+    }
+   ],
+   "correct": "siths-awaiting",
+   "hint": "Citation-id:t är en syntetisk kunskapsartikel, inte ett live-anrop.",
+   "reword": "What happens in ticket-001?",
+   "explain": "Cannot log in to SITHS → awaiting_approval, citation …KB-001. A person still has to approve.",
+   "aliases": [
+    "siths",
+    "awaiting_approval",
+    "kb-001"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-mask-when",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "När maskeras personuppgifter i förhållande till modellsteget?",
+   "options": [
+    {
+     "label": "Före varje modellsteg. Modellen ska inte se raw personnummer eller namn i G-001.",
+     "pref": "cam:iq:iq-mask-when:before",
+     "value": "before"
+    },
+    {
+     "label": "Efter att modellen svarat, som en efterkontroll.",
+     "pref": "cam:iq:iq-mask-when:after",
+     "value": "after"
+    },
+    {
+     "label": "Bara om användaren klickar Maskera.",
+     "pref": "cam:iq:iq-mask-when:manual",
+     "value": "manual"
+    },
+    {
+     "label": "Aldrig — auditen tar raw-text.",
+     "pref": "cam:iq:iq-mask-when:never",
+     "value": "never"
+    }
+   ],
+   "correct": "before",
+   "hint": "Maskering och flera checks körs före eller oberoende av modellen, inte som en efterkontroll.",
+   "reword": "When is PII masked relative to the model step?",
+   "explain": "Before any model step. In G-001 the model never sees the number or the name.",
+   "aliases": [
+    "före",
+    "before",
+    "innan modellen"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-incident-always",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad händer med en incident / avvikelse i pipelinen?",
+   "options": [
+    {
+     "label": "Den lämnas alltid över (handoff).",
+     "pref": "cam:iq:iq-incident-always:always-handoff",
+     "value": "always-handoff"
+    },
+    {
+     "label": "Den auto-godkänns om schemat är giltigt.",
+     "pref": "cam:iq:iq-incident-always:auto",
+     "value": "auto"
+    },
+    {
+     "label": "Den skrivs in som AdverseEvent i journalen.",
+     "pref": "cam:iq:iq-incident-always:fhir",
+     "value": "fhir"
+    },
+    {
+     "label": "Den blir awaiting_approval som vilket supportärende som helst.",
+     "pref": "cam:iq:iq-incident-always:awaiting",
+     "value": "awaiting"
+    }
+   ],
+   "correct": "always-handoff",
+   "hint": "Pluginen finns på API/CLI; en incident always hands off.",
+   "reword": "What happens to an incident_report?",
+   "explain": "An incident always hands off.",
+   "aliases": [
+    "alltid",
+    "handoff",
+    "lämnas alltid över"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-incident-page",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Finns det ett avvikelseformulär på demosidan?",
+   "options": [
+    {
+     "label": "Nej. Pluginen finns på API/CLI, men sidans fyra knappar förblir support_ticket.",
+     "pref": "cam:iq:iq-incident-page:no-form",
+     "value": "no-form"
+    },
+    {
+     "label": "Ja, en femte knapp märkt Avvikelse.",
+     "pref": "cam:iq:iq-incident-page:yes-button",
+     "value": "yes-button"
+    },
+    {
+     "label": "Ja, och den skickar till regionens avvikelsesystem.",
+     "pref": "cam:iq:iq-incident-page:yes-sends",
+     "value": "yes-sends"
+    },
+    {
+     "label": "Bara i Inspelat-läget.",
+     "pref": "cam:iq:iq-incident-page:inspelat-only",
+     "value": "inspelat-only"
+    }
+   ],
+   "correct": "no-form",
+   "hint": "En medveten begränsning så den korta demovägen är oförändrad.",
+   "reword": "Is there an incident form on the demo page?",
+   "explain": "No. The plugin is on the API/CLI; the four page buttons stay support_ticket.",
+   "aliases": [
+    "nej",
+    "ingen",
+    "support_ticket",
+    "no"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-certs-n",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur många freeCodeCamp-certifikat, och hur räknar du timmarna?",
+   "options": [
+    {
+     "label": "16 verifierbara certifikat. Konservativt 3 600+ timmar från de 12 legacy-core-certifikaten (cirka 300 timmar vardera). Lägg inte på Full Stack Developer Betas annonserade cirka 1 800 timmar. Påstå inte ett 17:e certifikat.",
+     "pref": "cam:iq:iq-certs-n:16-3600",
+     "value": "16-3600"
+    },
+    {
+     "label": "17 certifikat och ungefär 5 400 timmar.",
+     "pref": "cam:iq:iq-certs-n:17-5400",
+     "value": "17-5400"
+    },
+    {
+     "label": "12 certifikat och 1 800 timmar totalt.",
+     "pref": "cam:iq:iq-certs-n:12-1800",
+     "value": "12-1800"
+    },
+    {
+     "label": "Inga publika certifikat.",
+     "pref": "cam:iq:iq-certs-n:none",
+     "value": "none"
+    }
+   ],
+   "correct": "16-3600",
+   "hint": "Profilen är publik på freeCodeCamp och i portfolion.",
+   "reword": "How many freeCodeCamp certifications, and how is 3,600+ backed?",
+   "explain": "16 verifiable certifications. 3,600+ from the 12 legacy-core certificates (about 300 hours each). Do not add the beta’s about 1,800 or claim a 17th.",
+   "aliases": [
+    "16",
+    "3600",
+    "3 600",
+    "12 legacy"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-experience",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Hur beskriver du din erfarenhet om de frågar?",
+   "options": [
+    {
+     "label": "Ungefär två år öppet och självstyrt sedan oktober 2024. Betald frilans under ett år — hitta inte på kunder. Ingen heltidsroll som utvecklare ännu; därför lockar en associate-roll med coaching.",
+     "pref": "cam:iq:iq-experience:two-years",
+     "value": "two-years"
+    },
+    {
+     "label": "Fem års heltidsjobb som backend-utvecklare.",
+     "pref": "cam:iq:iq-experience:five-years",
+     "value": "five-years"
+    },
+    {
+     "label": "Jag är redan senior AI-engineer.",
+     "pref": "cam:iq:iq-experience:senior",
+     "value": "senior"
+    },
+    {
+     "label": "Bara studier, ingen egen kod.",
+     "pref": "cam:iq:iq-experience:study-only",
+     "value": "study-only"
+    }
+   ],
+   "correct": "two-years",
+   "hint": "Var konkret och underdriv hellre än hitta på uppdrag.",
+   "reword": "How do you state your experience?",
+   "explain": "About two years of open-source and self-directed work since October 2024. Paid freelance less than a year. No full-time developer role yet.",
+   "aliases": [
+    "två år",
+    "oktober 2024",
+    "ingen heltidsroll",
+    "associate"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-ops-pack",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad var ops-pack-demo, och varför nämna det?",
+   "options": [
+    {
+     "label": "Publikt repo som nämndes i ansökan: regelstyrd rutt av interna ärenden, schema-validerat modellsteg och mänsklig godkännandegrind. Samma mönster som support-copiloten.",
+     "pref": "cam:iq:iq-ops-pack:same-pattern",
+     "value": "same-pattern"
+    },
+    {
+     "label": "Ett Cosmic-plugin som gick i produktion.",
+     "pref": "cam:iq:iq-ops-pack:prod-plugin",
+     "value": "prod-plugin"
+    },
+    {
+     "label": "En mobilapp för patienter.",
+     "pref": "cam:iq:iq-ops-pack:patient-app",
+     "value": "patient-app"
+    },
+    {
+     "label": "Ett internt Cambio-verktyg du fick tillgång till.",
+     "pref": "cam:iq:iq-ops-pack:cambio-internal",
+     "value": "cambio-internal"
+    }
+   ],
+   "correct": "same-pattern",
+   "hint": "Det skickades med ansökan, före den senare support-copiloten.",
+   "reword": "What was ops-pack-demo?",
+   "explain": "Named in the application: rules-first routing, schema-validated model step, human approval gate. Same pattern as the later support-copilot.",
+   "aliases": [
+    "ops-pack-demo",
+    "regelstyrd",
+    "samma mönster"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-citation-ids",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad är citation-strängar som opencode-deepseek-v4.1-flash-free:KB-001?",
+   "options": [
+    {
+     "label": "Id:n på syntetiska kunskapsartiklar, namngivna efter workern som skrev artikeln. Inte ett live-modellanrop under demot.",
+     "pref": "cam:iq:iq-citation-ids:synth-ids",
+     "value": "synth-ids"
+    },
+    {
+     "label": "Ett live-anrop till just den modellen när du klickar.",
+     "pref": "cam:iq:iq-citation-ids:live-call",
+     "value": "live-call"
+    },
+    {
+     "label": "Riktiga Cambio-KB-artiklar.",
+     "pref": "cam:iq:iq-citation-ids:real-kb",
+     "value": "real-kb"
+    },
+    {
+     "label": "Git-commit-hashar i demorepot.",
+     "pref": "cam:iq:iq-citation-ids:git-hash",
+     "value": "git-hash"
+    }
+   ],
+   "correct": "synth-ids",
+   "hint": "Faithful betyder att utkastet stämmer med den hämtade artikeln.",
+   "reword": "What do citation strings like KB-001 mean?",
+   "explain": "Ids of synthetic knowledge-base articles, named after the worker that drafted the article. Not a live model call during the demo.",
+   "aliases": [
+    "syntetiska",
+    "inte ett live",
+    "kunskapsartikel"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-why-associate",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Varför just en associate-roll med coaching?",
+   "options": [
+    {
+     "label": "Jag har ingen heltidsroll som professionell utvecklare ännu. En associate-roll med coaching passar nivån, och jag har redan övat mönstret i en svensk support-copilot på syntetisk data.",
+     "pref": "cam:iq:iq-why-associate:coaching-fits",
+     "value": "coaching-fits"
+    },
+    {
+     "label": "Jag är överkvalificerad och vill ha en lättare titel.",
+     "pref": "cam:iq:iq-why-associate:overqualified",
+     "value": "overqualified"
+    },
+    {
+     "label": "Jag vill hoppa över code review och jobba helt själv.",
+     "pref": "cam:iq:iq-why-associate:solo",
+     "value": "solo"
+    },
+    {
+     "label": "Jag söker främst en klinisk tjänst.",
+     "pref": "cam:iq:iq-why-associate:clinical",
+     "value": "clinical"
+    }
+   ],
+   "correct": "coaching-fits",
+   "hint": "Var öppen med luckan i erfarenhet; hitta inte på uppdrag.",
+   "reword": "Why an associate role?",
+   "explain": "No full-time professional software-developer role yet. That is why an associate role with coaching appeals.",
+   "aliases": [
+    "ingen heltidsroll",
+    "coaching",
+    "associate"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-pnr-handoff",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vad händer om ett personnummer eller id upptäcks?",
+   "options": [
+    {
+     "label": "Handoff. Modellen ska inte få raw-numret (G-001).",
+     "pref": "cam:iq:iq-pnr-handoff:handoff",
+     "value": "handoff"
+    },
+    {
+     "label": "Modellen ombeds bekräfta numret med patienten.",
+     "pref": "cam:iq:iq-pnr-handoff:confirm",
+     "value": "confirm"
+    },
+    {
+     "label": "Numret skickas till en extern folkbokföringstjänst.",
+     "pref": "cam:iq:iq-pnr-handoff:lookup",
+     "value": "lookup"
+    },
+    {
+     "label": "Inget särskilt — det är bara en sträng.",
+     "pref": "cam:iq:iq-pnr-handoff:ignore",
+     "value": "ignore"
+    }
+   ],
+   "correct": "handoff",
+   "hint": "Ett av flera handoff-villkor, tillsammans med t.ex. fel patient / fel dos.",
+   "reword": "What happens if a personnummer or id is detected?",
+   "explain": "Handoff. In G-001 the model never sees the number.",
+   "aliases": [
+    "handoff",
+    "överlämning"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-demo-repo",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Vilket publikt repo är intervjudemot?",
+   "options": [
+    {
+     "label": "github.com/MarkusIsaksson1982/cambio-support-copilot",
+     "pref": "cam:iq:iq-demo-repo:csc",
+     "value": "csc"
+    },
+    {
+     "label": "Ett privat Cambio-repo du fått access till.",
+     "pref": "cam:iq:iq-demo-repo:private-cambio",
+     "value": "private-cambio"
+    },
+    {
+     "label": "Bara ops-pack-demo, inget senare demo.",
+     "pref": "cam:iq:iq-demo-repo:ops-only",
+     "value": "ops-only"
+    },
+    {
+     "label": "Ett gist utan README.",
+     "pref": "cam:iq:iq-demo-repo:gist",
+     "value": "gist"
+    }
+   ],
+   "correct": "csc",
+   "hint": "Du mejlade länken till rekryteraren 10 november 2026; utgå inte från att de har tittat.",
+   "reword": "What public repo is the interview demo?",
+   "explain": "https://github.com/MarkusIsaksson1982/cambio-support-copilot",
+   "aliases": [
+    "cambio-support-copilot"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-nothing-auto",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 2,
+   "type": "choice",
+   "prompt": "Skickas något ut automatiskt i demot?",
+   "options": [
+    {
+     "label": "Nej. Inget skickas automatiskt. sent är bara en lokal etikett.",
+     "pref": "cam:iq:iq-nothing-auto:no",
+     "value": "no"
+    },
+    {
+     "label": "Ja, awaiting_approval går ut efter timeout.",
+     "pref": "cam:iq:iq-nothing-auto:timeout",
+     "value": "timeout"
+    },
+    {
+     "label": "Ja, till ett Jira i regionen.",
+     "pref": "cam:iq:iq-nothing-auto:jira",
+     "value": "jira"
+    },
+    {
+     "label": "Ja, men bara happy path.",
+     "pref": "cam:iq:iq-nothing-auto:happy-auto",
+     "value": "happy-auto"
+    }
+   ],
+   "correct": "no",
+   "hint": "Säg det högt om de frågar om risken att något går iväg.",
+   "reword": "Is anything auto-sent?",
+   "explain": "No. Nothing is ever auto-sent.",
+   "aliases": [
+    "nej",
+    "inget skickas",
+    "nothing is ever auto-sent"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-t008",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad är false friend i ticket-008?",
+   "options": [
+    {
+     "label": "Spara-knappen kraschar och status blir awaiting_approval, men den hämtade artikeln är körschemat för utskriftskön (KB-002). Avvisa det.",
+     "pref": "cam:iq:iq-t008:print-queue",
+     "value": "print-queue"
+    },
+    {
+     "label": "Patientdata maskeras och det blir handoff.",
+     "pref": "cam:iq:iq-t008:g001",
+     "value": "g001"
+    },
+    {
+     "label": "SITHS-inloggning med rätt KB-artikel.",
+     "pref": "cam:iq:iq-t008:t001",
+     "value": "t001"
+    },
+    {
+     "label": "En avvikelse auto-skickas.",
+     "pref": "cam:iq:iq-t008:incident-auto",
+     "value": "incident-auto"
+    }
+   ],
+   "correct": "print-queue",
+   "hint": "Retrieval är token-överlapp, inte en neural ranker.",
+   "reword": "What goes wrong in ticket-008?",
+   "explain": "Save-button crash is awaiting_approval, but the retrieved article is the print-queue runbook (KB-002). Reject it.",
+   "aliases": [
+    "utskriftskö",
+    "print-queue",
+    "kb-002",
+    "avvisa"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-faithful",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad betyder faithful för ticket-008?",
+   "options": [
+    {
+     "label": "Utkastet stämmer med den hämtade artikeln (efter maskering). Det betyder inte att artikeln är den rätta.",
+     "pref": "cam:iq:iq-faithful:match-retrieved",
+     "value": "match-retrieved"
+    },
+    {
+     "label": "Artikeln svarar på rätt fråga.",
+     "pref": "cam:iq:iq-faithful:right-article",
+     "value": "right-article"
+    },
+    {
+     "label": "Modellen hittade på ett bra svar utan källa.",
+     "pref": "cam:iq:iq-faithful:invented",
+     "value": "invented"
+    },
+    {
+     "label": "Utkastet är skickat och kvitterat.",
+     "pref": "cam:iq:iq-faithful:sent",
+     "value": "sent"
+    }
+   ],
+   "correct": "match-retrieved",
+   "hint": "ticket-008 är den kända false friend: trogen källan, fel källa.",
+   "reword": "What does faithful mean for ticket-008?",
+   "explain": "The draft matches the retrieved article after the mask pass. It does not mean the article is the right one.",
+   "aliases": [
+    "stämmer med den hämtade",
+    "inte att artikeln är den rätta",
+    "does not mean"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-retrieval-how",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Hur funkar retrieval i demot?",
+   "options": [
+    {
+     "label": "Token-överlapp med lätt svensk stam, inte en neural ranker. ticket-008 är känd false friend.",
+     "pref": "cam:iq:iq-retrieval-how:token",
+     "value": "token"
+    },
+    {
+     "label": "En finjusterad embeddings-modell mot journalsystemet.",
+     "pref": "cam:iq:iq-retrieval-how:embeddings",
+     "value": "embeddings"
+    },
+    {
+     "label": "BM25 mot regionens SharePoint.",
+     "pref": "cam:iq:iq-retrieval-how:sharepoint",
+     "value": "sharepoint"
+    },
+    {
+     "label": "Ingen retrieval; modellen hittar på.",
+     "pref": "cam:iq:iq-retrieval-how:none",
+     "value": "none"
+    }
+   ],
+   "correct": "token",
+   "hint": "Tröskeln är fryst under intervjuveckan.",
+   "reword": "How does retrieval work?",
+   "explain": "Token overlap with a light Swedish stem, not a neural ranker. ticket-008 is the known false friend.",
+   "aliases": [
+    "token-överlapp",
+    "token overlap",
+    "inte en neural"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g003",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad visar G-003?",
+   "options": [
+    {
+     "label": "Ett Luhn-ogiltigt samordningsnummer i patientkontext ger ändå handoff, och numret förblir synligt (medveten lucka). Det syntetiska namnet intill maskeras. De 10 xfailed testerna är den här klassen.",
+     "pref": "cam:iq:iq-g003:luhn-gap",
+     "value": "luhn-gap"
+    },
+    {
+     "label": "Alla ogiltiga id skrivs om till det publicerade testnumret.",
+     "pref": "cam:iq:iq-g003:rewrite",
+     "value": "rewrite"
+    },
+    {
+     "label": "Ogiltiga id ignoreras och ärendet auto-godkänns.",
+     "pref": "cam:iq:iq-g003:ignore",
+     "value": "ignore"
+    },
+    {
+     "label": "G-003 är happy path för SITHS.",
+     "pref": "cam:iq:iq-g003:siths",
+     "value": "siths"
+    }
+   ],
+   "correct": "luhn-gap",
+   "hint": "Luhn-ogiltiga personnummer skrivs inte om men tvingar ändå handoff.",
+   "reword": "What does G-003 show?",
+   "explain": "A Luhn-invalid samordningsnummer in patient context still hands off, and the number stays visible (deliberate gap). The adjacent synthetic name is masked.",
+   "aliases": [
+    "luhn",
+    "samordningsnummer",
+    "förblir synligt",
+    "xfail"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g008",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad händer i G-008 (jämför två vårdtillfällen)?",
+   "options": [
+    {
+     "label": "Finns inte i kunskapsbasen. Inget grounded utkast → handoff. Att hitta på ett KB-svar valdes bort.",
+     "pref": "cam:iq:iq-g008:no-kb",
+     "value": "no-kb"
+    },
+    {
+     "label": "Rätt artikel hittas och det blir awaiting_approval.",
+     "pref": "cam:iq:iq-g008:awaiting",
+     "value": "awaiting"
+    },
+    {
+     "label": "Modellen jämför journalerna live.",
+     "pref": "cam:iq:iq-g008:live-compare",
+     "value": "live-compare"
+    },
+    {
+     "label": "Det klassas som incident och auto-skickas.",
+     "pref": "cam:iq:iq-g008:incident",
+     "value": "incident"
+    }
+   ],
+   "correct": "no-kb",
+   "hint": "Inget påhittat svar bara för att frågan är rimlig.",
+   "reword": "G-008: compare two care episodes — outcome?",
+   "explain": "Not in the KB. No grounded draft, so handoff.",
+   "aliases": [
+    "inte i",
+    "no grounded",
+    "handoff",
+    "finns inte"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g009",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad händer i G-009 (avvikelsestatistik per enhet)?",
+   "options": [
+    {
+     "label": "Det är en instruktion/rapportbeställning, inte en incident. Regler märker instruktion och hoppar över modellen. Ingen KB-träff → handoff med no_grounded_draft. Ordet avvikelse ska inte stjäla en statistikförfrågan.",
+     "pref": "cam:iq:iq-g009:report",
+     "value": "report"
+    },
+    {
+     "label": "Det behandlas som incident_report och lämnas över av den anledningen.",
+     "pref": "cam:iq:iq-g009:as-incident",
+     "value": "as-incident"
+    },
+    {
+     "label": "En rapport skickas automatiskt till enheten.",
+     "pref": "cam:iq:iq-g009:auto-report",
+     "value": "auto-report"
+    },
+    {
+     "label": "Det blir awaiting_approval med en påhittad statistik-artikel.",
+     "pref": "cam:iq:iq-g009:invented",
+     "value": "invented"
+    }
+   ],
+   "correct": "report",
+   "hint": "Ordet avvikelse i en statistikförfrågan är en fälla.",
+   "reword": "G-009: avvikelsestatistik per enhet — outcome?",
+   "explain": "An instruction/report request, not an incident. Rules skip the model. No KB hit → handoff with no_grounded_draft.",
+   "aliases": [
+    "instruktion",
+    "rapport",
+    "inte en incident",
+    "no_grounded_draft"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-size",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Hur stor är offline-evallen, vilken adapter, hur många upprepningar?",
+   "options": [
+    {
+     "label": "Adapter none, 44 syntetiska ärenden (30 support + 14 gap), tre identiska upprepningar. Ingen live-modell i de siffrorna. docs/EVAL-2026-11-08.md.",
+     "pref": "cam:iq:iq-eval-size:44-none-3",
+     "value": "44-none-3"
+    },
+    {
+     "label": "100 riktiga ärenden mot en live-modell.",
+     "pref": "cam:iq:iq-eval-size:100-live",
+     "value": "100-live"
+    },
+    {
+     "label": "12 ärenden, en gång, adapter fake.",
+     "pref": "cam:iq:iq-eval-size:12-fake",
+     "value": "12-fake"
+    },
+    {
+     "label": "44 ärenden mot en FHIR-server.",
+     "pref": "cam:iq:iq-eval-size:44-fhir",
+     "value": "44-fhir"
+    }
+   ],
+   "correct": "44-none-3",
+   "hint": "Beskriv inte sidopanelen som en live-modell-score.",
+   "reword": "Eval pack: size, adapter, repeats?",
+   "explain": "Adapter none on 44 synthetic tickets (30 support + 14 gap), 3 identical repeats. A live model is not in these numbers.",
+   "aliases": [
+    "44",
+    "30",
+    "14",
+    "adapter none",
+    "tre"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-handoff-rate",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad är handoff-andelen i evallen, och hur många väntar på godkännande?",
+   "options": [
+    {
+     "label": "Handoff 88,6 % (39 av 44). Fem väntar på mänskligt godkännande.",
+     "pref": "cam:iq:iq-eval-handoff-rate:886",
+     "value": "886"
+    },
+    {
+     "label": "Handoff 12 % och 39 awaiting_approval.",
+     "pref": "cam:iq:iq-eval-handoff-rate:flipped",
+     "value": "flipped"
+    },
+    {
+     "label": "Handoff 100 % — inget utkast släpps någonsin.",
+     "pref": "cam:iq:iq-eval-handoff-rate:all",
+     "value": "all"
+    },
+    {
+     "label": "Handoff 50 % exakt.",
+     "pref": "cam:iq:iq-eval-handoff-rate:half",
+     "value": "half"
+    }
+   ],
+   "correct": "886",
+   "hint": "Andelen är medvetet hög: en försiktig intern assistent, inte ett system som ska svara på allt.",
+   "reword": "Eval pack: handoff rate and awaiting approval?",
+   "explain": "Handoff rate 88.6% (39 of 44). Awaiting a human approval: 5.",
+   "aliases": [
+    "88,6",
+    "88.6",
+    "39",
+    "5",
+    "fem"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-schema",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad visade schema- och audit-kollen i evallen?",
+   "options": [
+    {
+     "label": "Schema-giltiga kuvert 100 %. Audit decided stämmer med kuvertet 100 %. Incident-kedjan schema-pass 100 % av 4. Noll mismatch mellan upprepningar.",
+     "pref": "cam:iq:iq-eval-schema:100-100-0",
+     "value": "100-100-0"
+    },
+    {
+     "label": "Schema 80 % och flera mismatch mellan upprepningar.",
+     "pref": "cam:iq:iq-eval-schema:80",
+     "value": "80"
+    },
+    {
+     "label": "Audit saknas i evallen.",
+     "pref": "cam:iq:iq-eval-schema:no-audit",
+     "value": "no-audit"
+    },
+    {
+     "label": "Bara 50 % av kuverten var giltiga.",
+     "pref": "cam:iq:iq-eval-schema:half",
+     "value": "half"
+    }
+   ],
+   "correct": "100-100-0",
+   "hint": "Tre identiska upprepningar, noll mismatch.",
+   "reword": "Eval pack: schema and audit results?",
+   "explain": "Schema-valid envelopes: 100%. Audit decided matches the envelope: 100%. Incident chain 100% of 4. Repeat mismatches: 0.",
+   "aliases": [
+    "100%",
+    "100 %",
+    "noll mismatch",
+    "0"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-xfail-tests",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad rapporterar den publika testsviten?",
+   "options": [
+    {
+     "label": "137 godkända, 10 xfailed. xfail:en är medvetna: Luhn-ogiltiga personnummer skrivs inte om men tvingar ändå handoff.",
+     "pref": "cam:iq:iq-xfail-tests:137-10",
+     "value": "137-10"
+    },
+    {
+     "label": "147 godkända, noll xfail.",
+     "pref": "cam:iq:iq-xfail-tests:147",
+     "value": "147"
+    },
+    {
+     "label": "137 underkända tester.",
+     "pref": "cam:iq:iq-xfail-tests:137-fail",
+     "value": "137-fail"
+    },
+    {
+     "label": "Testerna är inte publika.",
+     "pref": "cam:iq:iq-xfail-tests:private",
+     "value": "private"
+    }
+   ],
+   "correct": "137-10",
+   "hint": "G-003 demonstrerar samma klass.",
+   "reword": "What does the public test suite report?",
+   "explain": "137 passed, 10 xfailed. The xfails are deliberate: Luhn-invalid personnummer are not rewritten and still force a handoff.",
+   "aliases": [
+    "137",
+    "10",
+    "xfail"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-name-gap",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vilken känd lucka finns i namnmaskeringen?",
+   "options": [
+    {
+     "label": "Ett bart förnamn utan snedstreck, titel/roll eller efternamn, till exempel Hej Mikael, kan slinka igenom. Snedstreckssignaturer (/Mikael) och patient X maskeras.",
+     "pref": "cam:iq:iq-name-gap:bare-name",
+     "value": "bare-name"
+    },
+    {
+     "label": "Inga namn maskeras någonsin.",
+     "pref": "cam:iq:iq-name-gap:none",
+     "value": "none"
+    },
+    {
+     "label": "Alla förnamn maskeras, även i vanliga meningar utan cue.",
+     "pref": "cam:iq:iq-name-gap:all-names",
+     "value": "all-names"
+    },
+    {
+     "label": "Bara efternamn kan slinka igenom.",
+     "pref": "cam:iq:iq-name-gap:surnames",
+     "value": "surnames"
+    }
+   ],
+   "correct": "bare-name",
+   "hint": "En ärlig begränsning att nämna, plus att du skulle strama åt den.",
+   "reword": "What is the known name-masking gap?",
+   "explain": "A bare given name with no slash, title/role cue or surname (e.g. Hej Mikael,) can still appear. Slash signatures (/Mikael) and patient X are masked.",
+   "aliases": [
+    "hej mikael",
+    "bart förnamn",
+    "bare given name",
+    "/mikael"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-sidebar-not-live",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Är sidopanelen / eval-tabellen en live-modell-score?",
+   "options": [
+    {
+     "label": "Nej. Den upprepar offline-evallen (docs/EVAL-2026-11-08.md). En live-modell ingår inte i de siffrorna.",
+     "pref": "cam:iq:iq-sidebar-not-live:no",
+     "value": "no"
+    },
+    {
+     "label": "Ja, den körs om mot en modell varje gång sidan öppnas.",
+     "pref": "cam:iq:iq-sidebar-not-live:yes",
+     "value": "yes"
+    },
+    {
+     "label": "Ja, det är live-proben från 9 november.",
+     "pref": "cam:iq:iq-sidebar-not-live:probe",
+     "value": "probe"
+    },
+    {
+     "label": "Den är påhittad och ska inte nämnas.",
+     "pref": "cam:iq:iq-sidebar-not-live:fake",
+     "value": "fake"
+    }
+   ],
+   "correct": "no",
+   "hint": "Säg det innan de läser tabellen som ett online-betyg.",
+   "reword": "Is the demo sidebar a live-model score?",
+   "explain": "No. The sidebar repeats the offline eval. A live model is not in those numbers.",
+   "aliases": [
+    "nej",
+    "offline",
+    "inte",
+    "not a live"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-journalfel",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad innebär etiketten journalfel?",
+   "options": [
+    {
+     "label": "Den föreslår incident_report och ger handoff. Utkast hålls inne (räknas inte i citation recall).",
+     "pref": "cam:iq:iq-journalfel:incident-handoff",
+     "value": "incident-handoff"
+    },
+    {
+     "label": "Den auto-rättar journalen.",
+     "pref": "cam:iq:iq-journalfel:auto-fix",
+     "value": "auto-fix"
+    },
+    {
+     "label": "Den blir awaiting_approval med en KB-artikel om inloggning.",
+     "pref": "cam:iq:iq-journalfel:awaiting",
+     "value": "awaiting"
+    },
+    {
+     "label": "Den ignoreras av reglerna.",
+     "pref": "cam:iq:iq-journalfel:ignore",
+     "value": "ignore"
+    }
+   ],
+   "correct": "incident-handoff",
+   "hint": "Recall hoppar över både retrieval-missar och journalfel.",
+   "reword": "What does the journalfel label do?",
+   "explain": "It suggests an incident_report and causes a handoff. Those drafts are withheld from citation recall.",
+   "aliases": [
+    "incident_report",
+    "handoff",
+    "journalfel"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-live-fail-plan",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vad gör du om livesidan inte funkar i intervjun?",
+   "options": [
+    {
+     "label": "Inspelat, den publika one-pagern, den tysta inspelningen docs/cambio-demo-recording.mp4, och offline-eval plus pytest-rapporten. Improvisera inte en andra live-väg.",
+     "pref": "cam:iq:iq-live-fail-plan:backup",
+     "value": "backup"
+    },
+    {
+     "label": "Hitta på en andra live-väg mot en slumpmässig modell.",
+     "pref": "cam:iq:iq-live-fail-plan:improvise",
+     "value": "improvise"
+    },
+    {
+     "label": "Avbryt intervjun.",
+     "pref": "cam:iq:iq-live-fail-plan:abort",
+     "value": "abort"
+    },
+    {
+     "label": "Påstå att evallen är live i stället.",
+     "pref": "cam:iq:iq-live-fail-plan:claim-live",
+     "value": "claim-live"
+    }
+   ],
+   "correct": "backup",
+   "hint": "Inspelat postar inget beslut.",
+   "reword": "What if the live demo page fails?",
+   "explain": "Use Inspelat, the public one-pager, the silent recording, and the offline eval/pytest report. Do not improvise a second live path.",
+   "aliases": [
+    "inspelat",
+    "one-pager",
+    "recording",
+    "improvisera inte"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-safety-words",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vilka patientsäkerhetsformuleringar tvingar handoff?",
+   "options": [
+    {
+     "label": "Bland annat fel patient, annan patient, fel dos, dubbel dos.",
+     "pref": "cam:iq:iq-safety-words:phrases",
+     "value": "phrases"
+    },
+    {
+     "label": "Bara ordet hej.",
+     "pref": "cam:iq:iq-safety-words:hej",
+     "value": "hej"
+    },
+    {
+     "label": "Inga ord — bara personnummer.",
+     "pref": "cam:iq:iq-safety-words:pnr-only",
+     "value": "pnr-only"
+    },
+    {
+     "label": "Bara engelska fraser som wrong patient.",
+     "pref": "cam:iq:iq-safety-words:en-only",
+     "value": "en-only"
+    }
+   ],
+   "correct": "phrases",
+   "hint": "Ett av flera handoff-villkor, tillsammans med personnummer, journalfel, låg confidence med mera.",
+   "reword": "Which patient-safety wordings force a handoff?",
+   "explain": "fel patient, annan patient, fel dos, dubbel dos, and similar.",
+   "aliases": [
+    "fel patient",
+    "fel dos",
+    "dubbel dos"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-high-handoff-ok",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "88,6 % handoff — är verktyget ens användbart?",
+   "options": [
+    {
+     "label": "Andelen är medvetet hög. Fem ärenden väntar på godkännande, och alla åtta patientdata-fall liksom alla åtta needs_human lämnas över. Det är en försiktig intern supportassistent, inte ett system som ska svara på allt.",
+     "pref": "cam:iq:iq-high-handoff-ok:cautious",
+     "value": "cautious"
+    },
+    {
+     "label": "Nej, då är demot misslyckat och ska inte visas.",
+     "pref": "cam:iq:iq-high-handoff-ok:failed",
+     "value": "failed"
+    },
+    {
+     "label": "Ja, för att 88,6 % skickas automatiskt till kunden.",
+     "pref": "cam:iq:iq-high-handoff-ok:auto",
+     "value": "auto"
+    },
+    {
+     "label": "Siffran är en live-modell-score och kommer sjunka i produktion.",
+     "pref": "cam:iq:iq-high-handoff-ok:live-score",
+     "value": "live-score"
+    }
+   ],
+   "correct": "cautious",
+   "hint": "Försiktighet är en feature i vårdnära support, inte en bugg i evallen.",
+   "reword": "Handoff is 88.6% — is the tool even useful?",
+   "explain": "The rate is deliberately high. 5 await approval; all 8 patient-data and all 8 needs_human cases hand off. A cautious internal assistant, not a system that should answer everything.",
+   "aliases": [
+    "medvetet hög",
+    "försiktig",
+    "fem",
+    "åtta"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-slash-masked",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 3,
+   "type": "choice",
+   "prompt": "Vilka namnmönster maskeras redan, trots luckan med bara förnamn?",
+   "options": [
+    {
+     "label": "Snedstreckssignaturer som /Mikael, och platshållaren patient X.",
+     "pref": "cam:iq:iq-slash-masked:slash-and-patientx",
+     "value": "slash-and-patientx"
+    },
+    {
+     "label": "Inga namnmönster alls.",
+     "pref": "cam:iq:iq-slash-masked:none",
+     "value": "none"
+    },
+    {
+     "label": "Bara namn i engelska ärenden.",
+     "pref": "cam:iq:iq-slash-masked:en-only",
+     "value": "en-only"
+    },
+    {
+     "label": "Alla ord som börjar med stor bokstav.",
+     "pref": "cam:iq:iq-slash-masked:capitals",
+     "value": "capitals"
+    }
+   ],
+   "correct": "slash-and-patientx",
+   "hint": "Luckan är ett bart förnamn utan extra cue, typ Hej Mikael,",
+   "reword": "Which name patterns are already masked?",
+   "explain": "Slash signatures (/Mikael) and the placeholder patient X are masked.",
+   "aliases": [
+    "/mikael",
+    "patient x",
+    "snedstreck"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-patient-nh",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Hur gick patientdata- och needs_human-fallen i evallen?",
+   "options": [
+    {
+     "label": "Patientdata-fall som lämnas över: 100 % av 8. needs_human-fall som lämnas över: 100 % av 8.",
+     "pref": "cam:iq:iq-eval-patient-nh:8-and-8",
+     "value": "8-and-8"
+    },
+    {
+     "label": "4 av 8 patientdata-fall slank igenom till sent.",
+     "pref": "cam:iq:iq-eval-patient-nh:half",
+     "value": "half"
+    },
+    {
+     "label": "needs_human mättes inte.",
+     "pref": "cam:iq:iq-eval-patient-nh:unmeasured",
+     "value": "unmeasured"
+    },
+    {
+     "label": "Alla 44 är patientdata-fall.",
+     "pref": "cam:iq:iq-eval-patient-nh:all-44",
+     "value": "all-44"
+    }
+   ],
+   "correct": "8-and-8",
+   "hint": "Det är offline-eval, adapter none — inte live-proben.",
+   "reword": "Eval pack: patient-data and needs_human?",
+   "explain": "Patient-data cases that hand off: 100% of 8. needs_human cases that hand off: 100% of 8.",
+   "aliases": [
+    "100%",
+    "8",
+    "needs_human",
+    "patientdata"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-retrieval-n",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Hur många retrieval-träffar blev det i evallen?",
+   "options": [
+    {
+     "label": "13 av 44.",
+     "pref": "cam:iq:iq-eval-retrieval-n:13",
+     "value": "13"
+    },
+    {
+     "label": "44 av 44.",
+     "pref": "cam:iq:iq-eval-retrieval-n:44",
+     "value": "44"
+    },
+    {
+     "label": "0 av 44 — retrieval var avstängt.",
+     "pref": "cam:iq:iq-eval-retrieval-n:0",
+     "value": "0"
+    },
+    {
+     "label": "12 av 12, samma som faithfulness.",
+     "pref": "cam:iq:iq-eval-retrieval-n:12",
+     "value": "12"
+    }
+   ],
+   "correct": "13",
+   "hint": "Faithfulness och recall räknas på en delmängd av de hämtade.",
+   "reword": "Eval pack: retrieval hits?",
+   "explain": "Retrieval hits: 13 of 44.",
+   "aliases": [
+    "13 av 44",
+    "13 of 44",
+    "13/44"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-faith-n",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad visade citation faithfulness?",
+   "options": [
+    {
+     "label": "100 % av 12 citerade utkast (utkastet är den hämtade artikelns titel och brödtext efter pipeline-maskeringen).",
+     "pref": "cam:iq:iq-eval-faith-n:12",
+     "value": "12"
+    },
+    {
+     "label": "100 % av alla 44 ärenden.",
+     "pref": "cam:iq:iq-eval-faith-n:44",
+     "value": "44"
+    },
+    {
+     "label": "50 % av de citerade.",
+     "pref": "cam:iq:iq-eval-faith-n:half",
+     "value": "half"
+    },
+    {
+     "label": "Faithfulness mättes inte.",
+     "pref": "cam:iq:iq-eval-faith-n:no",
+     "value": "no"
+    }
+   ],
+   "correct": "12",
+   "hint": "Faithful är inte samma sak som right article. ticket-008 kan vara trogen fel artikel.",
+   "reword": "Eval pack: citation faithfulness?",
+   "explain": "Citation faithfulness: 100% of 12 cited drafts (draft = retrieved doc title and body after the mask pass).",
+   "aliases": [
+    "100%",
+    "12",
+    "citerade"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-eval-recall",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad visade citation recall, och vad hoppas över?",
+   "options": [
+    {
+     "label": "100 % av 12 hämtade, icke-journalfel-ärenden. Recall hoppar över retrieval-missar och journalfel, vars utkast hålls inne.",
+     "pref": "cam:iq:iq-eval-recall:12-skip",
+     "value": "12-skip"
+    },
+    {
+     "label": "100 % av alla 44, inklusive missar.",
+     "pref": "cam:iq:iq-eval-recall:44",
+     "value": "44"
+    },
+    {
+     "label": "Recall är samma sak som retrieval-träffar (13/44).",
+     "pref": "cam:iq:iq-eval-recall:hits",
+     "value": "hits"
+    },
+    {
+     "label": "journalfel räknas som träffar.",
+     "pref": "cam:iq:iq-eval-recall:jf-count",
+     "value": "jf-count"
+    }
+   ],
+   "correct": "12-skip",
+   "hint": "Journalfel-utkast withheld, därför inte i recall-nämnaren på det sättet.",
+   "reword": "Eval pack: citation recall?",
+   "explain": "Citation recall: 100% of 12 retrieved, non-journalfel tickets (recall skips retrieval misses and journalfel, whose drafts are withheld).",
+   "aliases": [
+    "12",
+    "journalfel",
+    "hoppar över",
+    "withheld"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-live-probe",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad är den separata live-modell-proben — och vad är den inte?",
+   "options": [
+    {
+     "label": "docs/LIVE-PROBE-2026-11-09.md: tre upprepningar av två ärenden på en gratis OpenCode-modell. Den lämnade fortfarande över patientdata-fallet och no-KB-fallet, medan etiketter rörde sig. Det är inte eval-scoren. Citera ingen flakiness-siffra bortom det urvalet. Intervjuvägen stannar på adapter none.",
+     "pref": "cam:iq:iq-live-probe:probe",
+     "value": "probe"
+    },
+    {
+     "label": "Det är samma sak som EVAL-2026-11-08 och får citeras som 88,6 %.",
+     "pref": "cam:iq:iq-live-probe:same",
+     "value": "same"
+    },
+    {
+     "label": "En veckolång A/B-test i produktion.",
+     "pref": "cam:iq:iq-live-probe:prod",
+     "value": "prod"
+    },
+    {
+     "label": "Proben visade att patientdata skickades till modellen.",
+     "pref": "cam:iq:iq-live-probe:leaked",
+     "value": "leaked"
+    }
+   ],
+   "correct": "probe",
+   "hint": "Liten sampel: två ärenden, tre repeats, en modell.",
+   "reword": "What is the separate live-model probe?",
+   "explain": "Three repeats of two tickets on one free OpenCode model. It still handed off the patient-data case and the no-KB case, while labels moved. That probe is not the evaluation score.",
+   "aliases": [
+    "live-probe",
+    "två ärenden",
+    "inte eval",
+    "adapter none"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-typescript",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad har ändrats kring TypeScript sedan ansökan?",
+   "options": [
+    {
+     "label": "Ansökan sa att TypeScript var begränsat, och det stämde då. 9 november 2026 blev TypeScript Fundamentals 242/242 klart, som del av Front-End Development Libraries (524/524 steg den dagen, kurs-exam kvar). Det är inte ett nytt/17:e certifikat.",
+     "pref": "cam:iq:iq-typescript:242",
+     "value": "242"
+    },
+    {
+     "label": "Det är ett 17:e freeCodeCamp-certifikat.",
+     "pref": "cam:iq:iq-typescript:17th",
+     "value": "17th"
+    },
+    {
+     "label": "TypeScript är fortfarande orört.",
+     "pref": "cam:iq:iq-typescript:untouched",
+     "value": "untouched"
+    },
+    {
+     "label": "Du har en officiell Microsoft TypeScript-certifiering.",
+     "pref": "cam:iq:iq-typescript:ms-cert",
+     "value": "ms-cert"
+    }
+   ],
+   "correct": "242",
+   "hint": "Påstå inte ett extra certifikat.",
+   "reword": "TypeScript: what changed since the application?",
+   "explain": "On 9 November 2026 you completed TypeScript Fundamentals 242/242 steps. This is not a new/17th certification.",
+   "aliases": [
+    "242",
+    "9 november",
+    "inte ett nytt",
+    "inte ett 17"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-ects",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Hur nämner du Uppsala / sjuksköterske-kurserna om det kommer upp?",
+   "options": [
+    {
+     "label": "Kort och sekundärt: ungefär 74 ECTS vid Uppsala universitet 2019–2020, inklusive ungefär två terminer kursarbete från sjuksköterskeprogrammet. Det stod inte i Cambio-CV:t. Du är inte sjuksköterska och har ingen dataexamen.",
+     "pref": "cam:iq:iq-ects:brief",
+     "value": "brief"
+    },
+    {
+     "label": "Säg att du är legitimerad sjuksköterska.",
+     "pref": "cam:iq:iq-ects:licensed",
+     "value": "licensed"
+    },
+    {
+     "label": "Säg att du har en datavetenskaplig examen från Uppsala.",
+     "pref": "cam:iq:iq-ects:cs-degree",
+     "value": "cs-degree"
+    },
+    {
+     "label": "Räkna ECTS som utvecklartimmar.",
+     "pref": "cam:iq:iq-ects:as-hours",
+     "value": "as-hours"
+    }
+   ],
+   "correct": "brief",
+   "hint": "Bakgrundsfärg, inte huvudpoäng.",
+   "reword": "Uppsala ECTS / nursing: how do you mention it?",
+   "explain": "About 74 ECTS at Uppsala University (2019–2020), including about two semesters of nursing-programme coursework. Not a nurse; not a computer-science degree.",
+   "aliases": [
+    "74",
+    "uppsala",
+    "två terminer",
+    "inte sjuksköterska"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-what-next",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad skulle du göra härnäst med demot (grundat, inga nya påståenden)?",
+   "options": [
+    {
+     "label": "Strama åt namnmaskering för bara förnamn; eventuellt markera Luhn-ogiltiga men datum-rimliga id tydligare men fortfarande lämna över; bättre retrieval så false friends som ticket-008 fångas; spara audit utanför processminnet; behåll den mänskliga grinden. Påstå inte kliniska råd eller live-journalåtkomst.",
+     "pref": "cam:iq:iq-what-next:grounded-next",
+     "value": "grounded-next"
+    },
+    {
+     "label": "Koppla demot till riktiga patientjournaler nästa vecka.",
+     "pref": "cam:iq:iq-what-next:live-ehr",
+     "value": "live-ehr"
+    },
+    {
+     "label": "Ta bort den mänskliga grinden för att höja throughput.",
+     "pref": "cam:iq:iq-what-next:remove-gate",
+     "value": "remove-gate"
+    },
+    {
+     "label": "Påstå FHIR-conformance och openEHR-stöd.",
+     "pref": "cam:iq:iq-what-next:fhir-claim",
+     "value": "fhir-claim"
+    }
+   ],
+   "correct": "grounded-next",
+   "hint": "Håll det till saker som redan syns som luckor.",
+   "reword": "What would you do next?",
+   "explain": "Tighten name masking for bare given names; treat Luhn-invalid but date-plausible ids more clearly while still handing off; improve retrieval; persist audit; keep the human gate. Do not claim clinical advice or live journal access.",
+   "aliases": [
+    "namnmaskering",
+    "retrieval",
+    "audit",
+    "mänskliga grinden"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-no-fhir",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Gör demot någon FHIR- eller openEHR-conformance-anspråk?",
+   "options": [
+    {
+     "label": "Nej. Ingen FHIR/openEHR-mappningsadapter och inget conformance-anspråk.",
+     "pref": "cam:iq:iq-no-fhir:no",
+     "value": "no"
+    },
+    {
+     "label": "Ja, incident mappar till AdverseEvent i produktion.",
+     "pref": "cam:iq:iq-no-fhir:yes-ae",
+     "value": "yes-ae"
+    },
+    {
+     "label": "Ja, via ett officiellt Cambio-certifikat.",
+     "pref": "cam:iq:iq-no-fhir:cert",
+     "value": "cert"
+    },
+    {
+     "label": "Bara openEHR, inte FHIR.",
+     "pref": "cam:iq:iq-no-fhir:openehr-only",
+     "value": "openehr-only"
+    }
+   ],
+   "correct": "no",
+   "hint": "Du kan nämna gränsen ticket ≠ klinisk post som talking point, utan att påstå en adapter.",
+   "reword": "Does the demo claim FHIR or openEHR conformance?",
+   "explain": "No FHIR/openEHR mapping adapter; no conformance claim.",
+   "aliases": [
+    "nej",
+    "ingen",
+    "inget conformance",
+    "no fhir"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-lang-ports",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad är språkportarna (C#, Java, TypeScript) i repot?",
+   "options": [
+    {
+     "label": "Contract round-trips, inte en ominplementering av Python-pipelinen.",
+     "pref": "cam:iq:iq-lang-ports:contracts",
+     "value": "contracts"
+    },
+    {
+     "label": "Fullständiga ominplementeringar redo för produktion.",
+     "pref": "cam:iq:iq-lang-ports:reimpl",
+     "value": "reimpl"
+    },
+    {
+     "label": "Officiella Cambio-SDK:er.",
+     "pref": "cam:iq:iq-lang-ports:sdk",
+     "value": "sdk"
+    },
+    {
+     "label": "Det finns inga portar.",
+     "pref": "cam:iq:iq-lang-ports:none",
+     "value": "none"
+    }
+   ],
+   "correct": "contracts",
+   "hint": "Säg inte att pipelinen är omskriven i de språken.",
+   "reword": "What are the language ports?",
+   "explain": "Contract round-trips, not a reimplementation of the Python pipeline.",
+   "aliases": [
+    "contract",
+    "round-trip",
+    "inte en ominplementering",
+    "not a reimplementation"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-audit-memory",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Var ligger demo-API:ets audit och resultat?",
+   "options": [
+    {
+     "label": "I minnet. De försvinner när processen stannar.",
+     "pref": "cam:iq:iq-audit-memory:memory",
+     "value": "memory"
+    },
+    {
+     "label": "I en krypterad molndatabas i produktion.",
+     "pref": "cam:iq:iq-audit-memory:cloud-db",
+     "value": "cloud-db"
+    },
+    {
+     "label": "I patientens journal.",
+     "pref": "cam:iq:iq-audit-memory:ehr",
+     "value": "ehr"
+    },
+    {
+     "label": "De sparas alltid på disk i demot.",
+     "pref": "cam:iq:iq-audit-memory:disk",
+     "value": "disk"
+    }
+   ],
+   "correct": "memory",
+   "hint": "En konkret nästa-steg-punkt: persist audit utanför processminnet.",
+   "reword": "Where do demo API audit/results live?",
+   "explain": "In-memory; they disappear when the process stops.",
+   "aliases": [
+    "i minnet",
+    "in-memory",
+    "försvinner",
+    "disappear"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-edit-hatch",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Kan API:t redigera en handoff?",
+   "options": [
+    {
+     "label": "Ja, om edited_reply skickas med (granskad escape hatch). Sidan stänger den knappen när patient_data_detected är satt.",
+     "pref": "cam:iq:iq-edit-hatch:hatch",
+     "value": "hatch"
+    },
+    {
+     "label": "Nej, varken API eller sida kan röra en handoff.",
+     "pref": "cam:iq:iq-edit-hatch:never",
+     "value": "never"
+    },
+    {
+     "label": "Ja, och sidan tillåter det även vid patient_data_detected.",
+     "pref": "cam:iq:iq-edit-hatch:page-allows",
+     "value": "page-allows"
+    },
+    {
+     "label": "Bara via FHIR update.",
+     "pref": "cam:iq:iq-edit-hatch:fhir",
+     "value": "fhir"
+    }
+   ],
+   "correct": "hatch",
+   "hint": "En ärlig API-lucka, med UI-skydd på just patientdata.",
+   "reword": "Can the API edit a handoff?",
+   "explain": "The API still allows edit on a handoff if edited_reply is supplied; the page disables that button when patient_data_detected is set.",
+   "aliases": [
+    "edited_reply",
+    "escape hatch",
+    "patient_data_detected"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-who-opencode",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad tog OpenCode nemotron-3.5-lightning-free fram i demot?",
+   "options": [
+    {
+     "label": "30 syntetiska supportärenden och flera testfiler.",
+     "pref": "cam:iq:iq-who-opencode:30-tickets",
+     "value": "30-tickets"
+    },
+    {
+     "label": "Hela pipelinen och audit-lagret.",
+     "pref": "cam:iq:iq-who-opencode:pipeline",
+     "value": "pipeline"
+    },
+    {
+     "label": "Fail-closed-härdningen.",
+     "pref": "cam:iq:iq-who-opencode:fail-closed",
+     "value": "fail-closed"
+    },
+    {
+     "label": "Fixen för personnummer med mellanslag.",
+     "pref": "cam:iq:iq-who-opencode:space-pnr",
+     "value": "space-pnr"
+    }
+   ],
+   "correct": "30-tickets",
+   "hint": "Du satte scope och grindarna; workern skrev inte arkitekturen.",
+   "reword": "What did OpenCode nemotron-3.5-lightning-free produce?",
+   "explain": "30 synthetic support tickets and several test files.",
+   "aliases": [
+    "30",
+    "syntetiska",
+    "testfiler"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-who-codex",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad gjorde Codex i demot?",
+   "options": [
+    {
+     "label": "Designgranskning och fail-closed-härdning av pipelinen, plus fail-closed-tester.",
+     "pref": "cam:iq:iq-who-codex:fail-closed",
+     "value": "fail-closed"
+    },
+    {
+     "label": "30 syntetiska supportärenden.",
+     "pref": "cam:iq:iq-who-codex:30",
+     "value": "30"
+    },
+    {
+     "label": "Fixen för personnummer med mellanslag.",
+     "pref": "cam:iq:iq-who-codex:space",
+     "value": "space"
+    },
+    {
+     "label": "Orkestrerade hela README och plugin-API:t.",
+     "pref": "cam:iq:iq-who-codex:readme",
+     "value": "readme"
+    }
+   ],
+   "correct": "fail-closed",
+   "hint": "Du kan säga: Codex granskade och härdade, jag behöll det som höll.",
+   "reword": "What did Codex do?",
+   "explain": "Design review and fail-closed hardening of the pipeline plus fail-closed tests.",
+   "aliases": [
+    "fail-closed",
+    "designgranskning",
+    "härdning"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-who-grok-build",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad drev Grok Build-granskningen fram?",
+   "options": [
+    {
+     "label": "En fix för personnummer med mellanslag, regeljusteringar och adversarial tester.",
+     "pref": "cam:iq:iq-who-grok-build:space-pnr",
+     "value": "space-pnr"
+    },
+    {
+     "label": "De 30 första supportärendena.",
+     "pref": "cam:iq:iq-who-grok-build:30",
+     "value": "30"
+    },
+    {
+     "label": "Claude Code-integrationen.",
+     "pref": "cam:iq:iq-who-grok-build:claude",
+     "value": "claude"
+    },
+    {
+     "label": "En FHIR-adapter.",
+     "pref": "cam:iq:iq-who-grok-build:fhir",
+     "value": "fhir"
+    }
+   ],
+   "correct": "space-pnr",
+   "hint": "Personnummer med mellanslag var en konkret review-driven fix.",
+   "reword": "What did the Grok Build review drive?",
+   "explain": "A space-separated personnummer fix, rule fixes and adversarial tests.",
+   "aliases": [
+    "mellanslag",
+    "space-separated",
+    "adversarial"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-who-local",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad använde du lokala modeller (Ollama) till?",
+   "options": [
+    {
+     "label": "Att hitta edge cases; inspelade svar spelas upp som offline-fixturer.",
+     "pref": "cam:iq:iq-who-local:edge",
+     "value": "edge"
+    },
+    {
+     "label": "Att köra evallen live i sidopanelen.",
+     "pref": "cam:iq:iq-who-local:live-eval",
+     "value": "live-eval"
+    },
+    {
+     "label": "Att skriva 30 supportärenden.",
+     "pref": "cam:iq:iq-who-local:30",
+     "value": "30"
+    },
+    {
+     "label": "Att skicka raw identifierare till en molnmodell.",
+     "pref": "cam:iq:iq-who-local:cloud",
+     "value": "cloud"
+    }
+   ],
+   "correct": "edge",
+   "hint": "Fixturerna gör edge cases repeterbara utan live-modell.",
+   "reword": "What were local models (Ollama) used for?",
+   "explain": "Edge-case discovery; recorded replies replayed as offline fixtures.",
+   "aliases": [
+    "edge",
+    "fixturer",
+    "ollama",
+    "inspelade"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-prompts-checked",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 4,
+   "type": "choice",
+   "prompt": "Vad gjorde du med prompter till externa modeller?",
+   "options": [
+    {
+     "label": "De kollades först så att de inte innehöll personuppgifter eller tokens.",
+     "pref": "cam:iq:iq-prompts-checked:checked",
+     "value": "checked"
+    },
+    {
+     "label": "Raw tickets skickades som de var, inklusive identifierare.",
+     "pref": "cam:iq:iq-prompts-checked:raw",
+     "value": "raw"
+    },
+    {
+     "label": "Inga prompter lämnade din maskin.",
+     "pref": "cam:iq:iq-prompts-checked:never-left",
+     "value": "never-left"
+    },
+    {
+     "label": "De sparades omaskerade i en publik gist.",
+     "pref": "cam:iq:iq-prompts-checked:gist",
+     "value": "gist"
+    }
+   ],
+   "correct": "checked",
+   "hint": "Samma princip som i pipelinen: kolla innan något går ut.",
+   "reword": "What about prompts sent to outside models?",
+   "explain": "Prompts sent to outside models were checked first so they contained no personal data or tokens.",
+   "aliases": [
+    "kollades först",
+    "checked first",
+    "inga personuppgifter",
+    "tokens"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g001-reasons",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilka handoff-orsaker kan synas i G-001?",
+   "options": [
+    {
+     "label": "Bland annat patient_data_detected, model_abstained, low_confidence och no_grounded_draft.",
+     "pref": "cam:iq:iq-g001-reasons:reasons",
+     "value": "reasons"
+    },
+    {
+     "label": "Bara sent och awaiting_approval.",
+     "pref": "cam:iq:iq-g001-reasons:statuses",
+     "value": "statuses"
+    },
+    {
+     "label": "Bara fhir_violation.",
+     "pref": "cam:iq:iq-g001-reasons:fhir",
+     "value": "fhir"
+    },
+    {
+     "label": "Inga orsaker loggas.",
+     "pref": "cam:iq:iq-g001-reasons:none",
+     "value": "none"
+    }
+   ],
+   "correct": "reasons",
+   "hint": "Godkänn förblir avstängt i det fallet.",
+   "reword": "Which reasons can show up on G-001?",
+   "explain": "Reasons include patient_data_detected, model_abstained, low_confidence, no_grounded_draft.",
+   "aliases": [
+    "patient_data_detected",
+    "model_abstained",
+    "low_confidence",
+    "no_grounded_draft"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-t001-cite",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilken citation har ticket-001?",
+   "options": [
+    {
+     "label": "opencode-deepseek-v4.1-flash-free:KB-001",
+     "pref": "cam:iq:iq-t001-cite:kb001",
+     "value": "kb001"
+    },
+    {
+     "label": "opencode-glm-5.3-flash-free:KB-002",
+     "pref": "cam:iq:iq-t001-cite:kb002",
+     "value": "kb002"
+    },
+    {
+     "label": "en live-URL mot en intern KB",
+     "pref": "cam:iq:iq-t001-cite:url",
+     "value": "url"
+    },
+    {
+     "label": "Ingen citation; det är handoff.",
+     "pref": "cam:iq:iq-t001-cite:none",
+     "value": "none"
+    }
+   ],
+   "correct": "kb001",
+   "hint": "Det är ett artikel-id, inte ett live-anrop till den workern under demot.",
+   "reword": "What citation does ticket-001 carry?",
+   "explain": "opencode-deepseek-v4.1-flash-free:KB-001",
+   "aliases": [
+    "kb-001",
+    "deepseek",
+    "kb001"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-t008-cite",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilken artikel hämtas felaktigt i ticket-008?",
+   "options": [
+    {
+     "label": "Utskriftskö-körschemat opencode-glm-5.3-flash-free:KB-002.",
+     "pref": "cam:iq:iq-t008-cite:kb002",
+     "value": "kb002"
+    },
+    {
+     "label": "SITHS-artikeln KB-001.",
+     "pref": "cam:iq:iq-t008-cite:kb001",
+     "value": "kb001"
+    },
+    {
+     "label": "En journalfelsartikel.",
+     "pref": "cam:iq:iq-t008-cite:jf",
+     "value": "jf"
+    },
+    {
+     "label": "Ingen artikel; det är no_grounded_draft.",
+     "pref": "cam:iq:iq-t008-cite:none",
+     "value": "none"
+    }
+   ],
+   "correct": "kb002",
+   "hint": "Save-button crash + print-queue runbook = false friend.",
+   "reword": "Which article is wrongly retrieved for ticket-008?",
+   "explain": "The print-queue runbook opencode-glm-5.3-flash-free:KB-002.",
+   "aliases": [
+    "kb-002",
+    "glm",
+    "utskriftskö"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-g001-number",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilket testnummer används i G-001?",
+   "options": [
+    {
+     "label": "Skatteverkets publicerade testnummer 19121212-1212, som blir [personnummer-maskat].",
+     "pref": "cam:iq:iq-g001-number:skv-test",
+     "value": "skv-test"
+    },
+    {
+     "label": "Ett påhittat riktigt personnummer från en kollega.",
+     "pref": "cam:iq:iq-g001-number:real",
+     "value": "real"
+    },
+    {
+     "label": "00000000-0000, som alltid är Luhn-ogiltigt.",
+     "pref": "cam:iq:iq-g001-number:zeros",
+     "value": "zeros"
+    },
+    {
+     "label": "Inget nummer; bara ett namn.",
+     "pref": "cam:iq:iq-g001-number:name-only",
+     "value": "name-only"
+    }
+   ],
+   "correct": "skv-test",
+   "hint": "Publicerat testdata, inte en riktig person.",
+   "reword": "Which test number is used in G-001?",
+   "explain": "Skatteverket’s published test number, which becomes [personnummer-maskat].",
+   "aliases": [
+    "19121212-1212",
+    "191212121212",
+    "skatteverket"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-incident-chain",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad visade incident-kedjans schema-pass i evallen?",
+   "options": [
+    {
+     "label": "100 % av 4.",
+     "pref": "cam:iq:iq-incident-chain:4",
+     "value": "4"
+    },
+    {
+     "label": "100 % av 44.",
+     "pref": "cam:iq:iq-incident-chain:44",
+     "value": "44"
+    },
+    {
+     "label": "0 % — kedjan kördes inte.",
+     "pref": "cam:iq:iq-incident-chain:0",
+     "value": "0"
+    },
+    {
+     "label": "50 % av 8.",
+     "pref": "cam:iq:iq-incident-chain:8",
+     "value": "8"
+    }
+   ],
+   "correct": "4",
+   "hint": "En liten men komplett siffra: fyra incident-kedjor, alla schema-ok.",
+   "reword": "Incident chain schema-pass?",
+   "explain": "Incident chain schema-pass: 100% of 4.",
+   "aliases": [
+    "100%",
+    "4",
+    "incident chain"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-recall-skip",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad hoppar citation recall över, och varför?",
+   "options": [
+    {
+     "label": "Retrieval-missar och journalfel, vars utkast hålls inne.",
+     "pref": "cam:iq:iq-recall-skip:miss-jf",
+     "value": "miss-jf"
+    },
+    {
+     "label": "Bara de fem awaiting_approval-fallen.",
+     "pref": "cam:iq:iq-recall-skip:awaiting",
+     "value": "awaiting"
+    },
+    {
+     "label": "Ingenting — nämnaren är alltid 44.",
+     "pref": "cam:iq:iq-recall-skip:44",
+     "value": "44"
+    },
+    {
+     "label": "Bara engelska ärenden.",
+     "pref": "cam:iq:iq-recall-skip:en",
+     "value": "en"
+    }
+   ],
+   "correct": "miss-jf",
+   "hint": "Annars skulle withheld drafts räknas som misslyckad citation.",
+   "reword": "What does citation recall skip?",
+   "explain": "Retrieval misses and journalfel, whose drafts are withheld.",
+   "aliases": [
+    "retrieval-missar",
+    "journalfel",
+    "hålls inne",
+    "withheld"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-mask-source",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Varifrån är maskeringen porterad?",
+   "options": [
+    {
+     "label": "Från arende-triage.",
+     "pref": "cam:iq:iq-mask-source:arende-triage",
+     "value": "arende-triage"
+    },
+    {
+     "label": "Från ett internt Cambio-bibliotek.",
+     "pref": "cam:iq:iq-mask-source:cambio-lib",
+     "value": "cambio-lib"
+    },
+    {
+     "label": "Från llm-json-fixer.",
+     "pref": "cam:iq:iq-mask-source:json-fixer",
+     "value": "json-fixer"
+    },
+    {
+     "label": "Den skrevs från noll utan tidigare kod.",
+     "pref": "cam:iq:iq-mask-source:scratch",
+     "value": "scratch"
+    }
+   ],
+   "correct": "arende-triage",
+   "hint": "README nämner lineage: masking från arende-triage; tolerant JSON-parse är en delmängd av llm-json-fixer.",
+   "reword": "Where was masking ported from?",
+   "explain": "Ported from arende-triage.",
+   "aliases": [
+    "arende-triage",
+    "ärende-triage"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-json-fixer",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad kommer den toleranta JSON-parsen ifrån?",
+   "options": [
+    {
+     "label": "En delmängd av llm-json-fixer.",
+     "pref": "cam:iq:iq-json-fixer:subset",
+     "value": "subset"
+    },
+    {
+     "label": "En FHIR-validator.",
+     "pref": "cam:iq:iq-json-fixer:fhir",
+     "value": "fhir"
+    },
+    {
+     "label": "Codex skrev en helt ny parser utan tidigare repo.",
+     "pref": "cam:iq:iq-json-fixer:new",
+     "value": "new"
+    },
+    {
+     "label": "Den finns inte — ogiltig JSON släpps igenom.",
+     "pref": "cam:iq:iq-json-fixer:none",
+     "value": "none"
+    }
+   ],
+   "correct": "subset",
+   "hint": "Lineage som nämns i demo-README.",
+   "reword": "Where does the tolerant JSON parse come from?",
+   "explain": "A subset of llm-json-fixer.",
+   "aliases": [
+    "llm-json-fixer",
+    "delmängd",
+    "subset"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-four-buttons",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad är de fyra knapparna på demosidan?",
+   "options": [
+    {
+     "label": "De förblir support_ticket, så den korta demovägen är oförändrad.",
+     "pref": "cam:iq:iq-four-buttons:support-ticket",
+     "value": "support-ticket"
+    },
+    {
+     "label": "Två support_ticket och två incident_report.",
+     "pref": "cam:iq:iq-four-buttons:mixed",
+     "value": "mixed"
+    },
+    {
+     "label": "En knapp per FHIR-resurs.",
+     "pref": "cam:iq:iq-four-buttons:fhir",
+     "value": "fhir"
+    },
+    {
+     "label": "Bara Inspelat.",
+     "pref": "cam:iq:iq-four-buttons:inspelat",
+     "value": "inspelat"
+    }
+   ],
+   "correct": "support-ticket",
+   "hint": "incident_report finns på API/CLI, inte som extra sidknapp.",
+   "reword": "What do the four page buttons stay as?",
+   "explain": "The four page buttons stay support_ticket.",
+   "aliases": [
+    "support_ticket",
+    "fyra knappar"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-awaiting-n",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Hur många eval-ärenden väntar på mänskligt godkännande?",
+   "options": [
+    {
+     "label": "5.",
+     "pref": "cam:iq:iq-awaiting-n:5",
+     "value": "5"
+    },
+    {
+     "label": "39.",
+     "pref": "cam:iq:iq-awaiting-n:39",
+     "value": "39"
+    },
+    {
+     "label": "8.",
+     "pref": "cam:iq:iq-awaiting-n:8",
+     "value": "8"
+    },
+    {
+     "label": "0.",
+     "pref": "cam:iq:iq-awaiting-n:0",
+     "value": "0"
+    }
+   ],
+   "correct": "5",
+   "hint": "39 är handoff (88,6 %); 5 är awaiting_approval.",
+   "reword": "How many eval cases await human approval?",
+   "explain": "Awaiting a human approval: 5.",
+   "aliases": [
+    "5",
+    "fem"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-adapter-fake",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad är --adapter fake?",
+   "options": [
+    {
+     "label": "En deterministisk CLI-stubb. Den används inte av demosidan.",
+     "pref": "cam:iq:iq-adapter-fake:cli-stub",
+     "value": "cli-stub"
+    },
+    {
+     "label": "Det demosidan kör live.",
+     "pref": "cam:iq:iq-adapter-fake:page",
+     "value": "page"
+    },
+    {
+     "label": "En FHIR-mock.",
+     "pref": "cam:iq:iq-adapter-fake:fhir",
+     "value": "fhir"
+    },
+    {
+     "label": "Live-proben från 9 november.",
+     "pref": "cam:iq:iq-adapter-fake:probe",
+     "value": "probe"
+    }
+   ],
+   "correct": "cli-stub",
+   "hint": "Demosidan använder adapter none, samma som evallen.",
+   "reword": "What is --adapter fake?",
+   "explain": "A deterministic CLI stub, not used by the demo page.",
+   "aliases": [
+    "cli",
+    "stub",
+    "inte av demosidan",
+    "not used"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-ui-same-path",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vilken väg delar demosidan med evallen?",
+   "options": [
+    {
+     "label": "Adapter none — samma offline-väg som eval-paketet.",
+     "pref": "cam:iq:iq-ui-same-path:none",
+     "value": "none"
+    },
+    {
+     "label": "Live-proben mot OpenCode.",
+     "pref": "cam:iq:iq-ui-same-path:probe",
+     "value": "probe"
+    },
+    {
+     "label": "--adapter fake.",
+     "pref": "cam:iq:iq-ui-same-path:fake",
+     "value": "fake"
+    },
+    {
+     "label": "En separat otestad sökväg.",
+     "pref": "cam:iq:iq-ui-same-path:separate",
+     "value": "separate"
+    }
+   ],
+   "correct": "none",
+   "hint": "Därför kan du peka på EVAL-2026-11-08.md som samma path.",
+   "reword": "Which path does the demo page share with the eval?",
+   "explain": "Adapter none — the same offline path as the evaluation pack.",
+   "aliases": [
+    "adapter none",
+    "offline",
+    "eval"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-no-17th",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Får du räkna Full Stack Developer Betas cirka 1 800 timmar ovanpå 3 600+ — eller påstå ett 17:e certifikat?",
+   "options": [
+    {
+     "label": "Nej. 16 verifierbara certifikat. 3 600+ från 12 legacy-core. Inte plus 1 800, inte ett 17:e.",
+     "pref": "cam:iq:iq-no-17th:no",
+     "value": "no"
+    },
+    {
+     "label": "Ja, 5 400 timmar och 17 certifikat är okej att säga.",
+     "pref": "cam:iq:iq-no-17th:yes",
+     "value": "yes"
+    },
+    {
+     "label": "Bara 17:e certifikatet, inte timmarna.",
+     "pref": "cam:iq:iq-no-17th:cert-only",
+     "value": "cert-only"
+    },
+    {
+     "label": "Bara timmarna, inte 17:e certifikatet.",
+     "pref": "cam:iq:iq-no-17th:hours-only",
+     "value": "hours-only"
+    }
+   ],
+   "correct": "no",
+   "hint": "Underdriv hellre; de kan kolla profilen.",
+   "reword": "Can you add the beta’s about 1,800 hours or claim a 17th cert?",
+   "explain": "No. 16 verifiable certifications. Do not add the beta’s advertised about 1,800 hours. Do not claim a 17th certification.",
+   "aliases": [
+    "nej",
+    "inte",
+    "16",
+    "inte ett 17"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-applied-start",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad stod det i ansökan om startdatum, och vad gäller nu?",
+   "options": [
+    {
+     "label": "Ansökan 15 oktober 2026 sa 19 oktober; det datumet har passerat. Nu: från 15 november 2026, med möjligt skift på några dagar.",
+     "pref": "cam:iq:iq-applied-start:updated",
+     "value": "updated"
+    },
+    {
+     "label": "19 oktober gäller fortfarande.",
+     "pref": "cam:iq:iq-applied-start:still",
+     "value": "still"
+    },
+    {
+     "label": "Ansökan sa 15 november från början.",
+     "pref": "cam:iq:iq-applied-start:always-15",
+     "value": "always-15"
+    },
+    {
+     "label": "Inget startdatum har nämnts.",
+     "pref": "cam:iq:iq-applied-start:none",
+     "value": "none"
+    }
+   ],
+   "correct": "updated",
+   "hint": "Var rak: datumet i ansökan är inaktuellt.",
+   "reword": "What start date did the application give, and what is it now?",
+   "explain": "The application (15 October 2026) said 19 October; that date has passed. Now: from 15 November 2026.",
+   "aliases": [
+    "19 oktober",
+    "15 november",
+    "15 oktober"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-emailed-demo",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Har de redan fått demolänken — och ska du anta att de har tittat?",
+   "options": [
+    {
+     "label": "Du mejlade det publika demorepot till rekryteraren / [Talent Acquisition Partner] morgonen 10 november 2026, och skrev att ingen granskning förväntades men vore välkommen. Anta inte att de har tittat. Namnge inte personen.",
+     "pref": "cam:iq:iq-emailed-demo:emailed",
+     "value": "emailed"
+    },
+    {
+     "label": "Anta att de har sett hela demot och evallen.",
+     "pref": "cam:iq:iq-emailed-demo:assume",
+     "value": "assume"
+    },
+    {
+     "label": "Du har inte skickat någon länk.",
+     "pref": "cam:iq:iq-emailed-demo:not-sent",
+     "value": "not-sent"
+    },
+    {
+     "label": "Du skickade den till en namngiven utvecklingschef.",
+     "pref": "cam:iq:iq-emailed-demo:named",
+     "value": "named"
+    }
+   ],
+   "correct": "emailed",
+   "hint": "Ingen person namnges. Ingen granskning förväntades.",
+   "reword": "Did Cambio already receive the demo link?",
+   "explain": "On the morning of 10 November 2026 you emailed the public demo repository to the recruiter, noting that no review was expected but would be welcome. Do not assume they have watched it. Do not name the person.",
+   "aliases": [
+    "10 november",
+    "anta inte",
+    "rekryteraren",
+    "talent acquisition"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-space-pnr",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vems review drev fram fixen för personnummer med mellanslag?",
+   "options": [
+    {
+     "label": "Grok Build-granskningen, plus regeljusteringar och adversarial tester.",
+     "pref": "cam:iq:iq-space-pnr:grok-build",
+     "value": "grok-build"
+    },
+    {
+     "label": "OpenCode lightning, som skrev 30 ärenden.",
+     "pref": "cam:iq:iq-space-pnr:lightning",
+     "value": "lightning"
+    },
+    {
+     "label": "En Cambio-anställd i en code review.",
+     "pref": "cam:iq:iq-space-pnr:cambio-person",
+     "value": "cambio-person"
+    },
+    {
+     "label": "Den fixen finns inte.",
+     "pref": "cam:iq:iq-space-pnr:none",
+     "value": "none"
+    }
+   ],
+   "correct": "grok-build",
+   "hint": "En konkret detalj om vad vilken worker gjorde.",
+   "reword": "Whose review drove the space-separated personnummer fix?",
+   "explain": "Grok Build review drove a space-separated personnummer fix, rule fixes and adversarial tests.",
+   "aliases": [
+    "grok build",
+    "mellanslag",
+    "space-separated"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-hit-threshold",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad gäller för retrieval-tröskeln under intervjuveckan?",
+   "options": [
+    {
+     "label": "Den är fryst för intervjuveckan.",
+     "pref": "cam:iq:iq-hit-threshold:frozen",
+     "value": "frozen"
+    },
+    {
+     "label": "Den justeras live under intervjun för bättre siffror.",
+     "pref": "cam:iq:iq-hit-threshold:live-tune",
+     "value": "live-tune"
+    },
+    {
+     "label": "Det finns ingen tröskel.",
+     "pref": "cam:iq:iq-hit-threshold:none",
+     "value": "none"
+    },
+    {
+     "label": "Den kommer från en neural ranker som tränats på patientdata.",
+     "pref": "cam:iq:iq-hit-threshold:neural",
+     "value": "neural"
+    }
+   ],
+   "correct": "frozen",
+   "hint": "Säg inte att du kommer tweaka den i rummet för att se bättre ut.",
+   "reword": "What about the retrieval hit threshold?",
+   "explain": "The hit threshold is frozen for interview week.",
+   "aliases": [
+    "fryst",
+    "frozen",
+    "intervjuveckan"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "iq-masking-covers",
+   "area": "intervju",
+   "level": 1,
+   "difficulty": 5,
+   "type": "choice",
+   "prompt": "Vad maskeras, grovt, enligt den publika beskrivningen?",
+   "options": [
+    {
+     "label": "Personnummer (10/12 siffror, Luhn, samordningsnummer), orgnr, telefon, e-post, id:n, namn. Porterat från arende-triage.",
+     "pref": "cam:iq:iq-masking-covers:list",
+     "value": "list"
+    },
+    {
+     "label": "Bara e-post.",
+     "pref": "cam:iq:iq-masking-covers:email",
+     "value": "email"
+    },
+    {
+     "label": "Ingenting — raw text går till modellen.",
+     "pref": "cam:iq:iq-masking-covers:nothing",
+     "value": "nothing"
+    },
+    {
+     "label": "Bara FHIR-id:n.",
+     "pref": "cam:iq:iq-masking-covers:fhir",
+     "value": "fhir"
+    }
+   ],
+   "correct": "list",
+   "hint": "G-001 är det tydligaste exemplet: nummer och namn blir platshållare.",
+   "reword": "What does masking cover at a high level?",
+   "explain": "Personnummer (10/12 digits, Luhn, samordningsnummer), orgnr, phone, e-mail, ids, names. Ported from arende-triage.",
+   "aliases": [
+    "personnummer",
+    "luhn",
+    "orgnr",
+    "arende-triage"
+   ],
+   "scored": true,
+   "adaptive": true,
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-motivation",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Varför Cambio, och varför just den här associate-rollen? Välj den hållning som känns mest som du — eller skriv en egen mening.",
+   "options": [
+    {
+     "label": "Jag vill bygga AI-stöd i vårdsystem med eval och mänskligt godkännande från början, inte som en eftertanke. Associate med coaching passar min nivå.",
+     "pref": "cam:cal:cal-motivation:eval-first-associate",
+     "value": "eval-first-associate"
+    },
+    {
+     "label": "Jag är mest nyfiken på vårddomänen och vill lära mig den inifrån, med AI som ett av flera verktyg.",
+     "pref": "cam:cal:cal-motivation:domain-first",
+     "value": "domain-first"
+    },
+    {
+     "label": "Jag vill jobba i ett team som redan tar AI-assistenter på allvar, och bidra med ett konkret, litet mönster jag har övat på.",
+     "pref": "cam:cal:cal-motivation:team-pattern",
+     "value": "team-pattern"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag vill bygga AI-stöd i vårdsystem med utvärdering och mänskligt godkännande från början. Associate-rollen med coaching passar min nivå, och jag har redan satt det mönstret i en svensk support-copilot på syntetisk data.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "motivation"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-how-work",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur vill du beskriva hur du skulle jobba första tiden om du började?",
+   "options": [
+    {
+     "label": "Sätta mig med kollegor, välja ett jobbigt internt flöde, göra en liten prototyp, och lägga in eval och godkännande redan i v1.",
+     "pref": "cam:cal:cal-how-work:sit-pick-prototype",
+     "value": "sit-pick-prototype"
+    },
+    {
+     "label": "Först lyssna en period, sen föreslå ett smalt experiment när jag förstått var det gör ont.",
+     "pref": "cam:cal:cal-how-work:listen-then-propose",
+     "value": "listen-then-propose"
+    },
+    {
+     "label": "Komma med en färdig mini-prototyp-idé tidigt, men bara gå vidare om teamet känner igen smärtan.",
+     "pref": "cam:cal:cal-how-work:bring-idea-check",
+     "value": "bring-idea-check"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag skulle sätta mig med kollegor, välja ett jobbigt internt flöde, göra en liten prototyp, och lägga in eval och godkännande redan i första versionen.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "work_style"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-director",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur beskriver du din roll när kodagenter skriver merparten av koden?",
+   "options": [
+    {
+     "label": "Jag styr: scope, grindar, eval, granskar diffs, väljer vad som ska behållas, verifierar. Jag låtsas inte att jag skrev allt för hand.",
+     "pref": "cam:cal:cal-director:director",
+     "value": "director"
+    },
+    {
+     "label": "Jag parprogrammerar med agenterna och går igenom varje diff som om det vore en junior kollega.",
+     "pref": "cam:cal:cal-director:pair",
+     "value": "pair"
+    },
+    {
+     "label": "Jag skriver mer själv när det är säkerhetsnära, och låter agenter ta mer av det rutinmässiga.",
+     "pref": "cam:cal:cal-director:safety-hands-on",
+     "value": "safety-hands-on"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag styrde arbetet: satte scope, designade säkerhetsgrindarna och evallen, granskade diffs och verifierade testerna. Jag skrev inte merparten av koden för hand.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "ai_coding_role"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-gap",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur pratar du om att du inte haft en heltidsroll som utvecklare än?",
+   "options": [
+    {
+     "label": "Rakt: ingen heltidsroll än, betald frilans under ett år, hitta inte på kunder. Därför lockar associate med coaching.",
+     "pref": "cam:cal:cal-gap:straight",
+     "value": "straight"
+    },
+    {
+     "label": "Betona de två åren av öppet/självstyrt arbete och det publika demot, och nämn luckan utan att hänga kvar där.",
+     "pref": "cam:cal:cal-gap:lead-with-work",
+     "value": "lead-with-work"
+    },
+    {
+     "label": "Håll det till en mening och styr snabbt mot hur du verifierar arbete och vill lära av seniorer.",
+     "pref": "cam:cal:cal-gap:one-line-then-verify",
+     "value": "one-line-then-verify"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag har ingen heltidsroll som professionell utvecklare ännu, och betald frilans är under ett år. Jag hittar inte på uppdragsgivare. Det är just därför en associate-roll med coaching lockar.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "experience_gap"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-lead-with",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Vad vill du leda med i rummet, om du får välja?",
+   "options": [
+    {
+     "label": "Mönstret: regler först, ett smalt modellsteg, schema, människa — sen G-001 på en minut.",
+     "pref": "cam:cal:cal-lead-with:pattern-then-g001",
+     "value": "pattern-then-g001"
+    },
+    {
+     "label": "Det publika demot och evallen, sen hur jag styrde agenterna.",
+     "pref": "cam:cal:cal-lead-with:demo-then-tools",
+     "value": "demo-then-tools"
+    },
+    {
+     "label": "En kort bakgrund (två år, associate, syntetisk support-copilot) och sen fråga vad de vill se först.",
+     "pref": "cam:cal:cal-lead-with:intro-then-ask",
+     "value": "intro-then-ask"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag är en tidig-karriär-utvecklare som använder AI-kodverktyg varje dag, med tester och en mänsklig grind runt dem. Mönstret är regler först, ett smalt modellsteg, schema-koll och en människa som beslutar.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "opening"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-nursing",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om sjuksköterske-kurserna kommer upp — hur vill du ta det?",
+   "options": [
+    {
+     "label": "Kort och sekundärt: ungefär 74 ECTS, två terminer kursarbete, 2019–2020. Inte sjuksköterska, ingen dataexamen. Sen tillbaka till supportverktyget.",
+     "pref": "cam:cal:cal-nursing:brief-then-back",
+     "value": "brief-then-back"
+    },
+    {
+     "label": "Nämn det bara om de frågar uttryckligen; annars lämna det.",
+     "pref": "cam:cal:cal-nursing:only-if-asked",
+     "value": "only-if-asked"
+    },
+    {
+     "label": "Använd det för att visa att du förstår varför kliniska råd och live-journal är utanför scope — sen släpp det.",
+     "pref": "cam:cal:cal-nursing:boundary-then-drop",
+     "value": "boundary-then-drop"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag har ungefär två terminers kursarbete från sjuksköterskeprogrammet som bakgrund, ungefär 74 ECTS vid Uppsala universitet 2019–2020, men jag är inte sjuksköterska.« Håll det kort.",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "nursing_background"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-location",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur vill du prata om Uppsala, Stockholm och hybrid?",
+   "options": [
+    {
+     "label": "Jag sökte Stockholm, bor i Uppsala (ungefär 40–50 min), hybrid med tre kontorsdagar passar, öppen för att flytta för en långsiktig roll.",
+     "pref": "cam:cal:cal-location:standard",
+     "value": "standard"
+    },
+    {
+     "label": "Betona att pendlingen redan är tänkbar och att tre kontorsdagar känns bra.",
+     "pref": "cam:cal:cal-location:commute-ok",
+     "value": "commute-ok"
+    },
+    {
+     "label": "Betona att du föredrar Stockholm långsiktigt och är öppen för att flytta, utan att lova ett datum.",
+     "pref": "cam:cal:cal-location:open-to-move",
+     "value": "open-to-move"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag sökte Stockholm. Jag bor i Uppsala, ungefär 40–50 minuter dit. Hybrid med tre kontorsdagar passar mig; jag föredrar Stockholm och är öppen för att flytta för en långsiktig roll.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "location"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-disagreement",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om en senior inte håller med om fail-closed eller en handoff-regel — hur vill du ta det?",
+   "options": [
+    {
+     "label": "Visa evallen eller testerna, förklara risken, och följa teamets beslut om de äger risken.",
+     "pref": "cam:cal:cal-disagreement:show-evidence-then-defer",
+     "value": "show-evidence-then-defer"
+    },
+    {
+     "label": "Föreslå ett litet experiment: mät båda beteendena på syntetiska fall innan ni låser.",
+     "pref": "cam:cal:cal-disagreement:experiment",
+     "value": "experiment"
+    },
+    {
+     "label": "Stå fast vid fail-closed i patientdata-fall, men var mer flexibel utanför den linjen.",
+     "pref": "cam:cal:cal-disagreement:hold-safety-line",
+     "value": "hold-safety-line"
+    }
+   ],
+   "tip": "Så här kan det låta: »Då skulle jag visa vad evallen eller testerna säger, förklara vilken risk jag ser, och sen följa teamets beslut om de äger risken. I patientdata-fall vill jag hellre stänga än släppa igenom.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "disagreement"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-who-sit",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Vem sätter du dig med först: supporten som har flödet, eller utvecklarna som äger systemet?",
+   "options": [
+    {
+     "label": "Först de som har det jobbiga flödet i vardagen — ofta support — sen utvecklarna som måste äga säkerhet och drift.",
+     "pref": "cam:cal:cal-who-sit:support-then-dev",
+     "value": "support-then-dev"
+    },
+    {
+     "label": "Först någon som äger risk och godkännande, så grindarna inte blir en eftertanke.",
+     "pref": "cam:cal:cal-who-sit:risk-owner-first",
+     "value": "risk-owner-first"
+    },
+    {
+     "label": "Båda i samma rum tidigt, även om det bara är 30 minuter, så ni inte bygger för fel person.",
+     "pref": "cam:cal:cal-who-sit:both-early",
+     "value": "both-early"
+    }
+   ],
+   "tip": "Så här kan det låta: »Verktyget är till för supportpersonal, inte för kliniska råd. Jag skulle sätta mig med kollegorna som har det jobbiga flödet och låta dem godkänna utkast.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "stakeholders"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-coaching",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur mycket coaching vill du ha kontra eget ansvar?",
+   "options": [
+    {
+     "label": "Jag vill ha tydlig coaching i början, särskilt kring kodstandard och hur ni granskar AI-genererad kod, men äga en liten bit själv.",
+     "pref": "cam:cal:cal-coaching:coached-owns-slice",
+     "value": "coached-owns-slice"
+    },
+    {
+     "label": "Jag tar mer ansvar tidigt och ber om hjälp när evallen eller review säger att jag är ute och cyklar.",
+     "pref": "cam:cal:cal-coaching:own-then-ask",
+     "value": "own-then-ask"
+    },
+    {
+     "label": "Jag vill se hur seniorerna granskar ett första utkast tillsammans med mig, sen iterera själv.",
+     "pref": "cam:cal:cal-coaching:review-together-then-iterate",
+     "value": "review-together-then-iterate"
+    }
+   ],
+   "tip": "Så här kan det låta: »En associate-roll med coaching passar min nivå. Jag vill lära mig era rutiner av seniorerna, och samtidigt äga en liten prototyp med eval och godkännande från start.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "coaching"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-if-unwatched",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om det visar sig att de inte har tittat på demot?",
+   "options": [
+    {
+     "label": "Ta det lugnt: erbjud en minut på G-001 eller Inspelat, utan att anta att de ska ha förberett sig. Du skrev ju att ingen granskning förväntades.",
+     "pref": "cam:cal:cal-if-unwatched:offer-one-minute",
+     "value": "offer-one-minute"
+    },
+    {
+     "label": "Berätta pipelinen muntligt först och fråga om de vill se ett fall.",
+     "pref": "cam:cal:cal-if-unwatched:tell-then-offer",
+     "value": "tell-then-offer"
+    },
+    {
+     "label": "Gå direkt på hur du skulle jobba hos dem, och låt demot vara backup om de frågar.",
+     "pref": "cam:cal:cal-if-unwatched:workstyle-first",
+     "value": "workstyle-first"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag mejlade repot och skrev att ingen granskning förväntades. Vill ni att jag visar ett fall på en minut — patientdata som tvingar handoff — eller ska jag bara berätta mönstret?« Namnge inte personen du mejlade.",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "unwatched_demo"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-limitations",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Hur många begränsningar tar du upp självmant?",
+   "options": [
+    {
+     "label": "Två eller tre konkreta: t.ex. Luhn-ogiltiga id skrivs inte om, bara förnamn kan slinka igenom, retrieval är enkel token-överlapp — sen vad jag skulle göra åt det.",
+     "pref": "cam:cal:cal-limitations:two-or-three",
+     "value": "two-or-three"
+    },
+    {
+     "label": "En enda, den jag tycker är mest ärlig just nu, och resten bara om de frågar.",
+     "pref": "cam:cal:cal-limitations:one-unless-asked",
+     "value": "one-unless-asked"
+    },
+    {
+     "label": "En kort lista och omedelbart nästa-steg, så det inte låter som en ursäktkatalog.",
+     "pref": "cam:cal:cal-limitations:list-plus-next",
+     "value": "list-plus-next"
+    }
+   ],
+   "tip": "Så här kan det låta: »Luhn-ogiltiga personnummer skrivs inte om men tvingar ändå handoff. Ett bart förnamn utan extra cue kan slinka igenom. Retrieval är enkelt token-överlapp — ticket-008 är false friend. Jag skulle strama åt namnmaskeringen och förbättra retrieval, och jag skulle behålla den mänskliga grinden.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "limitations_style"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-language",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Intervjun är tänkt på engelska. Om de byter till svenska — vad gör du?",
+   "options": [
+    {
+     "label": "Byt till svenska utan krångel; håll tekniska termer som awaiting_approval och fail closed på engelska om de redan används så.",
+     "pref": "cam:cal:cal-language:follow-their-lead",
+     "value": "follow-their-lead"
+    },
+    {
+     "label": "Fortsätt på engelska tills de uttryckligen ber om svenska.",
+     "pref": "cam:cal:cal-language:stay-english",
+     "value": "stay-english"
+    },
+    {
+     "label": "Fråga kort: Vill ni att vi tar det på svenska? och följ svaret.",
+     "pref": "cam:cal:cal-language:ask-once",
+     "value": "ask-once"
+    }
+   ],
+   "tip": "Så här kan det låta: »Sure — we can do this in Swedish if you prefer. I’ll keep the status names in English since that’s how the demo is labelled.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "interview_language"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-recorded",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Intervjun spelas in och transkriberas (du har redan accepterat det). Hur vill du förhålla dig till det?",
+   "options": [
+    {
+     "label": "Ta det som givet och prata ändå konkret; hitta inte på siffror bara för att det spelas in.",
+     "pref": "cam:cal:cal-recorded:stay-concrete",
+     "value": "stay-concrete"
+    },
+    {
+     "label": "Var extra noga med att märka hypotetiska exempel som hypotetiska.",
+     "pref": "cam:cal:cal-recorded:mark-hypotheticals",
+     "value": "mark-hypotheticals"
+    },
+    {
+     "label": "Det påverkar inte hur du pratar; du hade sagt samma sak ändå.",
+     "pref": "cam:cal:cal-recorded:no-change",
+     "value": "no-change"
+    }
+   ],
+   "tip": "Så här kan det låta, om det kommer upp: »Ja, det går bra att ni spelar in. Jag håller mig till saker jag kan stå för — och säger till om något är ett hypotetiskt exempel.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "recorded_interview"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-ask",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Vilken fråga vill du hinna ställa till dem?",
+   "options": [
+    {
+     "label": "Var ni drar linjen för mänsklig handoff i ett internt supportflöde, och vad auditen ska innehålla där.",
+     "pref": "cam:cal:cal-ask:handoff-line",
+     "value": "handoff-line"
+    },
+    {
+     "label": "Vilken evidens ni vill se innan en intern pilot, givet att den här datan är syntetisk.",
+     "pref": "cam:cal:cal-ask:evidence-before-pilot",
+     "value": "evidence-before-pilot"
+    },
+    {
+     "label": "Hur ni fångar ett svar som låter rimligt men svarar på fel fråga — false friend-problemet.",
+     "pref": "cam:cal:cal-ask:false-friend",
+     "value": "false-friend"
+    },
+    {
+     "label": "Hur de första månaderna ser ut för en associate, och hur mycket coaching som följer med från prototyp till något kollegor faktiskt använder.",
+     "pref": "cam:cal:cal-ask:first-months",
+     "value": "first-months"
+    }
+   ],
+   "tip": "Alla fyra är rimliga. Välj en som du faktiskt vill veta, så låter den inte inlärd. Namnge ingen person.",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "question_to_them"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-next-pick",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om du fick välja första interna flöde — vad styr valet?",
+   "options": [
+    {
+     "label": "Att någon faktiskt har ont där, att det går att mäta, och att vi kan lägga in godkännande från start utan att röra patientjournaler.",
+     "pref": "cam:cal:cal-next-pick:pain-measurable-safe",
+     "value": "pain-measurable-safe"
+    },
+    {
+     "label": "Att det liknar något jag redan övat: stödja support med utkast, inte kliniska beslut.",
+     "pref": "cam:cal:cal-next-pick:similar-to-demo",
+     "value": "similar-to-demo"
+    },
+    {
+     "label": "Att scope är litet nog för en tidig prototyp, även om ämnet inte är det mest dramatiska.",
+     "pref": "cam:cal:cal-next-pick:small-scope",
+     "value": "small-scope"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag skulle välja ett flöde där någon faktiskt har ont, där vi kan mäta om prototypen hjälper, och där en människa godkänner innan något går vidare. Inte kliniska råd, inte live-journal.« Hitta inte på volymer eller interna köer.",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "first_workflow"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-worse-eval",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om en promptändring gör evalen sämre — hur reagerar du?",
+   "options": [
+    {
+     "label": "Rulla tillbaka, jämför fall för fall mot baseline, och ändra en sak i taget.",
+     "pref": "cam:cal:cal-worse-eval:rollback",
+     "value": "rollback"
+    },
+    {
+     "label": "Behåll ändringen bakom en flagga, förstå vilka fall som blev sämre, sen besluta.",
+     "pref": "cam:cal:cal-worse-eval:flag-then-decide",
+     "value": "flag-then-decide"
+    },
+    {
+     "label": "Ta det som ett tecken att evallen gör sitt jobb, och berätta vad som bröts innan ni går vidare.",
+     "pref": "cam:cal:cal-worse-eval:eval-working",
+     "value": "eval-working"
+    }
+   ],
+   "tip": "Så här kan det låta: »Då rullar jag tillbaka, jämför fall för fall mot baseline och ändrar en sak i taget. En sämre eval är information, inte något att argumentera bort.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "eval_regression"
+   },
+   "source": "interview-prep-2026-11-10"
+  },
+  {
+   "id": "cal-tools-first",
+   "area": "kalibrering",
+   "level": 1,
+   "difficulty": 1,
+   "type": "choice",
+   "kind": "calibration",
+   "prompt": "Om de frågar hur du kodar med AI — vilket verktyg nämner du först?",
+   "options": [
+    {
+     "label": "Nämn setet: Codex, OpenCode, Grok Build, Cursor och lokala modeller, och att Grok Bot orkestrerade demot.",
+     "pref": "cam:cal:cal-tools-first:the-set",
+     "value": "the-set"
+    },
+    {
+     "label": "Börja med hur du styr och verifierar, sen räkna upp verktygen om de vill ha namn.",
+     "pref": "cam:cal:cal-tools-first:method-then-names",
+     "value": "method-then-names"
+    },
+    {
+     "label": "Nämn det verktyg som passar frågan bäst just då, men gör inte Claude Code till huvudverktyg.",
+     "pref": "cam:cal:cal-tools-first:fit-the-question",
+     "value": "fit-the-question"
+    }
+   ],
+   "tip": "Så här kan det låta: »Jag använder Codex, OpenCode, Grok Build, Cursor och lokala modeller. I det här demot orkestrerade Grok Bot arbetet. Jag har lätt vana vid Claude Code också, men det är inte mitt huvudverktyg.«",
+   "scored": false,
+   "adaptive": true,
+   "cambio": {
+    "kind": "calibration",
+    "theme": "tools_mention"
+   },
+   "source": "interview-prep-2026-11-10"
+  }
+ ]
+}

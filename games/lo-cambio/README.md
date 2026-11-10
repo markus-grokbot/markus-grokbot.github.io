@@ -59,3 +59,23 @@ Friday work is **rules and golden labels**, not RAG/UI. Play Casual **1–3** wi
 Adopted already (do not re-litigate): G-001 priority high, G-006 critical, G-003 category `login_access`. G-003 remains the known rules xfail (samordningsnummer miss → `awaiting_approval`).
 
 **How to play Friday:** slide Casual ↔ Data to **1–3**, keep **scope**, **talking**, **edge**, **tickets** checked, ▶ Run. Interval 30 s at 1–2, 15 s at 3. Export still `lo-cambio.export.v1`. Cache param `v=c6`.
+
+## Round 6 (2026-11-10): adaptive difficulty + interview/calibration cards
+Per-question adaptive state lives in `localStorage` key `lo-cambio.adaptive.v1` and is copied onto the export as `cambio.adaptive` (`lo-cambio.adaptive.v1`). Existing `lo-cambio.export.v1` fields are unchanged.
+
+**Question rating (scored cards only):** each card has a base `difficulty` 1–5 and a live `rating` that starts at that base. A correct answer moves the rating down (easier); a wrong answer moves it up. `timesSeen`, cumulative `correct`, and `fails` are stored per card.
+
+**Retire rule:** **3 cumulative correct answers** retire the question (not necessarily in a row). Retired scored cards are not shown again.
+
+**Fail ladder (on the next appearance):**
+1. first fail → show `hint`
+2. second fail → hint + hide one wrong alternative (original option indices kept)
+3. third fail → use `reword` / `promptAlt` if present; otherwise keep hint + 50/50
+
+**Player level:** `player.level` and `player.floor` persist and never decrease. You always run at least at the floor (highest level already passed), preferring **new unseen** scored questions at the current level, then filling with unseen questions in `[floor, level]`. After 4 correct at the current level, unseen questions at `level+1` may preview. Promotion to the next level (and setting `floor` to the level just completed) happens when, for questions whose **base** difficulty equals the current level: `correct >= 8` AND accuracy `correct/(correct+wrong) >= 75%` AND at least 5 unique questions have been answered correctly at least once. Cap is 5.
+
+**What is scored?** New interview fact cards (`area: intervju`, `scored: true`) and existing `abbreviation_pick` cards (they already have a dataset answer and a reveal). Golden-label votes, scope/talking/edge judgments, naturalness, and level-4 data-creation cards are **not** scored, so hints cannot leak dataset labels into the copilot export.
+
+**Calibration cards** (`area: kalibrering`, `cambio.kind: calibration`): 2–4 honest stances plus the existing typed-override box. No correct answer, no score penalty, not retired by correctness. Each is shown at most once per session; later sessions can re-ask so a changed stance is flagged (`changed` + `previous`). After answering, a short “Så här kan det låta” tip may appear. Export: `cambio.calibration[]`. The results screen summarises chosen stances as answer cues.
+
+Interview fact cards are packed into the lazy `cards-l3.js` bundle (`adaptive: true`) so `core.js` stays small, but they have `level: 1` so they are available at every Casual ↔ Data slider setting. Cache param `v=c7`.

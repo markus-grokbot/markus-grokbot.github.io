@@ -75,3 +75,5 @@ const x5=C.build(D,s5.result().log,P.weighSession(D,1,{score:1}));
 assert(x5.scope_decisions.some(d=>d.decision_id==='g003-fix'||d.decision_id==='golden-label-source'));
 assert.equal(D.playableMaxLevel,4);assert.equal(x5.schema,'lo-cambio.export.v1');
 console.log('friday round5 tests OK',D.cards.filter(c=>c.cambio&&c.cambio.round===5).length,'round5-tagged');}
+
+require('./adaptive.js');
